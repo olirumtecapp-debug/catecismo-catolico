@@ -4757,7 +4757,6 @@
             `;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            loadAdminCommunityTable();
         }
 
         async function loadBibleChapter(bookCode, chapter, targetMain = null) {
@@ -7104,6 +7103,7 @@
             `;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
+            loadAdminCommunityTable();
         }
         window.openAdminDashboard = promptAdminAccess;
         window.promptAdminAccess = promptAdminAccess;
