@@ -1,17 +1,7 @@
 {
-  "_meta": {},
-  "messages": [
-    {
-      "id": "msg_1789143397173_fditw",
-      "name": "Murilo Silva Teste",
-      "email": "teste.real@gmail.com",
-      "type": "Dúvida",
-      "subject": "Teste de Caixa Postal",
-      "message": "Olá, este é um teste real da nova caixa postal!",
-      "status": "novo",
-      "createdAt": "2026-09-11T16:16:37.196Z",
-      "updatedAt": "2026-09-11T16:16:37.197Z",
-      "reply": null
-    }
-  ]
+  "_meta": {
+    "created": "2026-09-11T16:16:57.190Z",
+    "description": "Caixa Postal & Mensagens de Fieis - CATECISMO"
+  },
+  "messages": []
 }
