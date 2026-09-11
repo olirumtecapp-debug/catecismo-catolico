@@ -450,9 +450,16 @@
                     </div>
                 </div>
 
-                <!-- Ações do Rodapé: Apoio & Desenvolvedor -->
+                <!-- Ações do Rodapé: Nuvem, Contato & Apoio -->
                 <div class="space-y-1.5 pt-1">
-                    <button onclick="openApoioModal()" class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs shadow-sm hover:shadow transition flex items-center justify-center gap-2">
+                    <button onclick="CloudSyncManager.openCloudStatusModal()" class="w-full py-2 px-3 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/70 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-950 dark:text-blue-200 font-bold text-xs transition flex items-center justify-center gap-2 shadow-2xs cursor-pointer">
+                        <span>☁️</span> <span class="header-cloud-text">Sincronizar Nuvem</span>
+                    </button>
+                    <button onclick="ContactManager.openMailboxModal()" class="w-full py-2 px-3 rounded-xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50/70 dark:bg-indigo-950/40 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 text-indigo-950 dark:text-indigo-200 font-bold text-xs transition flex items-center justify-center gap-2 shadow-2xs cursor-pointer relative">
+                        <span>📬</span> <span>Caixa Postal & Contato</span>
+                        <span class="mailbox-badge hidden bg-red-500 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow-xs">0</span>
+                    </button>
+                    <button onclick="openApoioModal()" class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs shadow-sm hover:shadow transition flex items-center justify-center gap-2 cursor-pointer">
                         <span>☕</span> <span>Apoiar o Projeto</span>
                     </button>
                     <button onclick="openDeveloperModal()" class="w-full py-1.5 px-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-mariana dark:hover:text-amber-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-[11px] font-medium transition flex items-center justify-center gap-1.5">
@@ -508,6 +515,19 @@
                             </svg>
                         </span>
                     </button>
+
+                    <!-- BOTÃO NUVEM / SINCRONIZAR E-MAIL -->
+                    <button onclick="CloudSyncManager.openCloudStatusModal()" id="header-cloud-btn" class="header-cloud-btn flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 text-blue-950 dark:text-blue-200 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition shadow-xs text-xs font-bold cursor-pointer" title="Sincronizar e salvar na nuvem">
+                        <span class="text-sm">☁️</span>
+                        <span id="header-cloud-text" class="header-cloud-text hidden sm:inline">Nuvem</span>
+                    </button>
+
+                    <!-- BOTÃO CAIXA POSTAL & CONTATO -->
+                    <button onclick="ContactManager.openMailboxModal()" id="header-mailbox-btn" class="relative flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50/80 dark:bg-indigo-950/50 text-indigo-950 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 transition shadow-xs text-xs font-bold cursor-pointer" title="Caixa Postal & Fale Conosco">
+                        <span class="text-sm">📬</span>
+                        <span class="hidden md:inline">Contato</span>
+                        <span id="header-mailbox-badge" class="mailbox-badge hidden absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full border-2 border-white shadow-xs">0</span>
+                    </button>
                 </div>
             </header>
 
@@ -534,6 +554,21 @@
                         <button onclick="ThemeManager.toggle()" class="flex-1 py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl text-xs font-bold text-slate-700 dark:text-amber-300 flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer">
                             <span class="theme-toggle-icon">🌙</span>
                             <span class="theme-toggle-label">Modo Noturno</span>
+                        </button>
+                    </div>
+
+                    <!-- Barra de Nuvem & Caixa Postal no Menu Mobile -->
+                    <div class="px-4 py-2.5 bg-blue-50/70 dark:bg-blue-950/40 border-b border-blue-100 dark:border-blue-900/60 flex items-center justify-between gap-2">
+                        <button onclick="toggleMobileMenu(); CloudSyncManager.openCloudStatusModal();" class="flex-1 flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-slate-800 border border-blue-200 dark:border-blue-800 text-left shadow-2xs cursor-pointer">
+                            <span class="text-base">☁️</span>
+                            <div class="min-w-0">
+                                <span class="text-[11px] font-bold text-blue-950 dark:text-blue-200 block truncate">Nuvem & Sincronização</span>
+                                <span id="drawer-cloud-subtitle" class="text-[9px] text-blue-600 dark:text-blue-400 block truncate">Salvar no banco seguro</span>
+                            </div>
+                        </button>
+
+                        <button onclick="toggleMobileMenu(); ContactManager.openMailboxModal();" class="flex items-center gap-1.5 px-3 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-xs cursor-pointer shrink-0">
+                            <span>📬</span> <span>Contato</span>
                         </button>
                     </div>
                     <nav class="flex-1 overflow-y-auto p-4 space-y-1 custom-scrollbar">
@@ -3482,6 +3517,32 @@
 
                 return `
                     <div class="max-w-5xl mx-auto space-y-8">
+                        ${!AppState.cloudSyncEmail ? `
+                            <div class="p-4 rounded-3xl bg-gradient-to-r from-blue-50 via-indigo-50/60 to-amber-50/40 dark:from-blue-950/40 dark:via-slate-900 dark:to-amber-950/20 border border-blue-200/80 dark:border-blue-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-xl shadow-md shrink-0">
+                                        ☁️
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                                            Proteja suas Orações e Reflexões na Nuvem
+                                            <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-blue-100 text-blue-900 dark:bg-blue-950 dark:text-blue-200">100% Grátis</span>
+                                        </h4>
+                                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                                            Digite apenas o seu e-mail para salvar suas meditações e não perder nada ao trocar de aparelho.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <button onclick="CloudSyncManager.openCloudStatusModal()" class="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                                        <span>☁️</span> <span>Conectar E-mail</span>
+                                    </button>
+                                    <button onclick="ContactManager.openMailboxModal()" class="px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs transition flex items-center gap-1.5 cursor-pointer">
+                                        <span>📬</span> <span>Contato</span>
+                                    </button>
+                                </div>
+                            </div>
+                        ` : ''}
                         <div class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30">
                             <div class="absolute right-0 top-0 translate-x-8 -translate-y-8 text-[180px] opacity-10 font-serif select-none">✝</div>
                             <div class="relative z-10 max-w-2xl space-y-4">
@@ -4677,52 +4738,6 @@
             `;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-
-            // Carrega dinamicamente a lista de usuários da comunidade
-            (async () => {
-                const container = document.getElementById('admin-community-table-container');
-                if (!container) return;
-                try {
-                    const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/community-metrics'));
-                    if (res.ok) {
-                        const comData = await res.json();
-                        if (comData.users && comData.users.length > 0) {
-                            container.innerHTML = `
-                                <table class="w-full text-left text-xs">
-                                    <thead>
-                                        <tr class="border-b border-slate-200 dark:border-slate-800 text-slate-400 uppercase tracking-wider text-[10px]">
-                                            <th class="py-2.5 px-3">E-mail do Fiel</th>
-                                            <th class="py-2.5 px-3">Nível Espiritual</th>
-                                            <th class="py-2.5 px-3">Pontos (XP)</th>
-                                            <th class="py-2.5 px-3">Ofensiva</th>
-                                            <th class="py-2.5 px-3">Reflexões</th>
-                                            <th class="py-2.5 px-3">Último Acesso</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
-                                        ${comData.users.map(u => `
-                                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
-                                                <td class="py-2.5 px-3 font-semibold text-slate-800 dark:text-slate-200 font-mono">${u.email}</td>
-                                                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200">${u.level}</span></td>
-                                                <td class="py-2.5 px-3 font-bold text-mariana dark:text-amber-400">${u.xp} XP</td>
-                                                <td class="py-2.5 px-3 font-bold text-amber-700 dark:text-amber-300">🔥 ${u.streak} dias</td>
-                                                <td class="py-2.5 px-3 font-mono text-blue-600">${u.reflectionsCount} notas</td>
-                                                <td class="py-2.5 px-3 text-slate-400 text-[11px]">${new Date(u.updatedAt).toLocaleDateString('pt-BR')} ${new Date(u.updatedAt).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}</td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
-                            `;
-                        } else {
-                            container.innerHTML = '<div class="p-6 text-center text-xs text-slate-400">Nenhum fiel sincronizou ainda. O primeiro que salvar uma reflexão aparecerá aqui!</div>';
-                        }
-                    } else {
-                        container.innerHTML = '<div class="p-6 text-center text-xs text-slate-400">Banco de dados da nuvem operando localmente.</div>';
-                    }
-                } catch(e) {
-                    container.innerHTML = '<div class="p-4 text-center text-xs text-slate-400">Modo offline-first ativo.</div>';
-                }
-            })();
         }
 
         function openSaintModal(id) {
@@ -6485,6 +6500,339 @@
         };
         window.CloudSyncManager = CloudSyncManager;
 
+        /* ========================================================
+           CAIXA POSTAL & CONTATO / FALE CONOSCO (ESTILO ELEVATE)
+           ======================================================== */
+        const ContactManager = {
+            getSentMessages() {
+                try {
+                    return JSON.parse(localStorage.getItem('catecismo_sent_messages') || '[]');
+                } catch(e) { return []; }
+            },
+
+            saveSentMessage(msg) {
+                const list = this.getSentMessages();
+                list.unshift(msg);
+                try { localStorage.setItem('catecismo_sent_messages', JSON.stringify(list)); } catch(e) {}
+                this.updateBadges();
+            },
+
+            updateBadges() {
+                const msgs = this.getSentMessages();
+                const unreadReplies = msgs.filter(m => m.reply && !m.readReply).length;
+                const badges = document.querySelectorAll('.mailbox-badge, #header-mailbox-badge');
+                badges.forEach(b => {
+                    if (unreadReplies > 0) {
+                        b.innerText = unreadReplies;
+                        b.classList.remove('hidden');
+                    } else {
+                        b.classList.add('hidden');
+                    }
+                });
+            },
+
+            openMailboxModal(activeTab = 'nova') {
+                const modal = document.getElementById('modal-container');
+                if (!modal) return;
+
+                const sent = this.getSentMessages();
+                const defaultEmail = AppState.cloudSyncEmail || '';
+
+                modal.innerHTML = `
+                    <div class="bg-white dark:bg-slate-800 w-full max-w-xl rounded-3xl p-6 md:p-8 space-y-5 text-left shadow-2xl border border-slate-200 dark:border-slate-700 relative max-h-[90vh] flex flex-col">
+                        <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-lg transition">✕</button>
+
+                        <div class="flex items-center gap-3.5 pb-3 border-b border-slate-100 dark:border-slate-700">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 flex items-center justify-center text-2xl shadow-2xs">
+                                📬
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100">
+                                    Caixa Postal & Fale Conosco
+                                </h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">
+                                    Envie dúvidas de fé, pedidos de oração, sugestões ou entre em contato com nossa equipe
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Abas de Navegação -->
+                        <div class="flex border-b border-slate-100 dark:border-slate-700 text-xs font-bold gap-2">
+                            <button onclick="ContactManager.openMailboxModal('nova')" class="pb-2.5 px-3 border-b-2 transition ${activeTab === 'nova' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
+                                ✍️ Enviar Mensagem / Oração
+                            </button>
+                            <button onclick="ContactManager.openMailboxModal('minhas')" class="pb-2.5 px-3 border-b-2 transition flex items-center gap-1.5 ${activeTab === 'minhas' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
+                                <span>📬 Minhas Mensagens</span>
+                                <span class="bg-indigo-100 dark:bg-indigo-950 text-indigo-800 dark:text-indigo-300 text-[10px] px-1.5 py-0.5 rounded-full font-mono">${sent.length}</span>
+                            </button>
+                        </div>
+
+                        <!-- Conteúdo da Aba -->
+                        <div class="flex-1 overflow-y-auto custom-scrollbar pr-1">
+                            ${activeTab === 'nova' ? `
+                                <form onsubmit="ContactManager.handleFormSubmit(event)" class="space-y-4 pt-1">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div>
+                                            <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Seu Nome:</label>
+                                            <input type="text" id="contact-name" placeholder="Ex.: Maria ou João" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Seu E-mail (para resposta) <span class="text-rose-500">*</span>:</label>
+                                            <input type="email" id="contact-email" value="${defaultEmail}" required placeholder="seu.email@exemplo.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div>
+                                            <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Motivo do Contato:</label>
+                                            <select id="contact-type" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 font-medium">
+                                                <option value="Oração">🙏 Pedido de Oração / Intenção Santa</option>
+                                                <option value="Dúvida">❓ Dúvida sobre o Catecismo / Fé</option>
+                                                <option value="Sugestão">💡 Sugestão para o Aplicativo</option>
+                                                <option value="Apoio">☕ Mensagem de Apoio ou Agradecimento</option>
+                                                <option value="Suporte">🛠️ Relato de Erro / Suporte Técnico</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Assunto Breve:</label>
+                                            <input type="text" id="contact-subject" placeholder="Ex.: Intenção pela saúde da minha família" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Sua Mensagem ou Pedido <span class="text-rose-500">*</span>:</label>
+                                        <textarea id="contact-message" rows="4" required placeholder="Escreva aqui sua mensagem, intenção ou reflexão..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+                                    </div>
+
+                                    <button type="submit" id="contact-submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
+                                        <span>🕊️</span> <span>Enviar para a Caixa Postal</span>
+                                    </button>
+                                </form>
+                            ` : `
+                                <div class="space-y-3 pt-1">
+                                    ${sent.length === 0 ? `
+                                        <div class="p-8 text-center bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-100 dark:border-slate-700/80 space-y-2">
+                                            <span class="text-3xl block">📭</span>
+                                            <h4 class="font-bold text-xs text-slate-700 dark:text-slate-300">Sua Caixa Postal está vazia</h4>
+                                            <p class="text-[11px] text-slate-400">Você ainda não enviou mensagens ou pedidos de oração por este aparelho.</p>
+                                            <button onclick="ContactManager.openMailboxModal('nova')" class="mt-2 px-4 py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold shadow-xs">Escrever Mensagem</button>
+                                        </div>
+                                    ` : `
+                                        <div class="space-y-3">
+                                            ${sent.map(m => `
+                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 space-y-2">
+                                                    <div class="flex items-center justify-between">
+                                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-900 dark:text-indigo-200 uppercase tracking-wider">${m.type}</span>
+                                                        <span class="text-[10px] text-slate-400">${new Date(m.createdAt).toLocaleDateString('pt-BR')} ${new Date(m.createdAt).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}</span>
+                                                    </div>
+                                                    <h5 class="text-xs font-bold text-slate-900 dark:text-slate-100">${m.subject}</h5>
+                                                    <p class="text-xs text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700 whitespace-pre-line">${m.message}</p>
+                                                    ${m.reply ? `
+                                                        <div class="bg-emerald-50 dark:bg-emerald-950/40 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800/80 space-y-1">
+                                                            <div class="text-[10px] font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1">
+                                                                <span>✝ Resposta da Equipe:</span>
+                                                            </div>
+                                                            <p class="text-xs text-emerald-900 dark:text-emerald-100 whitespace-pre-line">${m.reply}</p>
+                                                        </div>
+                                                    ` : `
+                                                        <div class="flex items-center gap-1.5 text-[10px] text-slate-400">
+                                                            <span>⏳</span> <span>Aguardando leitura e orações da pastoral</span>
+                                                        </div>
+                                                    `}
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    `}
+                                </div>
+                            `}
+                        </div>
+                    </div>
+                `;
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            },
+
+            async handleFormSubmit(event) {
+                event.preventDefault();
+                const btn = document.getElementById('contact-submit-btn');
+                const name = document.getElementById('contact-name')?.value || 'Fiel';
+                const email = document.getElementById('contact-email')?.value || '';
+                const type = document.getElementById('contact-type')?.value || 'Oração';
+                const subject = document.getElementById('contact-subject')?.value || 'Contato pelo site';
+                const message = document.getElementById('contact-message')?.value || '';
+
+                if (!email || !email.includes('@')) {
+                    showToast('Por favor, digite um e-mail válido para resposta.', 'error');
+                    return;
+                }
+                if (!message || message.trim().length < 5) {
+                    showToast('Por favor, escreva uma mensagem com ao menos 5 caracteres.', 'error');
+                    return;
+                }
+
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerHTML = '<span>⏳</span> <span>Enviando para a Caixa Postal...</span>';
+                }
+
+                try {
+                    const url = CloudSyncManager.getApiUrl('/api/contact/send');
+                    const res = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, email, type, subject, message })
+                    });
+
+                    const json = await res.json();
+                    if (res.ok && json.success) {
+                        // Salva na caixa postal local do navegador do fiel
+                        this.saveSentMessage(json.data);
+
+                        // Se o fiel ainda não sincronizou a nuvem, salva o e-mail dele para auto-sync
+                        if (!AppState.cloudSyncEmail) {
+                            AppState.cloudSyncEmail = email.trim().toLowerCase();
+                            saveState();
+                            CloudSyncManager.updateIndicator();
+                            CloudSyncManager.syncToCloud(false);
+                        }
+
+                        showToast('🕊️ Mensagem enviada com sucesso! Deus abençoe.', 'success');
+                        this.openMailboxModal('minhas');
+                    } else {
+                        showToast(json.error || 'Erro ao enviar mensagem. Tente novamente.', 'error');
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.innerHTML = '<span>🕊️</span> <span>Enviar para a Caixa Postal</span>';
+                        }
+                    }
+                } catch(e) {
+                    showToast('Erro de rede ao conectar com a caixa postal: ' + e.message, 'error');
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.innerHTML = '<span>🕊️</span> <span>Enviar para a Caixa Postal</span>';
+                    }
+                }
+            }
+        };
+
+        window.ContactManager = ContactManager;
+        window.openContactModal = () => ContactManager.openMailboxModal('nova');
+        window.openMailboxModal = (t) => ContactManager.openMailboxModal(t);
+
+        // ========================================================
+        // TABELA DA CAIXA POSTAL NO PAINEL ADM (ADMIN DASHBOARD)
+        // ========================================================
+        async function loadAdminMessagesTable() {
+            const container = document.getElementById('admin-messages-table-container');
+            const badge = document.getElementById('admin-inbox-unread-badge');
+            if (!container) return;
+
+            container.innerHTML = '<div class="p-6 text-center text-xs text-slate-400 animate-pulse">Consultando mensagens recebidas na caixa postal...</div>';
+
+            try {
+                const res = await fetch(CloudSyncManager.getApiUrl('/api/contact/list'));
+                if (res.ok) {
+                    const data = await res.json();
+                    const messages = data.messages || [];
+
+                    if (badge) {
+                        badge.innerText = (data.unreadCount || 0) + ' novas';
+                    }
+
+                    if (messages.length > 0) {
+                        const typeColors = {
+                            'Oração': 'bg-amber-100 text-amber-900 border-amber-300 dark:bg-amber-950 dark:text-amber-200',
+                            'Dúvida': 'bg-blue-100 text-blue-900 border-blue-300 dark:bg-blue-950 dark:text-blue-200',
+                            'Sugestão': 'bg-purple-100 text-purple-900 border-purple-300 dark:bg-purple-950 dark:text-purple-200',
+                            'Apoio': 'bg-emerald-100 text-emerald-900 border-emerald-300 dark:bg-emerald-950 dark:text-emerald-200',
+                            'Suporte': 'bg-rose-100 text-rose-900 border-rose-300 dark:bg-rose-950 dark:text-rose-200'
+                        };
+
+                        container.innerHTML = `
+                            <table class="w-full text-left text-xs">
+                                <thead>
+                                    <tr class="border-b border-slate-200 dark:border-slate-800 text-slate-400 uppercase tracking-wider text-[10px]">
+                                        <th class="py-2.5 px-3">Data / Hora</th>
+                                        <th class="py-2.5 px-3">Fiel / E-mail</th>
+                                        <th class="py-2.5 px-3">Tipo</th>
+                                        <th class="py-2.5 px-3">Assunto & Mensagem</th>
+                                        <th class="py-2.5 px-3">Status</th>
+                                        <th class="py-2.5 px-3 text-right">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                    ${messages.map(m => `
+                                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                            <td class="py-2.5 px-3 text-slate-400 text-[11px] whitespace-nowrap">
+                                                ${new Date(m.createdAt).toLocaleDateString('pt-BR')} ${new Date(m.createdAt).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}
+                                            </td>
+                                            <td class="py-2.5 px-3">
+                                                <div class="font-bold text-slate-800 dark:text-slate-200">${m.name || 'Anônimo'}</div>
+                                                <a href="mailto:${m.email}?subject=Re: ${encodeURIComponent(m.subject)}" class="font-mono text-[11px] text-blue-600 dark:text-blue-400 hover:underline block truncate max-w-[180px]">${m.email}</a>
+                                            </td>
+                                            <td class="py-2.5 px-3 whitespace-nowrap">
+                                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold border ${typeColors[m.type] || 'bg-slate-100 text-slate-700'}">
+                                                    ${m.type}
+                                                </span>
+                                            </td>
+                                            <td class="py-2.5 px-3 max-w-xs">
+                                                <strong class="text-slate-900 dark:text-slate-100 block truncate">${m.subject}</strong>
+                                                <p class="text-slate-600 dark:text-slate-400 text-[11px] line-clamp-2 mt-0.5">${m.message}</p>
+                                            </td>
+                                            <td class="py-2.5 px-3 whitespace-nowrap">
+                                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${m.status === 'novo' ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'}">
+                                                    ${m.status === 'novo' ? '🟡 Novo' : '🟢 Respondido'}
+                                                </span>
+                                            </td>
+                                            <td class="py-2.5 px-3 text-right whitespace-nowrap">
+                                                <div class="flex items-center justify-end gap-1.5">
+                                                    <a href="mailto:${m.email}?subject=Re: ${encodeURIComponent(m.subject)}&body=${encodeURIComponent('Olá ' + m.name + ', paz e bem!
+
+Recebemos sua mensagem no CATECISMO:
+"' + m.message + '"
+
+')}" class="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold transition shadow-2xs">
+                                                        ✉️ Responder
+                                                    </a>
+                                                    <button onclick="markAdminMessageStatus('${m.id}', '${m.status === 'novo' ? 'respondido' : 'novo'}')" class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-[10px] font-bold text-slate-600 dark:text-slate-300 transition">
+                                                        ${m.status === 'novo' ? '✓ Concluir' : 'Reabrir'}
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        `;
+                    } else {
+                        container.innerHTML = '<div class="p-8 text-center text-xs text-slate-400 bg-slate-50/50 dark:bg-slate-800/30 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700">📭 Nenhuma mensagem recebida ainda. Quando um visitante enviar uma dúvida ou pedido de oração, aparecerá aqui em tempo real!</div>';
+                    }
+                } else {
+                    container.innerHTML = '<div class="p-6 text-center text-xs text-rose-500">Erro ao carregar mensagens da caixa postal.</div>';
+                }
+            } catch(e) {
+                container.innerHTML = '<div class="p-6 text-center text-xs text-slate-400">Offline ou sem mensagens.</div>';
+            }
+        }
+        window.loadAdminMessagesTable = loadAdminMessagesTable;
+
+        async function markAdminMessageStatus(id, status) {
+            try {
+                await fetch(CloudSyncManager.getApiUrl('/api/contact/update-status'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id, status })
+                });
+                showToast('Status da mensagem atualizado!', 'info');
+                loadAdminMessagesTable();
+            } catch(e) {
+                showToast('Erro ao atualizar status: ' + e.message, 'error');
+            }
+        }
+        window.markAdminMessageStatus = markAdminMessageStatus;
+
+
 
         const DiarioBackupManager = {
             exportBackup() {
@@ -6646,7 +6994,16 @@
                             </table>
                         `;
                     } else {
-                        container.innerHTML = '<div class="p-6 text-center text-xs text-slate-400">Nenhum fiel sincronizou ainda. O primeiro que salvar uma reflexão aparecerá aqui!</div>';
+                        container.innerHTML = `
+                            <div class="p-8 text-center bg-slate-50 dark:bg-slate-800/40 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700 space-y-3">
+                                <div class="text-3xl">👥</div>
+                                <h5 class="text-xs font-bold text-slate-700 dark:text-slate-300">Banco de Dados Limpo & Pronto para Cadastros Reais</h5>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 max-w-md mx-auto leading-relaxed">Todos os cadastros de teste foram removidos. O banco agora registra apenas usuários reais! Assim que você, sua esposa ou outros fiéis conectarem o e-mail no site, eles aparecerão aqui instantaneamente.</p>
+                                <button onclick="closeModal(); CloudSyncManager.openCloudStatusModal();" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow-xs cursor-pointer">
+                                    ☁️ Cadastrar / Conectar E-mail Agora
+                                </button>
+                            </div>
+                        `;
                     }
                 } else {
                     container.innerHTML = '<div class="p-6 text-center text-xs text-rose-500">Erro ao consultar a nuvem da comunidade.</div>';
@@ -7026,6 +7383,32 @@
                         </div>
                     </div>
 
+                    <!-- 7. CAIXA POSTAL & MENSAGENS DOS FIÉIS (FALE CONOSCO & INTENÇÕES) -->
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">📬</span>
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-mariana dark:text-slate-100 flex items-center gap-2">
+                                        Caixa Postal & Fale Conosco
+                                        <span id="admin-inbox-unread-badge" class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200">0 novas</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">Dúvidas doutrinárias, pedidos de oração e mensagens enviadas pelos fiéis</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="loadAdminMessagesTable()" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 shadow-2xs cursor-pointer">
+                                    <span>🔄</span> <span>Atualizar Caixa Postal</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tabela de Mensagens da Caixa Postal -->
+                        <div id="admin-messages-table-container" class="overflow-x-auto custom-scrollbar">
+                            <div class="p-6 text-center text-xs text-slate-400">Carregando mensagens da caixa postal...</div>
+                        </div>
+                    </div>
+
 
                     
                     <!-- GESTÃO DINÂMICA DE MENUS & MÓDULOS (FEATURE FLAGS) -->
@@ -7104,6 +7487,7 @@
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             loadAdminCommunityTable();
+            loadAdminMessagesTable();
         }
         window.openAdminDashboard = promptAdminAccess;
         window.promptAdminAccess = promptAdminAccess;

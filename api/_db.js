@@ -2,23 +2,20 @@ import https from 'https';
 
 const GITHUB_TOKEN = process.env.GH_TOKEN || ['g','h','p','_','JU1p9NhrbrVC7PjFKSjrZIqWLxaaYE0BrX5t'].join('');
 const REPO = 'olirumtecapp-debug/catecismo-catolico';
-const FILE_PATH = 'data/cloud_users.json';
 
-let cachedDb = null;
-let lastFetchTime = 0;
-let cachedSha = null;
+const fileCache = {};
 
-export async function getDatabase() {
+export async function getJsonFile(filePath, defaultData = {}) {
   const now = Date.now();
-  // Cache for 10 seconds to keep serverless fast and responsive
-  if (cachedDb && (now - lastFetchTime < 10000)) {
-    return cachedDb;
+  const cached = fileCache[filePath];
+  if (cached && (now - cached.time < 5000)) {
+    return cached.data;
   }
 
   return new Promise((resolve) => {
     const req = https.request({
       hostname: 'api.github.com',
-      path: `/repos/${REPO}/contents/${FILE_PATH}`,
+      path: `/repos/${REPO}/contents/${filePath}`,
       method: 'GET',
       headers: {
         'Authorization': `token ${GITHUB_TOKEN}`,
@@ -32,33 +29,34 @@ export async function getDatabase() {
         if (res.statusCode === 200) {
           try {
             const json = JSON.parse(data);
-            cachedSha = json.sha;
             const content = JSON.parse(Buffer.from(json.content, 'base64').toString('utf8'));
-            cachedDb = content;
-            lastFetchTime = Date.now();
+            fileCache[filePath] = {
+              data: content,
+              sha: json.sha,
+              time: Date.now()
+            };
             return resolve(content);
           } catch(e) {}
         }
-        resolve(cachedDb || { _meta: {}, users: {} });
+        resolve(cached?.data || defaultData);
       });
     });
-    req.on('error', () => resolve(cachedDb || { _meta: {}, users: {} }));
+    req.on('error', () => resolve(cached?.data || defaultData));
     req.end();
   });
 }
 
-export async function saveUserToDatabase(email, userRecord) {
-  const db = await getDatabase();
-  if (!db.users) db.users = {};
-  db.users[email] = userRecord;
-  cachedDb = db;
-  lastFetchTime = Date.now();
-
+export async function saveJsonFile(filePath, data, commitMsg = 'update data') {
   try {
-    const sha = cachedSha;
-    const newB64 = Buffer.from(JSON.stringify(db, null, 2)).toString('base64');
+    let sha = fileCache[filePath]?.sha;
+    if (!sha) {
+      await getJsonFile(filePath, {});
+      sha = fileCache[filePath]?.sha;
+    }
+
+    const newB64 = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
     const payload = JSON.stringify({
-      message: `chore(sync): sync user ${email}`,
+      message: commitMsg,
       content: newB64,
       sha: sha
     });
@@ -66,7 +64,7 @@ export async function saveUserToDatabase(email, userRecord) {
     return new Promise((resolve) => {
       const putReq = https.request({
         hostname: 'api.github.com',
-        path: `/repos/${REPO}/contents/${FILE_PATH}`,
+        path: `/repos/${REPO}/contents/${filePath}`,
         method: 'PUT',
         headers: {
           'Authorization': `token ${GITHUB_TOKEN}`,
@@ -82,10 +80,17 @@ export async function saveUserToDatabase(email, userRecord) {
           if (res.statusCode === 200 || res.statusCode === 201) {
             try {
               const resJson = JSON.parse(resData);
-              if (resJson.content?.sha) cachedSha = resJson.content.sha;
+              if (resJson.content?.sha) {
+                fileCache[filePath] = {
+                  data: data,
+                  sha: resJson.content.sha,
+                  time: Date.now()
+                };
+              }
             } catch(e) {}
+            return resolve(true);
           }
-          resolve(true);
+          resolve(false);
         });
       });
       putReq.on('error', () => resolve(false));
@@ -95,4 +100,39 @@ export async function saveUserToDatabase(email, userRecord) {
   } catch(e) {
     return false;
   }
+}
+
+// ================= USERS DB =================
+export async function getDatabase() {
+  return await getJsonFile('data/cloud_users.json', { _meta: {}, users: {} });
+}
+
+export async function saveUserToDatabase(email, userRecord) {
+  const db = await getDatabase();
+  if (!db.users) db.users = {};
+  db.users[email] = userRecord;
+  return await saveJsonFile('data/cloud_users.json', db, `chore(sync): sync user ${email}`);
+}
+
+// ================= MESSAGES / CAIXA POSTAL DB =================
+export async function getMessagesDatabase() {
+  return await getJsonFile('data/contact_messages.json', { _meta: {}, messages: [] });
+}
+
+export async function saveMessageToDatabase(msg) {
+  const db = await getMessagesDatabase();
+  if (!Array.isArray(db.messages)) db.messages = [];
+  db.messages.unshift(msg);
+  return await saveJsonFile('data/contact_messages.json', db, `feat(contact): nova mensagem de ${msg.email || 'anonimo'}`);
+}
+
+export async function updateMessageInDatabase(messageId, updates) {
+  const db = await getMessagesDatabase();
+  if (!Array.isArray(db.messages)) return false;
+  const idx = db.messages.findIndex(m => m.id === messageId);
+  if (idx !== -1) {
+    db.messages[idx] = { ...db.messages[idx], ...updates, updatedAt: new Date().toISOString() };
+    return await saveJsonFile('data/contact_messages.json', db, `feat(contact): update status mensagem ${messageId}`);
+  }
+  return false;
 }
