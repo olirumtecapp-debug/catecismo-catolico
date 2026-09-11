@@ -6,11 +6,7 @@
       "destination": "/api/"
     },
     {
-      "source": "/app",
-      "destination": "/app.html"
-    },
-    {
-      "source": "/((?!api/|app.html|app).*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
