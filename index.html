@@ -4842,10 +4842,36 @@
         /* ---- Quiz engine ---- */
         let QuizSession = null;
 
+        function shuffleQuizQuestion(q) {
+            if (!q || !Array.isArray(q.options) || q.options.length <= 1) return q;
+            const originalCorrect = q.correctAnswer !== undefined ? q.correctAnswer : (q.correct !== undefined ? q.correct : 0);
+            const items = q.options.map((opt, idx) => ({
+                text: opt,
+                isCorrect: idx === originalCorrect
+            }));
+            
+            // Fisher-Yates shuffle para distribuição uniforme e imprevisível entre A, B, C e D
+            for (let i = items.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [items[i], items[j]] = [items[j], items[i]];
+            }
+            
+            const newOptions = items.map(item => item.text);
+            const newCorrect = items.findIndex(item => item.isCorrect);
+            
+            return {
+                ...q,
+                options: newOptions,
+                correctAnswer: newCorrect,
+                correct: newCorrect
+            };
+        }
+        window.shuffleQuizQuestion = shuffleQuizQuestion;
+
         function startQuiz(category = null, limit = 5) {
             QuizAudio.init();
             let pool = category ? QuizContentProvider.questions.filter(q => q.category === category) : [...QuizContentProvider.questions];
-            pool = pool.sort(() => Math.random() - 0.5).slice(0, limit);
+            pool = pool.sort(() => Math.random() - 0.5).slice(0, limit).map(q => shuffleQuizQuestion(q));
             QuizSession = { questions: pool, index: 0, correct: 0, answered: false, category, limit };
             renderQuizQuestion();
             const area = document.getElementById('quiz-area');
@@ -4933,6 +4959,10 @@
                 QuizAudio.playCorrect();
             } else {
                 QuizAudio.playWrong();
+            }
+
+            if (window.MetricsTracker) {
+                MetricsTracker.trackQuizAttempt(isCorrect, q.category);
             }
 
             document.querySelectorAll('.quiz-opt').forEach(btn => {
@@ -5371,6 +5401,9 @@
             const modal = document.getElementById('modal-container');
             if (!modal) return;
 
+            // Embaralha opções do mini-quiz da aula dinamicamente para distribuir as alternativas
+            const lessonQuizzes = (mod.quizQuestions || []).map(qq => shuffleQuizQuestion(qq));
+
             modal.innerHTML = `
                 <div class="bg-white dark:bg-slate-800 w-full max-w-3xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
                     <!-- Botão Fechar -->
@@ -5456,7 +5489,7 @@
                     ` : ''}
 
                     <!-- Mini-Quiz Interativo de Fixação -->
-                    ${mod.quizQuestions && mod.quizQuestions.length > 0 ? `
+                    ${lessonQuizzes && lessonQuizzes.length > 0 ? `
                         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-3">
                             <div class="flex items-center justify-between">
                                 <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
@@ -5464,7 +5497,7 @@
                                 </h4>
                                 <span class="text-[10px] text-slate-400">Teste sua retenção</span>
                             </div>
-                            ${mod.quizQuestions.map((qq, qIdx) => `
+                            ${lessonQuizzes.map((qq, qIdx) => `
                                 <div class="space-y-2" id="lesson-quiz-${qIdx}">
                                     <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">${qq.q}</p>
                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -5506,32 +5539,34 @@
             const isCorrect = selectedIdx === correctIdx;
             const feedbackEl = document.getElementById(`lq-feedback-${qIdx}`);
 
-            // Desabilita botões desta pergunta
-            for (let i = 0; i < 3; i++) {
-                const btn = document.getElementById(`lq-btn-${qIdx}-${i}`);
-                if (btn) {
-                    btn.disabled = true;
-                    if (i === correctIdx) {
-                        btn.className = 'py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 text-xs font-bold';
-                    } else if (i === selectedIdx && !isCorrect) {
-                        btn.className = 'py-2.5 px-3 rounded-xl border-2 border-rose-500 bg-rose-50 dark:bg-rose-950/60 text-rose-900 dark:text-rose-200 text-xs font-bold';
-                    } else {
-                        btn.className = 'py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 opacity-50 text-xs';
-                    }
+            // Desabilita botões desta pergunta dinamicamente
+            const optButtons = document.querySelectorAll(`[id^="lq-btn-${qIdx}-"]`);
+            optButtons.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === correctIdx) {
+                    btn.className = 'py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 text-xs font-bold';
+                } else if (i === selectedIdx && !isCorrect) {
+                    btn.className = 'py-2.5 px-3 rounded-xl border-2 border-rose-500 bg-rose-50 dark:bg-rose-950/60 text-rose-900 dark:text-rose-200 text-xs font-bold';
+                } else {
+                    btn.className = 'py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 opacity-50 text-xs';
                 }
-            }
+            });
 
             if (feedbackEl) {
                 feedbackEl.classList.remove('hidden');
                 if (isCorrect) {
                     feedbackEl.className = 'text-[11px] font-bold py-1.5 px-3 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200';
                     feedbackEl.innerText = '✓ Resposta Correta! Deus abençoe sua dedicação.';
-                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.play(true);
+                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.playCorrect();
                 } else {
                     feedbackEl.className = 'text-[11px] font-bold py-1.5 px-3 rounded-lg bg-rose-100 dark:bg-rose-950 text-rose-900 dark:text-rose-200';
                     feedbackEl.innerText = '✕ Resposta Incorreta. A opção destacada em verde é a correta pela doutrina da Igreja.';
-                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.play(false);
+                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.playWrong();
                 }
+            }
+
+            if (window.MetricsTracker) {
+                MetricsTracker.trackQuizAttempt(isCorrect, 'Catecismo');
             }
         }
         window.handleLessonQuizAnswer = handleLessonQuizAnswer;
