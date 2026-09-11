@@ -5563,6 +5563,7 @@
         window.completeLesson = completeLesson;
 
         function closeModal() {
+            stopApoioStatusPolling();
             const modal = document.getElementById('modal-container');
             modal.classList.add('hidden');
             modal.classList.remove('flex');
@@ -7993,6 +7994,33 @@
         window.copyPixKey = copyPixKey;
         window.copyDirectPixEmail = copyPixKey;
 
+        
+        // Monitoramento em tempo real do apoio via Webhook do Asaas
+        let apoioPollingInterval = null;
+
+        function startApoioStatusPolling() {
+            stopApoioStatusPolling();
+            apoioPollingInterval = setInterval(async () => {
+                try {
+                    const res = await fetch(`/api/asaas-webhook?value=${currentApoioVal || 10}`);
+                    if (!res.ok) return;
+                    const data = await res.json();
+                    if (data.approved) {
+                        stopApoioStatusPolling();
+                        closeModal();
+                        showToast('🎉 Doação recebida com sucesso! Que Deus abençoe imensamente o seu apoio ao Catecismo! 🙏✨', 'success');
+                    }
+                } catch(e) {}
+            }, 3000);
+        }
+
+        function stopApoioStatusPolling() {
+            if (apoioPollingInterval) {
+                clearInterval(apoioPollingInterval);
+                apoioPollingInterval = null;
+            }
+        }
+
         function openApoioModal() {
             if (window.MetricsTracker) MetricsTracker.trackApoioAction('open');
             const modal = document.getElementById('modal-container');
@@ -8118,6 +8146,7 @@
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             selectApoioTip(currentApoioVal || 10);
+            startApoioStatusPolling();
         }
         window.openApoioModal = openApoioModal;
 
