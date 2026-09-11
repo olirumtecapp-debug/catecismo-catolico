@@ -57,6 +57,14 @@
         "planProgress": {},
         "cloudSyncEmail": "fiel.peregrino@catolico.com.br"
       }
+    },
+    "teste.esposa@catolico.com.br": {
+      "email": "teste.esposa@catolico.com.br",
+      "level": "Peregrino",
+      "xp": 280,
+      "streak": 5,
+      "reflectionsCount": 2,
+      "updatedAt": "2026-09-11T15:41:20.858Z"
     }
   }
 }
