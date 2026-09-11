@@ -6,8 +6,8 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-11T23:31:31.506Z",
-      "createdAt": "2026-09-11T23:31:31.506Z",
+      "updatedAt": "2026-09-11T23:31:47.307Z",
+      "createdAt": "2026-09-11T23:31:47.307Z",
       "xp": 235,
       "streak": 1,
       "level": "Peregrino",
@@ -33,7 +33,7 @@
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-11T23:30:07.136Z"
+        "lastCloudSync": "2026-09-11T23:31:32.680Z"
       }
     }
   }
