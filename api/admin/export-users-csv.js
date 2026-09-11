@@ -1,10 +1,9 @@
-
 import { getDatabase } from '../_db.js';
 
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    const db = getDatabase();
-    const userEntries = Object.values(db.users);
+    const db = await getDatabase();
+    const userEntries = Object.values(db.users || {});
 
     let csv = 'Email,Nivel_Espiritual,XP,Ofensiva_Dias,Reflexoes_Salvas,Ultima_Sincronizacao\n';
     userEntries.forEach(u => {

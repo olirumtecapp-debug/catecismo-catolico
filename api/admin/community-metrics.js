@@ -1,4 +1,3 @@
-
 import { getDatabase } from '../_db.js';
 
 export default async function handler(req, res) {
@@ -10,8 +9,8 @@ export default async function handler(req, res) {
         return res.status(204).end();
     }
 
-    const db = getDatabase();
-    const userEntries = Object.values(db.users);
+    const db = await getDatabase();
+    const userEntries = Object.values(db.users || {});
 
     let totalXp = 0;
     let totalStreak = 0;

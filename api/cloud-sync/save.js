@@ -1,5 +1,4 @@
-
-import { getDatabase, saveDatabase } from '../_db.js';
+import { saveUserToDatabase } from '../_db.js';
 
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,8 +22,6 @@ export default async function handler(req, res) {
         }
 
         const appState = payload.appState || {};
-        const db = getDatabase();
-
         const nowIso = new Date().toISOString();
         const reflectionsCount = appState.lectioNotes ? Object.keys(appState.lectioNotes).length : 0;
         const xp = appState.xp || 0;
@@ -34,10 +31,10 @@ export default async function handler(req, res) {
         const levelIdx = Math.min(Math.floor(xp / 150), levelNames.length - 1);
         const levelName = levelNames[levelIdx];
 
-        db.users[email] = {
+        const userRecord = {
             email,
             updatedAt: nowIso,
-            createdAt: db.users[email]?.createdAt || nowIso,
+            createdAt: nowIso,
             xp,
             streak,
             level: levelName,
@@ -45,7 +42,8 @@ export default async function handler(req, res) {
             appState
         };
 
-        saveDatabase(db);
+        // Persist to GitHub
+        await saveUserToDatabase(email, userRecord);
 
         return res.status(200).json({
             success: true,
