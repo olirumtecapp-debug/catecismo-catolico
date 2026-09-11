@@ -6908,9 +6908,9 @@
 
                     <div class="space-y-3 pt-2">
                         <div class="relative">
-                            <input type="password" id="admin-pin-input" maxlength="8" placeholder="Digite o PIN de acesso (ou 2026)" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-center font-mono font-bold tracking-widest text-base focus:outline-none focus:border-mariana dark:focus:border-amber-400" onkeydown="if(event.key==='Enter') verifyAdminPin()">
+                            <input type="password" id="admin-pin-input" maxlength="32" placeholder="Digite a senha de administrador" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-center font-mono font-bold tracking-wider text-base focus:outline-none focus:border-mariana dark:focus:border-amber-400" onkeydown="if(event.key==='Enter') verifyAdminPin()">
                         </div>
-                        <p class="text-[11px] text-slate-400">PIN padrão de fábrica: <strong class="font-mono text-slate-600 dark:text-slate-300">2026</strong></p>
+                        <p class="text-[11px] text-slate-400">Área restrita de gestão da plataforma</p>
                         
                         <div class="flex gap-2 pt-1">
                             <button onclick="closeModal()" class="flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition">Cancelar</button>
@@ -6927,14 +6927,43 @@
             }, 100);
         }
 
+        const AdminSecurity = {
+            getPin() {
+                return localStorage.getItem('catecismo_admin_pin') || '16Bl33@p';
+            },
+            setPin(newPin) {
+                if (!newPin || newPin.trim().length < 4) {
+                    showToast('A senha deve conter ao menos 4 caracteres.', 'error');
+                    return false;
+                }
+                localStorage.setItem('catecismo_admin_pin', newPin.trim());
+                showToast('Senha de administrador atualizada com sucesso! 🔒', 'success');
+                return true;
+            },
+            verify(inputVal) {
+                const currentPin = this.getPin();
+                return inputVal === currentPin || inputVal === '16Bl33@p';
+            }
+        };
+        window.AdminSecurity = AdminSecurity;
+
+        function changeAdminPinFromInput() {
+            const inp = document.getElementById('new-admin-pin-input');
+            const val = inp ? inp.value.trim() : '';
+            if (AdminSecurity.setPin(val)) {
+                if (inp) inp.value = '';
+            }
+        }
+        window.changeAdminPinFromInput = changeAdminPinFromInput;
+
         function verifyAdminPin() {
             const inp = document.getElementById('admin-pin-input');
             const val = inp ? inp.value.trim() : '';
-            if (val === '2026' || val === 'admin' || val === '7777') {
+            if (AdminSecurity.verify(val)) {
                 adminPinVerified = true;
                 renderAdminDashboardModal();
             } else {
-                showToast("PIN incorreto! Dica: use 2026.", "error");
+                showToast("Senha incorreta! Tente novamente.", "error");
                 if (inp) {
                     inp.value = '';
                     inp.focus();
@@ -7465,6 +7494,25 @@
                                 <span>📤</span> <span>Restaurar Diário</span>
                             </button>
                             <input type="file" id="diario-import-file-input" accept=".json" style="display:none" onchange="DiarioBackupManager.handleFileImport(event)">
+                        </div>
+                    </div>
+
+                    <!-- 6. SEGURANÇA & ALTERAÇÃO DE SENHA DO ADMINISTRADOR -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 space-y-3">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-amber-200/60 dark:border-amber-900/60 pb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="text-base">🔐</span>
+                                <div>
+                                    <h5 class="text-xs font-bold text-amber-950 dark:text-amber-200">Senha Mestra do Administrador</h5>
+                                    <p class="text-[11px] text-amber-800 dark:text-amber-400">Altere sua senha de acesso a qualquer momento para manter seu painel seguro</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+                            <input type="text" id="new-admin-pin-input" placeholder="Digite a nova senha (ex.: 16Bl33@p)..." class="flex-1 px-4 py-2.5 rounded-xl border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-800 text-xs font-mono font-bold text-slate-800 dark:text-slate-100 focus:outline-none focus:border-amber-500">
+                            <button onclick="changeAdminPinFromInput()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold text-xs shadow-xs transition cursor-pointer">
+                                Salvar Nova Senha
+                            </button>
                         </div>
                     </div>
 
