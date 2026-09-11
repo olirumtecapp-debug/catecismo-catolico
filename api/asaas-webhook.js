@@ -1,8 +1,8 @@
-// api/asaas-webhook.js - Webhook Oficial do Asaas para CATECISMO
+// api/asaas-webhook.js - Webhook Oficial do Asaas para CATECISMO (ESM)
 let recentApprovals = globalThis.__catecismo_approvals || [];
 globalThis.__catecismo_approvals = recentApprovals;
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,POST');
@@ -13,9 +13,9 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  // 1. Consulta do frontend do Catecismo (GET) para verificar se a doação/apoio foi confirmada
+  // 1. Consulta do frontend do Catecismo (GET) para verificar se o PIX de apoio foi pago
   if (req.method === 'GET') {
-    const { value } = req.query;
+    const { value } = req.query || {};
     const now = Date.now();
     
     // Procura aprovação recente (últimos 15 minutos)
@@ -32,7 +32,6 @@ module.exports = async function handler(req, res) {
         event: match.event,
         paymentId: match.paymentId,
         value: match.value,
-        customerName: match.customerName,
         timestamp: match.timestamp
       });
     }
@@ -60,7 +59,7 @@ module.exports = async function handler(req, res) {
           paymentId: payment.id,
           event: event,
           value: payment.value,
-          customerName: payment.customer?.name || null,
+          billingType: payment.billingType,
           timestamp: Date.now()
         };
 
@@ -76,4 +75,4 @@ module.exports = async function handler(req, res) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-};
+}
