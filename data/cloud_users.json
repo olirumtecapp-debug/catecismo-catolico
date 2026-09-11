@@ -6,35 +6,27 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-11T16:33:09.041Z",
-      "createdAt": "2026-09-11T16:33:09.041Z",
-      "xp": 215,
+      "updatedAt": "2026-09-11T16:34:46.856Z",
+      "createdAt": "2026-09-11T16:34:46.856Z",
+      "xp": 150,
       "streak": 4,
       "level": "Peregrino",
       "reflectionsCount": 0,
       "appState": {
-        "xp": 215,
+        "xp": 150,
         "streak": 4,
         "lastPrayerDate": null,
-        "completedLessons": [
-          "creio_1",
-          "creio_2"
-        ],
+        "completedLessons": [],
         "completedQuizzes": [],
         "favorites": [],
         "unlockedAchievements": [
-          "first_liturgy",
-          "prayer_streak",
-          "first_study"
+          "prayer_streak"
         ],
-        "liturgicalRead": {
-          "2026-09-11": true
-        },
+        "liturgicalRead": {},
         "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-11T16:30:06.728Z"
+        "cloudSyncEmail": "olirumdev1@gmail.com"
       }
     }
   }
