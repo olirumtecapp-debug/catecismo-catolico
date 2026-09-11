@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-15",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "33o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Provérbios 31,10-13.19-20.30-31",
+      "text": "10Uma mulher forte, quem a encontrará? Ela vale muito mais do que as jóias. 11Seu marido confia nela plenamente, e não terá falta de recursos. 12Ela lhe dá só alegria e nenhum desgosto, todos os dias de sua vida. 13Procura ló e linho, e com habilidade trabalham as suas mãos. 19Estende a mão para a roca e seus dedos seguram o fuso. 20Abre suas mãos ao necessitado e estende suas mãos ao pobre. 30O encanto é enganador e a beleza é passageira; a mulher que teme ao Senhor, essa sim, merece louvor. 31Proclamem o êxito de suas mãos, e na praça louvem-na as suas obras!"
+    },
+    "psalm": {
+      "reference": "Salmo 127 (128)",
+      "text": "- Feliz és tu se temes o Senhor e trilhas seus caminhos! Do trabalho de tuas mãos hás de viver, serás feliz, tudo irá bem!\n\n- A tua esposa é uma videira bem fecunda no coração da tua casa; os teus filhos são rebentos de oliveira ao redor de tua mesa.\n\n- Será assim abençoado todo homem que teme o Senhor. O Senhor te abençoe de Sião, cada dia de tua vida."
+    },
+    "secondReading": {
+      "reference": "Tessalonicenses 5,1-6",
+      "text": "1Quanto ao tempo e à hora, meus irmãos, não há por que vos escrever. 2Vós mesmos sabeis perfeitamente que o dia do Senhor virá como ladrão, de noite. 3Quando as pessoas disserem: 'Paz e segurança!', então de repente sobrevirá a destruição, como as dores de parto sobre a mulher grávida. E não poderão escapar. 4Mas vós, meus irmãos, não estais nas trevas, de modo que esse dia vos surpreenda como um ladrão. 5Todos vós sois filhos da luz e filhos do dia. Não somos da noite, nem das trevas. 6Portanto, não durmamos, como os outros, mas sejamos vigilantes e sóbrios."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 25, 14-30",
+      "text": "Naquele tempo, Jesus contou esta parábola a seus discípulos: 14Um homem ia viajar para o estrangeiro. Chamou seus empregados e lhes entregou seus bens. 15A um deu cinco talentos, a outro deu dois e ao terceiro, um; a cada qual de acordo com a sua capacidade. Em seguida viajou. 16O empregado que havia recebido cinco talentos saiu logo, trabalhou com eles, e lucrou outros cinco. 17Do mesmo modo, o que havia recebido dois lucrou outros dois. 18Mas aquele que havia recebido um só, saiu, cavou um buraco na terra, e escondeu o dinheiro do seu patrão. 19Depois de muito tempo, o patrão voltou e foi acertar contas com os empregados. 20O empregado que havia recebido cinco talentos entregou-lhe mais cinco, dizendo: `Senhor, tu me entregaste cinco talentos. Aqui estão mais cinco que lucrei'. 21O patrão lhe disse: `Muito bem, servo bom e fiel! como foste fiel na administração de tão pouco, eu te confiarei muito mais. Vem participar da minha alegria!' 22Chegou também o que havia recebido dois talentos, e disse: `Senhor, tu me entregaste dois talentos. Aqui estão mais dois que lucrei'. 23O patrão lhe disse: `Muito bem, servo bom e fiel! Como foste fiel na administração de tão pouco, eu te confiarei muito mais. Vem participar da minha alegria!' 24Por fim, chegou aquele que havia recebido um talento, e disse: `Senhor, sei que és um homem severo, pois colhes onde não plantaste e ceifas onde não semeaste. 25Por isso fiquei com medo e escondi o teu talento no chão. Aqui tens o que te pertence'. 26O patrão lhe respondeu: `Servo mau e preguiçoso! Tu sabias que eu colho onde não plantei e que ceifo onde não semeei? 27Então devias ter depositado meu dinheiro no banco, para que, ao voltar, eu recebesse com juros o que me pertence.' 28Em seguida, o patrão ordenou: `Tirai dele o talento e dai-o àquele que tem dez! 29Porque a todo aquele que tem será dado mais, e terá em abundância, mas daquele que não tem, até o que tem lhe será tirado. 30Quanto a este servo inútil, jogai-o lá fora, na escuridão. Ali haverá choro e ranger de dentes!'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João Crisóstomo<br/>",
+    "</b>",
+    "Presbítero de Antioquia, Bispo de Constantinopla, Doutor da Igreja<br/>",
+    "Homilias sobre o Evangelho de São Mateus, n.° 78, 2-3<br/>",
+    "A parábola dos talentos<br/>",
+    "Um dos servos diz: «Senhor, confiaste-me cinco talentos»; outro diz que lhe couberam dois a guardar. Reconhecem que receberam dele o meio de fazer o bem; dão-lhe testemunho de grande reconhecimento e prestam-lhe contas dos bens confiados. Que lhes responde o seu Senhor? «Muito bem, servo bom e fiel (porque o próprio da bondade é ver o seu próximo); porque foste fiel nas pequenas coisas, confiar-te-ei as grandes. Vem tomar parte na alegria do Senhor.» Assim designa Jesus a beatitude completa.<br/>",
+    "Mas o que apenas tinha recebido um talento foi enterrá-lo. «Quanto a este servo inútil, lançai-o às trevas exteriores. Aí haverá choro e ranger de dentes.» Repara, não é só o ladrão, o homem que procura enriquecer sem olhar a meios, aquele que faz o mal, que é castigado no fim; é também aquele que não faz o bem […]. Que são estes talentos, com efeito? São o poder de cada um, a autoridade de que se dispõe, a fortuna que se possui, o conselho que se pode dar e toda esta sorte de coisas. Que ninguém venha portanto dizer: só tenho um talento, nada posso fazer. Porque tu, mesmo com um único talento, podes agir de maneira louvável.<br/>"
+  ]
+}

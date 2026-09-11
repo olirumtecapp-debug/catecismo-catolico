@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-18",
+  "year": 2026,
+  "month": 6,
+  "day": 18,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-18.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-18",
+      "name": "SS. Marcos e Marceliano, mártires romanos",
+      "normalizedName": "ss. marcos e marceliano, romanos",
+      "imageUrl": "./assets/img/santos/06-18-ss-marcos-e-marceliano-martires-romanos.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18/ss--marcos-e-marceliano--martires-romanos.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18/ss--marcos-e-marceliano--martires-romanos.html",
+      "sourceText": "Marcos e Marceliano, talvez irmãos de sangue, mas, certamente, irmãos no martírio, foram detidos, no ano 304, pelo prefeito Cromácio, que lhes concedeu um mês para negar a fé. Ao rejeitarem, foram martirizados e sepultados na Catacumba de Balbina, na Via Ardeatina.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "name": "São Gregório Barbarigo, bispo de Pádua e cardeal",
+      "normalizedName": "sao gregorio barbarigo, bispo de padua e cardeal",
+      "imageUrl": "./assets/img/santos/06-18-sao-gregorio-barbarigo-bispo-de-padua-e-carde.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18/s--gregorio-barbarigo--bispo-de-padua-e-cardeal.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18/s--gregorio-barbarigo--bispo-de-padua-e-cardeal.html",
+      "sourceText": "Os pontos cardeais da vida de Gregório eram a ajuda aos leprosos, sua proximidade aos fiéis, sobretudo aos mais pobres, e a formação de sacerdotes, profundamente inspirados em São Carlos Borromeu. São Gregório Barbarigo foi um homem muito estimado pelos Papas do seu tempo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "name": "s. Marina de Bitinia",
+      "normalizedName": "marina de bitinia",
+      "imageUrl": "./assets/img/santos/06-18-s-marina-de-bitinia.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18/s--marina-de-bitinia.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/18/s--marina-de-bitinia.html",
+      "sourceText": "A história de Marina de Bitínia é uma das mais originais da Igreja antiga. Tornou-se Santa, por volta do século VIII, após ter passado, com o pai, uma vida curta e intensa em um convento, disfarçada de homem. Falsamente acusada, foi capaz de recuperar a dignidade perdida, com grande fé e caridade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

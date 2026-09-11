@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-11",
+  "year": 2026,
+  "month": 8,
+  "day": 11,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/11.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-11.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-11",
+      "name": "São Clara de Assis, fundadora das Clarissas",
+      "normalizedName": "sao clara de assis, fundadora das clarissas",
+      "imageUrl": "./assets/img/santos/08-11-sao-clara-de-assis-fundadora-das-clarissas.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/11/s--clara-de-assis--fundadora-das-clarissas.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/11/s--clara-de-assis--fundadora-das-clarissas.html",
+      "sourceText": "No dia 11 de agosto, a Igreja celebra Santa Clara de Assis, virgem do século XIII, fundadora das Irmãs Clarissas. Com apenas dezoito anos, sem a permissão da família paterna, seguiu São Francisco, deixando toda a sua riqueza e dedicando-se totalmente à oração. É Padroeira da Televisão.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "name": "São Tibúrcio, mártir, na via Labicana",
+      "normalizedName": "sao tiburcio, martir, na via labicana",
+      "imageUrl": "./assets/img/santos/08-11-sao-tiburcio-martir-na-via-labicana.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Entre os primeiros mártires cristãos, Tibúrcio foi sepultado no cemitério “ad Duas Lauros”, na Via Labicana, em Roma, como narram os Itinerários do século VII. O Papa São Dâmaso enalteceu as virtudes heroicas deste Santo, cuja parte do seu corpo é venerada no altar-mor da igreja de Santo Apolinário.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "name": "São Susana, romana, na igreja homônima",
+      "normalizedName": "sao susana, romana, na igreja homonima",
+      "imageUrl": "./assets/img/santos/08-11-sao-susana-romana-na-igreja-homonima.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/11/s--susana--romana--na-igreja-homonima.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/11/s--susana--romana--na-igreja-homonima.html",
+      "sourceText": "Ao consagrar-se a Cristo, Susana recusou-se casar com o filho adotivo do imperador Diocleciano. Por isso, foi condenada à morte e decapitada, em 11 de agosto de 294, em sua casa, que, depois, se tornou lugar de culto. Seu corpo deveria descansar sob a atual igreja, a ela dedicada, em Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

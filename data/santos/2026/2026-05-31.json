@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-31",
+  "year": 2026,
+  "month": 5,
+  "day": 31,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/31.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-31.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-31",
+      "name": "São Félix de Nicósia",
+      "normalizedName": "sao felix de nicosia",
+      "imageUrl": "./assets/img/santos/05-31-sao-felix-de-nicosia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Félix era analfabeto, mas \"doutor\" em humildade. O frade capuchinho, do século XVIII, era porteiro, sapateiro, enfermeiro em seu convento. Fora, pedia esmola, ensinava o catecismo às crianças. Faleceu em 1787 e foi canonizado em 2005, por Bento XVI.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-31",
+      "name": "s. Petronila",
+      "normalizedName": "petronila",
+      "imageUrl": "./assets/img/santos/05-31-s-petronila.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Conforme a Passio dos Santos Nereu e Aquileu, Santa Petronila seria filha do Apóstolo Pedro. As fontes não concordam entre si, mas, certamente, teria sofrido o martírio no século IV e enterrada no cemitério de Domitila. Seus restos mortais foram trasladados para São Pedro, em 757.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

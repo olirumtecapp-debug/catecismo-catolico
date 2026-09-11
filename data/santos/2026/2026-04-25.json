@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-25",
+  "year": 2026,
+  "month": 4,
+  "day": 25,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/25.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-25.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-25",
+      "name": "São Marcos, Evangelista",
+      "normalizedName": "sao marcos, evangelista",
+      "imageUrl": "./assets/img/santos/04-25-sao-marcos-evangelista.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/25/s--marcos--evangelista.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/25/s--marcos--evangelista.html",
+      "sourceText": "A festa de São Marcos Evangelista é celebrada em 25 de abril. Seu emblema é um leão alado, símbolo da cidade de Veneza, da qual é Padroeiro. Viveu em íntimo contato com o apóstolo Paulo, acompanhando-o em algumas viagens, mas também com Pedro, cujas catequeses transcreveu em seu Evangelho.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-25",
+      "name": "Santa Franca, abadessa de Piacenza",
+      "normalizedName": "santa franca, abadessa de piacenza",
+      "imageUrl": "./assets/img/santos/04-25-santa-franca-abadessa-de-piacenza.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De nobre família de Placência, Franca entrou para o mosteiro Beneditino de São Siro, onde se tornou abadessa. Sua decisão, de introduzir no mosteiro a vida regular, suscitou forte oposição. Assim, foi abadessa do mosteiro de Montelana, que, depois, foi transferido para Pittolo. Faleceu em 1218.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

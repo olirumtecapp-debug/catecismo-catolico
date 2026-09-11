@@ -1,0 +1,31 @@
+{
+  "date": "2027-11-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "32a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Sabedoria 18,14-16; 19,6-9",
+      "text": "14Quando um tranquilo silêncio envolvia todas as coisas e a noite chegava ao meio de seu curso, 15a tua palavra onipotente, vinda do alto do céu, do seu trono real, precipitou-se, como guerreiro impiedoso, no meio de uma terra condenada ao extermínio; como espada afiada, levava teu decreto irrevogável; 16defendendo-se, encheu tudo de morte e, mesmo estando sobre a terra, ela atingia o céu. 19,6Então, a criação inteira, obediente às tuas ordens, foi de novo remodelada em cada espécie de seres, para que teus filhos fossem preservados de todo perigo. 7Apareceu a nuvem para dar sombra ao acampamento, e a terra enxuta surgiu onde antes era água: o mar Vermelho tornou-se caminho desimpedido, e as ondas violentas se transformaram em campo verdejante, 8por onde passaram, como um só povo, os que eram protegidos por tua mão, contemplando coisas assombrosas. 9Como cavalos soltos na pastagem e como cordeiros, correndo aos saltos, glorificaram-te a ti, Senhor, seu libertador."
+    },
+    "psalm": {
+      "reference": "Salmo 104 (105)",
+      "text": "- Cantai, entoai salmos para ele, publicai todas as suas maravilhas! Gloriai-vos em seu nome que é santo, exulte o coração que busca a Deus!\n\n- Matou na própria terra os primogênitos, a fina flor de sua força varonil. Fez sair com ouro e prata o povo eleito, nenhum doente se encontrava em suas tribos.\n\n- Ele lembrou-se de seu santo juramento, que fizera a Abraão, seu servidor. Fez sair com grande júbilo o seu povo, e seus eleitos, entre gritos de alegria."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 18, 1-8",
+      "text": "Naquele tempo: 1Jesus contou aos discípulos uma parábola, para mostrar-lhes a necessidade de rezar sempre, e nunca desistir, dizendo: 2'Numa cidade havia um juiz que não temia a Deus, e não respeitava homem algum. 3Na mesma cidade havia uma viúva, que vinha à procura do juiz, pedindo: `Faze-me justiça contra o meu adversário!' 4Durante muito tempo, o juiz se recusou. Por fim, ele pensou: 'Eu não temo a Deus, e não respeito homem algum. 5Mas esta viúva já me está aborrecendo. Vou fazer-lhe justiça, para que ela não venha a agredir-me!'' 6E o Senhor acrescentou: 'Escutai o que diz este juiz injusto. 7E Deus, não fará justiça aos seus escolhidos, que dia e noite gritam por ele? Será que vai fazê-los esperar? 8Eu vos digo que Deus lhes fará justiça bem depressa. Mas o Filho do homem, quando vier, será que ainda vai encontrar fé sobre a terra?'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João Clímaco, monge do Monte Sinai<br/>",
+    "</b>",
+    "«A Escada Santa»<br/>",
+    "Deus, único mestre de oração<br/>",
+    "A oração é, quanto à sua natureza, a conversa e a união da alma com Deus; quanto à sua eficácia, é a conservação do mundo e a sua reconciliação com Deus, um ponto elevado acima das tentações, uma muralha contra as tribulações, a extinção das guerras, a alegria futura, a atividade que não cessa, a fonte das graças, a dadora dos carismas, um progresso invisível, o alimento da alma, a iluminação do espírito, o machado que corta o desespero, a expulsão da tristeza, a redução da ira, o espelho do progresso, a manifestação da nossa medida, o teste ao estado da nossa alma, a revelação das coisas futuras, o anúncio seguro da glória.<br/>",
+    "Tem coragem e terás o próprio Deus como mestre de oração. É impossível aprender a ver por meio de palavras, porque ver é um efeito da natureza. Assim também é impossível aprender a beleza da oração através dos ensinamentos de outros. A oração só se aprende na oração e o seu mestre é Deus, que ensina ao homem a ciência [...], que concede o dom da oração àquele que ora, que abençoa os anos dos justos.<br/>"
+  ]
+}

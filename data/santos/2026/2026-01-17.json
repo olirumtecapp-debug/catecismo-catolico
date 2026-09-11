@@ -1,0 +1,30 @@
+{
+  "date": "2026-01-17",
+  "year": 2026,
+  "month": 1,
+  "day": 17,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/17.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-17.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-17",
+      "name": "São Antão, abade",
+      "normalizedName": "sao antao, abade",
+      "imageUrl": "./assets/img/santos/01-17-sao-antao-abade.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/17/s--antao--abade.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/17/s--antao--abade.html",
+      "sourceText": "Antônio, pai do monacato, protetor dos animais e modelo de vida cristã, nasceu no alto Egito, por volta do ano 250. A dedicar a sua vida ao Senhor, tornou-se um dos maiores eremitas da história da Igreja. A sua memória litúrgica é celebrada em 17 de janeiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-21",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "Ct 2:8-14",
+    "psalm": "Sl 33:2-3, 11-12, 20-21",
+    "secondReading": "",
+    "gospel": "Lc 1:39-45"
+  },
+  "calendar": {
+    "date": "2026-12-21",
+    "monthDay": "12/21",
+    "season": "Advent",
+    "celebration": {
+      "name": "Saint Peter Canisius, Priest and Doctor",
+      "type": "OPT_MEMORIAL",
+      "quote": "If you have too much to do, with God's help you will find time to do it all.",
+      "description": "A Jesuit known as the 'Second Apostle of Germany,' he played a vital role in the Counter-Reformation.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-21.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-21.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-21"
+  }
+}

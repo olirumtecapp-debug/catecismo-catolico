@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-30",
+  "season": "Christmas",
+  "readings": {
+    "firstReading": "1Jo 2:12-17",
+    "psalm": "Sl 96:7-8a, 8b-9, 10",
+    "secondReading": "",
+    "gospel": "Lc 2:36-40"
+  },
+  "calendar": {
+    "date": "2026-12-30",
+    "monthDay": "12/30",
+    "season": "Christmas",
+    "celebration": {
+      "name": "6th day in the Octave of Christmas",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-30.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-30.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-30"
+  }
+}

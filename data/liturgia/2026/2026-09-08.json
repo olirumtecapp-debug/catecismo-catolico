@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-08",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Festa: Natividade de Nossa Senhora",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Miqueias 5,1-4",
+      "text": "Assim diz o Senhor: 1Tu, Belém de Éfrata, pequenina entre os mil povoados de Judá, de ti há de sair aquele que dominará em Israel; sua origem vem de tempos remotos, desde os dias da eternidade. 2Deus deixará seu povo ao abandono, até ao tempo em que uma mãe der à luz; e o resto de seus irmãos se voltará para os filhos de Israel. 3Ele não recuará, apascentará com a força do Senhor e com a majestade do nome do Senhor seu Deus; os homens viverão em paz, pois ele agora estenderá o poder até aos confins da terra, 4e ele mesmo será a Paz."
+    },
+    "psalm": {
+      "reference": "Salmo 70 (71); 12 (13)",
+      "text": "- Sois meu apoio desde antes que eu nascesse, desde o seio maternal, o meu amparo: para vós o meu louvor eternamente!\n\n- Uma vez que confiei no vosso amor, meu coração, por vosso auxílio, rejubile, e que eu vos cante pelo bem que me fizestes!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 1, 1-16.18-23",
+      "text": "1Livro da origem de Jesus Cristo, filho de Davi, filho de Abraão. 2Abraão gerou Isaac; Isaac gerou Jacó; Jacó gerou Judá e seus irmãos. 3Judá gerou Farés e Zara, cuja mãe era Tamar. Farés gerou Esrom; Esrom gerou Aram; 4Aram gerou Aminadab; Aminadab gerou Naasson; Naasson Gerou Salmon; 5Salmon gerou Booz, cuja mãe era Raab. Booz gerou Obed, cuja mãe era Rute. Obed gerou Jessé. 6Jessé gerou o rei Davi. Davi gerou Salomão, daquela que tinha sido a mulher de Urias. 7Salomão gerou Roboão; Roboão gerou Abias; Abias gerou Asa; 8Asa gerou Josafá; Josafá gerou Jorão; Jorão gerou Ozias; 9Ozias gerou Jotão; Jotão gerou Acaz; Acaz gerou Ezequias; 10Ezequias gerou Manassés; Manassés gerou Amon; Amon gerou Josias. 11Josias gerou Jeconias e seus irmãos, no tempo do exílio na Babilônia. 12Depois do exílio na Babilônia, Jeconias gerou Salatiel; Salatiel gerou Zorobabel; 13Zorobabel gerou Abiud; Abiud gerou Eliaquim; Eliaquim gerou Azor; 14Azor gerou Sadoc; Sadoc gerou Aquim; Aquim gerou Eliud; 15Eliud gerou Eleazar; Eleazar gerou Mató; Mató gerou Jacó. 16Jacó gerou José, o esposo de Maria, da qual nasceu Jesus, que é chamado o Cristo. 18A origem de Jesus Cristo foi assim: Maria, sua mãe, estava prometida em casamento a José, e, antes de viverem juntos, ela ficou grávida pela ação do Espírito Santo. 19José, seu marido, era justo e, não querendo denunciá-la, resolveu abandonar Maria, em segredo. 20Enquanto José pensava nisso, eis que o anjo do Senhor apareceu-lhe, em sonho, e lhe disse: \"José, Filho de Davi, não tenhas medo de receber Maria como tua esposa, porque ela concebeu pela ação do Espírito Santo. 21Ela dará à luz um filho, e tu lhe darás o nome de Jesus, pois ele vai salvar o seu povo dos seus pecados\". 22Tudo isso aconteceu para se cumprir o que o Senhor havia dito pelo profeta: 23\"Eis que a virgem conceberá e dará à luz um filho. Ele será chamado pelo nome de Emanuel, que significa: Deus está conosco\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo André de Creta, monge, Bispo<br/>",
+    "</b>",
+    "Homilia 1, para a Natividade da Santa Mãe de Deus; PG 97, 805<br/>",
+    "Hoje desponta a aurora da salvação<br/>",
+    "Já não vivemos sob a escravidão dos elementos do mundo, como diz o apóstolo Paulo. Já não estamos submetidos à letra da Lei (Col 2,8; Rom 7,6). Com efeito, é nisto que consiste o essencial das graças de Cristo; é aqui que o mistério se manifesta e que a natureza é renovada: Deus fez-Se homem e a humanidade por Ele assumida foi divinizada. Era pois necessário que a esplêndida habitação de Deus, visível entre os homens, fosse precedida por uma introdução à alegria, de onde decorresse o dom magnífico da salvação. Tal é o objeto da festa que celebramos: o nascimento da Mãe de Deus inaugura o mistério que tem por conclusão e termo a união do Verbo com a carne. [...]<br/>",
+    "Agora que a Virgem acaba de nascer e se prepara para ser Mãe do Rei universal de todos os séculos [...], recebemos do Verbo uma dupla mercê: somos conduzidos à verdade e libertados de uma vida de escravidão sob a letra da Lei. Como? Por que forma? Porque as sombras se desvanecem com a chegada da luz, porque a graça faz com que a liberdade substitua a letra. A festa que celebramos está nesta fronteira, porque faz a ligação entre a verdade e as imagens que a prefiguram, substitui o que era velho por coisas novas. [...]<br/>",
+    "Que toda a criação cante e dance e dê o seu melhor contributo para a alegria deste dia! Que o Céu e a Terra formem hoje uma única assembleia! Que tudo o que está no mundo e acima do mundo se una no mesmo concerto de festa. Com efeito, hoje eleva-se o santuário criado onde residirá o Criador do universo. E uma criatura é preparada, por esta disposição inteiramente nova, para oferecer ao Criador uma morada santa.<br/>"
+  ]
+}

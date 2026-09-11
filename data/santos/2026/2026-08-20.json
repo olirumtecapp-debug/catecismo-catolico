@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-20",
+  "year": 2026,
+  "month": 8,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-20",
+      "name": "São Bernardo, abade e doutor da Igreja",
+      "normalizedName": "sao bernardo, abade e doutor da igreja",
+      "imageUrl": "./assets/img/santos/08-20-sao-bernardo-abade-e-doutor-da-igreja.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/20/s--bernardo--abade-e-doutor-da-igreja.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/20/s--bernardo--abade-e-doutor-da-igreja.html",
+      "sourceText": "São Bernardo, Doutor da Igreja e fundador da Abadia de Clairvaux (Claraval), foi um Padre Cisterciense e é padroeiro dos apicultores. Percorreu as estradas da Europa combatendo as heresias e defendendo o Papa e a Igreja. Sua memória litúrgica é celebrada em 20 de agosto.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "name": "São Samuel, profeta",
+      "normalizedName": "sao samuel, profeta",
+      "imageUrl": "./assets/img/santos/08-20-sao-samuel-profeta.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "A história de Samuel, primeiro profeta e último Juiz de Israel, é narrada no primeiro livro da Bíblia, que traz seu nome. Nascido por volta de 1070 a.C., era destinado ao sacerdócio. O Senhor lhe apareceu e lhe pediu para ungir, antes, Saul e, depois, o rei Davi, de cuja estipe nasceu Jesus.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Santa Maria de Mattias, virgem, fund. das Irmãs da Adoração do Preciosíssimo Sangue",
+      "normalizedName": "santa maria de mattias, , fund. das irmas da adoracao do preciosissimo sangue",
+      "imageUrl": "./assets/img/santos/08-20-santa-maria-de-mattias-virgem-fund-das-irmas-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Aos 17 anos, a vida de Maria em Vallecorsa, última cidade do Estado Pontifício, mudou devido ao encontro com São Gaspar de Búfalo: foi pregadora e missionária por toda a região italiana da Ciociaria; em 1834, fundou a Congregação das Adoradoras do Sangue de Cisto, que se dedica à educação.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

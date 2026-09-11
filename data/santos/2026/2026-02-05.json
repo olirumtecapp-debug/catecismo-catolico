@@ -1,0 +1,56 @@
+{
+  "date": "2026-02-05",
+  "year": 2026,
+  "month": 2,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-05",
+      "name": "Santa Águeda, virgem e mártir de Catânia",
+      "normalizedName": "santa agueda, e martir de catania",
+      "imageUrl": "./assets/img/santos/02-05-santa-agueda-virgem-e-martir-de-catania.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/05/s--agueda--virgem-e-martir-de-catania.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/05/s--agueda--virgem-e-martir-de-catania.html",
+      "sourceText": "O testemunho de fé de Santa Ágata é um dos mais lindos do primeiro século. A Igreja celebra a sua memória no dia 5 de fevereiro, data da sua morte em Catânia. A corajosa jovem siciliana, submetida a horríveis torturas, deu prova de uma verdadeira fidelidade a Cristo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-05",
+      "name": "Santa Adelaide, abadessa",
+      "normalizedName": "santa adelaide, abadessa",
+      "imageUrl": "./assets/img/santos/02-05-santa-adelaide-abadessa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sua família construiu um mosteiro em Vilich, na Alemanha, do qual Adelaide foi abadessa. Adotou a Regra beneditina das monjas de Santa Maria no Capitólio, onde sua irmã era abadessa: com a sua morte, os dois mosteiros foram confiados a Adelaide. A Santa é venerada na França, com o nome de Alice.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-05",
+      "name": "B. Isabel Canóri Mora, mãe de família",
+      "normalizedName": "b. isabel canori mora, mae de familia",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Esposa do promissor advogado Cristóvão, Isabel sofreu por anos pela sua traição conjugal, que levou sua família quase à falência. Não obstante, sempre era sorridente e fiel a Jesus. Tornou-se Terciária trinitária e foi beatificada, em 1994, por João Paulo II, que a definiu “mulher de amor heroico”.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

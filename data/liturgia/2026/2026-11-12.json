@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Josafa",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Filêmon 7-20",
+      "text": "Caríssimo, 7grande alegria e consolo tive por causa de tua caridade. Os corações dos santos foram reanimados por ti, irmão. 8Por esse motivo, se bem que tenha plena autoridade em Cristo para prescrever-te tua obrigação, 9prefiro fazer apenas um apelo à tua caridade. Eu, Paulo, velho como estou e agora também prisioneiro de Cristo Jesus, 10faço-te um pedido em favor do meu filho que fiz nascer para Cristo na prisão, Onésimo. 11Antes, ele era inútil para ti; agora, ele é valioso para ti e para mim. 12Eu o estou mandando de volta para ti. Ele é como se fosse o meu próprio coração. 13Gostaria de tê-lo comigo, a fim de que fosse teu representante para cuidar de mim nesta prisão, que eu devo ao evangelho. 14Mas eu não quis fazer nada sem o teu parecer, para que a tua bondade não seja forçada, mas espontânea. 15Se ele te foi retirado por algum tempo, talvez seja para que o tenhas de volta para sempre, 16já não como escravo, mas, muito mais do que isso, como um irmão querido, muitíssimo querido para mim quanto mais ele o for para ti, tanto como pessoa humana quanto como irmão no Senhor. 17Assim, se estás em comunhão de fé comigo, recebe-o como se fosse a mim mesmo. 18Se em alguma coisa te prejudicou ou se alguma coisa te deve, põe em minha conta. 19Eu, Paulo, de meu punho o escrevo: eu o pagarei; para não dizer que tu mesmo me deves a própria vida. 20Sim, irmão, deixa que eu te explore no Senhor. Conforta em Cristo meu coração."
+    },
+    "psalm": {
+      "reference": "Salmo 145 (146)",
+      "text": "- O Senhor faz justiça aos que são oprimidos; ele dá alimento aos famintos, é o Senhor quem liberta os cativos.\n\n- O Senhor abre os olhos aos cegos, o Senhor faz erguer-se o caído, o Senhor ama aquele que é justo. É o Senhor quem protege o estrangeiro.\n\n- Quem ampara a viúva e o órfão, mas confunde os caminhos dos maus. O Senhor reinará para sempre! Ó Sião, o teu Deus reinará para sempre e por todos os séculos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 20-25",
+      "text": "Naquele tempo, 20os fariseus perguntaram a Jesus sobre o momento em que chegaria o reino de Deus. Jesus respondeu: \"O reino de Deus não vem ostensivamente. 21Nem se poderá dizer: 'Está aqui' ou 'está ali', porque o reino de Deus está entre vós\". 22E Jesus disse aos discípulos: \"Dias virão em que desejareis ver um só dia do Filho do homem e não podereis ver. 23As pessoas vos dirão: 'Ele está ali' ou 'ele está aqui'. Não deveis ir nem correr atrás. 24Pois, como o relâmpago brilha de um lado até o outro do céu, assim também será o Filho do homem no seu dia. 25Antes, porém, ele deverá sofrer muito e ser rejeitado por esta geração\"."
+    }
+  },
+  "extra": []
+}

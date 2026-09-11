@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-20",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 6:8-15",
+    "psalm": "Sl 119:23-24, 26-27, 29-30",
+    "secondReading": "",
+    "gospel": "Jo 6:22-29"
+  },
+  "calendar": {
+    "date": "2026-04-20",
+    "monthDay": "4/20",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Monday of the 3rd week of Easter",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-20.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-20.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-20"
+  }
+}

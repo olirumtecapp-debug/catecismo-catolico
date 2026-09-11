@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-08",
+  "year": 2026,
+  "month": 11,
+  "day": 8,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/08.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-08.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-08",
+      "name": "SS. Quatro Coroados, mártires",
+      "normalizedName": "ss. quatro coroados,",
+      "imageUrl": "./assets/img/santos/11-08-ss-quatro-coroados-martires.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Abaixe o cinzel: um cristão não pode esculpir uma estátua do deus Esculápio. Esta escolha custou a vida de Cláudio, Nicostrato, Simproniano e Castório, hábeis escultores do século IV, naturais da Panônia. Diocleciano os condenou e morreram no rio Danúbio, trancados em barris de chumbo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "name": "São Deodato I, papa",
+      "normalizedName": "sao deodato i, papa",
+      "imageUrl": "./assets/img/santos/11-08-sao-deodato-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Deodato, também chamado “Deus dedit”, foi educado no mosteiro de Santo Erasmo, em Roma. Eleito Papa, em 615, em uma época sombria, de fortes controvérsias doutrinárias entre Oriente e Ocidente, não teve muito tempo de resolvê-las porque morreu, em 618, ano de terremotos e epidemia de sarna.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

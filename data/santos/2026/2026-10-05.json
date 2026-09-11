@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-05",
+  "year": 2026,
+  "month": 10,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-05",
+      "name": "SS. Plácido e Mauro, discípulos de S. Bento",
+      "normalizedName": "ss. placido e mauro, discipulos de s. bento",
+      "imageUrl": "./assets/img/santos/10-05-ss-placido-e-mauro-discipulos-de-s-bento.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Confiados aos cuidados de São Bento, em Subiaco, Plácido e Mauro foram seus discípulos prediletos. Um episódio, sobre ambos, narra que, um dia, Plácido caiu em um lago e Bento, que soube através de uma revelação divina, enviou Mauro; para salvá-lo, o Santo caminhou, milagrosamente, sobre a água.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "name": "São Faustina Kowalska",
+      "normalizedName": "sao faustina kowalska",
+      "imageUrl": "./assets/img/santos/10-05-sao-faustina-kowalska.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/05/santa-faustina-kowalska.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/05/santa-faustina-kowalska.html",
+      "sourceText": "Entre os Santos que fizeram da misericórdia de Deus a sua missão de vida encontra-se Santa Faustina Kowalska, uma humilde freira polonesa, que viveu entre as duas Guerras Mundiais. Jesus confiou-lhe a mensagem da Divina Misericórdia e a tarefa de difundi-la. A Igreja a celebra em 5 de outubro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

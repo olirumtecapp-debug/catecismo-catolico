@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-01",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Justino",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "São Pedro 1,2-7",
+      "text": "Caríssimos: 2Graça e paz vos sejam concedidas abundantemente, porque conheceis Deus e Jesus, nosso Senhor. 3O seu divino poder nos deu tudo o que contribui para a vida e para a piedade, mediante o conhecimento daquele que, pela sua própria glória e virtude, nos chamou. 4Por meio de tudo isso nos foram dadas as preciosas promessas, as maiores que há, a fim de que vos tornásseis participantes da natureza divina, depois de libertos da corrupção, da concupiscência no mundo. 5Por isso mesmo, dedicai todo o esforço em juntar à vossa fé a virtude, à virtude o conhecimento, 6ao conhecimento o autodomínio, ao autodomínio a perseverança, à perseverança a piedade, 7à piedade o amor fraterno e ao amor fraterno, a caridade."
+    },
+    "psalm": {
+      "reference": "Salmo 90 (91)",
+      "text": "- Quem habita ao abrigo do Altíssimo e vive à sombra do Senhor onipotente, diz ao Senhor:'Sois meu refúgio e proteção, sois o meu Deus, no qual confio inteiramente'.\n\n- 'Porque a mim se confiou, hei de livrá-lo e protegê-lo, pois meu nome ele conhece. Ao invocar-me hei de ouvi-lo e atendê-lo, a seu lado eu estarei em suas dores.\n\n- Hei de livrá-lo e de glória coroá-lo, vou conceder-lhe vida longa e dias plenos, e vou mostrar-lhe minha graça e salvação'."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 12, 1-12",
+      "text": "Naquele tempo: 1Jesus começou a falar aos sumos sacerdotes, mestres da Lei e anciãos, usando parábolas: 'Um homem plantou uma vinha, cercou-a, fez um lagar e construiu uma torre de guarda. Depois arrendou a vinha a alguns agricultores, e viajou para longe. 2Na época da colheita, ele mandou um empregado aos agricultores para receber a sua parte dos frutos da vinha. 3Mas os agricultores pegaram no empregado, bateram nele, e o mandaram de volta sem nada. 4Então o dono da vinha mandou de novo mais um empregado. Os agricultores bateram na cabeça dele e o insultaram. 5Então o dono mandou ainda mais outro, e eles o mataram. Trataram da mesma maneira muitos outros, batendo em uns e matando outros. 6Restava-lhe ainda alguém: seu filho querido. Por último, ele mandou o filho até aos agricultores, pensando:'Eles respeitaróo meu filho'. 7Mas aqueles agricultores disseram uns aos outros: 'Esse é o herdeiro. Vamos matá-lo, e a herança será nossa'. 8Então agarraram o filho, o mataram, e o jogaram fora da vinha. 9Que fará o dono da vinha? Ele virá, destruirá os agricultores, e entregará a vinha a outros. 10Por acaso, não lestes na Escritura: 'A pedra que os construtores deixaram de lado, tornou-se a pedra mais importante; 11isso foi feito pelo Senhor e é admirável aos nossos olhos'?' 12Então os chefes dos judeus procuraram prender Jesus, pois compreenderam que havia contado a parábola para eles. Porém, ficaram com medo da multidão e, por isso, deixaram Jesus e foram-se embora."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Pio de Pietrelcina, capuchinho<br/>",
+    "</b>",
+    "Carta 3<br/>",
+    "«Vai trabalhar hoje para a minha vinha» (Mt 21,28)<br/>",
+    "Bendigo a Deus de todo o meu coração, porque me fez conhecer almas verdadeiramente boas. Pude anunciar-lhes que também elas são a vinha do Senhor: a cisterna é a sua fé; a torre, a sua esperança; o lagar, a sua caridade; a sebe é a lei de Deus, que as separa dos filhos das trevas.<br/>",
+    "Vou ficar por aqui, porque o sino chama por mim; vou ao lagar da igreja, que é o altar. É de lá que brota continuamente o vinho sagrado desta uva deliciosa e única com que tão poucos têm a graça de poder enebriar-se. Ali, como sabeis, pois não posso agir de outra forma, apresentar-vos-ei ao Pai dos Céus, unido ao seu Filho; é nele e com Ele que sou inteiramente vosso, no Senhor.<br/>",
+    "Senhor Jesus, salva-os a todos! Ofereço-me como vítima por todos eles. Torna-me mais forte; toma este coração, enche-o do teu amor, e depois pede-me tudo o que quiseres.<br/>"
+  ]
+}

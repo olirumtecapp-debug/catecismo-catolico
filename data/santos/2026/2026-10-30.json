@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "year": 2026,
+  "month": 10,
+  "day": 30,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/30.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-30.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-30",
+      "name": "São Germano, bispo de Cápua",
+      "normalizedName": "sao germano, bispo de capua",
+      "imageUrl": "./assets/img/santos/10-30-sao-germano-bispo-de-capua.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Germano, nascido rico, doou todos os seus bens aos pobres e se dedicou à vida ascética. Em 516, como Bispo de Cápua, foi enviado pelo Papa a Constantinopla, onde, finalmente, conseguiu acabar com o cisma de Acácio, que, por anos, havia dividido a Igreja de Roma daquela do Oriente.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

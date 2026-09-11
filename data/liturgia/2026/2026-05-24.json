@@ -1,0 +1,28 @@
+{
+  "date": "2026-05-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Pascal Ciclo da Pascoa Solenidade: Pentecostes",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 2,1-11",
+      "text": "1Quando chegou o dia de Pentecostes, os discípulos estavam todos reunidos no mesmo lugar. 2De repente, veio do céu um barulho como se fosse uma forte ventania, que encheu a casa onde eles se encontravam. 3Então apareceram línguas como de fogo que se repartiram e pousaram sobre cada um deles. 4Todos ficaram cheios do Espírito Santo e começaram a falar em outras línguas, conforme o Espírito os inspirava. 5Moravam em Jerusalém judeus devotos, de todas as nações do mundo. 6Quando ouviram o barulho, juntou-se a multidão e todos ficaram confusos, pois cada um ouvia os discípulos falar em sua própria língua. 7Cheios de espanto e admiração, diziam: \"Esses homens que estão falando não são todos galileus? 8Como é que nós os escutamos na nossa própria língua? 9Nós que somos partos, medos e elamitas, habitantes da Mesopotâmia, da Judeia e da Capadócia, do Ponto e da Ásia, 10da Frígia e da Panfília, do Egito e da parte da Líbia próxima de Cirene, também romanos que aqui residem; 11judeus e prosélitos, cretenses e árabes, todos nós os escutamos anunciar as maravilhas de Deus na nossa própria língua!\""
+    },
+    "psalm": {
+      "reference": "Salmo 103 (104)",
+      "text": "- Bendize, ó minha alma, ao Senhor! Ó meu Deus e meu Senhor, como sois grande! Quão numerosas, ó Senhor, são vossas obras! Encheu-se a terra com as vossas criaturas!\n\n- Se tirais o seu respiro, elas perecem e voltam para o pó de onde vieram. Enviais o vosso espírito e renascem, e da terra toda a face renovais.\n\n- Que a glória do Senhor perdure sempre, e alegre-se o Senhor em suas obras! Hoje, seja-lhe agradável o meu canto, pois o Senhor é a minha grande alegria!"
+    },
+    "secondReading": {
+      "reference": "Coríntios 12,3-7.12-13",
+      "text": "Irmãos, 3ninguém pode dizer: \"Jesus é o Senhor\", a não ser no Espírito Santo. 4Há diversidade de dons, mas um mesmo é o Espírito. 5Há diversidade de ministérios, mas um mesmo é o Senhor. 6Há diferentes atividades, mas um mesmo Deus que realiza todas as coisas em todos. 7A cada um é dada a manifestação do Espírito em vista do bem comum. 12Como o corpo é um, embora tenha muitos membros, e como todos os membros do corpo, embora sejam muitos, formam um só corpo, assim também acontece com Cristo. 13De fato, todos nós, judeus ou gregos, escravos ou livres, fomos batizados num único Espírito, para formarmos um único corpo, e todos nós bebemos de um único Espírito."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 20, 19-23",
+      "text": "</b>"
+    }
+  },
+  "extra": [
+    "- Glória a Vós, Senhor<br/>"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-12",
+  "year": 2026,
+  "month": 2,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-12",
+      "name": "SS. Saturnino e Companheiros, mártires de Abissínia, África",
+      "normalizedName": "ss. saturnino e companheiros, de abissinia, africa",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Trata-se de 49 cristãos, presos em 304, por terem participado de uma Missa dominical. Foram torturados, mas não negaram à sua fé. Um deles, interrogado por que havia desobedecido, respondeu: \"Sine dominico non possumus\": \"Não podemos viver sem celebrar o dia do Senhor\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

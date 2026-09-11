@@ -1,0 +1,43 @@
+{
+  "date": "2026-03-15",
+  "year": 2026,
+  "month": 3,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-15",
+      "name": "São Clemente M. Hofbauer, presbítero redentorista",
+      "normalizedName": "sao clemente m. hofbauer, presbitero redentorista",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Clemente era natural da atual República Tcheca. Depois de uma viagem à Itália, foi ordenado sacerdote Redentorista, em 1785. Enviado à Áustria para fundar uma nova comunidade, dedicou-se à renovação do clero e dos pobres. Pio X proclamou-o padroeiro de Viena e dos padeiros, sua ex-profissão.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-15",
+      "name": "São Zacarias, papa",
+      "normalizedName": "sao zacarias, papa",
+      "imageUrl": "./assets/img/santos/03-15-sao-zacarias-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Zacarias, último Papa grego, subiu ao trono de Pedro em 741. A situação da época era tempestuosa pelas tensões com o Império do Oriente e com os Lombardos que se espalhavam pela Itália. Zacarias destacou-se pela sua capacidade de mediação. Consagrou o rei Pepino o Breve, algo inédito para um Papa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

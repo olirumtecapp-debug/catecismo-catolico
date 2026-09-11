@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-08",
+  "year": 2026,
+  "month": 9,
+  "day": 8,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/08.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-08.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-08",
+      "name": "São Sérgio I, papa",
+      "normalizedName": "sao sergio i, papa",
+      "imageUrl": "./assets/img/santos/09-08-sao-sergio-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Filho de uma família síria de Palermo, o Papa Sérgio I foi um homem de fé, capaz de apaziguar antigas discórdias. Quando o imperador Justiniano II quis impor as regras de um Concílio, composto apenas por Bispos orientais, Sérgio se opôs e foi defendido até por exércitos. Sérgio faleceu em 701.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "name": "São Tomás de Vilanova, bispo de Valência",
+      "normalizedName": "sao tomas de vilanova, bispo de valencia",
+      "imageUrl": "./assets/img/santos/09-08-sao-tomas-de-vilanova-bispo-de-valencia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Tomás, ao ser nomeado Arcebispo de Valência, encarnou o ideal do Bom Pastor evangélico, mais com obras do que com palavras. Este grande pregador preocupava-se com todos, especialmente com os pobres e jovens. Defendeu o território e a fé cristã e fundou o seminário da Apresentação. Faleceu em 1555.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-12-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2o. Domingo do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 40,1-5.9-11",
+      "text": "1Consolai o meu povo, consolai-o! - diz o vosso Deus -. 2Falai ao coração de Jerusalém e dizei em alta voz que sua servidão acabou e a expiação de suas culpas foi cumprida; ela recebeu das mãos do Senhor o dobro por todos os seus pecados. 3Grita uma voz: 'Preparai no deserto o caminho do Senhor, aplainai na solidão a estrada de nosso Deus. 4Nivelem-se todos os vales, rebaixem-se todos os montes e colinas; endireite-se o que é torto e alisem-se as asperezas: 5a glória do Senhor então se manifestará, e todos os homens verão juntamente o que a boca do Senhor falou'. 9Sobe a um alto monte, tu, que trazes a boa nova a Sião; levanta com força a tua voz, tu, que trazes a boa nova a Jerusalém, ergue a voz, não temas; dize às cidades de Judá: 'Eis o vosso Deus, 10eis que o Senhor Deus vem com poder, seu braço tudo domina: eis, com ele, sua conquista, eis à sua frente a vitória. 11Como um pastor, ele apascenta o rebanho, reúne, com a força dos braços, os cordeiros e carrega-os ao colo; ele mesmo tange as ovelhas-mães'."
+    },
+    "psalm": {
+      "reference": "Salmo 84 (85)",
+      "text": "- Quero ouvir o que o Senhor irá falar: é a paz que ele vai anunciar; a paz para o seu povo e seus amigos, para os que voltam ao Senhor seu coração. Está perto a salvação dos que o temem, e a glória habitará em nossa terra.\n\n- A verdade e o amor se encontrarão, a justiça e a paz se abraçarão; da terra brotará a fidelidade, e a justiça olhará dos altos céus.\n\n- O Senhor nos dará tudo o que é bom, e a nossa terra nos dará suas colheitas; a justiça andará na sua frente e a salvação há de seguir os passos seus."
+    },
+    "secondReading": {
+      "reference": "São Pedro 3,8-14",
+      "text": "8Uma coisa vós não podeis desconhecer, caríssimos: para o Senhor, um dia é como mil anos e mil anos como um dia. 9O Senhor não tarda a cumprir sua promessa, como pensam alguns, achando que demora. Ele está usando de paciência para convosco. Pois não deseja que alguém se perca. ao contrário, quer que todos venham a converter-se. 10O dia do Senhor chegará como um ladrão, e então os céus acabarão com barulho espantoso; os elementos, devorados pelas chamas, se dissolverão, e a terra será consumida com tudo o que nela se fez. 11Se deste modo tudo se vai desintegrar, qual não deve ser o vosso empenho numa vida santa e piedosa, 12enquanto esperais com anseio a vinda do Dia de Deus, quando os céus em chama se vão derreter, e os elementos, consumidos pelo fogo, se fundirão? 13O que nós esperamos, de acordo com a sua promessa, são novos céus e uma nova terra, onde habitará a justiça. 14Caríssimos, vivendo nesta esperança, esforçai-vos para que ele vos encontre numa vida pura e sem mancha e em paz."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 1-8",
+      "text": "1Início do Evangelho de Jesus Cristo, Filho de Deus. 2Está escrito no livro do profeta Isaías: 'Eis que envio meu mensageiro à tua frente, para preparar o teu caminho. 3Esta é a voz daquele que grita no deserto: 'Preparai o caminho do Senhor, endireitai suas estradas!'' 4Foi assim que João Batista apareceu no deserto, pregando um batismo de conversão para o perdão dos pecados. 5Toda a região da Judéia e todos os moradores de Jerusalém iam ao seu encontro. Confessavam os seus pecados e João os batizava no rio Jordão. 6João se vestia com uma pele de camelo e comia gafanhotos e mel do campo. 7E pregava, dizendo: 'Depois de mim virá alguém mais forte do que eu. Eu nem sou digno de me abaixar para desamarrar suas sandálias. 8Eu vos batizei com água, mas ele vos batizará com o Espírito Santo.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Francisco de Sales, Bispo de Genebra, Doutor da Igreja <br/>",
+    "</b>",
+    "Sermão para o 4.º Domingo do Advento <br/>",
+    "«Preparai o caminho do Senhor, endireitai as suas veredas»<br/>",
+    "Tendo o povo de Deus sido reduzido à escravatura pelos pagãos e enviado como cativo para o meio dos persas e dos medos, depois de ter sofrido um longo cativeiro, o rei Ciro resolveu livrá-lo dessa servidão e reconduzi-lo à Terra Prometida. Qual poesia divina, o profeta Isaías entoou então estas palavras cheias de beleza: «Povo de Israel, consolai-vos, consolai-vos, diz o Senhor nosso Deus; a vossa consolação não será vã nem inútil. Falai ao coração de Jerusalém [...], porque a sua malícia chegou ao fim. E porque as suas iniquidades atingiram o máximo, serão perdoadas.» Por isso, dizia esse grande poeta ao povo de Israel: «Aplanai os vossos caminhos e endireitai as vossas veredas» (40, 1s). [...] <br/>",
+    "Porque é que Deus diz que perdoará ao povo de Israel as suas iniquidades, se é verdade que ele atingiu o cúmulo da sua malícia? Os Padres antigos [...] ensinam que estas palavras podem entender-se [...] como se Deus dissesse: «Quando eles estão no auge das suas aflições e sentem vivamente o fardo das suas iniquidades nesta escravidão e neste cativeiro, depois de os ter punido pela sua maldade [...], olhei-os e tive deles compaixão. Chegados ao pior dos seus dias, bastou-Me o que já tinham sofrido; por isso, as suas iniquidades ser-lhes-ão agora perdoadas. [...] Quando atingiram o cúmulo da sua [...] ingratidão, quando parecia não terem nenhuma lembrança nem memória de Deus e dos seus benefícios, a sua iniquidade ser-lhes-á perdoada.» [...] Quando a Providência de Deus quis mostrar aos homens a sua bondade, isso foi admirável, porque Ele não quis ser induzido por motivação alguma: movido apenas pela sua bondade, comunicou-Se aos homens de uma forma absolutamente maravilhosa. <br/>",
+    "Quando Ele veio a este mundo, era o tempo em que os homens tinham chegado ao cúmulo da sua malícia: as leis estavam nas mãos de Anás e Caifás [...], Herodes reinava e Pôncio Pilatos governava a Judeia; foi nesse tempo que Deus veio ao mundo para nos resgatar e nos libertar da tirania do pecado e da servidão do nosso inimigo. <br/>"
+  ]
+}

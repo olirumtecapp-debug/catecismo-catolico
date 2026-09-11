@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-12",
+  "year": 2026,
+  "month": 8,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-12",
+      "name": "Santa Joana Francisca de Chantal, religiosa",
+      "normalizedName": "santa joana francisca de chantal,",
+      "imageUrl": "./assets/img/santos/08-12-santa-joana-francisca-de-chantal-religiosa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Como Clara com Francisco, assim foi Joana com Francisco de Sales. Entre o século XV e XVI, tornou-se baronesa de Chantal. Quando seu esposo se ausentava, Joana se despia dos trajes elegantes e servia aos pobres. Tornando-se viúva, consagrou-se a Deus e fundou as Visitandinas para cuidar dos doentes.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "name": "B. Inocêncio XI, papa",
+      "normalizedName": "b. inocencio xi, papa",
+      "imageUrl": "./assets/img/santos/08-12-b-inocencio-xi-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Bento Odescalchi tornou-se Papa Inocêncio XI em 1676. Grande reformador dos costumes, lutou contra abusos, nepotismo e escravidão. O terrível assédio de Viena ocorreu durante o seu Pontificado. Ao perceber a periculosidade da ameaça turca, instituiu a Santa Liga para defender o Cristianismo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

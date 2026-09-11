@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-11",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 16:11-15",
+    "psalm": "Sl 149:1b-2, 3-4, 5-6a and 9b",
+    "secondReading": "",
+    "gospel": "Jo 15:26—16:4a"
+  },
+  "calendar": {
+    "date": "2026-05-11",
+    "monthDay": "5/11",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Monday of the 6th week of Easter",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-11.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-11.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-11"
+  }
+}

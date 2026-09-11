@@ -1,0 +1,32 @@
+{
+  "date": "2027-04-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 13,44-52",
+      "text": "44No sábado seguinte, quase toda a cidade se reuniu para ouvir a Palavra de Deus. 45Ao verem aquela multidão, os judeus ficaram cheios de inveja e, com blasfêmias, opunham-se ao que Paulo dizia. 46Então, com muita coragem, Paulo e Barnabé declararam: \"Era preciso anunciar a Palavra de Deus primeiro a vós. Mas, como a rejeitais e vos considerais indignos da vida eterna, sabei que nos vamos dirigir aos pagãos. 47Porque esta é a ordem que o Senhor nos deu: 'Eu te coloquei como luz para as nações, para que leves a salvação até os confins da terra'\". 48Os pagãos ficaram muito contentes quando ouviram isso e glorificavam a Palavra do Senhor. Todos os que eram destinados à vida eterna abraçaram a fé. 49Desse modo, a Palavra do Senhor espalhava-se por toda a região. 50Mas os judeus instigaram as mulheres ricas e religiosas, assim como os homens influentes da cidade, provocaram uma perseguição contra Paulo e Barnabé e expulsaram-nos do seu território. 51Então os apóstolos sacudiram contra eles a poeira dos pés e foram para a cidade de Icônio. 52Os discípulos, porém, ficaram cheios de alegria e do Espírito Santo."
+    },
+    "psalm": {
+      "reference": "Salmo 97 (98)",
+      "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram a salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 14, 7-14",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 7\"Se vós me conhecêsseis, conheceríeis também o meu Pai. E desde agora o conheceis e o vistes\". 8Disse Filipe: \"Senhor, mostra-nos o Pai, isso nos basta!\" 9Jesus respondeu: \"Há tanto tempo estou convosco e não me conheces, Filipe? Quem me viu, viu o Pai. Como é que tu dizes: 'Mostra-nos o Pai'? 10Não acreditas que eu estou no Pai e o Pai está em mim? As palavras que eu vos digo, não as digo por mim mesmo, mas é o Pai que, permanecendo em mim, realiza as suas obras. 11Acreditai-me, eu estou no Pai, e o Pai está em mim. Acreditai, ao menos, por causa dessas mesmas obras. 12Em verdade, em verdade vos digo, quem acredita em mim fará as obras que eu faço e fará ainda maiores do que estas. Pois eu vou para o Pai, 13e o que pedirdes em meu nome, eu o realizarei, a fim de que o Pai seja glorificado no Filho. 14Se pedirdes algo em meu nome, eu o realizarei\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São João Paulo II, Papa<br/>",
+    "</b>",
+    "Encíclica « Dives in Misericordia » § 2 (trad. © copyright Libreria Editrice Vaticana, rev.)<br/>",
+    "«Quem Me vê, vê o Pai»<br/>",
+    "Em Cristo e por Cristo, Deus torna-Se particularmente visível na sua misericórdia; isto é, põe-se em evidência o atributo da divindade a que já o Antigo Testamento, servindo-se de diversos conceitos e termos, tinha chamado «misericórdia». Cristo confere um sentido definitivo a toda a tradição do Antigo Testamento relativa à misericórdia divina. Não somente fala dela e a explica recorrendo a comparações e parábolas, mas sobretudo encarna-a e personifica-a. Ele próprio é, em certo sentido, a misericórdia. Para quem a vê n'Ele - e n'Ele a encontra -, Deus torna-se particularmente «visível» como Pai «rico em misericórdia» (Ef 2,4).<br/>",
+    "A mentalidade contemporânea, talvez mais do que a do homem do passado, parece opor-se ao Deus de misericórdia, e tende a separar da vida e a tirar do coração humano a própria ideia da misericórdia. A palavra e o conceito de misericórdia parecem causar mal-estar ao homem, o qual, graças ao enorme desenvolvimento da ciência e da técnica, nunca verificado na história, se tornou senhor da Terra, a subjugou e a dominou. Tal domínio sobre a Terra, entendido por vezes de forma unilateral e superficial, parece não deixar espaço para a misericórdia. [...] A situação do mundo contemporâneo não só manifesta transformações que fazem esperar um futuro melhor do homem sobre a Terra, mas apresenta também múltiplas ameaças, que ultrapassam largamente as conhecidas até agora. [...]<br/>",
+    "A verdade revelada por Cristo a respeito de Deus «Pai das misericórdias» (2 Cor 1,3) permite-nos vê-l'O particularmente próximo do homem, sobretudo quando este sofre, quando é ameaçado no próprio coração da sua existência e da sua dignidade. Por este motivo, na atual situação da Igreja e do mundo, muitos homens e muitos ambientes, guiados por um vivo sentido de fé, voltam-se quase espontaneamente, por assim dizer, para a misericórdia de Deus. São certamente impelidos a fazê-lo pelo próprio Cristo, o qual, mediante o seu Espírito, continua a operar no íntimo dos corações humanos.<br/>"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-01-14",
+  "year": 2026,
+  "month": 1,
+  "day": 14,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/14.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-14.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-14",
+      "name": "São Félix de Nola, presbítero",
+      "normalizedName": "sao felix de nola, presbitero",
+      "imageUrl": "./assets/img/santos/01-14-sao-felix-de-nola-presbitero.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Félix nasceu em Nola, no século III. Filho de um pai rico da Síria, tornou-se sacerdote. Sofreu torturas atrozes, durante as perseguições desencadeadas pelo Império Romano, pelo seu corajoso testemunho de fidelidade a Cristo. Ao ser libertado, recusou a nomeação para Bispo. Viveu na pobreza.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

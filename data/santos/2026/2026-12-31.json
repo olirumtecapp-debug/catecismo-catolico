@@ -1,0 +1,60 @@
+{
+  "date": "2026-12-31",
+  "year": 2026,
+  "month": 12,
+  "day": 31,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/31.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-31.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-31",
+      "name": "São Silvestre I, papa",
+      "normalizedName": "sao silvestre i, papa",
+      "imageUrl": "./assets/img/santos/12-31-sao-silvestre-i-papa.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/31/s--silvestre-i--papa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/31/s--silvestre-i--papa.html",
+      "sourceText": "O Papa Silvestre I governou a Igreja com sabedoria, por vinte anos, no tempo em que o imperador Constantino construía as primeiras Basílicas romanas e o Concílio de Niceia aclamava Cristo, Filho de Deus. Faleceu em 31 de dezembro de 335 e foi sepultado no cemitério de Santa Priscila, em Roma.",
+      "a12": {
+        "profileUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=31&month=12",
+        "source": "A12 — Portal A12",
+        "sourceUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=31&month=12",
+        "sourceText": {
+          "paragraphs": [
+            "Silvestre pertencia ao clero romano, com cargos de importância, e sofreu ainda com as últimas perseguições aos cristãos antes do Edito de Milão em 313, tendo eventualmente que se esconder. Mas sua eleição ao papado em 314 foi o início de uma nova era para a Igreja, de liberdade religiosa, e com o apoio do Imperador Constantino, pôde construir a Basílica de São Pedro, sobre o seu túmulo, a Basílica Lateranense com a morada do Papa, e a Basílica de São Paulo. (É apenas uma lenda que Constantino tenha doado à Igreja também toda a cidade de Roma).",
+            "Internamente, a Igreja teve que combater duas grandes heresias, o donatismo, que pregava uma igreja só para os justos, e o arianismo, esta aind mais grave, reduzindo Jesus a uma mera criatura de Deus, inferior ao Pai. O Concílio de Arles condenou a primeira, e o Concílio Ecumênico de Nicéia (o primeiro Concílio universal, em 325) condenou a segunda: o Credo Niceno-Constantinopolitano, rezado até hoje, explicita Jesus como “gerado, não criado, consubstancial ao Pai”. Silvestre, aparentemente por questões de idade ou saúde, não participou diretamente do Concílio, sendo representado por dois enviados seus.",
+            "Silvestre soube lidar também, em sabedoria e amizade, com o Imperador Constantino, que de certa forma, mesmo auxiliando imensamente a Igreja, também se excedeu na ingerência de suas atividades. Após 23 anos de pontificado, faleceu São Silvestre em 335, um dos primeiros pontífices a não morrer martirizado.",
+            "Reflexão:",
+            "A edificação da Igreja, tanto no aspecto espiritual quanto material, é obra árdua e grandiosa. Nos dois aspectos se sobressai São Silvestre, ao promover a construção de grandes basílicas, e defender e ajudar a definir a sã Doutrina. A Igreja, Corpo Místico de Cristo, possui ambos os aspectos, matéria e espírito, e ambos precisam de cuidado e saúde, ainda que a primazia seja a do espírito.",
+            "Oração:",
+            "Deus de infinita paciência e fidelidade, ajudai-nos, por intercessão de São Silvestre e seguindo o seu exemplo, a perseverar diligentemente no crescimento e fortalecimento das virtudes da alma, bem como nos auxílios materiais que devemos prover para o bem dos irmãos e da Santa Igreja, a fim de participarmos dignamente da obra do Vosso amor. Por Nosso Senhor Jesus Cristo, Vosso Filho, e pelas mãos de Maria Vossa e nossa Mãe. Amém.",
+            "Enviar por e-mail"
+          ]
+        }
+      },
+      "enrichment": {
+        "a12Found": true
+      }
+    },
+    {
+      "date": "2026-12-31",
+      "name": "São Melânia, matrona romana",
+      "normalizedName": "sao melania, matrona romana",
+      "imageUrl": "./assets/img/santos/12-31-sao-melania-matrona-romana.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Melânia, a Jovem, para não confundir com o nome da sua avó, pertencia à nobre “gens Valéria”. Com o marido, Piniano, mudou-se para Jerusalém e fundou uma espécie de comunidade monacal segundo o estilo das orientais do século V. Faleceu na Cidade Santa, em 440, após ter dado tudo aos pobres.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

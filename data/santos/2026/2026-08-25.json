@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-25",
+  "year": 2026,
+  "month": 8,
+  "day": 25,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/25.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-25.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-25",
+      "name": "São Luís IX, rei da França",
+      "normalizedName": "sao luis ix, rei da franca",
+      "imageUrl": "./assets/img/santos/08-25-sao-luis-ix-rei-da-franca.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/25/s--luis-ix--rei-da-franca.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/25/s--luis-ix--rei-da-franca.html",
+      "sourceText": "A memória popular conserva a imagem de Luís IX como um soberano, que fazia justiça sob um velho carvalho, situado perto do seu castelo em Vincennes. Luís chamava a atenção dos seus contemporâneos pela sua justiça, grande piedade e caridade com os pobres. A sua festa é celebrada em 25 de agosto.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "name": "São José de Calasanz, sacerdote, fundador dos Escolápios",
+      "normalizedName": "sao jose de calasanz, sacerdote, fundador dos escolapios",
+      "imageUrl": "./assets/img/santos/08-25-sao-jose-de-calasanz-sacerdote-fundador-dos-e.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/25/s--jose-de-calasanz--sacerdote--fundador-dos-escolapios.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/25/s--jose-de-calasanz--sacerdote--fundador-dos-escolapios.html",
+      "sourceText": "José de Calasanz, de origem espanhola, chegou a Roma, convidado pela família Colonna, mas se deparou com o triste estado de abandono e ignorância das crianças pobres, às quais dedicou sua vida. Fundou a primeira escola gratuita da Europa, confiada à nova Ordem dos Escolápios. Foi canonizado em 1767.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

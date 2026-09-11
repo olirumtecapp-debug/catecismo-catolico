@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-20",
+  "year": 2026,
+  "month": 10,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-20",
+      "name": "Santa Maria Bertila Boscardin, virgem de Treviso",
+      "normalizedName": "santa maria bertila boscardin, de treviso",
+      "imageUrl": "./assets/img/santos/10-20-santa-maria-bertila-boscardin-virgem-de-trevi.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Irmã Bertilla conheceu a vida hospitalar, sob diversos pontos de vista, tornando-se enfermeira entre as Mestras de Santa Doroteia, Filhas dos Santíssimos Corações, em Vicência. Trabalhou em Treviso, onde foi acometida por um tumor, que não a poupou. Faleceu aos 34 anos e foi canonizada em 1961.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

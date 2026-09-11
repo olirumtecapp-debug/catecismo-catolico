@@ -1,0 +1,23 @@
+{
+  "date": "2026-01-19",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "1 Samuel 15,16-23",
+      "text": "Naqueles dias, 16Samuel disse a Saul: \"Basta! Deixa-me dizer-te o que o Senhor me revelou esta noite\". Saul disse: \"Fala!\" 17Então Samuel começou: \"Por menor que sejas aos teus próprios olhos, acaso não és o chefe das tribos de Israel? O Senhor ungiu-te rei sobre Israel 18e te enviou em expedição com a ordem de eliminar os amalecitas, esses malfeitores, combatendo-os até que fossem exterminados. 19Por que não ouviste a voz do Senhor e te precipitaste sobre os despojos, e fizeste o que desagrada ao Senhor?\" 20Saul respondeu a Samuel: \"Mas eu obedeci ao Senhor! Realizei a expedição a que ele me enviou. Trouxe Agag, rei de Amalec, para cá e exterminei os amalecitas. 21Quanto aos despojos, o povo reteve, das ovelhas e dos bois, o melhor do que devia ser eliminado, para sacrificar ao Senhor teu Deus em Guilgal\". 22Mas Samuel replicou: \"O Senhor quer holocaustos e sacrifícios ou quer a obediência à sua palavra? A obediência vale mais que o sacrifício, a docilidade mais que oferecer gordura de carneiros. 23A rebelião é um verdadeiro pecado de magia, um crime de idolatria, uma obstinação. Assim, porque rejeitaste a palavra do Senhor, ele te rejeitou: tu não és mais rei\"."
+    },
+    "psalm": {
+      "reference": "Salmo 49(50)",
+      "text": "- Eu não venho censurar teus sacrifícios, pois sempre estão perante mim teus holocaustos; não preciso dos novilhos de tua casa nem dos carneiros que estão nos teus rebanhos.\n\n- Como ousas repetir os meus preceitos e trazer minha aliança em tua boca? Tu que odiaste minhas leis e meus conselhos e deste as costas às palavras dos meus lábios!\n\n- Diante disso que fizeste, eu calarei? Acaso pensas que eu sou igual a ti? É disso que te acuso e repreendo e manifesto essas coisas aos teus olhos.\n\n- Quem me oferece um sacrifício de louvor, este, sim, é que me honra de verdade. A todo homem que procede retamente eu mostrarei a salvação que vem de Deus."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 2,18-22",
+      "text": "Naquele tempo, 18os discípulos de João Batista e os fariseus estavam jejuando. Então, vieram dizer a Jesus: \"Por que os discípulos de João e os discípulos dos fariseus jejuam e os teus discípulos não jejuam?\" 19Jesus respondeu: \"Os convidados de um casamento poderiam, por acaso, fazer jejum enquanto o noivo está com eles? Enquanto o noivo está com eles, os convidados não podem jejuar. 20Mas vai chegar o tempo em que o noivo será tirado do meio deles; aí então eles vão jejuar. 21Ninguém põe um remendo de pano novo numa roupa velha, porque o remendo novo repuxa o pano velho e o rasgão fica maior ainda. 22Ninguém põe vinho novo em odres velhos,­­ porque o vinho novo arrebenta os odres velhos e o vinho e os odres se perdem. Por isso, vinho novo em odres novos\"."
+    }
+  },
+  "extra": []
+}

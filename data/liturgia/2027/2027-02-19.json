@@ -1,0 +1,23 @@
+{
+  "date": "2027-02-19",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana da Quaresma Ciclo da Pascoa",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Ezequiel 18,21-28",
+      "text": "Assim fala o Senhor: 21Se o ímpio se arrepender de todos os pecados cometidos, e guardar todas as minhas leis, e praticar o direito e a justiça, viverá com certeza e não morrerá. 22Nenhum dos pecados que cometeu será lembrado contra ele. Viverá por causa da justiça que praticou. 23Será que eu tenho prazer na morte do ímpio? - oráculo do Senhor Deus. Não desejo, antes, que mude de conduta e viva? 24Mas, se o justo se desviar de sua justiça e praticar o mal, imitando todas as práticas detestáveis feitas pelo ímpio, poderá fazer isso e viver? Da justiça que ele praticou, nada mais será lembrado. Por causa da infidelidade e do pecado que cometeu, por causa disso morrerá. 25Mas vós andais dizendo: 'A conduta do Senhor não é correta`. Ouvi, vós da casa de Israel: É a minha conduta que não é correta, ou antes é a vossa conduta que não é correta? 26Quando um justo se desvia da justiça, pratica o mal e morre, é por causa do mal praticado que ele morre. 27Quando um ímpio se arrepende da maldade que praticou e observa o direito e a justiça, conserva a própria vida. 28Arrependendo-se de todos os seus pecados, com certeza viverá; não morrerá."
+    },
+    "psalm": {
+      "reference": "Salmo 129 (130)",
+      "text": "- Das profundezas eu clamo a vós, Senhor, escutai a minha voz! Vossos ouvidos estejam bem atentos ao clamor da minha prece!\n\n- Se levardes em conta nossas faltas, quem haverá de subsistir? Mas em vós se encontra o perdão, eu vos temo e em vós espero.\n\n- No Senhor ponho a minha esperança, espero em sua palavra. A minh'alma espera no Senhor mais que o vigia pela aurora.\n\n- Espere Israel pelo Senhor, pois no Senhor se encontra toda graça e copiosa redenção. Ele vem libertar a Israel de toda a sua culpa."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 20-26",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 20Se a vossa justiça não for maior que a justiça dos mestres da Lei e dos fariseus, vós não entrareis no Reino dos Céus. 21Vósouvistes o que foi dito aos antigos: 'Não matarás! Quem matar será condenado pelo tribunal'. 22Eu, porém, vos digo: todo aquele que se encoleriza com seu irmão será réu em juízo; quem disser ao seu irmão: 'patife!' será condenado pelo tribunal; quem chamar o irmão de 'tolo' será condenado ao fogo do inferno. 23Portanto, quando tu estiveres levando a tua oferta para o altar, e ali te lembrares que teu irmão tem alguma coisa contra ti, 24deixa a tua oferta ali diante do altar, e vai primeiro reconciliar-te com o teu irmão. Só então vai apresentar a tua oferta. 25Procura reconciliar-te com teu adversário, enquanto caminha contigo para o tribunal. Senão o adversário te entregará ao juiz, o juiz te entregará ao oficial de justiça, e tu serás jogado na prisão. 26Em verdade eu te digo: dali não sairás, enquanto não pagares o último centavo."
+    }
+  },
+  "extra": []
+}

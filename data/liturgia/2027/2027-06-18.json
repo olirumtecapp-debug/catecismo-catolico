@@ -1,0 +1,33 @@
+{
+  "date": "2027-06-18",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "11a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 11,18.21-30",
+      "text": "Irmãos: 18Já que muitos se gloriam segundo a carne, eu também me gloriarei. 21bO que outros ousam dizer em vantagem própria, eu também o digo a meu respeito, embora fale como insensato. 22São hebreus? Eu também. - São israelitas? Eu também. - São da descendência de Abraão? Eu também. 23- São servos de Cristo? Como menos sensato digo: Eu ainda mais. De fato, muito mais do que eles: pelos trabalhos, pelas prisões, pelos açoites sem conta. Muitas vezes, vi-me em perigo de morte. 24Cinco vezes, recebi dos judeus quarenta açoites menos um. 25Três vezes, fui batido com varas. Uma vez, fui apedrejado. Três vezes, naufraguei. Passei uma noite e um dia no alto mar. 26Fiz inúmeras viagens, com inúmeros perigos: perigos de rios, perigos de ladrões, perigos da parte de meus compatriotas, perigos da parte dos pagãos, perigos na cidade, perigos em lugares desertos, perigos no mar, perigos por parte de falsos irmãos. 27Trabalhos e fadigas, inúmeras vigílias, fome e sede, freqüentes jejuns, frio e nudez! 28E, sem falar de outras coisas, a minha preocupação de cada dia, a solicitude por todas as igrejas! 29Quem é fraco, que eu também não seja fraco com ele? Quem é escandalizado, que eu não fique ardendo de indignação? 30Se é preciso gloriar-se, é de minhas fraquezas que me gloriarei!"
+    },
+    "psalm": {
+      "reference": "Salmo 33 (34)",
+      "text": "- Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Minha alma se gloria no Senhor; que ouçam os humildes e se alegrem!\n\n- Comigo engrandecei ao Senhor Deus, exaltemos todos juntos o seu nome! Todas as vezes que o busquei, ele me ouviu, e de todos os temores me livrou.\n\n- Contemplai a sua face e alegrai-vos, e vosso rosto não se cubra de vergonha! Este infeliz gritou a Deus, e foi ouvido, e o Senhor o libertou de toda angústia."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 6, 19-23",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 19Não junteis tesouros aqui na terra, onde a traça e a ferrugem destroem, e os ladrões assaltam e roubam. 20Ao contrário, juntai para vós tesouros no céu, onde nem a traça e a ferrugem destroem, nem os ladrões assaltam e roubam. 21Porque, onde está o teu tesouro, aí estará também o teu coração. 22O olho é a lâmpada do corpo. Se o teu olho é sadio, todo o teu corpo ficará iluminado. 23Se o teu olho está doente, todo o teu corpo ficará na escuridão. Ora, se a luz que existe em ti é escuridão, como será grande a escuridão."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho (354-430)<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), doutor da Igreja<br/>",
+    "Sermão 123<br/>",
+    "«Arrecadai tesouros no céu»<br/>",
+    "O que és tu? Rico ou pobre? Muitos me dizem: eu sou pobre, e dizem a verdade. Conheço pobres que possuem alguma coisa e conheço outros que são completamente indigentes. Mas eis um homem em cuja casa abunda o ouro e a prata - oh! se ele soubesse como é pobre! E reconhecê-lo-ia se olhasse para o pobre que tem a seu lado. Aliás, seja qual for a tua opulência, tu que és rico, não passas de um mendigo à porta de Deus.<br/>",
+    "Chega a hora da oração.[…] Fazes os teus pedidos a Deus; e não será o pedido uma confissão da tua pobreza? Com efeito, tu dizes: «O pão-nosso de cada dia nos dai hoje.» Diz-me pois, tu que pedes o teu pão de cada dia, és rico ou pobre? E contudo, Cristo não hesita em te dizer: «Dá-Me o que Eu te dei. De facto, que trazias tu ao vires a este mundo? Tudo o que encontraste na criação, fui Eu que o criei. Tu nada trouxeste e nada levarás contigo. Porque não Me dás o que é meu? Tu vives na abundância e o pobre passa necessidades; mas remonta ao início da vossa existência: tanto tu como ele nascestes completamente nus. Pois também tu nasceste nu. Em seguida, encontraste aqui em baixo grandes bens; mas trouxeste por acaso alguma coisa contigo? O que te peço é pois o que te dei; dá-Mo e Eu restituir-to-ei.»<br/>",
+    "«Tiveste-Me por teu benfeitor; torna-Me teu devedor, e a uma taxa elevada. […] Tu dás-Me pouco e Eu restituir-te-ei muito. Tu dás-Me os bens deste mundo e Eu dar-te-ei os tesouros do céu. Tu dás-Me riquezas temporais e Eu instalar-te-ei sobre as posses eternas. Dar-to-ei quando tiver tomado posse de ti.»<br/>"
+  ]
+}

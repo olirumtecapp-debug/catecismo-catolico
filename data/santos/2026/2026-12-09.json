@@ -1,0 +1,69 @@
+{
+  "date": "2026-12-09",
+  "year": 2026,
+  "month": 12,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-09",
+      "name": "São João Diogo Cuauhtlatoatzin",
+      "normalizedName": "sao joao diogo cuauhtlatoatzin",
+      "imageUrl": "./assets/img/santos/12-09-sao-joao-diogo-cuauhtlatoatzin.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/09/s--joao-diogo-cuauhtlatoatzin.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/09/s--joao-diogo-cuauhtlatoatzin.html",
+      "sourceText": "A narração das aparições de Nossa Senhora de Guadalupe é convincente. O protagonista é um índio mexicano desconhecido, Juan Diego, que, em meados de 1500, encontrou a Virgem Maria em uma colina, lugar que, ao longo dos séculos, se tornou centro de peregrinação mariana mundial.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-09",
+      "name": "Santa Leocádia, virgem e mártir",
+      "normalizedName": "santa leocadia, e martir",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Na época da perseguição de Diocleciano, a jovem Leocádia foi presa, em Toledo, pelo Prefeito Dácio e morreu na prisão. No século VIII, no dia da sua festa, Leocádia apareceu a São Ildefonso, que cortou um pedaço do seu véu, ainda conservado como relíquia em Toledo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-09",
+      "name": "São Siro, bispo de Pavia",
+      "normalizedName": "sao siro, bispo de pavia",
+      "imageUrl": "./assets/img/santos/12-09-sao-siro-bispo-de-pavia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Por muito tempo, Siro foi erroneamente identificado com o jovem que entregou os pães e os peixes a Jesus para o milagre da multiplicação. Na realidade, foi o primeiro Bispo da Igreja de Pavia, consagrado no século IV. Foi um pastor itinerante, que evangelizou uma vasta área do norte da Itália.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-09",
+      "name": "São Pedro Fourier, cônego regular",
+      "normalizedName": "sao pedro fourier, conego regular",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Filho de tecelões de Lorena, na França, tornou-se pároco, em 1597 e fundador da Ordem dos Cônegos Regulares. Pedro Fourier defendeu os artesãos da usura, com a criação de um Banco de Crédito. Fundou dois institutos, ainda existentes, e escolas gratuitas para crianças.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

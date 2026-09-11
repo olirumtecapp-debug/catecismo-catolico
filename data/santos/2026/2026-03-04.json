@@ -1,0 +1,43 @@
+{
+  "date": "2026-03-04",
+  "year": 2026,
+  "month": 3,
+  "day": 4,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/04.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-04.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-04",
+      "name": "São Casimiro, padroeiro da Lituânia",
+      "normalizedName": "sao casimiro, padroeiro da lituania",
+      "imageUrl": "./assets/img/santos/03-04-sao-casimiro-padroeiro-da-lituania.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Casimiro nasceu em 1458. Filho do rei da Polônia, renunciou à coroa da Hungria porque o Papa era contrário. Recusou o pedido de casamento com a filha de Frederico III de Augsburg, cujo objetivo era expandir os confins do reino. Morreu aos 25 anos, sem nunca ceder às seduções do poder e do luxo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-04",
+      "name": "B. Humberto III de Savóia",
+      "normalizedName": "b. humberto iii de savoia",
+      "imageUrl": "./assets/img/santos/03-04-b-humberto-iii-de-savoia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Humberto cresceu no amor à oração, à penitência e ao desprezo pela vida mundana e teria preferido dedicar a sua vida ao monacato, ao invés de reinar por 40 anos no século XII. Juntando-se ao partido dos guelfos, trabalhou com afinco pela Abadia de Hautecombe, onde foi enterrado.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

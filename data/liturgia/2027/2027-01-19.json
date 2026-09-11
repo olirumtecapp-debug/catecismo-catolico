@@ -1,0 +1,23 @@
+{
+  "date": "2027-01-19",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 6,10-20",
+      "text": "Irmãos, 10Deus não é injusto, para esquecer aquilo que estais fazendo e a caridade que demonstrastes em seu nome, servindo e continuando a servir os santos. 11Mas desejamos que cada um de vós mostre até o fim este mesmo empenho pela plena realização da esperança, 12para não serdes lentos à compreensão, mas imitadores daqueles que, pela fé e perseverança, se tornam herdeiros das promessas. 13Pois quando Deus fez a promessa a Abraão, não havendo alguém maior por quem jurar, jurou por si mesmo, 14dizendo: \"Eu te cumularei de bênçãos e te multiplicarei em grande número\". 15E assim Abraão foi perseverante e alcançou a promessa. 16Os homens juram, de fato, por alguém mais importante, e a garantia do juramento põe fim a qualquer contestação. 17Por isso, querendo Deus mostrar, com mais firmeza, aos herdeiros da promessa o caráter irrevogável da sua decisão, interveio com um juramento. 18Assim, por meio de dois atos irrevogáveis, nos quais não pode haver mentira por parte de Deus, encontramos profunda consolação, nós que tudo deixamos para conseguir a esperança proposta. 19A esperança, com efeito, é para nós qual âncora da vida, segura e firme, penetrando para além da cortina do santuário, 20onde Jesus entrou por nós, como precursor, feito sumo sacerdote eterno na ordem de Melquisedeque."
+    },
+    "psalm": {
+      "reference": "Salmo 110 (111)",
+      "text": "- Eu agradeço a Deus de todo o coração junto com todos os seus justos reunidos! Que grandiosas são as obras do Senhor, elas merecem todo o amor e admiração!\n\n- O Senhor bom e clemente nos deixou a lembrança de suas grandes maravilhas. Ele dá o alimento aos que o temem e jamais esquecerá sua aliança.\n\n- Enviou libertação para o seu povo, confirmou sua aliança para sempre. Seu nome é santo e é digno de respeito. Permaneça eternamente o seu louvor."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 2, 23-28",
+      "text": "23Jesus estava passando por uns campos de trigo em dia de sábado. Seus discípulos começaram a arrancar espigas, enquanto caminhavam. 24Então os fariseus disseram a Jesus: \"Olha! Por que eles fazem em dia de sábado o que não é permitido?\" 25Jesus lhes disse: \"Por acaso, nunca lestes o que Davi e seus companheiros fizeram quando passaram necessidade e tiveram fome? 26Como ele entrou na casa de Deus, no tempo em que Abiatar era sumo sacerdote, comeu os pães oferecidos a Deus e os deu também aos seus companheiros? No entanto, só aos sacerdotes é permitido comer esses pães\". 27E acrescentou: \"O sábado foi feito para o homem, e não o homem para o sábado. 28Portanto, o Filho do homem é senhor também do sábado\"."
+    }
+  },
+  "extra": []
+}

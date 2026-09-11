@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santo Andre Dung-Lac",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Apocalipse 14,14-19",
+      "text": "Eu, João, 14na minha visão, vi uma nuvem branca e, sentado na nuvem, alguém que parecia um \"filho de homem\". Tinha na cabeça uma coroa de ouro e, nas mãos, uma foice afiada. 15Saiu do templo um outro anjo, gritando em alta voz para aquele que estava sentado na nuvem: \"Lança tua foice e ceifa. Chegou a hora da colheita. A seara da terra está madura!\" 16E aquele que estava sentado na nuvem lançou a foice, e a terra foi ceifada. 17Então saiu do templo que está no céu mais um anjo. Também ele tinha nas mãos uma foice afiada. 18E saiu, de junto do altar, outro anjo ainda, aquele que tem o poder sobre o fogo. Ele gritou em alta voz para aquele que segurava a foice afiada: \"Lança a foice e colhe os cachos da videira da terra, porque as uvas já estão maduras\". 19E o anjo lançou a foice afiada na terra e colheu as uvas da videira da terra. Depois, despejou as uvas no grande lagar do furor de Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 95 (96)",
+      "text": "- Publicai entre as nações: \"Reina o Senhor!\" Ele firmou o universo inabalável, e os povos ele julga com justiça.\n\n- O céu se rejubile e exulte a terra, aplauda o mar com o que vive em suas águas; os campos com seus frutos rejubilem, e exultem as florestas e as matas.\n\n- Na presença do Senhor, pois ele vem, porque vem para julgar a terra inteira. Governará o mundo todo com justiça e os povos julgará com lealdade."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 21, 5-11",
+      "text": "Naquele tempo, 5algumas pessoas comentavam a respeito do templo que era enfeitado com belas pedras e com ofertas votivas. Jesus disse: 6\"Vós admirais estas coisas? Dias virão em que não ficará pedra sobre pedra. Tudo será destruído\". 7Mas eles perguntaram: \"Mestre, quando acontecerá isso? E qual vai ser o sinal de que essas coisas estão para acontecer?\" 8Jesus respondeu: \"Cuidado para não serdes enganados, porque muitos virão em meu nome, dizendo: 'Sou eu!' E ainda: 'O tempo está próximo'. Não sigais essa gente! 9Quando ouvirdes falar de guerras e revoluções, não fiqueis apavorados. É preciso que essas coisas aconteçam primeiro, mas não será logo o fim\". 10E Jesus continuou: \"Um povo se levantará contra outro povo, um país atacará outro país. 11Haverá grandes terremotos, fomes e pestes em muitos lugares; acontecerão coisas pavorosas e grandes sinais serão vistos no céu\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Cirilo de Alexandria, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Sobre Isaias, III, 1<br/>",
+    "«Quando estas coisas começarem a acontecer, cobrai ânimo e levantai a cabeça, porque a vossa libertação está próxima» (Lc 21,28)<br/>",
+    "«Reduzistes a cidade a um montão de pedras; a cidadela dos orgulhosos está aniquilada, jamais será reedificada. Por isso um povo forte vos glorifica» (Is 25,2-3). Pertence ao desígnio constante de Deus omnipotente e aos seus conselhos irrepreensíveis reduzir as «cidadelas» a «montões de pedra», abalá-las desde os fundamentos, sem esperança de voltarem a erguer-se: «jamais será reedificada», diz o texto. Estas cidades destruídas não são, a nosso ver, aquelas que são percetíveis pelos sentidos, nem são os homens que nelas vivem. Parece-nos que se trata antes das potências más e hostis, e sobretudo de Satanás, aqui chamado cidade e «cidadela». [...]<br/>",
+    "Quando o Emanuel apareceu e brilhou neste mundo, o exército ímpio das potências adversas foi derrubado, Satanás foi abalado nos seus fundamentos e caiu, enfraquecido para sempre, sem esperança de voltar a erguer-se, de levantar de novo a cabeça.<br/>",
+    "Por isso, o povo pobre e a cidade dos homens oprimidos bendirá o Senhor. Israel foi chamado ao conhecimento de Deus pela pedagogia da Lei, foi cumulado de todos os bens por Deus. Sim, Israel foi salvo e obteve em herança a terra da promessa. Mas a multidão das nações que estão sob o céu estava privada destes bens espirituais. [...] Quando Cristo apareceu em pessoa e, destruindo a tirania do demónio, as conduziu a seu Deus e seu Pai, foram enriquecidas com a luz da verdade pela participação na glória divina, pela grandeza da vida do Evangelho. Por isso, cantam hinos de ações de graças a Deus Pai: «Vós realizastes os vossos maravilhosos desígnios» (v.1), tudo recapitulando em Cristo. Vós iluminastes aqueles que se encontravam nas trevas (cf Lc 1,79), derrubando as potências que dominam o mundo (cf Ef 6,12) como se derrubam cidadelas. «Por isso um povo forte vos glorifica».<br/>"
+  ]
+}

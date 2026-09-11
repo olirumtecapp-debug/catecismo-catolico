@@ -1,0 +1,56 @@
+{
+  "date": "2026-01-22",
+  "year": 2026,
+  "month": 1,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-22",
+      "name": "São Vicente, diácono espanhol e mártir",
+      "normalizedName": "sao vicente, diacono espanhol e martir",
+      "imageUrl": "./assets/img/santos/01-22-sao-vicente-diacono-espanhol-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Zaragoza, Espanha, Vicente foi um excelente diácono do Bispo Valério. Era um homem corajoso e grande pregador. Foi preso durante as perseguições de Diocleciano, mas não cedeu, nem diante das tremendas torturas. Vicente morreu como mártir, em 304, e logo foi venerado como Santo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-22",
+      "name": "São Vicente Pallotti, presbítero, fundador da Sociedade do Apostolado Católico",
+      "normalizedName": "sao vicente pallotti, presbitero, fundador da sociedade do apostolado catolico",
+      "imageUrl": "./assets/img/santos/01-22-sao-vicente-pallotti-presbitero-fundador-da-s.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sacerdote romano, Vicente promoveu o papel dos leigos na Igreja, antecipando os tempos, e venceu a desconfiança do mundo eclesiástico. Para ele, o anúncio do Evangelho não cabia apenas ao clero, mas a todos os batizados, homens e mulheres. Ele queria uma comunidade, onde todos fossem \"apóstolos\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-22",
+      "name": "São Anastásio, monge e mártir",
+      "normalizedName": "sao anastasio, monge e martir",
+      "imageUrl": "./assets/img/santos/01-22-sao-anastasio-monge-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "O jovem Magundat, soldado do exército persa, era fascinado pelo cristianismo. Por isso, foi para Gerápolis e, depois, para Jerusalém, onde se converteu com o nome de Anastácio. Foi monge, por sete anos, em Cesareia, na Palestina. Foi preso e torturado antes de ser martirizado, no ano 628.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

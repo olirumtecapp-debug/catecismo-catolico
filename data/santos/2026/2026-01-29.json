@@ -1,0 +1,56 @@
+{
+  "date": "2026-01-29",
+  "year": 2026,
+  "month": 1,
+  "day": 29,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/29.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-29.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-29",
+      "name": "São Constâncio, bispo de Perúgia",
+      "normalizedName": "sao constancio, bispo de perugia",
+      "imageUrl": "./assets/img/santos/01-29-sao-constancio-bispo-de-perugia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Constâncio foi o primeiro bispo de Perugia. Salvou-se, uma vez, do martírio, durante as perseguições de Marco Aurélio. Ao ser preso, converteu seus carcereiros e recobrou a liberdade; mas foi novamente preso e decapitado em 170. A primeira catedral da cidade foi construída no lugar da sua sepultura.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "name": "SS. Papías e Amaro, soldados, mártires, na via Nomentana",
+      "normalizedName": "ss. papias e amaro, soldados, , na via nomentana",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Estes dois Santos soldados romanos, Papia e Mauro, que viveram na época de Diocleciano, foram sepultados ao longo da Via Nomentana, no “Coemeterium Maius”. Foram martirizados por terem-se convertido ao cristianismo. Eles são os Santos Padroeiros da Congregação do Oratório de São Felipe Neri.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "name": "São Sulpício Severo",
+      "normalizedName": "sao sulpicio severo",
+      "imageUrl": "./assets/img/santos/01-29-sao-sulpicio-severo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/29/sao-sulpicio-severo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/29/sao-sulpicio-severo.html",
+      "sourceText": "Sulpício Severo nasceu em Aquitânia, por volta do ano 350, em uma família ilustre. Como tantos seus contemporâneos, começou a trabalhar como advogado, pois, naquele tempo, era o meio mais rápido para se conseguir honorificências. A festa litúrgica de São Sulpício Severo é celebrada em 29 de janeiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

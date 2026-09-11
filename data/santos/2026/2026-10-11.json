@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-11",
+  "year": 2026,
+  "month": 10,
+  "day": 11,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/11.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-11.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-11",
+      "name": "São Filipe, diácono",
+      "normalizedName": "sao filipe, diacono",
+      "imageUrl": "./assets/img/santos/10-11-sao-filipe-diacono.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Entre os \"sete homens de boa reputação\", escolhidos como diáconos, Felipe foi o primeiro missionário da história. Ao deixar Jerusalém, anunciou o Evangelho na Samaria; depois, o Espírito Santo o levou para Gaza. Acabou seus dias como chefe da comunidade de Cesareia, que hospedou o apóstolo Paulo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "name": "São Alexandre Sáuli, bispo de Pavia",
+      "normalizedName": "sao alexandre sauli, bispo de pavia",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Alexandre entrou para a Congregação dos Barnabitas, com 17 anos, onde se tornou logo Superior Geral. Confessor de São Carlos Borromeu, em 1567, tornou-se Bispo de Aléria, na Córsega. Ali, cuidou de tudo, até de matar a fome dos fiéis. Faleceu como Bispo de Pavia e foi canonizado por Pio X, em 1904.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "name": "São João XXIII, papa",
+      "normalizedName": "sao joao xxiii, papa",
+      "imageUrl": "./assets/img/santos/10-11-sao-joao-xxiii-papa.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/11/s--joao-xxiii--papa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/11/s--joao-xxiii--papa.html",
+      "sourceText": "O pontificado de João XXIII não durou cinco anos, mas é um daqueles que nunca se esquece. Depois de anos de experiência no exterior e de passar por duas guerras, o \"Papa bom\" convocou o Concílio Vaticano II, em 1959, para enfrentar os desafios do mundo contemporâneo. João XXIII é santo desde 2014.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

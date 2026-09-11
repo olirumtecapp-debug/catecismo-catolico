@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-16",
+  "year": 2026,
+  "month": 9,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-16",
+      "name": "SS. Cornélio, papa e Cipriano, bispo, mártires",
+      "normalizedName": "ss. cornelio, papa e cipriano, bispo,",
+      "imageUrl": "./assets/img/santos/09-16-ss-cornelio-papa-e-cipriano-bispo-martires.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/16/ss--cornelio--papa-e-cipriano--bispo--martires.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/16/ss--cornelio--papa-e-cipriano--bispo--martires.html",
+      "sourceText": "Cornélio, Papa Romano, faleceu em 253, e Cipriano, Bispo cartaginês, em 258. Ambos são mártires, testemunhas contemporâneas daquele amor pela verdade, que não conhece renegação, tampouco diante do sacrifício extremo. Nesta data, celebramos a renúncia ao trono papal do primeiro e a paixão do segundo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "name": "São Eufêmia, mártir da Calcedónia",
+      "normalizedName": "sao eufemia, martir da calcedonia",
+      "imageUrl": "./assets/img/santos/09-16-sao-eufemia-martir-da-calcedonia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Eufêmia, virgem da Calcedônia, na Bitínia, atual Turquia, durante as perseguições de Diocleciano e do procônsul Prisco, recebeu a palma do martírio no ano 303, depois de padecer muitas torturas. Na basílica a ela dedicada realizou-se o \"Grande Concílio\", de 451 a 452.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "name": "B. Vítor III, papa",
+      "normalizedName": "b. vitor iii, papa",
+      "imageUrl": "./assets/img/santos/09-16-b-vitor-iii-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Vítor, de origem lombarda, foi abade em Monte Cassino, por 30 anos, antes de ser eleito Papa. Encontrou uma Roma destruída, metade nas mãos do antipapa. Em apenas cinco meses de Pontificado, fez de tudo para reconstruí-la, infligiu excomunhões e convoco um Concílio em Benevento. Faleceu em 1087.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

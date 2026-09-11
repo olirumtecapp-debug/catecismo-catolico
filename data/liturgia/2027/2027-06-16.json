@@ -1,0 +1,32 @@
+{
+  "date": "2027-06-16",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "11a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 9,6-11",
+      "text": "Irmãos: 6Quem semeia pouco colherá também pouco e quem semeia com largueza colherá também com largueza'. 7Dê cada um conforme tiver decidido em seu coração, sem pesar nem constrangimento; pois Deus 'ama quem dá com alegria'. 8Deus é poderoso para vos cumular de toda sorte de graças, para que, em tudo, tenhais sempre o necessário e ainda tenhais de sobra para toda obra boa, 9como está escrito: 'Distribuiu generosamente, deu aos pobres; a sua justiça permanece para sempre'. 10Aquele que dá a semente ao semeador e lhe dará o pão como alimento, ele mesmo multiplicará as vossas sementes e aumentará os frutos da vossa justiça. 11Assim, ficareis enriquecidos em tudo e podereis praticar toda espécie de liberalidade, que, através de nós, resultará em ação de graças a Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 111 (112)",
+      "text": "- Feliz o homem que respeita o Senhor e que ama com carinho a sua lei! Sua descendência será forte sobre a terra, abençoada a geração dos homens retos!\n\n- Haverá glória e riqueza em sua casa, e permanece para sempre o bem que fez. Ele é correto, generoso e compassivo, como luz brilha nas trevas para os justos.\n\n- Ele reparte com os pobres os seus bens, permanece para sempre o bem que fez, e crescerão a sua glória e seu poder."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 6, 1-6.16-18",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 1'Ficai atentos para não praticar a vossa justiça na frente dos homens, só para serdes vistos por eles. Caso contrário, não recebereis a recompensa do vosso Pai que está nos céus. 2Por isso, quando deres esmola, não toques a trombeta diante de ti, como fazem os hipócritas nas sinagogas e nas ruas, para serem elogiados pelos homens. Em verdade vos digo: eles já receberam a sua recompensa. 3Ao contrário, quando deres esmola, que a tua mão esquerda não saiba o que faz a tua mão direita, 4de modo que, a tua esmola fique oculta. E o teu Pai, que vê o que está oculto, te dará a recompensa. 5Quando orardes, não sejais como os hipócritas, que gostam de rezar em pé, nas sinagogas e nas esquinas das praças, para serem vistos pelos homens. Em verdade vos digo: eles já receberam a sua recompensa. 6Ao contrário, quando tu orares, entra no teu quarto, fecha a porta, e reza ao teu Pai que está oculto. E o teu Pai, que vê o que está escondido, te dará a recompensa. 16Quando jejuardes, não fiqueis com o rosto triste como os hipócritas. Eles desfiguram o rosto, para que os homens vejam que estão jejuando. Em verdade vos digo: Eles já receberam a sua recompensa. 17Tu, porém, quando jejuares, perfuma a cabeça e lava o rosto, 18para que os homens não vejam que tu estás jejuando, mas somente teu Pai, que está oculto. E o teu Pai, que vê o que está escondido, te dará a recompensa."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho (354-430)<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja<br/>",
+    "2º discurso sobre o Salmo 33<br/>",
+    "«Quando rezares, entra no teu quarto, fecha a porta e ora a teu Pai em segredo»<br/>",
+    "Entrar no fundo da tua casa é entrar no teu coração. Felizes os que se alegram por entrar no seu próprio coração e nele não encontram mal. [...]<br/>",
+    "São de lamentar aqueles que, ao entrarem em sua casa, podem recear ser dela expulsos por causa de duras disputas com os seus. Mas muito mais infelizes são aqueles que não ousam sequer entrar na sua consciência, com medo de serem expulsos pelo remorso dos seus pecados. Se queres entrar com prazer no teu coração, purifica-o: «felizes os corações puros, porque verão a Deus» (Mt 5,8). Arranca do teu coração as nódoas da cupidez, as manchas da avareza, a úlcera da superstição; arranca os sacrilégios, os maus pensamentos, os ódios, não só para com os teus amigos mas também para com os teus inimigos. Arranca tudo isso; depois, entra no teu coração e nele serás feliz.<br/>"
+  ]
+}

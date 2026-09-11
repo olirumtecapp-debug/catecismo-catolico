@@ -1,0 +1,56 @@
+{
+  "date": "2026-03-09",
+  "year": 2026,
+  "month": 3,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-09",
+      "name": "São Francisca romana, fundadora das Oblatas de Tor de’ Specchi",
+      "normalizedName": "sao francisca romana, fundadora das oblatas de tor de’ specchi",
+      "imageUrl": "./assets/img/santos/03-09-sao-francisca-romana-fundadora-das-oblatas-de.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/09/s--francisca-romana--fundadora-das-oblatas-de-tor-de-specchi.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/09/s--francisca-romana--fundadora-das-oblatas-de-tor-de-specchi.html",
+      "sourceText": "Francisca Romana (1384-1440), mulher rica e nobre, iluminou as vielas mais miseráveis da Urbe, entre o fim do século XIV e a primeira metade do século XV. Foi uma das santas da caridade mais famosas da Igreja; anticonformista, escolheu o bem como objetivo de vida, por amor a Cristo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-09",
+      "name": "SS. Quarenta Mártires de Sebaste",
+      "normalizedName": "ss. quarenta de sebaste",
+      "imageUrl": "./assets/img/santos/03-09-ss-quarenta-martires-de-sebaste.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Quarenta soldados santos, pertencentes a diferentes partes da Capadócia, foram presos, em 320, durante as perseguições de Licínio, por terem-se convertido à religião cristã. Deixados nus no frio invernal, em Sebaste, na Armênia, preferiram morrer congelados a renunciar à sua fé.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-09",
+      "name": "Santa Catarina de Bolonha, virgem clarissa",
+      "normalizedName": "santa catarina de bolonha, clarissa",
+      "imageUrl": "./assets/img/santos/03-09-santa-catarina-de-bolonha-virgem-clarissa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Catarina foi educada na Corte da família Estense. No entanto, preferiu viver no mosteiro das Clarissas, em Ferrara, dedicado a Corpus Christi: lugar de silêncio, trabalho, oração e alegria. Mas, Catarina fundou outro igual em Bolonha, onde foi abadessa até à morte, em 1463, em odor de santidade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

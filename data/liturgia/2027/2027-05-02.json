@@ -1,0 +1,34 @@
+{
+  "date": "2027-05-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "6o. Domingo da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 10,25-26.34-35.44-48",
+      "text": "25Quando Pedro estava para entrar em casa, Cornélio saiu-lhe ao encontro, caiu a seus pés e se prostrou. 26Mas Pedro levantou-o, dizendo: 'Levanta-te. Eu, também, sou apenas um homem'. 34Então, Pedro tomou a palavra e disse: 'De fato, estou compreendendo que Deus não faz distinção entre as pessoas. 35Pelo contrário, ele aceita quem o teme e pratica a justiça, qualquer que seja a nação a que pertença. 44Pedro estava ainda falando, quando o Espírito Santo desceu sobre todos os que ouviam a palavra. 45Os fiéis de origem judaica, que tinham vindo com Pedro, ficaram admirados de que o dom do Espírito Santo fosse derramado também sobre os pagãos. 46Pois eles os ouviam falar e louvar a grandeza de Deus em línguas estranhas. Então Pedro falou: 47'Podemos, por acaso, negar a água do batismo a estas pessoas que receberam, como nós, o Espírito Santo?' 48E mandou que fossem batizados em nome de Jesus Cristo. Eles pediram, então, que Pedro ficasse alguns dias com eles."
+    },
+    "psalm": {
+      "reference": "Salmo 97 (98)",
+      "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram a salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
+    },
+    "secondReading": {
+      "reference": "São João 4,7-10",
+      "text": "Caríssimos: 7Amemo-nos uns aos outros, porque o amor vem de Deus e todo aquele que ama nasceu de Deus e conhece Deus. 8Quem não ama, não chegou a conhecer a Deus, pois Deus é amor. 9Foi assim que o amor de Deus se manifestou entre nós: Deus enviou o seu Filho único ao mundo, para que tenhamos vida por meio dele. 10Nisto consiste o amor: não fomos nós que amamos a Deus, mas foi ele que nos amou e enviou o seu Filho como vítima de reparação pelos nossos pecados."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 15, 9-17",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 9Como meu Pai me amou, assim também eu vos amei. Permanecei no meu amor. 10Se guardardes os meus mandamentos, permanecereis no meu amor, assim como eu guardei os mandamentos do meu Pai e permaneço no seu amor. 11Eu eu vos disse isto, para que a minha alegria esteja em vós e a vossa alegria seja plena. 12Este é o meu mandamento: amai-vos uns aos outros, assim como eu vos amei. 13Ninguém tem amor maior do que aquele que dá sua vida pelos amigos. 14Vós sois meus amigos, se fizerdes o que eu vos mando. 15Já não vos chamo servos, pois o servo não sabe o que faz o seu senhor. Eu vos chamo amigos, porque vos dei a conhecer tudo o que ouvi de meu Pai. 16Não fostes vós que me escolhestes, mas fui eu que vos escolhi e vos designei para irdes e para que produzais fruto e o vosso fruto permaneça. O que então pedirdes ao Pai em meu nome, ele vo-lo concederá. 17Isto é o que vos ordeno: amai-vos uns aos outros."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Vicente de Paulo, presbítero, Fundador de comunidades religiosas<br/>",
+    "</b>",
+    "Palestra às Filhas da Caridade, 31/07/1934<br/>",
+    "«O que vos mando é que vos ameis uns aos outros»<br/>",
+    "A maneira de observardes a vossa regra é viverdes em grande cordialidade e caridade umas com as outras. As pessoas que foram escolhidas para o mesmo exercício devem estar unidas em todas as coisas. Estas filhas foram escolhidas para a realização de um desígnio; mas o edifício não poderá manter-se de pé se não vos amardes umas às outras; será este laço a impedir que ele se desmorone. Disse Nosso Senhor aos apóstolos: «Se quereis cumprir o desígnio que tenho desde toda a eternidade, tende grande caridade».<br/>",
+    "Minhas filhas, é verdade que sois enfermas, mas suportai as imperfeições umas das outras. Se não o fizerdes, o edifício desmoronar-se-á e sereis substituídas por outros. E, dado que pode haver antipatias, será bom que troqueis de lugar, com licença das superioras. São Pedro, São Paulo e São Barnabé também tiveram diferendos. Ninguém pode, pois, espantar-se de que os haja entre pobres filhas enfermas. Convém que tenhais a disposição de ir para onde vos ordenarem e mesmo de pedir para tal, dizendo: «Não sou daqui nem dali; sou de onde Deus quiser que eu esteja».<br/>"
+  ]
+}

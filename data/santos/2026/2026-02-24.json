@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-24",
+  "year": 2026,
+  "month": 2,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-24",
+      "name": "SS. Evécio e Pedro, mártires",
+      "normalizedName": "ss. evecio e pedro,",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Cristão ilustre da Nicomédia, rasgou publicamente o edito de Diocleciano, que determinava destruir as igrejas e os livros cristãos. Preso e torturado, Evécio foi queimado vivo, em 303, junto com milhares de mártires cristãos, entre os quais se encontrava também Pedro, membro do palácio imperial.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

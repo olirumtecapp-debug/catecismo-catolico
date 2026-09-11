@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-04",
+  "year": 2026,
+  "month": 9,
+  "day": 4,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/04.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-04.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-04",
+      "name": "São Bonifácio I, papa",
+      "normalizedName": "sao bonifacio i, papa",
+      "imageUrl": "./assets/img/santos/09-04-sao-bonifacio-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Bonifácio foi eleito Papa, em 418, em um Conclave bastante complicado. Mas, seus difamadores também elegeram Eulálio. Logo, um Papa e um Antipapa. Bonifácio, porém, com sabedoria, conseguiu fazer Eulálio voltar atrás, nomeando-o Bispo e restaurando o prestígio da Igreja de Roma. Faleceu em 422.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "name": "São Marino, eremita",
+      "normalizedName": "sao marino, eremita",
+      "imageUrl": "./assets/img/santos/09-04-sao-marino-eremita.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/04/s--marino--eremita.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/04/s--marino--eremita.html",
+      "sourceText": "Marino foi o único santo fundador e padroeiro de um Estado, hoje República de São Marino. Chegou a Rimini, da Dalmácia, em 257, para trabalhar como escultor. Fugiu das perseguições anticristãs e refugiou-se no Monte Titano, onde fundou sua comunidade com São Leão. Foi diácono e faleceu em 366.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Santa Rosália, virgem de Palermo",
+      "normalizedName": "santa rosalia, de palermo",
+      "imageUrl": "./assets/img/santos/09-04-santa-rosalia-virgem-de-palermo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Rosália, Padroeira de Palermo por 350 anos, nasceu por volta de 1125. De família nobre, trocou a corte por uma vida de eremita. Faleceu aos 35 anos, mas a sua popularidade explodiu quando, durante a peste de 1624/25, seus restos mortais, levados em procissão pela cidade, curaram os doentes.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "name": "São Moisés, legislador e profeta",
+      "normalizedName": "sao moises, legislador e profeta",
+      "imageUrl": "./assets/img/santos/09-04-sao-moises-legislador-e-profeta.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/04/s--moises--legislador-e-profeta.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/04/s--moises--legislador-e-profeta.html",
+      "sourceText": "No século XIV a.C., Moisés foi salvo das águas e criado pelo faraó. Foi escolhido por Deus para libertar o Povo de Israel. Seus feitos são narrados no Pentateuco. Por meio deste profeta, Deus deu aos judeus as tábuas da Lei e os guiou rumo à Terra Prometida. Moisés morreu aos 120 anos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

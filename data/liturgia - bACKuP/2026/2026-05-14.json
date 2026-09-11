@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-14",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 1:1-11",
+    "psalm": "Sl 47:2-3, 6-7, 8-9",
+    "secondReading": "Ef 1:17-23",
+    "gospel": "Mt 28:16-20"
+  },
+  "calendar": {
+    "date": "2026-05-14",
+    "monthDay": "5/14",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Ascension of the Lord",
+      "type": "SOLEMNITY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-14.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-14.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-14"
+  }
+}

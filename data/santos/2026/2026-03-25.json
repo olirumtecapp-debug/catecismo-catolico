@@ -1,0 +1,56 @@
+{
+  "date": "2026-03-25",
+  "year": 2026,
+  "month": 3,
+  "day": 25,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/25.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-25.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-25",
+      "name": "São Bom Ladrão",
+      "normalizedName": "sao bom ladrao",
+      "imageUrl": "./assets/img/santos/03-25-sao-bom-ladrao.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Este homem, no Gólgota, \"conseguiu\", no último momento, obter o Paraíso de Jesus. A tradição chamou de \"bom ladrão\" para distingui-lo do outro malfeitor, crucificado ao lado de Jesus. No Evangelho apócrifo de Nicodemos, do século IV, é chamado \"Dimas\", padroeiro dos prisioneiros e moribundos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "name": "São Quirino, mártir, na via Portuense",
+      "normalizedName": "sao quirino, martir, na via portuense",
+      "imageUrl": "./assets/img/santos/03-25-sao-quirino-martir-na-via-portuense.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Quirino, tribuno romano, viveu entre os séculos III e IV. Sabe-se que se converteu ao cristianismo porque era o carcereiro dos Santos Alexandre, Evêncio e Teódulo. Ao ser também martirizado, suas relíquias foram levadas para Neuss, na Alemanha, de onde se difundiu seu culto, a partir do século XI.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Santa Lúcia Filippíni, virgem, fundadora das Piedosas Mestras",
+      "normalizedName": "santa lucia filippini, , fundadora das piedosas mestras",
+      "imageUrl": "./assets/img/santos/03-25-santa-lucia-filippini-virgem-fundadora-das-pi.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Ficando órfã, em tenra idade, Lúcia apegou-se ao Senhor que a encaminhou para o mosteiro de Santa Clara, em Montefiascone. Dedicando-se ao apostolado catequético, comprometeu-se em promover a educação das meninas pobres, fundando o Instituto das Mestras Pias Filippini. Lúcia faleceu em 1732.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

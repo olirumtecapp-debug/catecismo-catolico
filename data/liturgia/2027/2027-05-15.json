@@ -1,0 +1,33 @@
+{
+  "date": "2027-05-15",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "7a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 28,16-20.30-31",
+      "text": "16Quando entramos em Roma, Paulo recebeu permissão para morar em casa particular, com um soldado que o vigiava. 17Três dias depois, Paulo convocou os líderes dos judeus. Quando estavam reunidos, falou-lhes: \"Irmãos, eu não fiz nada contra o nosso povo nem contra as tradições de nossos antepassados. No entanto, vim de Jerusalém como prisioneiro e, assim, fui entregue às mãos dos romanos. 18Interrogado por eles no tribunal e não havendo nada em mim que merecesse a morte, eles queriam me soltar. 19Mas os judeus se opuseram, e eu fui obrigado a apelar para César, sem nenhuma intenção de acusar minha nação. 20É por isso que eu pedi para ver-vos e falar-vos, pois estou carregando estas algemas exatamente por causa da esperança de Israel\". 30Paulo morou dois anos numa casa alugada. Ele recebia todos os que o procuravam, 31pregando o reino de Deus. Com toda a coragem e sem obstáculos, ele ensinava as coisas que se referiam ao Senhor Jesus Cristo."
+    },
+    "psalm": {
+      "reference": "Salmo 10 (11)",
+      "text": "- Deus está no templo santo e no céu tem o seu trono; volta os olhos para o mundo, seu olhar penetra os homens.\n\n- Examina o justo e o ímpio e detesta o que ama o mal. Porque justo é nosso Deus, o Senhor ama a justiça. Quem tem reto coração há de ver a sua face."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 21, 20-25",
+      "text": "Naquele tempo, 20Pedro virou-se e viu atrás de si aquele outro discípulo que Jesus amava, o mesmo que se reclinara sobre o peito de Jesus durante a ceia e lhe perguntara: \"Senhor, quem é que te vai entregar?\" 21Quando Pedro viu aquele discípulo, perguntou a Jesus: \"Senhor, o que vai ser deste?\" 22Jesus respondeu: \"Se eu quero que ele permaneça até que eu venha, o que te importa isso? Tu, segue-me!\" 23Então, correu entre os discípulos a notícia de que aquele discípulo não morreria. Jesus não disse que ele não morreria, mas apenas: \"Se eu quero que ele permaneça até que eu venha, que te importa?\" 24Este é o discípulo que dá testemunho dessas coisas e que as escreveu; e sabemos que o seu testemunho é verdadeiro. 25Jesus fez ainda muitas outras coisas, mas, se fossem escritas todas, penso que não caberiam no mundo os livros que deveriam ser escritos."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santa Teresa de Ávila, Carmelita descalça e Doutora da Igreja<br/>",
+    "</b>",
+    "Caminho da perfeição, 17, Ed. Carmelo, 2000<br/>",
+    "« - Senhor, que será deste? [...] - Que te importa? Tu, segue-Me»<br/>",
+    "Deus não leva a todos por um só caminho; e, porventura, aquele a quem parecer que vai por um muito mais baixo, está mais alto aos olhos do Senhor. Assim, nem porque nesta casa todas tratem de oração hão de ser todas contemplativas. É impossível. E será grande desconsolo para a que o não é, não entender esta verdade. [...]<br/>",
+    "Eu estive mais de catorze anos que não podia ter nem mesmo meditação sem recorrer à leitura. Haverá muitas pessoas deste teor, e outras que, embora seja com leitura, não podem ter meditação, senão só rezar vocalmente e nisto se detêm mais. [...]<br/>",
+    "E outras muitas pessoas há deste género, e, se têm humildade, não creio que no fim fiquem mais mal servidas, senão muito a par das que têm muitos gostos; e em parte, com mais segurança, porque não sabemos se os gostos são de Deus ou se os põe o demónio. [...]<br/>",
+    "Esses ooutros [os que não têm consolações] andam com humildade, e suspeitosos de que seja por sua culpa, sempre com cuidado de ir adiante. Não veem a outros chorar uma lágrima, se não as têm, que não lhes pareça estar muito atrás no serviço de Deus, e devem estar, porventura, muito mais adiante; porque as lágrimas, ainda que boas, não são todas perfeitas; e na humildade, mortificação, desapego e noutras virtudes sempre há mais segurança. Não há que temer, nem tenhais medo de que deixeis de chegar à perfeição, como os muito contemplativos.<br/>"
+  ]
+}

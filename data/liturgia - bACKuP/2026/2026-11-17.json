@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-17",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Ap 3:1-6, 14-22",
+    "psalm": "Psalm 15:2-3a, 3bc-4ab, 5",
+    "secondReading": "",
+    "gospel": "Lc 19:1-10"
+  },
+  "calendar": {
+    "date": "2026-11-17",
+    "monthDay": "11/17",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saint Elizabeth of Hungary",
+      "type": "MEMORIAL",
+      "quote": "How could I bear a crown of gold when the Lord bears a crown of thorns?",
+      "description": "Born in 1207, St. Elizabeth was a princess who devoted her life and wealth to the poor, joining the Third Order of St. Francis.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Simone_Martini_046.jpg/500px-Simone_Martini_046.jpg"
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/11-17.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/11-17.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-11-17"
+  }
+}

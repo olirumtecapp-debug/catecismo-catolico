@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-13",
+  "year": 2026,
+  "month": 4,
+  "day": 13,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/13.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-13.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-13",
+      "name": "São Hermenegildo, mártir",
+      "normalizedName": "sao hermenegildo, martir",
+      "imageUrl": "./assets/img/santos/04-13-sao-hermenegildo-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Ermenegildo era filho do primeiro rei visigodo e ariano da Espanha, no século VI. Porém, casou-se com uma católica e se converteu. Preso em Tarragona, foi assassinado por ordem do seu pai, por rejeitar receber a comunhão por mão de um bispo Ariano. Santo Ermenegildo é Padroeiro da Espanha.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-13",
+      "name": "São Martinho I, papa e mártir",
+      "normalizedName": "sao martinho i, papa e martir",
+      "imageUrl": "./assets/img/santos/04-13-sao-martinho-i-papa-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Em seu Pontificado, desde 649, condenou, veementemente, no Concílio de Roma, o monotelismo, a heresia que negava a dupla natureza de Jesus. Por este motivo, mal visto pelo imperador de Constantinopla, ficou prisioneiro na Criméia, onde morreu em 655. Desde então, é venerado como mártir da fé.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

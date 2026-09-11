@@ -1,0 +1,15 @@
+{
+  "startYear": 2026,
+  "endYear": 2026,
+  "requested": 1,
+  "ok": 0,
+  "failures": [
+    {
+      "date": "2026-01-03",
+      "error": "1ª leitura não encontrada"
+    }
+  ],
+  "generatedAt": "2026-09-10T14:53:05.732Z",
+  "source": "https://www.osabrasil.org/liturgia-diaria/AAAA-MM-DD",
+  "note": "Importador local; cada JSON preserva a URL da fonte para verificação. O site deve respeitar os termos/direitos da fonte antes de redistribuir textos integrais."
+}

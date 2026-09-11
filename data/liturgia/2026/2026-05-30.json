@@ -1,0 +1,32 @@
+{
+  "date": "2026-05-30",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "8a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "São Judas 17,20-25",
+      "text": "17Vós, porém, amados, lembrai-vos das palavras preditas pelos apóstolos de nosso Senhor Jesus Cristo. 20Edificai-vos sobre o fundamento da vossa santíssima fé e rezai, no Santo Espírito, 21de modo que vos mantenhais no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo, para a vida eterna. 22E a uns, que estão com dúvidas, deveis tratar com piedade. 23A outros, deveis salvá-los arrancando-os do fogo. De outros ainda deveis ter piedade, mas com temor, aborrecendo a própria veste manchada pela carne… 24Aquele que é capaz de guardar-vos da queda e de apresentar-vos perante a sua glória irrepreensíveis e jubilosos, 25ao único Deus, nosso Salvador, por Jesus Cristo, nosso Senhor: glória, majestade, poder e domínio, desde antes de todos os séculos, e agora, e por todos os séculos. Amém."
+    },
+    "psalm": {
+      "reference": "Salmo 62 (63)",
+      "text": "- Sois vós, ó Senhor, o meu Deus! Desde a aurora ansioso vos busco! A minha alma tem sede de vós, minha carne também vos deseja, como terra sedenta e sem água!\n\n- Venho, assim, contemplar-vos no templo, para ver vossa glória e poder. Vosso amor vale mais do que a vida: e por isso meus lábios vos louvam.\n\n- Quero, pois vos louvar pela vida, e elevar para vós minhas mãos! A minh'alma será saciada, como em grande banquete de festa; cantará a alegria em meus lábios, ao cantar para vós meu louvor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 11, 27-33",
+      "text": "Naquele tempo: 27Jesus e os discípulos foram de novo a Jerusalém. Enquanto Jesus estava andando no Templo, os sumos sacerdotes, os mestres da Lei e os ancióos aproximaram-se dele e perguntaram: 28'Com que autoridade fazes essas coisas? Quem te deu autoridade para fazer isso?' 29Jesus respondeu:'Vou fazer-vos uma só pergunta. Se me responderdes, eu vos direi com que autoridade faço isso. 30O batismo de João vinha do céu ou dos homens? Respondei-me.' 31Eles discutiam entre si: 'Se respondermos que vinha do céu, ele vai dizer: 'Por que não acreditastes em João?' 32Devemos então dizer que vinha dos homens?' Mas eles tinham medo da multidão, porque todos, de fato, tinham João na qualidade de profeta. 33Então eles responderam a Jesus:'Não sabemos.' E Jesus disse:'Pois eu também não vos digo com que autoridade faço essas coisas.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Pedro Crisólogo, Bispo de Ravena, Doutor da Igreja <br/>",
+    "</b>",
+    "Sermão 167; CCL 248, 1025; PL 52, 636 <br/>",
+    "«João Batista veio até vós [...] e não acreditastes nele» (Mt 21,32)<br/>",
+    "«João Batista proclamava: \"Arrependei-vos porque está próximo o reino dos céus\"» (Mt 3,1). [...] Bem-aventurado João, que quis que a conversão precedesse o julgamento, que os pecadores não fossem julgados mas recompensados, que os ímpios entrassem no Reino e não na punição. [...] Quando foi que João proclamou esta iminência do reino dos Céus? Quando o mundo estava ainda na sua infância [...]; mas para nós, que hoje proclamamos essa iminência, o mundo está extremamente velho e cansado. Perdeu as forças, perde as faculdades; os sofrimentos acabrunham-no [...]; clama o seu enfraquecimento, ostenta todos os sintomas do fim. [...] <br/>",
+    "Vamos a reboque de um mundo que se evade; esquecemos os tempos que aí vêm. Estamos ávidos de atualidade, mas não temos em consideração o julgamento que se aproxima. Não acorremos ao encontro do Senhor que chega. [...] <br/>",
+    "Convertamo-nos irmãos, convertamo-nos depressa. [...] O Senhor, pelo facto de tardar, de ainda esperar, revela o seu desejo de nos ver voltar para Ele, o desejo de que não pereçamos. Na sua grande bondade, continua a dirigir-nos estas palavras: «Não tenho prazer na morte do ímpio, mas sim na sua conversão, de maneira que ele tenha a vida» (Ez 33,11). Convertamo-nos, irmãos; não tenhamos medo de o tempo estar a acabar. O tempo do Autor do tempo não pode ser encurtado. A prova disso é aquele malfeitor do Evangelho que, na cruz e na hora da sua morte, escamoteou o perdão, se apoderou da vida e, ladrão do paraíso com arrombamento, conseguiu entrar no Reino (Lc 23,43).<br/>"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-28",
+  "year": 2026,
+  "month": 8,
+  "day": 28,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/28.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-28.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-28",
+      "name": "São Agostinho, bispo de Hipona e doutor da Igreja",
+      "normalizedName": "sao agostinho, bispo de hipona e doutor da igreja",
+      "imageUrl": "./assets/img/santos/08-28-sao-agostinho-bispo-de-hipona-e-doutor-da-igr.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/28/s--agostinho--bispo-de-hipona-e-doutor-da-igreja.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/28/s--agostinho--bispo-de-hipona-e-doutor-da-igreja.html",
+      "sourceText": "Inquieto em descobrir a Verdade, as vicissitudes do seu caminho de conversão o tornaram sempre atual. Autor de numerosos escritos, entre os quais As Confissões. Entre os Padres da Igreja, Santo Agostinho é o que melhor explicou os princípios e dogmas do Cristianismo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "name": "São Hermes, mártir, na via Salária Antiga",
+      "normalizedName": "sao hermes, martir, na via salaria antiga",
+      "imageUrl": "./assets/img/santos/08-28-sao-hermes-martir-na-via-salaria-antiga.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origem grega, Hermes chegou a Roma no século III e tornou-se cidadão romano. Nomeado Prefeito, converteu-se ao cristianismo com sua esposa, filhos, irmã e milhares de escravos. Por isso, foi preso, por ordem de Trajano, que enviou Aureliano a Roma, onde mandou o tribuno Quirino assassiná-lo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

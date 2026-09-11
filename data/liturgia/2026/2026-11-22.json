@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-22",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Solenidade: Nosso Senhor Jesus Cristo, Rei do Universo",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Daniel 7,13-14",
+      "text": "13Continuei insistindo na visão noturna, e eis que, entre as nuvens do céu, vinha um como filho de homem, aproximando-se do Ancião de muitos dias, e foi conduzido à sua presença. 14Foram-lhe dados poder, glória e realeza, e todos os povos, nações e línguas o serviam: seu poder é um poder eterno que não lhe será tirado, e seu reino, um reino que não se dissolverá."
+    },
+    "psalm": {
+      "reference": "Salmo 92 (93)",
+      "text": "- Deus é Rei e se vestiu de majestade, revestiu-se de poder e de esplendor!\n\n- Vós firmastes o universo inabalável, vós firmastes vosso trono desde a origem, desde sempre, ó Senhor, vós existis!\n\n- Verdadeiros são os vossos testemunhos, refulge a santidade em vossa casa, pelos séculos dos séculos, Senhor!"
+    },
+    "secondReading": {
+      "reference": "Apocalipse 1,5-8",
+      "text": "Jesus Cristo é a testemunha fiel, o primeiro a ressuscitar dentre os mortos, o soberano dos reis da terra. A Jesus, que nos ama,que por seu sangue nos libertou dos nossos pecados6e que fez de nós um reino,sacerdotes para seu Deus e Pai,a ele a glória e o poder, em eternidade. Amém.7Olhai! Ele vem com as nuvens,e todos os olhos o verão- também aqueles que o traspassaram. Todas as tribos da terra baterão no peito por causa dele. Sim. Amém! 8'Eu sou o Alfa e o ômega', diz o Senhor Deus,'aquele que é, que era e que vem,"
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 18, 33-37",
+      "text": "Naquele tempo: 33bPilatos chamou Jesus e perguntou-lhe: 'Tu és o rei dos judeus?' 34Jesus respondeu: 'Estás dizendo isto por ti mesmo, ou outros te disseram isto de mim?' 35Pilatos falou: 'Por acaso, sou judeu? O teu povo e os sumos sacerdotes te entregaram a mim. Que fizeste?'. 36Jesus respondeu: 'O meu reino não é deste mundo. Se o meu reino fosse deste mundo, os meus guardas lutariam para que eu não fosse entregue aos judeus. Mas o meu reino não é daqui'. 37Pilatos disse a Jesus: 'Então tu és rei?' Jesus respondeu: 'Tu o dizes: eu sou rei. Eu nasci e vim ao mundo para isto: para dar testemunho da verdade. Todo aquele que é da verdade escuta a minha voz'."
+    }
+  },
+  "extra": [
+    "- Graças a Deus<br/>",
+    "<b>",
+    "Comentário do dia por Santo Agostinho (354-430)<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja<br/>",
+    "Homilias sobre S. João<br/>",
+    "«O meu Reino não é deste mundo»<br/>",
+    "Escutai todos, judeus e gentios [...]; escutai, todos os reinos da terra! Eu não impeço o vosso domínio sobre este mundo, «o meu Reino não é deste mundo» (Jo 18,36). Não temais, pois, com esse medo insensato que dominou Herodes quando lhe anunciaram o meu nascimento. [...] Não, diz o Salvador, «o meu Reino não é deste mundo». Vinde todos a um Reino que não é deste mundo; vinde a ele pela fé; que o medo não vos torne cruéis. É verdade que, numa profecia, o Filho de Deus diz, falando do Pai: «Por Ele, fui eleito rei sobre Sião, sobre a montanha sagrada» (Sl 2,6). Mas essa Sião e essa montanha não são deste mundo.<br/>",
+    "Com efeito, o que é o seu Reino? São os que acreditam nele, aqueles a quem Ele diz: Não sois do mundo, tal como Eu não sou do mundo (Jo 17,16). E, contudo, Ele quer que estejam no mundo e diz ao Pai: «Não te peço que os retires do mundo, mas que os guardes do mal» (Jo 17,15). É que Ele não disse: «O meu Reino não está neste mundo», mas sim «não é deste mundo; se fosse deste mundo, os meus servos viriam combater para que eu não fosse entregue.»<br/>",
+    "Na verdade, o seu Reino está aqui na terra até ao fim do mundo; até à colheita, o joio está misturado com o trigo (Mt 13,24s). [...] O seu Reino não é deste mundo porque Ele é como um viajante neste mundo. Àqueles sobre quem reina, diz: « Não sois do mundo, pois escolhi-vos do meio do mundo» (Jo 15,19). Eles eram, portanto, deste mundo, quando ainda não eram o seu Reino e pertenciam ao príncipe deste mundo. [...] Todos os que são gerados da raça de Adão pecador pertencem a este mundo; todos os que foram regenerados em Jesus Cristo pertencem ao seu Reino e já não são deste mundo.<br/>",
+    "«Deus arrancou-nos efectivamente do poder das trevas e transportou-nos para o Reino de seu Filho muito amado» (Col 1,13).<br/>"
+  ]
+}

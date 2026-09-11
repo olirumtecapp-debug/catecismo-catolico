@@ -1,0 +1,34 @@
+{
+  "date": "2026-02-28",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana da Quaresma Ciclo da Pascoa",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Deuteronômio 26,16-19",
+      "text": "Moisés dirigiu a palavra ao povo de Israel e lhe disse: 16\"Hoje, o Senhor teu Deus te manda cumprir esses preceitos e decretos. Guarda-os e observa-os com todo o teu coração e com toda a tua alma. 17Tu escolheste hoje o Senhor para ser o teu Deus, para seguires os seus caminhos e guardares seus preceitos, mandamentos e decretos, e para obedeceres à sua voz. 18E o Senhor te escolheu, hoje, para que sejas para ele um povo particular, como te prometeu, a fim de observares todos os seus mandamentos. 19Assim ele te fará ilustre entre todas as nações que criou e te tornará superior em honra e glória, a fim de que sejas o povo santo do Senhor teu Deus, como ele disse\"."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Feliz o homem sem pecado em seu caminho, que na lei do Senhor Deus vai progredindo! Feliz o homem que observa seus preceitos e de todo o coração procura a Deus!\n\n- Os vossos mandamentos vós nos destes para serem fielmente observados. Oxalá seja bem firme a minha vida em cumprir vossa vontade e vossa lei!\n\n- Quero louvar-vos com sincero coração, pois aprendi as vossas justas decisões. Quero guardar vossa vontade e vossa lei; Senhor, não me deixeis desamparado!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 43-48",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 43\"Vós ouvistes o que foi dito: 'Amarás o teu próximo e odiarás o teu inimigo!' 44Eu, porém, vos digo, amai os vossos inimigos e rezai por aqueles que vos perseguem! 45Assim vos tornareis filhos do vosso Pai que está nos céus, porque ele faz nascer o sol sobre maus e bons e faz cair a chuva sobre justos e injustos. 46Porque, se amais somente aqueles que vos amam, que recompensa tereis? Os cobradores de impostos não fazem a mesma coisa? 47E se saudais somente os vossos irmãos, o que fazeis de extraordinário? Os pagãos não fazem a mesma coisa? 48Portanto, sede perfeitos como o vosso Pai celeste é perfeito\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Jerónimo<br/>",
+    "</b>",
+    "Presbítero, tradutor da Bíblia, Doutor da Igreja<br/>",
+    "Comentário à Epístola aos Gálatas, 3, 6<br/>",
+    "O amor ao próximo: apoio mútuo e benevolência; ir beber à fonte da bondade divina<br/>",
+    "«Portanto, enquanto temos tempo, pratiquemos o bem para com todos, mas principalmente para com os irmãos na fé» (Gal 6,10). O tempo presente, o tempo do curso da vida, é o tempo da sementeira. Durante esta vida, podemos semear o que quisermos. Quando esta vida passar, ser-nos-á retirado o tempo de agir. É por isso que o Salvador nos diz: «Temos de realizar as obras daquele que Me enviou enquanto é dia. Vem aí a noite, em que ninguém pode atuar» (Jo 9,4).<br/>",
+    "Quer estejamos doentes ou de boa saúde, quer sejamos humildes ou poderosos, pobres ou ricos, famosos ou desprezados, façamos tudo em nome do Senhor, com paciência e equanimidade; assim se realizará em nós o que diz a Escritura: «tudo contribui para o bem daqueles que amam a Deus» (Rom 8,28). A própria cólera, a paixão, os ultrajes recebidos que exigem vingança tornam-se para mim, se me dominar e me calar por Deus, se em cada picada que fere e sob a pressão dos vícios pensar em Deus, que me olha do alto, outras tantas ocasiões de triunfo.<br/>",
+    "Quando distribuirmos os nossos dons, não digamos: este é amigo, àquele vou ignorá-lo; este tem direito de receber, aquele deve ser desprezado. Imitemos o nosso Pai, que «faz com que o Sol se levante sobre os bons e os maus e faz cair a chuva sobre os justos e os pecadores» (Mt 5,45). A fonte da bondade está aberta a todos: escravo e livre, plebeu e rei, rico e pobre, todos bebem dela da mesma maneira. A lamparina acesa numa casa alumia a todos sem distinção.<br/>",
+    "S. João evangelista, no final da sua vida, quando já não ra capaz de exprimir o seu pensamento num discurso seguido, limitava-se a dizer: «Meus filhinhos, amai-vos uns aos outros» (cf Jo 13,24). E, quando os seus discípulos lhe perguntaram porque dizia sempre a mesma coisa, João respondeu com esta frase, digna dele: «Porque é esse o preceito do Senhor; se o cumprirmos, tanto basta.»<br/>"
+  ]
+}

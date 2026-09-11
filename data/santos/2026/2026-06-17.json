@@ -1,0 +1,30 @@
+{
+  "date": "2026-06-17",
+  "year": 2026,
+  "month": 6,
+  "day": 17,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/17.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-17.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-17",
+      "name": "SS. Blasto e Diógenes, mártires, na via Salária Antiga",
+      "normalizedName": "ss. blasto e diogenes, , na via salaria antiga",
+      "imageUrl": "./assets/img/santos/06-17-ss-blasto-e-diogenes-martires-na-via-salaria-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Brás e Diógenes são dois santos mártires da antiguidade, cujos restos mortais descansam na Basílica romana de Santa Praxedes. Venerados desde a Idade Média, sabe-se que Brás era um tribuno, condenado por ser cristão, em 269; o martírio de Diógenes está descrito na epígrafe do presbítero Marea.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

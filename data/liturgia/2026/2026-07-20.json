@@ -1,0 +1,23 @@
+{
+  "date": "2026-07-20",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "16a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Miqueias 6,1-4.6-8",
+      "text": "1Ouvi o que diz o Senhor: \"Levanta-te, convoca um julgamento perante os montes e faze que as colinas ouçam tua voz\". 2Ouvi, montes, as razões do Senhor em juízo, escutai-o, fundamentos da terra; a pendência do Senhor é com seu povo, ele disputa em juízo contra Israel. 3\"Povo meu, que é que te fiz? Em que te fui penoso? Responde-me. 4Eu te retirei da terra do Egito e te libertei da casa de servidão, e pus à tua frente Moisés, Aarão e Maria\". 6\"Que oferta farei ao Senhor, digna dele, ao ajoelhar-me diante do Deus altíssimo? Acaso oferecerei holocaustos e novilhos de um ano? 7Acaso agradam ao Senhor carneiros aos milhares e torrentes de óleo? Porventura ofertaria eu o meu primogênito por um crime meu, o fruto do meu sangue pelos pecados da minha vida?\" 8Foi-te revelado, ó homem, o que é o bem e o que o Senhor exige de ti: principalmente praticar a justiça e amar a misericórdia, e caminhar solícito com teu Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 49 (50)",
+      "text": "- \"Reuni à minha frente os meus eleitos, que selaram a aliança em sacrifícios!\" Testemunha o próprio céu seu julgamento, porque Deus mesmo é juiz e vai julgar.\n\n- Eu não venho censurar teus sacrifícios, pois sempre estão perante mim teus holocaustos; não preciso dos novilhos de tua casa nem dos carneiros que estão nos teus rebanhos.\n\n- \"Como ousas repetir os meus preceitos e trazer minha aliança em tua boca? Tu, que odiaste minhas leis e meus conselhos e deste as costas às palavras dos meus lábios!\n\n- Diante disso que fizeste, eu calarei? Acaso pensas que eu sou igual a ti? É disso que te acuso e repreendo, e manifesto essas coisas aos teus olhos.\n\n- Quem me oferece um sacrifício de louvor, este, sim, é que me honra de verdade. A todo homem que procede retamente eu mostrarei a salvação que vem de Deus.\""
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 12, 38-42",
+      "text": "Naquele tempo, 38alguns mestres da lei e fariseus disseram a Jesus: \"Mestre, queremos ver um sinal realizado por ti\". 39Jesus respondeu-lhes: \"Uma geração má e adúltera busca um sinal, mas nenhum sinal lhe será dado, a não ser o sinal do profeta Jonas. 40Com efeito, assim como Jonas esteve três dias e três noites no ventre da baleia, assim também o Filho do homem estará três dias e três noites no seio da terra. 41No dia do juízo, os habitantes de Nínive se levantarão contra essa geração e a condenarão, porque se converteram diante da pregação de Jonas. E aqui está quem é maior do que Jonas. 42No dia do juízo, a rainha do Sul se levantará contra essa geração e a condenará, porque veio dos confins da terra para ouvir a sabedoria de Salomão, e aqui está quem é maior do que Salomão\"."
+    }
+  },
+  "extra": []
+}

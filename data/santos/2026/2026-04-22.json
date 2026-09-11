@@ -1,0 +1,56 @@
+{
+  "date": "2026-04-22",
+  "year": 2026,
+  "month": 4,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-22",
+      "name": "São Sotero, papa",
+      "normalizedName": "sao sotero, papa",
+      "imageUrl": "./assets/img/santos/04-22-sao-sotero-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origem grega, mas nascido em Fondi, Sotero foi Papa do ano 166 a 175. Atento às necessidades dos cristãos do Oriente, seu Pontificado foi caracterizado por obras de caridade e assistência aos pobres. Instituiu uma ordem diaconal feminina e teve que enfrentar muitas heresias como a de Montano.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "name": "São Caio, papa",
+      "normalizedName": "sao caio, papa",
+      "imageUrl": "./assets/img/santos/04-22-sao-caio-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nascido na cidade de Salona, na Dalmácia, por uma família romana nobre talvez relacionada a Diocleciano, Caio é papa de 283 a 296. Alguns diziam que era tio de Santa Susana. Durante seu Pontificado, lutou contra as heresias emergentes e organizou, definitivamente, as ordens inferiores do episcopado.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "name": "São Agapito I, papa",
+      "normalizedName": "sao agapito i, papa",
+      "imageUrl": "./assets/img/santos/04-22-sao-agapito-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Agapito, Papa por quase um ano, foi enviado pelo rei dos Godos a Constantinopla para dissuadir o imperador Justiniano de retomar a Itália. A missão faliu, mas, em compensação, o Pontífice conseguiu uma nova derrota da heresia monofisista. Santo Agapito faleceu no caminho de volta a Roma, em 536.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

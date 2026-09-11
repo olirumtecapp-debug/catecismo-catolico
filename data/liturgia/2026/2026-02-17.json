@@ -1,0 +1,23 @@
+{
+  "date": "2026-02-17",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "6a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Tiago 1,12-18",
+      "text": "12Feliz o homem que suporta a provação. Porque, uma vez provado, receberá a coroa da vida, que o Senhor prometeu àqueles que o amam. 13Ninguém, ao ser tentado, deve dizer: \"É Deus que me está tentando\", pois Deus não pode ser tentado pelo mal e tampouco ele tenta a ninguém. 14Antes, cada qual é tentado por sua própria concupiscência, que o arrasta e seduz. 15Em seguida, a concupiscência concebe o pecado e o dá à luz, e o pecado, uma vez consumado, gera a morte. 16Meus queridos irmãos, não vos enganeis. 17Todo dom precioso e toda dádiva perfeita vêm do alto; descem do Pai das luzes, no qual não há mudança nem sombra de variação. 18De livre vontade ele nos gerou, pela Palavra da verdade, a fim de sermos como que as primícias de suas criaturas."
+    },
+    "psalm": {
+      "reference": "Salmo 93 (94)",
+      "text": "- É feliz, ó Senhor, quem formais e educais nos caminhos da lei, para dar-lhe um alívio na angústia.\n\n- O Senhor não rejeita o seu povo e não pode esquecer sua herança: voltarão a juízo as sentenças; quem é reto andará na justiça.\n\n- Quando eu penso: \"Estou quase caindo!\", vosso amor me sustenta, Senhor! Quando o meu coração se angustia, consolais e alegrais minha alma."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 8, 14-21",
+      "text": "Naquele tempo, 14os discípulos tinham se esquecido de levar pães. Tinham consigo na barca apenas um pão. 15Então Jesus os advertiu: \"Prestai atenção e tomai cuidado com o fermento dos fariseus e com o fermento de Herodes\". 16Os discípulos diziam entre si: \"É porque não temos pão\". 17Mas Jesus percebeu e perguntou-lhes: \"Por que discutis sobre a falta de pão? Ainda não entendeis nem compreendeis? Vós tendes o coração endurecido? 18Tendo olhos, vós não vedes e, tendo ouvidos, não ouvis? Não vos lembrais 19de quando reparti cinco pães para cinco mil pessoas? Quantos cestos vós recolhestes cheios de pedaços?\" Eles responderam: \"Doze\". 20Jesus perguntou: \"E quando reparti sete pães com quatro mil pessoas, quantos cestos vós recolhestes cheios de pedaços?\" Eles responderam: \"Sete\". 21Jesus disse: \"E vós ainda não compreendeis?\""
+    }
+  },
+  "extra": []
+}

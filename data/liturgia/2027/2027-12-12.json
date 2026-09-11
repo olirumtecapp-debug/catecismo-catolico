@@ -1,0 +1,34 @@
+{
+  "date": "2027-12-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Advento Ciclo do NatalDomingo Gaudete",
+  "color": "rosa",
+  "readings": {
+    "firstReading": {
+      "reference": "Sofonias 3,14-18",
+      "text": "14Canta de alegria, cidade de Sião; rejubila, povo de Israel! Alegra-te e exulta de todo o coração, cidade de Jerusalém! 15O Senhor revogou a sentença contra ti, afastou teus inimigos; o rei de Israel é o Senhor, ele está no meio de ti, nunca mais temerás o mal. 16Naquele dia, se dirá a Jerusalém: 'Não temas, Sião, não te deixes levar pelo desânimo! 17O Senhor, teu Deus, está no meio de ti, o valente guerreiro que te salva; ele exultará de alegria por ti, movido por amor; exultará por ti, entre louvores, 18como nos dias de festa'."
+    },
+    "psalm": {
+      "reference": "Salmo (Is 12)",
+      "text": "- Eis o Deus, meu Salvador, eu confio e nada temo; o Senhor é minha força, meu louvor e salvação. Com alegria bebereis no manancial da salvação e direis naquele dia: \"Dai louvores ao Senhor.\n\n- Invocai seu santo nome, anunciai suas maravilhas, entre os povos proclamai que seu nome é o mais sublime.\n\n- Louvai cantando ao nosso Deus, que fez prodígios e portentos, publicai em toda a terra suas grandes maravilhas! Exultai cantando alegres, habitantes de Sião, porque é grande em vosso meio o Deus Santo de Israel!'"
+    },
+    "secondReading": {
+      "reference": "Filipenses 4,4-7",
+      "text": "Irmãos: 4Alegrai-vos sempre no Senhor; eu repito, alegrai-vos. 5Que a vossa bondade seja conhecida de todos os homens! O Senhor está próximo! 6Não vos inquieteis com coisa alguma, mas apresentai as vossas necessidades a Deus, em orações e súplicas, acompanhadas de ação de graças. 7E a paz de Deus, que ultrapassa todo o entendimento, guardará os vossos corações e pensamento em Cristo Jesus."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 3, 10-18",
+      "text": "Naquele tempo: 10As multidões perguntavam a João: 'Que devemos fazer?' 11João respondia: 'Quem tiver duas túnicas, dê uma a quem não tem; e quem tiver comida, faça o mesmo!' 12Foram também para o batismo cobradores de impostos, e perguntaram a João: 'Mestre, que devemos fazer?' 13João respondeu: 'Não cobreis mais do que foi estabelecido.' 14Havia também soldados que perguntavam: 'E nós, que devemos fazer?' João respondia: 'Não tomeis à força dinheiro de ninguém, nem façais falsas acusações; ficai satisfeitos com o vosso salário!' 15O povo estava na expectativa e todos se perguntavam no seu íntimo se João não seria o Messias. 16Por isso, João declarou a todos: 'Eu vos batizo com água, mas virá aquele que é mais forte do que eu. Eu não sou digno de desamarrar a correia de suas sandálias. Ele vos batizará no Espírito Santo e no fogo. 17Ele virá com a pá na mão: vai limpar sua eira e recolher o trigo no celeiro; mas a palha ele a queimará no fogo que não se apaga.' 18E ainda de muitos outros modos, João anunciava ao povo a Boa-Nova."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Máximo de Turim, Bispo<br/>",
+    "</b>",
+    "Sermão 88, PL 57, 733-736<br/>",
+    "«Com estas e muitas outras exortações, João anunciava ao povo a Boa Nova»<br/>",
+    "João não falou apenas no seu tempo, anunciando o Senhor aos fariseus e dizendo: «Preparai o caminho do Senhor, endireitai as suas veredas» (Mt 3,3). Ainda hoje ele brada em nós e o trovão da sua voz abala o deserto dos nossos pecados. [...] A sua voz ressoa ainda hoje, dizendo: «Preparai o caminho do Senhor, endireitai as suas veredas». [...] Pede-nos que preparemos o caminho do Senhor [...] pela pureza da nossa fé. O Senhor não toma os caminhos deste mundo, mas penetra no segredo dos corações. Se esta estrada for áspera devido aos maus costumes, for dura pela nossa brutalidade, estiver manchada pelo nosso comportamento, pede-nos que a limpemos, que a aplanemos, que a nivelemos. Deste modo, aquando da sua vinda, o Senhor não tropeçará, mas encontrará um caminho balizado pela castidade, aplanado pela fé, decorado com as nossas esmolas. O Senhor tem o hábito de percorrer este género de vias, porque o profeta clama: «Abri caminho àquele que cavalga sobre as nuvens; o seu nome é Senhor!» (Sl 67,5). [...]<br/>",
+    "O próprio João traçou na perfeição e ordenou o seu caminho para a chegada de Cristo, porque foi em todas as coisas sóbrio, humilde, pobre e virgem: «João trazia um traje de pêlos de camelo e um cinto de couro à volta da cintura; alimentava-se de gafanhotos e mel silvestre» (Mt 3,4). Pois não há maior sinal de humildade que o desprezo de vestes sumptuosas e o uso de peles por tratar; nem há maior sinal de fé que estar sempre preparado, com os rins cingidos, para qualquer dever de serviço; nem há sinal mais notável de renúncia que alimentar-se de gafanhotos e mel silvestre.<br/>"
+  ]
+}

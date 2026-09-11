@@ -1,0 +1,32 @@
+{
+  "date": "2027-04-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "3a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 7,51-8,1",
+      "text": "Naqueles dias, Estêvão disse ao povo, aos anciãos e aos doutores da lei: 51\"Homens de cabeça dura, insensíveis e incircuncisos de coração e ouvido! Vós sempre resististes ao Espírito Santo e, como vossos pais agiram, assim fazeis vós! 52A qual dos profetas vossos pais não perseguiram? Eles mataram aqueles que anunciavam a vinda do Justo, do qual, agora, vós vos tornastes traidores e assassinos. 53Vós recebestes a lei por meio de anjos e não a observastes!\" 54Ao ouvir essas palavras, eles ficaram enfurecidos e rangeram os dentes contra Estêvão. 55Estêvão, cheio do Espírito Santo, olhou para o céu e viu a glória de Deus e Jesus, de pé, à direita de Deus. 56E disse: \"Estou vendo o céu aberto e o Filho do homem, de pé, à direita de Deus\". 57Mas eles, dando grandes gritos e tapando os ouvidos, avançaram todos juntos contra Estêvão; 58arrastaram-no para fora da cidade e começaram a apedrejá-lo. As testemunhas deixaram suas vestes aos pés de um jovem, chamado Saulo. 59Enquanto o apedrejavam, Estêvão clamou, dizendo: \"Senhor Jesus, acolhe o meu espírito\". 60Dobrando os joelhos, gritou com voz forte: \"Senhor, não os condenes por este pecado\". E, ao dizer isso, morreu. 8,1Saulo era um dos que aprovavam a execução de Estêvão."
+    },
+    "psalm": {
+      "reference": "Salmo 30 (31)",
+      "text": "- Sede uma rocha protetora para mim, um abrigo bem seguro que me salve! Sim, sois vós a minha rocha e fortaleza; por vossa honra, orientai-me e conduzi-me!\n\n- Em vossas mãos, Senhor, entrego o meu espírito, porque vós me salvareis, ó Deus fiel! Quanto a mim, é ao Senhor que me confio, vosso amor me faz saltar de alegria.\n\n- Mostrai serena a vossa face ao vosso servo e salvai-me pela vossa compaixão! Na proteção de vossa face os defendeis, bem longe das intrigas dos mortais."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 6, 30-35",
+      "text": "Naquele tempo, a multidão perguntou a Jesus: 30\"Que sinal realizas, para que possamos ver e crer em ti? Que obra fazes? 31Nossos pais comeram o maná no deserto, como está na Escritura: 'Pão do céu deu-lhes a comer'\". 32Jesus respondeu: \"Em verdade, em verdade vos digo, não foi Moisés quem vos deu o pão que veio do céu. É meu Pai que vos dá o verdadeiro pão do céu. 33Pois o pão de Deus é aquele que desce do céu e dá vida ao mundo\". 34Então pediram: \"Senhor, dá-nos sempre desse pão\". 35Jesus lhes disse: \"Eu sou o pão da vida. Quem vem a mim não terá mais fome e quem crê em mim nunca mais terá sede\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Cirilo de Alexandria, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Sobre Isaías, IV, 1<br/>",
+    "«Meu Pai é que vos dá o verdadeiro pão do Céu»<br/>",
+    "«Cantai ao Senhor um cântico novo!» (Sl 95,1). Novo é o cântico, para se ajustar a realidades novas, pois, como Paulo escreveu, «se alguém está em Cristo é uma criatura nova; o mundo antigo passou, foi feito um mundo novo» (2Cor 5,17). Os que eram israelitas de sangue foram libertados da tirania dos egípcios graças ao mediador desse tempo, o muito sábio Moisés; foram libertados do trabalho penoso dos tijolos, dos suores inúteis das tarefas terrenas [...], da crueldade dos supervisores, da dureza inumana do faraó. Atravessaram o mar; no deserto comeram o maná; beberam a água que jorrou do rochedo; passaram o Jordão a pé enxuto; foram introduzidos na terra da promessa.<br/>",
+    "Ora, tudo isso foi renovadopor nós, e o mundo novo é incomparavelmente melhor que o antigo. Nós fomos libertados de uma escravatura que não é terrena, mas espiritual; fomos libertados, não só das tarefas desta Terra, mas da mancha dos prazeres carnais. Não escapámos aos contramestres egípcios ou ao tirano ímpio e impiedoso, homem como nós, mas aos demónios malignos e impuros que incitam a pecar, e ao chefe da sua raça, Satanás.<br/>",
+    "Atravessámos as ondas da vida presente, como um mar, com o seu tumulto e as suas loucas agitações. Comemos o maná espiritual, o pão descido do Céu, que dá a vida ao mundo. Bebemos a água que jorra da rocha, fazendo das águas vivas de Cristo as nossas delícias. Atravessámos o Jordão graças ao santo batismo que fomos julgados dignos de receber. Entrámos na terra prometida aos santos e preparada para eles, a terra que o Senhor recorda ao dizer: «Bem-aventurados os mansos, porque possuirão a Terra» (Mt 5,4).<br/>"
+  ]
+}

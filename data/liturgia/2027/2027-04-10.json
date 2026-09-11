@@ -1,0 +1,23 @@
+{
+  "date": "2027-04-10",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 6,1-7",
+      "text": "1Naqueles dias, o número dos discípulos tinha aumentado, e os fiéis de origem grega começaram a queixar-se dos fiéis de origem hebraica. Os de origem grega diziam que suas viúvas eram deixadas de lado no atendimento diário. 2Então os doze apóstolos reuniram a multidão dos discípulos e disseram: \"Não está certo que nós deixemos a pregação da Palavra de Deus para servir às mesas. 3Irmãos, é melhor que escolhais entre vós sete homens de boa fama, repletos do Espírito e de sabedoria, e nós os encarregaremos dessa tarefa. 4Desse modo nós poderemos dedicar-nos inteiramente à oração e ao serviço da Palavra\". 5A proposta agradou a toda a multidão. Então escolheram Estêvão, homem cheio de fé e do Espírito Santo; e também Filipe, Prócoro, Nicanor, Timon, Pármenas e Nicolau de Antioquia, um pagão que seguia a religião dos judeus. 6Eles foram apresentados aos apóstolos, que oraram e impuseram as mãos sobre eles. 7Entretanto, a Palavra do Senhor se espalhava. O número dos discípulos crescia muito em Jerusalém, e grande multidão de sacerdotes judeus aceitava a fé."
+    },
+    "psalm": {
+      "reference": "Salmo 32 (33)",
+      "text": "- Os justos, alegrai-vos no Senhor! Aos retos fica bem glorificá-lo. Dai graças ao Senhor ao som da harpa, na lira de dez cordas celebrai-o!\n\n- Pois reta é a palavra do Senhor, e tudo o que ele faz merece fé. Deus ama o direito e a justiça, transborda em toda a terra a sua graça.\n\n- O Senhor pousa o olhar sobre os que o temem e que confiam, esperando em seu amor, para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 6, 16-21",
+      "text": "16Ao cair da tarde, os discípulos desceram ao mar. 17Entraram na barca e foram em direção a Cafarnaum, do outro lado do mar. Já estava escuro, e Jesus ainda não tinha vindo ao encontro deles. 18Soprava um vento forte, e o mar estava agitado. 19Os discípulos tinham remado mais ou menos cinco quilômetros quando enxergaram Jesus, andando sobre as águas e aproximando-se da barca. E ficaram com medo. 20Mas Jesus disse: \"Sou eu. Não tenhais medo\". 21Quiseram, então, recolher Jesus na barca, mas imediatamente a barca chegou à margem para onde estavam indo."
+    }
+  },
+  "extra": []
+}

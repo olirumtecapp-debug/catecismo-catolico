@@ -1,0 +1,23 @@
+{
+  "date": "2027-10-29",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "30a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 9,1-5",
+      "text": "Irmãos: 1Não estou mentindo, mas, em Cristo, digo a verdade, apoiado no testemunho do Espírito Santo e da minha consciência. 2Tenho no coração uma grande tristeza e uma dor contínua, 3a ponto de desejar ser eu mesmo segregado por Cristo em favor de meus irmãos, os de minha raça. 4Eles são israelitas. A eles pertencem a filiação adotiva, a glória, as alianças, as leis, o culto, as promessas 5e também os patriarcas. Deles é que descende, quanto à sua humanidade, Cristo, o qual está acima de todos, Deus bendito para sempre! Amém!"
+    },
+    "psalm": {
+      "reference": "Salmo 147 (147B)",
+      "text": "- Glorifica o Senhor, Jerusalém! Ó Sião, canta louvores ao teu Deus! Pois reforçou com segurança as tuas portas, e os teus filhos em teu seio abençoou.\n\n- A paz em teus limites garantiu e te dá como alimento a flor do trigo. Ele envia suas ordens para a terra, e a palavra que ele diz corre veloz.\n\n- Anuncia a Jacó sua palavra, seus preceitos suas leis a Israel. Nenhum povo recebeu tanto carinho, a nenhum outro revelou os seus preceitos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 14, 1-6",
+      "text": "1Aconteceu que, num dia de sábado, Jesus foi comer na casa de um dos chefes dos fariseus. E eles o observavam. 2Diante de Jesus, havia um hidrópico. 3Tomando a palavra, Jesus falou aos mestres da Lei e aos fariseus: 'A Lei permite curar em dia de sábado, ou não? 4Mas eles ficaram em silêncio. Então Jesus tomou o homem pela mão, curou-o e despediu-o. 5Depois lhes disse: 'Se algum de vós tem um filho ou um boi que caiu num poço, não o tira logo, mesmo em dia de sábado?' 6E eles não foram capazes de responder a isso."
+    }
+  },
+  "extra": []
+}

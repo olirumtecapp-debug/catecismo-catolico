@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-27",
+  "year": 2026,
+  "month": 3,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-27",
+      "name": "São Ruperto, bispo de Salzburgo",
+      "normalizedName": "sao ruperto, bispo de salzburgo",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De família nobre, originário da Irlanda, foi para a Bavária no ano 700 como monge itinerante. Fundou um mosteiro próximo à antiga cidade romana de Juvavum, núcleo da nova Salzburgo, “cidade do sal”, da qual foi o primeiro bispo. Morreu em 27 de março de 718, no dia de Páscoa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

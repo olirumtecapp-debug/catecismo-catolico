@@ -1,0 +1,30 @@
+{
+  "date": "2027-12-01",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 25,6-10",
+      "text": "Naquele dia: 6O Senhor dos exércitos dará neste monte, para todos os povos, um banquete de ricas iguarias, regado com vinho puro, servido de pratos deliciosos e dos mais finos vinhos. 7Ele removerá, neste monte, a ponta da cadeia que ligava todos os povos, a teia em que tinha envolvido todas as nações. 8O Senhor Deus eliminará para sempre a morte e enxugará as lágrimas de todas as faces e acabará com a desonra do seu povo em toda a terra, o Senhor o disse. 9Naquele dia, se dirá: 'Este é o nosso Deus, esperamos nele, até que nos salvou; este é o Senhor, nele temos confiado: vamos alegrar-nos e exultar por nos ter salvo'. 10aE a mão do Senhor repousará sobre este monte."
+    },
+    "psalm": {
+      "reference": "Salmo 22 (23)",
+      "text": "- O Senhor é o pastor que me conduz; não me falta coisa alguma. Pelos prados e campinas verdejantes ele me leva a descansar. Para as águas repousantes me encaminha, e restaura as minhas forças.\n\n- Ele me guia no caminho mais seguro, pela honra do seu nome. Mesmo que eu passe pelo vale tenebroso, nenhum mal eu temerei. Estais comigo com bastão e com cajado, eles me dão a segurança!\n\n- Preparais à minha frente uma mesa, bem à vista do inimigo; com óleo vós ungis minha cabeça, e o meu cálice transborda.\n\n- Felicidade e todo bem hão de seguir-me, por toda a minha vida; e, na casa do Senhor, habitarei pelos tempos infinitos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 15,29-37",
+      "text": "Naquele tempo: 29Jesus foi para as margens do mar da Galiléia, subiu a montanha, e sentou-se. 30Numerosas multidões aproximaram-se dele, levando consigo coxos, aleijados, cegos, mudos, e muitos outros doentes. Então os colocaram aos pés de Jesus. E ele os curou. 31O povo ficou admirado, quando viu os mudos falando, os aleijados sendo curados, os coxos andando e os cegos enxergando. E glorificaram o Deus de Israel. 32Jesus chamou seus discípulos e disse: 'Tenho compaixão da multidão, porque já faz três dias que está comigo, e nada tem para comer. Não quero mandá-los embora com fome, para que não desmaiem pelo caminho.' 33Os discípulos disseram: 'Onde vamos buscar, neste deserto, tantos pães para saciar tão grande multidão?' 34Jesus perguntou: 'Quantos pães tendes?' Eles responderam: 'Sete, e alguns peixinhos'. 35E Jesus mandou que a multidão se sentasse pelo chão. 36Depois pegou os sete pães e os peixes, deu graças, partiu-os, e os dava aos discípulos, e os discípulos, às multidões. 37Todos comeram, e ficaram satisfeitos. e encheram sete cestos com os pedaços que sobraram."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Gaudêncio de Brescia, Bispo<br/>",
+    "</b>",
+    "Sermão 2; PL 20, 859<br/>",
+    "Pão para o caminho: «Cada vez que comeis deste pão [...] proclamais a morte do Senhor até que Ele venha» (1Cor 11,26)<br/>",
+    "Na noite em que foi entregue para ser crucificado, Jesus legou-nos como herança da nova aliança o penhor da sua presença, que é o viático da nossa viagem. Por ele somos alimentados e fortalecidos até ao momento em que chegarmos junto Ele, quando deixarmos este mundo. Foi por isso que o Senhor disse: «se não comerdes mesmo a carne do Filho do Homem e não beberdes o seu sangue, não tereis a vida em vós» (Jo 6,53). Ele quis deixar entre nós o sacramento da sua Paixão. Para isso, ordenou aos seus fiéis discípulos, os primeiros sacerdotes que instituiu para a sua Igreja, que celebrassem sem fim os mistérios da vida eterna, que devem ser realizados por todos os sacerdotes nas igrejas do mundo inteiro até ao dia em que Cristo voltar. Assim, todos nós, os sacerdotes e o povo dos fiéis, temos diariamente o exemplo da Paixão de Cristo diante dos nossos olhos, temo-lo entre as nossas mãos, levamo-lo à boca e no peito. [...] «Provai e vede como o Senhor é bom» (Sl 33,9).<br/>"
+  ]
+}

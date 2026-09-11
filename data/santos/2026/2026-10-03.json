@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-03",
+  "year": 2026,
+  "month": 10,
+  "day": 3,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/03.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-03.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-03",
+      "name": "São Cândida, mártir na via Portuense",
+      "normalizedName": "sao candida, martir na via portuense",
+      "imageUrl": "./assets/img/santos/10-03-sao-candida-martir-na-via-portuense.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Esta Santa virgem, mártir nos primeiros séculos da era cristã, foi provavelmente sepultada no cemitério de Ponciano, em Roma, situado ao longo da Via Portuense. Alguns dizem que ela enterrou o santo mártir Pimênio. Por isso, teria sido também condenada ao martírio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

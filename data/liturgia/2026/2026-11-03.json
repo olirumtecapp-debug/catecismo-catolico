@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "31a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Filipenses 2,5-11",
+      "text": "Irmãos, 5tende entre vós o mesmo sentimento que existe em Cristo Jesus. 6Jesus Cristo, existindo em condição divina, não fez do ser igual a Deus uma usurpação, 7mas ele esvaziou-se a si mesmo, assumindo a condição de escravo e tornando-se igual aos homens. Encontrado com aspecto humano, 8humilhou-se a si mesmo, fazendo-se obediente até a morte, e morte de cruz. 9Por isso, Deus o exaltou acima de tudo e lhe deu o nome que está acima de todo nome. 10Assim, ao nome de Jesus, todo joelho se dobre no céu, na terra e abaixo da terra 11e toda língua proclame: \"Jesus Cristo é o Senhor\", para a glória de Deus Pai."
+    },
+    "psalm": {
+      "reference": "Salmo 21 (22)",
+      "text": "- Cumpro meus votos ante aqueles que vos temem! Vossos pobres vão comer e saciar-se, e os que procuram o Senhor o louvarão: \"Seus corações tenham a vida para sempre!\"\n\n- Lembrem-se disso os confins de toda a terra, para que voltem ao Senhor e se convertam, e se prostrem, adorando, diante dele, todos os povos e as famílias das nações. Pois ao Senhor é que pertence a realeza; ele domina sobre todas as nações. Somente a ele adorarão os poderosos.\n\n- Toda a minha descendência há de servi-lo; às futuras gerações anunciará o poder e a justiça do Senhor; ao povo novo que há de vir, ela dirá: \"Eis a obra que o Senhor realizou!\""
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 14, 15-24",
+      "text": "Naquele tempo, 15um homem que estava à mesa disse a Jesus: \"Feliz aquele que come o pão no reino de Deus!\" 16Jesus respondeu: \"Um homem deu um grande banquete e convidou muitas pessoas. 17Na hora do banquete, mandou seu empregado dizer aos convidados: 'Vinde, pois tudo está pronto'. 18Mas todos, um a um, começaram a dar desculpas. O primeiro disse: 'Comprei um campo e preciso ir vê-lo. Peço-te que aceites minhas desculpas'. 19Um outro disse: 'Comprei cinco juntas de bois e vou experimentá-las. Peço-te que aceites minhas desculpas'. 20Um terceiro disse: 'Acabo de me casar e, por isso, não posso ir'. 21O empregado voltou e contou tudo ao patrão. Então o dono da casa ficou muito zangado e disse ao empregado: 'Sai depressa pelas praças e ruas da cidade. Traze para cá os pobres, os aleijados, os cegos e os coxos'. 22O empregado disse: 'Senhor, o que tu mandaste fazer foi feito e ainda há lugar'. 23O patrão disse ao empregado: 'Sai pelas estradas e atalhos e obriga as pessoas a virem aqui, para que minha casa fique cheia. 24Pois eu vos digo, nenhum daqueles que foram convidados provará do meu banquete'\"."
+    }
+  },
+  "extra": []
+}

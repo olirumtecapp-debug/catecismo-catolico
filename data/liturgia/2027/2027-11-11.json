@@ -1,0 +1,32 @@
+{
+  "date": "2027-11-11",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Martinho de Tours",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Sabedoria 7,22-8,1",
+      "text": "22Na Sabedoria há um espírito inteligente, santo, único, múltiplo, sutil, móvel, perspicaz, imaculado, lúcido, invulnerável, amante do bem, penetrante, 23desimpedido, benfazejo, amigo dos homens, constante, seguro, sem inquietação, que tudo pode, que tudo supervisiona, que penetra todos os espíritos, os inteligentes, os puros, os mais sutis. 24Pois a Sabedoria é mais ágil que qualquer movimento, e atravessa e penetra tudo por causa da sua pureza. 25Ela é um sopro do poder de Deus, uma emanação pura da glória do Todo-poderoso; por isso, nada de impuro pode introduzir-se nela: 26ela é um reflexo da luz eterna, espelho sem mancha da atividade de Deus e imagem da sua bondade. 27Sendo única, tudo pode; permanecendo imutável, renova tudo; e comunicando-se às almas santas de geração em geração, forma os amigos de Deus e os profetas. 28Pois Deus ama tão somente aquele que vive com a Sabedoria. 29De fato, ela é mais bela que o sol e supera todas as constelações; comparada à luz, ela tem a primazia: 30pois a luz cede lugar à noite, ao passo que, contra a Sabedoria, o mal não prevalece. 8,1Ela se estende com vigor de uma extremidade à outra da terra e com suavidade governa todas as coisas."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- É eterna, ó Senhor, vossa palavra, ela é tão firme e estável como o céu.\n\n- De geração em geração, vossa verdade permanece como a terra que firmastes.\n\n- Porque mandastes, tudo existe até agora; todas as coisas, ó Senhor, vos obedecem!\n\n- Vossa palavra, ao revelar-se, me ilumina, ela dá sabedoria aos pequeninos.\n\n- Fazei brilhar vosso semblante ao vosso servo, e ensinai-me vossas leis e mandamentos!\n\n- Possa eu viver e para sempre vos louvar; e que me ajudem, ó Senhor, vossos conselhos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 20-25",
+      "text": "Naquele tempo: 20Os fariseus perguntaram a Jesus sobre o momento em que chegaria o Reino de Deus. Jesus respondeu: 'O Reino de Deus não vem ostensivamente. 21Nem se poderá dizer: 'Está aqui'ou 'Está ali', porque o Reino de Deus está entre vós.' 22E Jesus disse aos discípulos: 'Dias virão em que desejareis ver um só dia do Filho do Homem e não podereis ver. 23As pessoas vos dirão: 'Ele está ali'ou 'Ele está aqui'. Não deveis ir, nem correr atrás. 24Pois, como o relâmpago brilha de um lado até ao outro do céu, assim também será o Filho do Homem, no seu dia. 25Antes, porém, ele deverá sofrer muito e ser rejeitado por esta geração."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João Cassiano, Fundador de Mosteiro em Marselha <br/>",
+    "</b>",
+    "Conferências, n.º 1 <br/>",
+    "O Reino de Deus no meio de nós e dentro de nós<br/>",
+    "A meu ver, seria indigno afastarmo-nos da contemplação de Cristo, nem que fosse um momento. Quando a nossa vida começar a desviar-se deste objetivo divino, voltemos para ele os olhos do nosso coração e remetamos novamente para ele o olhar do nosso espírito. Tudo repousa no santuário profundo da alma; quando o demónio é dele expulso e o mal deixa de reinar, o reino de Deus estabelece-se em nós. Mas «o reino de Deus», escreve o evangelista, «não vem de maneira visível; [...] porque o reino de Deus está no meio de vós». <br/>",
+    "Ora, em nós não pode haver senão ignorância ou conhecimento da verdade, amor do vício ou da virtude, pelos quais entregamos o reinado do nosso coração ao demónio ou a Cristo. <br/>",
+    "O apóstolo Paulo, por sua vez, descreve assim a natureza deste reino: «o Reino de Deus não é uma questão de comer e beber, mas de justiça, paz e alegria no Espírito Santo» (Rom 14,17). Assim, pois, se o reino de Deus está dentro de nós e consiste em justiça, paz e alegria, quem permanece nestas virtudes está sem dúvida no reino de Deus. [...] Elevemos o olhar da nossa alma para este reino, que é alegria sem fim.<br/>"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-21",
+  "year": 2026,
+  "month": 11,
+  "day": 21,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/21.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-21.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-21",
+      "name": "B. Maria de Jesus do Bom Pastor, fundadora das Irmãs da Sagrada Família de Nazaré",
+      "normalizedName": "b. maria de jesus do bom pastor, fundadora das irmas da sagrada familia de nazare",
+      "imageUrl": "./assets/img/santos/11-21-b-maria-de-jesus-do-bom-pastor-fundadora-das-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Francisca Siedliska, filha de uma Polônia nobre, no fim do século XIX, superando seus problemas de saúde e o desejo do pai de um bom casamento, conseguiu consagrar-se a Deus aos 31 anos. Em 1873, fundou as Irmãs da Sagrada Família de Nazaré para fortalecer a fé das crianças, mulheres e migrantes.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

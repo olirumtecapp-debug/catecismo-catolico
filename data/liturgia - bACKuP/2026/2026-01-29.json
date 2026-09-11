@@ -1,0 +1,27 @@
+{
+  "date": "2026-01-29",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "2Sm 7:18-19, 24-29",
+    "psalm": "Sl 132:1-2, 3-5, 11, 12, 13-14",
+    "secondReading": "",
+    "gospel": "Mc 4:21-25"
+  },
+  "calendar": {
+    "date": "2026-01-29",
+    "monthDay": "1/29",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Thursday of the 3rd week of Ordinary Time",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/01-29.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/01-29.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-01-29"
+  }
+}

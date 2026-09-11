@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-25",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "30o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Êxodo 22,20-26",
+      "text": "Assim diz o Senhor: 20Não oprimas nem maltrates o estrangeiro, pois vós fostes estrangeiros na terra do Egito. 21Não façais mal algum à viúva nem ao órfão. 22Se os maltratardes, gritarão por mim e eu ouvirei o seu clamor. 23Minha cólera, então, se inflamará e eu vos matarei à espada; vossas mulheres ficarão viúvas e órfãos os vossos filhos. 24Se emprestares dinheiro a alguém do meu povo, a um pobre que vive ao teu lado, não sejas um usurário, dele cobrando juros. 25Se tomares como penhor o manto do teu próximo, deverás devolvê-lo antes do pôr-do-sol. 26Pois é a única veste que tem para o seu corpo, e coberta que ele tem para dormir. Se clamar por mim, eu o ouvirei, porque sou misericordioso."
+    },
+    "psalm": {
+      "reference": "Salmo 17 (18)",
+      "text": "- Eu vos amo, ó Senhor! Sois minha força, minha rocha, meu refúgio e Salvador! Ó meu Deus, sois o rochedo que me abriga, minha força e poderosa salvação.\n\n- Ó meu Deus, sois o rochedo que me abriga sois meu escudo e proteçóo: em vós espero! Invocarei o meu Senhor: a ele a glória! e dos meus perseguidores serei salvo!\n\n- Viva o Senhor! Bendito seja o meu Rochedo! E louvado seja Deus, meu Salvador! Concedeis ao vosso rei grandes vitórias e mostrais misericórdia ao vosso Ungido."
+    },
+    "secondReading": {
+      "reference": "Tessalonicenses 1,5c-10",
+      "text": "Irmãos: 5Sabeis de que maneira procedemos entre vós, para o vosso bem. 6E vós vos tornastes imitadores nossos, e do Senhor, acolhendo a Palavra com a alegria do Espírito Santo, apesar de tantas tribulações. 7Assim vos tornastes modelo para todos os fiéis da Macedônia e da Acaia. 8Com efeito, a partir de vós, a Palavra do Senhor não se divulgou apenas na Macedônia e na Acaia, mas a vossa fé em Deus propagou-se por toda parte. Assim, nós já nem precisamos de falar, 9pois as pessoas mesmas contam como vós nos acolhestes e como vos convertestes, abandonando os falsos deuses, para servir ao Deus vivo e verdadeiro, 10esperando dos céus o seu Filho, a quem ele ressuscitou dentre os mortos: Jesus, que nos livra do castigo que está por vir."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 22, 34-40",
+      "text": "Naquele tempo: 34Os fariseus ouviram dizer que Jesus tinha feito calar os saduceus. Então eles se reuniram em grupo, 35e um deles perguntou a Jesus, para experimentá-lo: 36'Mestre, qual é o maior mandamento da Lei?' 37Jesus respondeu: '`Amarás o Senhor teu Deus de todo o teu coração, de toda a tua alma, e de todo o teu entendimento!' 38Esse é o maior e o primeiro mandamento. 39O segundo é semelhante a esse: `Amarás ao teu próximo como a ti mesmo'. 40Toda a Lei e os profetas dependem desses dois mandamentos."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Anselmo <br/>",
+    "</b>",
+    "Monge, Bispo, Doutor da Igreja<br/>",
+    "Carta 112, dirigida a Hugo, prisioneiro<br/>",
+    "«Nestes dois mandamentos se resumem toda a Lei e os Profetas»<br/>",
+    "Como reinar nos céus mais não é do que aderir a Deus e a todos os santos, pelo amor, numa única vontade, de tal forma que todos exercem em conjunto um único e mesmo poder, ama a Deus mais do que ti próprio, e verás que começas a ter o que desejas possuir de forma perfeita no céu. Concerta-te com Deus e com os homens - desde que estes não se separem de Deus - e começarás a reinar com Deus e com os seus santos. Porque, na justa medida em que agora te concertares com a vontade de Deus e com a dos homens, Deus e todos os santos concertar-se-ão com a tua vontade. Portanto, se queres ser rei nos céus, ama a Deus e aos homens como deves, e merecerás ser o que desejas.<br/>",
+    "Mas não poderás possuir este amor na perfeição se não esvaziares o coração de todos os outros amores [...]. É por isso que aqueles que enchem o coração com o amor a Deus e ao próximo têm apenas o querer de Deus, ou o de outro homem, na condição de que este não seja contrário a Deus. São, pois, fiéis à oração e a esta maneira de viver, lembrando-se sempre dos céus; porque lhes é agradável desejar a Deus e falar acerca desse que amam, ouvir falar dele e pensar nele. É por isso também que rejubilam com todos os que estão em graça, que choram com os que estão em dificuldades (Rom 12,15), que têm compaixão pelos infelizes e que dão aos pobres - porque amam os outros homens como a si mesmos. [...] É assim que, de facto, nestes dois mandamentos do amor «se resumem toda a Lei e os Profetas».<br/>"
+  ]
+}

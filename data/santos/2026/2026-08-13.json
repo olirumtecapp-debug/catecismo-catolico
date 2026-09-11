@@ -1,0 +1,69 @@
+{
+  "date": "2026-08-13",
+  "year": 2026,
+  "month": 8,
+  "day": 13,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/13.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-13.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-13",
+      "name": "SS. Ponciano, papa e Hipólito, presbítero, mártires",
+      "normalizedName": "ss. ponciano, papa e hipolito, presbitero,",
+      "imageUrl": "./assets/img/santos/08-13-ss-ponciano-papa-e-hipolito-presbitero-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Ponciano foi Papa no ano 230, mas teve que abdicar quando foi deportado para as minas da Sardenha, junto Hipólito, sacerdote cismático, durante a perseguição anticristã de Maximiano Trácio. Mortos de fome, em 235, são venerados como mártires em Roma: um em São Calisto e o outro na Via Tiburtina.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "name": "São Cassiano, mártir",
+      "normalizedName": "sao cassiano, martir",
+      "imageUrl": "./assets/img/santos/08-13-sao-cassiano-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Cristão e educador de jovens, aos quais transmitia a fé, Cassiano de Imola foi descoberto e condenado à morte como mártir, por recusar-se a oferecer sacrifícios aos ídolos. Faleceu por volta do ano 305, durante a perseguição de Diocleciano. Sobre a sua sepultura foi construída a catedral de Imola.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "name": "São João Berchmans, jesuíta",
+      "normalizedName": "sao joao berchmans, jesuita",
+      "imageUrl": "./assets/img/santos/08-13-sao-joao-berchmans-jesuita.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/13/s--joao-berchmans--jesuita.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/13/s--joao-berchmans--jesuita.html",
+      "sourceText": "Filho de um sapateiro, na região de Flandres, João teve que trabalhar duramente para manter seus estudos e responder à chamada do Senhor. Em 1618, ingressou para a Companhia de Jesus e, após apenas um ano, foi eleito prefeito dos Noviços. Em Roma, para estudar, faleceu aos 22 anos, em 1621.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Santa Filomena",
+      "normalizedName": "santa filomena",
+      "imageUrl": "./assets/img/santos/08-13-santa-filomena.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/13/santa-filomena.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/13/santa-filomena.html",
+      "sourceText": "Santa Filomena é uma figura misteriosa e, por isso, é excluída do Martirológio Romano, em 1961. A Igreja a celebra em 13 de agosto. Ela é circundada por uma grande devoção, sobretudo no Santuário de Mugnano del Cardinale, onde descansam seus restos mortais.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "date": "2027-06-17",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "11a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 11,1-11",
+      "text": "Irmãos: 1Oxalá pudésseis suportar um pouco de insensatez, da minha parte. Na verdade, vós me suportais. 2Sinto por vós um amor ciumento semelhante ao amor que Deus vos tem. Fui eu que vos desposei a um único esposo, apresentando-vos a Cristo como virgem pura. 3Porém, receio que, como Eva foi enganada pela esperteza da serpente, também vossos pensamentos se corrompam, afastando-se da simplicidade e pureza devidas a Cristo. 4De fato, se aparece alguém pregando um outro Jesus, que nós não pregamos, ou prometendo um outro Espírito, que não recebestes, ou anunciando um outro evangelho, que não acolhestes, vós o suportais de bom grado. 5No entanto, entendo que em nada sou inferior a esses 'super-apóstolos'! 6Mesmo que eu seja inábil na arte de falar, não o sou quanto à ciência: eu vo-lo tenho demonstrado em tudo e de todas as maneiras. 7Acaso cometi algum pecado, pelo fato de vos ter anunciado o evangelho de Deus gratuitamente, humilhando-me a mim mesmo para vos exaltar? 8Para vos servir, despojei outras igrejas, delas recebendo o meu sustento. 9E quando, estando entre vós, tive alguma necessidade, não fui pesado a ninguém, pois os irmãos vindos da Macedônia supriram as minhas necessidades. Em todas as circunstâncias, cuidei - e cuidarei ainda - de não ser pesado a vós. 10Tão certo como a verdade de Cristo está em mim, essa minha glória não me será arrebatada nas regiões da Acaia. 11E por quê? Será porque eu não vos amo? Deus o sabe!"
+    },
+    "psalm": {
+      "reference": "Salmo 110 (111)",
+      "text": "- Eu agradeço a Deus de todo o coração junto com todos os seus justos reunidos! Que grandiosas são as obras do Senhor, elas merecem todo o amor e admiração!\n\n- Que beleza e esplendor são os seus feitos! Sua justiça permanece eternamente! O Senhor bom e clemente nos deixou a lembrança de suas grandes maravilhas.\n\n- Suas obras são verdade e são justiça, seus preceitos, todos eles, são estáveis, confirmados para sempre e pelos séculos, realizados na verdade e retidão."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 6, 7-15",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 7Quando orardes, não useis muitas palavras, como fazem os pagãos. Eles pensam que serão ouvidos por força das muitas palavras. 8Não sejais como eles, pois vosso Pai sabe do que precisais, muito antes que vós o peçais. 9Vós deveis rezar assim: Pai Nosso que estás nos céus, santificado seja o teu nome; 10venha o teu Reino; seja feita a tua vontade, assim na terra como nos céus. 11O pão nosso de cada dia dá-nos hoje. 12Perdoa as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido. 13E não nos deixes cair em tentação, mas livra-nos do mal. 14De fato, se vós perdoardes aos homens as faltas que eles cometeram, vosso Pai que está nos céus também vos perdoará. 15Mas, se vós não perdoardes aos homens, vosso Pai também não perdoará as faltas que vós cometestes."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santa Teresa de Ávila (1515-1582)<br/>",
+    "</b>",
+    "Carmelita descalça, Doutora da Igreja<br/>",
+    "«Caminho de Perfeição», cap. 27<br/>",
+    "«Quando rezardes, dizei: \"Pai\"» (Lc 11,2)<br/>",
+    "«Pai nosso, que estais nos céus». Ó Senhor meu, como pareceis Pai de tal Filho e como o vosso Filho parece Filho de tal Pai! Bendito sejais para todo o sempre! No fim da oração, não seria já tão grande, Senhor, esta mercê? Mas logo em começando nos encheis as mãos e fazeis tão grande mercê, que seria bem o encher-se dela o entendimento para ocupar a vontade, de modo que não pudesse dizer palavra.<br/>",
+    "Oh, que bem viria aqui, filhas, a contemplação perfeita! Oh, com quanta razão entraria em si a alma, a fim de melhor poder subir acima de si mesma para que este santo Filho lhe desse a entender qual é o lugar onde diz que está seu Pai, que é nos Céus! […]<br/>",
+    "Ó Filho de Deus e Senhor meu! Como dais tantos bens juntos logo à primeira palavra? Já que Vós mesmo Vos humilhais em tão grande extremo, até juntar-Vos connosco a pedir, […] como é que ainda quereis nos tenha por filhos […]? Sendo Pai, nos há de sofrer, por graves que sejam as ofensas. Se tornarmos a Ele como o filho pródigo, terá de perdoar, de nos consolar em nossos trabalhos, de nos sustentar, como fará um Pai que forçosamente há de ser melhor que todos os pais do mundo, porque nele não pode haver senão a perfeição de todo o bem, e, depois de tudo isto, fazer-nos participantes e herdeiros convosco. […]<br/>",
+    "Ó bom Jesus! […] Falastes como Filho dileto, em vosso nome e no nosso. […] Nâo vos parece, filhas, […] que haverá razão, ainda mesmo que digamos vocalmente esta palavra, «Pai Nosso», para a deixarmos de entender com o entendimento, e assim se faça em pedaços o nosso coração ao ver tanto amor?<br/>"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-02-23",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Lv 19:1-2, 11-18",
+    "psalm": "Sl 19:8, 9, 10, 15",
+    "secondReading": "",
+    "gospel": "Mt 25:31-46"
+  },
+  "calendar": {
+    "date": "2026-02-23",
+    "monthDay": "2/23",
+    "season": "Lent",
+    "celebration": {
+      "name": "Saint Polycarp, Bishop and Martyr",
+      "type": "COMMEMORATION",
+      "quote": "We worship the Creator of the universe, and we affirm that Jesus Christ is His Son.",
+      "description": "A philosopher who converted to Christianity and became its first great apologist, eventually martyred for refusing to sacrifice to idols.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/02-23.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/02-23.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-02-23"
+  }
+}

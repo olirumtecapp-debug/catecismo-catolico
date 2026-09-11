@@ -1,0 +1,32 @@
+{
+  "date": "2027-12-22",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4a. Semana do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Malaquias 3,1-4.23-24",
+      "text": "Assim fala o Senhor Deus: 1Eis que envio meu anjo, e ele há de preparar o caminho para mim; logo chegará ao seu templo o Dominador, que tentais encontrar, e o anjo da aliança, que desejais. Ei-lo que vem, diz o Senhor dos exércitos; 2e quem poderá fazer-lhe frente, no dia de sua chegada? E quem poderá resistir-lhe, quando ele aparecer? Ele é como o fogo da forja e como a barrela dos lavadeiros; 3e estará a postos, como para fazer derreter e purificar a prata: assim ele purificará os filhos de Levi e os refinará como ouro e como prata, e eles poderão assim fazer oferendas justas ao Senhor. 4Será então aceitável ao Senhor a oblação de Judá e de Jerusalém, como nos primeiros tempos e nos anos antigos. 23Eis que eu vos enviarei o profeta Elias, antes que venha o dia do Senhor, dia grande e terrível; 24o coração dos pais há de voltar-se para os filhos, e o coração dos filhos para seus pais, para que eu não intervenha, ferindo de maldição a vossa terra.'"
+    },
+    "psalm": {
+      "reference": "Salmo 24 (25)",
+      "text": "- Mostrai-me, ó Senhor, vossos caminhos, e fazei-me conhecer a vossa estrada! Vossa verdade me oriente e me conduza, porque sois o Deus da minha salvação!\n\n- O Senhor é piedade e retidão, e reconduz ao bom caminho os pecadores. Ele dirige os humildes na justiça, e aos pobres ele ensina o seu caminho.\n\n- Verdade e amor são os caminhos do Senhor para quem guarda sua Aliança e seus preceitos. O Senhor se torna íntimo aos que o temem e lhes dá a conhecer sua Aliança."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 57-66",
+      "text": "57Completou-se o tempo da gravidez de Isabel, e ela deu à luz um filho. 58Os vizinhos e parentes ouviram dizer como o Senhor tinha sido misericordioso para com Isabel, e alegraram-se com ela. 59No oitavo dia, foram circuncidar o menino, e queriam dar-lhe o nome de seu pai, Zacarias. 60A mãe porém disse: 'Não! Ele vai chamar-se João.' 61Os outros disseram: 'Não existe nenhum parente teu com esse nome!' 62Então fizeram sinais ao pai, perguntando como ele queria que o menino se chamasse. 63Zacarias pediu uma tabuinha, e escreveu: 'João é o seu nome.' 64No mesmo instante, a boca de Zacarias se abriu, sua língua se soltou, e ele começou a louvar a Deus. 65Todos os vizinhos ficaram com medo, e a notícia espalhou-se por toda a região montanhosa da Judéia. 66E todos os que ouviam a notícia, ficavam pensando: 'O que virá a ser este menino?' De fato, a mão do Senhor estava com ele."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho (354-430)<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja<br/>",
+    "Sermão 293,3 para a natividade de João Baptista<br/>",
+    "«Imediatamente se lhe abriu a boca […] e começou a falar, bendizendo a Deus»<br/>",
+    "Zacarias cala-se e perde a fala até ao nascimento de João, precursor do Senhor, que lhe devolve a fala. O silêncio de Zacarias significa que a profecia desapareceu e que, antes do anúncio de Cristo, está como que escondida e fechada, abrindo-se ao seu advento, tornando-se clara para a chegada daquele que estava profetizado. A fala devolvida a Zacarias aquando do nascimento de João corresponde ao véu rasgado aquando da morte de Jesus na cruz (Mt 27,51). Se João se tivesse anunciado a si mesmo, a boca de Zacarias não se teria reaberto.<br/>",
+    "A fala é-lhe devolvida por causa do nascimento daquele que é a voz. Com efeito, perguntaram a João, que já anunciava o Senhor: «Tu, quem és?» E ele respondeu: «Eu sou a voz que clama no deserto.» A voz é João, enquanto o Senhor é a Palavra: «No princípio existia o Verbo.» João é a voz durante algum tempo; Cristo é o Verbo no princípio, Ele é o Verbo eterno<br/>"
+  ]
+}

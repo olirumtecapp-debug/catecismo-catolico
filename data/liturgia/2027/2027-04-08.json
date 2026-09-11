@@ -1,0 +1,31 @@
+{
+  "date": "2027-04-08",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 5,27-33",
+      "text": "Naqueles dias, os guardas 27levaram os apóstolos e os apresentaram ao Sinédrio. O sumo sacerdote começou a interrogá-los, 28dizendo: 'Nós tínhamos proibido expressamente que vós ensinásseis em nome de Jesus. Apesar disso, enchestes a cidade de Jerusalém com a vossa doutrina. E ainda nos quereis tornar responsáveis pela morte desse homem!' 29Então Pedro e os outros apóstolos responderam: 'É preciso obedecer a Deus, antes que aos homens. 30O Deus de nossos pais ressuscitou Jesus, a quem vós matastes, pregando-o numa cruz. 31Deus, por seu poder, o exaltou, tornando-o Guia Supremo e Salvador, para dar ao povo de Israel a conversão e o perdão dos seus pecados. 32E disso somos testemunhas, nós e o Espírito Santo, que Deus concedeu àqueles que lhe obedecem.' 33Quando ouviram isto, ficaram furiosos e queriam matá-los."
+    },
+    "psalm": {
+      "reference": "Salmo 33 (34)",
+      "text": "- Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Provai e vede quão suave é o Senhor! Feliz o homem que tem nele o seu refúgio!\n\n- mas ele volta a sua face contra os maus, para da terra apagar sua lembrança. Clamam os justos, e o Senhor bondoso escuta e de todas as angústias os liberta.\n\n- Do coração atribulado ele está perto e conforta os de espírito abatido. Muitos males se abatem sobre os justos, mas o Senhor de todos eles os liberta."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 3, 31-36",
+      "text": "31- 'Aquele que vem do alto está acima de todos. O que é da terra, pertence à terra e fala das coisas da terra. Aquele que vem do céu está acima de todos. 32Dá testemunho daquilo que viu e ouviu, mas ninguém aceita o seu testemunho. 33Quem aceita o seu testemunho atesta que Deus é verdadeiro. 34De fato, aquele que Deus enviou fala as palavras de Deus, porque Deus lhe dá o espírito sem medida. 35O Pai ama o Filho e entregou tudo em sua mão. 36Aquele que acredita no Filho possui a vida eterna. Aquele, porém, que rejeita o Filho não verá a vida, pois a ira de Deus permanece sobre ele'."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Ireneu de Lyon (c. 130-c. 208)<br/>",
+    "</b>",
+    "Bispo, teólogo, mártir - Contra as heresias, IV, 20, 7; SC 100<br/>",
+    "O Filho é que deu a conhecer o Pai<br/>",
+    "«Ninguém jamais viu a Deus: o Filho único, que está no seio do Pai, é o que O deu a conhecer»: desde o início, o Filho é que dá a conhecer o Pai, uma vez que está junto do Pai desde o início (Jo 1,18.1). Em tempo oportuno, foi Ele que mostrou aos homens, para benefício destes, as visões proféticas, a diversidade das graças, os ministérios e a manifestação da glória do Pai, qual melodia bem composta e harmoniosa. Com efeito, onde há composição há melodia; onde há melodia há tempo oportuno; onde há tempo oportuno há benefício. Foi por isso, para benefício dos homens, que o Verbo, a Palavra de Deus, Se fez dispensador da graça do Pai segundo os seus desígnios. Ele dá a conhecer Deus aos homens e apresenta o homem a Deus, ao mesmo tempo que preserva a invisibilidade do Pai, com receio de que os homens desprezem a Deus, e para que tenham sempre progressos a fazer. Ao mesmo tempo, torna Deus visível aos homens de muitas maneiras, com receio de que, totalmente privados de Deus, acabem por perder a noção da sua existência.<br/>",
+    "Porque a glória de Deus é o homem vivo e a vida do homem é a visão de Deus. Se já a revelação de Deus através da criação dá a vida a todos os seres que vivem na terra, tanto mais a manifestação do Pai pelo Verbo dá a vida aos que crêem em Deus!<br/>"
+  ]
+}

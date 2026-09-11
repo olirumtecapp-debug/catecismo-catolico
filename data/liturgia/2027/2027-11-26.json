@@ -1,0 +1,32 @@
+{
+  "date": "2027-11-26",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "34a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Daniel 7,2-14",
+      "text": "Eu, Daniel, 2'Tive uma visão durante a noite; eis que os quatro ventos do céu revolviam o vasto mar, 3e quatro grandes animais, diferentes uns dos outros, emergiam do mar. 4O primeiro era semelhante a um leão, e tinha asas de águia; ainda estava olhando, quando lhe foram arrancadas as asas; ele foi erguido da terra e posto de pé como um homem, e foi-lhe dado um coração de homem. 5Eis que surgiu outro animal, o segundo, semelhante a um urso, que estava erguido pela metade e tinha três costelas nas fauces entre os dentes; ouvia-se dizer: 'Vamos, come mais carne.` 6Continuei a olhar, e eis que assomou outro animal, semelhante a um leopardo; tinha no dorso quatro asas de ave, e havia no animal quatro cabeças. E foi-lhe dado poder. 7Depois, eu insistia em minha visão noturna, e eis que apareceu o quarto animal, terrível, estranho e extremamente forte; com suas dentuças de ferro, tudo devorava e triturava, calcando aos pés o que sobrava; era bem diferente dos outros animais que eu vi antes, e tinha dez chifres. 8Eu observava estes chifres, e eis que apontou entre eles outro chifre pequeno, e, em compensação, foram arrancados três dos primeiros chifres; e eis que neste chifre pequeno havia uns olhos como olhos de homem e uma boca que fazia ouvir uma fala muito forte. 9Eu continuava olhando até que foram colocados uns tronos, e um Ancião de muitos dias aí tomou lugar. Sua veste era branca como neve e os cabelos da cabeça, como ló pura; seu trono eram chamas de fogo, e as rodas do trono, como fogo em brasa. 10Derramava-se aí um rio de fogo que nascia diante dele; serviam-no milhares de milhares, e milhões de milhões assistiam-no ao trono; foi instalado o tribunal e os livros foram abertos. 11Eu estava olhando para o lado das palavras fortes que o mencionado chifre fazia ouvir, quando percebi que o animal tinha sido morto, e vi que seu corpo fora feito em pedaços e tinha sido entregue ao fogo para queimar; 12percebi também que aos restantes animais foi-lhes tirado o poder, sendo-lhes prolongada a vida por certo tempo. 13Continuei insistindo na visão noturna, e eis que, entre as nuvens do céu, vinha um como filho de homem, aproximando-se do Ancião de muitos dias, e foi conduzido à sua presença. 14Foram-lhe dados poder, glória e realeza, e todos os povos, nações e línguas o serviam: seu poder é um poder eterno que não lhe será tirado, e seu reino, um reino que não se dissolverá."
+    },
+    "psalm": {
+      "reference": "Salmo (Dn 3)",
+      "text": "- Montes e colinas, bendizei o Senhor! Plantas da terra, bendizei o Senhor! Mares e rios, bendizei o Senhor!\n\n- Fontes e nascentes, bendizei o Senhor! Baleias e peixes, bendizei o Senhor!\n\n- Pássaros do céu, bendizei o Senhor! Feras e rebanhos, bendizei o Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 21, 29-33",
+      "text": "Naquele tempo: 29Jesus contou-lhes uma parábola: 'Olhai a figueira e todas as árvores. 30Quando vedes que elas estão dando brotos, logo sabeis que o verão está perto. 31Vós também, quando virdes acontecer essas coisas, ficai sabendo que o Reino de Deus está perto. 32Em verdade, eu vos digo: tudo isso vai acontecer antes que passe esta geração. 33O céu e a terra passarão, mas as minhas palavras não hão de passar."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Beato Guerric de Igny, Abade cisterciense <br/>",
+    "</b>",
+    "1.º Sermão para o Advento <br/>",
+    "«Sabei que está próximo o reino de Deus»<br/>",
+    "Graças Vos sejam dadas, Senhor Jesus! Estamos na vossa presença, esperando-Vos! [...] «Ainda um pouco de tempo!» (Jo 16, 16) Assim fazeis promessa após promessa; e eu confio nas vossas promessas. Vinde, porém, em ajuda da minha incredulidade (Mc 9,24), para que Vos espere e continue a esperar, até que, finalmente, veja aquilo em que acredito. Sim, eu creio «que hei-de ver os bens do Senhor, na terra dos vivos». <br/>",
+    "E tu, irmão, acreditas? Então, espera no Senhor, tem coragem, sê forte e espera com paciência o Senhor (Sl 27,13-14)! [...] Pois se Ele prescreve longa paciência, promete, no entanto, que virá em breve. E ora nos forma na paciência, ora reconforta os desencorajados; atemoriza os negligentes, estimula os preguiçosos. «Eis que Eu venho em breve e trarei a recompensa para retribuir a cada um conforme as suas obras» (Ap 22,12). E, falando a Jerusalém, acrescenta: «Em breve virá a tua Redenção! Porque te deixas consumir pela dor?» <br/>",
+    "É verdade: o tempo é breve (1Cor 7,29), sobretudo para cada um de nós, se bem que pareça longo a quem se consome de sofrimento ou de amor. [...] Ele virá, o Senhor virá com certeza! O objeto do nosso temor e do nosso desejo, o descanso e a recompensa daqueles que sofrem, a felicidade de todos, Jesus Cristo, nosso Salvador!<br/>"
+  ]
+}

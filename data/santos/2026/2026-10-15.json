@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "year": 2026,
+  "month": 10,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-15",
+      "name": "Santa Teresa de Jesus, virgem, doutora da Igreja, carmelita descalça",
+      "normalizedName": "santa teresa de jesus, , doutora da igreja, carmelita descalca",
+      "imageUrl": "./assets/img/santos/10-15-santa-teresa-de-jesus-virgem-doutora-da-igrej.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/15/s--teresa-de-jesus--virgem--doutora-da-igreja--carmelita-descalc.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/15/s--teresa-de-jesus--virgem--doutora-da-igreja--carmelita-descalc.html",
+      "sourceText": "Encontra-se entre as Santas e Místicas mais veneradas do mundo: nos anos de Lutero, Santa Teresa de Ávila dedicou-se a uma importante obra reformadora no interior do Carmelo. Padroeira dos escritores católicos, foi a primeira mulher a ser proclamada Doutora da Igreja junto com Santa Catarina de Sena",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

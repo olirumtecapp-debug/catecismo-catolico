@@ -1,0 +1,30 @@
+{
+  "date": "2026-12-28",
+  "year": 2026,
+  "month": 12,
+  "day": 28,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/28.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-28.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-28",
+      "name": "SS. Inocentes, mártires",
+      "normalizedName": "ss. inocentes,",
+      "imageUrl": "./assets/img/santos/12-28-ss-inocentes-martires.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/28/ss--inocentes--martires.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/28/ss--inocentes--martires.html",
+      "sourceText": "Esses são os filhos de Belém, até dois anos, que o Rei Herodes mandou matar, para eliminar o Menino Jesus, que as profecias anunciavam como o Messias e novo Rei de Israel. Essas crianças são homenageadas, desde os primeiros séculos, e celebradas como Santos Mártires Inocentes em 28 de dezembro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

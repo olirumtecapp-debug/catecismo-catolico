@@ -1,0 +1,49 @@
+{
+  "date": "2027-10-14",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "28a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 3,21-30",
+      "text": "Irmãos: 21Agora, sem depender do regime da Lei, a justiça de Deus se manifestou, atestada pela Lei e pelos Profetas; 22justiça de Deus essa, que se realiza mediante a fé em Jesus Cristo, para todos os que têm a fé. Pois diante desta justiça nóo há distinção: 23todos pecaram e estão privados da glória de Deus, 24e a justificação se dá gratuitamente, por sua graça, em virtude da redenção realizada em Jesus Cristo. 25Deus destinou Jesus Cristo a ser, por seu próprio sangue, instrumento de expiação mediante a realidade da fé. Assim Deus mostrou sua justiça em ter deixado sem castigo os pecados cometidos outrora, 26no tempo de sua tolerância. Assim ainda ele demonstra sua justiça no tempo presente, para ser ele mesmo justo, e tornar justo aquele que vive a partir da fé em Jesus. 27Onde estaria, então, o direito de alguém se gloriar? - Foi excluído. Por qual lei? Pela lei das obras? - Absolutamente não, mas, sim, pela lei da fé. 28Com efeito, julgamos que o homem é justificado pela fé, sem a prática da Lei judaica. 29Acaso Deus é só dos judeus? Não é também Deus dos pagãos? Sim, é também Deus dos pagãos. 30Pois Deus é um só."
+    },
+    "psalm": {
+      "reference": "Salmo 129 (130)",
+      "text": "- Das profundezas eu clamo a vós, Senhor, escutai a minha voz! Vossos ouvidos estejam bem atentos ao clamor da minha prece!\n\n- Se levardes em conta nossas faltas, quem haverá de subsistir? Mas em vós se encontra o perdóo, eu vos temo e em vós espero.\n\n- No Senhor ponho a minha esperança, espero em sua palavra. A minha alma espera no Senhor mais que o vigia pela aurora."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 47-54",
+      "text": "Naquele tempo, disse o Senhor: 47Ai de vós, porque construís os túmulos dos profetas; no entanto, foram vossos pais que os mataram. 48Com isso, vós sois testemunhas e aprovais as obras de vossos pais, pois eles mataram os profetas e vós construís os túmulos. 49É por isso que a sabedoria de Deus afirmou: 'Eu lhes enviarei profetas e apóstolos, e eles matarão e perseguirão alguns deles, 50a fim de que se peçam contas a esta geração do sangue de todos os profetas, derramado desde a criação do mundo, 51desde o sangue de Abel até o sangue de Zacarias, que foi morto entre o altar e o santuário. Sim, eu vos digo: serão pedidas contas disso a esta geração. 52Ai de vós, mestres da Lei, porque tomastes a chave da ciência. Vós mesmos não entrastes, e ainda impedistes os que queriam entrar.' 53Quando Jesus saiu daí, os mestres da Lei e os fariseus começaram a tratá-lo mal, e a provocá-lo sobre muitos pontos. 54Armavam ciladas, para pegá-lo de surpresa, por qualquer palavra que saísse de sua boca."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Missal Romano <br/>",
+    "</b>",
+    "Impropérios de Sexta-Feira Santa <br/>",
+    "«começaram a persegui-l'O terrivelmente e a provocá-lo»<br/>",
+    "«Meu povo, que mal te fiz Eu? <br/>",
+    "Em que te contristei? Responde-me!» (Mq 6,3) <br/>",
+    "Libertei-te da terra do Egito: <br/>",
+    "E tu preparaste uma Cruz para o teu Salvador! <br/>",
+    "Guiei-te durante quarenta anos pelo deserto, <br/>",
+    "Alimentei-te com o maná e levei-te para a terra prometida: <br/>",
+    "E tu preparaste uma Cruz para o teu Salvador! <br/>",
+    "Que mais podia Eu fazer por ti? <br/>",
+    "Plantei-te como vinha formosa e escolhida: <br/>",
+    "E tu foste para Mim uma fonte de amargura: <br/>",
+    "Quiseste matar-Me a sede com vinagre, <br/>",
+    "E com uma lança atravessaste o lado do teu Salvador! <br/>",
+    "Meu Povo, que mal te fiz Eu? <br/>",
+    "Em que te contristei? Responde-me! <br/>",
+    "Dei-te o ceptro real: <br/>",
+    "E tu colocaste-Me na cabeça a coroa de espinhos! <br/>",
+    "Pelo meu poder elevei-te acima dos povos: <br/>",
+    "E tu levantaste-Me no patíbulo da Cruz! <br/>",
+    "Meu povo, que mal te fiz Eu? <br/>",
+    "Em que te contristei? Responde-Me!<br/>"
+  ]
+}

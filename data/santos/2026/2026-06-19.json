@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-19",
+  "year": 2026,
+  "month": 6,
+  "day": 19,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/19.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-19.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-19",
+      "name": "São Romualdo, abade, fundador dos Camaldulenses",
+      "normalizedName": "sao romualdo, abade, fundador dos camaldulenses",
+      "imageUrl": "./assets/img/santos/06-19-sao-romualdo-abade-fundador-dos-camaldulenses.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/19/s--romualdo--abade--fundador-dos-camaldulenses.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/19/s--romualdo--abade--fundador-dos-camaldulenses.html",
+      "sourceText": "Natural da cidade de Ravena, Romualdo tornou-se monge, depois anacoreta e, a seguir, começou a viajar pela Itália, fundando vários mosteiros. O mais conhecido é o de Camáldoli, onde os monges vivem segundo a Regra beneditina, que passou por algumas mudanças, mas, ainda hoje, é muito importante.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Santa Juliana Falconieri, virgem, fundadora das \"Mantelatas\"",
+      "normalizedName": "santa juliana falconieri, , fundadora das \"mantelatas\"",
+      "imageUrl": "./assets/img/santos/06-19-santa-juliana-falconieri-virgem-fundadora-das.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/19/s--juliana-falconieri--virgem--fundadora-das--mantelatas-.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/19/s--juliana-falconieri--virgem--fundadora-das--mantelatas-.html",
+      "sourceText": "Juliana Falconieri, de família rica burguesa, em uma Florença, dividida em Guelfos e Gibelinos, decidiu servir aos pobres e rezar pela paz da sua cidade. Fundou as Servas de Maria, mais conhecidas como \"Mantellate\". Uma doença a impediu se alimentar, mas sua última comunhão foi milagrosa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "name": "SS. Gervásio e Protásio, mártires de Milão",
+      "normalizedName": "ss. gervasio e protasio, de milao",
+      "imageUrl": "./assets/img/santos/06-19-ss-gervasio-e-protasio-martires-de-milao.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sabe-se muito pouco ou quase nada sobre a vida destes dois mártires cristãos, assassinados entre os séculos III e IV. O certo é que Santo Ambrósio encontrou seus restos mortais em 386, durante a construção da nova basílica, que recebeu seu nome, onde eles descansam na cripta, ao lado de Ambrósio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

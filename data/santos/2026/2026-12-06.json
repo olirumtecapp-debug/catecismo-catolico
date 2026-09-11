@@ -1,0 +1,61 @@
+{
+  "date": "2026-12-06",
+  "year": 2026,
+  "month": 12,
+  "day": 6,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/06.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-06.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-06",
+      "name": "São Nicolau de Bari, bispo de Mira",
+      "normalizedName": "sao nicolau de bari, bispo de mira",
+      "imageUrl": "./assets/img/santos/12-06-sao-nicolau-de-bari-bispo-de-mira.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/06/s--nicolau-de-bari--bispo-de-mira.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/06/s--nicolau-de-bari--bispo-de-mira.html",
+      "sourceText": "São Nicolau é um dos Santos mais populares e amados, por causa da tradição que elegeu como Santo protetor das crianças e dos jovens. A sua festa litúrgica é dia 6 de dezembro.",
+      "a12": {
+        "profileUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=6&month=12",
+        "source": "A12 — Portal A12",
+        "sourceUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=6&month=12",
+        "sourceText": {
+          "paragraphs": [
+            "Nicolau nasceu de pais ricos e piedosos, por volta do ano 275, na Lícia, atual Turquia. Sacerdote da diocese de Mitra, dedicou-se à evangelização e conversão dos pagãos, num período de perseguição religiosa.",
+            "Extremamente caridoso, distribuiu sua herança aos pobres. Eleito bispo de Mira, foi preso na perseguição de Dioclesiano, por volta de 310; antes de ser condenado à morte, publicou-se o Edito de Milão (313), que concedia a liberdade religiosa, o que lhe salvou a vida. Participou do Concílio de Nicéia, em 235, ocasião onde Constantino Magno, imperador de Roma, ajoelhou-se para beijar as cicatrizes de Nicolau e outros varões torturados na última perseguição. Nicolau recebeu de Deus o poder dos milagres, especialmente em favor dos doentes.",
+            "Sua extraordinária caridade, porém, é que o tornou um dos santos mais conhecidos e amados, no Oriente e no Ocidente. Um caso particular ilustra mais a sua fama: sabendo que um pai pobre tencionava entregar suas três filhas à prostituição, por não ter como pagar o dote dos seus casamentos, Nicolau jogou pela janela da casa três bolsas com o dinheiro necessário. Este fato, e a tradição que menciona suas doações, sempre anônimas, de moedas de ouro, comida e roupas para os pobres e viúvas, e presentes para as crianças, deu origem à lenda natalina de “Papai Noel”.",
+            "Nicolau é padroeiro da Rússia e outros lugares, bem como dos marinheiros e moças solteiras. Antes da revolução comunista, muitos czares adotaram o seu nome, e em Bári, Itália, onde estão seus restos mortais (para lá transladados pela ameaça muçulmana de profanação do seu túmulo), havia hospedaria exclusiva para os peregrinos russos que iam venerar suas relíquias.",
+            "Reflexão:",
+            "É motivo de alegria que a caridade de tão grande Santo seja a base de uma figura simpática como Papai Noel, mas nem por isso devemos deixar que a fantasia moderna, cada vez mais desvirtuada pelo interesse material, relegue a segundo plano o verdadeiro valor do amor desinteressado ao próximo. Devemos associar ao Natal a maior das caridades, a Encarnação de Jesus, para a nossa salvação; e comemorá-la com o presente do amor ao próximo, que não se manifesta principalmente em presentes materiais (embora estes não sejam, claro, condenáveis), mas na doação de nós mesmos. A demasiada preocupação, que pode chegar à ideia de “obrigação”, de presentes materiais no Natal afastam nosso coração da contemplação do nascimento de Cristo, este sim o presente máximo que Deus nos dá e que devemos repassar aos irmãos.",
+            "Oração:",
+            "Ó Jesus, que quisestes assumir a nossa natureza humana como meio de Redenção, concedei-nos, por intercessão de São Nicolau, a caridade operosa aos necessitados, e a defesa da pureza e virgindade. Que não seja em vão para as almas a grandeza do Vosso amor, que nos enriquece com o Vosso rebaixamento à condição de criatura, para elevar o servo à condição de Filho. Pelas mãos amorosas de Nossa Senhora e São José. Amém.",
+            "Enviar por e-mail"
+          ]
+        }
+      },
+      "enrichment": {
+        "a12Found": true
+      }
+    },
+    {
+      "date": "2026-12-06",
+      "name": "Santa Asela, virgem romana",
+      "normalizedName": "santa asela, romana",
+      "imageUrl": "./assets/img/santos/12-06-santa-asela-virgem-romana.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Asela, colaboradora de São Jerônimo, viveu em Roma, no século IV, como monja de clausura. Ao consagrar-se ao Senhor, praticou o jejum e a penitência, ajudava os pobres e visitava, à noite, os túmulos dos mártires, sem se descuidar da oração. O historiador Paládio também escreveu sobre ela.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

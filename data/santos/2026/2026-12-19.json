@@ -1,0 +1,43 @@
+{
+  "date": "2026-12-19",
+  "year": 2026,
+  "month": 12,
+  "day": 19,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/19.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-19.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-19",
+      "name": "B. Urbano V, papa",
+      "normalizedName": "b. urbano v, papa",
+      "imageUrl": "./assets/img/santos/12-19-b-urbano-v-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Guilherme de Guiomard, monge beneditino francês, foi eleito Papa em Avinhão (1362-1370) com o nome de Urbano V. Tentou, inutilmente, levar a Sede Apostólica para Roma e reunir a Igreja do Oriente e do Ocidente. Homem austero, ajudou os pobres e combateu com firmeza a corrupção entre o clero.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-19",
+      "name": "São Anastásio, papa",
+      "normalizedName": "sao anastasio, papa",
+      "imageUrl": "./assets/img/santos/12-19-sao-anastasio-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Anastácio de Massimi, filho de uma nobre família romana, foi eleito Papa em 399. Tinha profunda espiritualidade e vivia pobremente. Defendeu a fé católica com coragem, contrastando o donatismo, uma heresia que queria uma Igreja perfeita, rigorista e paupérrima. Morreu em 401.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

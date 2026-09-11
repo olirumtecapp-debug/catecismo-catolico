@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-26",
+  "year": 2026,
+  "month": 10,
+  "day": 26,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/26.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-26.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-26",
+      "name": "São Demétrio, mártir",
+      "normalizedName": "sao demetrio, martir",
+      "imageUrl": "./assets/img/santos/10-26-sao-demetrio-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Historicamente, são poucas as notícias sobre Demétrio, diácono, que viveu antes do século V e foi martirizado em Srijem, na Panônia. Era um provável cidadão de Tessalônica - atual Salônica - na província grega da Macedônia, onde foi preso pela sua atividade de pregação do Evangelho.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "name": "São Beano, Bispo",
+      "normalizedName": "sao beano, bispo",
+      "imageUrl": "./assets/img/santos/10-26-sao-beano-bispo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Beano viveu entre os séculos X e XI. Era um Bispo escocês, que guiou a diocese de Mortlach, entre 1015 e 1047, provável ano da sua morte. Mais tarde, a sede da diocese, construída em agradecimento pela vitória contra os Escandinavos, foi transferida para a cidade de Abeerdeen.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "name": "São Ceda, bispo",
+      "normalizedName": "sao ceda, bispo",
+      "imageUrl": "./assets/img/santos/10-26-sao-ceda-bispo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "São Ceda, irmão de São Chad, era monge em Lindisfarne, Inglaterra. Depois de converter o rei Peada ao cristianismo, foi enviado a evangelizar os ingleses no interior das regiões do país. Mais tarde, fundou o mosteiro de Lastingham, onde concluiu sua vida terrena no ano 644.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

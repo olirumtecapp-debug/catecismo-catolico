@@ -1,0 +1,32 @@
+{
+  "date": "2026-04-15",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 5,17-26",
+      "text": "Naqueles dias: 17Levantaram-se o sumo sacerdote e todos os do seu partido - isto é, o partido dos saduceus - cheios de raiva e mandaram prender os apóstolos e lançá-los na cadeia pública. 19Porém, durante a noite, o anjo do Senhor abriu as portas da prisão e os fez sair, dizendo: 20'Ide falar ao povo, no Templo, sobre tudo o que se refere a este modo de viver.' 21Eles obedeceram e, ao amanhecer, entraram no Templo e começaram a ensinar. O sumo sacerdote chegou com os seus partidários e convocou o Sinédrio e o Conselho formado pelas pessoas importantes do povo de Israel. Então mandaram buscar os apóstolos à prisão. 22Mas, ao chegarem à prisão, os servos não os encontraram e voltaram dizendo: 23'Encontramos a prisão fechada, com toda segurança, e os guardas estavam a postos na frente da porta. Mas, quando abrimos a porta, não encontramos ninguém lá dentro.' 24Ao ouvirem essa notícia, o chefe da guarda do Templo e os sumos sacerdotes não sabiam o que pensar e perguntavam-se o que poderia ter acontecido. 25Chegou alguém que lhes disse: 'Os homens que vós colocastes na prisão estão no Templo ensinando o povo!' 26Então o chefe da guarda do Templo saiu com os guardas e trouxe os apóstolos, mas sem violência, porque eles tinham medo que o povo os atacasse com pedras."
+    },
+    "psalm": {
+      "reference": "Salmo 33(34)",
+      "text": "-Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Minha alma se gloria no Senhor; que ouçam os humildes e se alegrem!\n\n- Comigo engrandecei ao Senhor Deus, exaltemos todos juntos o seu nome! Todas as vezes que o busquei, ele me ouviu,e de todos os temores me livrou.\n\n-Contemplai a sua face e alegrai-vos, e vosso rosto não se cubra de vergonha! Este infeliz gritou a Deus, e foi ouvido, e o Senhor o libertou de toda angústia.\n\n-O anjo do Senhor vem acampar ao redor dos que o temem, e os salva. Provai e vede quão suave é o Senhor! Feliz o homem que tem nele o seu refúgio!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 3,16-21",
+      "text": "Deus amou tanto o mundo, que deu o seu Filho unigênito, para que não morra todo o que nele crer, mas tenha a vida eterna. 17De fato, Deus não enviou o seu Filho ao mundo para condenar o mundo, mas para que o mundo seja salvo por ele. 18Quem nele crê, nóo é condenado, mas quem não crê, já está condenado, porque não acreditou no nome do Filho unigênito. 19Ora, o julgamento é este: a luz veio ao mundo, mas os homens preferiram as trevas à luz, porque suas ações eram más. 20Quem pratica o mal odeia a luz e não se aproxima da luz, para que suas ações não sejam denunciadas. 21Mas quem age conforme a verdade aproxima-se da luz, para que se manifeste que suas ações são realizadas em Deus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo António de Lisboa (c. 1195-1231)<br/>",
+    "</b>",
+    "Franciscano, Doutor da Igreja<br/>",
+    "Sermões para os domingos e festas dos santos<br/>",
+    "«Deus amou tanto o mundo que entregou o seu Filho Unigénito»<br/>",
+    "O Pai enviou-nos o seu Filho, que é «o melhor dom, o dom perfeito» (Tg 1,17). O melhor dom, que nada ultrapassa; o dom perfeito, ao qual nada se pode acrescentar. Cristo é o melhor dom porque Aquele que o Pai assim nos dá é o seu Filho, soberano, eterno como Ele. Cristo é o dom perfeito; tal como diz o apóstolo Paulo, «com Ele, Deus deu-nos tudo» (Rom 8,32). [...] Deu-nos Aquele «que é a cabeça da Igreja» (Ef 5,23). Não podia dar-nos mais. Cristo é o dom perfeito porque, quando no-Lo deu, o Pai levou, através dele, todas as coisas à sua perfeição.<br/>",
+    "«O Filho do homem», diz S. Mateus, «veio salvar o que estava perdido» (18,11). É por isso que a Igreja exclama: «Cantai ao Senhor um cântico novo» (Sl 97,1), como que para dizer: Fiéis, a quem o Filho do homem salvou e renovou, cantai um cântico novo, porque deveis «rejeitar tudo o que é antigo, agora que os frutos novos vos são dados» (Lv 26,10). Cantai, porque o Pai «fez maravilhas» (Sl 97,1) quando nos enviou o dom perfeito, o seu Filho. «Diante das nações, fez erguer a sua justiça» (Sl 97,2), quando nos deu o dom perfeito, o seu Filho único, que justifica as nações e realiza a perfeição de todas as coisas.<br/>"
+  ]
+}

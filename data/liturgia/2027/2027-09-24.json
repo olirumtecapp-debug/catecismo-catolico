@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "25a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Ageu 1,15-2,9",
+      "text": "15No segundo ano do reinado de Dario, 2,1no dia vinte e um do sétimo mês, fez-se ouvir a palavra do Senhor, mediante o profeta Ageu: 2'Vai dizer a Zorobabel, filho de Salatiel, governador de Judá, e a Josué, filho de Josedec, sumo sacerdote, e ao resto do povo: 3Há dentre vós algum sobrevivente que tenha visto esta casa em seu primitivo esplendor? E como a vedes agora? Não parece aos vossos olhos uma sombra do que era? 4Mas agora, toma coragem, Zorobabel, diz o Senhor, coragem, Josué, filho de Josedec, sumo sacerdote; coragem, povo todo desta terra, diz o Senhor dos exércitos; ponde mãos à obra, pois eu estou convosco, diz o Senhor dos exércitos. 5Eu assumi um compromisso convosco, quando saístes do Egito, e meu espírito permaneceu no meio de vós: não temais. 6Isto diz o Senhor dos exércitos: Ainda um momento, e eu hei de mover o céu e a terra, o mar e a terra firme. 7Sacudirei todos os povos, e começarão a chegar tesouros de todas as nações, hei de encher de esplendor esta casa, diz o Senhor dos exércitos. 8Pertence-me a prata, pertence-me o ouro, diz o Senhor dos exércitos. 9O esplendor desta nova casa será maior que o da primeira, diz o Senhor dos exércitos; e, neste lugar, estabelecerei a paz, diz o Senhor dos exércitos'."
+    },
+    "psalm": {
+      "reference": "Salmo 42 (43)",
+      "text": "- Fazei justiça, meu Deus, e defendei-me contra a gente impiedosa; do homem perverso e mentiroso libertai-me, ó Senhor!\n\n- Sois vós o meu Deus e meu refúgio: por que me afastais? Por que ando tão triste e abatido pela opressão do inimigo?\n\n- Enviai vossa luz, vossa verdade: elas serão o meu guia; que me levem ao vosso Monte santo, até a vossa morada!\n\n- Então irei aos altares do Senhor, Deus da minha alegria. Vosso louvor cantarei, ao som da harpa, meu Senhor e meu Deus!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 18-22",
+      "text": "Aconteceu que, 18Jesus estava rezando num lugar retirado, e os discípulos estavam com ele. Então Jesus perguntou-lhes: 'Quem diz o povo que eu sou?' 19Eles responderam: 'Uns dizem que és João Batista; outros, que és Elias; mas outros acham que és algum dos antigos profetas que ressuscitou.' 20Mas Jesus perguntou: 'E vós, quem dizeis que eu sou?' Pedro respondeu: 'O Cristo de Deus.' 21Mas Jesus proibiu-lhes severamente que contassem isso a alguém. 22E acrescentou: 'O Filho do Homem deve sofrer muito, ser rejeitado pelos anciãos, pelos sumos sacerdotes e doutores da Lei, deve ser morto e ressuscitar no terceiro dia.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Cardeal Joseph Ratzinger (Bento XVI, Papa de 2005 a 2013)<br/>",
+    "</b>",
+    "«Der Gott Jesu Christi»<br/>",
+    "«O Filho do Homem tem de sofrer muito, ser rejeitado [...] morto e, ao terceiro dia, ressuscitar.»<br/>",
+    "Ser homem significa ser para a morte; ser homem significa ter de morrer. […] Viver neste mundo quer dizer morrer. «Fez-Se homem» (Credo) significa que também Cristo foi para a morte. A contradição que é própria da morte do homem atinge em Cristo a sua acuidade extrema porque, nele, que está em comunhão total com o Pai, o isolamento absoluto da morte é um puro absurdo. Por outro lado, nele, a morte tem também a sua necessidade; na verdade, o facto de estar com o Pai está na raiz da incompreensão que os homens Lhe testemunham, na raiz da sua solidão no meio das multidões. A sua condenação é o acto último da não-compreensão, da expulsão deste Incompreendido para uma zona de silêncio.<br/>",
+    "De igual forma, pode-se entrever alguma coisa da dimensão interior da sua morte. No homem, morrer é sempre um acontecimento simultaneamente biológico e espiritual. Em Jesus, a destruição dos suportes corporais da comunicação quebra o seu diálogo com o Pai. Portanto, o que se rompe na morte de Jesus Cristo é mais importante do que em qualquer morte humana; nela é destruído o diálogo que é o verdadeiro eixo do mundo inteiro.<br/>",
+    "Mas, tal como este diálogo O tinha tornado solitário e estava na raiz da monstruosidade desta morte, assim em Cristo a ressurreição está já fundamentalmente presente. Por ela, a nossa condição humana insere-se na partilha trinitária do amor eterno. Ela jamais pode desaparecer; para lá do limiar da morte, ergue-se de novo e recria a sua plenitude. Só a Ressurreição revela, pois, o carácter único e decisivo deste artigo da nossa fé: «Fez-Se homem.» […] Cristo é plenamente humano e sê-lo-á para sempre. Por Ele, a condição humana entrou no próprio ser de Deus; é esse o fruto da sua morte.<br/>"
+  ]
+}

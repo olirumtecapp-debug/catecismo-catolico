@@ -1,0 +1,33 @@
+{
+  "date": "2027-01-26",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Tito e Sao Timoteo",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 10,1-10",
+      "text": "Irmãos: 1A Lei possui apenas o esboço dos bens futuros e não o modelo real das coisas. Também, com os seus sacrifícios sempre iguais e sem desistência repetidos cada ano, ela é totalmente incapaz de levar à perfeição aqueles que se aproximam para oferecê-los. 2Se não fosse assim, não se teria deixado de oferecê-los, se os que prestam culto, uma vez purificados, já não tivessem nenhuma consciência dos pecados? 3Mas, ao contrário, é por meio destes sacrifícios que, anualmente, se renova a memória dos pecados, 4pois é impossível eliminar os pecados com o sangue de touros e bodes. 5Por isso, ao entrar no mundo, Cristo afirma: 'Tu não quiseste vítima nem oferenda, mas formaste-me um corpo. 6Não foram do teu agrado holocaustos nem sacrifícios pelo pecado. 7Por isso eu disse: Eis que eu venho. No livro está escrito a meu respeito: Eu vim, ó Deus, para fazer a tua vontade.' 8Depois de dizer: 'Tu não quiseste nem te agradaram vítimas, oferendas, holocaustos, sacrifícios pelo pecado' - coisas oferecidas segundo a Lei - 9ele acrescenta: 'Eu vim para fazer a tua vontade'. Com isso, suprime o primeiro sacrifício, para estabelecer o segundo. 10É graças a esta vontade que somos santificados pela oferenda do corpo de Jesus Cristo, realizada uma vez por todas."
+    },
+    "psalm": {
+      "reference": "Salmo 39 (40)",
+      "text": "- Esperando, esperei no Senhor, e inclinando-se, ouviu meu clamor. Canto novo ele pôs em meus lábios, um poema em louvor ao Senhor.\n\n- Sacrifício e oblação não quisestes, mas abristes, Senhor, meus ouvidos; não pedistes ofertas nem vítimas, holocaustos por nossos pecados. E então eu vos disse: 'Eis que venho!'\n\n- Boas-novas de vossa justiça anunciei numa grande assembléia; vós sabeis: não fechei os meus lábios!\n\n- Proclamei toda a vossa justiça, sem retê-la no meu coração; vosso auxílio e lealdade narrei. Não calei vossa graça e verdade na presença da grande assembléia."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 31-35",
+      "text": "Naquele tempo: 31Chegaram a mãe de Jesus e seus irmãos. Eles ficaram do lado de fora e mandaram chamá-lo. 32Havia uma multidão sentada ao redor dele. Então lhe disseram: 'Tua mãe e teus irmãos estão lá fora à tua procura.' 33Ele respondeu: 'Quem é minha mãe, e quem são meus irmãos?' 34E olhando para os que estavam sentados ao seu redor, disse: 'Aqui estão minha mãe e meus irmãos. 35Quem faz a vontade de Deus, esse é meu irmão, minha irmã e minha mãe.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Francisco de Sales, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "«Sobre a vontade de Deus»<br/>",
+    "Fazer a vontade de Deus<br/>",
+    "A determinação de fazer a vontade de Deus em todas as coisas, sem exceção, está contida na oração dominical, nestas palavras que dizemos todos os dias: «Seja feita a vossa vontade assim na Terra como no Céu». No Céu, não há qualquer resistência à vontade divinna; aí, todas as coisas Lhe estão submetidas e Lhe obedecem. Prometamos pois a Nosso Senhor fazer o mesmo, sem oferecer qualquer resistência, mas permanecendo sempre muito submissos em todas as circuntâncias a esta vontade divina. Ora, a vontade de Deus pode ser entendida de duas maneiras: como vontade de Deus significada e como vontade do seu agrado.<br/>",
+    "A vontade significada comporta quatro partes: os mandamentos de Deus, os conselhos, os mandamentos da Igreja e as inspirações. Em relação aos mandamentos de Deus e da sua Igreja, temos de vergar a cabeça e de nos submeter à obediência, porque nesse caso a vontade de Deus é absoluta: temos de lhes obedecer para sermos salvos.<br/>",
+    "Os conselhos devem ser observados por gosto e não de maneira absoluta; porque há conselhos que são de tal maneira opostos entre si, que é impossível aderir à prática de um deles sem eliminar os meios que nos permitem praticar o outro. Assim, por exemplo, há um conselho que nos sugere que abandonemos tudo o que temos para seguirmos a Nosso Senhor despidos de todas as coisas; e há outro conselho que nos sugere que emprestemos e demos esmola. Ora, aquele que deixou tudo o que tinha não pode dar esmolas, porque nada tem. Temos portanto de seguir os conselhos que Deus quer que sigamos, sem supor que Ele quer que os tomemos a todos como nossos.<br/>",
+    "Além disso, temos a vontade do agrado de Deus, que temos de procurar em todas as circunstâncias, ou seja, em tudo o que nos acontece: na doença, na morte, na aflição, na consolação, na adversidade e na prosperidade, em suma, em todas as coisas que não estão previstas. Devemos estar dispostos a submeter-nos a esta vontade de Deus em todas as ocorrências, tanto nas coisas agradáveis como nas desagradáveis, tanto na aflição como na consolação, tanto na morte como na vida, e em tudo o que não se opõe manifestamete à vontade de Deus significada, porque essa tem sempre prioridade.<br/>"
+  ]
+}

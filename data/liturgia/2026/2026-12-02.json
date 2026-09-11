@@ -1,0 +1,33 @@
+{
+  "date": "2026-12-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 25,6-10",
+      "text": "Naquele dia, 6o Senhor dos exércitos dará neste monte, para todos os povos, um banquete de ricas iguarias, regado com vinho puro, servido de pratos deliciosos e dos mais finos vinhos. 7Ele removerá, neste monte, a ponta da cadeia que ligava todos os povos, a teia em que tinha envolvido todas as nações. 8O Senhor Deus eliminará para sempre a morte, e enxugará as lágrimas de todas as faces, e acabará com a desonra do seu povo em toda a terra; o Senhor o disse. 9Naquele dia se dirá: \"Este é o nosso Deus, esperamos nele, até que nos salvou; este é o Senhor, nele temos confiado: vamos alegrar-nos e exultar por nos ter salvo\". 10E a mão do Senhor repousará sobre este monte."
+    },
+    "psalm": {
+      "reference": "Salmo 22 (23)",
+      "text": "- O Senhor é o pastor que me conduz; não me falta coisa alguma. Pelos prados e campinas verdejantes ele me leva a descansar. Para as águas repousantes me encaminha e restaura as minhas forças.\n\n- Ele me guia no caminho mais seguro pela honra do seu nome. Mesmo que eu passe pelo vale tenebroso, nenhum mal eu temerei. Estais comigo com bastão e com cajado, eles me dão a segurança!\n\n- Preparais à minha frente uma mesa, bem à vista do inimigo; com óleo vós ungis minha cabeça, e o meu cálice transborda.\n\n- Felicidade e todo bem hão de seguir-me por toda a minha vida; e na casa do Senhor habitarei pelos tempos infinitos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 15, 29-37",
+      "text": "Naquele tempo, 29Jesus foi para as margens do mar da Galileia, subiu a montanha e sentou-se. 30Numerosas multidões aproximaram-se dele, levando consigo coxos, aleijados, cegos, mudos e muitos outros doentes. Então os colocaram aos pés de Jesus. E ele os curou. 31O povo ficou admirado quando viu os mudos falando, os aleijados sendo curados, os coxos andando e os cegos enxergando. E glorificaram o Deus de Israel. 32Jesus chamou seus discípulos e disse: \"Tenho compaixão da multidão, porque já faz três dias que está comigo, e nada tem para comer. Não quero mandá-los embora com fome, para que não desmaiem pelo caminho\". 33Os discípulos disseram: \"Onde vamos buscar, neste deserto, tantos pães para saciar tão grande multidão?\" 34Jesus perguntou: \"Quantos pães tendes?\" Eles responderam: \"Sete e alguns peixinhos\". 35E Jesus mandou que a multidão se sentasse pelo chão. 36Depois pegou os sete pães e os peixes, deu graças, partiu-os e os dava aos discípulos, e os discípulos, às multidões. 37Todos comeram e ficaram satisfeitos; e encheram sete cestos com os pedaços que sobraram."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Beato John Henry Newman<br/>",
+    "</b>",
+    "Teólogo, Fundador do Oratório em Inglaterra<br/>",
+    "Doze Meditações e Intercessões para a Sexta-Feira Santa, 9-10<br/>",
+    "« Tenho pena desta multidão»<br/>",
+    "Diz-nos a Escritura: «Tens compaixão de todos, pois tudo podes e desvias os olhos dos pecados dos homens, a fim de os levar à con¬ver¬são. Tu amas tudo quanto existe e não detestas nada do que fi¬zeste. […] Tu poupas a todos, por¬que todos são teus, ó Senhor, que amas a vida!» (Sab 11,23s). Aquilo que O fez descer do Céu e receber o nome de Jesus […] foi o seu grande amor pelos homens, a sua compaixão pelos pecadores.<br/>",
+    "Porque haveria de consentir esconder a sua glória num corpo mortal, se não desejasse ardentemente salvar os que se tinham afastado, os que tinham perdido por completo a esperança da salvação? Ele próprio declara: «O Filho do homem veio procurar e salvar o que estava perdido» (Lc 19,10). Para não nos deixar perecer, Ele fez tudo o que pode fazer um Deus omnipotente, segundo os seus atributos divinos: deu-Se a Si mesmo. Ele ama-nos a todos de tal maneira, que quer dar a vida por cada um de nós, e de forma tão absoluta e tão plena por cada um, como se não houvesse mais ninguém. Ele é o nosso melhor amigo […], o único amigo verdadeiro, e recorre a todos os meios possíveis para conseguir que Lhe devolvamos este amor. Não nos recusa coisa alguma, se consentirmos em O amar. […]<br/>",
+    "Ó meu Senhor e meu Salvador, nos teus braços estou seguro. Se me guardares, nada terei a temer; se, porém, me abandonares, nada poderei esperar. Não sei o que vai acontecer-me desde agora até à hora da minha morte, não sei o que será o futuro, mas confio-me a Ti. […] Repouso totalmente em Ti, porque Tu sabes o que é bom para mim, e eu não sei.<br/>"
+  ]
+}

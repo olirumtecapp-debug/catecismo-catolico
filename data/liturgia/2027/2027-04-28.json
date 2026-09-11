@@ -1,0 +1,30 @@
+{
+  "date": "2027-04-28",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 15,1-6",
+      "text": "Naqueles dias, 1chegaram alguns da Judeia e ensinavam aos irmãos de Antioquia, dizendo: \"Vós não podereis salvar-vos se não fordes circuncidados, como ordena a lei de Moisés\". 2Isso provocou muita confusão, e houve uma grande discussão de Paulo e Barnabé com eles. Finalmente, decidiram que Paulo, Barnabé e alguns outros fossem a Jerusalém para tratar dessa questão com os apóstolos e os anciãos. 3Depois de terem sido acompanhados pela comunidade, Paulo e Barnabé atravessaram a Fenícia e a Samaria. Contaram sobre a conversão dos pagãos, causando grande alegria entre todos os irmãos. 4Chegando a Jerusalém, foram recebidos pelos apóstolos e os anciãos e narraram as maravilhas que Deus tinha realizado por meio deles. 5Alguns dos que tinham pertencido ao partido dos fariseus e que haviam abraçado a fé levantaram-se e disseram que era preciso circuncidar os pagãos e obrigá-los a observar a lei de Moisés. 6Então, os apóstolos e os anciãos reuniram-se para tratar desse assunto."
+    },
+    "psalm": {
+      "reference": "Salmo 121 (122)",
+      "text": "- Que alegria quando ouvi que me disseram: \"Vamos à casa do Senhor!\" E agora nossos pés já se detêm, Jerusalém, em tuas portas.\n\n- Jerusalém, cidade bem edificada num conjunto harmonioso; para lá sobem as tribos de Israel, as tribos do Senhor.\n\n- Para louvar, segundo a lei de Israel, o nome do Senhor. A sede da justiça lá está e o trono de Davi."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 15, 1-8",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 1\"Eu sou a videira verdadeira, e meu Pai é o agricultor. 2Todo ramo que em mim não dá fruto, ele o corta; e todo ramo que dá fruto, ele o limpa, para que dê mais fruto ainda. 3Vós já estais limpos por causa da palavra que eu vos falei. 4Permanecei em mim, e eu permanecerei em vós. Como o ramo não pode dar fruto por si mesmo se não permanecer na videira, assim também vós não podereis dar fruto se não permanecerdes em mim. 5Eu sou a videira, e vós, os ramos. Aquele que permanece em mim, e eu nele, esse produz muito fruto; porque sem mim nada podeis fazer. 6Quem não permanecer em mim será lançado fora como um ramo e secará. Tais ramos são recolhidos, lançados no fogo e queimados. 7Se permanecerdes em mim e minhas palavras permanecerem em vós, pedi o que quiserdes e vos será dado. 8Nisto meu Pai é glorificado: que deis muito fruto e vos torneis meus discípulos\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santa Clara, monja franciscana<br/>",
+    "</b>",
+    "1.ª Carta a Inês de Praga, 3-11<br/>",
+    "«Permanecei em Mim»<br/>",
+    "A fama da vossa conduta santa e da vossa vida irrepreensível chegou aos meus ouvidos, e está aliás difundida por toda a superfície da Terra. Por esse motivo, sinto-me transportada de alegria e felicidade no Senhor, eu e todos os que servem ou desejam servir Jesus Cristo. Poderíeis ter usufruído de todas as lisonjas e de todas as honras do mundo, e ter até acedido à mais alta glória, tornando-vos esposa legítima do ilustre imperador, união que convinha à sua majestade e à vossa; mas renunciastes a tudo e optastes, com toda a força da vossa alma e do vosso coração, pela santíssima pobreza e o despojamento. Escolhestes um esposo de raça ainda mais nobre: Nosso Senhor Jesus Cristo, que manterá pura a vossa virgindade. Amando este esposo, permanecereis casta; as suas carícias tornar-vos-ão ainda mais pura; a sua posse consagrará a vossa virgindade. O seu poder ultrapassa todos os outros, a sua linhagem é a melhor que existe, a sua graça a mais perfeita. Estais desde agora dedicada a abraçá-l'O, Ele qie ornou o vosso peito com pedras preciosas, suspendeu nas vossas orelhas diamantes inestimáveis, vos revestiu de joias cintilantes como a primavera e colocou na vossa cabeça uma coroa de ouro com as armas da santidade.<br/>"
+  ]
+}

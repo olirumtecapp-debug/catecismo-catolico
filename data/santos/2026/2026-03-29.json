@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-29",
+  "year": 2026,
+  "month": 3,
+  "day": 29,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/29.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-29.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-29",
+      "name": "São Eustásio, bispo de Nápoles",
+      "normalizedName": "sao eustasio, bispo de napoles",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Morto no século III durante as perseguições anticristãs suscitadas pelos imperadores romanos, é comemorado pelo Martirológio Romano, o calendário dos Santos, cuja primeira edição oficial foi aprovada pelo Papa Gregório XIII em 1584.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

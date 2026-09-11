@@ -1,0 +1,31 @@
+{
+  "date": "2027-01-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 2,5-12",
+      "text": "5Não foi aos anjos que Deus submeteu o mundo futuro, do qual estamos falando. 6A este respeito, porém, houve quem afirmasse: \"O que é o homem, para dele te lembrares, ou o filho do homem, para com ele te ocupares? 7Tu o fizeste um pouco menor que os anjos, de glória e honra o coroaste 8e todas as coisas puseste debaixo de seus pés\". Se Deus lhe submeteu todas as coisas, nada deixou que não lhe fosse submisso. Atualmente, porém, ainda não vemos que tudo lhe esteja submisso. 9Jesus, a quem Deus fez pouco menor do que os anjos, nós o vemos coroado de glória e honra, por ter sofrido a morte. Sim, pela graça de Deus em favor de todos, ele provou a morte. 10Convinha de fato que aquele por quem e para quem todas as coisas existem, e que desejou conduzir muitos filhos à glória, levasse o iniciador da salvação deles à consumação, por meio de sofrimentos. 11Pois tanto Jesus, o santificador, quanto os santificados são descendentes do mesmo ancestral; por esta razão, ele não se envergonha de os chamar irmãos, 12dizendo: \"Anunciarei o teu nome a meus irmãos; e no meio da assembleia te louvarei\"."
+    },
+    "psalm": {
+      "reference": "Salmo 8",
+      "text": "- Ó Senhor, nosso Deus, como é grande vosso nome por todo o universo! Perguntamos: \"Senhor, que é o homem, para dele assim vos lembrardes e o tratardes com tanto carinho?\"\n\n- Pouco abaixo de Deus o fizestes, coroando-o de glória e esplendor; vós lhe destes poder sobre tudo, vossas obras aos pés lhe pusestes.\n\n- As ovelhas, os bois, os rebanhos, todo o gado e as feras da mata; passarinhos e peixes dos mares, todo ser que se move nas águas."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 21-28",
+      "text": "21Estando com seus discípulos em Cafarnaum, Jesus, num dia de sábado, entrou na sinagoga e começou a ensinar. 22Todos ficavam admirados com o seu ensinamento, pois ensinava como quem tem autoridade, não como os mestres da lei. 23Estava então na sinagoga um homem possuído por um espírito mau. Ele gritou: 24\"Que queres de nós, Jesus nazareno? Vieste para nos destruir? Eu sei quem tu és: tu és o santo de Deus\". 25Jesus o intimou: \"Cala-te e sai dele!\" 26Então o espírito mau sacudiu o homem com violência, deu um grande grito e saiu. 27E todos ficaram muito espantados e perguntavam uns aos outros: \"O que é isso? Um ensinamento novo, dado com autoridade: ele manda até nos espíritos maus, e eles obedecem!\" 28E a fama de Jesus logo se espalhou por toda parte, em toda a região da Galileia."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Jerónimo, Presbítero e Doutor da Igreja<br/>",
+    "</b>",
+    "Comentário sobre o Evangelho de Marcos, PL2, 137-138<br/>",
+    "«Uma nova doutrina, com tal autoridade, que até manda nos espíritos impuros e eles obedecem-Lhe!»<br/>",
+    "Jesus dirigiu-Se então à sinagoga de Cafarnaum e pôs-se a ensinar. As pessoas ficaram espantadas com os seus ensinamentos, porque Jesus «os ensinava com autoridade e não como os escribas». [...] De facto, Jesus falava em seu próprio nome, Ele que tinha falado outrora pela voz dos profetas. Já é bom poder dizer, com base num texto: «Está escrito...»; ainda melhor é proclamar, em nome do próprio Senhor: «Palavra do Senhor»; mas é completamente diferente poder afirmar, como Jesus fazia: «Em verdade, em verdade vos digo...». [...]<br/>",
+    "«Todos se maravilhavam com a sua doutrina». Que novidades ensinava Ele? [...] Na verdade, repetia o que havia declarado pela voz dos profetas. Mas todos ficavam admirados, porque Ele não ensinava com o método dos escribas, mas com autoridade; não como um rabino, mas como Senhor. Não se referia a um maior do que Ele; as palavras que proferia eram suas. E, se mantinha essa linguagem de autoridade, era porque tornava presente Aquele que falara através dos profetas: «Eu que vos falava estou aqui» (Is 52,6). [...] Foi por isso que Jesus ameaçou o demónio, que se exprimia através do possesso na sinagoga: «Cala-te e sai desse homem»; ou seja: «Sai da minha casa; que fazes tu naquilo que é a minha morada? Eu quero lá entrar. Cala-te! Sai desse homem! Deixa essa morada que foi preparada para Mim. [...] Deus quere-a. Deixa o homem; ele pertence-Me. Não quero que ele seja teu. Eu habito no homem, que é o meu Corpo. Vai-te embora!»<br/>"
+  ]
+}

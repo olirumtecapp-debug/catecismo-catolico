@@ -1,0 +1,26 @@
+{
+  "date": "2027-02-10",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Quaresma Ciclo da PascoaQuarta-Feira de Cinzas",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Joel 2,12-18",
+      "text": "12'Agora, diz o Senhor, voltai para mim com todo o vosso coração, com jejuns, lágrimas e gemidos; 13rasgai o coração, e não as vestes; e voltai para o Senhor, vosso Deus; ele é benigno e compassivo, paciente e cheio de misericórdia, inclinado a perdoar o castigo'. 14Quem sabe, se ele se volta para vós e vos perdoa, e deixa atrás de si a bênção, oblação e libação para o Senhor, vosso Deus? 15Tocai trombeta em Sião, prescrevei o jejum sagrado, convocai a assembléia; 16congregai o povo, realizai cerimônias de culto, reuni anciãos, ajuntai crianças e lactentes; deixe o esposo seu aposento, e a esposa, seu leito. 17Chorem, postos entre o vestíbulo e o altar, os ministros sagrados do Senhor, e digam: 'Perdoa, Senhor, a teu povo, e não deixes que esta tua herança sofra infâmia e que as nações a dominem.' Por que se haveria de dizer entre os povos: 'Onde está o Deus deles?' 18Então o Senhor encheu-se de zelo por sua terra e perdoou ao seu povo."
+    },
+    "psalm": {
+      "reference": "Salmo 50 (51)",
+      "text": "- Tende piedade, ó meu Deus, misericórdia! Na imensidão de vosso amor, purificai-me! Lavai-me todo inteiro do pecado, e apagai completamente a minha culpa!\n\n- Eu reconheço toda a minha iniqüidade, o meu pecado está sempre à minha frente. Foi contra vós, só contra vós, que eu pequei, pratiquei o que é mau aos vossos olhos!\n\n- Criai em mim um coração que seja puro, dai-me de novo um espírito decidido. Ó Senhor, não me afasteis de vossa face, nem retireis de mim o vosso Santo Espírito!\n\n- Dai-me de novo a alegria de ser salvo e confirmai-me com espírito generoso! Abri meus lábios, ó Senhor, para cantar, e minha boca anunciará vosso louvor!"
+    },
+    "secondReading": {
+      "reference": "Coríntios 5,20-6,2",
+      "text": "Irmãos: 20Somos embaixadores de Cristo, e é Deus mesmo que exorta através de nós. Em nome de Cristo, nós vos suplicamos: deixai-vos reconciliar com Deus. 21Aquele que não cometeu nenhum pecado, Deus o fez pecado por nós, para que nele nós nos tornemos justiça de Deus. 6,1Como colaboradores de Cristo, nós vos exortamos a não receberdes em vão a graça de Deus, 2pois ele diz: 'No momento favorável, eu te ouvi e no dia da salvação, eu te socorri'. É agora o momento favorável, é agora o dia da salvação."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 6, 1-6.16-18",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 1'Ficai atentos para não praticar a vossa justiça na frente dos homens, só para serdes vistos por eles. Caso contrário, não recebereis a recompensa do vosso Pai que está nos céus. 2Por isso, quando deres esmola, não toques a trombeta diante de ti, como fazem os hipócritas nas sinagogas e nas ruas, para serem elogiados pelos homens. Em verdade vos digo: eles já receberam a sua recompensa. 3Ao contrário, quando deres esmola, que a tua mão esquerda nóo saiba o que faz a tua mão direita, 4de modo que, a tua esmola fique oculta. E o teu Pai, que vê o que está oculto, te dará a recompensa. 5Quando orardes, não sejais como os hipócritas, que gostam de rezar em pé, nas sinagogas e nas esquinas das praças, para serem vistos pelos homens. Em verdade vos digo: eles já receberam a sua recompensa. 6Ao contrário, quando tu orares, entra no teu quarto, fecha a porta, e reza ao teu Pai que está oculto. E o teu Pai, que vê o que está escondido, te dará a recompensa. 16Quando jejuardes, não fiqueis com o rosto triste como os hipócritas. Eles desfiguram o rosto, para que os homens vejam que estão jejuando. Em verdade vos digo: Eles já receberam a sua recompensa. 17Tu, porém, quando jejuares, perfuma a cabeça e lava o rosto, 18para que os homens não vejam que tu estás jejuando, mas somente teu Pai, que está oculto. E o teu Pai, que vê o que está escondido, te dará a recompensa."
+    }
+  },
+  "extra": []
+}

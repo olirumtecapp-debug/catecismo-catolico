@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "23a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 10,14-22",
+      "text": "Meus caríssimos, fugi da idolatria. 15Eu vos falo como a pessoas esclarecidas. Então, ponderai bem o que eu digo: 16O cálice da bênção, o cálice que abençoamos, não é comunhão com o sangue de Cristo? E o pão que partimos, não é comunhão com o corpo de Cristo? 17Porque há um só pão, nós todos somos um só corpo, pois todos participamos desse único pão. 18Considerai os filhos de Israel: Os que comem as vítimas sacrificais não estão em comunhão com o altar? 19Então, o que dizer? Que a carne de um sacrifício idolátrico tem algum valor? Ou que o ídolo vale alguma coisa? 20- Nada disso. O que eu digo é que os idólatras oferecem seus sacrifícios aos demônios e não a Deus. Ora, eu não quero que entreis em comunhão com os demônios. 21Vós não podeis beber do cálice do Senhor e do cálice dos demônios; vós não podeis participar da mesa do Senhor e da mesa dos demônios. 22Ou, quem sabe, queremos excitar o zelo santo do Senhor? Somos porventura mais fortes do que ele?"
+    },
+    "psalm": {
+      "reference": "Salmo 115 (116)",
+      "text": "- Que poderei retribuir ao Senhor Deus por tudo aquilo que ele fez em meu favor? Elevo o cálice da minha salvação, invocando o nome santo do Senhor.\n\n- Por isso oferto um sacrifício de louvor, invocando o nome santo do Senhor. Vou cumprir minhas promessas ao Senhor na presença de seu povo reunido."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 6,43-49",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 43Não existe árvore boa que dê frutos ruins, nem árvore ruim que dê frutos bons. 44Toda árvore é reconhecida pelos seus frutos. Não se colhem figos de espinheiros, nem uvas de plantas espinhosas. 45O homem bom tira coisas boas do bom tesouro do seu coração. Mas o homem mau tira coisas más do seu mau tesouro, pois sua boca fala do que o coração está cheio. 46Por que me chamais: 'Senhor! Senhor!', mas não fazeis o que eu digo? 47Vou mostrar-vos com quem se parece todo aquele que vem a mim, ouve as minhas palavras e as põe em prática. 48É semelhante a um homem que construiu uma casa: cavou fundo e colocou o alicerce sobre a rocha. Veio a enchente, a torrente deu contra a casa, mas não conseguiu derrubá-la, porque estava bem construída. 49Aquele, porém, que ouve e não põe em prática, é semelhante a um homem que construiu uma casa no chão, sem alicerce. A torrente deu contra a casa, e ela imediatamente desabou;"
+    }
+  },
+  "extra": [
+    "- Glória a Vós, Senhor<br/>",
+    "<b>",
+    "Comentário do dia por Santo Agostinho (354-430)<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja<br/>",
+    "Sermão 179<br/>",
+    "Construir sobre a rocha<br/>",
+    "Irmãos, o apóstolo S. Tiago dirige-se a ouvintes assíduos da palavra de Deus dizendo: «Não vos contenteis em escutar a palavra; ponde-a em prática; senão, enganar-vos-íeis a vós mesmos» (Tgo 1,22). Não seria o Autor da palavra quem vós enganaríeis, nem sequer aquele que vo-la anuncia; mas a vós mesmos. [...] E o pregador também anunciaria inutilmente a palavra de Deus se a não escutasse primeiro dentro de si mesmo para a pôr em prática. [...]<br/>",
+    "Quem é aquele que pratica interiormente a palavra? O que se guarda dos maus desejos. Quem é aquele que a observa exteriormente? O que «partilha o pão quem tem fome» (Is 58,7). O nosso próximo pode ver o que fazemos, mas da razão por que o fazemos só Deus é testemunha. Ponde, pois, a palavra em prática; não vos contenteis em escutá-la, pois enganar-vos-íeis a vós mesmos; não enganaríeis a Deus nem ao seu ministro. Eu não posso ler no vosso coração; mas Deus, que sonda os corações, vê o que os homens não podem ver. Ele vê o vosso zelo em escutar, os vossos pensamentos, as vossas resoluções, os progressos que fazeis com a sua graça, a assiduidade da vossa oração, os pedidos que Lhe dirigis para obter o que vos falta e as vossas acções de graças pelos seus benefícios. [...]<br/>",
+    "Pensai bem, irmãos! Se é louvável escutar a palavra, quanto mais não será pô-la em prática! Se não a escutais, viveis na negligência e não construís nada. Se a escutais sem a praticar, só construís ruínas. A este respeito, o Senhor deu-nos uma comparação muito justa: aquele que escuta as suas palavras e as põe em prática é semelhante a um homem prudente que construiu a sua casa sobre a rocha. Escutar e pôr em prática é construir sobre a rocha […]; escutar sem praticar é construir sobre a areia; recusar-se sequer a escutar é não construir nada.<br/>"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-27",
+  "year": 2026,
+  "month": 6,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-27",
+      "name": "São Cirilo de Alexandria, bispo e doutor da Igreja",
+      "normalizedName": "sao cirilo de alexandria, bispo e doutor da igreja",
+      "imageUrl": "./assets/img/santos/06-27-sao-cirilo-de-alexandria-bispo-e-doutor-da-ig.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/27/s--cirilo-de-alexandria--bispo-e-doutor-da-igreja.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/27/s--cirilo-de-alexandria--bispo-e-doutor-da-igreja.html",
+      "sourceText": "Testemunha de Jesus Cristo, \"Verbo de Deus encarnado\": foi o que disse Bento XVI, sobre São Cirilo de Alexandria, ao qual dedicou toda uma audiência geral, em 2007. Venerado como Santo, tanto no Oriente como no Ocidente, São Cirilo foi proclamado Doutor da Igreja por Leão XIII, em 1882.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Beata Maria Mastena",
+      "normalizedName": "beata maria mastena",
+      "imageUrl": "./assets/img/santos/06-27-beata-maria-mastena.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Maria nasceu em Verona e, com 20 anos, entrou para a Congregação das Irmãs da Misericórdia, mas continuou a lecionar. Após fazer uma experiência de sete meses, na clausura das Cistercienses, em 1932 fundou as Religiosas da Santa Face, para \"fazer o rosto de Cristo sorrir entre os homens\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

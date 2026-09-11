@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-20",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "2Sm 7:1-5, 8b-12, 14a, 16",
+    "psalm": "Sl 89:2-3, 4-5, 27, 29",
+    "secondReading": "Rm 16:25-27",
+    "gospel": "Lc 1:26-38"
+  },
+  "calendar": {
+    "date": "2026-12-20",
+    "monthDay": "12/20",
+    "season": "Advent",
+    "celebration": {
+      "name": "4th Sunday of Advent",
+      "type": "SUNDAY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-20.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-20.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-20"
+  }
+}

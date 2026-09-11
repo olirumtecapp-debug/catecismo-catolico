@@ -1,0 +1,69 @@
+{
+  "date": "2026-06-11",
+  "year": 2026,
+  "month": 6,
+  "day": 11,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/11.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-11.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-11",
+      "name": "São Barnabé, apóstolo",
+      "normalizedName": "sao barnabe, apostolo",
+      "imageUrl": "./assets/img/santos/06-11-sao-barnabe-apostolo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/11/s--barnabe--apostolo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/11/s--barnabe--apostolo.html",
+      "sourceText": "São Barnabé não era um dos Doze apóstolos, mas, por ser um homem virtuoso e de fé, também era chamado apóstolo e, como tal, venerado. Ele foi um dos primeiros a viajar para levar a Boa Nova a todos os povos; ele exortou Paulo à missão. Barnabé morreu como mártir, em Salamina, Chipre.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "name": "São João de S. Facundo, sacerdote agostiniano",
+      "normalizedName": "sao joao de s. facundo, sacerdote agostiniano",
+      "imageUrl": "./assets/img/santos/06-11-sao-joao-de-s-facundo-sacerdote-agostiniano.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/11/s--joao-de-s--facundo--sacerdote-agostiniano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/11/s--joao-de-s--facundo--sacerdote-agostiniano.html",
+      "sourceText": "De origens nobres, este Santo foi chamado também \"João de São Facundo\", nome da sua cidade natal, nas Astúrias. Ao se despojar de todas as suas riquezas, tornou-se um eremita na Ordem dos Agostinianos. Terminou seus dias em Salamanca, em 1479, onde cuidava dos pobres e contemplava Jesus Eucarístico.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "name": "São Restituto, mártir, na via Nomentana",
+      "normalizedName": "sao restituto, martir, na via nomentana",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Restituto foi preso em Roma, durante a perseguição de Diocleciano, por suas pregações contra os deuses. Recusando-se a oferecer-lhes sacrifícios, foi açoitado até à morte, por ordem do Tribunal de Hermógenes. O mártir da fé foi sepultado na XVI milha da Via Nomentana.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Santa Paula Frassinetti, virgem, fundadora das Irmãs de S. Doroteia",
+      "normalizedName": "santa paula frassinetti, , fundadora das irmas de s. doroteia",
+      "imageUrl": "./assets/img/santos/06-11-santa-paula-frassinetti-virgem-fundadora-das-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Gênova, Paula ficou órfã, aos 9 anos. Cuidou do pai e de seus 4 irmãos. Sempre disponível, colaborou com o seu irmão sacerdote. Ao fundar uma Comunidade de Irmãs Educadoras, foi a Roma. Com o apoio dos Papas, fundou as Irmãs de Santa Doroteia. O Papa Wojtyla a canonizou em 1984.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

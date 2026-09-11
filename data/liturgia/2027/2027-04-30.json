@@ -1,0 +1,32 @@
+{
+  "date": "2027-04-30",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 15,22-31",
+      "text": "Naqueles dias, 22pareceu bem aos apóstolos e aos anciãos, de acordo com toda a comunidade de Jerusalém, escolher alguns da comunidade para mandá-los a Antioquia com Paulo e Barnabé. Escolheram Judas, chamado Bársabas, e Silas, que eram muito respeitados pelos irmãos. 23Através deles enviaram a seguinte carta: \"Nós, os apóstolos e os anciãos, vossos irmãos, saudamos os irmãos vindos do paganismo e que estão em Antioquia e nas regiões da Síria e da Cilícia. 24Ficamos sabendo que alguns dos nossos causaram perturbações com palavras que transtornaram vosso espírito. Eles não foram enviados por nós. 25Então decidimos, de comum acordo, escolher alguns representantes e mandá-los até vós, junto com nossos queridos irmãos Barnabé e Paulo, 26homens que arriscaram suas vidas pelo nome de nosso Senhor Jesus Cristo. 27Por isso, estamos enviando Judas e Silas, que pessoalmente vos transmitirão a mesma mensagem. 28Porque decidimos, o Espírito Santo e nós, não vos impor nenhum fardo, além destas coisas indispensáveis: 29abster-se de carnes sacrificadas aos ídolos, do sangue, das carnes de animais sufocados e das uniões ilegítimas. Vós fareis bem se evitardes essas coisas. Saudações!\" 30Depois da despedida, Judas e Silas foram para Antioquia, reuniram a assembleia e entregaram a carta. 31A sua leitura causou alegria, por causa do estímulo que trazia."
+    },
+    "psalm": {
+      "reference": "Salmo 56 (57)",
+      "text": "- Meu coração está pronto, meu Deus, está pronto o meu coração! Vou cantar e tocar para vós: desperta, minha alma, desperta! Despertem a harpa e a lira, eu irei acordar a aurora!\n\n- Vou louvar-vos, Senhor, entre os povos, dar-vos graças por entre as nações! Vosso amor é mais alto que os céus, mais que as nuvens a vossa verdade! Elevai-vos, ó Deus, sobre os céus, vossa glória refulja na terra!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 15, 12-17",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 12\"Este é o meu mandamento: amai-vos uns aos outros, assim como eu vos amei. 13Ninguém tem amor maior do que aquele que dá sua vida pelos amigos. 14Vós sois meus amigos se fizerdes o que eu vos mando. 15Já não vos chamo servos, pois o servo não sabe o que faz o seu senhor. Eu chamo-vos amigos, porque vos dei a conhecer tudo o que ouvi de meu Pai. 16Não fostes vós que me escolhestes, mas fui eu que vos escolhi e vos designei para irdes e para que produzais fruto, e o vosso fruto permaneça. O que, então, pedirdes ao Pai em meu nome, ele vo-lo concederá. 17Isto é o que vos ordeno: amai-vos uns aos outros\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Francisco de Assis<br/>",
+    "</b>",
+    "Carta a todos os fiéis, 2-3<br/>",
+    "«Destinei-vos, para que vades e deis fruto e o vosso fruto permaneça»<br/>",
+    "Que abençoados e felizes são os que amam a Deus e praticam o que o próprio Senhor diz no Evangelho: «Amarás ao Senhor, teu Deus, com todo o teu coração, com toda a tua alma e [...] amarás ao teu próximo como a ti mesmo» (Mt 22,37-39). Amemos, portanto, a Deus e adoremo-l'O com um coração e um espírito puros. [...]<br/>",
+    "Em seguida, amemos o nosso próximo como a nós mesmos. E se alguém não quiser ou não puder amar o seu próximo como a si mesmo, que ao menos não lhe faça mal, mas, pelo contrário, lhe faça bem. Os que foram investidos do poder de julgar os outros, que exerçam o seu cargo de juízes com misericórdia, como se eles próprios quisessem obter a misericórdia do Senhor (cf Lc 6,37). [...] Tenhamos, pois, caridade e humildade: demos esmolas, porque elas lavam a alma das manchas dos seus pecados. Com efeito, tudo o que os homens deixam ao partir deste mundo está para eles perdido para sempre; mas levarão consigo o prémio da caridade e das esmolas que tiverem dado e receberão por elas, de Deus, a recompensa e uma justa retribuição. [...]<br/>",
+    "Sobre todos aqueles e aquelas que assim agirem e perseverarem até ao fim, o Espírito do Senhor repousará (cf Is 11,2) e fará neles sua habitação e sua morada (cf Jo 14,23), e eles serão filhos do Pai celeste (cf Mt 5,45), pois fazem as suas obras; e serão esposos, irmãos e mães de nosso Senhor Jesus Cristo (cf Mt 12,50). [...] Como é glorioso, santo e grande ter um Pai no Céu! Como é santo e belo, magnífico e admirável, ter nos Céus um Esposo! Como é santo [...] e humilde, tranquilizador e suave, amável e desejável acima de tudo, ter um tal Irmão e um tal Filho, que deu a vida pelas suas ovelhas (cf Jo 10,15), e pediu ao Pai por nós dizendo: «Pai santo, guarda em teu nome os que Me deste [...]; Pai, quero que onde Eu estiver estejam também comigo aqueles que Me confiaste, para que contemplem a minha glória, no teu reino» (cf Jo 17,6-24).<br/>"
+  ]
+}

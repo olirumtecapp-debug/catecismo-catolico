@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-09",
+  "year": 2026,
+  "month": 2,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-09",
+      "name": "Santa Apolônia, virgem e mártir de Alexandria no Egipto",
+      "normalizedName": "santa apolonia, e martir de alexandria no egipto",
+      "imageUrl": "./assets/img/santos/02-09-santa-apolonia-virgem-e-martir-de-alexandria-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Apolônia, totalmente dedicada ao apostolado, era muito estimada pela sua coragem e integridade. Já idosa, foi presa no ano 249, no Egito, durante as ferozes perseguições do século III. Recusando-se renegar à fé em Jesus, foi torturada e arrancaram seus dentes com uma torquês. Morreu entre as chamas.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

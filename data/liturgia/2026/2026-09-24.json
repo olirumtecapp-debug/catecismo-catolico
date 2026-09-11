@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "25a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Eclesiastes 1,2-11",
+      "text": "'Vaidade das vaidades, diz o Eclesiastes, vaidade das vaidades! Tudo é vaidade.' 3Que proveito tira o homem de todo o trabalho com o qual se afadiga debaixo do sol? 4Uma geração passa, outra lhe sucede, enquanto a terra permanece sempre a mesma. 5O sol se levanta, o sol se deita, apressando-se para voltar ao seu lugar, donde novamente torna a levantar-se. 6Dirigindo-se para o sul e voltando para o norte, ora para cá, ora para lá, vai soprando o vento, para retomar novamente o seu curso. 7Todos os rios correm para o mar, e contudo o mar não transborda; voltam ao lugar de onde saíram para tornarem a correr. 8Tudo é penoso, difícil para o homem explicar. A vista não se cansa de ver, nem o ouvido se farta de ouvir. 9O que foi, será; o que aconteceu, acontecerá: 10não há nada de novo debaixo do sol. Uma coisa da qual se diz: 'Eis aqui algo de novo', também esta já existiu nos séculos que nos precederam. 11Não há memória do que aconteceu no passado, nem também haverá lembrança do que acontecer, entre aqueles que viverão depois."
+    },
+    "psalm": {
+      "reference": "Salmo 89 (90)",
+      "text": "- Vós fazeis voltar ao pó todo mortal, quando dizeis: 'Voltai ao pó, filhos de Adão!' Pois mil anos para vós são como ontem, qual vigília de uma noite que passou.\n\n- Eles passam como o sono da manhã, são iguais à erva verde pelos campos: De manhã ela floresce vicejante, mas à tarde é cortada e logo seca.\n\n- Ensinai-nos a contar os nossos dias, e dai ao nosso coração sabedoria! Senhor, voltai-vos! Até quando tardareis? Tende piedade e compaixão de vossos servos!\n\n- Saciai-nos de manhã com vosso amor, e exultaremos de alegria todo o dia! Que a bondade do Senhor e nosso Deus repouse sobre nós e nos conduza! Tornai fecundo, ó Senhor, nosso trabalho."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 9,7-9",
+      "text": "Naquele tempo: 7O tetrarca Herodes ouviu falar de tudo o que estava acontecendo, e ficou perplexo, porque alguns diziam que João Batista tinha ressuscitado dos mortos. 8Outros diziam que Elias tinha aparecido; outros ainda, que um dos antigos profetas tinha ressuscitado. 9Então Herodes disse: 'Eu mandei degolar João. Quem é esse homem, sobre quem ouço falar essas coisas?' E procurava ver Jesus."
+    }
+  },
+  "extra": []
+}

@@ -1,0 +1,13 @@
+{
+  "name": "catecismo-catolico",
+  "version": "1.0.0",
+  "description": "Plataforma Católica Interativa",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}

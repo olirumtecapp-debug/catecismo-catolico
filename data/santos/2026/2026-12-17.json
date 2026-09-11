@@ -1,0 +1,69 @@
+{
+  "date": "2026-12-17",
+  "year": 2026,
+  "month": 12,
+  "day": 17,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/17.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-17.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-17",
+      "name": "São Daniel, profeta",
+      "normalizedName": "sao daniel, profeta",
+      "imageUrl": "./assets/img/santos/12-17-sao-daniel-profeta.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Judeu, de família nobre, foi deportado para a Babilônia (séc. VII a.C.). Pela sua sabedoria e capacidade de interpretar sonhos, tornou-se funcionário de Nabucodonosor. Profetizou a decadência do Império babilônico. Fiel à tradição dos seus pais, foi dado como alimento aos leões, mas Deus o salvou.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-17",
+      "name": "SS. Ananias, Azarias e Misael",
+      "normalizedName": "ss. ananias, azarias e misael",
+      "imageUrl": "./assets/img/santos/12-17-ss-ananias-azarias-e-misael.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Os três jovens judeus, em exílio na Babilônia (séc. VII a.C.), foram funcionários de Nabucodonosor. Ao rejeitar adorar a estátua do Rei, foram jogados em uma fornalha ardente, onde, acompanhados por um anjo, caminhavam tranquilamente entre as chamas, louvando ao Senhor.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-17",
+      "name": "São João da Mata, sacerdote, fundator dos Trinitários",
+      "normalizedName": "sao joao da mata, sacerdote, fundator dos trinitarios",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nascido na França, em 1154, foi professor de Teologia em Paris; aos 40 anos, deixou tudo e se tornou sacerdote. Com quatro eremitas, fundou a Ordem da Santíssima Trindade. Partiu para a África, com a missão de resgatar os escravos cristãos, os quais acolhia em seus abrigos. Morreu em Roma em 1213.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-17",
+      "name": "B. Jacinto Cormier, presbítero dominicano",
+      "normalizedName": "b. jacinto cormier, presbitero dominicano",
+      "imageUrl": "./assets/img/santos/12-17-b-jacinto-cormier-presbitero-dominicano.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Jacinto era um jovem noviço, um \"anjo\", mas de pouca saúde. Ao invés, teve uma vida longa. Entre os séculos XIX e XX, reformou a Ordem Dominicana. Natural de Orléans, o Papa Pio X o denominou \"Santo de Roma\" por sua fé cristalina e pela sua maravilhosa capacidade de comunicá-la aos outros.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-20",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Ez 36:23-28",
+    "psalm": "Sl 51:12-13, 14-15, 18-19",
+    "secondReading": "",
+    "gospel": "Mt 22:1-14"
+  },
+  "calendar": {
+    "date": "2026-08-20",
+    "monthDay": "8/20",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saint Bernard of Clairvaux, Abbot and Doctor of the Church",
+      "type": "MEMORIAL",
+      "quote": "The measure of loving God is to love Him without measure.",
+      "description": "A Cistercian abbot and Doctor of the Church whose preaching and writings significantly influenced medieval spirituality.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/San_Bernardo%2C_de_Juan_Correa_de_Vivar_%28Museo_del_Prado%29.jpg/500px-San_Bernardo%2C_de_Juan_Correa_de_Vivar_%28Museo_del_Prado%29.jpg"
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/08-20.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/08-20.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-08-20"
+  }
+}

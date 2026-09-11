@@ -1,0 +1,30 @@
+{
+  "date": "2026-05-27",
+  "year": 2026,
+  "month": 5,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-27",
+      "name": "São Agostinho, arcebispo de Cantuária",
+      "normalizedName": "sao agostinho, arcebispo de cantuaria",
+      "imageUrl": "./assets/img/santos/05-27-sao-agostinho-arcebispo-de-cantuaria.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/27/s--agostinho--arcebispo-de-cantuaria.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/27/s--agostinho--arcebispo-de-cantuaria.html",
+      "sourceText": "Santo Agostinho, chamado com razão, “Apóstolo da Inglaterra”, foi um abade beneditino, enviado à ilha, que havia se tornado terra de missão, após a degeneração dos costumes e a invasão dos Bárbaros. Faleceu em 604 e foi sepultado em Cantuária. Seu túmulo tornou-se, logo, meta de peregrinações.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

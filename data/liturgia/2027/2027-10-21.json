@@ -1,0 +1,23 @@
+{
+  "date": "2027-10-21",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "29a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 6,19-23",
+      "text": "Irmãos: 19Uso uma linguagem humana, por causa da vossa limitação. Outrora, oferecestes vossos membros como escravos para servirem à impureza e à sempre crescente desordem moral. Pois bem, agora, colocai vossos membros ao serviço da justiça, em vista da vossa santificação. 20Quando éreis escravos do pecado, estáveis livres em relação à justiça. 21Que fruto colhíeis, então, de ações das quais hoje vos envergonhais? Pois o fim daquelas açðes era a morte. 22Agora, porém, libertados do pecado, e como escravos de Deus, frutificais para a santidade até a vida eterna, que é a meta final. 23Com efeito, a paga do pecado é a morte, mas o dom de Deus é a vida eterna em Jesus Cristo, nosso Senhor."
+    },
+    "psalm": {
+      "reference": "Salmo responsorial 1",
+      "text": "- Feliz é todo aquele que não anda conforme os conselhos dos perversos; que não entra no caminho dos malvados, nem junto aos zombadores vai sentar-se; mas encontra seu prazer na lei de Deus e a medita, dia e noite, sem cessar.\n\n- Eis que ele é semelhante a uma árvore que à beira da torrente está plantada; ela sempre dá seus frutos a seu tempo, e jamais as suas folhas vão murchar. Eis que tudo o que ele faz vai prosperar.\n\n- Mas bem outra é a sorte dos perversos. Ao contrário, são iguais à palha seca espalhada e dispersada pelo vento. Pois Deus vigia o caminho dos eleitos, mas a estrada dos malvados leva à morte."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 49-53",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 49Eu vim para lançar fogo sobre a terra, e como gostaria que já estivesse aceso! 50Devo receber um batismo, e como estou ansioso até que isto se cumpra! 51Vós pensais que eu vim trazer a paz sobre a terra? Pelo contrário, eu vos digo, vim trazer divisão. 52Pois, daqui em diante, numa família de cinco pessoas, três ficarão divididas contra duas e duas contra três; 53ficarão divididos: o pai contra o filho e o filho contra o pai; a mãe contra a filha e a filha contra a mãe; a sogra contra a nora e a nora contra a sogra.'"
+    }
+  },
+  "extra": []
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-09",
+  "year": 2026,
+  "month": 8,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-09",
+      "name": "Santa Teresa Benedita da Cruz (Edith Stein), virgem e mártir carmelita, Padroeira da Europa",
+      "normalizedName": "santa teresa benedita da cruz (edith stein), e martir carmelita, padroeira da europa",
+      "imageUrl": "./assets/img/santos/08-09-santa-teresa-benedita-da-cruz-edith-stein-vir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/09/s--teresa-benedita-da-cruz--edith-stein---virgem-e-martir-carmel.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/09/s--teresa-benedita-da-cruz--edith-stein---virgem-e-martir-carmel.html",
+      "sourceText": "Santa Teresa Benedita da Cruz, mártir da fé, é a santa padroeira da Europa, desde 1998. A festa litúrgica de Edith Stein é celebrada pela Igreja em 9 de agosto. Filósofa e judia convertida ao catolicismo, Edith morreu nas câmaras de gás de Auschwitz, em 1942.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-09",
+      "name": "São Romão, mártir, na via Tiburtina",
+      "normalizedName": "sao romao, martir, na via tiburtina",
+      "imageUrl": "./assets/img/santos/08-09-sao-romao-martir-na-via-tiburtina.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Foi um soldado convertido pela piedade de um torturado. A história da fé deste mártir romano começou e terminou rapidamente: enquanto assistia à tortura de São Lourenço, aproveitou para se aproximar com uma jarra de água e pediu-lhe o Batismo. Foi chicoteado e, gritando \"sou cristão!\", morreu.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-06-14",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "11o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Êxodo 19,2-6",
+      "text": "Naqueles dias, os israelitas, 2partindo de Rafidim, chegaram ao deserto do Sinai, onde acamparam. Israel armou ali suas tendas, defronte da montanha. 3Moisés, então, subiu ao encontro de Deus. O Senhor chamou-o do alto da montanha, e disse: 'Assim deverás falar à casa de Jacó e anunciar aos filhos de Israel: 4Vistes o que fiz aos egípcios, e como vos levei sobre asas de águia e vos trouxe a mim. 5Portanto, se ouvirdes a minha voz e guardardes a minha aliança, sereis para mim a porção escolhida dentre todos os povos, porque minha é toda a terra. 6aE vós sereis para mim um reino de sacerdotes e uma nação santa."
+    },
+    "psalm": {
+      "reference": "Salmo 99 (100)",
+      "text": "- Aclamai o Senhor, ó terra inteira, servi ao Senhor com alegria, ide a ele cantando jubilosos!\n\n- Sabei que o Senhor, só ele, é Deus, Ele mesmo nos fez, e somos seus, nós somos seu povo e seu rebanho.\n\n- Sim, é bom o Senhor e nosso Deus, sua bondade perdura para sempre, seu amor é fiel eternamente!"
+    },
+    "secondReading": {
+      "reference": "Romanos 5,6-11",
+      "text": "Irmãos: 6Quando éramos ainda fracos, Cristo morreu pelos ímpios, no tempo marcado. 7Dificilmente alguém morrerá por um justo; por uma pessoa muito boa, talvez alguém se anime a morrer. 8Pois bem, a prova de que Deus nos ama é que Cristo morreu por nós, quando éramos ainda pecadores. 9Muito mais agora, que já estamos justificados pelo sangue de Cristo, seremos salvos da ira por ele. 10Quando éramos inimigos de Deus, fomos reconciliados com ele pela morte do seu Filho; quanto mais agora, estando já reconciliados, seremos salvos por sua vida! 11Ainda mais: Nós nos gloriamos em Deus, por nosso Senhor Jesus Cristo. É por ele que, já desde o tempo presente, recebemos a reconciliação."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 9, 36-10, 8",
+      "text": "Naquele tempo: 36Vendo Jesus as multidões, compadeceu-se delas, porque estavam cansadas e abatidas, como ovelhas que não têm pastor. Então disse a seus discípulos: 37'A Messe é grande, mas os trabalhadores são poucos. 38Pedi pois ao dono da messe que envie trabalhadores para a sua colheita!' 10,1Jesus chamou os doze discípulos e deu-lhes poder para expulsarem os espíritos maus e para curarem todo tipo de doença e enfermidade. 2Estes são os nomes dos doze apóstolos: primeiro, Simão chamado Pedro, e André, seu irmão; Tiago, filho de Zebedeu, e seu irmão João; 3Filipe e Bartolomeu; Tomé e Mateus, o cobrador de impostos; Tiago, filho de Alfeu, e Tadeu; 4Simão, o Zelota, e Judas Iscariotes, que foi o traidor de Jesus. 5Jesus enviou estes Doze, com as seguintes recomendações: 'Não deveis ir aonde moram os pagãos, nem entrar nas cidades dos samaritanos! 6Ide, antes, às ovelhas perdidas da casa de Israel! 7Em vosso caminho, anunciai: O Reino dos Céus está próximo'. 8Curai os doentes, ressuscitai os mortos, purificai os leprosos, expulsai os demônios. De graça recebestes, de graça deveis dar!"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João Crisóstomo <br/>",
+    "</b>",
+    "Presbítero de Antioquia, Bispo de Constantinopla, Doutor da Igreja<br/>",
+    "Homilia sobre a seara grande, 10,2-3; PG 63, 519-521<br/>",
+    "«A seara é grande»<br/>",
+    "Todos os trabalhos do agricultor vão naturalmente dar à colheita. Então porque foi que Cristo disse que a colheita ainda estava no começo? A idolatria reinava em toda a Terra. [...] Por todo o lado se praticava a fornicação, o adultério, o deboche, a cupidez, roubos e guerras. [...] A Terra estava cheia de muitos males! Nenhuma semente tinha ainda sido lançada. Os espinhos, os cardos e as ervas daninhas que cobriam o chão ainda não tinham sido arrancados. Não se tinha ainda puxado qualquer charrua nem traçado um sulco.<br/>",
+    "Então como é que Jesus pode afirmar que a seara é grande? [...] Os apóstolos terão, muito provavelmente, ficado desconcertados: «Como poderemos sequer abrir a boca e manter-nos de pé diante de tantos homens? Como poderemos nós, os Onze, corrigir todos os habitantes da Terra? Saberemos, nós que somos tão ignorantes, abordar os sábios; nós, que nada temos, confrontar homens armados; nós, que somos subordinados, enfrentar as autoridades? Nós que apenas sabemos uma língua, seremos capazes de discutir com os povos bárbaros, que falam outras línguas? Quem nos ouvirá, se nem compreendem o que dizemos?»<br/>",
+    "Jesus não quer que estes raciocínios os mergulhem na confusão. Por isso, quando afirma que o evangelho é uma seara, é como se lhes dissesse: «Está tudo preparado. Eu envio-vos a colher o trigo maduro; podereis semear e colher no mesmo dia». Quando o agricultor sai de sua casa para ir fazer a ceifa, transborda de alegria e resplandece de felicidade. Não contempla as dores nem as dificuldades que poderá encontrar. [...] «Emprestai-me a vossa língua», diz Cristo, «e vereis o trigo maduro entrar nos celeiros do rei». E acrescenta: «Eu estarei sempre convosco até ao fim dos tempos» (Mt 28,20).<br/>"
+  ]
+}

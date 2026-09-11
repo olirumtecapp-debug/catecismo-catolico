@@ -1,0 +1,23 @@
+{
+  "date": "2027-04-03",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana da Pascoa 7o. dia da Oitava de Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 4,13-21",
+      "text": "Naqueles dias, os chefes dos sacerdotes, os anciãos e os escribas 13ficaram admirados ao ver a segurança com que Pedro e João falavam, pois eram pessoas simples e sem instrução. Reconheciam que eles tinham estado com Jesus. 14No entanto viam, de pé, junto a eles, o homem que tinha sido curado. E não podiam dizer nada em contrário. 15Mandaram que saíssem para fora do sinédrio e começaram a discutir entre si: 16\"O que vamos fazer com esses homens? Eles realizaram um milagre claríssimo, e o fato tornou-se de tal modo conhecido por todos os habitantes de Jerusalém, que não podemos negá-lo. 17Contudo, a fim de que a coisa não se espalhe ainda mais entre o povo, vamos ameaçá-los, para que não falem mais a ninguém a respeito do nome de Jesus\". 18Chamaram de novo Pedro e João e ordenaram-lhes que, de modo algum, falassem ou ensinassem em nome de Jesus. 19Pedro e João responderam: \"Julgai vós mesmos se é justo, diante de Deus, que obedeçamos a vós e não a Deus! 20Quanto a nós, não nos podemos calar sobre o que vimos e ouvimos\". 21Então, insistindo em suas ameaças, deixaram Pedro e João em liberdade, já que não tinham meio de castigá-los, por causa do povo. Pois todos glorificavam a Deus pelo que havia acontecido."
+    },
+    "psalm": {
+      "reference": "Salmo 117 (118)",
+      "text": "- Dai graças ao Senhor, porque ele é bom! \"Eterna é a sua misericórdia!\" O Senhor é minha força e o meu canto e tornou-se para mim o salvador. \"Clamores de alegria e de vitória ressoem pelas tendas dos fiéis.\n\n- A mão direita do Senhor fez maravilhas, a mão direita do Senhor me levantou, a mão direita do Senhor fez maravilhas!\" O Senhor severamente me provou, mas não me abandonou às mãos da morte.\n\n- Abri-me, vós, abri-me as portas da justiça; quero entrar para dar graças ao Senhor! \"Sim, esta é a porta do Senhor, por ela só os justos entrarão!\" Dou-vos graças, ó Senhor, porque me ouvistes e vos tornastes para mim o salvador!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 16, 9-15",
+      "text": "9Depois de ressuscitar, na madrugada do primeiro dia após o sábado, Jesus apareceu primeiro a Maria Madalena, da qual havia expulsado sete demônios. 10Ela foi anunciar isso aos seguidores de Jesus, que estavam de luto e chorando. 11Quando ouviram que ele estava vivo e fora visto por ela, não quiseram acreditar. 12Em seguida, Jesus apareceu a dois deles, com outra aparência, enquanto estavam indo para o campo. 13Eles também voltaram e anunciaram isso aos outros. Também a estes não deram crédito. 14Por fim, Jesus apareceu aos onze discípulos enquanto estavam comendo, repreendeu-os por causa da falta de fé e pela dureza de coração, porque não tinham acreditado naqueles que o tinham visto ressuscitado. 15E disse-lhes: \"Ide pelo mundo inteiro e anunciai o evangelho a toda criatura!\""
+    }
+  },
+  "extra": []
+}

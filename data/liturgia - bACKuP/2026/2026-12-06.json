@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-06",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "Is 40:1-5, 9-11",
+    "psalm": "Sl 85:9-10-11-12, 13-14",
+    "secondReading": "2Pe 3:8-14",
+    "gospel": "Mc 1:1-8"
+  },
+  "calendar": {
+    "date": "2026-12-06",
+    "monthDay": "12/6",
+    "season": "Advent",
+    "celebration": {
+      "name": "2nd Sunday of Advent",
+      "type": "SUNDAY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-06.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-06.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-06"
+  }
+}

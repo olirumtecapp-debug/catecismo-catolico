@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-30",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 13:13-25",
+    "psalm": "Sl 89:2-3, 21-22, 25 and 27",
+    "secondReading": "",
+    "gospel": "Jo 13:16-20"
+  },
+  "calendar": {
+    "date": "2026-04-30",
+    "monthDay": "4/30",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint Pius V, Pope",
+      "type": "OPT_MEMORIAL",
+      "quote": "God does not ask of you mere ordinary virtue. He demands downright perfection!",
+      "description": "A Dominican Pope who implemented the reforms of the Council of Trent and standardized the Roman Missal.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-30.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-30.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-30"
+  }
+}

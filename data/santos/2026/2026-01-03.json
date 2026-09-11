@@ -1,0 +1,69 @@
+{
+  "date": "2026-01-03",
+  "year": 2026,
+  "month": 1,
+  "day": 3,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/03.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-03.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-03",
+      "name": "São Antero, papa",
+      "normalizedName": "sao antero, papa",
+      "imageUrl": "./assets/img/santos/01-03-sao-antero-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origens gregas, Antero foi Papa por apenas 40 dias. Foi martirizado em 236, sob o império de Maximino Trácio, por ter mandado inserir os Anais dos Mártires nos Arquivos da Igreja de Roma, para não serem dispersos. Foi o primeiro Papa a ser sepultado nas Catacumbas de São Calixto.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-03",
+      "name": "Santa Genoveva, virgem",
+      "normalizedName": "santa genoveva,",
+      "imageUrl": "./assets/img/santos/01-03-santa-genoveva-virgem.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/03/s--genoveva--virgem.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/03/s--genoveva--virgem.html",
+      "sourceText": "Genoveva viveu em Paris, por volta do ano 500. Filha de nobres galo-românicos, bem cedo escolheu para si a vida ascética das virgens consagradas ao invés do matrimônio. Tocada pela graça, foi mística e curandeira. Em torno dela, respirava-se odor de santidade. Genoveva é padroeira de Paris.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-03",
+      "name": "São José M. Tomasi, presbítero teatino, cardeal",
+      "normalizedName": "sao jose m. tomasi, presbitero teatino, cardeal",
+      "imageUrl": "./assets/img/santos/01-03-sao-jose-m-tomasi-presbitero-teatino-cardeal.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "José Maria Tomasi nasceu na região da Licata, em 1649, em uma nobre família siciliana de Lampedusa. Renunciou ao título em prol do irmão e tornou-se religioso teatino. Precursor da Reforma Litúrgica, foi nomeado Cardeal pelo Papa Clemente XI, em 1712. João Paulo II o proclamou Santo em 1986.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-03",
+      "name": "São Telésforo, papa e mártir",
+      "normalizedName": "sao telesforo, papa e martir",
+      "imageUrl": "./assets/img/santos/01-03-sao-telesforo-papa-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origens gregas, Telésforo nasceu na região da Calábria. Foi anacoreta no Egito e Palestina e Papa de 125 a 136. Instituiu a Missa do Galo, com o canto “Gloria in excelsis Deo”, como também o jejum quaresmal e a celebração da Páscoa no domingo. Combateu o gnosticismo e morreu como mártir.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

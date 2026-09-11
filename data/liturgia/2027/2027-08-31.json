@@ -1,0 +1,23 @@
+{
+  "date": "2027-08-31",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "22a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Tessalonicenses 5,1-6.9-11",
+      "text": "1Quanto ao tempo e à hora, meus irmãos, não há por que vos escrever. 2Vós mesmos sabeis perfeitamente que o dia do Senhor virá como ladrão, de noite. 3Quando as pessoas disserem: 'Paz e segurança!', então de repente sobrevirá a destruição, como as dores de parto sobre a mulher grávida. E não poderão escapar. 4Mas vós, meus irmãos, não estais nas trevas, de modo que esse dia vos surpreenda como um ladrão. 5Todos vós sois filhos da luz e filhos do dia. Não somos da noite, nem das trevas. 6Portanto, não durmamos, como os outros, mas sejamos vigilantes e sóbrios. 9Deus não nos destinou para a ira, mas para alcançarmos a salvação, por meio de nosso Senhor Jesus Cristo. 10Ele morreu por nós, para que, quer vigiando nesta vida, quer adormecidos na morte, alcancemos a vida junto dele. 11Por isso, exortai-vos e edificai-vos uns aos outros como já costumais fazer."
+    },
+    "psalm": {
+      "reference": "Salmo 95 (96)",
+      "text": "- O Senhor é minha luz e salvação; de quem eu terei medo? O Senhor é a proteção da minha vida; perante quem eu tremerei?\n\n- Ao Senhor eu peço apenas uma coisa, e é só isto que eu desejo: habitar no santuário do Senhor por toda a minha vida; saborear a suavidade do Senhor e contemplá-lo no seu templo.\n\n- Sei que a bondade do Senhor eu hei de ver na terra dos viventes. Espera no Senhor e tem coragem, espera no Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 4, 31-37",
+      "text": "Naquele tempo: 31Jesus desceu a Cafarnaum, cidade da Galiléia, e aí ensinava-os aos sábados. 32As pessoas ficavam admiradas com o seu ensinamento, porque Jesus falava com autoridade. 33Na sinagoga, havia um homem possuído pelo espírito de um demônio impuro, que gritou em alta voz: 34'O que queres de nós, Jesus Nazareno? Vieste para nos destruir? Eu sei quem tu és: tu és o Santo de Deus!' 35Jesus o ameaçou, dizendo: 'Cala-te, e sai dele!' Então o demônio lançou o homem no chão, saiu dele, e não lhe fez mal nenhum. 36O espanto se apossou de todos e eles comentavam entre si: 'Que palavra é essa? Ele manda nos espíritos impuros, com autoridade e poder, e eles saem.' 37E a fama de Jesus se espalhava em todos os lugares da redondeza."
+    }
+  },
+  "extra": []
+}

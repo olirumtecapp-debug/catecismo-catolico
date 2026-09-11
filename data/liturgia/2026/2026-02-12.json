@@ -1,0 +1,23 @@
+{
+  "date": "2026-02-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Reis 11,4-13",
+      "text": "4Quando Salomão ficou velho, suas mulheres desviaram o seu coração para outros deuses e seu coração já não pertencia inteiramente ao Senhor, seu Deus, como o do seu pai, Davi. 5Salomão prestou culto a Astarte, deusa dos sidônios, e a Melcom, ídolo dos amonitas. 6Ele fez o que desagrada ao Senhor e não lhe foi inteiramente fiel, como seu pai, Davi. 7Foi então que Salomão construiu um santuário para Camos, ídolo de Moab, no monte que está defronte de Jerusalém, e para Melcom, ídolo dos amonitas. 8Fez o mesmo para todas as suas mulheres estrangeiras, as quais queimavam incenso e ofereciam sacrifícios aos seus deuses. 9Então, o Senhor irritou-se contra Salomão, porque o seu coração tinha se desviado do Senhor, Deus de Israel, que lhe tinha aparecido duas vezes 10e lhe proibira expressamente seguir a outros deuses. Mas ele não obedeceu à ordem do Senhor. 11E o Senhor disse a Salomão: \"Já que procedeste assim e não guardaste a minha aliança nem as leis que te prescrevi, vou tirar-te o reino e dá-lo a um teu servo. 12Mas, por amor de teu pai, Davi, não o farei durante a tua vida; é da mão de teu filho que o arrebatarei. 13Não te tirarei o reino todo, mas deixarei ao teu filho uma tribo, por consideração para com meu servo Davi e para com Jerusalém, que escolhi\"."
+    },
+    "psalm": {
+      "reference": "Salmo 105 (106)",
+      "text": "- Felizes os que guardam seus preceitos e praticam a justiça em todo o tempo! Lembrai-vos, ó Senhor, de mim, lembrai-vos, pelo amor que demonstrais ao vosso povo!\n\n- Misturaram-se, então, com os pagãos e aprenderam seus costumes depravados. Aos ídolos pagãos prestaram culto, que se tornaram armadilha para eles.\n\n- Pois imolaram até mesmo os próprios filhos, sacrificaram suas filhas aos demônios. Acendeu-se a ira de Deus contra o seu povo, e o Senhor abominou a sua herança."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 7, 24-30",
+      "text": "Naquele tempo, 24Jesus saiu e foi para a região de Tiro e Sidônia. Entrou numa casa e não queria que ninguém soubesse onde ele estava. Mas não conseguiu ficar escondido. 25Uma mulher, que tinha uma filha com um espírito impuro, ouviu falar de Jesus. Foi até ele e caiu a seus pés. 26A mulher era pagã, nascida na Fenícia da Síria. Ela suplicou a Jesus que expulsasse de sua filha o demônio. 27Jesus disse: \"Deixa primeiro que os filhos fiquem saciados, porque não está certo tirar o pão dos filhos e jogá-lo aos cachorrinhos\". 28A mulher respondeu: \"É verdade, Senhor; mas também os cachorrinhos, debaixo da mesa, comem as migalhas que as crianças deixam cair\". 29Então Jesus disse: \"Por causa do que acabas de dizer, podes voltar para casa. O demônio já saiu de tua filha\". 30Ela voltou para casa e encontrou sua filha deitada na cama, pois o demônio já havia saído dela."
+    }
+  },
+  "extra": []
+}

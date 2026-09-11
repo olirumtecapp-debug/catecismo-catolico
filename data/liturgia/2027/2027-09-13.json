@@ -1,0 +1,33 @@
+{
+  "date": "2027-09-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Joao Crisostomo",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Timóteo 2,1-8",
+      "text": "Caríssimo: 1Antes de tudo, recomendo que se façam preces e orações, súplicas e ações de graças, por todos os homens; 2pelos que governam e por todos que ocupam altos cargos, a fim de que possamos levar uma vida tranqüila e serena, com toda piedade e dignidade. 3Isto é bom e agradável a Deus, nosso Salvador; 4ele quer que todos os homens sejam salvos e cheguem ao conhecimento da verdade. 5Pois há um só Deus, e um só mediador entre Deus e os homens: o homem Cristo Jesus, 6que se entregou em resgate por todos. Este é o testemunho dado no tempo estabelecido por Deus, 7e para este testemunho eu fui designado pregador e apóstolo, e - falo a verdade, não minto - mestre das nações pagós na fé e na verdade. 8Quero, portanto, que em todo lugar os homens façam a oração, erguendo mãos santas, sem ira e sem discussões."
+    },
+    "psalm": {
+      "reference": "Salmo 27 (28)",
+      "text": "- Escutai o meu clamor, a minha súplica, quando eu grito para vós; quando eu elevo, ó Senhor, as minhas mãos para o vosso santuário.\n\n- Minha força e escudo é o Senhor; meu coração nele confia. Ele ajudou-me e alegrou meu coração; eu canto em festa o seu louvor.\n\n- O Senhor é a fortaleza do seu povo e a salvação do seu Ungido. Salvai o vosso povo e libertai-o; abençoai a vossa herança! Sede vós o seu pastor e o seu guia pelos séculos eternos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 7, 1-10",
+      "text": "Naquele tempo: 1Quando acabou de falar ao povo que o escutava, Jesus entrou em Cafarnaum. 2Havia lá um oficial romano que tinha um empregado a quem estimava muito, e que estava doente, à beira da morte. 3O oficial ouviu falar de Jesus e enviou alguns anciãos dos judeus, para pedirem que Jesus viesse salvar seu empregado. 4Chegando onde Jesus estava, pediram-lhe com insistência: 'O oficial merece que lhe faças este favor, 5porque ele estima o nosso povo. Ele até nos construiu uma sinagoga.' 6Então Jesus pôs-se a caminho com eles. Porém, quando já estava perto da casa, o oficial mandou alguns amigos dizerem a Jesus: 'Senhor, não te incomodes, pois não sou digno de que entres em minha casa. 7Nem mesmo me achei digno de ir pessoalmente ao teu encontro. Mas ordena com a tua palavra, e o meu empregado ficará curado. 8Eu também estou debaixo de autoridade, mas tenho soldados que obedecem às minhas ordens. Se ordeno a um : 'Vai!', ele vai; e a outro: 'Vem!', ele vem; e ao meu empregado 'Faze isto!', e ele o faz'.' 9Ouvindo isso, Jesus ficou admirado. Virou-se para a multidão que o seguia, e disse: 'Eu vos declaro que nem mesmo em Israel encontrei tamanha fé.' 10Os mensageiros voltaram para a casa do oficial e encontraram o empregado em perfeita saúde."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja<br/>",
+    "Sermão 62<br/>",
+    "«Senhor, não mereço que entres em minha casa»<br/>",
+    "Na leitura do Evangelho, ouvimos Jesus louvar a nossa fé, associada à humildade. Quando prometeu ir a casa do centurião curar-lhe o servo, este respondeu: «Não mereço que entres em minha casa [...]. Mas diz uma palavra e o meu servo será curado». Ao considerar-se indigno, revela-se digno - digno não só de que Cristo entre em sua casa, mas também no seu coração. [...]<br/>",
+    "Pois não teria sido para ele grande alegria se o Senhor Jesus tivesse entrado em sua casa sem entrar no seu coração. Com efeito, Cristo, Mestre de humildade pelo seu exemplo e pelas suas palavras, sentou-Se à mesa em casa de um fariseu orgulhoso chamado Simão (Lc 7,36ss.); mas, embora Se sentasse à sua mesa, não entrou no seu coração: aí, «o Filho do Homem não tinha onde reclinar a cabeça» (Lc 9,58). Pelo contrário, não entra em casa do centurião, mas entra no seu coração. [...]<br/>",
+    "Por conseguinte, é a fé unida à humildade que o Senhor elogia neste centurião. Quando este diz: «Não mereço que entres em minha casa», o Senhor responde: «Digo-vos que nem mesmo em Israel encontrei tão grande fé». [...] O Senhor veio ao povo de Israel segundo a carne, para procurar primeiramente neste povo a sua ovelha perdida (cf Lc 15,4). [...] Nós, como homens, não podemos medir a fé dos homens. Foi Aquele que vê o fundo dos corações, Aquele a quem ninguém engana, que testemunhou como era o coração deste homem; ao ouvir as suas palavras repletas de humildade, responde-lhe com uma palavra que cura.<br/>"
+  ]
+}

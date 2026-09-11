@@ -1,0 +1,32 @@
+{
+  "date": "2027-10-22",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "29a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 7,18-25",
+      "text": "Irmãos: 18Estou ciente que o bem não habita em mim, isto é, na minha carne. Pois eu tenho capacidade de querer o bem, mas não de realizá-lo. 19Com efeito, não faço o bem que quero, mas faço o mal que não quero. 20Ora, se faço aquilo que não quero, então já não sou eu que estou agindo, mas o pecado que habita em mim. 21Portanto, descubro em mim esta lei: Quando quero fazer o bem, é o mal que se me apresenta. 22Como homem interior ponho toda a minha satisfaçóo na lei de Deus; 23mas sinto em meus membros outra lei, que luta contra a lei da minha razão e me aprisiona na lei do pecado, essa lei que está em meus membros. 24Infeliz que eu sou! Quem me libertará deste corpo de morte? 25aGraças sejam dadas a Deus, por Jesus Cristo, nosso Senhor."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Dai-me bom senso, retidóo, sabedoria, pois tenho fé nos vossos santos mandamentos!\n\n- Porque sois bom e realizais somente o bem, ensinai-me a fazer vossa vontade!\n\n- Vosso amor seja um consolo para mim, conforme a vosso servo prometestes.\n\n- Venha a mim o vosso amor e viverei, porque tenho em vossa lei o meu prazer!\n\n- Eu jamais esquecerei vossos preceitos, por meio deles conservais a minha vida.\n\n- Vinde salvar-me, ó Senhor, eu vos pertenço! Porque sempre procurei vossa vontade."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 54-59",
+      "text": "Naquele tempo: 54Jesus dizia às multidões: 'Quando vedes uma nuvem vinda do ocidente, logo dizeis que vem chuva. E assim acontece. 55Quando sentis soprar o vento do sul, logo dizeis que vai fazer calor. E assim acontece. 56Hipócritas! Vós sabeis interpretar o aspecto da terra e do céu. Como é que não sabeis interpretar o tempo presente? 57Por que não julgais por vós mesmos o que é justo? 58Quando, pois, tu vais com o teu adversário apresentar-te diante do magistrado, procura resolver o caso com ele enquanto estais a caminho. Senão ele te levará ao juiz, o juiz te entregará ao guarda, e o guarda te jogará na cadeia. 59Eu te digo: daí tu não sairás, enquanto não pagares o último centavo.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João XXIII (1881-1963), Papa<br/>",
+    "</b>",
+    "Discurso na abertura do Concílio Vaticano II, 11/10/1962, §§ 2-4<br/>",
+    "Discernir os sinais dos tempos: um grande tema do Concílio Vaticano II<br/>",
+    "No exercício quotidiano do nosso ministério pastoral, ferem nossos ouvidos sugestões de almas, ardorosas sem dúvida no zelo, mas não dotadas de grande sentido de discrição e moderação. Nos tempos atuais, elas não veem senão prevaricações e ruínas; vão repetindo que a nossa época, em comparação com as passadas, foi piorando; e portam-se como quem nada aprendeu da história, que é também mestra da vida, e como se no tempo dos concílios ecuménicos precedentes tudo fosse triunfo completo da ideia e da vida cristã, e da justa liberdade religiosa.<br/>",
+    "Parece-nos que devemos discordar desses profetas da desventura, que anunciam acontecimentos sempre infaustos, como se estivesse iminente o fim do mundo.<br/>",
+    "No presente momento histórico, a Providência está a levar-nos para uma nova ordem de relações humanas, que, por obra dos homens e o mais das vezes para além do que eles esperam, se dirigem para o cumprimento de desígnios superiores e inesperados; e tudo, mesmo as adversidades humanas, dispõe para o bem maior da Igreja.<br/>"
+  ]
+}

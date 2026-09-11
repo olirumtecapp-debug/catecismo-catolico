@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-31",
+  "year": 2026,
+  "month": 8,
+  "day": 31,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/31.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-31.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-31",
+      "name": "São Raimundo Nonato, cardeal, sacerdote mercedário",
+      "normalizedName": "sao raimundo nonato, cardeal, sacerdote mercedario",
+      "imageUrl": "./assets/img/santos/08-31-sao-raimundo-nonato-cardeal-sacerdote-merceda.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Extraído vivo do seio da sua mãe sem vida, recebeu sobrenome de Nonato, ou seja, \"não nascido\". Entrou para a Congregação dos Mercedários, por volta de 1224, e partiu para a Argélia, onde foi preso e proibido de pregar. Voltando para a Espanha, Gregório IX o convocou a Roma, onde faleceu em 1240.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "name": "SS. José de Arimateia e Nicodemos, discípulos do Senhor",
+      "normalizedName": "ss. jose de arimateia e nicodemos, discipulos do senhor",
+      "imageUrl": "./assets/img/santos/08-31-ss-jose-de-arimateia-e-nicodemos-discipulos-d.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/31/ss--jose-de-arimateia-e-nicodemos--discipulos-do-senhor.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/31/ss--jose-de-arimateia-e-nicodemos--discipulos-do-senhor.html",
+      "sourceText": "A Liturgia celebra São José de Arimateia e São Nicodemos no mesmo dia. Segundo o Evangelho, ambos desceram o Corpo de Jesus da cruz, envolvem-no em um linho sagrado e o sepultaram. O primeiro era um ilustre membro do Sinédrio; o segundo, um fariseu que defendeu Jesus diante dos Sacerdotes.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "name": "B. Alfredo Ildefonso Schuster, cardeal, arcebispo de Milão",
+      "normalizedName": "b. alfredo ildefonso schuster, cardeal, arcebispo de milao",
+      "imageUrl": "./assets/img/santos/08-31-b-alfredo-ildefonso-schuster-cardeal-arcebisp.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/31/b--alfredo-ildefonso-schuster--cardeal--arcebispo-de-milao.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/31/b--alfredo-ildefonso-schuster--cardeal--arcebispo-de-milao.html",
+      "sourceText": "Ildefonso, romano e de formação beneditina, tornou-se sacerdote, foi nomeado Arcebispo de Milão e criado Cardeal por Pio XI. Era um ótimo pastor, durante os anos difíceis da guerra, sempre próximo ao seu povo. O Beato Alfredo faleceu em 1954, no seminário Venegono, que havia ajudado a construir.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

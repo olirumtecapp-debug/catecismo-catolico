@@ -1,0 +1,29 @@
+{
+  "date": "2026-06-29",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "13a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Amós 2,6-10.13-16",
+      "text": "6Isto diz o Senhor: \"Pelos três crimes de Israel, pelos seus quatro crimes, não retirarei a palavra: porque eles vendem o justo por dinheiro e o indigente, pelo preço de um par de chinelos; 7pisam, na poeira do chão, a cabeça dos pobres e impedem o progresso dos humildes; filho e pai vão à mesma mulher, profanando meu santo nome; 8deitando-se junto a qualquer altar, usando roupas que foram entregues em penhor, bebem vinho, à custa de pessoas multadas, na casa de Deus. 9Entretanto, eu tinha aniquilado, diante deles, os amorreus, homens espadaúdos como cedros e robustos como carvalhos, destruindo-lhes os frutos na ramada e arrancando-lhes as raízes. 10Fui eu que vos fiz sair da terra do Egito e vos guiei pelo deserto, durante quarenta anos, para ocupardes a terra dos amorreus. 13Pois bem, eu vos calcarei aos pés como calca o chão a carroça carregada de feixes; 14o mais ágil não conseguirá fugir, o mais forte não achará força, o valente não salvará a vida; 15o arqueiro não resistirá de pé, o corredor veloz não terá pernas para escapar, nem se salvará o cavaleiro; 16o mais corajoso dentre os corajosos fugirá nu naquele dia\", diz o Senhor."
+    },
+    "psalm": {
+      "reference": "Salmo 49 (50)",
+      "text": "- \"Como ousas repetir os meus preceitos e trazer minha aliança em tua boca? Tu que odiaste minhas leis e meus conselhos e deste as costas às palavras dos meus lábios!\n\n- Quando vias um ladrão, tu o seguias e te juntavas ao convívio dos adúlteros. Tua boca se abriu para a maldade e tua língua maquinava a falsidade.\n\n- Assentado, difamavas teu irmão, e ao filho de tua mãe injuriavas. Diante disso que fizeste, eu calarei? Acaso pensas que eu sou igual a ti? É disso que te acuso e repreendo e manifesto essas coisas aos teus olhos.\n\n- Entendei isto, todos vós que esqueceis Deus, para que eu não arrebate a vossa vida, sem que haja mais ninguém para salvar-vos! Quem me oferece um sacrifício de louvor, este, sim, é que me honra de verdade. A todo homem que procede retamente eu mostrarei a salvação que vem de Deus.\""
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 8, 18-22",
+      "text": "Naquele tempo, 18vendo uma multidão ao seu redor, Jesus mandou passar para a outra margem do lago. 19Então um mestre da lei aproximou-se e disse: \"Mestre, eu te seguirei aonde quer que tu vás\". 20Jesus lhe respondeu: \"As raposas têm suas tocas e as aves dos céus têm seus ninhos; mas o Filho do homem não tem onde reclinar a cabeça\". 21Um outro dos discípulos disse a Jesus: \"Senhor, permite-me que primeiro eu vá sepultar meu pai\". 22Mas Jesus lhe respondeu: \"Segue-me e deixa que os mortos sepultem os seus mortos\"."
+    }
+  },
+  "extra": [
+    "Comentário por São Leão Magno, Papa e Doutor da Igreja<br/>",
+    "Sermão 95, 2-3; PL 54, 461-462<br/>",
+    "A pobreza que enriquece<br/>",
+    "«Felizes os pobres em espírito, porque deles é o reino dos Céus» (Mt 5,3). [...] Depois do Senhor, os primeiros a dar-nos exemplo desta pobreza generosa foram os apóstolos. Deixando sem hesitar todos os seus bens ao ouvirem o chamamento do Divino Mestre, converteram-se alegremente e abandonaram a pesca de peixes para se tornarem pescadores de homens (Mt 4,18s). Entre estes homens, foram muitos os que se lhes assemelharam, imitando a sua fé; os primeiros filhos da Igreja «tinham um só coração e uma só alma» (At 4,32). Despojados de todas as suas posses, tinham sido enriquecidos com bens eternos graças à santa pobreza. Acolhendo a pregação dos apóstolos, alegravam-se por nada terem neste mundo e tudo possuírem em Cristo (cf 2Cor 6,10).<br/>",
+    "Certo dia em que o apóstolo Pedro subia ao Templo, houve um coxo que lhe pediu esmola. «Não tenho ouro nem prata», respondeu-lhe Pedro, «mas dou-te o que tenho: em nome de Jesus de Nazaré, levanta-te e anda» (At 3,6). [...] Pedro curou-o com a sua palavra. Não tendo moedas com a efígie de César, restaurou naquele homem a imagem de Cristo. A riqueza deste tesouro não socorreu apenas aquele a quem foi devolvida a capacidade de andar, mas também os cinco mil homens que acreditaram na pregação do apóstolo por causa deste milagre (cf At 4,4). E Pedro, o pobre que nada tinha para dar a quem lhe pedia esmola, deu a graça divina com tal largueza, que, não se contentando em voltar a pôr um homem de pé, curou o coração de milhares de homens, dando-lhes a fé.<br/>"
+  ]
+}

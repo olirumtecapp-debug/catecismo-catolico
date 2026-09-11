@@ -1,0 +1,30 @@
+{
+  "date": "2026-12-11",
+  "year": 2026,
+  "month": 12,
+  "day": 11,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/11.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-11.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-11",
+      "name": "São Dâmaso I, papa",
+      "normalizedName": "sao damaso i, papa",
+      "imageUrl": "./assets/img/santos/12-11-sao-damaso-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Graças a São Dâmaso, Papa de 366 a 384, a memória de tantos mártires não caiu no esquecimento. Todo túmulo encontrado era adornado com uma epígrafe, que descrevia os feitos do falecido. Defendeu, com força, a primazia de Pedro e encomendou a Jerônimo a tradução da Bíblia para o latim.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

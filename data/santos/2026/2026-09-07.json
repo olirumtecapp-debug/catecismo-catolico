@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-07",
+  "year": 2026,
+  "month": 9,
+  "day": 7,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/07.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-07.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-07",
+      "name": "Santa Regina, virgem e mártir",
+      "normalizedName": "santa regina, e martir",
+      "imageUrl": "./assets/img/santos/09-07-santa-regina-virgem-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Alise, Regina era filha de Olíbrio, um dos governadores da Gália, no século III. Órfã de mãe, Regina converteu-se ao cristianismo e sofreu o martírio pelo seu próprio pai, que era pagão. Ele preferiu matá-la, ainda muito jovem, do que passar vergonha por ter uma filha cristã.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-18",
+  "year": 2026,
+  "month": 2,
+  "day": 18,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/18.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-18.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-18",
+      "name": "B. João de Fiesole (Fra Angélico), sacerdote dominicano",
+      "normalizedName": "b. joao de fiesole (fra angelico), sacerdote dominicano",
+      "imageUrl": "./assets/img/santos/02-18-b-joao-de-fiesole-fra-angelico-sacerdote-domi.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/18/b--joao-de-fiesole--fra-angelico---sacerdote-dominicano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/18/b--joao-de-fiesole--fra-angelico---sacerdote-dominicano.html",
+      "sourceText": "O Beato Angélico, proclamado Padroeiro Universal dos Artistas, por João Paulo II, encontra-se entre os máximos pintores de todos os tempos. Este Frei Dominicano praticava a arte de pregar com o pincel o que contemplava na alma. O Beato Angélico é celebrado pela Igreja no dia 18 de fevereiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

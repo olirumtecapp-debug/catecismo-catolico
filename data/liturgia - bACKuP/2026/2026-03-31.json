@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-31",
+  "season": "Holy Week",
+  "readings": {
+    "firstReading": "Is 49:1-6",
+    "psalm": "Sl 71:1-2, 3-4a, 5ab-6ab, 15 and 17",
+    "secondReading": "",
+    "gospel": "Jo 13:21-33, 36-38"
+  },
+  "calendar": {
+    "date": "2026-03-31",
+    "monthDay": "3/31",
+    "season": "Holy Week",
+    "celebration": {
+      "name": "Tuesday of Holy Week",
+      "type": "HOLY_WEEK",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-31.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-31.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-31"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2027-06-05",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Imaculado Coracao de Maria",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Tobias 12,1.5-15.20",
+      "text": "Naqueles dias: 1Tobit chamou Tobias, seu filho, e disse-lhe: 'Filho, paguemos o salário ao homem que viajou contigo, acrescentando uma gratificação. 5Tobias chamou, pois, o anjo e disse-lhe: 'Recebe como salário a metade de tudo o que trouxeste ao voltar, e vai em paz'. 6Então Rafael chamou os dois à parte e disse-lhes: 'Bendizei a Deus e dai-lhe graças, diante de todos os viventes, pelos benefícios que vos concedeu. Bendizei e cantai o seu nome. Manifestai a todos os homens as obras de Deus, como é justo, e não hesiteis em expressar-lhe o vosso reconhecimento. 7Se é bom guardar o segredo do rei, é justo revelar e publicar as obras de Deus. Fazei o bem, e o mal não vos atingirá. 8É valiosa a oração com o jejum, e a esmola com a justiça. Melhor é pouco com justiça, do que muito com iniqüidade. Melhor é dar esmolas, do que acumular tesouros. 9A esmola livra da morte e purifica de todo pecado. Os que dão esmola seróo saciados de vida. 10Aqueles, porém, que cometem o pecado e a injustiça, são inimigos de si mesmos. 11E agora vos manifestarei toda a verdade, sem vos ocultar coisa alguma. Já vos declarei e disse: 'É bom guardar o segredo do rei, mas as obras de Deus devem ser reveladas, com a glória devida'. 12Pois bem, quando tu e Sara fazíeis oração, eu apresentava o memorial da vossa prece diante da glória do Senhor. E fazia o mesmo quando tu, Tobit, enterravas os mortos. 13Quando não hesitaste em levantar-te da mesa, deixando a refeição e saindo para sepultar um morto, fui enviado a ti para te pôr à prova. 14Mas Deus enviou-me, também, para te curar a ti e a Sara, tua nora. 15Eu sou Rafael, um dos sete anjos que permanecem diante da glória do Senhor e têm acesso à sua presença'. 20Agora, bendizei o Senhor sobre a terra e dai graças a Deus. Eis que subo para junto de quem me enviou. Escrevi tudo o que vos aconteceu'. E o anjo desapareceu."
+    },
+    "psalm": {
+      "reference": "Salmo Tb 13",
+      "text": "- Porque vós castigais e salvais, fazeis descer aos abismos da terra, e de lá nos trazeis novamente: de vossa mão nada pode escapar.\n\n- Compreendei o que fez para nós, dai-lhe graças, com todo o respeito! Vossas obras celebrem a Deus e exaltem o Rei sempiterno!\n\n- Eu desejo, de toda a minh'alma alegrar-me em Deus, Rei dos céus.\n\n- Bendizei o Senhor, seus eleitos, fazei festa e alegres louvai-o!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 12, 38-44",
+      "text": "Naquele tempo: 38Jesus dizia, no seu ensinamento a uma grande multidão: 'Tomai cuidado com os doutores da Lei! Eles gostam de andar com roupas vistosas, de ser cumprimentados nas praças públicas; 39gostam das primeiras cadeiras nas sinagogas e dos melhores lugares nos banquetes. 40Eles devoram as casas das viúvas, fingindo fazer longas oraçðes. Por isso eles receberão a pior condenação'. 41Jesus estava sentado no Templo, diante do cofre das esmolas, e observava como a multidão depositava suas moedas no cofre. Muitos ricos depositavam grandes quantias. 42Então chegou uma pobre viúva que deu duas pequenas moedas, que não valiam quase nada. 43Jesus chamou os discípulos e disse: 'Em verdade vos digo, esta pobre viúva deu mais do que todos os outros que ofereceram esmolas. 44Todos deram do que tinham de sobra, enquanto ela, na sua pobreza, ofereceu tudo aquilo que possuía para viver'."
+    }
+  },
+  "extra": []
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-16",
+  "year": 2026,
+  "month": 10,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-16",
+      "name": "Santa Edviges, duquesa da Silésia, religiosa",
+      "normalizedName": "santa edviges, ,",
+      "imageUrl": "./assets/img/santos/10-16-santa-edviges-duquesa-da-silesia-religiosa.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/16/s--edviges--duquesa-da-silesia--religiosa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/16/s--edviges--duquesa-da-silesia--religiosa.html",
+      "sourceText": "A verdadeira realeza consiste em servir os pobres. Este aspecto se distinguiu na vida de Santa Edwiges, primeira duquesa da Silésia e da Polônia e, por conseguinte, religiosa em um mosteiro cisterciense. Vivida entre 1100 e 1200, a Santa é celebrada pela Igreja, anualmente, em 16 de outubro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "name": "Santa Margarida Maria Alacoque, virgem, da Ordem da Visitação",
+      "normalizedName": "santa margarida maria alacoque, ,",
+      "imageUrl": "./assets/img/santos/10-16-santa-margarida-maria-alacoque-virgem-da-orde.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/16/s--margarida-maria-alacoque--virgem--da-ordem-da-visitacao.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/16/s--margarida-maria-alacoque--virgem--da-ordem-da-visitacao.html",
+      "sourceText": "Margarida nasceu na Borgonha, França, em 1647. Aos 24 anos, entrou para as Visitandinas. Recebeu logo aparições de Jesus e Maria, que a exortavam a adorar seu Sagrado Coração. A instituição desta festa deve-se precisamente a ela. Antes de morrer, em 1690, deixou uma biografia importante.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "name": "São Geraldo Majella, irmão leigo redentorista",
+      "normalizedName": "sao geraldo majella, irmao leigo redentorista",
+      "imageUrl": "./assets/img/santos/10-16-sao-geraldo-majella-irmao-leigo-redentorista.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Geraldo era um alfaiate pouco conhecido, porque não era esta a sua vocação. Rejeitado pelos Capuchinhos, foi aceito, finalmente, pelos Redentoristas, em cujo convento desenvolveu as tarefas mais humildes. Caluniado por uma mulher, suportou tudo com exemplar mansidão e paciência. Faleceu em 1755.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

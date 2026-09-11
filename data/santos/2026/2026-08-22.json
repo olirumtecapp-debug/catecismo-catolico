@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-22",
+  "year": 2026,
+  "month": 8,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-22",
+      "name": "São Timóteo, mártir romano, na via Ostiense",
+      "normalizedName": "sao timoteo, martir romano, na via ostiense",
+      "imageUrl": "./assets/img/santos/08-22-sao-timoteo-martir-romano-na-via-ostiense.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Era confundido com o homônimo discípulo mais conhecido de São Paulo. Temos poucas notícias sobre Timóteo, que morreu mártir na Via Ostiense, em Roma. Uma das histórias, extraídas dos \"Atos do Papa Silvestre\", o descreve como um ardoroso pregador do Evangelho, preso e morto por Tarquínio em 303.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "name": "São Sinforiano, mártir de Autun",
+      "normalizedName": "sao sinforiano, martir de autun",
+      "imageUrl": "./assets/img/santos/08-22-sao-sinforiano-martir-de-autun.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sinforiano, filho do nobre Fausto, foi educado na vida cristã. Viveu na cidade de Autun, quase toda pagã, sob o domínio romano. Durante uma procissão, em homenagem a Cibele, deixou-se reconhecer como cristão. Por isso, foi julgado e martirizado, em 257.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "name": "São Filipe Benício, presbítero dos Servos de Maria",
+      "normalizedName": "sao filipe benicio, presbitero dos servos de maria",
+      "imageUrl": "./assets/img/santos/08-22-sao-filipe-benicio-presbitero-dos-servos-de-m.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Irmão leigo dos Servos de Maria, Felipe dedicou-se, por 5 anos, aos trabalhos mais humildes da Ordem; depois, ao ser ordenado sacerdote, tornou-se Mestre de Noviços. Em 1267, como Prior geral e propagador da Ordem, escreveu suas Constituições. Faleceu em Todi, em 1285, e canonizado em 1671.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

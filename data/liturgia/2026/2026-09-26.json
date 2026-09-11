@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-26",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "25a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Eclesiastes 11,9-12,8",
+      "text": "Alegra-te, jovem, na tua adolescência, e que o teu coração repouse no bem nos dias da tua juventude; segue as aspirações do teu coração e os desejos dos teus olhos; fica sabendo, porém, que de tudo isso Deus te pedirá contas 10Tira a tristeza do teu coração, e afasta a malícia do teu corpo, pois a adolescência e a juventude são vaidade. 12,1Lembra-te do teu Criador nos dias da juventude, antes que venham os dias da desgraça e cheguem os anos dos quais dirás: 'Não sinto prazer neles'; 2- antes que se obscureçam o sol, a luz, a lua e as estrelas, e voltem as nuvens depois da chuva; 3quando os guardas da casa começarem a tremer, e se curvarem os homens robustos; quando as poucas mulheres cessarem de moer, e ficarem turvas as vistas das que olham pelas janelas 4e se fecharem as portas que dão para a rua; quando enfraquecer o ruído do moinho, e os homens se levantarem ao canto dos pássaros, e silenciarem as vozes das canções, 5e houver medo das alturas e sobressaltos no caminho, enquanto a amendoeira floresce, o gafanhoto se arrasta e a alcaparra perde o seu gosto, porque o homem se encaminha para a morada eterna, e os que choram já rondam pelas ruas; 6- antes que se rompa o cordão de prata e se despedace a taça de ouro, a jarra se parta na fonte, a roldana se arrebente no poço, 7- antes que volte o pó à terra, de onde veio, e o sopro de vida volte a Deus que o concedeu. 8Vaidade das vaidades, diz o Eclesiastes, tudo é vaidade."
+    },
+    "psalm": {
+      "reference": "Salmo 89 (90)",
+      "text": "- Vós fazeis voltar ao pó todo mortal, quando dizeis: 'Voltai ao pó, filhos de Adão!' Pois mil anos para vós são como ontem, qual vigília de uma noite que passou.\n\n- Eles passam como o sono da manhã, são iguais à erva verde pelos campos: De manhã ela floresce vicejante, mas à tarde é cortada e logo seca.\n\n- Ensinai-nos a contar os nossos dias, e dai ao nosso coração sabedoria! Senhor, voltai-vos! Até quando tardareis? Tende piedade e compaixão de vossos servos!\n\n- Saciai-nos de manhã com vosso amor, e exultaremos de alegria todo o dia! Que a bondade do Senhor e nosso Deus repouse sobre nós e nos conduza! Tornai fecundo, ó Senhor, nosso trabalho."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 43-45",
+      "text": "Naquele tempo: 43Todos estavam admirados com todas as coisas que Jesus fazia. Então Jesus disse a seus discípulos: 44'Prestai bem atenção às palavras que vou dizer: O Filho do Homem vai ser entregue nas mãos dos homens.' 45Mas os discípulos não compreendiam o que Jesus dizia. O sentido lhes ficava escondido, de modo que não podiam entender; e eles tinham medo de fazer perguntas sobre o assunto."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Tomás de Aquino (1225-1274)<br/>",
+    "</b>",
+    "Teólogo dominicano, doutor da Igreja<br/>",
+    "Comentário sobre a Epístola aos Gálatas, 6<br/>",
+    "O nosso título de glória é o Filho do Homem entregue nas mãos dos homens<br/>",
+    "«Quanto a mim, Deus me livre de me gloriar a não ser na cruz de Nosso Senhor Jesus Cristo», diz São Paulo (Gal 6,14). Repara, observa Santo Agostinho: onde o sábio segundo este mundo julgou encontrar a vergonha, aí descobriu o apóstolo Paulo um tesouro; pois aquilo que para outro é loucura é para ele sabedoria (1Cor 1,17s) e título de glória.<br/>",
+    "Com efeito, cada um retira a sua glória daquilo que, a seus olhos, o torna grande; se julga ser um homem importante por ser rico, glorifica-se nos seus bens. Mas aquele que não encontra grandeza para si senão em Jesus Cristo põe a sua glória apenas em Jesus; assim era o apóstolo Paulo, que dizia: «Já não sou eu que vivo, é Cristo que vive em mim»(Gal 2,20). É por isso que apenas se gloria em Cristo, e sobretudo na cruz de Cristo. É que nesta cruz estão reunidos todos os motivos de glória que um homem pode ter.<br/>",
+    "Há pessoas que retiram a sua glória da amizade com os grandes e poderosos; Paulo, porém, apenas tem necessidade da cruz de Cristo, onde descobre o sinal mais evidente da amizade de Deus: «Deus demonstra o seu amor para connosco pelo facto de Cristo haver morrido por nós quando ainda éramos pecadores» (Rom 5,8). Não, nada manifesta tão bem o amor de Deus para connosco como a morte de Cristo. «Oh, testemunho inestimável do amor!», exclama São Gregório. «Para resgatar o escravo, entregastes o Filho!»<br/>"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-06",
+  "year": 2026,
+  "month": 6,
+  "day": 6,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/06.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-06.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-06",
+      "name": "São Norberto, bispo de Magdeburgo, fundador dos Cônegos Regulares Premostratenses",
+      "normalizedName": "sao norberto, bispo de magdeburgo, fundador dos conegos regulares premostratenses",
+      "imageUrl": "./assets/img/santos/06-06-sao-norberto-bispo-de-magdeburgo-fundador-dos.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Norberto converteu-se, após ter sido atingido por um raio. Tornando-se monge beneditino, dedicou-se à pregação e à pacificação. No trajeto para Prémontré, fundou uma nova Ordem de Clérigos Regulares, chamados Premonstratenses. Foi arcebispo de Magdeburgo e faleceu em 1134.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-06",
+      "name": "SS. Artêmio e Paulina, mártires, na via Aurélia",
+      "normalizedName": "ss. artemio e paulina, , na via aurelia",
+      "imageUrl": "./assets/img/santos/06-06-ss-artemio-e-paulina-martires-na-via-aurelia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Artêmio, carcereiro dos cristãos Pedro e Marcelino, tinha uma filha, Paulina, que era endemoninhada. Os dois prometeram libertá-la do demônio se ele se convertesse. Após o milagre, Artêmio decidiu tornar-se cristão, com sua esposa Cândida e sua filha Paulina. Eles foram martirizados na Via Aurélia.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-06",
+      "name": "São Cláudio, abade e bispo",
+      "normalizedName": "sao claudio, abade e bispo",
+      "imageUrl": "./assets/img/santos/06-06-sao-claudio-abade-e-bispo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "São Cláudio é um dos Santos mais ilustres da França, apesar de sabermos pouco sobre a sua vida. Nasceu em Salins e, depois, se tornou Cônego da catedral de Besançon, da qual foi Arcebispo. Após alguns anos, retirou-se para o mosteiro de Condat, onde foi abade por 55 anos, até à sua morte, em 703.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "date": "2026-06-22",
+  "year": 2026,
+  "month": 6,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-22",
+      "name": "São Paulino, bispo de Nola, Itália",
+      "normalizedName": "sao paulino, bispo de nola, italia",
+      "imageUrl": "./assets/img/santos/06-22-sao-paulino-bispo-de-nola-italia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Não é comum receber a fé de dois \"gigantes\". Paulino, patrício romano, deve sua adesão ao Evangelho a Santo Ambrósio e Santo Agostinho. Ao chegar a Nola, construiu um Santuário e se dedicou aos mais pobres. Eleito Bispo desta cidade da Campânia, faleceu em 431, um ano depois do amigo Agostinho.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "name": "São João Fisher, bispo de Rochester, mártir inglês",
+      "normalizedName": "sao joao fisher, bispo de rochester, martir ingles",
+      "imageUrl": "./assets/img/santos/06-22-sao-joao-fisher-bispo-de-rochester-martir-ing.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/22/ss--joao-fisher--bispo-de-rochester-e-tomas-moro--martires-ingle.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/22/ss--joao-fisher--bispo-de-rochester-e-tomas-moro--martires-ingle.html",
+      "sourceText": "João Fisher, teólogo e Bispo de Rochester, esteve ao lado do rei na luta contra a Reforma Luterana. Porém, depois, ao desobedecer a Henrique VIII, por não reconhecer seu divórcio ou a sua superioridade ao Papa, foi condenado à morte. Foi encarcerado na Torre de Londres, junto a Tomás Morus, em 1535.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "name": "São Flávio Clemente, cônsul romano, mártir",
+      "normalizedName": "sao flavio clemente, consul romano, martir",
+      "imageUrl": "./assets/img/santos/06-22-sao-flavio-clemente-consul-romano-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Flávio Clemente, pertencente à família Flávia de Rieti e sobrinho do imperador Vespasiano, tornou-se cônsul no ano 95. Casou-se com Flávia Domitila e, ao se converter ao cristianismo, foi envolvido nas perseguições de Domiciano, que o condenou à morte com a falsa acusação de ateísmo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "name": "São Inocêncio V, papa",
+      "normalizedName": "sao inocencio v, papa",
+      "imageUrl": "./assets/img/santos/06-22-sao-inocencio-v-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Pedro de Tarentaise, no civil, nasceu em Savoia e se tornou dominicano. Este pregador era tão culto que chegou a ser chamado \"doctor famosissimus\". Como arcebispo de Lyon, lutou para a união das Igrejas separadas de Roma. Eleito Papa como Inocêncio V, em 1276, morreu logo depois de alguns meses.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "name": "São Tomás Moro, mártir inglês",
+      "normalizedName": "sao tomas moro, martir ingles",
+      "imageUrl": "./assets/img/santos/06-22-sao-tomas-moro-martir-ingles.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/22/s--tomas-moro-martir-ingles.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/22/s--tomas-moro-martir-ingles.html",
+      "sourceText": "Tomás era um firme defensor da consciência em relação ao poder político. Este Santo inglês morreu em 1535 por não apoiar Henrique VII como chefe da Igreja na Inglaterra. São Tomás Morus, canonizado em 1935, foi proclamado Padroeiro dos governantes e políticos por João Paulo II.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

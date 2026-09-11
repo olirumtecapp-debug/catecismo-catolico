@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-07",
+  "year": 2026,
+  "month": 10,
+  "day": 7,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/07.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-07.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-07",
+      "name": "São Marcos, papa",
+      "normalizedName": "sao marcos, papa",
+      "imageUrl": "./assets/img/santos/10-07-sao-marcos-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Marcos foi Papa apenas por alguns meses, no ano 336, mas, conseguiu construir uma Basílica, em honra de Marco Evangelista, hoje igreja de São Marcos. Deve-se a ele também o calendário civil mais antigo da Igreja Romana, que fixou, pela primeira vez, o nascimento de Cristo no dia 25 de dezembro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "name": "SS. Sérgio e Baco, mártires da Síria",
+      "normalizedName": "ss. sergio e baco, da siria",
+      "imageUrl": "./assets/img/santos/10-07-ss-sergio-e-baco-martires-da-siria.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Soldados das Legiões de fronteira, Sérgio e Baco converteram-se ao cristianismo. Ao serem descobertos, foram levados para a Síria, na região de Rusafah, e martirizados alguns dias depois, no ano 310. Por isso, são celebrados juntos, embora na antiguidade o culto a São Sérgio era mais difundido.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

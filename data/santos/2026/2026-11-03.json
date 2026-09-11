@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-03",
+  "year": 2026,
+  "month": 11,
+  "day": 3,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/03.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-03.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-03",
+      "name": "São Martinho de Porres, religioso dominicano",
+      "normalizedName": "sao martinho de porres, dominicano",
+      "imageUrl": "./assets/img/santos/11-03-sao-martinho-de-porres-religioso-dominicano.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/03/s--martinho-de-porres--religioso-dominicano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/03/s--martinho-de-porres--religioso-dominicano.html",
+      "sourceText": "Um filho de ninguém, por ser mulato. Martinho de Porres nasceu em Lima, Peru, em 1579. Seu pai, um nobre espanhol, o reconheceu depois de anos. O jovem entrou para os Dominicanos, em cujo convento cuidou dos doentes, mas, sobretudo, aliviou a pobreza com todos os meios. Faleceu em 1639.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

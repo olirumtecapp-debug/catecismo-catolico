@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-18",
+  "year": 2026,
+  "month": 11,
+  "day": 18,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/18.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-18.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-18",
+      "name": "São Filipina Rosa Duchesne",
+      "normalizedName": "sao filipina rosa duchesne",
+      "imageUrl": "./assets/img/santos/11-18-sao-filipina-rosa-duchesne.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Filipina estudou nas Visitandinas de Grenoble, mas a Revolução Francesa a impediu de se tornar religiosa. Quando tudo voltou à normalidade, em 1801, entrou para a Sociedade do Sagrado Coração, onde realizou seu sonho de ser missionária no estado de Louisiana, EUA, onde fundou uma nova comunidade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "name": "São Roman de Antioquia",
+      "normalizedName": "sao roman de antioquia",
+      "imageUrl": "./assets/img/santos/11-18-sao-roman-de-antioquia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Romano era diácono da Igreja de Cesareia. Durante as perseguições de Diocleciano contra os cristãos, em 303, viu muitos fiéis se render e oferecer sacrifícios aos ídolos, por obediência às disposições imperiais. Advertindo-os, em voz alta, a permanecer firmes na fé, foi preso e martirizado.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "name": "Santo Odão, abade de Cluny",
+      "normalizedName": "sao odao, abade de cluny",
+      "imageUrl": "./assets/img/santos/11-18-santo-odao-abade-de-cluny.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nascido perto de Tours, por volta de 880, Odão foi encaminhado à vida cavalariana, mas, depois, se tornou monge em Cluny, principal centro de espiritualidade da Europa contemporânea. Ali, retomou, com rigor, a Regra beneditina, a ponto de ser considerado o reformador da Regra monacal.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

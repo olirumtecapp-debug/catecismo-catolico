@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-20",
+  "year": 2026,
+  "month": 2,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-20",
+      "name": "São Leão de Catânia, bispo",
+      "normalizedName": "sao leao de catania, bispo",
+      "imageUrl": "./assets/img/santos/02-20-sao-leao-de-catania-bispo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Leão nasceu em Ravena, no ano 720, e se tornou monge beneditino. Nomeado bispo de Catânia, opôs-se às leis iconoclastas do Império Bizantino, que obrigavam a destruição de imagens sagradas. Forçado a viver como eremita nas montanhas, depois de muitos anos retornou a Catania, onde faleceu em 789.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

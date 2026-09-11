@@ -1,0 +1,41 @@
+{
+  "date": "2026-04-20",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "3a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 6,8-15",
+      "text": "Naqueles dias: 8Estêvão, cheio de graça e poder, fazia prodígios e grandes sinais entre o povo. 9Mas alguns membros da chamada Sinagoga dos Libertos, junto com cirenenses e alexandrinos, e alguns da Cilícia e da Ásia, começaram a discutir com Estêvão. 10Porém, não conseguiam resistir à sabedoria e ao Espírito com que ele falava. 11Então subornaram alguns indivíduos, que disseram: 'Ouvimos este homem dizendo blasfêmias contra Moisés e contra Deus.' 12Desse modo, incitaram o povo, os anciãos e os doutores da Lei, que prenderam Estêvão e o conduziram ao Sinédrio. 13Aí apresentaram falsas testemunhas, que diziam: 'Este homem não cessa de falar contra este lugar santo e contra a Lei. 14E nós o ouvimos afirmar que Jesus Nazareno ia destruir este lugar e ia mudar os costumes que Moisés nos transmitiu.' 15Todos os que estavam sentados no Sinédrio tinham os olhos fixos sobre Estêvão, e viram seu rosto como o rosto de um anjo."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Que os poderosos reunidos me condenem; o que me importa é o vosso julgamento! Minha alegria é a vossa Aliança, meus conselheiros são os vossos mandamentos.\n\n- Eu vos narrei a minha sorte e me atendestes, ensinai-me, ó Senhor, vossa vontade! Fazei-me conhecer vossos caminhos, e então meditarei vossos prodígios!\n\n- Afastai-me do caminho da mentira e dai-me a vossa lei como um presente! Escolhi seguir a trilha da verdade, diante de mim eu coloquei vossos preceitos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 6, 22-29",
+      "text": "Depois que Jesus saciara os cinco mil homens, seus discípulos o viram andando sobre o mar. 22No dia seguinte, a multidão que tinha ficado do outro lado do mar constatou que havia só uma barca e que Jesus não tinha subido para ela com os discípulos, mas que eles tinham partido sozinhos. 23Entretanto, tinham chegado outras barcas de Tiberíades, perto do lugar onde tinham comido o pão depois de o Senhor ter dado graças. 24Quando a multidão viu que Jesus não estava ali, nem os seus discípulos, subiram às barcas e foram à procura de Jesus, em Cafarnaum. 25Quando o encontraram no outro lado do mar, perguntaram-lhe: 'Rabi, quando chegaste aqui?' 26Jesus respondeu: 'Em verdade, em verdade, eu vos digo: estais me procurando não porque vistes sinais, mas porque comestes pão e ficastes satisfeitos. 27Esforçai-vos não pelo alimento que se perde, mas pelo alimento que permanece até a vida eterna, e que o Filho do homem vos dará. Pois este é quem o Pai marcou com seu selo.' 28Então perguntaram: 'Que devemos fazer para realizar as obras de Deus?' 29Jesus respondeu: 'A obra de Deus é que acrediteis naquele que ele enviou'."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santa Faustina Kowalska (1905-1938), religiosa<br/>",
+    "</b>",
+    "Diário, § 1323<br/>",
+    "«A obra de Deus consiste em acreditar naquele que Ele enviou»<br/>",
+    "Inclino-me, Pão dos Anjos, diante de Vós,<br/>",
+    "com profunda fé, esperança, caridade,<br/>",
+    "e do fundo da minha alma glorifico-Vos<br/>",
+    "embora eu nada seja senão nulidade.<br/>",
+    "Inclino-me diante de Vós, Deus ocultado,<br/>",
+    "e adoro-Vos de todo o meu coração,<br/>",
+    "não me impedindo o mistério velado,<br/>",
+    "amo-Vos como os do céu, em eleição.<br/>",
+    "Inclino-me diante de Vós, Cordeiro divino,<br/>",
+    "que os pecados da minha alma tirais,<br/>",
+    "em meu coração sois alimento matutino,<br/>",
+    "Vós que, para a salvação, me ajudais.<br/>"
+  ]
+}

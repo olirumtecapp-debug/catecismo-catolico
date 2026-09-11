@@ -1,0 +1,34 @@
+{
+  "date": "2027-06-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "11o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Ezequiel 17,22-24",
+      "text": "22Assim diz o Senhor Deus: 'Eu mesmo tirarei um galho da copa do cedro, do mais alto de seus ramos arrancarei um broto e o plantarei sobre um monte alto e elevado. 23Vou plantá-lo sobre o alto monte de Israel. Ele produzirá folhagem, dará frutos e se tornará um cedro majestoso. Debaixo dele pousarão todos os pássaros, à sombra de sua ramagem as aves farão ninhos. 24E todas as árvores do campo saberão que eu sou o Senhor, que abaixo a árvore alta e elevo a árvore baixa; faço secar a árvore verde e brotar a árvore seca. Eu, o Senhor, digo e faço'."
+    },
+    "psalm": {
+      "reference": "Salmo 91 (92)",
+      "text": "- Como é bom agradecermos ao Senhor e cantar salmos de louvor ao Deus Altíssimo! Anunciar pela manhã vossa bondade, e o vosso amor fiel, a noite inteira.\n\n- O justo crescerá como a palmeira, florirá igual ao cedro que há no Líbano; na casa do Senhor estão plantados, nos átrios de meu Deus florescerão.\n\n- Mesmo no tempo da velhice darão frutos, cheios de seiva e de folhas verdejantes; e dirão:'É justo mesmo o Senhor Deus: meu Rochedo, não existe nele o mal!'"
+    },
+    "secondReading": {
+      "reference": "Coríntios 5,6-10",
+      "text": "Irmãos: 6Estamos sempre cheios de confiança e bem lembrados de que, enquanto moramos no corpo, somos peregrinos longe do Senhor; 7pois caminhamos na fé e não na visão clara. Mas estamos cheios de confiança e preferimos deixar a moradia do nosso corpo, para ir morar junto do Senhor. 9Por isso, também nos empenhamos em ser agradáveis a ele, quer estejamos no corpo, quer já tenhamos deixado essa morada. 10Aliás, todos nós temos de comparecer às claras perante o tribunal de Cristo, para cada um receber a devida recompensa - prêmio ou castigo - do que tiver feito ao longo de sua vida corporal."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 4, 26-34",
+      "text": "Naquele tempo: 26Jesus disse à multidão: 'O Reino de Deus é como quando alguém espalha a semente na terra. 27Ele vai dormir e acorda, noite e dia, e a semente vai germinando e crescendo, mas ele não sabe como isso acontece. 28A terra, por si mesma, produz o fruto: primeiro aparecem as folhas, depois vem a espiga e, por fim, os grãos que enchem a espiga. 29Quando as espigas estão maduras, o homem mete logo a foice, porque o tempo da colheita chegou'. 30E Jesus continuou: 'Com que mais poderemos comparar o Reino de Deus? Que parábola usaremos para representá-lo? 31O Reino de Deus é como um grão de mostarda que, ao ser semeado na terra, é a menor de todas as sementes da terra. 32Quando é semeado, cresce e se torna maior do que todas as hortaliças, e estende ramos tão grandes, que os pássaros do céu podem abrigar-se à sua sombra'. 33Jesus anunciava a Palavra usando muitas parábolas como estas, conforme eles podiam compreender. 34E só lhes falava por meio de parábolas, mas, quando estava sozinho com os discípulos, explicava tudo."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Cromácio de Aquileia, Bispo<br/>",
+    "</b>",
+    "Sermão 30, 2<br/>",
+    "A semente lançada à terra dá muito fruto (Jo 12, 24)<br/>",
+    "O Senhor comparou-Se a Si mesmo a um grão de mostarda. Sendo o Deus da glória e da majestade eterna, tornou-Se muito pequeno, porque quis nascer de uma virgem com um corpo de criança pequena. Foi lançado à terra quando o seu corpo foi posto no túmulo; mas, depois de Se ter elevado de entre os mortos pela sua gloriosa ressurreição, cresceu até Se tornar uma árvore em cujos ramos habitam as aves do céu.<br/>",
+    "Esta árvore significa a Igreja, que a morte de Cristo ressuscitou para a glória. Os seus ramos devem ser entendidos como sendo os apóstolos porque, tal como os ramos são o ornamento natural da árvore, assim os apóstolos são o ornamento da Igreja de Cristo, pela beleza da graça que receberam. E sabemos que nestes ramos habitam as aves do céu. Alegoricamente, as aves do céu designam-nos a nós, que, tendo vindo à Igreja de Cristo, descansamos nos ensinamentos dos apóstolos como as aves nos ramos.<br/>"
+  ]
+}

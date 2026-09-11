@@ -1,0 +1,32 @@
+{
+  "date": "2027-11-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Josafa",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Sabedoria 13,1-9",
+      "text": "1São insensatos por natureza todos os homens que ignoram a Deus, os que, partindo dos bens visíveis, não foram capazes de conhecer aquele que é; nem tampouco, pela consideração das obras, chegaram a reconhecer o Artífice. 2Tomaram por deuses, por governadores do mundo, o fogo e o vento, o ar fugidio, o giro das estrelas, a água impetuosa, os luzeiros do dia. 3Se, encantados por sua beleza, tomaram estas criaturas por deuses, reconheçam quanto o seu Senhor está acima delas: pois foi o autor da beleza quem as criou. 4Se ficaram maravilhados com o seu poder e a sua atividade, concluam daí quanto mais poderoso é aquele que as formou: 5de fato, partindo da grandeza e da beleza das criaturas, pode-se chegar a ver, por analogia, aquele que as criou. 6Contudo, estes merecem menor repreensão: talvez se tenham extraviado procurando a Deus e querendo encontrá-lo. 7Com efeito, vivendo entre as obras dele, põem-se a procurá-lo, mas deixam-se seduzir pela aparência, pois é belo aquilo que se vê! 8Mesmo assim, nem a estes se pode perdoar: 9porque, se chegaram a tão vasta ciência, a ponto de investigarem o universo, como é que não encontraram mais facilmente o seu Senhor?"
+    },
+    "psalm": {
+      "reference": "Salmo 18 (19)",
+      "text": "- Os céus proclamam a glória do Senhor, e o firmamento, a obra de suas mãos; 3o dia ao dia transmite esta mensagem, a noite à noite publica esta notícia.\n\n- Não são discursos nem frases ou palavras, nem são vozes que possam ser ouvidas; seu som ressoa e se espalha em toda a terra, chega aos confins do universo a sua voz."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 26-37",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 26Como aconteceu nos dias de Noé, assim também acontecerá nos dias do Filho do Homem. 27Eles comiam, bebiam, casavam-se e se davam em casamento, até ao dia em que Noé entrou na arca. Então chegou o dilúvio e fez morrer todos eles. 28Acontecerá como nos dias de Ló: comiam e bebiam, compravam e vendiam, plantavam e construíam. 29Mas no dia em que Ló saiu de Sodoma, Deus fez chover fogo e enxofre do céu e fez morrer todos. 30O mesmo acontecerá no dia em que o Filho do Homem for revelado. 31Nesse dia, quem estiver no terraço, não desça para apanhar os bens que estão em sua casa. E quem estiver nos campos não volte para trás. 32Lembrai-vos da mulher de Ló. 33Quem procura ganhar a sua vida, vai perdê-la; e quem a perde, vai conservá-la. 34Eu vos digo: nessa noite, dois estarão numa cama; um será tomado e o outro será deixado. 35Duas mulheres estarão moendo juntas; uma será tomada e a outra será deixada. 36Dois homens estarão no campo; um será levado e o outro será deixado.' 37Os discípulos perguntaram: 'Senhor, onde acontecerá isso?' Jesus respondeu: 'Onde estiver o cadáver, aí se reunirão os abutres.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Romano, o Melodista (?-c. 560)<br/>",
+    "</b>",
+    "compositor de hinos - Hino de Noé<br/>",
+    "Deus espera a nossa conversão<br/>",
+    "Quando contemplo a ameaça suspensa sobre os culpados no tempo de Noé, tremo, eu que também sou culpado de pecados abomináveis. [...] O Criador começou por ameaçar os homens de então, porque esperava o tempo da sua conversão. Também para nós virá a hora final, que desconhecemos, e que até aos anjos foi ocultada (Mt 24,36). Nesse último dia, Cristo, o Senhor de antes dos séculos, virá cavalgando nas nuvens, para julgar a Terra, como viu Daniel (7,13). Antes de esta hora cair sobre nós, supliquemos-Lhe: «Salva da tua cólera todos os homens, pelo amor que nos tens, ó Redentor do Universo» [...]<br/>",
+    "O Amigo dos homens, vendo a maldade que então reinava, disse a Noé: «O fim de toda a humanidade chegou diante de Mim, pois ela encheu a Terra de violência. Vou exterminá-la juntamente com a Terra» (Gn 6,13); «só a ti reconheci como justo nesta geração» (Gn 7,1). Constrói uma arca de madeiras resinosas; [...] como matriz, ela carregará as sementes das espécies futuras. Fá-la-ás como uma casa, à imagem da Igreja. [...] Nela te guardarei, a ti, que Me rezas com fé: «Salva da tua cólera todos os homens, pelo amor que nos tens, ó Redentor do universo!»<br/>",
+    "Com inteligência, o eleito cumpriu a sua obra [...], e pedia com fé aos homens sem fé: «Depressa! Saí do pecado, rejeitai a maldade, arrependei-vos! Lavai com lágrimas a mácula das vossas almas, reconciliai-vos pela fé no poder do nosso Deus [...].» Mas os filhos da rebelião não se converteram. À perversidade, acrescentaram ainda a dureza de coração. Então Noé implorou a Deus com lágrimas: «Fizeste-me nascer do seio da minha mãe; salva-me dentro desta arca. Porque vou fechar-me nesta espécie de sepultura mas, quando me chamares, dela sairei pela tua força! Nela, vou prefigurar desde agora a ressurreição de todos os homens, quando salvares os justos do fogo, como a mim me salvas das ondas do mal, arrancando-me do meio dos ímpios, eu que Te rezo com fé, a Ti, compassivo Juiz: 'Salva da tua cólera todos os homens, pelo amor que nos tens, ó Redentor do universo!'»<br/>"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-27",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Vicente de Paulo",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Zacarias 8,1-8",
+      "text": "1A palavra do Senhor dos exércitos foi manifestada nos seguintes termos: 2'Isto diz o Senhor dos exércitos: Tomei-me de forte ciúme por Sião, consumo-me de zelo ciumento por ela. 3Isto diz o Senhor: Voltei a Sião e habitarei no meio de Jerusalém; Jerusalém será chamada Cidade Fiel, e o monte do Senhor dos exércitos, Monte Santo. 4Isto diz o Senhor dos exércitos: Velhos e velhas ainda se sentarão nas praças de Jerusalém, cada qual com seu bastão na mão,devido à idade avançada; 5as praças da cidade se encherão de meninos e meninas a brincar em suas praças. 6Isto diz o Senhor dos exércitos: Se tais cenas parecerem difíceis aos olhos do resto do povo, naqueles dias, acaso serão também difíceis aos meus olhos? - diz o Senhor dos exércitos. 7Isto diz o Senhor dos exércitos: Eis que eu vou salvar o meu povo da terra do oriente e da terra do pôr-do-sol: 8eu os conduzirei, e eles habitarão no meio de Jerusalém; serão meu povo e eu serei seu Deus, em verdade e com justiça."
+    },
+    "psalm": {
+      "reference": "Salmo 101 (102)",
+      "text": "- As nações respeitarão o vosso nome, e os reis de toda a terra, a vossa glória; quando o Senhor reconstruir Jerusalém e aparecer com gloriosa majestade, ele ouvirá a oração dos oprimidos e não desprezará a sua prece.\n\n- Para as futuras gerações se escreva isto, e um povo novo a ser criado louve a Deus. Ele inclinou-se de seu templo nas alturas, e o Senhor olhou a terra do alto céu, para os gemidos dos cativos escutar e da morte libertar os condenados.\n\n- Assim também a geração dos vossos servos terá casa e viverá em segurança, e ante vós se firmará sua descendência. Para que cantem o seu nome em Sião e louve ao Senhor Jerusalém, quando os povos e as nações se reunirem e todos os impérios o servirem."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 46-50",
+      "text": "Naquele tempo: 46Houve entre os discípulos uma discussão, para saber qual deles seria o maior. 47Jesus sabia o que estavam pensando. Pegou então uma criança, colocou-a junto de si 48e disse-lhes: 'Quem receber esta criança em meu nome, estará recebendo a mim. E quem me receber, estará recebendo aquele que me enviou. Pois aquele que entre todos vós for o menor, esse é o maior.' 49João disse a Jesus: 'Mestre, vimos um homem que expulsa demônios em teu nome. Mas nós o proibimos, porque não anda conosco.' 50Jesus disse-lhe: 'Não o proibais, pois quem não está contra vós, está a vosso favor.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Clemente de Alexandria (150-c. 215), teólogo<br/>",
+    "</b>",
+    "O Pedagogo, I, 21-24<br/>",
+    "«Quem acolher este menino em meu nome, é a mim que acolhe»<br/>",
+    "«Os seus filhinhos serão levados aos ombros e consolados ao colo», dizem as Escrituras. «Como à criança a quem a mãe dá consolo, também Eu vos consolarei» (Is 66,12-13). A mãe chega os filhos a si, e nós procuramos a nossa mãe, a Igreja. Todo o ser de pouca idade e frágil é, nessa fragilidade desprotegida, um ser gracioso, doce, encantador; e Deus não recusa o seu auxílio a seres tão jovens. Todos os pais têm uma ternura peculiar pelos seus filhos pequenos. […] De igual modo, o Pai de toda a criação acolhe aqueles que se refugiam junto de Si, regenera-os pelo Espírito e adopta-os como filhos; conhece a sua doçura e só a eles ama, auxilia, defende; por isso lhes chama filhos (cf Jo 13,33).<br/>",
+    "O Santo Espírito, falando pela boca de Isaías, aplica ao próprio Senhor o termo «filho»: «Eis que nos nasceu um menino, foi-nos dado um filho» (Is 9,5). Quem é então esta criança, este recém-nascido, à imagem de quem também nós somos crianças? Pela boca do mesmo Profeta, o Espírito descreve-nos a sua grandeza: «Conselheiro admirável, Deus poderoso, Pai eterno, Príncipe da paz» (v. 6).<br/>",
+    "Ó Deus tão grande! Ó menino perfeito! O Filho está no Pai e o Pai está no Filho. Poderia não ser perfeita a educação que nos dá este menino? Ele reúne-nos para nos guiar, a nós que somos seus filhos. O menino estendeu-nos as mãos, e nelas pomos toda a nossa fé. Também João Baptista dá testemunho desta criança: «Eis o cordeiro de Deus», diz-nos (Jo 1,29). Como as Escrituras designam as crianças por cordeiros, chamou «cordeiro de Deus» ao Verbo de Deus que por nós Se fez homem e que em tudo quis ser igual a nós, Ele, que é o Filho de Deus Pai.<br/>"
+  ]
+}

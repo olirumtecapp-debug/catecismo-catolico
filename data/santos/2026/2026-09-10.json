@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-10",
+  "year": 2026,
+  "month": 9,
+  "day": 10,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/10.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-10.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-10",
+      "name": "São Nicolau de Tolentino, presbítero agostiniano",
+      "normalizedName": "sao nicolau de tolentino, presbitero agostiniano",
+      "imageUrl": "./assets/img/santos/09-10-sao-nicolau-de-tolentino-presbitero-agostinia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nicolau nasceu nas Marcas, em 1245, na diocese de Fermo. Ainda adolescente, conheceu os Agostinianos e foi atraído pela vida monacal, à qual se consagrou em Tolentino. Foi um asceta de sorriso amável, de longas orações e jejuns, sempre acompanhados pela simpatia e a caridade. Faleceu em 1305.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-07-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "16a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jeremias 2,1-3.7-8.12-13",
+      "text": "A palavra do Senhor foi-me dirigida, dizendo: 2'Vai e grita aos ouvidos de Jerusalém. Isto diz o Senhor: Lembro-me de ti, da afeição da jovem, do amor da noiva, de quando me seguias no deserto, numa terra inculta. 3Israel, consagrado ao Senhor, era como as primícias de sua colheita; todos os que dele comiam, pecavam; males caíam sobre eles', diz o Senhor. 7Eu vos introduzi numa terra de pomares, para que gozásseis de seus melhores produtos, mas, apenas chegados, contaminastes o país e tornastes abominável minha herança. 8Os sacerdotes nem perguntaram onde está o Senhor. Os versados na Lei não me reconheceram, e os chefes do povo voltaram-me as costas, os profetas profetizaram em nome de Baal e correram atrás de coisas que para nada servem. 12Ó céus, espantai-vos diante disso, enchei-vos de grande horror, diz o Senhor. 13Dois pecados cometeu meu povo: abandonou-me a mim, fonte de água viva, e preferiu cavar cisternas, cisternas defeituosas que não podem reter água."
+    },
+    "psalm": {
+      "reference": "Salmo 35 (36)",
+      "text": "- Vosso amor chega aos céus, ó Senhor, chega às nuvens a vossa verdade. Como as altas montanhas eternas é a vossa justiça, Senhor.\n\n- Quão preciosa é, Senhor, vossa graça! Eis que os filhos dos homens se abrigam sob a sombra das asas de Deus. Na abundância de vossa morada, eles vêm saciar-se de bens. Vós lhes dais de beber água viva, na torrente das vossas delícias.\n\n- Pois em vós está a fonte da vida, e em vossa luz contemplamos a luz. Conservai aos fiéis vossa graça, e aos retos, a vossa justiça!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 13,10-17",
+      "text": "Naquele tempo: 10Os discípulos aproximaram-se e disseram a Jesus: 'Por que tu falas ao povo em parábolas?' 11Jesus respondeu: 'Porque a vós foi dado o conhecimento dos mistérios do Reino dos Céus, mas a eles não é dado. 12Pois à pessoa que tem, será dado ainda mais, e terá em abundância; mas à pessoa que não tem, será tirado até o pouco que tem. 13É por isso que eu lhes falo em parábolas: porque olhando, eles não vêem, e ouvindo, eles não escutam, nem compreendem. 14Deste modo se cumpre neles a profecia de Isaías: 'Havereis de ouvir, sem nada entender. Havereis de olhar, sem nada ver. 15Porque o coração deste povo se tornou insensível. Eles ouviram com má vontade e fecharam seus olhos, para não ver com os olhos, nem ouvir com os ouvidos, nem compreender com o coração, de modo que se convertam e eu os cure'. 16Felizes sois vós, porque vossos olhos vêem e vossos ouvidos ouvem. 17Em verdade vos digo, muitos profetas e justos desejaram ver o que vedes, e não viram, desejaram ouvir o que ouvis, e não ouviram."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Justino (c.100 -160)<br/>",
+    "</b>",
+    "Filósofo, mártir <br/>",
+    "<b>",
+    "Primeira apologia, 1.30-31<br/>",
+    "</b>",
+    "«Muitos profetas e justos desejaram ver o que vós vedes»<br/>",
+    "Ao imperador Adriano, César Augusto, e a Veríssimo, seu filho filósofo, e a Lício, filósofo, e ao Senado e a todo o povo romano, em nome dos homens de todas as raças que são injustamente odiados e perseguidos, sendo eu um deles, Justino, de Néapolis [Nablus] na Síria da Palestina, dirijo este discurso. [...] <br/>",
+    "Argumenta-se que Aquele a que nós chamamos o Cristo é apenas um homem, nascido de um homem, que os prodígios que Lhe atribuímos são devidos a artes mágicas e que Ele Se fez passar por Filho de Deus. A nossa demonstração não se apoiará sobre dizeres, mas sobre as profecias feitas antes dos acontecimentos, nas quais temos necessariamente de acreditar: porque nós vimos, e vemos ainda, realizar-se aquilo que foi profetizado. [...] <br/>",
+    "Houve entre os judeus profetas de Deus pelos quais o Espírito profético anunciou antecipadamente acontecimentos futuros. As suas profecias foram cuidadosamente guardadas, tal como haviam sido proferidas, pelos sucessivos reis da Judeia nos livros escritos em hebraico pela mão dos profetas. [...] <br/>",
+    "Ora, nós lemos nos livros dos profetas que Jesus, nosso Cristo, havia de vir, que nasceria de uma virgem, que apareceria com o aspeto de homem, que curaria todas as doenças e todas as enfermidades, que ressuscitaria os mortos, que, ignorado e perseguido, seria crucificado, que morreria, que ressuscitaria e subiria ao céu, que seria e será reconhecido como Filho de Deus, que enviaria alguns a anunciar estas coisas ao mundo e que seriam sobretudo os pagãos a acreditar nele. Estas profecias foram feitas 5000, 2000, 1000, 800 anos antes da sua vinda, porque os profetas sucederam-se uns aos outros de geração em geração.<br/>"
+  ]
+}

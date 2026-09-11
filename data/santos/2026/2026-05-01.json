@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-01",
+  "year": 2026,
+  "month": 5,
+  "day": 1,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/01.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-01.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-01",
+      "name": "Santa José operário, esposo da Santíssima Virgem Maria, protetor dos trabalhadores",
+      "normalizedName": "santa jose operario, esposo da santissima maria, protetor dos trabalhadores",
+      "imageUrl": "./assets/img/santos/05-01-santa-jose-operario-esposo-da-santissima-virg.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/01/s--jose-operario--esposo-da-santissima-virgem-maria--protetor-do.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/01/s--jose-operario--esposo-da-santissima-virgem-maria--protetor-do.html",
+      "sourceText": "Celebra-se, hoje, São José, pai terreno de Jesus, sob as vestes de carpinteiro, que dá testemunho do fato de que até o trabalho humilde pode tornar o homem partícipe do plano divino da salvação. É venerado como Padroeiro dos trabalhadores cristãos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "name": "São Jeremias, profeta",
+      "normalizedName": "sao jeremias, profeta",
+      "imageUrl": "./assets/img/santos/05-01-sao-jeremias-profeta.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Jeremias, um dos quatro grandes profetas de Israel, da estirpe dos sacerdotes de Jerusalém, foi pregador no reino de Judá, até para além do ano 587 a.C. Por ter previsto a destruição do Templo e o cativeiro babilônico, foi perseguido e preso. Seu livro é o trigésimo do Antigo Testamento.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

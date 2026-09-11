@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-20",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "33a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Apocalipse 10,8-11",
+      "text": "8Aquela mesma voz do céu que eu, João, já tinha ouvido tornou a falar comigo: \"Vai, pega o livrinho aberto da mão do anjo que está de pé sobre o mar e a terra\". 9Eu fui até o anjo e pedi que me entregasse o livrinho. Ele me falou: \"Pega e come. Será amargo no estômago, mas na tua boca será doce como mel\". 10Peguei da mão do anjo o livrinho e o comi. Na boca era doce como mel, mas, quando o engoli, meu estômago tornou-se amargo. 11Então ele me disse: \"Deves profetizar ainda contra outros povos e nações, línguas e reis\"."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Seguindo vossa lei, me rejubilo muito mais do que em todas as riquezas.\n\n- Minha alegria é a vossa aliança, meus conselheiros são os vossos mandamentos.\n\n- A lei de vossa boca, para mim, vale mais do que milhões em ouro e prata.\n\n- Como é doce ao paladar vossa Palavra, muito mais doce do que o mel na minha boca!\n\n- Vossa Palavra é minha herança para sempre, porque ela é que me alegra o coração!\n\n- Abro a boca e aspiro largamente, pois estou ávido de vossos mandamentos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 19, 45-48",
+      "text": "Naquele tempo, 45Jesus entrou no templo e começou a expulsar os vendedores. 46E disse: \"Está escrito: 'Minha casa será casa de oração'. No entanto, vós fizestes dela um antro de ladrões\". 47Jesus ensinava todos os dias no templo. Os sumos sacerdotes, os mestres da lei e os notáveis do povo procuravam modo de matá-lo. 48Mas não sabiam o que fazer, porque o povo todo ficava fascinado quando ouvia Jesus falar."
+    }
+  },
+  "extra": []
+}

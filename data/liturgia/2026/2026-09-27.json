@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-27",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "26o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Ezequiel 18,25-28",
+      "text": "Assim diz o Senhor: 25Vós andais dizendo: `A conduta do Senhor não é correta`. Ouví, vós da casa de Israel: É a minha conduta que não é correta, ou antes é a vossa conduta que não é correta? 26Quando um justo se desvia da justiça, pratica o mal e morre, é por causa do mal praticado que ele morre. 27Quando um ímpio se arrepende da maldade que praticou e observa o direito e a justiça, conserva a própria vida. 28Arrependendo-se de todos os seus pecados, com certeza viverá; não morrerá."
+    },
+    "psalm": {
+      "reference": "Salmo 24 (25)",
+      "text": "- Mostrai-me, ó Senhor, vossos caminhos, e fazei-me conhecer a vossa estrada! Vossa verdade me oriente e me conduza, porque sois o Deus da minha salvação; em vós espero, ó Senhor, todos os dias!\n\n- Recordai, Senhor meu Deus, vossa ternura e a vossa compaixão que são eternas! Não recordeis os meus pecados quando jovem, nem vos lembreis de minhas faltas e delitos! De mim lembrai-vos, porque sois misericórdia e sois bondade sem limites, ó Senhor!\n\n- O Senhor é piedade e retidão, e reconduz ao bom caminho os pecadores. Ele dirige os humildes na justiça, e aos pobres ele ensina o seu caminho."
+    },
+    "secondReading": {
+      "reference": "Filipenses 2,1-11",
+      "text": "Irmãos: 1Se existe consolação na vida em Cristo, se existe alento no mútuo amor, se existe comunhão no Espírito, se existe ternura e compaixão, 2tornai então completa a minha alegria: aspirai à mesma coisa, unidos no mesmo amor; vivei em harmonia, procurando a unidade. 3Nada façais por competição ou vanglória, mas, com humildade, cada um julgue que o outro é mais importante, 4e não cuide somente do que é seu, mas também do que é do outro. 5Tende entre vós o mesmo sentimento que existe em Cristo Jesus. 6Jesus Cristo, existindo em condição divina, não fez do ser igual a Deus uma usurpação, 7mas ele esvaziou-se a si mesmo, assumindo a condição de escravo e tornando-se igual aos homens. Encontrado com aspecto humano, 8humilhou-se a si mesmo, fazendo-se obediente até a morte, e morte de cruz. 9Por isso, Deus o exaltou acima de tudo e lhe deu o Nome que está acima de todo nome. 10Assim, ao nome de Jesus, todo joelho se dobre no céu, na terra e abaixo da terra, 11e toda língua proclame : 'Jesus Cristo é o Senhor' - para a glória de Deus Pai."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 21, 28-32",
+      "text": "Naquele tempo, Jesus disse aos sacerdotes e anciãos do povo: 28Que vos parece? Um homem tinha dois filhos. Dirigindo-se ao primeiro, ele disse: `Filho, vai trabalhar hoje na vinha!' 29O filho respondeu: `Não quero'. Mas depois mudou de opinião e foi. 30O pai dirigiu-se ao outro filho e disse a mesma coisa. Este respondeu: `Sim, senhor, eu vou'. Mas não foi. 31Qual dos dois fez a vontade do pai?' Os sumos sacerdotes e os anciãos do povo responderam: 'O primeiro.' Então Jesus lhes disse: 'Em verdade vos digo, que os publicanos e as prostitutas vos precedem no Reino de Deus. 32Porque João veio até vós, num caminho de justiça, e vós não acreditastes nele. Ao contrário, os publicanos e as prostitutas creram nele. Vós, porém, mesmo vendo isso, não vos arrependestes para crer nele."
+    }
+  },
+  "extra": []
+}

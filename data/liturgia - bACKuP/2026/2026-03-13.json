@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-13",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Os 14:2-10",
+    "psalm": "Sl 81:6c-8a, 8bc-9, 10-11ab, 14 and 17",
+    "secondReading": "",
+    "gospel": "Mc 12:28-34"
+  },
+  "calendar": {
+    "date": "2026-03-13",
+    "monthDay": "3/13",
+    "season": "Lent",
+    "celebration": {
+      "name": "Friday of the 3rd week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-13.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-13.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-13"
+  }
+}

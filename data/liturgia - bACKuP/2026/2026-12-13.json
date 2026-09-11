@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-13",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "Is 61:1-2a, 10-11",
+    "psalm": "Lc 1:46-48, 49-50, 53-54",
+    "secondReading": "1Ts 5:16-24",
+    "gospel": "Jo 1:6-8, 19-28"
+  },
+  "calendar": {
+    "date": "2026-12-13",
+    "monthDay": "12/13",
+    "season": "Advent",
+    "celebration": {
+      "name": "3rd Sunday of Advent",
+      "type": "SUNDAY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-13.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-13.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-13"
+  }
+}

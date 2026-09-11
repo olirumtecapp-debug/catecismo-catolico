@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-20",
+  "year": 2026,
+  "month": 3,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-20",
+      "name": "São João Nepomuceno, presbítero e mártir de Praga",
+      "normalizedName": "sao joao nepomuceno, presbitero e martir de praga",
+      "imageUrl": "./assets/img/santos/03-20-sao-joao-nepomuceno-presbitero-e-martir-de-pr.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/20/s--joao-nepomuceno--presbitero-e-martir-de-praga.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/20/s--joao-nepomuceno--presbitero-e-martir-de-praga.html",
+      "sourceText": "O martírio de São João Nepomuceno ocorreu em Praga, em fins do ano 1300. Era um humilde sacerdote e pregador na corte do rei Venceslau IV. Ao opor-se ao monarca, com firmeza, pagou com a vida as suas pretensões que violariam a sacralidade da Confissão e a liberdade da Igreja.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

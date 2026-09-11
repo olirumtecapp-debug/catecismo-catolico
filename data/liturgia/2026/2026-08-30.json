@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-30",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "22o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jeremias 20,7-9",
+      "text": "7Seduziste-me, Senhor, e deixei-me seduzir; foste mais forte, tiveste mais poder. Tornei-me alvo de irrisão o dia inteiro, todos zombam de mim. 8Todas as vezes que falo, levanto a voz, clamando contra a maldade e invocando calamidades; a palavra do Senhor tornou-se para mim fonte de vergonha e de chacota o dia inteiro. 9Disse comigo: 'Não quero mais lembrar-me disso nem falar mais em nome dele.' Senti, então, dentro de mim um fogo ardente a penetrar-me o corpo todo: desfaleci, sem forças para suportar."
+    },
+    "psalm": {
+      "reference": "Salmo 62 (63)",
+      "text": "- Sois vós, ó Senhor, o meu Deus! Desde a aurora ansioso vos busco! A minha alma tem sede de vós, minha carne também vos deseja, como terra sedenta e sem água!\n\n- Venho, assim, contemplar-vos no templo, para ver vossa glória e poder. Vosso amor vale mais do que a vida: e por isso meus lábios vos louvam.\n\n- Quero, pois vos louvar pela vida, e elevar para vós minhas mãos! A minha alma será saciada, como em grande banquete de festa; cantará a alegria em meus lábios, ao cantar para vós meu louvor!\n\n- Para mim fostes sempre um socorro; de vossas asas à sombra eu exulto! Minha alma se agarra em vós; com poder vossa mão me sustenta."
+    },
+    "secondReading": {
+      "reference": "Romanos 12,1-2",
+      "text": "1Pela misericórdia de Deus, eu vos exorto, irmãos a vos oferecerdes em sacrifício vivo, santo e agradável a Deus: Este é o vosso culto espiritual. 2Não vos conformeis com o mundo, mas transformai-vos, renovando vossa maneira de pensar e de julgar, para que possais distinguir o que é da vontade de Deus, isto é, o que é bom, o que lhe agrada, o que é perfeito."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 16, 21-27",
+      "text": "Naquele tempo: 21Jesus começou a mostrar a seus discípulos que devia ir à Jerusalém e sofrer muito da parte dos anciãos, dos sumos sacerdotes e dos mestres da Lei, e que devia ser morto e ressuscitar no terceiro dia. 22Então Pedro tomou Jesus à parte e começou a repreendê-lo, dizendo: 'Deus não permita tal coisa, Senhor! Que isto nunca te aconteça!' 23Jesus, porém, voltou-se para Pedro, e disse: 'Vai para longe, Satanás! Tu és para mim uma pedra de tropeço, porque não pensas as coisas de Deus mas sim as coisas dos homens!' 24Então Jesus disse aos discípulos: 'Se alguém quer me seguir, renuncie a si mesmo, tome a sua cruz e me siga. 25Pois quem quiser salvar a sua vida vai perdê-la; e quem perder a sua vida por causa de mim, vai encontrá-la. 26De fato, que adianta ao homem ganhar o mundo inteiro mas perder a sua vida? O que poderá alguém dar em troca de sua vida? 27Porque o Filho do Homem virá na glória do seu Pai, com os seus anjos, e então retribuirá a cada um de acordo com a sua conduta."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho <br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja <br/>",
+    "Sermão 96 <br/>",
+    "«Não tens em vista as coisas de Deus, mas dos homens»<br/>",
+    "Quando o Senhor impõe ao homem que quer segui-Lo que renuncie a si mesmo, achamos que os seus mandamentos são difíceis e duros de ouvir. Mas, se aquele que ordena nos ajuda a cumprir o que ordena, então esses mandamentos deixam de ser difíceis e penosos. [...] É igualmente verdadeira aquela outra palavra saída da boca do Senhor: «O meu jugo é suave e o meu fardo é leve» (Mt 11,30). Com efeito, o amor suaviza o que os preceitos podem ter de penoso. Conhecemos todas as maravilhas que o amor pode realizar. [...] Que dificuldades não enfrentaram os homens, que condições de vida indignas e intoleráveis não suportaram para atingirem o objeto do seu amor! [...] Porque nos admiramos se aquele que ama Cristo e quer segui-Lo renuncia a si mesmo para O amar? Porque, se o homem se perde amando-se a si mesmo, deverá sem dúvida alguma encontrar-se renunciando a si mesmo. <br/>",
+    "Que homem se recusaria a seguir Cristo até à morada da felicidade perfeita, da paz suprema e da tranquilidade eterna? É bom segui-Lo até aí; mas é preciso conhecer o caminho para lá chegar. [...] O caminho parece-te cheio de asperezas, repugna-te, não queres seguir a Cristo. Vai atrás dele! O caminho que os homens traçaram é pedregoso, mas foi aplanado quando Cristo o percorreu ao voltar ao Céu. Que homem se recusaria, pois, a avançar em direção à glória? <br/>",
+    "Todos gostamos de nos elevar até à glória, mas temos de o fazer pela escada da humildade. Porque levantas o pé acima da tua própria altura? Quererás cair em vez de subir? Começa pelo primeiro degrau: já começaste a subir. Os dois discípulos que diziam: «Senhor, permite-nos que, no teu Reino, nos sentemos, um à tua direita e outro à tua esquerda» não deram atenção à escada da humildade. Visavam o cume, mas não viam os degraus. Mas o Senhor mostrou-lhos. Na verdade, o que foi que Ele respondeu? «Podeis beber do cálice que Eu vou beber? (Mc 10,37-38) Vós que desejais atingir o cume das honras, podeis beber o cálice da humildade?» Foi por isso que Ele não Se limitou a dizer, de uma maneira genérica: «Renuncie a si mesmo e siga-Me», mas acrescentou: «Tome a sua cruz e siga-Me».<br/>"
+  ]
+}

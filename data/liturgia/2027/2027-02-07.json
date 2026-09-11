@@ -1,0 +1,33 @@
+{
+  "date": "2027-02-07",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jó 7,1-4.6-7",
+      "text": "Jó disse: 1\"Não é acaso uma luta a vida do homem sobre a terra? Seus dias não são como dias de um mercenário? 2Como um escravo suspira pela sombra, como um assalariado aguarda sua paga, 3assim tive por ganho meses de decepção, e couberam-me noites de sofrimento. 4Se me deito, penso: quando poderei levantar-me? E, ao amanhecer, espero novamente a tarde e me encho de sofrimentos até o anoitecer. 6Meus dias correm mais rápido do que a lançadeira do tear e se consomem sem esperança. 7Lembra-te de que minha vida é apenas um sopro e meus olhos não voltarão a ver a felicidade!\""
+    },
+    "psalm": {
+      "reference": "Salmo 146 (147)",
+      "text": "- Louvai o Senhor Deus, porque ele é bom, cantai ao nosso Deus, porque é suave: ele é digno de louvor, ele o merece! O Senhor reconstruiu Jerusalém e os dispersos de Israel juntou de novo.\n\n- Ele conforta os corações despedaçados, ele enfaixa suas feridas e as cura; fixa o número de todas as estrelas e chama a cada uma por seu nome.\n\n- É grande e onipotente o nosso Deus, seu saber não tem medida nem limites. O Senhor Deus é o amparo dos humildes, mas dobra até o chão os que são ímpios."
+    },
+    "secondReading": {
+      "reference": "Coríntios 9,16-19.22-23",
+      "text": "Irmãos, 16pregar o evangelho não é para mim motivo de glória. É antes uma necessidade para mim, uma imposição. Ai de mim se eu não pregar o evangelho! 17Se eu exercesse minha função de pregador por iniciativa própria, eu teria direito a salário. Mas, como a iniciativa não é minha, trata-se de um encargo que me foi confiado. 18Em que consiste então o meu salário? Em pregar o evangelho, oferecendo-o de graça, sem usar os direitos que o evangelho me dá. 19Assim, livre em relação a todos, eu me tornei escravo de todos, a fim de ganhar o maior número possível. 22Com os fracos, eu me fiz fraco, para ganhar os fracos. Com todos, eu me fiz tudo, para certamente salvar alguns. 23Por causa do evangelho eu faço tudo, para ter parte nele."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 29-39",
+      "text": "Naquele tempo, 29Jesus saiu da sinagoga e foi, com Tiago e João, para a casa de Simão e André. 30A sogra de Simão estava de cama, com febre, e eles logo contaram a Jesus. 31E ele se aproximou, segurou sua mão e ajudou-a a levantar-se. Então, a febre desapareceu, e ela começou a servi-los. 32À tarde, depois do pôr do sol, levaram a Jesus todos os doentes e os possuídos pelo demônio. 33A cidade inteira se reuniu em frente da casa. 34Jesus curou muitas pessoas de diversas doenças e expulsou muitos demônios. E não deixava que os demônios falassem, pois sabiam quem ele era. 35De madrugada, quando ainda estava escuro, Jesus se levantou e foi rezar num lugar deserto. 36Simão e seus companheiros foram à procura de Jesus. 37Quando o encontraram, disseram: \"Todos estão te procurando\". 38Jesus respondeu: \"Vamos a outros lugares, às aldeias da redondeza! Devo pregar também ali, pois foi para isso que eu vim\". 39E andava por toda a Galileia, pregando em suas sinagogas e expulsando os demônios."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Bernardo, monge cisterciense, Doutor da Igreja<br/>",
+    "</b>",
+    "1.º Sermão para o Advento<br/>",
+    "«Jesus aproximou-Se, tomou-a pela mão e levantou-a.»<br/>",
+    "Que condescendência a de Deus, que nos procura, que dignidade a do homem, que é assim procurado! [...] «Que é o homem, Senhor, para que Te lembres dele, o filho do homem para que dele Te recordes?» (Job 7,17). Gostava muito de saber porque foi que Deus quis vir até nós, porque não fomos nós a ir a Ele. Porque é o nosso interesse que está em causa. Não é habitual os ricos irem à casa dos pobres, mesmo quando têm a intenção de lhes fazer bem. Era a nós que convinha ir ter com Jesus. Mas um duplo obstáculo nos impedia: os nossos olhos estavam cegos e Ele vive numa luz inacessível; nós jazíamos paralisados nos nossos catres, incapazes de alcançar a grandeza de Deus. Foi por isso que o nosso bom Salvador e médico das nossas almas desceu das alturas e moderou para os nossos olhos doentes o brilho da sua glória. Ele revestiu-Se, como que de uma lanterna, desse corpo luminoso e puro de toda a mancha que assumiu.<br/>"
+  ]
+}

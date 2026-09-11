@@ -1,0 +1,32 @@
+{
+  "date": "2027-10-07",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Nossa Senhora do Rosario",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Malaquias 3,13-20",
+      "text": "13Vossas palavras são duras contra mim, diz o Senhor, e ainda perguntais: 14'Que dissemos contra ti?' Vós estais dizendo: 'É coisa inútil servir a Deus; que vantagem tivemos em observar seus preceitos e em levar uma vida severa na presença do Senhor dos exércitos? 15Portanto, hoje os felizardos são os soberbos, pois consolidaram-se, praticando o mal, e, mesmo provocando a Deus, estão impunes. 16Vieram, entretanto, a falar uns com os outros, os tementes a Deus. O Senhor prestou atenção e ouviu-os; em sua presença foi escrito um livro de feitos notáveis, aberto aos que temem o Senhor e têm seu nome no pensamento. 17Serão para mim o tesouro, diz o Senhor dos exércitos, para o dia que eu me reservar; hei de favorecê-los, como o pai ao filho que o serve. 18De novo vereis a distância que há entre o justo e o ímpio, entre o que serve a Deus e o que não o serve. 19Eis que virá o dia, abrasador como fornalha, em que todos os soberbos e ímpios serão como palha; e esse dia vindouro haverá de queimá-los, diz o Senhor dos exércitos, tal que não lhes deixará raiz nem ramo. 20aPara vós, que temeis o meu nome, nascerá o sol da justiça, trazendo salvação em suas asas."
+    },
+    "psalm": {
+      "reference": "Salmo 1",
+      "text": "- Feliz é todo aquele que não anda conforme os conselhos dos perversos; que não entra no caminho dos malvados, nem junto aos zombadores vai sentar-se; mas encontra seu prazer na lei de Deus e a medita, dia e noite, sem cessar.\n\n- Eis que ele é semelhante a uma árvore que à beira da torrente está plantada; ela sempre dá seus frutos a seu tempo, e jamais as suas folhas vão murchar. Eis que tudo o que ele faz vai prosperar\n\n- Mas bem outra é a sorte dos perversos. Ao contrário, são iguais à palha seca espalhada e dispersada pelo vento. Pois Deus vigia o caminho dos eleitos, mas a estrada dos malvados leva à morte."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 5-13",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 5E Jesus acrescentou: 'Se um de vós tiver um amigo e for procurá-lo à meia-noite e lhe disser: 'Amigo, empresta-me três pães, 6porque um amigo meu chegou de viagem e nada tenho para lhe oferecer', 7e se o outro responder lá de dentro: 'Não me incomoda! Já tranquei a porta, e meus filhos e eu já estamos deitados; não me posso levantar para te dar os pães'; 8eu vos declaro: mesmo que o outro não se levante para dá-los porque é seu amigo, vai levantar-se ao menos por causa da impertinência dele e lhe dará quanto for necessário. 9Portanto, eu vos digo: pedi e recebereis; procurai e encontrareis; batei e vos será aberto. 10Pois quem pede, recebe; quem procura, encontra; e, para quem bate, se abrirá. 11Será que algum de vós que é pai, se o filho pedir um peixe, lhe dará uma cobra? 12Ou ainda, se pedir um ovo, lhe dará um escorpião? 13Ora, se vós que sois maus, sabeis dar coisas boas aos vossos filhos, quanto mais o Pai do Céu dará o Espírito Santo aos que o pedirem! '"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Tomás de Aquino (1225-1274)<br/>",
+    "</b>",
+    "Teólogo dominicano, Doutor da Igreja<br/>",
+    "Compêndio de teologia<br/>",
+    "Convém ao homem rezar<br/>",
+    "Segundo o projecto providencial de Deus, Ele deu a tudo o que existe o meio de alcançar a sua conclusão como convém à sua natureza. Os homens também receberam, para obter o que esperam de Deus, um meio adaptado à condição humana. Esta condição quer que o homem se sirva da oração para obter de outrem o que espera, sobretudo se aquele a quem se dirige lhe é superior. É por isso que é recomendado aos homens rezarem para obterem de Deus aquilo que esperam receber dele. Mas a necessidade de implorar é diferente conforme se trate de obter algo de um homem ou de Deus.<br/>",
+    "Quando a súplica se dirige a um homem, tem de exprimir primeiro o desejo e a necessidade de quem implora. É preciso também que dobre, até o fazer ceder, o coração daquele a quem implora. Ora estes elementos não têm lugar na oração feita a Deus. Ao rezar, não temos de nos preocupar em manifestar os nossos desejos ou as nossas necessidades a Deus, pois Ele tudo conhece. Assim, o salmista diz ao Senhor: «Todos os meus desejos estão diante de Ti» (Sl 37,10). E lemos no Evangelho: «Vosso Pai sabe que tendes necessidade de tudo isso» (Mt 6,8). Não se trata de dobrar, por palavras humanas, a vontade divina, levando-a a querer o que não queria, porque está dito no livro dos Números: «Deus não é como um homem, para mentir, nem filho de Adão, para mudar» (23,19)<br/>"
+  ]
+}

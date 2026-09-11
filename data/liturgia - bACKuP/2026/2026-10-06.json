@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-06",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Gl 1:13-24",
+    "psalm": "Sl 139:1b-3, 13-14ab, 14c-15",
+    "secondReading": "",
+    "gospel": "Lc 10:38-42"
+  },
+  "calendar": {
+    "date": "2026-10-06",
+    "monthDay": "10/6",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saint Bruno, Priest",
+      "type": "OPT_MEMORIAL",
+      "quote": "O Bonitas! O Goodness!",
+      "description": "German priest who founded the Carthusians in the French Alps — the strictest contemplative order in the Church — and refused the archbishopric to remain a monk.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/10-06.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/10-06.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-10-06"
+  }
+}

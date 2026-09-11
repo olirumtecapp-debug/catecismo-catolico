@@ -1,0 +1,32 @@
+{
+  "date": "2027-12-03",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Advento Ciclo do Natal Memoria: Sao Francisco Xavier",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 29,17-24",
+      "text": "Assim fala o Senhor Deus: 17Dentro de pouco tempo, não se transformará o Líbano em jardim? E não poderá o jardim tornar-se floresta? 18Naquele dia, os surdos ouvirão as palavras do livro e os olhos dos cegos verão, no meio das trevas e das sombras. 19Os humildes aumentarão sua alegria no Senhor, e os mais pobres dos homens se rejubilarão no Santo de Israel; 20fracassou o prepotente, desapareceu o trapaceiro, e sucumbiram todos os malfeitores precoces, 21os que faziam os outros pecar por palavras, e armavam ciladas ao juiz à porta da cidade e atacavam o justo com palavras falsas. 22Isto diz o Senhor à casa de Jacó, ele que libertou Abraão: 'Agora, Jacó não mais terá que envergonhar-se nem seu rosto terá que enrubescer; 23quando contemplarem as obras de minhas mãos, hão de honrar meu nome no meio do povo, honrarão o Santo de Jacó, e temerão o Deus de Israel; 24os homens de espírito inconstante conseguirão sabedoria e os maldizentes concordarão em aprender'."
+    },
+    "psalm": {
+      "reference": "Salmo 26 (27)",
+      "text": "- O Senhor é minha luz e salvação; de quem eu terei medo? O Senhor é a proteção da minha vida; perante quem eu tremerei?\n\n- Ao Senhor eu peço apenas uma coisa, e é só isto que eu desejo: habitar no santuário do Senhor por toda a minha vida; saborear a suavidade do Senhor e contemplá-lo no seu templo.\n\n- Sei que a bondade do Senhor eu hei de ver na terra dos viventes. Espera no Senhor e tem coragem, espera no Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 9, 27-31",
+      "text": "Naquele tempo: 27Partindo Jesus, dois cegos o seguiram, gritando: 'Tem piedade de nós, filho de Davi!' 28Quando Jesus entrou em casa, os cegos se aproximaram dele. Então Jesus perguntou-lhes: 'Vós acreditais que eu posso fazer isso?' Eles responderam: 'Sim, Senhor.' 29Então Jesus tocou nos olhos deles, dizendo: 'Faça-se conforme a vossa fé.' 30E os olhos deles se abriram. Jesus os advertiu severamente: 'Tomai cuidado para que ninguém fique sabendo.' 31Mas eles saíram, e espalharam sua fama por toda aquela região."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Anselmo (1033-1109)<br/>",
+    "</b>",
+    "Monge, Bispo, Doutor da Igreja<br/>",
+    "Proslogion, 1<br/>",
+    "«O meu coração diz: \"Procura a sua face\"; é a tua face, Senhor, que eu procuro» (Sl 26, 8)<br/>",
+    "«Senhor, até quando?» (Sl 6,4). Até quando, Senhor, Te esquecerás de nós? Por quanto tempo ainda nos esconderás a tua face? (Sl 12,2). Quando nos olharás e nos ouvirás? Quando iluminarás os nossos olhos e nos mostrarás a tua face? Quando virás de novo até nós? Olha para nós, Senhor, ilumina-nos, mostra-Te a nós. Concede-nos o bem da tua presença, a nós que, sem Ti, nada fazemos bem. Tem piedade dos nossos esforços activos para chegarmos a Ti, nós que nada podemos sem Ti. Se nos convidas, ajuda-nos.<br/>",
+    "Suplico-Te, Senhor, não me deixes suspirar de desespero; faz-me respirar a esperança. [...] Que me seja, ao menos, permitido entrever a luz, mesmo que de longe, mesmo que das profundezas. Ensina-me a procurar-Te, e mostra-Te quando Te procuro. É que não posso procurar-Te se não me guiares, nem encontrar-Te se não Te mostrares. Procurar-Te-ei pelo desejo e desejar-Te-ei na minha procura. Encontrar-Te-ei amando-Te e amar-Te-ei quando Te encontrar.<br/>"
+  ]
+}

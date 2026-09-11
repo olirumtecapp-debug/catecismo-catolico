@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-10",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Leao Magno",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Tito 2,1-8.11-14",
+      "text": "Caríssimo, 1o teu ensino seja conforme à sã doutrina. 2Os mais velhos sejam sóbrios, ponderados, prudentes, fortes na fé, na caridade, na paciência. 3Assim também as mulheres idosas observem uma conduta santa, não sejam caluniadoras nem escravas do vinho, mas mestras do bem. 4Saibam ensinar as jovens a amarem seus maridos, a cuidarem dos filhos, 5a serem prudentes, castas, boas donas de casa, dóceis para os maridos, bondosas, para que a palavra de Deus não seja difamada. 6Exorta igualmente os jovens a serem moderados 7e mostra-te em tudo exemplo de boas obras, de integridade na doutrina, de ponderação, 8de palavra sã e irrepreensível, para que os adversários se confundam, não tendo nada de mal para dizer de nós. 11Pois a graça de Deus se manifestou, trazendo salvação para todos os homens. 12Ela nos ensina a abandonar a impiedade e as paixões mundanas e a viver neste mundo com equilíbrio, justiça e piedade, 13aguardando a feliz esperança e a manifestação da glória do nosso grande Deus e salvador, Jesus Cristo. 14Ele se entregou por nós para nos resgatar de toda maldade e purificar para si um povo que lhe pertença e que se dedique a praticar o bem."
+    },
+    "psalm": {
+      "reference": "Salmo 36 (37)",
+      "text": "- Confia no Senhor e faze o bem, e sobre a terra habitarás em segurança. Coloca no Senhor tua alegria, e ele dará o que pedir teu coração.\n\n- O Senhor cuida da vida dos honestos, e sua herança permanece eternamente. É o Senhor quem firma os passos dos mortais e dirige o caminhar dos que lhe agradam.\n\n- Afasta-te do mal e faze o bem, e terás tua morada para sempre. Os justos herdarão a nova terra e nela habitarão eternamente."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 7-10",
+      "text": "Naquele tempo, disse Jesus: 7\"Se algum de vós tem um empregado que trabalha a terra ou cuida dos animais, por acaso vai dizer-lhe, quando ele volta do campo: 'Vem depressa para a mesa'? 8Pelo contrário, não vai dizer ao empregado: 'Prepara-me o jantar, cinge-te e serve-me, enquanto eu como e bebo; depois disso tu poderás comer e beber'? 9Será que vai agradecer ao empregado, porque fez o que lhe havia mandado? 10Assim também vós, quando tiverdes feito tudo o que vos mandaram, dizei: 'Somos servos inúteis; fizemos o que devíamos fazer'\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Agostinho, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Sermão para a ordenação de um bispo, 3, 9<br/>",
+    "Ser servo<br/>",
+    "O bispo que vos dirige é vosso servo. [...] Que o Senhor nos conceda, portanto, com a ajuda das vossas preces, ser e permanecer até ao fim o que quiserdes que sejamos [...]; que Ele nos ajude a cumprir o que nos ordenou. Mas, seja quem for que sejamos, não coloqueis em nós a vossa esperança. Permito-me dizer-vos isto como bispo: quero alegrar-me convosco e não ficar inflamado de orgulho. [...] Falo agora ao povo de Deus em nome de Cristo, falo na Igreja de Deus, falo como pobre servo de Deus: não coloqueis a vossa esperança em nós, não ponhais a vossa esperança nos homens. Somos bons? Somos servos. Somos maus? Continuamos a ser servos. Mas os bons, os servos fiéis, são os verdadeiros servos.<br/>",
+    "Qual é o nosso serviço? Prestai atenção: se tendes fome e não quereis ser ingratos, reparai de que celeiro tiramos as provisões; mas não és tu que tens de decidir em que travessa te é servido aquilo que estás ávido de comer: «Numa casa grande não existem somente vasos de ouro e prata, também os há de madeira e de barro» (2Tm 2,20). [O teu bispo parece-se com] uma travessa de prata, uma travessa de ouro, ou uma travessa de argila? Vê se nessa travessa há pão e quem to deu para que te fosse servido, pois Ele é que é o pão: «Eu sou o pão vivo, o que desceu do Céu» (Jo 6,51). Nós, portanto, servimo-vos Cristo, em lugar de Cristo [...], para que Ele chegue até vós, para que Ele seja o juiz do nosso ministério.<br/>"
+  ]
+}

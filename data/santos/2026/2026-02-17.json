@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-17",
+  "year": 2026,
+  "month": 2,
+  "day": 17,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/17.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-17.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-17",
+      "name": "SS. Sete Fundadores da Ordem dos Servitas de Nossa Senhora, entre os quais S. Aleixo Falconieri",
+      "normalizedName": "ss. sete fundadores",
+      "imageUrl": "./assets/img/santos/02-17-ss-sete-fundadores-da-ordem-dos-servitas-de-n.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/17/ss--sete-fundadores-da-ordem-dos-servitas-de-nossa-senhora--entr.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/17/ss--sete-fundadores-da-ordem-dos-servitas-de-nossa-senhora--entr.html",
+      "sourceText": "Também chamados septem viri ou septem frates, os Sete Santos foram os fundadores da Ordem dos Servos de Maria. Naturais de Florença, estes ricos mercantes, que viveram no século XIII, deixaram tudo para se dedicar à vida de oração e contemplação. Sua festa litúrgica ocorre no dia 17 de fevereiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

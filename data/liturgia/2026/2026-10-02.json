@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santos Anjos da Guarda",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Jó 38,1.12-21; 40,3-5",
+      "text": "1O Senhor respondeu a Jó, do meio da tempestade, e disse: 12Alguma vez na vida deste ordens à manhã, ou indicaste à aurora o seu lugar, 13para que ela apanhe a terra pelos quatro cantos, e sejam dela sacudidos os malfeitores? 14A terra torna argila compacta, e tudo se apresenta em trajes de gala, 15mas recusa-se a luz aos malfeitores e quebra-se o braço rebelde. 16Chegaste perto das nascentes do Mar, ou pousaste no fundo do Oceano? 17Foram-te franqueadas as portas da Morte, ou viste os portais das Sombras? 18Examinaste a extensão da Terra? Conta-me, se sabes tudo isso! 19Qual é o caminho para a morada da luz, e onde fica o lugar das trevas? 20Poderias alcançá-las em seu domínio e reconhecer o acesso à sua morada? 21Deverias sabê-lo, pois já tinhas nascido e grande é o número dos teus anos! 40,3Jó respondeu ao Senhor, dizendo: 4'Fui precipitado. Que te posso responder? Porei minha mão sobre a boca. 5Falei uma vez, não replicarei; uma segunda vez, mas não falarei mais'."
+    },
+    "psalm": {
+      "reference": "Salmo 138 (139)",
+      "text": "- Senhor, vós me sondais e conheceis, sabeis quando me sento ou me levanto; de longe penetrais meus pensamentos, percebeis quando me deito e quando eu ando, os meus caminhos vos são todos conhecidos.\n\n- Em que lugar me ocultarei de vosso espírito? E para onde fugirei de vossa face? Se eu subir até os céus, ali estais; se eu descer até o abismo, estais presente.\n\n- Se a aurora me emprestar as suas asas, para eu voar e habitar no fim dos mares; mesmo lá vai me guiar a vossa mão e segurar-me com firmeza a vossa destra.\n\n- Fostes vós que me formastes as entranhas, e no seio de minha mãe vós me tecestes. Eu vos louvo e vos dou graças, ó Senhor, porque de modo admirável me formastes! Que prodígio e maravilha as vossas obras!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 10, 13-16",
+      "text": "Naquele tempo, disse Jesus: 13Ai de ti, Corazim! Aí de ti, Betsaida! Porque se em Tiro e Sidônia tivessem sido realizados os milagres que foram feitos no vosso meio, há muito tempo teriam feito penitência, vestindo-se de cilício e sentando-se sobre cinzas. 14Pois bem: no dia do julgamento, Tiro e Sidônia terão uma sentença menos dura do que vós. 15Ai de ti, Cafarnaum! Serás elevada até o céu? Não, tu serás atirada no inferno. 16Quem vos escuta, a mim escuta; e quem vos rejeita, a mim despreza; mas quem me rejeita, rejeita aquele que me enviou."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Agostinho, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Discursos sobre os salmos, Salmo 49, §23<br/>",
+    "«Quem vos escuta, escuta-Me a Mim»<br/>",
+    "Alguém que ouvira o versículo «Oferece a Deus um sacrifício de louvor» (Sl 49,14), pensou: «Todos os dias, ao acordar, irei à igreja e entoarei o hino da manhã; ao final do dia, entoarei o hino da noite; e depois, em minha casa, um terceiro e um quarto hinos. Deste modo, farei todos os dias um sacrifício de louvor que oferecerei ao meu Deus». Fazer isto é bom, mas não te deixe descansado; vê que, enquanto a tua língua fala bem perante Deus, a tua vida não fale mal à sua frente. [...] Toma cuidado e não vivas mal enquanto falas bem.<br/>",
+    "Porquê? Porque Deus disse ao pecador: «Como recitas os meus mandamentos e tens a minha aliança na boca [, tu que rejeitas as minhas palavras]?» (v. 16-17) Eis o temor com que devemos falar. [...] Vós, meus irmãos, estais em segurança: se ouvirdes dizer coisas boas, é Deus que ouvis, qualquer que seja a boca que fala convosco. Mas Deus não quis deixar de repreender aqueles que falam, com receio de que adormeçam tranquilos numa vida desordenada, afirmando que falam do bem e pensando: «Deus não quererá condenar-nos, pois foi através de nós que quis dizer coisas tão boas ao seu povo». Portanto, vós que falais, quem quer que sejais, escutai o que dizeis; vós que quereis ser ouvidos, ouvi-vos primeiro. [...] Possa eu ser o primeiro a ouvir, possa eu ouvir, e ouvir melhor do que todos, «aquilo que o Senhor Deus diz em mim, pois Ele diz palavras de paz ao seu povo» (Sl 84,9).<br/>"
+  ]
+}

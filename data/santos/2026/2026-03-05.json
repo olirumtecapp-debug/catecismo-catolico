@@ -1,0 +1,56 @@
+{
+  "date": "2026-03-05",
+  "year": 2026,
+  "month": 3,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-05",
+      "name": "São Lúcio I, papa",
+      "normalizedName": "sao lucio i, papa",
+      "imageUrl": "./assets/img/santos/03-05-sao-lucio-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Eleito no ano 253, Lúcio foi forçado ao exílio. Retornando a Roma, opôs-se aos rigores dos hereges Novatianos, que recusavam a readmissão na Igreja dos relapsos, cristãos que adoravam os ídolos para evitar a perseguição. Lúcio estabeleceu sua reintegração na comunidade após práticas penitenciais.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-05",
+      "name": "São Adriano, mártir",
+      "normalizedName": "sao adriano, martir",
+      "imageUrl": "./assets/img/santos/03-05-sao-adriano-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Jovem cristão viveu entre os séculos III e IV, morreu mártir no ano 309. Adriano tinha ido a Cesareia da Palestina juntamente com Eubulo para levar ajuda aos cristãos perseguidos. Descobertos e levados a julgamento, ambos se recusaram a realizar atos idolátricos e professaram abertamente a sua fé.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-05",
+      "name": "São João José da Cruz, presbítero franciscano",
+      "normalizedName": "sao joao jose da cruz, presbitero franciscano",
+      "imageUrl": "./assets/img/santos/03-05-sao-joao-jose-da-cruz-presbitero-franciscano.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/05/s--joao-jose-da-cruz--presbitero-franciscano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/05/s--joao-jose-da-cruz--presbitero-franciscano.html",
+      "sourceText": "Carlos Caetano nasceu na Ilha de Ischia no seio da nobre família Calosirto. Mudou logo de nome para João José da Cruz ao fazer parte dos Frades Menores Alcantarinos, em Nápoles. Animado pelo amor a Maria e imerso na pobreza total, o sacerdote liderou a reunificação desta família religiosa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

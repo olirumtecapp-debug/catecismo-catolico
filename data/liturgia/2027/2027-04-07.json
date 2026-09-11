@@ -1,0 +1,30 @@
+{
+  "date": "2027-04-07",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 5,17-26",
+      "text": "Naqueles dias, 17levantaram-se o sumo sacerdote e todos os do seu partido - isto é, o partido dos saduceus - cheios de raiva 18e mandaram prender os apóstolos e lançá-los na cadeia pública. 19Porém, durante a noite, o anjo do Senhor abriu as portas da prisão e os fez sair, dizendo: 20\"Ide falar ao povo, no templo, sobre tudo o que se refere a este modo de viver\". 21Eles obedeceram e, ao amanhecer, entraram no templo e começaram a ensinar. O sumo sacerdote chegou com os seus partidários e convocou o sinédrio e o conselho formado pelas pessoas importantes do povo de Israel. Então mandaram buscar os apóstolos à prisão. 22Mas, ao chegarem à prisão, os servos não os encontraram e voltaram, dizendo: 23\"Encontramos a prisão fechada, com toda segurança, e os guardas estavam a postos na frente da porta. Mas, quando abrimos a porta, não encontramos ninguém lá dentro\". 24Ao ouvirem essa notícia, o chefe da guarda do templo e os sumos sacerdotes não sabiam o que pensar e perguntavam-se o que poderia ter acontecido. 25Chegou alguém que lhes disse: \"Os homens que vós colocastes na prisão estão no templo ensinando o povo!\" 26Então o chefe da guarda do templo saiu com os guardas e trouxe os apóstolos, mas sem violência, porque eles tinham medo que o povo os atacasse com pedras."
+    },
+    "psalm": {
+      "reference": "Salmo 33 (34)",
+      "text": "- Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Minha alma se gloria no Senhor; que ouçam os humildes e se alegrem!\n\n- Comigo engrandecei ao Senhor Deus, exaltemos todos juntos o seu nome! Todas as vezes que o busquei, ele me ouviu e de todos os temores me livrou.\n\n- Contemplai a sua face e alegrai-vos, e vosso rosto não se cubra de vergonha! Este infeliz gritou a Deus e foi ouvido, e o Senhor o libertou de toda angústia.\n\n- O anjo do Senhor vem acampar ao redor dos que o temem e os salva. Provai e vede quão suave é o Senhor! Feliz o homem que tem nele o seu refúgio!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 3, 16-21",
+      "text": "16Deus amou tanto o mundo, que deu o seu Filho unigênito, para que não morra todo o que nele crer, mas tenha a vida eterna. 17De fato, Deus não enviou o seu Filho ao mundo para condenar o mundo, mas para que o mundo seja salvo por ele. 18Quem nele crê não é condenado, mas quem não crê já está condenado, porque não acreditou no nome do Filho unigênito. 19Ora, o julgamento é este: a luz veio ao mundo, mas os homens preferiram as trevas à luz, porque suas ações eram más. 20Quem pratica o mal odeia a luz e não se aproxima da luz, para que suas ações não sejam denunciadas. 21Mas quem age conforme a verdade aproxima-se da luz, para que se manifeste que suas ações são realizadas em Deus."
+    }
+  },
+  "extra": [
+    "Comentáro ao Evangelho por Santo Hipólito de Roma, presbítero, mártir<br/>",
+    "A Tradição Apostólica, 25<br/>",
+    "«Quem pratica a verdade aproxima-se da luz»<br/>",
+    "Ao cair da noite, quando o bispo estiver presente, o diácono trará a lamparina e, de pé diante de todos os fiéis presentes, dará graças. Começará por fazer a saudação, dizendo: «O Senhor esteja convosco». O povo responde: «Ele está no meio de nós». «Demos graças ao Senhor, nosso Deus». E o povo: «É nosso dever, é nossa salvação; grandeza e louvor Lhe sejam dadas, e glória», [...]<br/>",
+    "E rezará desta maneira: «Graças Vos damos, Senhor, por vosso Filho Jesus Cristo, nosso Senhor, por quem nos iluminais, revelando-nos a luz que não se extingue. Pois que percorremos todo este dia e chegámos ao começo da noite, saciando-nos com a luz do dia, que criastes para nossa satisfação, e visto que agora, por vossa graça, não nos falta a luz da noite, nós Vos louvamos e Vos glorificamos por vosso Filho Jesus Cristo, nosso Senhor, por quem Vos sejam dadas glória, poder e honra, na unidade do Espírito Santo, agora e para sempre, pelos séculos dos séculos. Amén». E todos respondem: «Amén».<br/>",
+    "Levantar-se-ão, pois, após a refeição, para rezar. E as crianças recitarão os salmos, acompanhadas pelas virgens.<br/>"
+  ]
+}

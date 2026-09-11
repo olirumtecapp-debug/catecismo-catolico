@@ -1,0 +1,33 @@
+{
+  "date": "2026-07-14",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "15a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 7,1-9",
+      "text": "No tempo de Acaz, filho de Joatão, filho de Ozias, rei de Judá, aconteceu que Rason, rei da Síria, e Facéia, filho de Romelias, rei de Israel, puseram-se em marcha para atacar Jerusalém, mas não conseguiram conquistá-la. 2Foi dada a notícia à casa de Davi: 'Os homens da Síria estão acampados em Efraim'. Tremeu o coração do rei e de todo o povo, como as árvores da floresta diante do vento. 3Então disse o Senhor a Isaías: 'Vai ao encontro de Acaz com teu filho Sear-Iasub (isto é, 'um resto voltará') até a ponta do canal, na piscina superior, na direção da estrada do Campo dos pisadores; 4e dirás ao rei: Procura estar calmo; não temas nem estremeça o teu coração por causa desses dois pedaços de tição fumegantes, diante da ira furiosa de Rason e da Síria, e do filho de Romelias, 5por terem a Síria, Efraim e o filho de Romelias conjurado contra ti, dizendo: 6'Vamos atacar Judá, enchê-lo de medo e conquistá-lo para nós, e nomear novo rei, o filho de Tabeel'. 7Isto diz o Senhor Deus: 'Este plano fracassará, nada disso se realizará! 8Que seja Damasco a capital da Síria e Rason o chefe de Damasco; dentro de sessenta e cinco anos deixará Efraim de ser povo; 9que seja a Samaria capital de Efraim e o filho de Romelias chefe de Efraim. De resto, se não confiardes, não podereis manter-vos firmes'."
+    },
+    "psalm": {
+      "reference": "Salmo 47 (48)",
+      "text": "- Grande é o Senhor e muito digno de louvores na cidade onde ele mora; seu Monte santo, esta colina encantadora é a alegria do universo.\n\n- Monte Sião, no extremo norte situado, és a mansão do grande Rei! Deus revelou-se em suas fortes cidadelas um refúgio poderoso.\n\n- Pois eis que os reis da terra se aliaram, e todos juntos avançaram; mal a viram, de pavor estremeceram, debandaram perturbados.\n\n- Como as dores da mulher sofrendo parto, uma angústia os invadiu; semelhante ao vento leste impetuoso, que despedaça as naus de Társis."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 11, 20-24",
+      "text": "Naquele tempo: 20Jesus começou a censurar as cidades onde fora realizada a maior parte de seus milagres, porque não se tinham convertido. 21'Ai de ti, Corazim! Ai de ti, Betsaida! Porque, se os milagres que se realizaram no meio de vós, tivessem sido feitos em Tiro e Sidônia, há muito tempo elas teriam feito penitência, vestindo-se de cilício e cobrindo-se de cinza. 22Pois bem! Eu vos digo: no dia do julgamento, Tiro e Sidônia serão tratadas com menos dureza do que vós. 23E tu, Cafarnaum! Acaso serás erguida até o céu? Não! Serás jogada no inferno! Porque, se os milagres que foram realizados no meio de ti tivessem sido feitos em Sodoma, ela existiria até hoje! 24Eu, porém, vos digo: no dia do juízo,"
+    }
+  },
+  "extra": [
+    "- Glória a Vós, Senhor<br/>",
+    "<b>",
+    "Comentário do dia por São Jerónimo (347-420)<br/>",
+    "</b>",
+    "Presbítero, tradutor da Bíblia, Doutor da Igreja<br/>",
+    "Comentário a Joel<br/>",
+    "«Voltai a Mim.»<br/>",
+    "«Regressai a Mim de todo o vosso coração», mostrai a vossa conversão «com jejum, lágrimas e sinais de luto» (Jl 2,12). Se jejuardes agora, depois sereis saciados; se chorardes agora, depois rireis; se fizerdes luto agora, mais tarde sereis consolados (cf Lc 6,21). [...] Já não vos peço que «rasgueis as vossas vestes, mas os vossos corações» (Jl 2,13) porque eles estão tão cheios de pecados, que rebentarão como um odre se não os rasgardes.<br/>",
+    "Quando o tiverdes feito, regressai ao Senhor vosso Deus de quem os vossos pecados passados vos afastaram. Não desespereis do perdão por causa da enormidade das vossas faltas, porque a sua grande misericórdia apagará os grandes pecados. Ele é bom e misericordioso, e prefere a conversão à morte do pecador (Ez 33,11). «Paciente e rico de misericórdia» (Jl 2,13), Ele não imita a impaciência dos homens, mas espera com perseverança a nossa conversão.<br/>"
+  ]
+}

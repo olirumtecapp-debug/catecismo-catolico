@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-16",
+  "year": 2026,
+  "month": 7,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-16",
+      "name": "Santa Maria Madalena Postel, virgem, fundadora da Congregação das Filhas da Misericórdia",
+      "normalizedName": "santa maria madalena postel, , fundadora da congregacao das filhas da misericordia",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Júlia nasceu na Normandia e dedicou-se à instrução dos jovens e ao catecismo das crianças. Depois do período obscuro da revolução francesa, abriu uma escola em Cherbourg. Em 1806, emitiu os votos, recebendo o nome de Maria Madalena. Assim, nasceu a Congregação das Filhas da Misericórdia.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

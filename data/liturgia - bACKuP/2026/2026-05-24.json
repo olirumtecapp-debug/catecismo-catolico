@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-24",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 2:1-11",
+    "psalm": "Sl 104:1, 24, 29-30, 31, 34",
+    "secondReading": "1Cor 12:3b-7, 12-13",
+    "gospel": "Jo 20:19-23"
+  },
+  "calendar": {
+    "date": "2026-05-24",
+    "monthDay": "5/24",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Pentecost Sunday",
+      "type": "SOLEMNITY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-24.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-24.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-24"
+  }
+}

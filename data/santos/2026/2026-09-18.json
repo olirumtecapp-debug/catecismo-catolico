@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-18",
+  "year": 2026,
+  "month": 9,
+  "day": 18,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/18.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-18.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-18",
+      "name": "São José de Cupertino",
+      "normalizedName": "sao jose de cupertino",
+      "imageUrl": "./assets/img/santos/09-18-sao-jose-de-cupertino.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/18/-s--jose-de-cupertino-da-copertino--sacerdote-francescano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/18/-s--jose-de-cupertino-da-copertino--sacerdote-francescano.html",
+      "sourceText": "“Irmão burro”: assim José de Cupertino se definia, ciente da sua pouca formação escolar. No entanto, este santo, que viveu no século XVII, recebeu o dom da ciência infundida e de levitações místicas. Hoje, São José de Cupertino é considerado padroeiro dos estudantes e aviadores.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "name": "São Sofia",
+      "normalizedName": "sao sofia",
+      "imageUrl": "./assets/img/santos/09-18-sao-sofia.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/18/s--sofia.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/18/s--sofia.html",
+      "sourceText": "Recordada no Menológio grego, junto com Santa Irene, sabe-se pouco sobre a sua vida, exceto que ela foi martirizada em Chipre. Também é incerta a época em que viveu: segundo algumas tradições, Sofia viveu na era bizantina, enquanto outros textos a incluem entre os primeiros cristãos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

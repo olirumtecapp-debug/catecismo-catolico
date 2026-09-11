@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23",
+  "year": 2026,
+  "month": 10,
+  "day": 23,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/23.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-23.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-23",
+      "name": "São João de Capistrano, presbítero franciscano, padroeiro dos capelães militares",
+      "normalizedName": "sao joao de capistrano, presbitero franciscano, padroeiro dos capelaes militares",
+      "imageUrl": "./assets/img/santos/10-23-sao-joao-de-capistrano-presbitero-franciscano.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/23/s--joao-de-capistrano--presbitero-franciscano--padroeiro-dos-cap.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/23/s--joao-de-capistrano--presbitero-franciscano--padroeiro-dos-cap.html",
+      "sourceText": "João sentiu o chamado divino na prisão e tornou-se sacerdote da Ordem dos Franciscanos Menores. Pregador na Itália e na Europa, comandou a batalha de Belgrado, contra a ameaça dos turcos, três meses antes da sua morte, em outubro de 1456. Santo, desde 1690, é Padroeiro dos Capelães militares.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "name": "São Severino Boécio, filósofo romano e mártir",
+      "normalizedName": "sao severino boecio, filosofo romano e martir",
+      "imageUrl": "./assets/img/santos/10-23-sao-severino-boecio-filosofo-romano-e-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/23/s--severino-boecio--filosofo-romano-e-martir.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/23/s--severino-boecio--filosofo-romano-e-martir.html",
+      "sourceText": "Boécio, de nobre família romana, é considerado o ponto de encontro entre a cultura greco-romana e a nascente Escolástica medieval. Durante a sua detenção injusta, escreveu sua obra-prima “De consolatione philosophiae”, uma síntese entre o pensamento clássico e o cristianismo. Foi martirizado em 524.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

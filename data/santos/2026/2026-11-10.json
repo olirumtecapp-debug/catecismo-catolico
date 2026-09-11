@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-10",
+  "year": 2026,
+  "month": 11,
+  "day": 10,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/10.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-10.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-10",
+      "name": "São Leão Magno, papa e doutor da Igreja",
+      "normalizedName": "sao leao magno, papa e doutor da igreja",
+      "imageUrl": "./assets/img/santos/11-10-sao-leao-magno-papa-e-doutor-da-igreja.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/10/s--leao-magno--papa-e-doutor-da-igreja.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/10/s--leao-magno--papa-e-doutor-da-igreja.html",
+      "sourceText": "\"Um dos maiores Pontífices que honrou a Sé romana\": assim Bento XVI definiu São Leão Magno. Este Papa, que viveu no século V, passou para a história por ter inspirado o Concílio Ecumênico de Calcedônia e por ter detido Átila, chefe dos Hunos, que estava para invadir a Itália.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "name": "São André Avelino, presbítero teatino",
+      "normalizedName": "sao andre avelino, presbitero teatino",
+      "imageUrl": "./assets/img/santos/11-10-sao-andre-avelino-presbitero-teatino.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Potentino, o futuro Santo era chamado Lancellotto. Ordenado sacerdote, em 1545, graças ao seu diretor espiritual, o Beato João Marinonio, recebeu o hábito religioso dos Teatinos, em Nápoles, onde se tornou “Apóstolo da Cruz”. Faleceu em 10 de novembro de 1608, enquanto celebrava a Missa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

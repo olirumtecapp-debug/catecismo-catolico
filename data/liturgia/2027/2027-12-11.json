@@ -1,0 +1,32 @@
+{
+  "date": "2027-12-11",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Eclesiástico 48,1-4.9-11",
+      "text": "Naqueles dias: 1O profeta Elias surgiu como um fogo, e sua palavra queimava como uma tocha. 2Fez vir a fome sobre eles e, no seu zelo, reduziu-os a pouca gente. 3Pela palavra do Senhor fechou o céu e de lá fez cair fogo por três vezes. 4Ó Elias, como te tornaste glorioso por teus prodígios! Quem poderia gloriar-se de ser semelhante a ti? 9Tu foste arrebatado num turbilhão de fogo, num carro de cavalos também de fogo, 10tu, nas ameaças para os tempos futuros, foste designado para acalmar a ira do Senhor antes do furor, para reconduzir o coração do pai ao filho, e restabelecer as tribos de Jacó. 11Felizes os que te viram, e os que adormeceram na tua amizade!"
+    },
+    "psalm": {
+      "reference": "Salmo 79 (80)",
+      "text": "- Ó Pastor de Israel, prestai ouvidos. Vós que sobre os querubins vos assentais. Despertai vosso poder, ó nosso Deus e vinde logo nos trazer a salvação!\n\n- Voltai-vos para nós, Deus do universo! Olhai dos altos céus e observai. Visitai a vossa vinha e protegei-a! Foi a vossa mão direita que a plantou; protegei-a, e ao rebento que firmastes!\n\n- Pousai a mão por sobre o vosso Protegido, o filho do homem que escolhestes para vós! E nunca mais vos deixaremos, Senhor Deus! Dai-nos vida, e louvaremos vosso nome!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 17, 10-13",
+      "text": "Ao descerem do monte, 10os discípulos perguntaram a Jesus: 'Por que os mestres da Lei dizem que Elias deve vir primeiro?' 11Jesus respondeu: 'Elias vem e colocará tudo em ordem. 12Ora, eu vos digo: Elias já veio, mas eles não o reconheceram. Ao contrário, fizeram com ele tudo o que quiseram. Assim também o Filho do Homem será maltratado por eles.' 13Então os discípulos compreenderam que Jesus lhes falava de João Batista."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja <br/>",
+    "Sermões sobre o Evangelho de S. João <br/>",
+    "«Ele irá adiante do Senhor com o espírito e o poder de Elias» (Lc 1,17)<br/>",
+    "«Porque dizem os escribas que Elias tem de vir primeiro?» O Senhor responde-lhes: «Elias já veio; mas, em vez de o reconhecerem, fizeram-lhe tudo o que quiseram. E, se desejais sabê-lo, é João, o Batista». No entanto, quando é interrogado, João declara que não é Elias nem é Cristo (Jo 1,20s). [...] Porque afirma ele então: «Eu não sou Elias», quando o Senhor diz aos seus discípulos que ele é Elias? Nosso Senhor queria falar simbolicamente da sua vinda gloriosa, e dizer que João viera no espírito de Elias. O que João foi para a primeira vinda, Elias será para a segunda. Há dois adventos para o Juiz; há também dois precursores. O Juiz é o mesmo nos dois adventos, mas há dois precursores. [...] O Juiz tinha de vir primeiro, para ser julgado; mandou adiante de Si um primeiro precursor, e chamou-lhe Elias, pois Elias será para o segundo advento aquilo que João foi para o primeiro. <br/>",
+    "Considerai, bem-amados irmãos, quanto esta explicação está fundada sobre a verdade. No momento em que João foi concebido [...], o Espírito Santo fez este vaticínio: «Ele irá adiante do Senhor com o espírito e o poder de Elias» (Lc 1,17). [...] Quem poderá entender estas coisas? Aquele que tiver imitado a humildade do precursor e conhecido a majestade do Juiz. Ninguém foi mais humilde que este santo precursor. Essa humildade de João constitui o seu maior mérito; ele poderia enganar os homens, passar por Cristo, ser visto como Cristo, tão grandes eram a sua graça e a sua virtude, e contudo declara abertamente: «Eu não sou Cristo. - És Elias? [...] - Não sou Elias» (Jo 1,20-21).<br/>"
+  ]
+}

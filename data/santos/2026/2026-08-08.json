@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-08",
+  "year": 2026,
+  "month": 8,
+  "day": 8,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/08.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-08.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-08",
+      "name": "São Domingos de Gusmão, presbítero, fundador da Ordem dos Pregadores",
+      "normalizedName": "sao domingos de gusmao, presbitero, fundador",
+      "imageUrl": "./assets/img/santos/08-08-sao-domingos-de-gusmao-presbitero-fundador-da.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/08/s--domingos-de-gusmao--presbitero--fundador-da-ordem-dos-pregado.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/08/s--domingos-de-gusmao--presbitero--fundador-da-ordem-dos-pregado.html",
+      "sourceText": "Domingos, \"humilde ministro da pregação\", na verdade é um gigante, uma das figuras mais extraordinárias da Igreja da Idade Média e de todos os tempos. Enfrentou, com ardor, as heresias da época; fundou e difundiu a Ordem dos Frades Pregadores e viveu pelo poder e a graça como “alter Christus”.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-08",
+      "name": "SS. Ciríaco, Largo e Esmeraldo, mártires",
+      "normalizedName": "ss. ciriaco, largo e esmeraldo,",
+      "imageUrl": "./assets/img/santos/08-08-ss-ciriaco-largo-e-esmeraldo-martires.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Estes três Santos prestavam assistência aos cristãos prisioneiros, destinados ao trabalho forçado para a construção das Termas de Diocleciano. Ao serem descobertos, foram presos e realizavam milagres. Por isso, foram martirizados pelo imperador Maximiano, em 306, e sepultados na Via Ostiense.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

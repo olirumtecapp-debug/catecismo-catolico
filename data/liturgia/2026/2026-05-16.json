@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-16",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "6a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 18,23-28",
+      "text": "23Paulo permaneceu algum tempo em Antioquia. Em seguida, partiu de novo, percorrendo sucessivamente as regiões da Galácia e da Frígia, fortalecendo todos os discípulos. 24Chegou a Éfeso um judeu chamado Apolo, natural de Alexandria. Era homem eloqüente, versado nas Escrituras. 25Fora instruído no caminho do Senhor e, com muito entusiasmo, falava e ensinava com exatidão a respeito de Jesus, embora só conhecesse o batismo de João. 26Então, ele começou a falar com muita convicção na sinagoga. Ao escutá-lo, Priscila e Áquila tomaram-no consigo e, com mais exatidão, expuseram-lhe o caminho de Deus. 27Como ele estava querendo passar para a Acaia, os irmãos apoiaram-no e escreveram aos discípulos para que o acolhessem bem. Pela graça de Deus, a presença de Apolo aí foi muito útil aos fiéis. 28Com efeito, ele refutava vigorosamente os judeus em público, demonstrando pelas Escrituras que Jesus é o Messias."
+    },
+    "psalm": {
+      "reference": "Salmo 46 (47)",
+      "text": "- Povos todos do universo, batei palmas, gritai a Deus aclamações de alegria! Porque sublime é o Senhor, o Deus Altíssimo, o soberano que domina toda a terra.\n\n- Porque Deus é o grande Rei de toda a terra, ao som da harpa acompanhai os seus louvores! Deus reina sobre todas as nações, está sentado no seu trono glorioso.\n\n- Os chefes das nações se reuniram com o povo do Deus santo de Abraão, pois só Deus é realmente o Altíssimo, e os poderosos desta terra lhe pertencem!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 16, 23-28",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 23Em verdade, em verdade vos digo: se pedirdes ao Pai alguma coisa em meu nome, ele vo-la dará. 24Até agora nada pedistes em meu nome; pedi, e recebereis; para que a vossa alegria seja completa. 25Disse-vos estas coisas em linguagem figurativa. Vem a hora em que não vos falarei mais em figuras, mas claramente vos falarei do Pai. 26Naquele dia pedireis em meu nome, e não vos digo que vou pedir ao Pai por vós, 27pois o próprio Pai vos ama, porque vós me amastes e acreditastes que eu vim da parte de Deus. 28Eu saí do Pai e vim ao mundo; e novamente parto do mundo e vou para o Pai.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João-Maria Vianney, presbítero, Cura de Ars <br/>",
+    "</b>",
+    "Catecismo sobre a oração <br/>",
+    "«Tudo o que pedirdes ao Pai em meu nome, Ele vo-lo dará»<br/>",
+    "Meus filhos, vós tendes um coração pequeno, mas a oração torna-o maior e capaz de amar a Deus. A oração é um antegosto do céu, um escoamento do paraíso, que nos enche de doçura. É um mel que desce sobre a alma e tudo adoça. As mágoas fundem-se perante uma oração bem feita, como a neve perante o sol. Na oração, o tempo corre tão depressa, e de forma tão agradável, que nem nos apercebemos da sua passagem. [...] <br/>",
+    "Alguns perdem-se na oração como peixe na água, porque estão completamente embrenhados em Deus. No coração destas pessoas, não há mediadores. Ah, como gosto destas almas generosas! São Francisco de Assis e Santa Collette viam o Senhor e falavam com Ele como nós falamos uns com os outros. Enquanto nós, quantas vezes vimos à igreja sem saber o que vimos fazer e o que queremos pedir! E no entanto, quando vamos a casa de alguém, sabemos bem porque lá vamos. Há pessoas que parecem dizer a Deus: «Vou dizer-Vos duas palavras para me livrar de Vós». Penso muitas vezes que, quando vimos adorar Nosso Senhor, obteríamos tudo o que quiséssemos se Lho pedíssemos com uma fé bem viva e um coração bem puro.<br/>"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-07-20",
+  "year": 2026,
+  "month": 7,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-20",
+      "name": "São Apolinário, bispo de Ravena e mártir",
+      "normalizedName": "sao apolinario, bispo de ravena e martir",
+      "imageUrl": "./assets/img/santos/07-20-sao-apolinario-bispo-de-ravena-e-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--apolinario--bispo-de-ravena-e-martir.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--apolinario--bispo-de-ravena-e-martir.html",
+      "sourceText": "Apolinário foi o primeiro a exercer o ministério episcopal na cidade imperial de Ravena, por expresso desejo do apóstolo Pedro, de quem era predileto. Governou-a por quase 30 anos, mediante uma intensa obra de evangelização, em toda a região, que lhe custou o martírio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "name": "São Elias, profeta",
+      "normalizedName": "sao elias, profeta",
+      "imageUrl": "./assets/img/santos/07-20-sao-elias-profeta.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--elias--profeta.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--elias--profeta.html",
+      "sourceText": "O nome Elias significa \"O Senhor é meu Deus\". Este profeta, do século IX a.C., viveu em Israel, onde dedicou a sua vida para despertar no Povo o reconhecimento do Senhor como único Deus, sem se deixar enganar pela idolatria. Enérgico e intransigente, faleceu por volta do ano 805 a.C.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "name": "São Aurélio, bispo de Cartago",
+      "normalizedName": "sao aurelio, bispo de cartago",
+      "imageUrl": "./assets/img/santos/07-20-sao-aurelio-bispo-de-cartago.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Aurélio tornou-se Bispo de Cartago em 391/92. A Igreja local estava dividida, por anos, por uma crise interna, causada pelo intransigente Bispo Donato. Aurélio a revitalizou com o apoio do futuro e grande Santo Agostinho, sempre em sintonia com Roma. Santo Aurélio faleceu em 430.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

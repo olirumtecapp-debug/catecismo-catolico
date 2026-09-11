@@ -1,0 +1,69 @@
+{
+  "date": "2026-08-26",
+  "year": 2026,
+  "month": 8,
+  "day": 26,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/26.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-26.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-26",
+      "name": "Beato João Paulo I",
+      "normalizedName": "beato joao paulo i",
+      "imageUrl": "./assets/img/santos/08-26-beato-joao-paulo-i.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/26/beato-joao-paulo-i.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/26/beato-joao-paulo-i.html",
+      "sourceText": "Um pontificado muito curto, o de João Paulo I, no século Albino Luciani, que durou apenas 33 dias, mas capaz de deixar uma marca profunda pelo seu magistério e pelo grande carinho dos fiéis, que o definiram como o Papa do sorriso e Sorriso de Deus.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "name": "São Zeferino, papa",
+      "normalizedName": "sao zeferino, papa",
+      "imageUrl": "./assets/img/santos/08-26-sao-zeferino-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Papa no ano 199, no período de terror de Septímio Severo, Zeferino lutou contra o modalismo, a heresia que tinha uma concepção errada da relação entre o Pai e o Filho. Encarregou seu diácono Calisto para construir o cemitério da Igreja de Roma na Via Ápia, onde foi sepultado o primeiro Papa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "name": "São Maximiliano mártir, na via Salária Antiga",
+      "normalizedName": "sao maximiliano martir, na via salaria antiga",
+      "imageUrl": "./assets/img/santos/08-26-sao-maximiliano-martir-na-via-salaria-antiga.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Não há notícias hagiográficas sobre São Maximiliano, mártir romano do século I. Sabe-se apenas que os peregrinos, desde o século VII, o veneravam no cemitério de Bassila, ao longo da Via Salaria antiga. Segundo algumas fontes, a sepultura encontrava-se dentro da pequena basílica de Santo Hermes.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "name": "São Alexandre, mártir de Bérgamo",
+      "normalizedName": "sao alexandre, martir de bergamo",
+      "imageUrl": "./assets/img/santos/08-26-sao-alexandre-martir-de-bergamo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Entre os séculos III e IV, Alexandre pertencia ao comando da Legião de Tebas. Transferido para o Ocidente, recebeu ordens de rastrear e entregar os cristãos. Mas, visto que ele também era um convertido, não aceitou e desertou. Foi preso e martirizado em Bergamo, de onde hoje é Padroeiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

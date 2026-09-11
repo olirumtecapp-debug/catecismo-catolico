@@ -1,0 +1,23 @@
+{
+  "date": "2027-02-16",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana da Quaresma Ciclo da Pascoa",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 55,10-11",
+      "text": "Isto diz o Senhor: 10assim como a chuva e a neve descem do céu e para lá não voltam mais, mas vêm irrigar e fecundar a terra, e fazê-la germinar e dar semente, para o plantio e para a alimentação, 11assim a palavra que sair de minha boca: não voltará para mim vazia; antes, realizará tudo que for de minha vontade e produzirá os efeitos que pretendi, ao enviá-la."
+    },
+    "psalm": {
+      "reference": "Salmo 33 (34)",
+      "text": "- Comigo engrandecei ao Senhor Deus, exaltemos todos juntos o seu nome! Todas as vezes que o busquei, ele me ouviu, e de todos os temores me livrou.\n\n- Contemplai a sua face e alegrai-vos, e vosso rosto não se cubra de vergonha! Este infeliz gritou a Deus, e foi ouvido, e o Senhor o libertou de toda angústia.\n\n- O Senhor pousa seus olhos sobre os justos, e seu ouvido está atento ao seu chamado; mas ele volta a sua face contra os maus, para da terra apagar sua lembrança.\n\n- Clamam os justos, e o Senhor bondoso escuta e de todas as angústias os liberta. Do coração atribulado ele está perto e conforta os de espírito abatido."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 6, 7-15",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 7Quando orardes, não useis muitas palavras, como fazem os pagãos. Eles pensam que serão ouvidos por força das muitas palavras. 8Não sejais como eles, pois vosso Pai sabe do que precisais, muito antes que vós o peçais. 9Vós deveis rezar assim: Pai Nosso que estás nos céus, santificado seja o teu nome; 10venha o teu Reino; seja feita a tua vontade, assim na terra como nos céus. 11O pão nosso de cada dia dá-nos hoje. 12Perdoa as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido. 13E não nos deixes cair em tentação, mas livra-nos do mal. 14De fato, se vós perdoardes aos homens as faltas que eles cometeram, vosso Pai que está nos céus também vos perdoará. 15Mas, se vós não perdoardes aos homens, vosso Pai também não perdoará as faltas que vós cometestes."
+    }
+  },
+  "extra": []
+}

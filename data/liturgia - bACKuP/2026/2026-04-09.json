@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-09",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 3:11-26",
+    "psalm": "Sl 8:2ab and 5, 6-7, 8-9",
+    "secondReading": "",
+    "gospel": "Lc 24:35-48"
+  },
+  "calendar": {
+    "date": "2026-04-09",
+    "monthDay": "4/9",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Easter Thursday",
+      "type": "SOLEMNITY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-09.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-09.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-09"
+  }
+}

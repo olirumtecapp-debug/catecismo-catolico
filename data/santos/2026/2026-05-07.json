@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-07",
+  "year": 2026,
+  "month": 5,
+  "day": 7,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/07.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-07.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-07",
+      "name": "São Flávia Domitila, mártir romana",
+      "normalizedName": "sao flavia domitila, martir romana",
+      "imageUrl": "./assets/img/santos/05-07-sao-flavia-domitila-martir-romana.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Flávia Domitila, que viveu entre os séculos I e II, era sobrinha de Vespasiano e esposa do cônsul romano Flávio Clemente. Ao converter-se ao cristianismo, foi acusada de \"ateísmo\", segundo o uso da época. Por isso, foi deportada para a ilha de Ponza, onde sofreu um longo martírio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Santa Rosa Venerini, virgem, fundadora das Piedosas Mestras",
+      "normalizedName": "santa rosa venerini, , fundadora das piedosas mestras",
+      "imageUrl": "./assets/img/santos/05-07-santa-rosa-venerini-virgem-fundadora-das-pied.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Matrimônio ou clausura? Rosa Venerini, filha de uma família rica de Viterbo, nasceu em 1656, mas fez uma terceira opção. Certo dia, ao rezar em casa com algumas mulheres, percebeu sua falta de preparação. Assim, fundou a primeira escola chamada Mestras Pias Venerini, presentes no mundo inteiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-19",
+  "year": 2026,
+  "month": 9,
+  "day": 19,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/19.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-19.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-19",
+      "name": "São Januário, bispo de Benevento e mártir",
+      "normalizedName": "sao januario, bispo de benevento e martir",
+      "imageUrl": "./assets/img/santos/09-19-sao-januario-bispo-de-benevento-e-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/19/s--januario--bispo-de-benevento-e-martir-.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/19/s--januario--bispo-de-benevento-e-martir-.html",
+      "sourceText": "São Januário, amado padroeiro de Nápoles, era Bispo de Benevento, foi um mártir da fé, em 305, durante as perseguições de Diocleciano. A devoção a este Santo, venerado desde o século V, é devido ao milagre da liquefação do seu sangue, que ocorre três vezes ao ano: em maio, setembro e dezembro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

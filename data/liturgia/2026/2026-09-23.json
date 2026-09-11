@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Pio de Pietrelcina",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Provérbios 30,5-9",
+      "text": "5A Palavra de Deus é comprovada. Ele é um escudo para os que nele se abrigam. 6Não acrescentes nada às suas palavras, para que ele não te repreenda e passes por mentiroso! 7Duas coisas eu te pedi; não mas recuses, antes de eu morrer: 8afasta de mim a falsidade e a mentira, não me dês pobreza nem riqueza, mas concede-me o pão que me é necessário. 9Não aconteça que, saciado, eu te renegue e diga: 'Quem é o Senhor?' Ou que, empobrecido, eu me ponha a roubar e profane o nome de meu Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Afastai-me do caminho da mentira e dai-me a vossa lei como um presente!\n\n- A lei de vossa boca, para mim, vale mais do que milhões em ouro e prata.\n\n- É eterna, ó Senhor, vossa palavra, ela é tão firme e estável como o céu.\n\n- De todo mau caminho afasto os passos, para que eu siga fielmente as vossas ordens.\n\n- De vossa lei eu recebi inteligência, por isso odeio os caminhos da mentira.\n\n- Eu odeio e detesto a falsidade, porém amo vossas leis e mandamentos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 1-6",
+      "text": "Naquele tempo: 1Jesus convocou os Doze, deu-lhes poder e autoridade sobre todos os demônios e para curar doenças, 2enviou-os a proclamar o Reino de Deus e a curar os enfermos. 3E disse-lhes: 'Não leveis nada para o caminho: nem cajado, nem sacola, nem pão, nem dinheiro, nem mesmo duas túnicas. 4Em qualquer casa onde entrardes, ficai aí; e daí é que partireis de novo. 5Todos aqueles que não vos acolherem, ao sairdes daquela cidade, sacudi a poeira dos vossos pés, como protesto contra eles.' 6Os discípulos partiram e percorriam os povoados, anunciando a Boa Nova e fazendo curas em todos os lugares."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São João Paulo II, Papa <br/>",
+    "</b>",
+    "«Enviou-os a proclamar o Reino de Deus»<br/>",
+    "O nosso tempo, com uma humanidade em movimento e insatisfeita, exige um renovado impulso na atividade missionária da Igreja. Os horizontes e as possibilidades da missão alargam-se, e é-nos pedida, a nós cristãos, a coragem apostólica, apoiada sobre a confiança no Espírito. Ele é o protagonista da missão!<br/>",
+    "Na história da humanidade, houve numerosas viragens que estimularam o dinamismo missionário, e a Igreja, guiada pelo Espírito, sempre respondeu com generosidade e clarividência. Também não faltaram os frutos! Há pouco tempo, celebrou-se o milénio da evangelização da Rússia e dos povos eslavos, estando para se celebrar o quinto centenário da evangelização das Américas; foram entretanto comemorados, de forma solene, os centenários das primeiras missões em vários países da Ásia, da África e da Oceânia. A Igreja deve hoje enfrentar outros desafios, lançando-se para novas fronteiras, quer na primeira missão ad gentes, quer na nova evangelização dos povos que já receberam o anúncio de Cristo. A todos os cristãos, às Igrejas particulares e à Igreja universal, pede-se a mesma coragem que moveu os missionários do passado, a mesma disponibilidade para escutar a voz do Espírito.<br/>"
+  ]
+}

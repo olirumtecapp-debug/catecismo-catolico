@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-09",
+  "year": 2026,
+  "month": 9,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-09",
+      "name": "São Pedro Claver, presbítero jesuíta, apóstolo entre os negros deportados",
+      "normalizedName": "sao pedro claver, presbitero jesuita, apostolo entre os negros deportados",
+      "imageUrl": "./assets/img/santos/09-09-sao-pedro-claver-presbitero-jesuita-apostolo-.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/09/s--pedro-claver--presbitero-jesuita--apostolo-entre-os-negros-de.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/09/s--pedro-claver--presbitero-jesuita--apostolo-entre-os-negros-de.html",
+      "sourceText": "Sacerdote da Companhia de Jesus, São Pedro Claver é conhecido na história como um dos mais fecundos e generosos missionários da América do Sul. Celebrado pela Igreja em 9 de setembro, trabalhou mais de 40 anos na Colômbia entre os negros escravos, dos quais batizou cerca de 300 mil.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "name": "São Gorgonio, mártir, na via Labicana",
+      "normalizedName": "sao gorgonio, martir, na via labicana",
+      "imageUrl": "./assets/img/santos/09-09-sao-gorgonio-martir-na-via-labicana.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sabe-se pouco sobre a vida de Gorgônio, um dos primeiros mártires da Roma antiga, a não ser que foi sepultado na Via Labicana, no cemitério romano “Duas Lauros”. Venerado no século IV, sobretudo na Idade Média. Seus restos mortais passaram por duas trasladações, a última para a Basílica Vaticana.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "name": "São Audomar de Thérouanne",
+      "normalizedName": "sao audomar de therouanne",
+      "imageUrl": "./assets/img/santos/09-09-sao-audomar-de-therouanne.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Homero foi discípulo de Santo Eustáquio, abade de Luxeuil. Em 642, era Bispo de sua cidade, Thérouanne, na atual França, onde se comprometeu com a nova Evangelização da população, que era quase toda pagã. Santo Homero faleceu cego por volta do ano 670. Seu culto era muito vivo no século VIII.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

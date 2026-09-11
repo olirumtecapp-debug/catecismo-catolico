@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-13",
+  "year": 2026,
+  "month": 11,
+  "day": 13,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/13.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-13.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-13",
+      "name": "São Nicolau I, papa",
+      "normalizedName": "sao nicolau i, papa",
+      "imageUrl": "./assets/img/santos/11-13-sao-nicolau-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nasceu em Roma no final do ano 800. Inseriu-se logo na Corte papal e, em 858, foi o primeiro a ser \"coroado\" Papa. Esforçou-se para afirmar a autoridade do Sucessor de Pedro em uma era de \"ruptura\" autonomista de várias Igrejas locais. Faleceu em 867 e foi sepultado na Basílica de São Pedro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-13",
+      "name": "Santa Agostinha Pietrantoni, virgem",
+      "normalizedName": "santa agostinha pietrantoni,",
+      "imageUrl": "./assets/img/santos/11-13-santa-agostinha-pietrantoni-virgem.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Agostinha Lívia pertencia à Congregação das Irmãs da Caridade de Santa Joana Antida Thouret. Foi enviada a prestar assistência aos enfermos, no Hospital de Roma “Santo Espírito”. Naquele ambiente, hostil à fé, foi apunhalada por um paciente, em 1894.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

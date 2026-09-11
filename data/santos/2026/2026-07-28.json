@@ -1,0 +1,56 @@
+{
+  "date": "2026-07-28",
+  "year": 2026,
+  "month": 7,
+  "day": 28,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/28.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-28.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-28",
+      "name": "B. Urbano II, papa",
+      "normalizedName": "b. urbano ii, papa",
+      "imageUrl": "./assets/img/santos/07-28-b-urbano-ii-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origem francesa, Urbano foi um incansável viajante. Defendeu a Igreja do assalto dos poderes seculares e combateu contra a simonia e a corrupção do clero. Organizou, na França, a primeira Cruzada para a libertação de Jerusalém, cujo resultado não conseguiu ver porque faleceu em Roma, em 1099.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "name": "SS. Nazário e Celso, mártires milaneses",
+      "normalizedName": "ss. nazario e celso, milaneses",
+      "imageUrl": "./assets/img/santos/07-28-ss-nazario-e-celso-martires-milaneses.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nazário, discípulo de São Pedro, foi pregador. Educou o jovem Celso na fé, o batizou e o escolheu como companheiro de apostolado devido às suas muitas virtudes. Ambos chegaram a Milão, onde sofreram o martírio, em 304, sob Diocleciano. Santo Ambrósio encontrou seus corpos e os conservou.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "name": "São Vítor I, papa",
+      "normalizedName": "sao vitor i, papa",
+      "imageUrl": "./assets/img/santos/07-28-sao-vitor-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Vítor, de origem africana, foi Papa por dez anos. Combateu contra várias heresias, sobretudo a do Adocionismo, que definia Jesus como um homem adotado por Deus. Deve-se a ele a celebração da Páscoa no domingo seguinte àquela Judaica. Faleceu em 199, provavelmente como mártir, sob Septímio Severo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

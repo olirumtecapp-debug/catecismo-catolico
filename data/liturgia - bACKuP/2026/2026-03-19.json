@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-19",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "2Sm 7:4-5a, 12-14a, 16",
+    "psalm": "Sl 89:2-3, 4-5, 27 and 29",
+    "secondReading": "Rm 4:13, 16-18, 22",
+    "gospel": "Mt 1:16, 18-21, 24a"
+  },
+  "calendar": {
+    "date": "2026-03-19",
+    "monthDay": "3/19",
+    "season": "Lent",
+    "celebration": {
+      "name": "Joseph, Husband of Mary",
+      "type": "SOLEMNITY",
+      "quote": "Work was the daily expression of love in the life of the Family of Nazareth.",
+      "description": "The foster father of Jesus as a model of labor and the dignity of work, honoring his role as a carpenter in Nazareth.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-19.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-19.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-19"
+  }
+}

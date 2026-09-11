@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-21",
+  "year": 2026,
+  "month": 5,
+  "day": 21,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/21.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-21.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-21",
+      "name": "SS. Cristóvão de Magalhães, sac., e Companheiros, mártires no México",
+      "normalizedName": "ss. cristovao de magalhaes, sac., e companheiros, no mexico",
+      "imageUrl": "./assets/img/santos/05-21-ss-cristovao-de-magalhaes-sac-e-companheiros-.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/21/ss--cristovao-de-magalhaes--sac---e-companheiros--martires-no-me.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/21/ss--cristovao-de-magalhaes--sac---e-companheiros--martires-no-me.html",
+      "sourceText": "No período mais difícil para a Igreja perseguida no México, o padre Cristóvão Magalhães, foi assassinado, com 24 Companheiros, por ódio à fé, em 25 de maio de 1927. Estes mártires foram canonizados por São João Paulo II, em uma cerimônia solene, durante o Grande Jubileu do ano 2000.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-21",
+      "name": "São Carlos Eugênio de Mazenod, bispo de Marselha, fundador dos Oblatos de Maria Imaculada",
+      "normalizedName": "sao carlos eugenio de mazenod, bispo de marselha, fundador dos oblatos de maria imaculada",
+      "imageUrl": "./assets/img/santos/05-21-sao-carlos-eugenio-de-mazenod-bispo-de-marsel.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Eugênio, de família nobre, fugiu da Revolução Francesa e, ao invés de continuar a vida de corte, quis ser sacerdote. Em 1816, fundou a Sociedade de Missionários da Provença, que, mais tarde, se tornou Missionários Oblatos de Maria Imaculada. Após sua nomeação como Bispo de Marselha, faleceu em 1861.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

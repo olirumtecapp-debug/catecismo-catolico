@@ -1,0 +1,34 @@
+{
+  "date": "2026-01-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Francisco de Sales",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Samuel 1,1-4.11-12.19.23-27",
+      "text": "Naqueles dias: 1Davi regressou da derrota que infligiu aos amalecitas, e esteve dois dias em Siceleg. 2No terceiro dia, apareceu um homem, que vinha do acampamento de Saul, com as vestes rasgadas e a cabeça coberta de pó. Ao chegar perto de Davi, prostrou-se por terra e fez-lhe uma profunda reverência. 3Davi perguntou-lhe: 'Donde vens?' Ele respondeu: 'Salvei-me do acampamento de Israel'. 4'Que aconteceu?', perguntou-lhe Davi. 'Conta-me tudo!' Ele respondeu: 'As tropas fugiram da batalha, e muitos do povo caíram mortos. Até Saul e o seu filho Jônatas pereceram!' 11Então Davi tomou suas próprias vestes e rasgou-as, e todos os que estavam com ele fizeram o mesmo. 12Lamentaram-se, choraram e jejuaram até à tarde, por Saul e por seu filho Jônatas, e por causa do povo do Senhor e da casa de Israel, porque haviam tombado pela espada. 19'Tua glória, ó Israel, jaz ferida de morte sobre os teus montes. Como tombaram os fortes! 23Saul e Jônatas, amados e belos, nem vida nem morte os puderam separar, mais velozes que as águias, mais fortes que os leões. 24Filhas de Israel, chorai sobre Saul. Ele vos vestia de púrpura suntuosa e ornava de ouro os vossos vestidos. 25Como tombaram os fortes em plena batalha! Jônatas foi morto sobre as tuas alturas. 26Choro por ti, meu irmão Jônatas. Tu me eras tão querido; tua amizade me era mais cara que o amor das mulheres. 27Como tombaram os fortes, como pereceram as armas de guerra!'"
+    },
+    "psalm": {
+      "reference": "Salmo 79 (80)",
+      "text": "- Ó Pastor de Israel, prestai ouvidos. Vós, que a José apascentais qual um rebanho! Vós, que sobre os querubins vos assentais, aparecei cheio de glória e esplendor ante Efraim e Benjamim e Manassés! Despertai vosso poder, ó nosso Deus, e vinde logo nos trazer a salvação!\n\n- Até quando, ó Senhor, vos irritais, apesar da oração do vosso povo? Vós nos destes a comer o pão das lágrimas, e a beber destes um pranto copioso. Para os vizinhos somos causa de contenda, de zombaria para os nossos inimigos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 20-21",
+      "text": "Naquele tempo: 20Jesus voltou para casa com os discípulos. E de novo se reuniu tanta gente que eles nem sequer podiam comer. 21Quando souberam disso, os parentes de Jesus saíram para agarrá-lo, porque diziam que estava fora de si."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Imitação de Cristo<br/>",
+    "</b>",
+    "Tratado espiritual do século XV, Livraria Moraes, 1959<br/>",
+    "Livro IV, capítulo 11, 3-5<br/>",
+    "Entregue aos homens e a seu Pai, Cristo alimenta-nos com a Palavra e o Pão da Vida<br/>",
+    "Tu me és testemunha, ó Deus, de que nenhuma coisa me pode consolar, nenhuma criatura dar repouso, senão Tu, meu Deus, a quem desejo contemplar eternamente. Mas tal não é possível enquanto eu viver neste estado mortal. [...] Até lá, terei os livros sagrados por consolação e espelho de vida e, sobre tudo isto, o teu santíssimo Corpo por único remédio e refúgio.<br/>",
+    "Na verdade, sinto que duas coisas me são sobretudo necessárias neste mundo, sem as quais esta vida miserável se me tornaria impossível. Prisioneiro no cárcere deste corpo, confesso faltarem-me duas coisas: alimento e luz. E assim me deste, a mim, fraco, o teu sagrado Corpo, para refeição do espírito e do corpo, e «a tua palavra é qual farol para os meus passos e uma luz para meus caminhos» (Sl 118,105). Sem estas duas coisas, não poderia viver bem: a Palavra de Deus, luz da minha alma, e o teu sacramento, Pão da Vida.<br/>",
+    "Ambos se podem comparar também a duas mesas, postas dum e doutro lado do tesouro da Santa Igreja. Uma das mesas é a do altar sagrado, que tem o Pão santo, ou seja, o precioso Corpo de Cristo; a outra é a da Lei divina, que contém a doutrina santa, instruindo na verdadeira fé e conduzindo com firmeza para além do último véu, onde está o Santo dos Santos. [...]<br/>",
+    "Graças a Ti, Criador e Redentor dos homens, que, para mostrares a todo o mundo a tua caridade, preparaste a grande ceia, na qual deste a comer, não o cordeiro simbólico, mas o teu santíssimo Corpo e Sangue, e que alegras todos os fiéis com o sagrado banquete, inebriando-os com o cálice da salvação, onde se encontram todas as delícias do paraíso.<br/>"
+  ]
+}

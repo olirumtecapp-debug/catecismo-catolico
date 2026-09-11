@@ -1,0 +1,23 @@
+{
+  "date": "2027-07-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "16a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Êxodo 20,1-17",
+      "text": "Naqueles dias: 1Deus pronunciou todas estas palavras: 2'Eu sou o Senhor teu Deus que te tirou do Egito, da casa da escravidão. 3Não terás outros deuses além de mim. 4Não farás para ti imagem esculpida, nem figura alguma do que existe em cima, nos céus, ou embaixo, na terra, ou do que existe nas águas, debaixo da terra. 5Não te prostrarás diante destes deuses nem lhes prestarás culto, pois eu sou o Senhor teu Deus, um Deus ciumento. Castigo a culpa dos pais nos filhos até à terceira e quarta geração dos que me odeiam, 6mas uso da misericórdia por mil gerações com aqueles que me amam e guardam os meus mandamentos. 7Não pronunciarás o nome do Senhor teu Deus em vão, porque o Senhor não deixará sem castigo quem pronunciar seu nome em vão. 8Lembra-te de santificar o dia de sábado. 9Trabalharás durante seis dias e farás todos os teus trabalhos, 10mas o sétimo dia é sábado dedicado ao Senhor teu Deus. Não farás trabalho algum, nem tu, nem teu filho, nem tua filha, nem teu escravo, nem tua escrava, nem teu gado, nem o estrangeiro que vive em tuas cidades. 11Porque o Senhor fez em seis dias o céu e a terra, o mar e tudo o que eles contêm; mas no sétimo dia descansou. Por isso o Senhor abençoou o dia do sábado e o santificou. 12Honra teu pai e tua mãe, para que vivas longos anos na terra que o Senhor teu Deus te dará. 13Não matarás. 14Não cometerás adultério. 15Não furtarás. 16Não levantarás falso testemunho contra o teu próximo. 17Não cobiçarás a casa do teu próximo. Não cobiçarás a mulher do teu próximo, nem seu escravo, nem sua escrava, nem seu boi, nem seu jumento, nem coisa alguma que lhe pertença'."
+    },
+    "psalm": {
+      "reference": "Salmo 18 (19B)",
+      "text": "- A lei do Senhor Deus é perfeita, conforto para a alma! O testemunho do Senhor é fiel, sabedoria dos humildes.\n\n- Os preceitos do Senhor são precisos, alegria ao coração. O mandamento do Senhor é brilhante, para os olhos é uma luz.\n\n- É puro o temor do Senhor, imutável para sempre. Os julgamentos do Senhor são corretos e justos igualmente.\n\n- Mais desejáveis do que o ouro são eles, do que o ouro refinado. Suas palavras são mais doces que o mel, que o mel que sai dos favos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 18-23",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 18Ouvi a parábola do semeador: 19Todo aquele que ouve a palavra do Reino e não a compreende, vem o Maligno e rouba o que foi semeado em seu coração. Este é o que foi semeado à beira do caminho. 20A semente que caiu em terreno pedregoso é aquele que ouve a palavra e logo a recebe com alegria; 21mas ele não tem raiz em si mesmo, é de momento: quando chega o sofrimento ou a perseguição, por causa da palavra, ele desiste logo. 22A semente que caiu no meio dos espinhos é aquele que ouve a palavra, mas as preocupações do mundo e a ilusão da riqueza sufocam a palavra, e ele não dá fruto. 23A semente que caiu em boa terra é aquele que ouve a palavra e a compreende. Esse produz fruto. Um dá cem, outro sessenta e outro trinta.'"
+    }
+  },
+  "extra": []
+}

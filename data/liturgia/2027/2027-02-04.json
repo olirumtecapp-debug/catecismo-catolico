@@ -1,0 +1,23 @@
+{
+  "date": "2027-02-04",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 12,18-19.21-24",
+      "text": "Irmãos: 18Vós não vos aproximastes de uma realidade palpável: 'fogo ardente e escuridão, trevas e tempestade, 19som da trombeta e voz poderosa', que os ouvintes suplicaram não continuasse, 21Eles ficaram tão espantados com esse espetáculo, que Moisés disse: 'Estou apavorado e com medo'. 22Mas vós vos aproximastes do monte Sião e da cidade do Deus vivo, a Jerusalém celeste; da reunião festiva de milhões de anjos; 23da assembléia dos primogênitos, cujos nomes estão escritos nos céus; de Deus, o Juiz de todos; dos espíritos dos justos, que chegaram à perfeição; 24de Jesus, mediador da nova aliança, e da aspersão do sangue mais eloqüente que o de Abel."
+    },
+    "psalm": {
+      "reference": "Salmo 47 (48)",
+      "text": "- Grande é o Senhor e muito digno de louvores na cidade onde ele mora; seu Monte santo, esta colina encantadora é a alegria do universo.\n\n- Monte Sião, no extremo norte situado, és a mansão do grande Rei! Deus revelou-se em suas fortes cidadelas um refúgio poderoso.\n\n- Como ouvimos dos antigos, contemplamos: Deus habita esta cidade, a cidade do Senhor onipotente, que ele a guarde eternamente!\n\n- Recordamos, Senhor Deus, vossa bondade em meio ao vosso templo; com vosso nome vai também vosso louvor aos confins de toda a terra."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 6, 7-13",
+      "text": "Naquele tempo: 7Jesus chamou os doze, e começou a enviá-los dois a dois, dando-lhes poder sobre os espíritos impuros. 8Recomendou-lhes que não levassem nada para o caminho, a não ser um cajado; nem pão, nem sacola, nem dinheiro na cintura. 9Mandou que andassem de sandálias e que não levassem duas túnicas. 10E Jesus disse ainda: 'Quando entrardes numa casa, ficai ali até vossa partida. 11Se em algum lugar não vos receberem, nem quiserem vos escutar, quando sairdes, sacudi a poeira dos pés, como testemunho contra eles!' 12Então os doze partiram e pregaram que todos se convertessem. 13Expulsavam muitos demônios e curavam numerosos doentes, ungindo-os com óleo."
+    }
+  },
+  "extra": []
+}

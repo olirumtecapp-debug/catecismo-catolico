@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-27",
+  "year": 2026,
+  "month": 8,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-27",
+      "name": "São Mônica, mãe de S. Agostinho, bispo",
+      "normalizedName": "sao monica, mae de s. agostinho, bispo",
+      "imageUrl": "./assets/img/santos/08-27-sao-monica-mae-de-s-agostinho-bispo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/27/s--monica--mae-de-s--agostinho--bispo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/27/s--monica--mae-de-s--agostinho--bispo.html",
+      "sourceText": "Mônica, mãe de Santo Agostinho, mulher de fé firme, viveu profundamente os valores do cristianismo no seu dia a dia. A oração foi a sua força durante toda a sua existência. Fervorosa observadora das tradições da Igreja católica enfrentou os momentos mais difíceis, depositando sua esperança em Deus.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

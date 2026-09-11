@@ -1,0 +1,30 @@
+{
+  "date": "2026-04-29",
+  "year": 2026,
+  "month": 4,
+  "day": 29,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/29.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-29.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-29",
+      "name": "Santa Catarina de Sena, virgem, doutora da Igreja, Padroeira da Europa e da Itália",
+      "normalizedName": "santa catarina de sena, , doutora da igreja, padroeira da europa e da italia",
+      "imageUrl": "./assets/img/santos/04-29-santa-catarina-de-sena-virgem-doutora-da-igre.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/29/s--catarina-de-sena--virgem--doutora-da-igreja--padroeira-da-eur.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/29/s--catarina-de-sena--virgem--doutora-da-igreja--padroeira-da-eur.html",
+      "sourceText": "Virgem, Doutora da Igreja, Padroeira da Itália e da Europa: Santa Catarina de Sena é celebrada pela liturgia no dia 29 de abril. Esposa de Jesus Cristo, do qual recebeu o sigilo dos estigmas, trabalhou com afinco pela paz, pelo retorno do Papado a Roma e pela Unidade da Igreja.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

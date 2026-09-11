@@ -1,0 +1,33 @@
+{
+  "date": "2027-09-11",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "23a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Timóteo 1,15-17",
+      "text": "Caríssimo: 15Segura e digna de ser acolhida por todos é esta palavra: Cristo veio ao mundo para salvar os pecadores. E eu sou o primeiro deles! 16Por isso encontrei misericórdia, para que em mim, como primeiro, Cristo Jesus demonstrasse toda a grandeza de seu coração; ele fez de mim um modelo de todos os que crerem nele para alcançar a vida eterna. 17Ao Rei dos séculos, ao único Deus, imortal e invisível, honra e glória pelos séculos dos séculos. Amém!"
+    },
+    "psalm": {
+      "reference": "Salmo 112 (113)",
+      "text": "- Louvai, louvai, ó servos do Senhor, louvai, louvai o nome do Senhor! Bendito seja o nome do Senhor, agora e por toda a eternidade!\n\n- Do nascer do sol até o seu ocaso, louvado seja o nome do Senhor! O Senhor está acima das nações, sua glória vai além dos altos céus.\n\n- Quem pode comparar-se ao nosso Deus, que se inclina para olhar o céu e a terra? Levanta da poeira o indigente e do lixo ele retira o pobrezinho."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 43-49",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 43Não existe árvore boa que dê frutos ruins, nem árvore ruim que dê frutos bons. 44Toda árvore é reconhecida pelos seus frutos. Não se colhem figos de espinheiros, nem uvas de plantas espinhosas. 45O homem bom tira coisas boas do bom tesouro do seu coração. Mas o homem mau tira coisas más do seu mau tesouro, pois sua boca fala do que o coração está cheio. 46Por que me chamais: 'Senhor! Senhor!', mas não fazeis o que eu digo? 47Vou mostrar-vos com quem se parece todo aquele que vem a mim, ouve as minhas palavras e as põe em prática. 48É semelhante a um homem que construiu uma casa: cavou fundo e colocou o alicerce sobre a rocha. Veio a enchente, a torrente deu contra a casa, mas não conseguiu derrubá-la, porque estava bem construída.49Aquele, porém, que ouve e não põe em prática, é semelhante a um homem que construiu uma casa no chão, sem alicerce. A torrente deu contra a casa, e ela imediatamente desabou; e foi grande a ruína dessa casa.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Bernardo (1091-1153)<br/>",
+    "</b>",
+    "Monge cisterciense, Doutor da Igreja<br/>",
+    "Vigésimo quarto sermão sobre o Cântico<br/>",
+    "«Cada árvore conhece-se pelo seu fruto»<br/>",
+    "Se acreditais em Cristo, praticai as obras de Cristo, para que a vossa fé viva. O amor animará essa fé, a acção será prova dela. Vós que pretendeis habitar em Cristo, tendes de caminhar seguindo os seus passos. Procurar a glória, invejar os que são felizes neste mundo, dizer mal dos ausentes e pagar o mal com o mal não são as coisas que Deus fez. Dizeis que conheceis a Deus, mas os vossos actos negam-no. [...] «Este homem glorifica-Me com os lábios», diz a Escritura, «mas o seu coração está longe de Mim»» (Is 29,13). [...]<br/>",
+    "Ora a fé, mesmo recta, não chega para fazer um santo, um homem recto, se não opera no amor. Aquele que não tem amor é incapaz de amar a Esposa, a Igreja de Cristo. E as obras, mesmo que realizadas com rectidão, não conseguem, sem fé, tornar um coração recto. Não se pode atribuir a rectidão a um homem que não agrada a Deus; ora, diz a Epístola aos Hebreus: «Sem a fé é impossível agradar a Deus» (Heb 11,6). Àquele que não agrada a Deus, Deus não pode agradar-lhe; mas aquele a quem Deus agrada não sabe desagradar a Deus. E àquele a quem Deus não agrada, também a Igreja-Esposa lhe não agrada. Como poderá, pois, ser recto aquele que não ama nem a Deus nem à sua Igreja, à qual foi dito:« Os justos sabem amar-te»?<br/>",
+    "Ao santo não basta a fé sem as obras, nem as obras sem a fé. Irmãos, nós que cremos em Cristo, precisamos de tentar seguir uma via recta. Elevemos a Deus os nossos corações e as nossas mãos, a fim de sermos considerados inteiramente rectos, confirmando por actos de integridade a rectidão da nossa fé, amando a Igreja-Esposa e sendo amados pelo Esposo, Nosso Senhor Jesus Cristo, bendito de Deus por todos os séculos.<br/>"
+  ]
+}

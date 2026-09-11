@@ -1,0 +1,30 @@
+{
+  "date": "2026-12-30",
+  "year": 2026,
+  "month": 12,
+  "day": 30,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/30.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-30.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-30",
+      "name": "São Félix I, papa",
+      "normalizedName": "sao felix i, papa",
+      "imageUrl": "./assets/img/santos/12-30-sao-felix-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Félix, sacerdote romano e Papa, de 269 a 274, mandou celebrar Missas diante dos túmulos, que continham relíquias dos mártires cristãos. Defendeu com força a doutrina sobre a Trindade divina e a Encarnação do Verbo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

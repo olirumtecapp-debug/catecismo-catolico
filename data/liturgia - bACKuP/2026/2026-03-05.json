@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-05",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Jr 17:5-10",
+    "psalm": "Sl 1:1-2, 3, 4 and 6",
+    "secondReading": "",
+    "gospel": "Lc 16:19-31"
+  },
+  "calendar": {
+    "date": "2026-03-05",
+    "monthDay": "3/5",
+    "season": "Lent",
+    "celebration": {
+      "name": "Thursday of the 2nd week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-05.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-05.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-05"
+  }
+}

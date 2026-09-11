@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-23",
+  "year": 2026,
+  "month": 3,
+  "day": 23,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/23.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-23.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-23",
+      "name": "São Turíbio de Mogrovejo, bispo de Lima",
+      "normalizedName": "sao turibio de mogrovejo, bispo de lima",
+      "imageUrl": "./assets/img/santos/03-23-sao-turibio-de-mogrovejo-bispo-de-lima.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/23/s--turibio-de-mogrovejo--bispo-de-lima.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/23/s--turibio-de-mogrovejo--bispo-de-lima.html",
+      "sourceText": "Conhecido como “Apóstolo do Peru”, Turíbio, leigo espanhol, foi um jurista ilustre que, em 1580, foi nomeado Bispo de Lima. Por 25 anos, como verdadeiro pastor, dedicou-se à evangelização dos índios e à moralização do clero. Foi canonizado em 1726 é proclamado Padroeiro dos Bispos latino-americanos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

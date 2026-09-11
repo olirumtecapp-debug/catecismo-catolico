@@ -1,0 +1,30 @@
+{
+  "date": "2026-06-01",
+  "year": 2026,
+  "month": 6,
+  "day": 1,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/01.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-01.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-01",
+      "name": "São Justino, filósofo e mártir",
+      "normalizedName": "sao justino, filosofo e martir",
+      "imageUrl": "./assets/img/santos/06-01-sao-justino-filosofo-e-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/01/s--justino--filosofo-e-martir.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/01/s--justino--filosofo-e-martir.html",
+      "sourceText": "Na história da Igreja, muitos Santos empregaram o uso da razão humana para compreender o divino, para penetrar na existência de Deus. Entre eles encontra-se São Justino, que viveu no século II d.C. e morreu mártir no ano 165. Sua festa é celebrada no dia 1° de junho.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

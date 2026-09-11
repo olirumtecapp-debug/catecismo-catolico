@@ -1,0 +1,36 @@
+{
+  "date": "2027-11-05",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "31a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 15,14-21",
+      "text": "Meus irmãos, 14de minha parte, estou convencido, a vosso respeito, de que tendes bastante bondade e ciência, de tal maneira que podeis admoestar-vos uns aos outros. 15No entanto, em algumas passagens, eu vos escrevo com certa ousadia, como para reavivar a vossa memória, em razão da graça que Deus me deu. 16Por esta graça eu fui feito ministro de Jesus Cristo entre os pagãos e consagrado servidor do Evangelho de Deus, para que os pagãos se tornem uma oferenda bem aceite santificada no Espírito Santo. 17Tenho, pois, esta glória em Jesus Cristo no que se refere ao serviço de Deus: 18Não ouso falar senão daquilo que Cristo realizou por meu intermédio, para trazer os pagãos à obediência da fé, pela palavra e pela ação, 19por sinais e prodígios, no poder do Espírito de Deus. Assim, eu preguei o Evangelho de Cristo, desde Jerusalém e arredores até a Ilíria, 20tendo o cuidado de pregar somente onde Cristo ainda não fora anunciado, para não acontecer de eu construir sobre alicerce alheio. 21Agindo desta maneira, eu estou de acordo com o que está escrito: \"Aqueles aos quais ele nunca fora anunciado, verão; aqueles que não tinham ouvido falar dele, compreenderão\"."
+    },
+    "psalm": {
+      "reference": "Salmo 97 (98)",
+      "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram a salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 16, 1-8",
+      "text": "<b>"
+    }
+  },
+  "extra": [
+    "- Palavra da Salvação<br/>",
+    "- Glória a vós, Senhor<br/>",
+    "<b>",
+    "Comentário do dia por São Gregório de Nazianzo (330-390)<br/>",
+    "</b>",
+    "Bispo, Doutor da Igreja<br/>",
+    "14ª homilia sobre o amor aos pobres, 38.40<br/>",
+    "«Um pobre estava deitado à sua porta»<br/>",
+    "«Felizes os misericordiosos», diz o Senhor, «pois alcançarão misericórdia» (Mt 5,7). A misericórdia não é a menor das bem-aventuranças: «feliz o que compreende o pobre e o fraco»; e também: «o homem bom compadece-se e partilha»; ou ainda: «sempre o justo se compadece e empresta». Façamos, pois nossa esta bem-aventurança: saibamos compreender, sejamos bons.<br/>",
+    "Nem a noite deve deter a tua misericórdia; «não digas: volta amanhã e logo te darei» (Prov 3,28). Que não haja hesitação entre a tua primeira reacção e a tua generosidade. [...] «Partilha o teu pão com aquele que tem fome, recolhe em tua casa o infeliz sem abrigo» (Is 58,7) e fá-lo de boa vontade. «Aquele que exerce a misericórdia», diz S. Paulo, «que o faça com alegria» (Rom 12,8).<br/>",
+    "O teu mérito será redobrado pelo teu zelo; uma dádiva feita com contrariedade e por obrigação não tem graça nem fulgor. É com um coração em festa e sem lamentos que devemos fazer o bem. [...] Então a luz jorrará como a aurora, e as nossas forças não tardarão a restabelecer-se. E haverá quem não deseje a luz e a cura? [...]<br/>",
+    "Por isso, servos de Cristo, seus irmãos e seus co-herdeiros (Gal 4,7), sempre que tenhamos oportunidade, visitemos Cristo, alimentemos Cristo, agasalhemos Cristo, abriguemos Cristo, honremos Cristo (cf Mt 25,31s). Não só sentando-O à nossa mesa, como alguns fizeram, ou cobrindo-O de perfumes, como Maria Madalena, ou participando na sua sepultura, como Nicodemos. [...] Nem com ouro, incenso e mirra, como os magos, [...] pois o Senhor do universo «quer a misericórdia e não o sacrifício» (Mt 9,13), prefere a nossa compaixão a milhares de cordeiros gordos (Miq 6,7). Apresentemos-Lhe pois a nossa misericórdia pela mão desses infelizes que jazem hoje por terra, para que, no dia em que partirmos daqui, eles nos «conduzam à morada eterna» (Lc 16,9), ao próprio Cristo, nosso Senhor.<br/>"
+  ]
+}

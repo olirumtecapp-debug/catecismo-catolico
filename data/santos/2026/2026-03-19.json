@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-19",
+  "year": 2026,
+  "month": 3,
+  "day": 19,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/19.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-19.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-19",
+      "name": "Santa José, Esposo Da Santíssima Virgem Maria, Padroeiro da Igreja Universal",
+      "normalizedName": "santa jose, esposo da santissima maria, padroeiro da igreja universal",
+      "imageUrl": "./assets/img/santos/03-19-santa-jose-esposo-da-santissima-virgem-maria-.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/19/s--jose--esposo-da-santissima-virgem-maria--padroeiro-da-igreja-.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/19/s--jose--esposo-da-santissima-virgem-maria--padroeiro-da-igreja-.html",
+      "sourceText": "Entre os Santos, José foi o mais querido pelo coração de Jesus, que o amou como um filho que ama o próprio pai. São José, protetor das famílias e dos trabalhadores, é festejado duas vezes por ano: dia 19 de março, com o nome de Esposo de Maria, e dia 1° de maio, com o nome de São José Operário.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

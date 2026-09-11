@@ -1,0 +1,56 @@
+{
+  "date": "2026-12-02",
+  "year": 2026,
+  "month": 12,
+  "day": 2,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/02.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-02.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-02",
+      "name": "São Bibiana, matrona romana, a quem foi dedicada uma igreja no Esquilino",
+      "normalizedName": "sao bibiana, matrona romana, a quem foi dedicada uma igreja no esquilino",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "A vida de Bibiana ou Viviana não tem confirmação histórica, mas uma lenda narrou o valor da sua fé. Foi perseguida no IV século e acabou na prisão com seus pais, por não renunciar à sua fé. As violências e o patíbulo não mudaram a sua ideia. Foi-lhe dedicada uma igreja no monte Esquilino, em Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-02",
+      "name": "São Pimênio, mártir, na via Portuense",
+      "normalizedName": "sao pimenio, martir, na via portuense",
+      "imageUrl": "./assets/img/santos/12-02-sao-pimenio-martir-na-via-portuense.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Pimênio viveu entre os séculos III e IV. Era sacerdote e, na sua escola, contou com estudantes como Donato, futuro Bispo de Arezzo, e Crescêncio, futuro mártir. Ele também sofreu o martírio por enterrar os mártires. São Pimênio foi sepultado no cemitério de Ponciano, na Via Portuense, em Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-02",
+      "name": "São Silvério, papa",
+      "normalizedName": "sao silverio, papa",
+      "imageUrl": "./assets/img/santos/12-02-sao-silverio-papa.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/02/s--silverio--papa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/02/s--silverio--papa.html",
+      "sourceText": "Natural da província da atual Ciociaria, Silvério foi o 58º Papa da Igreja de Roma. Em 537, foi exonerado e obrigado a abdicar pelos prosélitos da heresia monofisita de Constantinopla. Morreu no exílio, em Palmarola, pequena ilha do arquipélago das Pontinas, do qual se tornou Padroeiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

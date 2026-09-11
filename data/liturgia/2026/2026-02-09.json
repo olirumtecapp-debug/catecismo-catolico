@@ -1,0 +1,32 @@
+{
+  "date": "2026-02-09",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Reis 8,1-7.9-13",
+      "text": "Naqueles dias: 1Salomão convocou, junto de si em Jerusalém, todos os anciãos de Israel, todos os chefes das tribos e príncipes das famílias dos filhos de Israel, a fim de transferir da cidade de Sião, que é Jerusalém, a arca da aliança do Senhor. 2Todo o Israel reuniu-se em torno de Salomão, no mês de Etanim, ou seja, no sétimo mês, durante a festa. 3Vieram todos os anciãos de Israel, e os sacerdotes tomaram a arca 4e carregaram-na junto com a tenda da reunião, como também todos os objetos sagrados que nela estavam; quem os carregava eram os sacerdotes e os levitas. 5O rei Salomão e toda a comunidade de Israel, reunida em torno dele, imolavam diante da arca ovelhas e bois em tal quantidade, que não se podia contar nem calcular. 6E os sacerdotes conduziram a arca da aliança do Senhor ao seu lugar, no santuário do templo, ao Santo dos Santos, debaixo das asas dos querubins, 7pois os querubins estendiam suas asas sobre o lugar da arca, cobrindo a arca e seus varais por cima. 9Dentro da arca só havia as duas tábuas de pedra, que Moisés ali tinha deposto no monte Horeb, quando o Senhor concluiu a aliança com os filhos de Israel, logo que saíram da terra do Egito. 10Ora, quando os sacerdotes deixaram o santuário, uma nuvem encheu o templo do Senhor, 11de modo que os sacerdotes não puderam continuar as funções porque a glória do Senhor tinha enchido o templo do Senhor. 12Então Salomão disse: 'O Senhor disse que habitaria numa nuvem, 13e eu edifiquei uma casa para tua morada, um templo onde vivas para sempre'."
+    },
+    "psalm": {
+      "reference": "Salmo 131 (132)",
+      "text": "- Nós soubemos que a arca estava em Éfrata e nos campos de Jaar a encontramos: Entremos no lugar em que ele habita, ante o escabelo de seus pés o adoremos!\n\n- Subi, Senhor, para o lugar de vosso pouso, subi vós, com vossa arca poderosa! Que se vistam de alegria os vossos santos, e os vossos sacerdotes, de justiça! Por causa de Davi, o vosso servo, não afasteis do vosso Ungido a vossa face!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 6, 53-56",
+      "text": "Naquele tempo: 53Tendo Jesus e seus discípulos acabado de atravessar o mar da Galiléia, chegaram a Genesaré e amarraram a barca. 54Logo que desceram da barca, as pessoas imediatamente reconheceram Jesus. 55Percorrendo toda aquela região, levavam os doentes deitados em suas camas para o lugar onde ouviam falar que Jesus estava. 56E, nos povoados, cidades e campos onde chegavam, colocavam os doentes nas praças e pediam-lhe para tocar, ao menos, a barra de sua veste. E todos quantos o tocavam ficavam curados."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santa Teresa de Ávila (1515-1582)<br/>",
+    "</b>",
+    "Carmelita descalça, Doutora da Igreja<br/>",
+    "Exclamação 16<br/>",
+    "«E todos os que O tocavam ficavam curados.»<br/>",
+    "Ó Deus verdadeiro e Senhor meu! Para a alma afligida pela solidão em que vive na tua ausência, é grande consolo saber que estás em toda a parte. Mas que sentido há nisto, Senhor, quando a força do amor e o ímpeto desta pena aumentam e o coração se atormenta, a tal ponto que nem podemos já compreender nem conhecer tal verdade? A alma percebe apenas que está apartada de Ti, e nenhum remédio admite. Porque o coração que muito ama não consente outros conselhos nem consolos, senão os vindos daquele que o feriu; dele somente espera a cura para a sua pena.<br/>",
+    "Quando Tu queres, Senhor, depressa saras a ferida que fizeste. Ó meu Bem-Amado, com quanta compaixão, com quanta doçura, bondade e ternura, com quantas mostras de amor saras estas chagas feitas com as setas do teu amor! Ó meu Deus, Tu és o repouso para todas as penas. Não será loucura vã procurar meios humanos para curar os que vivem enfermos do divino fogo? Quem poderá saber aonde tal ferida chegará, donde vem, e como mitigar tão penoso tormento? [...] Quanta razão tem a esposa do Cântico dos Cânticos, ao dizer: «O meu amado é para mim e eu para ele» (Ct 2,16)! Porque o amor que sinto não pode ter origem em algo tão baixo como é este meu amor. E no entanto, Esposo meu, sendo ele assim tão baixo, como entender que seja afinal capaz de superar todas as coisas criadas, para chegar a seu Criador?<br/>"
+  ]
+}

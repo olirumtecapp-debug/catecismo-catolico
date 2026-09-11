@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-13",
+  "year": 2026,
+  "month": 5,
+  "day": 13,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/13.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-13.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-13",
+      "name": "Nossa Senhora de Fátima",
+      "normalizedName": "nossa senhora de fatima",
+      "imageUrl": "./assets/img/santos/05-13-nossa-senhora-de-fatima.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/13/nossa-senhora-de-fatima.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/13/nossa-senhora-de-fatima.html",
+      "sourceText": "A Igreja celebra Nossa Senhora, no dia 13 de maio, por causa das suas aparições, em 1917, em Fátima, Portugal. A Virgem Maria apareceu seis vezes aos três pastorzinhos, Lúcia dos Santos, Francisco e Jacinta Marto, pedindo-lhes orações, penitência e conversão.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-13",
+      "name": "São André Humberto Fournet, presbítero",
+      "normalizedName": "sao andre humberto fournet, presbitero",
+      "imageUrl": "./assets/img/santos/05-13-sao-andre-humberto-fournet-presbitero.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "André foi expulso da França, durante o período da Revolução, por rejeitar o juramento cismático. Ao retornar, secretamente, quando a Igreja estava novamente livre, fundou as Filhas da Cruz, uma Congregação para a Educação cristã das jovens, que o chamavam carinhosamente como \"Bom Pai\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

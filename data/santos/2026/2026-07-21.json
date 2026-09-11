@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-21",
+  "year": 2026,
+  "month": 7,
+  "day": 21,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/21.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-21.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-21",
+      "name": "São Praxedes, romana, a cujo título foi dedicada uma igreja no Esquilino",
+      "normalizedName": "sao praxedes, romana, a cujo titulo foi dedicada uma igreja no esquilino",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Praxedes, irmã de Santa Pudenciana, era uma romana rica; seu pai, convertido ao cristianismo, transformou sua casa em uma igreja. Era encarregada da administração do Batismo e da celebração da Missa. Mas, sob a perseguição do imperador Antônio Pio, recebeu a palma do martírio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "name": "São Ezequiel, profeta",
+      "normalizedName": "sao ezequiel, profeta",
+      "imageUrl": "./assets/img/santos/07-21-sao-ezequiel-profeta.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/21/s--ezequiel--profeta.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/21/s--ezequiel--profeta.html",
+      "sourceText": "Ezequiel, o mais determinado entre os quatro grandes Profetas da história de Israel, é venerado pela Igreja como Santo. Deportado, a partir de 597, junto com seu povo para a Babilônia, encoraja os exilados com a Palavra de Deus. Seu livro, no Antigo Testamento, é repleto de visões e simbolismos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

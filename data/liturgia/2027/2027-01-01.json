@@ -1,0 +1,37 @@
+{
+  "date": "2027-01-01",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Natal Ciclo do Natal Solenidade: Maria, Mae de Deus",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Números 6,22-27",
+      "text": "22O Senhor falou a Moisés, dizendo: 23\"Fala a Aarão e a seus filhos: Ao abençoar os filhos de Israel, dizei-lhes: 24'O Senhor te abençoe e te guarde! 25O Senhor faça brilhar sobre ti a sua face, e se compadeça de ti! 26O Senhor volte para ti o seu rosto e te dê a paz!' 27Assim invocarão o meu nome sobre os filhos de Israel, e eu os abençoarei\"."
+    },
+    "psalm": {
+      "reference": "Salmo 66 (67)",
+      "text": "- Que Deus nos dê a sua graça e sua bênção, e sua face resplandeça sobre nós! Que na terra se conheça o seu caminho e a sua salvação por entre os povos.\n\n- Exulte de alegria a terra inteira, pois julgais o universo com justiça; os povos governais com retidão, e guiais, em toda a terra, as nações.\n\n- Que as nações vos glorifiquem, ó Senhor, que todas as nações vos glorifiquem! Que o Senhor e nosso Deus nos abençoe, e o respeitem os confins de toda a terra!"
+    },
+    "secondReading": {
+      "reference": "Gálatas 4,4-7",
+      "text": "Irmãos: 4Quando se completou o tempo previsto, Deus enviou o seu Filho, nascido de uma mulher, nascido sujeito à Lei, 5a fim de resgatar os que eram sujeitos à Lei e para que todos recebêssemos a filiação adotiva. 6E porque sois filhos, Deus enviou aos nossos corações o Espírito do seu Filho, que clama: Abá - ó Pai! 7Assim, já não és escravo, mas filho; e, se és filho, és também herdeiro: tudo isso por graça de Deus."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 2, 16-21",
+      "text": "Naquele tempo, 16os pastores foram às pressas a Belém e encontraram Maria e José, e o recém-nascido deitado na manjedoura. 17Tendo-o visto, contaram o que lhes fora dito sobre o menino. 18E todos os que ouviram os pastores ficaram maravilhados com aquilo que contavam. 19Quanto a Maria, guardava todos esses fatos e meditava sobre eles em seu coração. 20Os pastores voltaram, glorificando e louvando a Deus por tudo que tinham visto e ouvido, conforme lhes tinha sido dito. 21Quando se completaram os oito dias para a circuncisão do menino, deram-lhe o nome de Jesus, como fora chamado pelo anjo antes de ser concebido."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Efrém, Doutor da Igreja<br/>",
+    "</b>",
+    "Hino<br/>",
+    "«Os pastores regressaram, glorificando e louvando a Deus por tudo o que tinham ouvido e visto»<br/>",
+    "Vem, Moisés, mostra-nos a sarça do cimo da montanha cujas chamas dançavam no teu rosto (Ex 3,2): é o filho do Altíssimo que apareceu no seio da Virgem Maria e iluminou o mundo com a sua vinda. Glória a Ele da parte de toda a criatura e feliz aquela que O gerou!<br/>",
+    "Vem, Gedeão, mostra-nos esse velo e esse suave orvalho (Jz 6,37), explica-nos o mistério das tuas palavras: Maria é o velo que recebeu o orvalho, o Verbo de Deus; nela Se manifestou na criação e resgatou o mundo do pecado.<br/>",
+    "Vem, David, mostra-nos a cidade que viste e a planta que dela brotou: a cidade é Maria, a planta que dela saíu é o nosso Salvador, cujo nome é Aurora (Jer 23,5; Zac 3,8 LXX).<br/>",
+    "Eis que a árvore da vida que era guardada por um querubim com espada de fogo (Gn 3,24) habita em Maria, a Virgem pura; José a guarda. O querubim depôs a espada porque o fruto que guardava foi enviado do alto dos Céus para junto dos que estavam exilados no abismo. Comei dele todos, homens mortais, e vivereis. Bendito seja o fruto que a Virgem gerou.<br/>",
+    "Bendito seja Aquele que desceu e habitou em Maria e dela saíu para nos salvar. Bem-aventurada Maria, tu que foste julgada digna de ser a mãe do Filho do Altíssimo, tu que geraste o Ancião que tinha criado Adão e Eva. Ele saíu de ti, suave fruto cheio de vida, e por Ele os exilados têm de novo acesso ao paraíso.<br/>"
+  ]
+}

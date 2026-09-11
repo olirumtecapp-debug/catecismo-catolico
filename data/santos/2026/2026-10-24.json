@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-24",
+  "year": 2026,
+  "month": 10,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-24",
+      "name": "Santa Antônio Maria Claret, bispo, fundador da Congregação dos Missionários Filhos do Coração Imaculado da Virgem Maria",
+      "normalizedName": "santa antonio maria claret, bispo, fundador da congregacao dos missionarios filhos do coracao imaculado da maria",
+      "imageUrl": "./assets/img/santos/10-24-santa-antonio-maria-claret-bispo-fundador-da-.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/24/s--antonio-maria-claret--bispo--fundador-da-congregacao-dos-miss.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/24/s--antonio-maria-claret--bispo--fundador-da-congregacao-dos-miss.html",
+      "sourceText": "Antônio, figura eminente da Catalunha, no ano de 1800, quis ser missionário. Em 1849, fundou a Congregação dos Filhos do Imaculado Coração de Maria, conhecidos como Missionários Claretianos, hoje presentes em 65 países. Realizou seu sonho ao partir como Bispo para Cuba.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

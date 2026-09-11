@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-12",
+  "year": 2026,
+  "month": 7,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-12",
+      "name": "São João Gualberto, abade, fundador dos Valombrosanos",
+      "normalizedName": "sao joao gualberto, abade, fundador dos valombrosanos",
+      "imageUrl": "./assets/img/santos/07-12-sao-joao-gualberto-abade-fundador-dos-valombr.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "João Gualberto foi um monge em São Miniato, mas, por ter acusado o Abade de simonia, deixou o mosteiro. Em 1038, junto com outros ex-monges, fundou o mosteiro de Vallombrosa. Malgrado, aceitou o cargo de Abade e moldou a comunidade segundo o espírito de pobreza, trabalho e exemplo dos apóstolos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "name": "SS. Nabor e Félix, mártires milaneses",
+      "normalizedName": "ss. nabor e felix, milaneses",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origem norte-africana, os soldados Nabor e Félix chegaram a Milão, no século IV, para servir o exército de Maximiliano. Convertidos ao cristianismo, foram expulsos das fileiras militares e martirizados em Lódi. Seus restos mortais foram transferidos para a Basílica de Santo Ambrósio, em 1799.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

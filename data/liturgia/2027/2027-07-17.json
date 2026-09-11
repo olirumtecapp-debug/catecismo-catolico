@@ -1,0 +1,23 @@
+{
+  "date": "2027-07-17",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Bvs. Inacio de Azevedo e Comps.",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Êxodo 12,37-42",
+      "text": "Naqueles dias, 37os filhos de Israel partiram de Ramsés para Sucot. Eram cerca de seiscentos mil homens a pé, sem contar as crianças. 38Além disso, uma multidão numerosa subiu com eles, assim como rebanhos consideráveis de ovelhas e bois. 39Com a massa trazida do Egito fizeram pães ázimos, já que a massa não pudera fermentar, pois foram expulsos do Egito e não tinham podido esperar nem preparar provisões para si. 40A permanência dos filhos de Israel no Egito foi de quatrocentos e trinta anos. 41No mesmo dia em que se concluíam os quatrocentos e trinta anos, todos os exércitos do Senhor saíram da terra do Egito. 42Aquela foi uma noite de vigília para o Senhor, quando os fez sair da terra do Egito: essa noite em honra do Senhor deve ser observada por todos os filhos de Israel em todas as suas gerações."
+    },
+    "psalm": {
+      "reference": "Salmo 135 (136)",
+      "text": "- Demos graças ao Senhor, porque ele é bom: porque eterno é seu amor! De nós, seu povo humilhado, recordou-se: porque eterno é seu amor! De nossos inimigos libertou-nos: porque eterno é seu amor!\n\n- Ele feriu os primogênitos do Egito porque eterno é seu amor! E tirou do meio deles Israel: porque eterno é seu amor! Com mão forte e com braço estendido: porque eterno é seu amor!\n\n- Ele cortou o mar Vermelho em duas partes: porque eterno é o seu amor! Fez passar no meio dele Israel: porque eterno é o seu amor! E afogou o faraó com suas tropas: porque eterno é seu amor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 12, 14-21",
+      "text": "Naquele tempo, 14os fariseus saíram e fizeram um plano para matar Jesus. 15Ao saber disso, Jesus retirou-se dali. Grandes multidões o seguiram, e ele curou a todos. 16E ordenou-lhes que não dissessem quem ele era, 17para se cumprir o que foi dito pelo profeta Isaías: 18\"Eis o meu servo, que escolhi; o meu amado, no qual coloco a minha afeição; porei sobre ele o meu Espírito, e ele anunciará às nações o direito. 19Ele não discutirá nem gritará, e ninguém ouvirá a sua voz nas praças. 20Não quebrará o caniço rachado nem apagará o pavio que ainda fumega, até que faça triunfar o direito. 21Em seu nome as nações depositarão a sua esperança\"."
+    }
+  },
+  "extra": []
+}

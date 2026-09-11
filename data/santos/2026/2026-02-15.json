@@ -1,0 +1,43 @@
+{
+  "date": "2026-02-15",
+  "year": 2026,
+  "month": 2,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-15",
+      "name": "São Onésimo, discípulo de S. Paulo",
+      "normalizedName": "sao onesimo, discipulo de s. paulo",
+      "imageUrl": "./assets/img/santos/02-15-sao-onesimo-discipulo-de-s-paulo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Escravo em Colossi, depois de roubar seu patrão, Filêmon, discípulo de São Paulo, fugiu para Roma. Ali, conheceu o Apóstolo dos Gentios, prisioneiro, que o converteu e o enviou de volta a Filêmon, pedindo-lhe para recebê-lo, não mais como escravo, mas como irmão. Onésimo evangelizou a Ásia Menor.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-15",
+      "name": "SS. Faustino e Jovita, mártires",
+      "normalizedName": "ss. faustino e jovita,",
+      "imageUrl": "./assets/img/santos/02-15-ss-faustino-e-jovita-martires.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Faustino e Jovita eram dois cavaleiros nascidos em uma família pagã de Bréscia. Converteram-se ao cristianismo, graças ao bispo Apolônio, que os ordenou diáconos. Decapitados durante a perseguição de Adriano, entre 120 e 134, são quase sempre representados com uma espada e a palma do martírio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

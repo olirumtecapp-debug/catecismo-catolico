@@ -1,0 +1,43 @@
+{
+  "date": "2026-01-06",
+  "year": 2026,
+  "month": 1,
+  "day": 6,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/06.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-06.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-06",
+      "name": "São Carlos de Sezze, religioso franciscano",
+      "normalizedName": "sao carlos de sezze, franciscano",
+      "imageUrl": "./assets/img/santos/01-06-sao-carlos-de-sezze-religioso-franciscano.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Carlos nasceu em Sezze (Latina), em 1613, filho de camponeses. Entrou para a Ordem dos Frades Menores, onde foi cozinheiro, porteiro, esmoleiro. Apesar de pouco estudo, recebeu o dom da ciência. Foi convocado por Papas como Conselheiro. Foi sempre humilde, contemplativo e caridoso.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Santa Rafaela do Sagrado Coração, virgem, fundadora das Escravas do S. Coração de Jesus",
+      "normalizedName": "santa rafaela do sagrado coracao, , fundadora das escravas do s. coracao de jesus",
+      "imageUrl": "./assets/img/santos/01-06-santa-rafaela-do-sagrado-coracao-virgem-funda.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Rafaela, espanhola (1850-1925), fundou uma Congregação dedicada à adoração Eucarística perpétua e ao apostolado. Incompreendida pelas coirmãs, demitiu-se de Superiora desempenhando, com grande mansidão, os serviços mais humildes como simples Irmã, aceitando tudo “como se viesse das mãos de Deus”.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

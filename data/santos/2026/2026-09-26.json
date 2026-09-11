@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-26",
+  "year": 2026,
+  "month": 9,
+  "day": 26,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/26.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-26.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-26",
+      "name": "SS. Cosme e Damião, mártires",
+      "normalizedName": "ss. cosme e damiao,",
+      "imageUrl": "./assets/img/santos/09-26-ss-cosme-e-damiao-martires.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/26/ss--cosme-e-damiao--martires.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/26/ss--cosme-e-damiao--martires.html",
+      "sourceText": "Cosme e Damião, irmãos gêmeos e cristãos, nascidos na Arábia, dedicaram-se, gratuitamente, aos cuidados dos doentes, depois de estudarem a arte médica na Síria. Foram martirizados durante o império de Diocleciano. Os dois Santos são padroeiros dos médicos, cirurgiões e farmacêuticos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "name": "São Senador, mártir de Albano",
+      "normalizedName": "sao senador, martir de albano",
+      "imageUrl": "./assets/img/santos/09-26-sao-senador-martir-de-albano.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sabe-se pouco ou nada sobre a vida de Senador. Provavelmente, era um mártir dos primeiros séculos da era Cristã. Segundo algumas fontes, era natural de Albano, no Lácio, porque, naquele lugar famoso, ao longo da Via Ápia, havia uma igreja a ele dedicada, na qual se realizavam grandes prodígios.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "name": "São Nilo, abade, fundador do mosteiro de Grottaferrata",
+      "normalizedName": "sao nilo, abade, fundador do mosteiro de grottaferrata",
+      "imageUrl": "./assets/img/santos/09-26-sao-nilo-abade-fundador-do-mosteiro-de-grotta.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nicolau nasceu em Rossano, Calábria, em 910, e entrou para a vida monacal, recebendo o nome de Nilo. Como eremita, entre orações e estudo, tornou-se modelo para os monges. Não querendo honras, transferiu-se para Cápua e depois para Gaeta. Aos 90 anos, fundou a Abadia de Grottaferrata, perto de Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

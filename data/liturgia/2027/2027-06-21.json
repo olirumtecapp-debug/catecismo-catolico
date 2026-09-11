@@ -1,0 +1,45 @@
+{
+  "date": "2027-06-21",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Luis Gonzaga",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Gênesis 12,1-9",
+      "text": "Naqueles dias: 1O Senhor disse a Abrão: 'Sai da tua terra, da tua família e da casa do teu pai, e vai para a terra que eu te vou mostrar. 2Farei de ti um grande povo e te abençoarei: engrandecerei o teu nome, de modo que ele se torne uma bênção. 3Abençoarei os que te abençoarem e amaldiçoarei os que te amaldiçoarem; em ti serão abençoadas todas as famílias da terra!'. 4E Abrão partiu, como o Senhor lhe havia dito, e Ló foi com ele. Tinha Abrão setenta e cinco anos, quando partiu de Harã. 5Ele levou consigo sua mulher Sarai, seu sobrinho Ló e todos os bens que possuíam, bem como todos os escravos que haviam adquirido em Harã. Partiram rumo à terra de Canaã e ali chegaram. 6Abrão atravessou o país até o santuário de Siquém, até o carvalho de Moré. Os cananeus estavam então naquela terra. 7O Senhor apareceu a Abrão e lhe disse: 'Darei esta terra à tua descendência'. Abrão ergueu ali um altar ao Senhor, que lhe tinha aparecido. 8De lá, deslocou-se em direção ao monte que estava a oriente de Betel, onde armou sua tenda, com Betel a ocidente e Hai a oriente. Ali construiu também um altar ao Senhor, e invocou o seu nome. 9Depois, de acampamento em acampamento, Abrão foi até o Negueb."
+    },
+    "psalm": {
+      "reference": "Salmo 32 (33)",
+      "text": "- Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança! Dos altos céus o Senhor olha e observa; ele se inclina para olhar todos os homens.\n\n- Mas o Senhor pousa o olhar sobre os que o temem, e que confiam esperando em seu amor, para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria.\n\n- No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! Sobre nós venha, Senhor, a vossa graça, da mesma forma que em vós nós esperamos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 7, 1-5",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 1'Não julgueis, e não sereis julgados. 2Pois, vós sereis julgados com o mesmo julgamento com que julgardes; e sereis medidos, co a mesma medida com que medirdes. 3Por que observas o cisco no olho do teu irmão, e não prestas atenção à trave que está no teu próprio olho? 4Ou, como podes dizer ao teu irmão: 'deixa-me tirar o cisco do teu olho', quando tu mesmo tens uma trave no teu? 5Hipócrita, tira primeiro a trave do teu próprio olho, e então enxergarás bem para tirar o cisco do olho do teu irmão."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia: Imitação de Cristo<br/>",
+    "</b>",
+    "Tratado espiritual do século XV, Livraria Moraes, 1959<br/>",
+    "Livro II, caps. 2 e 3<br/>",
+    "«Não reparas na trave que está na tua [vista]»<br/>",
+    "Quando um homem se humilha por causa dos seus defeitos, acalma os outros facilmente e satisfaz sem custo os que consigo se iravam.<br/>",
+    "Deus protege e liberta o humilde, ama-o e consola-o.<br/>",
+    "Inclina-Se para ele e dá-lhe grande graça; e, depois do seu abatimento, eleva-o à glória.<br/>",
+    "Revela os seus segredos ao humilde, arrasta-o e convida-o docemente para Si.<br/>",
+    "E ele, mesmo na confusão, vive em paz, porque se firma em Deus e não no mundo. [...]<br/>",
+    "Mantém-te tu em paz; e só então poderás pacificar os outros.<br/>",
+    "O homem pacífico é mais útil do que o muito instruído.<br/>",
+    "O apaixonado, porém, converte o bem em mal e acredita facilmente neste.<br/>",
+    "O homem bom e pacífico converte todas as coisas em bem.<br/>",
+    "Aquele que está verdadeiramente em paz não suspeita mal de ninguém.<br/>",
+    "Mas o que é descontente e inquieto é agitado por várias suspeitas.<br/>",
+    "Nem descansa, nem deixa descansar os outros.<br/>",
+    "Diz muitas vezes o que não devia dizer e omite fazer o que devia.<br/>",
+    "Preocupa-se com o que os outros têm de fazer, mas desleixa o que lhe compete.<br/>",
+    "Tem, antes de tudo, cuidado contigo, e poderás então zelar pelo teu próximo.<br/>"
+  ]
+}

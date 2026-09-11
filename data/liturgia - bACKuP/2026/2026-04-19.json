@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-19",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 2:14, 22-33",
+    "psalm": "Sl 16:1-2, 5, 7-8, 9-10, 11",
+    "secondReading": "1Pe 1:17-21",
+    "gospel": "Lc 24:13-35"
+  },
+  "calendar": {
+    "date": "2026-04-19",
+    "monthDay": "4/19",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "3rd Sunday of Easter",
+      "type": "SUNDAY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-19.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-19.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-19"
+  }
+}

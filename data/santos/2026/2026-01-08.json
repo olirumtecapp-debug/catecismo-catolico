@@ -1,0 +1,43 @@
+{
+  "date": "2026-01-08",
+  "year": 2026,
+  "month": 1,
+  "day": 8,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/08.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-08.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-08",
+      "name": "São Severino, abade, apóstolo de Nórico",
+      "normalizedName": "sao severino, abade, apostolo de norico",
+      "imageUrl": "./assets/img/santos/01-08-sao-severino-abade-apostolo-de-norico.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nascido em uma nobre família romana da Nórica, hoje Áustria (séc. V), Severino viveu de modo austero, com esmolas e jejuns, unindo a ação à contemplação. Impressionados pela sua santidade, era ouvido por poderosos e até bárbaros. Fundou mosteiros, socorreu os pobres, defendeu aldeias dos bárbaros.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-08",
+      "name": "São Lourenço Justiniano, patriarca de Veneza",
+      "normalizedName": "sao lourenco justiniano, patriarca de veneza",
+      "imageUrl": "./assets/img/santos/01-08-sao-lourenco-justiniano-patriarca-de-veneza.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Lourenço, primeiro Patriarca de Veneza, desde 1451, foi um grande reformador da Igreja, não com sermões, mas com a pena e o exemplo. Nobre de nascimento, não hesitou em pedir esmolas, com saio e alforje, chamando este seu gesto de \"vitória sobre si mesmo\". Foi canonizado por Alexandre VIII, em 1690.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

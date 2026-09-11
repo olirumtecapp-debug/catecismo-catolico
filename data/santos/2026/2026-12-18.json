@@ -1,0 +1,43 @@
+{
+  "date": "2026-12-18",
+  "year": 2026,
+  "month": 12,
+  "day": 18,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/18.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-18.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-18",
+      "name": "São Malaquias, profeta",
+      "normalizedName": "sao malaquias, profeta",
+      "imageUrl": "./assets/img/santos/12-18-sao-malaquias-profeta.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Viveu entre os séculos VI e V a.C. Ao voltar do exílio babilônico, denunciou a religiosidade exterior dos seus conterrâneos, que nada tinha a ver com Deus e a justiça. Exortava ao encontro com o Senhor e profetizava a vinda do mensageiro de Deus, João Batista.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-18",
+      "name": "São Gaciano, bispo de Tours",
+      "normalizedName": "sao gaciano, bispo de tours",
+      "imageUrl": "./assets/img/santos/12-18-sao-gaciano-bispo-de-tours.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Enviado, junto com outros seis missionários, para evangelizar a Gália, foi o primeiro Bispo da cidade de Tours. Inicialmente, foi acolhido com grande hostilidade, a ponto de ter que celebrar Missa nas Catacumbas. Naquela região, anunciou o Evangelho, por 50 anos, com coragem e perseverança.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

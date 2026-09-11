@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-11",
+  "year": 2026,
+  "month": 9,
+  "day": 11,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/11.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-11.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-11",
+      "name": "SS. Proto e Jacinto, mártires, na via Salaria",
+      "normalizedName": "ss. proto e jacinto, , na via salaria",
+      "imageUrl": "./assets/img/santos/09-11-ss-proto-e-jacinto.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "O martírio destes Santos é comprovado por muitos documentos, mas a sua história é mais lendária. Proto e Jacinto eram dois escravos cristãos eunucos, que ajudaram a patroa, Eugênia, a se converter à fé. Depois fizeram o mesmo com amiga Bassila. O noivo desta a acusou e os três foram martirizados.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "name": "B. Boaventura de Barcelona, religioso franciscano",
+      "normalizedName": "b. boaventura de barcelona, franciscano",
+      "imageUrl": "./assets/img/santos/09-11-b-boaventura-de-barcelona.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Boaventura, da Ordem dos Frades Menores, passou 17 anos pelos conventos da Catalunha, fazendo-se as tarefas mais humildes. Como grande Reformador, instituiu os \"Retiros\", um retorno à espiritualidade franciscana original. Era chamado \"apóstolo de Roma\" pela sua obra na cidade, onde morreu em 1684.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

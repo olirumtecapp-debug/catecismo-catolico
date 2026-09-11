@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-20",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Sb 2:1a, 12-22",
+    "psalm": "Sl 34:17-18, 19-20, 21 and 23",
+    "secondReading": "",
+    "gospel": "Jo 7:1-2, 10, 25-30"
+  },
+  "calendar": {
+    "date": "2026-03-20",
+    "monthDay": "3/20",
+    "season": "Lent",
+    "celebration": {
+      "name": "Friday of the 4th week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-20.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-20.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-20"
+  }
+}

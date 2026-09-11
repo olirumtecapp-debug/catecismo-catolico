@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATECISMO — Conhecer, compreender e viver a fé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mariana: '#1B365D',
+                        'mariana-dark': '#0F223E',
+                        dourado: '#D4AF37',
+                        'dourado-light': '#F3E5AB',
+                        vinho: '#6A1B29',
+                        'vinho-dark': '#48111B',
+                        marfim: '#F9F8F6',
+                        'marfim-card': '#FFFFFF',
+                        cinza: '#64748B'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F9F8F6; color: #2C3E50; }
+        h1, h2, h3, .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .gold-border { border-color: #D4AF37; }
+        .gold-gradient { background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%); }
+        .mariana-gradient { background: linear-gradient(135deg, #1B365D 0%, #0F223E 100%); }
+        .vinho-gradient { background: linear-gradient(135deg, #6A1B29 0%, #48111B 100%); }
+        .card-shadow { box-shadow: 0 4px 20px -2px rgba(27, 54, 93, 0.08); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #F9F8F6; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+        .modal-backdrop { background: rgba(15, 34, 62, 0.6); backdrop-filter: blur(4px); }
+    </style>
+</head>
+<body class="h-full flex flex-col custom-scrollbar overflow-hidden">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- Modal Container -->
+    <div id="modal-container" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop"></div>
+
+    <!-- Main App Container -->
+    <div id="app" class="flex h-screen w-screen overflow-hidden bg-marfim">
+
+        <!-- Sidebar / Desktop Navigation -->
+        <aside id="desktop-sidebar" class="hidden lg:flex flex-col w-72 bg-white border-r border-slate-200 z-30 shadow-sm">
+            <div class="p-6 border-b border-slate-100 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-xl shadow-md border border-dourado/40" title="Símbolo Oficial da Tradição Católica">
+                    ✝
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-bold text-mariana tracking-wide leading-none">CATECISMO</h1>
+                    <span class="text-[10px] tracking-widest uppercase text-dourado font-semibold">Plataforma Católica</span>
+                </div>
+            </div>
+
+            <nav class="flex-1 overflow-y-auto p-4 space-y-1 custom-scrollbar">
+                <button onclick="router.navigate('home')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="home">
+                    <span class="text-lg">☀️</span> Meu Momento
+                </button>
+                <button onclick="router.navigate('liturgia')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="liturgia">
+                    <span class="text-lg">✝️</span> Liturgia Diária
+                </button>
+                <button onclick="router.navigate('catecismo')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="catecismo">
+                    <span class="text-lg">📖</span> Catecismo & Doutrina
+                </button>
+                <button onclick="router.navigate('santo')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="santo">
+                    <span class="text-lg">😇</span> Santo do Dia
+                </button>
+                <button onclick="router.navigate('oracao')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="oracao">
+                    <span class="text-lg">🙏</span> Oração & Lectio
+                </button>
+                <button onclick="router.navigate('missa')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="missa">
+                    <span class="text-lg">⛪</span> A Santa Missa
+                </button>
+                <button onclick="router.navigate('quiz')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="quiz">
+                    <span class="text-lg">🧠</span> Quizzes
+                </button>
+                <button onclick="router.navigate('planos')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="planos">
+                    <span class="text-lg">🎯</span> Planos de Estudo
+                </button>
+                <button onclick="router.navigate('favoritos')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="favoritos">
+                    <span class="text-lg">⭐</span> Meus Favoritos
+                </button>
+                <button onclick="router.navigate('conquistas')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="conquistas">
+                    <span class="text-lg">🏆</span> Conquistas
+                </button>
+                <button onclick="router.navigate('progresso')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="progresso">
+                    <span class="text-lg">📊</span> Meu Progresso
+                </button>
+                <button onclick="router.navigate('fontes')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="fontes">
+                    <span class="text-lg">ℹ️</span> Fontes e Transparência
+                </button>
+                <button onclick="router.navigate('pesquisa')" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-route="pesquisa">
+                    <span class="text-lg">🔎</span> Pesquisar
+                </button>
+            </nav>
+
+            <div class="p-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-dourado/20 text-dourado font-bold flex items-center justify-center text-xs border border-dourado/50">
+                        ✝
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-700" id="sidebar-level-title">Iniciante</p>
+                        <p class="text-[10px] text-slate-500" id="sidebar-streak">🔥 0 dias consecutivos</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <div class="flex-1 flex flex-col h-full overflow-hidden relative">
+
+            <!-- Top Header -->
+            <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 z-20 shrink-0">
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl text-mariana">☰</button>
+                    <div>
+                        <h2 id="page-title" class="font-serif text-xl font-bold text-mariana">Meu Momento</h2>
+                        <p id="page-subtitle" class="text-xs text-slate-500 hidden sm:block">Conhecer, compreender e viver a fé.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button onclick="router.navigate('pesquisa')" class="md:hidden p-2 text-slate-600">🔎</button>
+                    <div class="relative hidden md:block w-64">
+                        <input type="text" id="global-search" oninput="handleSearch(this.value)" placeholder="Pesquisar na plataforma..." class="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-mariana transition">
+                        <span class="absolute left-3 top-2.5 text-slate-400 text-xs">🔍</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-xl text-xs font-semibold text-amber-800">
+                        <span>🔥</span> <span id="header-streak">0</span> dias
+                    </div>
+                    <div class="flex items-center gap-2 bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-xl text-xs font-semibold text-blue-900">
+                        <span>⭐</span> <span id="header-xp">0</span> XP
+                    </div>
+                </div>
+            </header>
+
+            <!-- Mobile Drawer Navigation -->
+            <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden lg:hidden">
+                <div class="w-72 h-full bg-white flex flex-col shadow-2xl">
+                    <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-lg shadow-md border border-dourado/40">✝</div>
+                            <h1 class="font-serif text-xl font-bold text-mariana">CATECISMO</h1>
+                        </div>
+                        <button onclick="toggleMobileMenu()" class="text-slate-400 text-xl font-bold">✕</button>
+                    </div>
+                    <nav class="flex-1 overflow-y-auto p-4 space-y-1 custom-scrollbar">
+                        <button onclick="router.navigate('home'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">☀️ Meu Momento</button>
+                        <button onclick="router.navigate('liturgia'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">✝️ Liturgia Diária</button>
+                        <button onclick="router.navigate('catecismo'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📖 Catecismo & Doutrina</button>
+                        <button onclick="router.navigate('santo'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">😇 Santo do Dia</button>
+                        <button onclick="router.navigate('oracao'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🙏 Oração & Lectio</button>
+                        <button onclick="router.navigate('missa'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
+                        <button onclick="router.navigate('quiz'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🧠 Quizzes</button>
+                        <button onclick="router.navigate('planos'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🎯 Planos de Estudo</button>
+                        <button onclick="router.navigate('favoritos'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⭐ Favoritos</button>
+                        <button onclick="router.navigate('conquistas'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🏆 Conquistas</button>
+                        <button onclick="router.navigate('progresso'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📊 Meu Progresso</button>
+                        <button onclick="router.navigate('fontes'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">ℹ️ Fontes e Transparência</button>
+                        <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🔎 Pesquisar</button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Scrollable Dynamic Viewport -->
+            <main id="main-view" class="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar pb-24 lg:pb-12">
+                <!-- Dynamic Content Injected Here -->
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript Data & Logic Providers -->
+    <script>
+        /* ==========================================
+           1. DATA PROVIDERS DEFINITION
+           ========================================== */
+        const LiturgicalContentProvider = {
+            /* ---- Calendário litúrgico calculado (algoritmo de Meeus/Jones/Butcher para a Páscoa) ---- */
+            _easter(year) {
+                const a = year % 19, b = Math.floor(year / 100), c = year % 100;
+                const d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25);
+                const g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
+                const i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7;
+                const m = Math.floor((a + 11 * h + 22 * l) / 451);
+                const month = Math.floor((h + l - 7 * m + 114) / 31);
+                const day = ((h + l - 7 * m + 114) % 31) + 1;
+                return new Date(year, month - 1, day);
+            },
+            _addDays(date, n) { const d = new Date(date); d.setDate(d.getDate() + n); return d; },
+            _fmt(date) { return date.toISOString().split('T')[0]; },
+            _weekdayPt(date) {
+                return ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'][date.getDay()];
+            },
+
+            /** Retorna a estrutura litúrgica de qualquer data (tempo, cor, celebração). */
+            getDayInfo(dateStr = new Date().toISOString().split('T')[0]) {
+                const date = new Date(dateStr + 'T12:00:00');
+                const year = date.getFullYear();
+                const easter = this._easter(year);
+                const ashWednesday = this._addDays(easter, -46);
+                const pentecost = this._addDays(easter, 49);
+                const christmas = new Date(year, 11, 25);
+                // Advento: 4º domingo antes do Natal
+                const advent4 = this._addDays(christmas, -(christmas.getDay() === 0 ? 7 : christmas.getDay()) - 21);
+                const epiphany = new Date(year, 0, 6);
+                const baptism = this._addDays(epiphany, epiphany.getDay() === 0 ? 7 : (7 - epiphany.getDay()) + 7);
+
+                const diffEaster = Math.round((date - easter) / 86400000);
+                const weekday = this._weekdayPt(date);
+                const isSunday = date.getDay() === 0;
+
+                let season, color, celebration, rank;
+                if (date >= advent4 && date < christmas) {
+                    season = 'Advento'; color = 'Roxo';
+                    const week = Math.min(4, Math.floor((date - advent4) / 604800000) + 1);
+                    celebration = `${weekday} da ${week}ª Semana do Advento`; rank = isSunday ? 'Domingo' : 'Féria';
+                } else if (date >= christmas && date <= baptism) {
+                    season = 'Tempo do Natal'; color = 'Branco';
+                    celebration = date.getTime() === christmas.getTime() ? 'Natal do Senhor' :
+                        date.getTime() === new Date(year,0,1).getTime() ? 'Santa Maria, Mãe de Deus (Solene)' :
+                        date.getTime() === epiphany.getTime() ? 'Epifania do Senhor (Solene)' :
+                        date.getTime() === baptism.getTime() ? 'Batismo do Senhor (Festa)' : `${weekday} do Tempo do Natal`;
+                    rank = 'Festa';
+                } else if (date >= ashWednesday && date < easter) {
+                    season = 'Quaresma'; color = 'Roxo';
+                    const week = Math.min(5, Math.floor((date - ashWednesday) / 604800000) + 1);
+                    celebration = date.getTime() === ashWednesday.getTime() ? 'Quarta-feira de Cinzas' :
+                        diffEaster === -7 ? 'Domingo de Ramos' :
+                        diffEaster === -3 ? 'Quinta-feira Santa' :
+                        diffEaster === -2 ? 'Sexta-feira Santa (Paixão)' :
+                        diffEaster === -1 ? 'Sábado Santo' : `${weekday} da ${week}ª Semana da Quaresma`;
+                    rank = diffEaster >= -7 ? 'Solene' : isSunday ? 'Domingo' : 'Féria';
+                    if (diffEaster === -2 || diffEaster === -1) color = diffEaster === -2 ? 'Vermelho' : 'Roxo';
+                } else if (date >= easter && date <= pentecost) {
+                    season = 'Tempo Pascal'; color = diffEaster === 49 ? 'Vermelho' : 'Branco';
+                    const week = Math.min(7, Math.floor(diffEaster / 7) + 1);
+                    celebration = diffEaster === 0 ? 'Páscoa — Ressurreição do Senhor (Solene)' :
+                        diffEaster === 39 ? 'Ascensão do Senhor (Solene)' :
+                        diffEaster === 49 ? 'Pentecostes (Solene)' :
+                        isSunday ? `${week}º Domingo da Páscoa` : `${weekday} da ${week}ª Semana da Páscoa`;
+                    rank = diffEaster === 0 || diffEaster === 39 || diffEaster === 49 ? 'Solene' : isSunday ? 'Domingo' : 'Féria';
+                } else {
+                    season = 'Tempo Comum'; color = 'Verde';
+                    // Semana do Tempo Comum: semanas após Pentecostes ou após Batismo do Senhor
+                    const start = date > pentecost ? pentecost : baptism;
+                    const week = Math.max(1, Math.floor((date - start) / 604800000) + (date > pentecost ? 1 : 1));
+                    celebration = isSunday ? `${week}º Domingo do Tempo Comum` : `${weekday} da ${week}ª Semana do Tempo Comum`;
+                    rank = isSunday ? 'Domingo' : 'Féria';
+                    // Festas fixas do Tempo Comum
+                    const md = `${date.getMonth()+1}-${date.getDate()}`;
+                    const fixed = { '6-29':['São Pedro e São Paulo, Apóstolos (Solene)','Vermelho'], '8-15':['Assunção de Nossa Senhora (Solene)','Branco'], '11-1':['Todos os Santos (Solene)','Branco'], '12-8':['Imaculada Conceição (Solene)','Branco'], '3-19':['São José (Solene)','Branco'], '3-25':['Anunciação do Senhor (Solene)','Branco'], '9-14':['Exaltação da Santa Cruz (Festa)','Vermelho'], '10-4':['São Francisco de Assis (Memória)','Branco'], '12-25':['Natal do Senhor (Solene)','Branco'] };
+                    if (fixed[md]) { celebration = fixed[md][0]; color = fixed[md][1]; rank = 'Solene/Festa'; }
+                }
+                return { date: dateStr, weekday, liturgicalSeason: season, celebration, rank, liturgicalColor: color };
+            },
+
+            /* ---- Leituras cadastradas (demonstrativo CNBB) ---- */
+            _readings: {
+                "2026-09-09": {
+                    saintOrMemory: "São Pedro Claver, Sacerdote (Memória facultativa)",
+                    firstReading: { reference: "Colossenses 3,1-11", text: "Irmãos, já que ressuscitastes com Cristo, buscai as coisas do alto, onde Cristo está sentado à direita de Deus. Afeiçoai-vos às coisas do alto e não às da terra. Pois morrestes e a vossa vida está escondida com Cristo em Deus. Quando Cristo, a vossa vida, se manifestar, então também vós vos manifestareis com ele na glória. Mortificai, pois, os vossos membros no que têm de terreno: a fornicação, a impureza, as paixões, os maus desejos e a avareza, que é uma idolatria." },
+                    psalm: { reference: "Sl 144(145),10-11.12-13ab", text: "R. A bondade do Senhor é para todos. Que todas as vossas obras, ó Senhor, vos glorifiquem, e os vossos fiéis vos bendigam! Proclamem a glória do vosso reino e anunciem o vosso poder." },
+                    gospel: { reference: "Lucas 6,20-26", text: "Naquele tempo, Jesus, levantando os olhos para os seus discípulos, disse: 'Bem-aventurados vós, os pobres, porque vosso é o Reino de Deus! Bem-aventurados vós, que agora tendes fome, porque sereis saciados! Bem-aventurados vós, que agora chorais, porque haveis de rir! Bem-aventurados sereis quando os homens vos odiarem, vos expulsarem, vos insultarem e amaldiçoarem o vosso nome, por causa do Filho do Homem! Alegrai-vos, nesse dia, e exultai, pois será grande a vossa recompensa no céu.'" },
+                    reflection: "As bem-aventuranças proclamadas por Cristo invertem a lógica mundana. A verdadeira riqueza do discípulo consiste em depositar toda a confiança na Providência divina e abraçar a mansidão evangélica.",
+                    prayer: "Senhor Deus, que destes a São Pedro Claver um amor admirável para servir aos escravos, concedei-nos buscar a Cristo nos irmãos e servi-lo de coração. Amém."
+                },
+                "2026-09-10": {
+                    saintOrMemory: "São Nicolau de Tolentino",
+                    firstReading: { reference: "Colossenses 3,12-17", text: "Revesti-vos, pois, como eleitos de Deus, santos e amados, de entranhada misericórdia, de bondade, humildade, doçura, paciência. Suportai-vos uns aos outros e perdoai-vos mutuamente, se algum tiver queixa contra outro. Como o Senhor vos perdoou, assim também vós perdoai. Acima de tudo, revesti-vos da caridade, que é o vínculo da perfeição." },
+                    psalm: { reference: "Sl 150,1-2.3-4.5-6", text: "R. Tudo o que tem vida louve ao Senhor! Louvai a Deus no seu santuário, louvai-o no seu firmamento poderoso! Louvai-o pelos seus feitos grandiosos, louvai-o pela sua imensa majestade!" },
+                    gospel: { reference: "Lucas 6,27-38", text: "A vós outros que ouvis, eu digo: Amai os vossos inimigos, fazei o bem aos que vos odeiam, abençoai os que vos maldicem, orai pelos que vos caluniam. Ao que te bate numa face, oferece-lhe também a outra. Não julgueis e não sereis julgados; não condeneis e não sereis condenados; perdoai e sereis perdoados." },
+                    reflection: "O amor cristão desafia o ressentimento humano. Ao perdoar e abençoar, participamos da própria perfeição do Pai celeste que faz nascer o sol sobre bons e maus.",
+                    prayer: "Ó Deus, que nos dais a graça do perdão, dai-nos coragem para amar sem medidas e construir a paz. Amém."
+                },
+                "2026-09-11": {
+                    saintOrMemory: "Sexta-feira da 23ª Semana do Tempo Comum",
+                    firstReading: { reference: "1 Coríntios 9,16-19.22b-27", text: "Anunciar o Evangelho não é para mim motivo de glória, é antes uma necessidade que se me impõe. Ai de mim se eu não evangelizar! Faço-me tudo para todos, para salvar alguns a todo o custo. Todos correm no estádio, mas um só recebe o prêmio. Correi de tal modo que o alcanceis." },
+                    psalm: { reference: "Sl 83(84),3-6.12", text: "R. Quão amáveis são as vossas moradas, Senhor! Minha alma suspira e desfalece pelos átrios do Senhor. Felizes os que habitam a vossa casa!" },
+                    gospel: { reference: "Lucas 6,39-42", text: "Pode um cego guiar outro cego? Não cairão os dois num buraco? Por que vês o argueiro no olho do teu irmão e não percebes a trave que há no teu próprio olho? Hipócrita! Tira primeiro a trave do teu olho, e então verás claramente para tirar o argueiro do olho do teu irmão." },
+                    reflection: "Antes de corrigir o mundo, o discípulo é chamado à conversão do próprio olhar. A humildade é a lente que purifica a visão espiritual.",
+                    prayer: "Senhor, purificai o meu coração para que eu veja os irmãos com os vossos olhos de misericórdia. Amém."
+                },
+                "2026-09-12": {
+                    saintOrMemory: "Santíssimo Nome de Maria (Memória facultativa)",
+                    firstReading: { reference: "1 Coríntios 10,14-22", text: "O cálice de bênção que abençoamos não é comunhão com o sangue de Cristo? E o pão que partimos não é comunhão com o corpo de Cristo? Porque há um só pão, nós, embora muitos, somos um só corpo, pois todos participamos do único pão." },
+                    psalm: { reference: "Sl 115(116),12-13.17-18", text: "R. A vós oferecerei um sacrifício de louvor. Como retribuirei ao Senhor por tudo o que ele me deu? Elevarei o cálice da salvação, invocando o nome do Senhor." },
+                    gospel: { reference: "Lucas 6,43-49", text: "Não há árvore boa que dê frutos maus, nem árvore má que dê frutos bons. O homem bom tira do bom tesouro do seu coração o bem. Por que me chamais: Senhor! Senhor! e não fazeis o que eu digo? Quem ouve as minhas palavras e as põe em prática é como o homem que construiu a casa sobre a rocha." },
+                    reflection: "A fé autêntica prova-se na prática. Construir sobre a rocha é unir a escuta da Palavra à obediência concreta da vida diária.",
+                    prayer: "Senhor Jesus, fazei que minha vida seja edificada sobre a rocha da vossa Palavra. Amém."
+                },
+                "2026-09-13": {
+                    saintOrMemory: "24º Domingo do Tempo Comum",
+                    firstReading: { reference: "Êxodo 32,7-11.13-14", text: "O Senhor disse a Moisés: 'Vi este povo: é um povo de dura cerviz. Agora, deixa-me, para que se acenda contra eles a minha ira e eu os extermine.' Mas Moisés suplicou ao Senhor, e o Senhor arrependeu-se do mal que ameaçara fazer ao seu povo." },
+                    psalm: { reference: "Sl 50(51),3-4.12-13.17.19", text: "R. Eu me levantarei e irei ter com meu pai. Tende piedade de mim, ó Deus, segundo a vossa misericórdia. Criai em mim um coração puro, ó Deus." },
+                    gospel: { reference: "Lucas 15,1-32", text: "Os publicanos e pecadores aproximavam-se de Jesus para o escutar. Então ele lhes propôs esta parábola: 'Qual de vós, tendo cem ovelhas e perdendo uma, não deixa as noventa e nove no deserto e vai procurar a que se perdeu até encontrá-la? Haverá mais alegria no céu por um só pecador que se converte do que por noventa e nove justos que não precisam de conversão.' E contou a parábola do filho pródigo: 'Este meu filho estava morto e tornou a viver; estava perdido e foi encontrado.'" },
+                    reflection: "O coração de Deus é o do pastor que busca e do pai que espera. Nenhum pecador está longe demais para a misericórdia que sai ao encontro.",
+                    prayer: "Pai misericordioso, acolhei-me como acolhestes o filho pródigo, e fazei-me instrumento do vosso perdão. Amém."
+                },
+                "2026-09-14": {
+                    saintOrMemory: "Exaltação da Santa Cruz (Festa)",
+                    firstReading: { reference: "Números 21,4b-9", text: "O povo murmurou contra Deus e contra Moisés. O Senhor enviou serpentes venenosas. Moisés fez uma serpente de bronze e colocou-a sobre um poste: todo aquele que, mordido, olhava para ela, ficava curado." },
+                    psalm: { reference: "Sl 77(78),1-2.34-38", text: "R. Não esqueçais as obras do Senhor. Escuta, meu povo, a minha lei; presta ouvidos às palavras da minha boca." },
+                    gospel: { reference: "João 3,13-17", text: "Ninguém subiu ao céu, a não ser aquele que desceu do céu, o Filho do Homem. Como Moisés levantou a serpente no deserto, assim é necessário que o Filho do Homem seja levantado, para que todo aquele que nele crer tenha a vida eterna. Deus amou tanto o mundo, que deu o seu Filho único, para que todo o que nele crer não pereça, mas tenha a vida eterna." },
+                    reflection: "A cruz, instrumento de condenação, torna-se árvore da vida. Contemplar o Crucificado é olhar para a medida do amor de Deus pela humanidade.",
+                    prayer: "Nós vos adoramos, ó Cristo, e vos bendizemos, porque pela vossa santa cruz remistes o mundo. Amém."
+                },
+                "2026-09-15": {
+                    saintOrMemory: "Nossa Senhora das Dores (Memória)",
+                    firstReading: { reference: "1 Coríntios 12,12-14.27-31a", text: "Como o corpo é um e tem muitos membros, e todos os membros do corpo, embora muitos, formam um só corpo, assim também é Cristo. Vós sois o corpo de Cristo e cada um é membro por sua parte. Aspirai aos dons mais elevados." },
+                    psalm: { reference: "Sl 99(100),1-5", text: "R. Somos o povo do Senhor, o rebanho que ele conduz. Aclamai ao Senhor, ó terra inteira, servi ao Senhor com alegria!" },
+                    gospel: { reference: "João 19,25-27", text: "Junto à cruz de Jesus estavam de pé sua mãe e a irmã de sua mãe. Jesus, vendo sua mãe e ao lado dela o discípulo que amava, disse à mãe: 'Mulher, eis aí o teu filho.' Depois disse ao discípulo: 'Eis aí a tua mãe.' E daquela hora em diante, o discípulo a recebeu em sua casa." },
+                    reflection: "Maria permanece de pé junto à cruz: modelo de fé que não foge do sofrimento. Em sua dor, ela recebe a humanidade como filho.",
+                    prayer: "Mãe das Dores, ensinai-nos a permanecer fiéis junto à cruz de Cristo e a acolher os irmãos como filhos. Amém."
+                }
+            },
+
+            /** Leituras genéricas por tempo litúrgico, quando a data não tem leituras cadastradas. */
+            _genericBySeason: {
+                'Advento': {
+                    firstReading: { reference: "Isaías 40,3-5", text: "Uma voz clama: 'Preparai no deserto o caminho do Senhor, aplanai na estepe uma estrada para o nosso Deus. Todo vale será aterrado, toda montanha e colina serão rebaixadas. Então a glória do Senhor se manifestará, e toda carne a verá.'" },
+                    psalm: { reference: "Sl 24(25),4-5.8-9", text: "R. Mostrai-me, Senhor, os vossos caminhos. Fazei-me conhecer as vossas veredas e ensinai-me as vossas sendas. O Senhor é bom e reto, indica o caminho aos pecadores." },
+                    gospel: { reference: "Marcos 1,1-8", text: "Início do Evangelho de Jesus Cristo, Filho de Deus. João Batista apareceu no deserto, proclamando um batismo de conversão para a remissão dos pecados: 'Depois de mim virá aquele que é mais forte do que eu. Eu vos batizo na água; ele vos batizará no Espírito Santo.'" },
+                    reflection: "O Advento é tempo de vigiar e preparar os caminhos do coração. Aplanar os vales e rebaixar as colinas é endireitar, pela conversão, tudo o que nos afasta de Deus.",
+                    prayer: "Senhor, despertai os nossos corações para preparar a vossa vinda. Vinde, Senhor Jesus! Amém."
+                },
+                'Tempo do Natal': {
+                    firstReading: { reference: "Isaías 9,1-6", text: "O povo que andava nas trevas viu uma grande luz. Um menino nos nasceu, um filho nos foi dado. Ele se chamará: Conselheiro Admirável, Deus Forte, Pai Eterno, Príncipe da Paz." },
+                    psalm: { reference: "Sl 95(96),1-3.11-13", text: "R. Hoje nos nasceu o Salvador. Cantai ao Senhor um cântico novo, cantai ao Senhor, terra inteira! Anunciai entre as nações a sua glória." },
+                    gospel: { reference: "Lucas 2,1-14", text: "Naqueles dias, saiu um decreto de César Augusto. José subiu da Galileia a Belém com Maria, sua esposa, que estava grávida. Ela deu à luz o seu filho primogênito, envolveu-o em faixas e deitou-o numa manjedoura. O anjo disse aos pastores: 'Hoje vos nasceu, na cidade de Davi, o Salvador, que é o Cristo Senhor. Glória a Deus nas alturas e paz na terra aos homens por ele amados.'" },
+                    reflection: "Deus se faz pequeno para que o possamos acolher. A manjedoura ensina que a grandeza divina se revela na humildade e no amor simples.",
+                    prayer: "Senhor Jesus, nascido por nós, nascei hoje em nossos corações e fazei-nos portadores da vossa paz. Amém."
+                },
+                'Quaresma': {
+                    firstReading: { reference: "Joel 2,12-18", text: "Agora, oráculo do Senhor: voltai para mim com todo o vosso coração, com jejum, lágrimas e gemidos. Rasgai os vossos corações, e não as vossas vestes, e voltai para o Senhor, vosso Deus, porque ele é benigno e misericordioso, lento para a cólera e rico em amor." },
+                    psalm: { reference: "Sl 50(51),3-6.12-14", text: "R. Tende piedade, Senhor, pois pecamos. Tende piedade de mim, ó Deus, segundo a vossa misericórdia; apagai a minha iniquidade. Criai em mim um coração puro, ó Deus." },
+                    gospel: { reference: "Mateus 6,1-6.16-18", text: "Guardai-vos de praticar a vossa justiça diante dos homens para serdes vistos por eles. Quando deres esmola, que a tua mão esquerda não saiba o que faz a direita. Quando orardes, entra no teu quarto, fecha a porta e ora a teu Pai em segredo. Quando jejuardes, perfuma a tua cabeça e lava o teu rosto, para que o teu jejum seja conhecido do teu Pai que está no oculto." },
+                    reflection: "A Quaresma chama à conversão do coração, não à aparência. Esmola, oração e jejum são caminhos de volta ao Pai quando feitos na verdade e no segredo.",
+                    prayer: "Senhor, dai-nos corações novos e sinceros neste tempo de graça e conversão. Amém."
+                },
+                'Tempo Pascal': {
+                    firstReading: { reference: "Atos 10,34a.37-43", text: "Pedro tomou a palavra: 'Vós conheceis o que aconteceu em toda a Judeia: Jesus de Nazaré, ungido por Deus com o Espírito Santo, passou fazendo o bem e curando os oprimidos. Deus o ressuscitou ao terceiro dia e concedeu-lhe manifestar-se àqueles que foram escolhidos como testemunhas, que comeram e beberam com ele depois que ressuscitou dos mortos.'" },
+                    psalm: { reference: "Sl 117(118),1-2.16-17.22-23", text: "R. Este é o dia que o Senhor fez: exultemos de alegria! Celebrai o Senhor, porque ele é bom, porque a sua misericórdia é eterna. A pedra que os construtores rejeitaram tornou-se a pedra angular." },
+                    gospel: { reference: "João 20,1-9", text: "No primeiro dia da semana, Maria Madalena foi ao sepulcro de madrugada e viu a pedra retirada. Pedro e o outro discípulo correram ao sepulcro. O discípulo amado chegou primeiro, viu os panos de linho no chão e o sudário dobrado à parte. Ele viu e creu: era preciso que Jesus ressuscitasse dos mortos." },
+                    reflection: "O sepulcro vazio é o fundamento da nossa esperança. A ressurreição não é memória do passado, mas presença viva que transforma o hoje do discípulo.",
+                    prayer: "Senhor ressuscitado, fazei-nos testemunhas da vossa vida nova. Aleluia! Amém."
+                },
+                'Tempo Comum': {
+                    firstReading: { reference: "Deuteronômio 6,4-9", text: "Ouve, Israel: o Senhor nosso Deus é o único Senhor. Amarás o Senhor teu Deus com todo o teu coração, com toda a tua alma e com todas as tuas forças. Estas palavras que hoje te ordeno estarão no teu coração: repeti-las-ás a teus filhos, falarás delas em casa e no caminho, ao deitar e ao levantar." },
+                    psalm: { reference: "Sl 18(19),8-10", text: "R. Senhor, tu tens palavras de vida eterna. A lei do Senhor é perfeita, conforta a alma; o testemunho do Senhor é fiel, dá sabedoria aos simples. Os preceitos do Senhor são retos, alegram o coração." },
+                    gospel: { reference: "Mateus 22,34-40", text: "Perguntaram a Jesus: 'Mestre, qual é o maior mandamento da Lei?' Jesus respondeu: 'Amarás o Senhor teu Deus com todo o teu coração, com toda a tua alma e com todo o teu entendimento. Este é o maior e o primeiro mandamento. O segundo é semelhante: Amarás o teu próximo como a ti mesmo. Toda a Lei e os Profetas dependem destes dois mandamentos.'" },
+                    reflection: "No Tempo Comum, a Igreja percorre o ensino de Jesus para a vida cotidiana. Tudo se resume no amor: a Deus por inteiro, ao próximo como a si mesmo.",
+                    prayer: "Senhor, ensinai-nos a amar-vos de todo o coração e a servir-vos nos irmãos de cada dia. Amém."
+                }
+            },
+
+            getLiturgicalDay(dateStr = new Date().toISOString().split('T')[0]) {
+                const info = this.getDayInfo(dateStr);
+                const readings = this._readings[dateStr];
+                const generic = this._genericBySeason[info.liturgicalSeason];
+                return {
+                    source: readings ? "Leituras do dia (CNBB / demonstrativo)" : `Leituras meditativas do ${info.liturgicalSeason} (seleção da plataforma)`,
+                    ...info,
+                    saintOrMemory: readings?.saintOrMemory || info.celebration,
+                    firstReading: readings?.firstReading || generic.firstReading,
+                    psalm: readings?.psalm || generic.psalm,
+                    gospel: readings?.gospel || generic.gospel,
+                    reflection: readings?.reflection || generic.reflection,
+                    prayer: readings?.prayer || generic.prayer,
+                };
+            }
+        };
+
+        const CatecismContentProvider = {
+            categories: [
+                { id: "creio", title: "CREIO — A FÉ", subtitle: "O Credo Apostólico e a Revelação Divina", icon: "🛡️", description: "Estudo profundo da profissão de fé católica, da Sagrada Escritura e da Tradição bimilenar." },
+                { id: "celebro", title: "CELEBRO — OS SACRAMENTOS", subtitle: "A Liturgia e os Sete Sacramentos", icon: "✨", description: "Como a obra da redenção é continuada através da sagrada liturgia e dos sete sacramentos instituídos por Cristo." },
+                { id: "vivo", title: "VIVO — A VIDA EM CRISTO", subtitle: "A Moral Católica e os Mandamentos", icon: "🌿", description: "A vocação do homem em Cristo, a graça, as virtudes e a lei moral expressa nos Mandamentos e nas Bem-aventuranças." },
+                { id: "rezo", title: "REZO — A ORAÇÃO CRISTÃ", subtitle: "A Vida de Orações e o Pai-Nosso", icon: "🕊️", description: "O dom da oração, a oração vocal, a meditação e a contemplação na vida do discípulo." }
+            ],
+            
+            modules: [
+                // CREIO (5 Aulas)
+                { id: "creio_1", categoryId: "creio", title: "1. O desejo de Deus", ccc: "CCC § 27-30", description: "O homem traz inscrito no coração a ânsia pelo Criador.", explanation: "O desejo de Deus está inscrito no coração do homem, porque o homem foi criado por Deus e para Deus. Deus não cessa de atrair o homem a Si e só em Deus o homem encontrará a verdade e a felicidade que procura.", keyPoints: ["O homem traz a ânsia por Deus no íntimo.", "Deus atrai continuamente a criatura.", "A felicidade plena só se encontra no Criador."], reflection: "Em que momentos percebo que as coisas passageiras não preenchem meu coração?", questions: [{ q: "Por que o homem busca instintivamente a Deus?", a: "Porque foi criado por Ele e para Ele." }], quizQuestions: [{ q: "Onde está inscrito o desejo de Deus?", options: ["No coração do homem", "Nas pedras", "Nos astros"], correct: 0 }] },
+                { id: "creio_2", categoryId: "creio", title: "2. A Revelação Divina", ccc: "CCC § 50-53", description: "Deus revela-Se a Si mesmo e manifesta o mistério da sua vontade.", explanation: "Apraz a Deus, na sua bondade e sabedoria, revelar-Se a Si mesmo e dar a conhecer o mistério da sua vontade: os homens, por meio de Cristo, Verbo feito carne, têm acesso ao Pai no Espírito Santo.", keyPoints: ["Deus toma a iniciativa de se revelar.", "A revelação atinge o cume em Jesus Cristo.", "Somos chamados à comunhão trinitária."], reflection: "Como acolho a Palavra de Deus em minha vida diária?", questions: [{ q: "Quem é a plenitude da Revelação?", a: "Jesus Cristo." }], quizQuestions: [{ q: "Qual é a plenitude da Revelação divina?", options: ["Jesus Cristo", "Os profetas", "A natureza"], correct: 0 }] },
+                { id: "creio_3", categoryId: "creio", title: "3. A Fé: resposta do homem a Deus", ccc: "CCC § 142-143", description: "Pela fé, o homem submete plenamente sua inteligência e sua vontade a Deus.", explanation: "A fé é a resposta adequada do homem a Deus, que se revela. Significa entregar-se inteiramente a Ele, reconhecendo Sua verdade absoluta e confiando em Suas promessas, modelo que vemos perfeitamente em Abraão e na Virgem Maria.", keyPoints: ["A fé é um dom gratuito e uma virtude sobrenatural.", "Exige o assentimento da inteligência e da vontade.", "A fé sem obras é morta."], reflection: "Minha fé se traduz em confiança diária na providência de Deus?", questions: [{ q: "O que significa crer?", a: "Submeter livremente a inteligência e a vontade a Deus." }], quizQuestions: [{ q: "A fé cristã exige o consentimento de quê?", options: ["Inteligência e vontade", "Apenas das emoções", "Da cultura popular"], correct: 0 }] },
+                { id: "creio_4", categoryId: "creio", title: "4. A Sagrada Escritura e a Tradição", ccc: "CCC § 80-84", description: "A transmissão da Revelação divina através da Igreja.", explanation: "A Sagrada Tradição e a Sagrada Escritura estão intimamente unidas e compenetradas entre si. Ambas dimanam da mesma fonte divina, formam um só tesouro da Palavra de Deus e são confiadas à Igreja para a salvação da humanidade.", keyPoints: ["Bíblia e Tradição formam um único depósito da fé.", "O Magistério tem a tarefa de interpretar autenticamente a Palavra.", "A Revelação encerrou-se com os apóstolos."], reflection: "Eu procuro ler a Bíblia junto com a sabedoria bimilenar da Igreja?", questions: [{ q: "Quais são os dois canais de transmissão da Revelação?", a: "A Sagrada Escritura e a Sagrada Tradição." }], quizQuestions: [{ q: "O que forma o único depósito da fé?", options: ["Sagrada Escritura e Sagrada Tradição", "Bíblia e a Ciência", "Opiniões teológicas"], correct: 0 }] },
+                { id: "creio_5", categoryId: "creio", title: "5. A Santíssima Trindade", ccc: "CCC § 232-234", description: "O mistério central da fé e da vida cristã.", explanation: "O mistério da Santíssima Trindade é o mistério central da fé e da vida cristã. É o mistério de Deus em Si mesmo. Os cristãos são batizados em nome do Pai e do Filho e do Espírito Santo: não em seus nomes, pois há um só Deus, o Pai Todo-Poderoso e seu Filho Único e o Espírito Santo.", keyPoints: ["Existe um só Deus em três Pessoas divinas.", "As três Pessoas são consubstanciais (possuem a mesma natureza divina).", "Toda a obra da salvação é obra comum das três Pessoas."], reflection: "Reconheço que ao fazer o Sinal da Cruz invoco a presença real do Deus Trino?", questions: [{ q: "O que é o mistério da Santíssima Trindade?", a: "É o mistério de um só Deus em três Pessoas divinas." }], quizQuestions: [{ q: "Quantos deuses os cristãos adoram?", options: ["Um só Deus", "Três Deuses", "Muitos deuses"], correct: 0 }] },
+
+                // CELEBRO (5 Aulas)
+                { id: "celebro_1", categoryId: "celebro", title: "1. O que é a Liturgia", ccc: "CCC § 1066-1070", description: "A participação do Povo de Deus na obra de Deus.", explanation: "A Liturgia é o culto público oficial que a Igreja rende a Deus. Por meio da Liturgia, Cristo, nosso Redentor e Sumo Sacerdote, continua na Sua Igreja, com ela e por ela, a obra da nossa redenção.", keyPoints: ["É a obra de Cristo Sacerdote e do Seu Corpo, a Igreja.", "Na Liturgia celebra-se o mistério pascal de Cristo.", "É a fonte e o ápice da vida cristã."], reflection: "Participo da Liturgia como mero espectador ou ativamente como membro do Corpo de Cristo?", questions: [{ q: "O que é a Liturgia na Igreja Católica?", a: "O culto público que o Corpo Místico de Cristo (Cabeça e membros) presta a Deus." }], quizQuestions: [{ q: "A Liturgia é ação de quem?", options: ["De Cristo total (Cabeça e membros)", "Apenas do Sacerdote", "Do coral da Igreja"], correct: 0 }] },
+                { id: "celebro_2", categoryId: "celebro", title: "2. O Mistério Pascal", ccc: "CCC § 1084-1085", description: "A paixão, morte, ressurreição e glorificação de Jesus.", explanation: "O centro da liturgia é o mistério pascal: a paixão, morte, ressurreição e ascensão de Cristo, pela qual Ele destruiu nossa morte e restaurou a vida. Através dos sacramentos da Igreja, Cristo nos comunica as graças deste mistério redentor.", keyPoints: ["O mistério pascal é um evento real que não fica no passado.", "A liturgia torna presente a eficácia do sacrifício de Cristo.", "Toda a salvação nos vem através desta entrega total."], reflection: "Como eu deixo que a cruz e a ressurreição de Cristo transformem meus sofrimentos?", questions: [{ q: "O que se torna presente nos sacramentos?", a: "O mistério pascal de Cristo." }], quizQuestions: [{ q: "Qual é o centro de toda a vida litúrgica?", options: ["O Mistério Pascal de Cristo", "O Sermão da Montanha", "As Parábolas"], correct: 0 }] },
+                { id: "celebro_3", categoryId: "celebro", title: "3. Os Sete Sacramentos", ccc: "CCC § 1210-1211", description: "Sinais sensíveis e eficazes da graça instituídos por Cristo.", explanation: "Os sacramentos são sinais sensíveis e eficazes da graça, instituídos por Cristo e confiados à Igreja, através dos quais nos é dada a vida divina.", keyPoints: ["Cristo instituiu exatamente sete sacramentos.", "Eles conferem a graça pela própria ação celebrada (ex opere operato).", "Eles edificam o Corpo místico de Cristo."], reflection: "Qual sacramento frequento com maior devoção e gratidão?", questions: [{ q: "Quantos são os sacramentos da Igreja?", a: "Sete." }], quizQuestions: [{ q: "Quantos são os sacramentos?", options: ["Sete", "Três", "Dez"], correct: 0 }] },
+                { id: "celebro_4", categoryId: "celebro", title: "4. O Sacramento do Batismo", ccc: "CCC § 1213", description: "O fundamento de toda a vida cristã e a porta da vida no Espírito.", explanation: "O santo Batismo é o fundamento de toda a vida cristã, o pórtico da vida no Espírito e a porta que abre o acesso aos demais sacramentos. Pelo Batismo somos libertos do pecado e regenerados como filhos de Deus, tornando-nos membros de Cristo.", keyPoints: ["Apaga o pecado original e todos os pecados pessoais.", "Imprime na alma um selo espiritual indelével (caráter).", "Incorpora o fiel à Igreja."], reflection: "Eu lembro da data do meu Batismo? Renovo minhas promessas batismais?", questions: [{ q: "Qual o efeito principal do Batismo?", a: "A regeneração no Espírito Santo e o perdão dos pecados." }], quizQuestions: [{ q: "O Batismo apaga qual pecado?", options: ["O original e os atuais", "Apenas o pecado venial", "Nenhum pecado"], correct: 0 }] },
+                { id: "celebro_5", categoryId: "celebro", title: "5. A Santíssima Eucaristia", ccc: "CCC § 1324-1327", description: "A fonte e o ápice de toda a vida cristã.", explanation: "A Eucaristia é a fonte e o ápice de toda a vida cristã. Os demais sacramentos e obras de apostolado estão vinculados à Eucaristia e a ela se ordenam, pois na Eucaristia está contido todo o bem espiritual da Igreja: o próprio Cristo, nossa Páscoa.", keyPoints: ["Presença real, verdadeira e substancial de Cristo (Transubstanciação).", "É o mesmo sacrifício da Cruz atualizado no altar.", "A comunhão aumenta a união do fiel com o Senhor."], reflection: "Preparo meu coração dignamente (estado de graça) antes de comungar?", questions: [{ q: "O que é a Transubstanciação?", a: "A conversão de toda a substância do pão e do vinho no Corpo e Sangue de Cristo." }], quizQuestions: [{ q: "Qual sacramento é o 'ápice' da vida cristã?", options: ["A Eucaristia", "O Matrimônio", "O Batismo"], correct: 0 }] },
+
+                // VIVO (5 Aulas)
+                { id: "vivo_1", categoryId: "vivo", title: "1. A Dignidade da Pessoa Humana", ccc: "CCC § 1700-1709", description: "Criado à imagem e semelhança de Deus.", explanation: "A dignidade da pessoa humana tem suas raízes na criação à imagem e semelhança de Deus; ela atinge sua plenitude na vocação divina à comunhão com o Criador.", keyPoints: ["Imagem e semelhança divina dão ao homem um valor incalculável.", "Todo ser humano é dotado de liberdade e inteligência.", "Somos chamados à bem-aventurança eterna."], reflection: "Reconheço a dignidade divina em cada pessoa com quem convivo?", questions: [{ q: "Qual é a raiz da dignidade humana?", a: "A criação à imagem e semelhança de Deus." }], quizQuestions: [{ q: "A dignidade humana fundamenta-se em quê?", options: ["Na criação à imagem de Deus", "Na riqueza material", "Nas leis dos homens"], correct: 0 }] },
+                { id: "vivo_2", categoryId: "vivo", title: "2. Liberdade e Responsabilidade", ccc: "CCC § 1730-1734", description: "A liberdade é o poder de agir ou não agir, tendo a responsabilidade pelos próprios atos.", explanation: "Deus criou o homem racional e conferiu-lhe a dignidade de uma pessoa dotada de iniciativa e de domínio de seus atos. A liberdade não é fazer o que apetece, mas o poder radicado na razão e na vontade de fazer o bem.", keyPoints: ["Quanto mais faz o bem, mais o homem se torna livre.", "A liberdade humana é limitada e falível.", "Todo ato livre é imputável ao seu autor (responsabilidade)."], reflection: "Tenho usado minha liberdade para amar a Deus e servir ao próximo?", questions: [{ q: "O que torna um homem verdadeiramente livre?", a: "A escolha habitual do bem e a adesão à verdade." }], quizQuestions: [{ q: "A verdadeira liberdade cristã consiste em:", options: ["Poder escolher o bem e a verdade", "Fazer qualquer coisa sem limite", "Fugir das responsabilidades"], correct: 0 }] },
+                { id: "vivo_3", categoryId: "vivo", title: "3. A Consciência Moral", ccc: "CCC § 1776-1782", description: "O santuário do homem, onde ele está a sós com Deus e escuta Sua voz.", explanation: "A consciência moral é um juízo da razão pelo qual o homem reconhece a qualidade moral de um ato concreto que vai praticar, que está praticando ou que já praticou. O homem tem o direito e o dever de seguir fielmente o que sabe ser justo.", keyPoints: ["A voz de Deus ressoa na consciência bem formada.", "É preciso educar a consciência pelas Escrituras e pelo Magistério.", "A consciência pode errar por ignorância."], reflection: "Tenho buscado formar minha consciência através do estudo do Catecismo?", questions: [{ q: "O que deve guiar as decisões do cristão?", a: "Uma consciência reta e bem formada." }], quizQuestions: [{ q: "Como devemos tratar a nossa consciência?", options: ["Devemos educá-la e segui-la", "Devemos ignorá-la", "Devemos moldá-la à opinião pública"], correct: 0 }] },
+                { id: "vivo_4", categoryId: "vivo", title: "4. As Virtudes", ccc: "CCC § 1803-1811", description: "Uma disposição habitual e firme para fazer o bem.", explanation: "A virtude permite à pessoa não apenas praticar atos bons, mas dar o melhor de si. A moral cristã destaca as virtudes cardeais (prudência, justiça, fortaleza, temperança) e as virtudes teologais (fé, esperança, caridade) que nos unem a Deus.", keyPoints: ["Virtudes requerem repetição de bons atos (esforço).", "Virtudes teologais são infundidas por Deus na alma.", "A caridade é a maior de todas as virtudes."], reflection: "Qual virtude me falta para tratar melhor os de minha própria casa?", questions: [{ q: "Quais são as três virtudes teologais?", a: "Fé, esperança e caridade." }], quizQuestions: [{ q: "O que é uma virtude?", options: ["Uma disposição habitual e firme para o bem", "Um talento natural inato", "Uma regra escrita num papel"], correct: 0 }] },
+                { id: "vivo_5", categoryId: "vivo", title: "5. O Pecado e a Conversão", ccc: "CCC § 1849-1851", description: "O pecado é uma falta contra a razão, a verdade e a reta consciência.", explanation: "O pecado é uma ofensa a Deus que fere a natureza do homem e atenta contra a solidariedade humana. Distingue-se em mortal (que destrói a caridade no coração) e venial (que enfraquece a caridade, mas não a destrói). A misericórdia de Deus, no entanto, é sempre maior que nossa miséria.", keyPoints: ["Pecado mortal exige matéria grave, pleno conhecimento e pleno consentimento.", "A conversão é um retorno incessante ao Pai.", "O sacramento da Confissão apaga os pecados cometidos após o Batismo."], reflection: "Faço exames de consciência regulares para buscar a conversão verdadeira?", questions: [{ q: "Quais as três condições para que um pecado seja mortal?", a: "Matéria grave, pleno conhecimento e deliberado consentimento." }], quizQuestions: [{ q: "O pecado que destrói a graça no coração é chamado de:", options: ["Pecado mortal", "Pecado original", "Pecado material"], correct: 0 }] },
+
+                // REZO (5 Aulas)
+                { id: "rezo_1", categoryId: "rezo", title: "1. O que é a Oração", ccc: "CCC § 2558-2565", description: "Elevação da alma a Deus ou pedido de bens concordes com a sua vontade.", explanation: "A oração é a elevação da alma a Deus ou o pedido a Deus de bens concordes com a sua vontade. De onde vem a oração do homem? Seja qual for a linguagem da oração, o homem é quem ora, e é a Trindade que atrai esse coração para o diálogo.", keyPoints: ["É um diálogo de amor com o Criador.", "É um dom da graça e resposta da fé.", "Pressupõe o recolhimento e a humildade."], reflection: "Como encaro meus momentos de colóquio íntimo com Deus?", questions: [{ q: "O que é a oração em essência?", a: "A elevação da alma a Deus." }], quizQuestions: [{ q: "Em que consiste a oração?", options: ["Elevação da alma a Deus", "Repetição mecânica de palavras", "Isolamento do mundo"], correct: 0 }] },
+                { id: "rezo_2", categoryId: "rezo", title: "2. As Fontes da Oração Cristã", ccc: "CCC § 2652-2660", description: "O Espírito Santo é a água viva que nos introduz na oração.", explanation: "O Espírito Santo que nos ensina a orar, nos remete às fontes da oração: a Palavra de Deus (Sagrada Escritura), a Liturgia da Igreja, as virtudes teologais (fé, esperança e caridade) e os acontecimentos do dia-a-dia da nossa vida humana.", keyPoints: ["A Bíblia é a fonte primária da escuta de Deus.", "A Liturgia prolonga a oração comunitária.", "Cada momento do dia pode ser transformado em prece."], reflection: "Costumo rezar a partir de trechos da Bíblia (Lectio Divina)?", questions: [{ q: "Qual o papel do Espírito Santo na oração?", a: "Ele é o Mestre interior que nos ensina a rezar." }], quizQuestions: [{ q: "Onde o cristão encontra a fonte principal de sua oração?", options: ["Na Palavra de Deus e na Liturgia", "Em livros de autoajuda", "No folclore"], correct: 0 }] },
+                { id: "rezo_3", categoryId: "rezo", title: "3. As Formas da Oração", ccc: "CCC § 2626-2643", description: "O Espírito Santo, na Igreja, ensina as várias formas de se dirigir a Deus.", explanation: "A tradição cristã conservou as principais formas de oração reveladas nas Escrituras: bênção e adoração (reconhecer a Deus como Deus), petição (pedir perdão ou necessidades), intercessão (rezar pelos outros), ação de graças (agradecer) e louvor (dar glória a Deus pelo que Ele é).", keyPoints: ["O louvor reconhece que Deus é Deus de forma desinteressada.", "A intercessão une o nosso coração ao de Cristo que reza por nós.", "A Eucaristia contém e exprime todas as formas de oração."], reflection: "Minha oração é feita apenas de pedidos ou sei louvar e adorar a Deus?", questions: [{ q: "O que caracteriza a oração de Adoração?", a: "Reconhecer, com respeito e submissão, Deus como Criador e Senhor absoluto." }], quizQuestions: [{ q: "Que tipo de oração se concentra em pedir por outras pessoas?", options: ["Intercessão", "Ação de graças", "Petição pessoal"], correct: 0 }] },
+                { id: "rezo_4", categoryId: "rezo", title: "4. Dificuldades na Oração", ccc: "CCC § 2725-2733", description: "O combate espiritual da oração.", explanation: "A oração é um dom da graça, mas requer um combate constante. As dificuldades mais comuns são a distração, que desvia nossa atenção; a secura, que nos faz sentir o coração árido; e a acédia (preguiça espiritual). O remédio é a vigilância, a fidelidade ao tempo de oração e a confiança filial em Deus.", keyPoints: ["A distração revela no que nosso coração está apegado.", "A secura é um tempo de purificação para amarmos a Deus sem buscar consolações.", "Devemos perseverar mesmo quando não temos vontade."], reflection: "Abandono a oração facilmente quando sinto desânimo ou distração?", questions: [{ q: "Como devemos agir diante da aridez espiritual?", a: "Perseverar na fé, unindo-nos à Cruz de Cristo." }], quizQuestions: [{ q: "Como se chama a 'preguiça espiritual' que atrapalha a oração?", options: ["Acédia", "Meditação", "Gula"], correct: 0 }] },
+                { id: "rezo_5", categoryId: "rezo", title: "5. A Oração do Senhor — Pai-Nosso", ccc: "CCC § 2759-2761", description: "O resumo de todo o Evangelho.", explanation: "A oração do Pai-Nosso é verdadeiramente o resumo de todo o Evangelho. Ensinada pelo próprio Jesus, é a oração perfeita. Nela, não só pedimos tudo o que podemos desejar retamente, mas o fazemos na ordem em que os desejos devem estar.", keyPoints: ["Chamar Deus de 'Pai' é um privilégio dado pelo Espírito de adoção.", "Contém sete petições: três para a glória de Deus, quatro para nossas necessidades.", "Requer um coração pronto para perdoar aos irmãos."], reflection: "Rezo o Pai-Nosso prestando atenção em cada palavra ou apenas de forma mecânica?", questions: [{ q: "Quem ensinou a oração do Pai-Nosso?", a: "Jesus Cristo aos seus apóstolos." }], quizQuestions: [{ q: "Segundo Santo Tomás de Aquino, o Pai-Nosso é o quê?", options: ["A oração mais perfeita e resumo do Evangelho", "Uma oração inventada na Idade Média", "Um cântico hebraico pré-cristão"], correct: 0 }] }
+            ]
+        };
+
+        const SaintContentProvider = {
+            saints: [
+                { id: "s_1", name: "São Pedro Apóstolo", memoryDate: "29 de Junho", birth: "Betsaida", death: "Roma (64 d.C.)", country: "Galileia / Itália", vocation: "Apóstolo e Sumo Pontífice", biography: "Príncipe dos Apóstolos, primeiro Papa da Igreja Católica, testemunha da transfiguração e rocha sobre a qual Cristo fundou sua Igreja. Pescador chamado às margens do lago de Genesaré, confessou a divindade de Jesus em Cesareia de Filipe e recebeu as chaves do Reino. Após negar o Mestre três vezes, foi confirmado no amor junto ao lago e pastoreou a Igreja nascente até o martírio em Roma, crucificado de cabeça para baixo por não se julgar digno de morrer como o Senhor.", virtues: ["Fé ardente", "Arrependimento", "Coragem apostólica"], patronage: "Pescadores, Papas, Construtores", mainTeaching: "Tu és o Cristo, o Filho do Deus vivo.", feast: "29 de Junho", prayer: "Ó São Pedro, rocha da Igreja, que confessastes a divindade de Cristo e chorastes amargamente a vossa fraqueza, alcançai-nos uma fé firme e um coração arrependido. Rogai por nós.", reflection: "A fraqueza humana transformada pela misericórdia de Cristo torna-se fundamento da Igreja.", sources: "Tradição apostólica e Novo Testamento" },
+                { id: "s_2", name: "São Francisco de Assis", memoryDate: "4 de Outubro", birth: "Assis, Itália (1181)", death: "1226", country: "Itália", vocation: "Fundador da Ordem dos Frades Menores", biography: "Poverello de Assis, renunciou a todas as riquezas para viver o Evangelho em absoluta pobreza e fraternidade com toda a criação. Filho de comerciante rico, após uma juventude mundana e o cativeiro de guerra, ouviu a voz do Crucificado de São Damião: 'Repara a minha Igreja'. Fundou os Frades Menores, recebeu os estigmas no monte Alverne e compôs o Cântico das Criaturas, louvando a Deus pelo irmão sol, pela irmã lua e pela irmã morte.", virtues: ["Pobreza evangélica", "Alegria espiritual", "Amor à criação"], patronage: "Ecologistas, Animais, Itália", mainTeaching: "Senhor, fazei-me instrumento de vossa paz.", feast: "4 de Outubro", prayer: "São Francisco, amante da pobreza e da paz, ensinai-nos a despojar o coração das ambições e a ver em cada criatura um dom do Pai. Rogai por nós.", reflection: "A verdadeira paz habita no coração despojado de egoísmo.", sources: "Fontes Franciscanas" },
+                { id: "s_3", name: "Santa Teresinha do Menino Jesus", memoryDate: "1º de Outubro", birth: "Alençon, França (1873)", death: "Lisieux (1897)", country: "França", vocation: "Carmelita descalça e Doutora da Igreja", biography: "Entrou no Carmelo de Lisieux aos 15 anos e ali viveu escondida apenas 9 anos, até morrer de tuberculose aos 24. Sua autobiografia, 'História de uma Alma', revelou ao mundo a 'pequena via' da infância espiritual: fazer as pequenas coisas com grande amor, confiando-se inteiramente à misericórdia de Deus. Prometeu: 'Depois da minha morte, farei cair uma chuva de rosas'. É padroeira das missões sem jamais ter saído do convento.", virtues: ["Confiança filial", "Simplicidade", "Amor escondido"], patronage: "Missões, Floristas, Enfermos", mainTeaching: "Quero passar o meu céu fazendo o bem na terra.", feast: "1º de Outubro", prayer: "Santa Teresinha, pequena flor de Jesus, ensinai-nos a pequena via da confiança e do amor nas coisas simples. Rogai por nós.", reflection: "A santidade não está nas grandes façanhas, mas no amor colocado nas pequenas coisas.", sources: "História de uma Alma (Manuscritos autobiográficos)" },
+                { id: "s_4", name: "Santo Agostinho de Hipona", memoryDate: "28 de Agosto", birth: "Tagaste, Argélia (354)", death: "Hipona (430)", country: "Argélia / Itália", vocation: "Bispo, Doutor da Igreja e Teólogo", biography: "Após uma juventude de buscas intelectuais e vida desregrada, converteu-se aos 32 anos no jardim de Milão, ao ouvir 'tolle lege' (toma e lê) e abrir as Cartas de São Paulo. Batizado por Santo Ambrósio, tornou-se bispo de Hipona e o maior pensador do cristianismo antigo. Suas 'Confissões' narram o inquieto coração humano que só descansa em Deus. Escreveu 'A Cidade de Deus' enquanto Roma caía sob os bárbaros.", virtues: ["Busca incansável da verdade", "Sabedoria", "Penitência"], patronage: "Teólogos, Convertidos, Cervejeiros", mainTeaching: "Fizeste-nos para Ti, e inquieto está o nosso coração enquanto não repousar em Ti.", feast: "28 de Agosto", prayer: "Santo Agostinho, que buscastes a verdade por tantos caminhos até encontrá-la em Cristo, guiai nossa inteligência e nosso coração para Deus. Rogai por nós.", reflection: "Tarde Te amei, ó Beleza tão antiga e tão nova, tarde Te amei!", sources: "Confissões; A Cidade de Deus" },
+                { id: "s_5", name: "Santa Rita de Cáscia", memoryDate: "22 de Maio", birth: "Roccaporena, Itália (1381)", death: "Cáscia (1457)", country: "Itália", vocation: "Agostiniana, esposa e mãe", biography: "Casou-se jovem com homem violento, que converteu pela paciência e pela oração antes de ele ser assassinado. Perdoou os assassinos e impediu a vingança dos filhos. Viúva, entrou no mosteiro agostiniano de Cáscia, onde recebeu na fronte um estigma da coroa de espinhos. É invocada como 'santa dos impossíveis' e advogada das causas perdidas, pois sua vida inteira foi um tecido de situações humanamente sem saída resolvidas pela graça.", virtues: ["Paciência na adversidade", "Perdão", "Perseverança na oração"], patronage: "Causas impossíveis, Casamentos difíceis, Mães", mainTeaching: "Nada é impossível para quem confia em Deus.", feast: "22 de Maio", prayer: "Santa Rita, advogada dos impossíveis, que transformastes a cruz em caminho de paz, intercedei pelas nossas causas mais difíceis. Rogai por nós.", reflection: "O perdão é a força que desarma a vingança e abre caminho à graça.", sources: "Tradição agostiniana" },
+                { id: "s_6", name: "São José", memoryDate: "19 de Março", birth: "Belém", death: "Nazaré (antes da vida pública de Jesus)", country: "Palestina", vocation: "Esposo de Maria e pai adotivo de Jesus", biography: "O 'justo' do Evangelho: carpinteiro de Nazaré que acolheu Maria e o Filho de Deus em silêncio e obediência. Guardião do Redentor, fugiu para o Egito, sustentou a Sagrada Família com o trabalho das mãos e ensinou o ofício a Jesus. Nenhuma palavra sua está registrada no Evangelho: sua grandeza está na escuta e na ação fiel. Patrono da Igreja universal, dos trabalhadores e da boa morte.", virtues: ["Justiça", "Silêncio operoso", "Obediência à vontade de Deus"], patronage: "Trabalhadores, Famílias, Igreja universal, Moribundos", mainTeaching: "Fazer em silêncio a vontade de Deus, como o justo que obedece.", feast: "19 de Março e 1º de Maio (São José Operário)", prayer: "São José, guardião do Redentor e esposo virginal de Maria, protegei nossas famílias e ensinai-nos a trabalhar e a obedecer em silêncio. Rogai por nós.", reflection: "A maior santidade pode ser vivida no anonimato do dever cumprido com amor.", sources: "Evangelhos de Mateus e Lucas" },
+                { id: "s_7", name: "Santa Faustina Kowalska", memoryDate: "5 de Outubro", birth: "Glogowiec, Polônia (1905)", death: "Cracóvia (1938)", country: "Polônia", vocation: "Religiosa da Misericórdia e Apóstola da Divina Misericórdia", biography: "Irmã da Congregação de Nossa Senhora da Misericórdia, recebeu de Jesus a missão de proclamar ao mundo a Divina Misericórdia. Em seu 'Diário', registrou as palavras do Senhor: 'A humanidade não terá paz enquanto não se voltar com confiança para a minha misericórdia'. Transmitiu a imagem de Jesus Misericordioso ('Jesus, eu confio em Vós'), a coroa da Divina Misericórdia e a Festa da Misericórdia no domingo após a Páscoa.", virtues: ["Confiança na misericórdia", "Obediência", "Humildade"], patronage: "Apóstolos da Misericórdia, Moribundos", mainTeaching: "Jesus, eu confio em Vós.", feast: "5 de Outubro", prayer: "Santa Faustina, secretária da Divina Misericórdia, ensinai-nos a confiar sem limites no coração de Jesus. Rogai por nós.", reflection: "A misericórdia de Deus é maior que todos os nossos pecados juntos.", sources: "Diário de Santa Faustina" },
+                { id: "s_8", name: "São Padre Pio de Pietrelcina", memoryDate: "23 de Setembro", birth: "Pietrelcina, Itália (1887)", death: "San Giovanni Rotondo (1968)", country: "Itália", vocation: "Capuchinho, estigmatizado e confessor", biography: "Frei capuchinho que carregou por 50 anos os estigmas da Paixão de Cristo. Passava até 16 horas por dia no confessionário, lendo consciências e conduzindo almas a Deus. Fundou a Casa Alívio do Sofrimento, hospital de excelência, e os Grupos de Oração. Sofreu perseguições e suspeitas, permanecendo obediente. Seu lema resume a espiritualidade que deixou: 'Reza, espera e não te preocupes'.", virtues: ["Vida de oração", "Paciência no sofrimento", "Zelo pelas almas"], patronage: "Confessores, Enfermos, Grupos de oração", mainTeaching: "Reza, espera e não te preocupes.", feast: "23 de Setembro", prayer: "Padre Pio, que carregastes as chagas de Cristo com amor, alcançai-nos a graça de uma oração constante e de um coração confiante. Rogai por nós.", reflection: "O sofrimento unido ao de Cristo torna-se instrumento de redenção.", sources: "Epistolário e testemunhos do convento de San Giovanni Rotondo" }
+            ],
+
+            /** Santo do dia: rotação determinística pela data, para que cada dia mostre um santo diferente. */
+            getSaintOfDay(dateStr = new Date().toISOString().split('T')[0]) {
+                const d = new Date(dateStr + 'T12:00:00');
+                const dayOfYear = Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 86400000);
+                return this.saints[dayOfYear % this.saints.length];
+            }
+        };
+
+        const PrayerContentProvider = {
+            prayers: [
+                { id: "p_1", title: "Pai-Nosso", category: "Fundamentais", text: "Pai nosso, que estais nos céus,\nsantificado seja o vosso nome;\nvenha a nós o vosso reino,\nseja feita a vossa vontade,\nassim na terra como no céu.\nO pão nosso de cada dia nos dai hoje;\nperdoai-nos as nossas ofensas,\nassim como nós perdoamos\na quem nos tem ofendido;\nnão nos deixeis cair em tentação,\nmas livrai-nos do mal.\nAmém." },
+                { id: "p_2", title: "Ave-Maria", category: "Maria", text: "Ave Maria, cheia de graça,\no Senhor é convosco,\nbendita sois vós entre as mulheres,\ne bendito é o fruto do vosso ventre, Jesus.\nSanta Maria, Mãe de Deus,\nrogai por nós, pecadores,\nagora e na hora da nossa morte.\nAmém." },
+                { id: "p_3", title: "Ato de Contrição", category: "Confissão", text: "Meu Deus, me arrependo de todo o coração\nde vos ter ofendido,\nporque sois tão bom e amável.\nPrometo, com a vossa graça,\nconfessar-me, emendar-me\ne evitar as ocasiões de pecado.\nMeu Deus, misericórdia.\nAmém." },
+                { id: "p_4", title: "Glória ao Pai", category: "Fundamentais", text: "Glória ao Pai, ao Filho e ao Espírito Santo.\nComo era no princípio, agora e sempre.\nAmém." },
+                { id: "p_5", title: "Credo (Símbolo dos Apóstolos)", category: "Fundamentais", text: "Creio em Deus Pai todo-poderoso,\ncriador do céu e da terra;\ne em Jesus Cristo, seu único Filho, nosso Senhor;\nque foi concebido pelo poder do Espírito Santo;\nnasceu da Virgem Maria,\npadeceu sob Pôncio Pilatos,\nfoi crucificado, morto e sepultado;\ndesceu à mansão dos mortos;\nressuscitou ao terceiro dia;\nsubiu aos céus,\nestá sentado à direita de Deus Pai todo-poderoso,\nde onde há de vir a julgar os vivos e os mortos.\nCreio no Espírito Santo,\nna santa Igreja católica,\nna comunhão dos santos,\nna remissão dos pecados,\nna ressurreição da carne,\nna vida eterna.\nAmém." },
+                { id: "p_6", title: "Salve Rainha", category: "Maria", text: "Salve, Rainha, Mãe de misericórdia,\nvida, doçura e esperança nossa, salve!\nA vós bradamos, os degredados filhos de Eva;\na vós suspiramos, gemendo e chorando\nneste vale de lágrimas.\nEia, pois, advogada nossa,\nesses vossos olhos misericordiosos a nós volvei;\ne depois deste desterro mostrai-nos Jesus,\nbendito fruto do vosso ventre.\nÓ clemente, ó piedosa, ó doce sempre Virgem Maria.\nRogai por nós, santa Mãe de Deus,\npara que sejamos dignos das promessas de Cristo.\nAmém." },
+                { id: "p_7", title: "Vinde, Espírito Santo", category: "Espírito Santo", text: "Vinde, Espírito Santo,\nenchei os corações dos vossos fiéis\ne acendei neles o fogo do vosso amor.\nEnviai o vosso Espírito e tudo será criado,\ne renovareis a face da terra.\n\nOremos: Ó Deus, que instruístes os corações dos vossos fiéis\ncom a luz do Espírito Santo,\nfazei que apreciemos retamente todas as coisas\nsegundo o mesmo Espírito\ne gozemos sempre da sua consolação.\nPor Cristo, Senhor nosso.\nAmém." },
+                { id: "p_8", title: "Anjo da Guarda", category: "Fundamentais", text: "Santo Anjo do Senhor,\nmeu zeloso guardador,\nse a ti me confiou a piedade divina,\nsempre me rege, me guarde, me governe,\nme ilumine.\nAmém." },
+                { id: "p_9", title: "Magnificat (Cântico de Maria)", category: "Maria", text: "A minha alma glorifica o Senhor,\ne o meu espírito se alegra em Deus, meu Salvador.\nPorque olhou para a humildade de sua serva;\ndoravante todas as gerações me chamarão bem-aventurada.\nO Poderoso fez em mim maravilhas:\nsanto é o seu nome.\nA sua misericórdia se estende de geração em geração\nsobre aqueles que o temem.\nManifestou o poder do seu braço\ne dispersou os soberbos de coração.\nDerrubou os poderosos de seus tronos\ne exaltou os humildes.\nAos famintos encheu de bens\ne aos ricos despediu de mãos vazias.\nAcolheu Israel, seu servo,\nlembrado da sua misericórdia,\ncomo prometera a nossos pais,\na Abraão e à sua descendência para sempre.\nAmém." },
+                { id: "p_10", title: "Oração de São Francisco", category: "Santos", text: "Senhor, fazei-me instrumento de vossa paz.\nOnde houver ódio, que eu leve o amor;\nonde houver ofensa, que eu leve o perdão;\nonde houver discórdia, que eu leve a união;\nonde houver dúvida, que eu leve a fé;\nonde houver erro, que eu leve a verdade;\nonde houver desespero, que eu leve a esperança;\nonde houver tristeza, que eu leve a alegria;\nonde houver trevas, que eu leve a luz.\n\nÓ Mestre, fazei que eu procure mais\nconsolar, que ser consolado;\ncompreender, que ser compreendido;\namar, que ser amado.\nPois é dando que se recebe,\né perdoando que se é perdoado,\ne é morrendo que se vive para a vida eterna.\nAmém." },
+                { id: "p_11", title: "Alma de Cristo (Anima Christi)", category: "Eucaristia", text: "Alma de Cristo, santificai-me.\nCorpo de Cristo, salvai-me.\nSangue de Cristo, inebriai-me.\nÁgua do lado de Cristo, lavai-me.\nPaixão de Cristo, confortai-me.\nÓ bom Jesus, ouvi-me.\nDentro de vossas chagas, escondei-me.\nNão permitais que eu me separe de vós.\nDo espírito maligno, defendei-me.\nNa hora da minha morte, chamai-me\ne mandai-me ir para vós,\npara que com os vossos santos vos louve\npor todos os séculos dos séculos.\nAmém." },
+                { id: "p_12", title: "Coroinha da Divina Misericórdia", category: "Misericórdia", text: "(No início) Eterno Pai, eu vos ofereço o Corpo e o Sangue, a Alma e a Divindade de vosso diletíssimo Filho, nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.\n\n(Nas contas menores) Pela sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.\n\n(Ao final, 3 vezes) Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.\n\nJesus, eu confio em Vós!" },
+                { id: "p_13", title: "Memorare (Lembrai-vos)", category: "Maria", text: "Lembrai-vos, ó piedosíssima Virgem Maria,\nque jamais se ouviu dizer\nque algum daqueles que têm recorrido\nà vossa proteção,\nimplorado a vossa assistência\ne reclamado o vosso socorro,\nfosse por vós desamparado.\nAnimado, pois, com igual confiança,\na vós, ó Virgem entre todas singular,\ncomo a Mãe recorro, de vós me valho\ne, gemendo sob o peso dos meus pecados,\nme prostro a vossos pés.\nNão desprezeis as minhas súplicas,\nó Mãe do Verbo de Deus humanado,\nmas dignai-vos de as ouvir propícia\ne de me alcançar o que vos rogo.\nAmém." },
+                { id: "p_14", title: "Oração da Manhã", category: "Dia a dia", text: "Senhor, no silêncio deste dia que amanhece,\nvenho pedir-vos a paz, a sabedoria e a força.\nQuero olhar hoje o mundo com olhos cheios de amor;\nser paciente, compreensivo, manso e prudente;\nver os vossos filhos além das aparências,\ncomo vós mesmos os vedes,\ne assim não ver senão o bem em cada um.\nCerrai meus ouvidos a toda calúnia;\nguardai minha língua de toda maldade;\nque só de bênçãos se encha o meu espírito.\nQue eu seja tão bondoso e alegre\nque todos quantos se achegarem a mim\nsintam a vossa presença.\nRevesti-me da vossa beleza, Senhor,\ne que, no decurso deste dia, eu vos revele a todos.\nAmém." },
+                { id: "p_15", title: "Oração da Noite (Exame de Consciência)", category: "Dia a dia", text: "Senhor, ao terminar este dia, venho à vossa presença.\n\n1. Ação de graças: Revejo o dia e agradeço pelos dons recebidos — a vida, os encontros, o pão, o trabalho.\n\n2. Luz do Espírito: Peço ao Espírito Santo que ilumine minha memória e meu coração.\n\n3. Revisão do dia: Onde estive hoje? O que fiz? Como amei? Onde faltei com o amor a Deus e ao próximo?\n\n4. Arrependimento: Peço perdão pelas faltas cometidas, pelas omissões do bem e pelas palavras que feriram.\n\n5. Propósito: Confio o amanhã à vossa providência e proponho amar melhor.\n\nGuardai-me nesta noite, Senhor, sob as vossas asas.\nAmém." }
+            ],
+            categories: ["Fundamentais", "Maria", "Espírito Santo", "Eucaristia", "Confissão", "Misericórdia", "Santos", "Dia a dia"],
+
+            lectioSteps: [
+                { key: "lectio", title: "1. Lectio — Leitura", desc: "Leia o texto bíblico devagar, duas ou três vezes. Pergunte: o que o texto diz? Que palavra ou frase me chama a atenção?" },
+                { key: "meditatio", title: "2. Meditatio — Meditação", desc: "Rumine a Palavra. O que Deus me diz por meio deste texto? Como ilumina minha vida, minhas alegrias e minhas lutas de hoje?" },
+                { key: "oratio", title: "3. Oratio — Oração", desc: "Responda a Deus com o coração: louvor, pedido, arrependimento, gratidão. Fale com Ele como um amigo fala com seu amigo." },
+                { key: "contemplatio", title: "4. Contemplatio — Contemplação", desc: "Permaneça em silêncio diante de Deus. Não é hora de palavras, mas de estar com Ele, deixando-se amar e olhar por Ele." },
+                { key: "actio", title: "5. Actio — Ação", desc: "Leve a Palavra para a vida: que gesto concreto de caridade, conversão ou testemunho este texto me pede hoje?" }
+            ]
+        };
+
+        const QuizContentProvider = {
+            questions: [
+                { id: "q_1", category: "Catecismo", difficulty: "Fácil", question: "Qual sacramento é a fonte e o ápice de toda a vida cristã?", options: ["Batismo", "Crisma", "Eucaristia", "Ordem"], correctAnswer: 2, explanation: "A Eucaristia encerra todo o tesouro espiritual da Igreja: o próprio Cristo, nossa Páscoa.", ccc: "CCC § 1324" },
+                { id: "q_2", category: "Catecismo", difficulty: "Fácil", question: "Quantos são os sacramentos da Igreja Católica?", options: ["Três", "Cinco", "Sete", "Doze"], correctAnswer: 2, explanation: "Cristo instituiu sete sacramentos: Batismo, Crisma, Eucaristia, Penitência, Unção dos Enfermos, Ordem e Matrimônio.", ccc: "CCC § 1210" },
+                { id: "q_3", category: "Catecismo", difficulty: "Fácil", question: "Onde está inscrito o desejo de Deus, segundo o Catecismo?", options: ["Na cultura dos povos", "No coração do homem", "Nas leis civis", "Nos astros"], correctAnswer: 1, explanation: "O desejo de Deus está inscrito no coração do homem, porque o homem foi criado por Deus e para Deus.", ccc: "CCC § 27" },
+                { id: "q_4", category: "Catecismo", difficulty: "Médio", question: "O que é a Transubstanciação?", options: ["Um símbolo espiritual da presença de Cristo", "A conversão de toda a substância do pão e do vinho no Corpo e Sangue de Cristo", "Uma recordação mental da Última Ceia", "A bênção dada aos alimentos"], correctAnswer: 1, explanation: "Pela consagração, toda a substância do pão e do vinho se converte na substância do Corpo e do Sangue de Cristo, permanecendo apenas as aparências.", ccc: "CCC § 1376" },
+                { id: "q_5", category: "Catecismo", difficulty: "Médio", question: "Quais são as três virtudes teologais?", options: ["Prudência, justiça e fortaleza", "Fé, esperança e caridade", "Humildade, paciência e mansidão", "Temperança, prudência e caridade"], correctAnswer: 1, explanation: "As virtudes teologais — fé, esperança e caridade — têm Deus como origem, motivo e objeto. A maior delas é a caridade.", ccc: "CCC § 1812-1829" },
+                { id: "q_6", category: "Catecismo", difficulty: "Médio", question: "Quais são as três condições para que um pecado seja mortal?", options: ["Matéria grave, pleno conhecimento e deliberado consentimento", "Repetição, escândalo e má intenção", "Gravidade, publicidade e dolo", "Intenção, ação e omissão"], correctAnswer: 0, explanation: "O pecado mortal exige simultaneamente: matéria grave, pleno conhecimento da gravidade e pleno consentimento da vontade.", ccc: "CCC § 1857-1859" },
+                { id: "q_7", category: "Catecismo", difficulty: "Difícil", question: "O que a Igreja entende por 'ex opere operato' nos sacramentos?", options: ["Que a graça depende da santidade do ministro", "Que os sacramentos conferem a graça pela própria ação celebrada, em virtude da obra de Cristo", "Que basta a intenção do fiel, sem rito", "Que os sacramentos são apenas símbolos comunitários"], correctAnswer: 1, explanation: "Ex opere operato significa que os sacramentos agem pela força da própria ação salvífica de Cristo, independentemente dos méritos do ministro ou do destinatário.", ccc: "CCC § 1128" },
+                { id: "q_8", category: "Escritura", difficulty: "Fácil", question: "Quem ensinou a oração do Pai-Nosso?", options: ["Moisés", "São Paulo", "Jesus Cristo", "São Pedro"], correctAnswer: 2, explanation: "Jesus ensinou o Pai-Nosso aos discípulos que lhe pediram: 'Senhor, ensina-nos a rezar' (Lc 11,1-4; Mt 6,9-13).", ccc: "CCC § 2759" },
+                { id: "q_9", category: "Escritura", difficulty: "Médio", question: "Segundo Santo Agostinho, citado no Catecismo, o Pai-Nosso é:", options: ["Uma oração da tradição medieval", "O resumo de todo o Evangelho", "Um salmo de Davi", "Uma oração apenas para sacerdotes"], correctAnswer: 1, explanation: "O Pai-Nosso é verdadeiramente o resumo de todo o Evangelho, a oração mais perfeita, ensinada pelo próprio Senhor.", ccc: "CCC § 2761" },
+                { id: "q_10", category: "Liturgia", difficulty: "Fácil", question: "Qual é o centro de toda a vida litúrgica da Igreja?", options: ["O Natal", "O Mistério Pascal de Cristo", "A festa de Todos os Santos", "A Quaresma"], correctAnswer: 1, explanation: "O mistério pascal — paixão, morte, ressurreição e ascensão de Cristo — é o centro da liturgia, que o torna presente e eficaz.", ccc: "CCC § 1084" },
+                { id: "q_11", category: "Liturgia", difficulty: "Médio", question: "Qual cor litúrgica é usada no Tempo Comum?", options: ["Roxo", "Branco", "Verde", "Vermelho"], correctAnswer: 2, explanation: "O verde, cor da esperança, é usado nas celebrações do Tempo Comum, o longo percurso do ensino de Jesus no cotidiano.", ccc: "Normas litúrgicas gerais" },
+                { id: "q_12", category: "Liturgia", difficulty: "Difícil", question: "O que é a Liturgia, segundo o Catecismo?", options: ["Apenas a missa dominical", "O culto público que o Corpo Místico de Cristo (Cabeça e membros) presta a Deus", "As devoções particulares dos fiéis", "O conjunto de cantos religiosos"], correctAnswer: 1, explanation: "A Liturgia é ação de Cristo total: Cabeça e membros. Nela, Cristo continua a obra da nossa redenção na, com e por sua Igreja.", ccc: "CCC § 1069-1070" },
+                { id: "q_13", category: "Escritura", difficulty: "Difícil", question: "Quais são os dois canais de transmissão da Revelação divina confiados à Igreja?", options: ["Bíblia e Ciência", "Sagrada Escritura e Sagrada Tradição", "Profetas e Reis", "Evangelhos e Cartas"], correctAnswer: 1, explanation: "A Sagrada Tradição e a Sagrada Escritura dimanam da mesma fonte divina e formam um só tesouro da Palavra de Deus.", ccc: "CCC § 80-82" },
+                { id: "q_14", category: "Catecismo", difficulty: "Fácil", question: "Quantas Pessoas há na Santíssima Trindade?", options: ["Uma", "Duas", "Três", "Sete"], correctAnswer: 2, explanation: "Há um só Deus em três Pessoas divinas: Pai, Filho e Espírito Santo, consubstanciais entre si.", ccc: "CCC § 253" },
+                { id: "q_15", category: "Catecismo", difficulty: "Médio", question: "O que é a consciência moral?", options: ["Um sentimento de culpa", "O juízo da razão pelo qual o homem reconhece a qualidade moral de um ato", "A opinião da maioria", "Uma regra imposta pelo Estado"], correctAnswer: 1, explanation: "A consciência é o santuário do homem, onde ele está a sós com Deus e escuta a sua voz; deve ser educada e seguida fielmente.", ccc: "CCC § 1776-1778" }
+            ]
+        };
+
+
+        /* ==========================================
+           2. ESTADO GLOBAL E PERSISTÊNCIA (LOCALSTORAGE)
+           ========================================== */
+        let AppState = {
+            xp: 150,
+            streak: 4,
+            lastPrayerDate: null,
+            completedLessons: [],
+            completedQuizzes: [],
+            favorites: [],
+            unlockedAchievements: [],
+            liturgicalRead: {},
+            lectioNotes: {},
+            activeStudyPlan: null,
+            planProgress: {}
+        };
+
+        function saveState() {
+            localStorage.setItem('catecismo_state_v5', JSON.stringify(AppState));
+            updateHeaderBadges();
+            checkAchievements();
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('catecismo_state_v5');
+            if (saved) {
+                try { AppState = JSON.parse(saved); } catch(e) { console.error(e); }
+            }
+            updateHeaderBadges();
+        }
+
+        function updateHeaderBadges() {
+            const streakEls = document.querySelectorAll('#header-streak, #sidebar-streak');
+            streakEls.forEach(el => el.innerText = AppState.streak);
+            const xpEls = document.querySelectorAll('#header-xp');
+            xpEls.forEach(el => el.innerText = AppState.xp);
+
+            const levelNames = ["Iniciante", "Discípulo", "Peregrino", "Estudioso", "Servo Fiel", "Mestre da Fé"];
+            const currentLevelIdx = Math.min(Math.floor(AppState.xp / 150), levelNames.length - 1);
+            const levelEl = document.getElementById('sidebar-level-title');
+            if (levelEl) levelEl.innerText = levelNames[currentLevelIdx];
+        }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `pointer-events-auto px-4 py-3 rounded-xl shadow-lg border text-xs font-semibold flex items-center gap-3 transition transform translate-y-2 opacity-0 ${
+                type === 'success' ? 'bg-amber-50 border-amber-300 text-amber-900' : 'bg-blue-50 border-blue-200 text-blue-900'
+            }`;
+            toast.innerHTML = `<span>${type === 'success' ? '✨' : 'ℹ️'}</span> <span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => { toast.classList.remove('translate-y-2', 'opacity-0'); }, 50);
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        function checkAchievements() {
+            const achievements = [
+                { id: 'first_study', title: 'Primeiro Estudo', condition: AppState.completedLessons.length > 0 },
+                { id: 'five_lessons', title: 'Peregrino da Fé', condition: AppState.completedLessons.length >= 5 },
+                { id: 'first_quiz', title: 'Primeiro Quiz', condition: AppState.completedQuizzes.length > 0 },
+                { id: 'prayer_streak', title: 'Amigo da Oração', condition: AppState.streak >= 3 },
+                { id: 'fav_collector', title: 'Colecionador de Tesouros', condition: AppState.favorites.length >= 3 }
+            ];
+
+            achievements.forEach(ach => {
+                if (ach.condition && !AppState.unlockedAchievements.includes(ach.id)) {
+                    AppState.unlockedAchievements.push(ach.id);
+                    showToast(`🏆 Conquista desbloqueada: ${ach.title}!`, 'success');
+                }
+            });
+        }
+
+        /* ==========================================
+           3. ROUTER / NAVEGAÇÃO COMPLETA
+           ========================================== */
+        const router = {
+            currentRoute: 'home',
+            async navigate(route, params = null) {
+                this.currentRoute = route;
+                window.scrollTo(0, 0);
+                
+                document.querySelectorAll('.nav-item').forEach(btn => {
+                    if (btn.getAttribute('data-route') === route) {
+                        btn.classList.add('bg-amber-50', 'text-mariana', 'font-bold');
+                    } else {
+                        btn.classList.remove('bg-amber-50', 'text-mariana', 'font-bold');
+                    }
+                });
+
+                const mainView = document.getElementById('main-view');
+                const titleEl = document.getElementById('page-title');
+                const subtitleEl = document.getElementById('page-subtitle');
+
+                switch(route) {
+                    case 'home':
+                        titleEl.innerText = "Meu Momento";
+                        subtitleEl.innerText = "Conhecer, compreender e viver a fé.";
+                        mainView.innerHTML = Views.renderHome();
+                        break;
+                    case 'liturgia':
+                        titleEl.innerText = "Liturgia Diária";
+                        subtitleEl.innerText = "Leituras, salmo e evangelho do dia";
+                        mainView.innerHTML = Views.renderLiturgia(params);
+                        break;
+                    case 'catecismo':
+                        titleEl.innerText = "Catecismo da Igreja Católica";
+                        subtitleEl.innerText = "Estudo sistemático dos pilares da fé";
+                        mainView.innerHTML = Views.renderCatecismo(params);
+                        break;
+                    case 'santo':
+                        titleEl.innerText = "Santo do Dia";
+                        subtitleEl.innerText = "Exemplo e intercessão dos amigos de Deus";
+                        mainView.innerHTML = Views.renderSanto();
+                        break;
+                    case 'oracao':
+                        titleEl.innerText = "Oração & Lectio Divina";
+                        subtitleEl.innerText = "Momentos de recolhimento e leitura orante";
+                        mainView.innerHTML = Views.renderOracao();
+                        break;
+                    case 'missa':
+                        titleEl.innerText = "A Santa Missa Explicada";
+                        subtitleEl.innerText = "Compreenda cada rito e misteriosa liturgia";
+                        mainView.innerHTML = Views.renderMissa();
+                        break;
+                    case 'quiz':
+                        titleEl.innerText = "Quizzes de Conhecimento";
+                        subtitleEl.innerText = "Teste e reforce o seu aprendizado";
+                        mainView.innerHTML = Views.renderQuiz();
+                        break;
+                    case 'planos':
+                        titleEl.innerText = "Planos de Estudo";
+                        subtitleEl.innerText = "Roteiros guiados para sua jornada espiritual";
+                        mainView.innerHTML = Views.renderPlanos();
+                        break;
+                    case 'favoritos':
+                        titleEl.innerText = "Meus Favoritos";
+                        subtitleEl.innerText = "Conteúdos salvos para consulta rápida";
+                        mainView.innerHTML = Views.renderFavoritos();
+                        break;
+                    case 'conquistas':
+                        titleEl.innerText = "Conquistas";
+                        subtitleEl.innerText = "Seu progresso coroado pela perseverança";
+                        mainView.innerHTML = Views.renderConquistas();
+                        break;
+                    case 'progresso':
+                        titleEl.innerText = "Meu Progresso";
+                        subtitleEl.innerText = "Estatísticas detalhadas de estudo e oração";
+                        mainView.innerHTML = Views.renderProgresso();
+                        break;
+                    case 'fontes':
+                        titleEl.innerText = "Fontes e Transparência";
+                        subtitleEl.innerText = "Direitos, referências e independência institucional";
+                        mainView.innerHTML = Views.renderFontes();
+                        break;
+                    case 'pesquisa':
+                        titleEl.innerText = "Pesquisa Global";
+                        subtitleEl.innerText = "Encontre conteúdos em todo o aplicativo";
+                        mainView.innerHTML = Views.renderPesquisa();
+                        break;
+                    default:
+                        mainView.innerHTML = `<div class="p-10 text-center font-serif text-xl">Página não encontrada.</div>`;
+                }
+            }
+        };
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-drawer').classList.toggle('hidden');
+        }
+
+        /* ==========================================
+           4. RENDERIZADORES DE VIEW (TELAS)
+           ========================================== */
+        const Views = {
+            renderHome() {
+                const todayStr = new Date().toISOString().split('T')[0];
+                const lit = LiturgicalContentProvider.getLiturgicalDay(todayStr);
+                const santo = SaintContentProvider.saints[0];
+                const uncompleted = CatecismContentProvider.modules.find(m => !AppState.completedLessons.includes(m.id)) || CatecismContentProvider.modules[0];
+                const totalL = CatecismContentProvider.modules.length;
+                const compL = AppState.completedLessons.filter(id => CatecismContentProvider.modules.some(m => m.id === id)).length;
+                const pct = totalL > 0 ? Math.round((compL / totalL) * 100) : 0;
+
+                return `
+                    <div class="max-w-5xl mx-auto space-y-8">
+                        <div class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30">
+                            <div class="absolute right-0 top-0 translate-x-8 -translate-y-8 text-[180px] opacity-10 font-serif select-none">✝</div>
+                            <div class="relative z-10 max-w-2xl space-y-4">
+                                <span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40">☀️ Meu Momento de Hoje</span>
+                                <h1 class="font-serif text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">Caminhe na luz de Cristo e da sua Igreja.</h1>
+                                <p class="text-slate-200 text-sm md:text-base font-light leading-relaxed">${lit ? lit.reflection : "Busquem primeiro o Reino de Deus e a sua justiça."}</p>
+                                <div class="pt-2 flex flex-wrap gap-4">
+                                    <button onclick="router.navigate('liturgia')" class="px-6 py-3 gold-gradient text-mariana-dark font-bold rounded-xl shadow-lg text-sm transition hover:scale-105">✝️ Acessar Liturgia de Hoje</button>
+                                    <button onclick="openLessonModal('${uncompleted.id}')" class="px-6 py-3 bg-white/10 hover:bg-white/25 text-white font-semibold rounded-xl text-sm transition border border-white/25">📖 Continuar Catecismo (${pct}%)</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <div class="lg:col-span-2 space-y-8">
+                                <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-4">
+                                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-lg">✝️</div>
+                                            <div>
+                                                <h3 class="font-serif text-xl font-bold text-mariana">Liturgia de Hoje</h3>
+                                                <p class="text-xs text-slate-500">${lit ? lit.weekday + ' — ' + lit.liturgicalSeason : 'Data sem liturgia cadastrada'}</p>
+                                            </div>
+                                        </div>
+                                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-bold">Cor: ${lit ? lit.liturgicalColor : 'Verde'}</span>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <h4 class="font-serif text-lg font-bold text-slate-800">${lit ? lit.celebration : 'Tempo Comum'}</h4>
+                                        <p class="text-xs text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-200/60">${lit ? lit.saintOrMemory : 'Consulte o missal oficial.'}</p>
+                                    </div>
+                                    <div class="pt-2 flex justify-end">
+                                        <button onclick="router.navigate('liturgia')" class="text-xs font-bold text-mariana hover:text-dourado transition flex items-center gap-1">Ver leituras completas →</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-4">
+                                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                                        <span class="text-xl">😇</span>
+                                        <h3 class="font-serif text-lg font-bold text-mariana">Santo do Dia</h3>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h4 class="font-serif text-base font-bold text-slate-800">${santo.name}</h4>
+                                        <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">${santo.biography}</p>
+                                        <button onclick="router.navigate('santo')" class="w-full py-2.5 bg-slate-50 hover:bg-slate-100 text-mariana font-bold rounded-xl text-xs transition border border-slate-200">Ler biografia</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderLiturgia(dateParam = null) {
+                const dateToFetch = dateParam || new Date().toISOString().split('T')[0];
+                const lit = LiturgicalContentProvider.getLiturgicalDay(dateToFetch);
+                const isRead = AppState.liturgicalRead[dateToFetch];
+
+                return `
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                            <div>
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-bold">${lit ? lit.source : 'Sem fonte'}</span>
+                                <h2 class="font-serif text-3xl font-bold text-mariana mt-2">${lit ? lit.celebration : 'Data sem liturgia cadastrada'}</h2>
+                                <p class="text-xs text-slate-500">${dateToFetch} • ${lit ? lit.liturgicalSeason : '—'} • Cor: <strong>${lit ? lit.liturgicalColor : '—'}</strong></p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="goToPreviousLiturgicalDay('${dateToFetch}')" class="p-2 bg-slate-100 rounded-xl text-xs font-bold shadow-sm">← Anterior</button>
+                                <button onclick="goToTodayLiturgicalDay()" class="p-2 bg-slate-100 rounded-xl text-xs font-bold shadow-sm">Hoje</button>
+                                <button onclick="goToNextLiturgicalDay('${dateToFetch}')" class="p-2 bg-slate-100 rounded-xl text-xs font-bold shadow-sm">Próximo →</button>
+                                <input type="date" value="${dateToFetch}" onchange="router.navigate('liturgia', this.value)" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700">
+                            </div>
+                        </div>
+
+                        ${!lit ? `
+                            <div class="bg-white rounded-3xl p-12 text-center border border-slate-200 card-shadow space-y-4">
+                                <span class="text-4xl">ℹ️</span>
+                                <h3 class="font-serif text-2xl font-bold text-mariana">Esta data ainda não possui conteúdo litúrgico cadastrado.</h3>
+                                <p class="text-xs text-slate-500">Tente selecionar o dia 2026-09-09 ou 2026-09-10 para visualizar dados demonstrativos.</p>
+                            </div>
+                        ` : `
+                            <div class="space-y-6">
+                                <div class="flex justify-end">
+                                    <button onclick="markLiturgicalRead('${lit.date}')" class="px-5 py-2.5 ${isRead ? 'bg-emerald-700 text-white' : 'bg-slate-100 text-slate-700'} rounded-xl text-xs font-bold transition shadow-sm">
+                                        ${isRead ? '✓ Liturgia Lida (+15 XP)' : '✅ Marcar como lida'}
+                                    </button>
+                                </div>
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3">
+                                    <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                                        <h3 class="font-serif text-lg font-bold text-mariana">Primeira Leitura</h3>
+                                        <span class="text-xs font-bold text-dourado">${lit.firstReading.reference}</span>
+                                    </div>
+                                    <p class="text-sm text-slate-700 leading-relaxed">${lit.firstReading.text}</p>
+                                </div>
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3">
+                                    <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                                        <h3 class="font-serif text-lg font-bold text-mariana">Salmo Responsorial</h3>
+                                        <span class="text-xs font-bold text-dourado">${lit.psalm.reference}</span>
+                                    </div>
+                                    <p class="text-sm text-slate-700 font-semibold">${lit.psalm.text}</p>
+                                </div>
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3">
+                                    <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+                                        <h3 class="font-serif text-lg font-bold text-mariana">Santo Evangelho</h3>
+                                        <span class="text-xs font-bold text-dourado">${lit.gospel.reference}</span>
+                                    </div>
+                                    <p class="text-sm text-slate-800 leading-relaxed">${lit.gospel.text}</p>
+                                </div>
+                            </div>
+                        `}
+                    </div>
+                `;
+            },
+
+            renderCatecismo(filterCat = null) {
+                const filteredModules = filterCat ? CatecismContentProvider.modules.filter(m => m.categoryId === filterCat) : CatecismContentProvider.modules;
+
+                return `
+                    <div class="max-w-5xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow">
+                            <h2 class="font-serif text-3xl font-bold text-mariana mb-2">Catecismo da Igreja Católica</h2>
+                            <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">Estudo sistemático estruturado nos quatro pilares tradicionais da fé.</p>
+                            <div class="flex flex-wrap gap-2 mt-6">
+                                <button onclick="router.navigate('catecismo')" class="px-4 py-2 rounded-xl text-xs font-bold ${!filterCat ? 'bg-mariana text-white' : 'bg-slate-100 text-slate-700'}">Todos (${CatecismContentProvider.modules.length})</button>
+                                ${CatecismContentProvider.categories.map(c => `
+                                    <button onclick="router.navigate('catecismo', '${c.id}')" class="px-4 py-2 rounded-xl text-xs font-bold ${filterCat === c.id ? 'bg-mariana text-white' : 'bg-slate-100 text-slate-700'}">${c.title.split('—')[0]}</button>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            ${filteredModules.map(mod => {
+                                const isDone = AppState.completedLessons.includes(mod.id);
+                                return `
+                                    <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow flex flex-col justify-between space-y-4 relative">
+                                        ${isDone ? '<div class="absolute -top-3 -right-3 w-8 h-8 bg-emerald-500 rounded-full text-white flex items-center justify-center font-bold shadow-md">✓</div>' : ''}
+                                        <div class="space-y-2">
+                                            <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] uppercase font-bold tracking-wider">${mod.ccc}</span>
+                                            <h3 class="font-serif text-xl font-bold text-mariana mt-2 leading-tight">${mod.title}</h3>
+                                            <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${mod.description}</p>
+                                        </div>
+                                        <button onclick="openLessonModal('${mod.id}')" class="w-full py-3 ${isDone ? 'bg-slate-100 text-slate-700' : 'mariana-gradient text-white'} rounded-xl text-xs font-bold shadow-sm transition hover:scale-105">${isDone ? 'Revisar Módulo' : 'Estudar Módulo'}</button>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderProgresso() {
+                const totalL = CatecismContentProvider.modules.length;
+                const compL = AppState.completedLessons.filter(id => CatecismContentProvider.modules.some(m => m.id === id)).length;
+                const pct = totalL > 0 ? Math.round((compL / totalL) * 100) : 0;
+
+                return `
+                    <div class="max-w-3xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-6">
+                            <h2 class="font-serif text-2xl font-bold text-mariana">Meu Progresso Geral</h2>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                                        <span>Catecismo Geral (${compL} de ${totalL} aulas)</span>
+                                        <span>${pct}%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                                        <div class="mariana-gradient h-full rounded-full transition-all" style="width: ${pct}%"></div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 pt-4">
+                                    <div class="p-4 bg-slate-50 rounded-2xl border flex flex-col items-center text-center">
+                                        <p class="text-xs text-slate-500">XP Acumulado</p>
+                                        <p class="text-2xl font-bold text-mariana">${AppState.xp} XP</p>
+                                    </div>
+                                    <div class="p-4 bg-slate-50 rounded-2xl border flex flex-col items-center text-center">
+                                        <p class="text-xs text-slate-500">Dias de Ofensiva</p>
+                                        <p class="text-2xl font-bold text-amber-800">${AppState.streak} dias</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderSanto() {
+                const today = new Date().toISOString().split('T')[0];
+                const santo = SaintContentProvider.getSaintOfDay(today);
+                const isFav = AppState.favorites.includes('saint_' + santo.id);
+                return `
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30">
+                            <div class="absolute right-4 top-4 text-[120px] opacity-10 select-none">😇</div>
+                            <div class="relative z-10 space-y-3">
+                                <span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40">Santo do Dia — ${today.split('-').reverse().join('/')}</span>
+                                <h2 class="font-serif text-3xl md:text-4xl font-bold">${santo.name}</h2>
+                                <p class="text-slate-200 text-sm">${santo.vocation} • Festa: ${santo.feast}</p>
+                                <p class="text-dourado-light font-serif text-lg italic">"${santo.mainTeaching}"</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2 space-y-6">
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3">
+                                    <h3 class="font-serif text-xl font-bold text-mariana border-b border-slate-100 pb-3">Biografia</h3>
+                                    <p class="text-sm text-slate-700 leading-relaxed">${santo.biography}</p>
+                                    <div class="grid grid-cols-2 gap-3 pt-3 text-xs">
+                                        <div class="p-3 bg-slate-50 rounded-xl"><span class="font-bold text-slate-500 block">Nascimento</span><span class="text-slate-800">${santo.birth}</span></div>
+                                        <div class="p-3 bg-slate-50 rounded-xl"><span class="font-bold text-slate-500 block">Morte</span><span class="text-slate-800">${santo.death}</span></div>
+                                        <div class="p-3 bg-slate-50 rounded-xl"><span class="font-bold text-slate-500 block">Padroeiro de</span><span class="text-slate-800">${santo.patronage}</span></div>
+                                        <div class="p-3 bg-slate-50 rounded-xl"><span class="font-bold text-slate-500 block">Fontes</span><span class="text-slate-800">${santo.sources}</span></div>
+                                    </div>
+                                </div>
+                                <div class="bg-amber-50/70 rounded-3xl p-6 border border-amber-200/60 space-y-2">
+                                    <h3 class="font-serif text-lg font-bold text-amber-900">Reflexão</h3>
+                                    <p class="text-sm text-amber-800 italic leading-relaxed">"${santo.reflection}"</p>
+                                </div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3">
+                                    <h3 class="font-serif text-lg font-bold text-mariana">Virtudes</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        ${santo.virtues.map(v => `<span class="px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-full text-xs font-bold border border-emerald-200">${v}</span>`).join('')}
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3">
+                                    <h3 class="font-serif text-lg font-bold text-mariana">Oração</h3>
+                                    <p class="text-xs text-slate-700 leading-relaxed italic">${santo.prayer}</p>
+                                </div>
+                                <button onclick="toggleFavorite('saint_${santo.id}')" class="w-full py-3 ${isFav ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-slate-50 text-slate-700 border-slate-200'} border rounded-xl text-xs font-bold transition hover:scale-105">
+                                    ${isFav ? '⭐ Salvo nos favoritos' : '☆ Favoritar este santo'}
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-4">
+                            <h3 class="font-serif text-xl font-bold text-mariana">Biblioteca de Santos</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                ${SaintContentProvider.saints.map(s => `
+                                    <button onclick="openSaintModal('${s.id}')" class="p-4 bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-300 rounded-2xl text-left transition">
+                                        <span class="text-xs font-bold text-mariana block">${s.name}</span>
+                                        <span class="text-[10px] text-slate-500">${s.feast} • ${s.patronage.split(',')[0]}</span>
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderOracao() {
+                const today = new Date().toISOString().split('T')[0];
+                const prayedToday = AppState.lastPrayerDate === today;
+                return `
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="vinho-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30">
+                            <div class="absolute right-4 top-4 text-[120px] opacity-10 select-none">🙏</div>
+                            <div class="relative z-10 space-y-3">
+                                <span class="px-3 py-1 bg-white/15 text-white rounded-full text-xs font-semibold tracking-wider uppercase border border-white/25">Momento de Recolhimento</span>
+                                <h2 class="font-serif text-3xl md:text-4xl font-bold">Oração & Lectio Divina</h2>
+                                <p class="text-rose-100 text-sm max-w-xl leading-relaxed">"Quando orardes, entra no teu quarto, fecha a porta e ora a teu Pai em segredo; e teu Pai, que vê o oculto, te recompensará." (Mt 6,6)</p>
+                                <button onclick="markPrayerDone()" class="px-6 py-3 ${prayedToday ? 'bg-emerald-600' : 'gold-gradient text-mariana-dark'} text-white font-bold rounded-xl text-sm transition hover:scale-105 shadow-lg">
+                                    ${prayedToday ? '✓ Oração de hoje concluída' : '🙏 Concluir momento de oração (+10 XP)'}
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-5">
+                            <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
+                                <span class="text-2xl">📿</span>
+                                <div>
+                                    <h3 class="font-serif text-2xl font-bold text-mariana">Lectio Divina — Evangelho de Hoje</h3>
+                                    <p class="text-xs text-slate-500">Os cinco passos tradicionais da leitura orante da Palavra</p>
+                                </div>
+                            </div>
+                            ${(() => { const lit = LiturgicalContentProvider.getLiturgicalDay(today); return `
+                                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/70 space-y-2">
+                                    <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">${lit.gospel.reference}</span>
+                                    <p class="text-sm text-slate-700 leading-relaxed">${lit.gospel.text}</p>
+                                </div>
+                            `; })()}
+                            <div class="space-y-3">
+                                ${PrayerContentProvider.lectioSteps.map((step, i) => `
+                                    <div class="flex gap-4 p-4 rounded-2xl border border-slate-100 bg-white hover:border-amber-200 transition">
+                                        <div class="w-9 h-9 flex-none rounded-full mariana-gradient text-white flex items-center justify-center font-serif font-bold">${i + 1}</div>
+                                        <div>
+                                            <h4 class="font-serif text-base font-bold text-mariana">${step.title.split('—')[1].trim()} <span class="text-xs text-slate-400 font-sans font-normal">(${step.title.split('—')[0].trim()})</span></h4>
+                                            <p class="text-xs text-slate-600 leading-relaxed mt-1">${step.desc}</p>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-5">
+                            <h3 class="font-serif text-2xl font-bold text-mariana">Biblioteca de Orações</h3>
+                            <div class="flex flex-wrap gap-2" id="prayer-filters">
+                                <button onclick="filterPrayers(null, this)" class="prayer-filter px-4 py-2 rounded-xl text-xs font-bold bg-mariana text-white">Todas</button>
+                                ${PrayerContentProvider.categories.map(c => `<button onclick="filterPrayers('${c}', this)" class="prayer-filter px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700">${c}</button>`).join('')}
+                            </div>
+                            <div id="prayer-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                ${PrayerContentProvider.prayers.map(p => `
+                                    <button onclick="openPrayerModal('${p.id}')" data-category="${p.category}" class="prayer-item p-4 bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-300 rounded-2xl text-left transition">
+                                        <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">${p.category}</span>
+                                        <span class="text-sm font-bold text-mariana block mt-0.5">${p.title}</span>
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderMissa() {
+                const parts = [
+                    { section: "Ritos Iniciais", items: [
+                        { name: "Entrada e Saudação", desc: "O sacerdote e a assembleia se reúnem como família de Deus. O canto de entrada abre a celebração e a saudação ('A graça de nosso Senhor Jesus Cristo...') nos coloca na presença da Trindade." },
+                        { name: "Ato Penitencial", desc: "Reconhecemos humildemente nossos pecados ('Eu confesso a Deus Todo-Poderoso...') para celebrar dignamente os santos mistérios, pedindo a intercessão de Maria, dos anjos, dos santos e dos irmãos." },
+                        { name: "Senhor, tende piedade (Kyrie)", desc: "Antiga invocação em grego: clamamos a misericórdia de Cristo, Senhor que veio salvar os pecadores." },
+                        { name: "Glória a Deus (Gloria)", desc: "Hino de louvor trinitário, cantado aos domingos e solenidades: 'Glória a Deus nas alturas, e paz na terra aos homens por ele amados'." },
+                        { name: "Oração do Dia (Coleta)", desc: "O sacerdote 'recolhe' as intenções de toda a assembleia numa só oração, apresentando-as ao Pai por Cristo no Espírito Santo." }
+                    ]},
+                    { section: "Liturgia da Palavra", items: [
+                        { name: "Primeira Leitura e Salmo", desc: "Deus fala ao seu povo. A primeira leitura vem geralmente do Antigo Testamento; o salmo responsorial é nossa resposta orante à Palavra ouvida." },
+                        { name: "Segunda Leitura", desc: "Aos domingos, uma leitura das cartas apostólicas (epístolas) aprofunda o ensino da fé para a vida da comunidade." },
+                        { name: "Aleluia e Evangelho", desc: "O aclamamos a Cristo presente na sua Palavra. O Evangelho, proclamado de pé e com incenso nas solenidades, é o ápice da Liturgia da Palavra: são as palavras e a vida do próprio Senhor." },
+                        { name: "Homilia", desc: "O sacerdote explica a Palavra proclamada e a aplica à vida concreta da comunidade, para que a Escritura se torne alimento e luz." },
+                        { name: "Profissão de Fé (Credo)", desc: "Respondemos à Palavra proclamando juntos a fé da Igreja, resumida no Credo Niceno-Constantinopolitano." },
+                        { name: "Oração Universal (Preces)", desc: "A Igreja exerce seu sacerdócio batismal intercedendo pelo mundo: pela Igreja, pelos governantes, pelos que sofrem e pela comunidade local." }
+                    ]},
+                    { section: "Liturgia Eucarística", items: [
+                        { name: "Preparação dos Dons", desc: "Pão e vinho, frutos da terra e do trabalho humano, são apresentados no altar: 'Bendito sejais, Senhor Deus do universo'. Com eles, oferecemos também a nossa vida." },
+                        { name: "Oração Eucarística", desc: "A grande oração de ação de graças. No Prefácio, unimo-nos aos anjos no Santo (Sanctus). Na Epiclese, invocamos o Espírito Santo sobre os dons." },
+                        { name: "Consagração", desc: "O coração da Missa. Pelas palavras de Cristo repetidas pelo sacerdote ('Isto é o meu Corpo... Este é o cálice do meu Sangue'), o pão e o vinho tornam-se o Corpo e o Sangue do Senhor: o sacrifício da Cruz se torna presente." },
+                        { name: "Anamnese, Oblasão e Doxologia", desc: "Recordamos a Paixão, a Ressurreição e a Ascensão, oferecendo ao Pai a vítima santa. Tudo culmina na doxologia: 'Por Cristo, com Cristo, em Cristo...', à qual o povo responde: Amém!" },
+                        { name: "Rito da Comunhão", desc: "Rezamos o Pai-Nosso, trocamos o gesto de paz e partimos o pão (Cordeiro de Deus). Comungamos o Corpo de Cristo, que nos une a Ele e uns aos outros: 'Felizes os convidados para a Ceia do Senhor'." }
+                    ]},
+                    { section: "Ritos Finais", items: [
+                        { name: "Bênção", desc: "O sacerdote abençoa o povo em nome da Santíssima Trindade, para que a graça celebrada acompanhe a semana inteira." },
+                        { name: "Envio (Ite, missa est)", desc: "'Ide em paz, e o Senhor vos acompanhe.' A palavra 'missa' vem deste envio (missio): somos enviados a levar ao mundo o Cristo que recebemos. A liturgia continua na caridade do dia a dia." }
+                    ]}
+                ];
+                return `
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30">
+                            <div class="absolute right-4 top-4 text-[120px] opacity-10 select-none">⛪</div>
+                            <div class="relative z-10 space-y-3">
+                                <span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40">A Fonte e o Ápice</span>
+                                <h2 class="font-serif text-3xl md:text-4xl font-bold">A Santa Missa Explicada</h2>
+                                <p class="text-slate-200 text-sm max-w-2xl leading-relaxed">"A Eucaristia é a fonte e o ápice de toda a vida cristã" (CCC § 1324). Compreenda cada momento da celebração para participar ativa, plena e conscientemente.</p>
+                            </div>
+                        </div>
+                        ${parts.map((part, pi) => `
+                            <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-4">
+                                <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
+                                    <div class="w-10 h-10 rounded-2xl mariana-gradient text-dourado flex items-center justify-center font-serif font-bold text-lg">${['I','II','III','IV'][pi]}</div>
+                                    <h3 class="font-serif text-2xl font-bold text-mariana">${part.section}</h3>
+                                </div>
+                                <div class="space-y-3">
+                                    ${part.items.map(item => `
+                                        <details class="group rounded-2xl border border-slate-100 bg-slate-50/50 open:bg-amber-50/40 open:border-amber-200 transition">
+                                            <summary class="cursor-pointer list-none flex items-center justify-between p-4 text-sm font-bold text-mariana">
+                                                ${item.name}
+                                                <span class="text-slate-400 group-open:rotate-90 transition-transform">›</span>
+                                            </summary>
+                                            <p class="px-4 pb-4 text-xs text-slate-600 leading-relaxed">${item.desc}</p>
+                                        </details>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `).join('')}
+                        <div class="bg-amber-50/70 rounded-3xl p-6 border border-amber-200/60 space-y-2">
+                            <h3 class="font-serif text-lg font-bold text-amber-900">Como participar bem da Missa?</h3>
+                            <ul class="text-xs text-amber-800 space-y-1.5 leading-relaxed list-none">
+                                <li>• Chegue alguns minutos antes e recolha-se em oração.</li>
+                                <li>• Responda e cante com a assembleia: a missa é ação de todo o povo de Deus.</li>
+                                <li>• Escute a Palavra com o coração aberto, como quem escuta o próprio Cristo.</li>
+                                <li>• Comungue em estado de graça (sem pecado mortal não confessado) e em jejum eucarístico de 1 hora.</li>
+                                <li>• Após a comunhão, faça um momento de ação de graças em silêncio.</li>
+                                <li>• Leve o Cristo recebido para a caridade concreta da semana: a missa termina no envio.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderQuiz() {
+                const categories = [...new Set(QuizContentProvider.questions.map(q => q.category))];
+                return `
+                    <div class="max-w-3xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-4">
+                            <h2 class="font-serif text-3xl font-bold text-mariana">Quizzes de Conhecimento</h2>
+                            <p class="text-sm text-slate-600 leading-relaxed">Teste o que aprendeu no Catecismo, na Escritura e na Liturgia. Cada quiz tem 5 perguntas aleatórias e vale até <strong>50 XP</strong>.</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                                ${categories.map(c => {
+                                    const count = QuizContentProvider.questions.filter(q => q.category === c).length;
+                                    const icons = { Catecismo: '📖', Escritura: '✝️', Liturgia: '⛪' };
+                                    return `
+                                        <button onclick="startQuiz('${c}')" class="p-5 bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-300 rounded-2xl text-left transition hover:scale-105">
+                                            <span class="text-2xl">${icons[c] || '🧠'}</span>
+                                            <span class="block font-serif text-lg font-bold text-mariana mt-2">${c}</span>
+                                            <span class="text-[10px] text-slate-500">${count} perguntas disponíveis</span>
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                            <button onclick="startQuiz(null)" class="w-full py-4 mariana-gradient text-white rounded-2xl text-sm font-bold shadow-md transition hover:scale-105 mt-2">🎲 Quiz Aleatório (todas as categorias)</button>
+                        </div>
+                        <div id="quiz-area"></div>
+                    </div>
+                `;
+            },
+
+            renderPlanos() {
+                const plans = [
+                    { id: 'plan_creio', title: 'Fundamentos da Fé', desc: 'Percurso de 5 dias pelo pilar CREIO: o desejo de Deus, a Revelação, a fé, a Escritura e a Trindade.', days: ['creio_1','creio_2','creio_3','creio_4','creio_5'], icon: '🛡️', color: 'mariana' },
+                    { id: 'plan_celebro', title: 'Viver os Sacramentos', desc: 'Percurso de 5 dias pelo pilar CELEBRO: a liturgia, o mistério pascal, os sete sacramentos, o Batismo e a Eucaristia.', days: ['celebro_1','celebro_2','celebro_3','celebro_4','celebro_5'], icon: '✨', color: 'vinho' },
+                    { id: 'plan_vivo', title: 'A Vida Moral Cristã', desc: 'Percurso de 5 dias pelo pilar VIVO: dignidade humana, liberdade, consciência, virtudes e conversão.', days: ['vivo_1','vivo_2','vivo_3','vivo_4','vivo_5'], icon: '🌿', color: 'mariana' },
+                    { id: 'plan_rezo', title: 'Aprender a Rezar', desc: 'Percurso de 5 dias pelo pilar REZO: o que é a oração, suas fontes e formas, as dificuldades e o Pai-Nosso.', days: ['rezo_1','rezo_2','rezo_3','rezo_4','rezo_5'], icon: '🕊️', color: 'vinho' }
+                ];
+                return `
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-3">
+                            <h2 class="font-serif text-3xl font-bold text-mariana">Planos de Estudo</h2>
+                            <p class="text-sm text-slate-600 leading-relaxed max-w-2xl">Roteiros guiados de 5 dias pelos quatro pilares do Catecismo. Ative um plano e avance uma aula por dia — o progresso fica salvo no seu perfil.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            ${plans.map(plan => {
+                                const isActive = AppState.activeStudyPlan === plan.id;
+                                const done = (AppState.planProgress[plan.id] || []).length;
+                                const pct = Math.round((done / plan.days.length) * 100);
+                                const nextLesson = plan.days.find(d => !(AppState.planProgress[plan.id] || []).includes(d));
+                                return `
+                                    <div class="bg-white rounded-3xl p-6 border ${isActive ? 'border-dourado ring-2 ring-dourado/30' : 'border-slate-200'} card-shadow space-y-4">
+                                        <div class="flex items-start justify-between">
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-3xl">${plan.icon}</span>
+                                                <div>
+                                                    <h3 class="font-serif text-xl font-bold text-mariana">${plan.title}</h3>
+                                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">5 dias • ${done}/${plan.days.length} concluídos</span>
+                                                </div>
+                                            </div>
+                                            ${isActive ? '<span class="px-2.5 py-1 bg-dourado/20 text-amber-800 rounded-lg text-[10px] font-bold border border-dourado/40">ATIVO</span>' : ''}
+                                        </div>
+                                        <p class="text-xs text-slate-600 leading-relaxed">${plan.desc}</p>
+                                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                                            <div class="gold-gradient h-full rounded-full transition-all" style="width: ${pct}%"></div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            ${isActive && nextLesson ? `<button onclick="openLessonModal('${nextLesson}')" class="flex-1 py-3 mariana-gradient text-white rounded-xl text-xs font-bold transition hover:scale-105">▶ Continuar: próxima aula</button>` : ''}
+                                            ${isActive && !nextLesson ? '<span class="flex-1 py-3 bg-emerald-100 text-emerald-800 rounded-xl text-xs font-bold text-center">✓ Plano concluído!</span>' : ''}
+                                            ${!isActive ? `<button onclick="activatePlan('${plan.id}')" class="flex-1 py-3 bg-slate-100 hover:bg-amber-100 text-slate-700 hover:text-amber-900 rounded-xl text-xs font-bold transition">Ativar este plano</button>` : ''}
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderConquistas() {
+                const all = [
+                    { id: 'first_study', title: 'Primeiro Estudo', desc: 'Conclua sua primeira aula do Catecismo', icon: '📖' },
+                    { id: 'five_lessons', title: 'Peregrino da Fé', desc: 'Conclua 5 aulas do Catecismo', icon: '🥾' },
+                    { id: 'ten_lessons', title: 'Estudioso da Doutrina', desc: 'Conclua 10 aulas do Catecismo', icon: '🎓' },
+                    { id: 'all_lessons', title: 'Mestre do Catecismo', desc: 'Conclua todas as 20 aulas', icon: '👑' },
+                    { id: 'first_quiz', title: 'Primeiro Quiz', desc: 'Complete um quiz de conhecimento', icon: '🧠' },
+                    { id: 'quiz_master', title: 'Mente Iluminada', desc: 'Acerte 80% ou mais em um quiz', icon: '💡' },
+                    { id: 'prayer_streak', title: 'Amigo da Oração', desc: 'Alcance 3 dias consecutivos de oração', icon: '🙏' },
+                    { id: 'week_streak', title: 'Alma Perseverante', desc: 'Alcance 7 dias consecutivos de oração', icon: '🔥' },
+                    { id: 'fav_collector', title: 'Colecionador de Tesouros', desc: 'Salve 3 conteúdos nos favoritos', icon: '⭐' },
+                    { id: 'first_liturgy', title: 'Ouvinte da Palavra', desc: 'Leia a liturgia diária pela primeira vez', icon: '✝️' }
+                ];
+                const unlocked = AppState.unlockedAchievements;
+                return `
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-2">
+                            <h2 class="font-serif text-3xl font-bold text-mariana">Conquistas</h2>
+                            <p class="text-sm text-slate-600">${unlocked.length} de ${all.length} conquistas desbloqueadas — a perseverança na fé é coroada passo a passo.</p>
+                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden mt-4">
+                                <div class="gold-gradient h-full rounded-full transition-all" style="width: ${Math.round((unlocked.length / all.length) * 100)}%"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            ${all.map(a => {
+                                const has = unlocked.includes(a.id);
+                                return `
+                                    <div class="p-5 rounded-3xl border ${has ? 'bg-amber-50 border-amber-300' : 'bg-white border-slate-200 opacity-60'} card-shadow flex items-center gap-4">
+                                        <div class="w-14 h-14 flex-none rounded-2xl ${has ? 'gold-gradient' : 'bg-slate-100'} flex items-center justify-center text-2xl ${has ? '' : 'grayscale'}">${a.icon}</div>
+                                        <div>
+                                            <h3 class="font-serif text-lg font-bold ${has ? 'text-amber-900' : 'text-slate-500'}">${a.title}</h3>
+                                            <p class="text-xs ${has ? 'text-amber-700' : 'text-slate-400'}">${a.desc}</p>
+                                            ${has ? '<span class="text-[10px] font-bold text-emerald-700">✓ Desbloqueada</span>' : '<span class="text-[10px] font-bold text-slate-400">🔒 Bloqueada</span>'}
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderFontes() {
+                return `
+                    <div class="max-w-3xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-6">
+                            <h2 class="font-serif text-3xl font-bold text-mariana">Fontes e Transparência</h2>
+                            <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+                                <p>Esta plataforma é um <strong>aplicativo independente de estudo leigo</strong>, sem vínculo institucional com a Santa Sé, a CNBB ou qualquer diocese. Seu objetivo é auxiliar católicos e interessados a conhecer, compreender e viver a fé.</p>
+                                <div class="space-y-3">
+                                    <h3 class="font-serif text-lg font-bold text-mariana">Fontes doutrinárias</h3>
+                                    <ul class="list-none space-y-2 text-xs">
+                                        <li class="flex gap-2"><span class="text-dourado font-bold">•</span> <span><strong>Catecismo da Igreja Católica (CCC)</strong> — todos os módulos citam os parágrafos correspondentes (ex.: CCC § 1324).</span></li>
+                                        <li class="flex gap-2"><span class="text-dourado font-bold">•</span> <span><strong>Sagrada Escritura</strong> — leituras e citações em tradução livre de referência (cf. edições da CNBB).</span></li>
+                                        <li class="flex gap-2"><span class="text-dourado font-bold">•</span> <span><strong>Tradição e Magistério</strong> — ensinamentos dos santos e documentos litúrgicos da Igreja.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-3">
+                                    <h3 class="font-serif text-lg font-bold text-mariana">Sobre a Liturgia Diária</h3>
+                                    <p class="text-xs">O calendário litúrgico (tempos, cores e celebrações) é calculado automaticamente a partir da data da Páscoa. As leituras marcadas como "demonstrativo" são ilustrativas; para as leituras oficiais do dia, consulte sempre o missal ou os canais oficiais da CNBB.</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <h3 class="font-serif text-lg font-bold text-mariana">Privacidade</h3>
+                                    <p class="text-xs">Todo o seu progresso (XP, ofensiva, favoritos, conquistas) fica salvo apenas no seu navegador (localStorage). Nenhum dado é enviado a servidores.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+            
+            renderPesquisa() {
+                return `
+                    <div class="max-w-3xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-6">
+                            <h2 class="font-serif text-2xl font-bold text-mariana">Pesquisa Global</h2>
+                            <div class="relative">
+                                <input type="text" id="search-box-input" oninput="executeSearch(this.value)" placeholder="Pesquise por sacramentos, trindade, oração..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-mariana transition">
+                                <span class="absolute right-4 top-3 text-slate-400">🔍</span>
+                            </div>
+                            <div id="search-results-container" class="space-y-3 pt-4">
+                                <p class="text-xs text-slate-400 text-center py-6">Digite acima para pesquisar no Catecismo e em toda a plataforma.</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderFavoritos() {
+                return `
+                    <div class="max-w-3xl mx-auto space-y-8">
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-4">
+                            <h2 class="font-serif text-2xl font-bold text-mariana">Meus Favoritos (${AppState.favorites.length})</h2>
+                            <div class="space-y-3">
+                                ${AppState.favorites.length === 0 ? '<p class="text-xs text-slate-400 py-6 text-center">Nenhum favorito salvo ainda.</p>' : AppState.favorites.map(f => {
+                                    if (f.startsWith('lesson_')) {
+                                        const modId = f.replace('lesson_', '');
+                                        const mod = CatecismContentProvider.modules.find(m => m.id === modId);
+                                        if (mod) return `<div class="p-4 bg-slate-50 border rounded-2xl flex justify-between items-center"><div class="cursor-pointer" onclick="openLessonModal('${mod.id}')"><span class="text-[10px] bg-amber-100 text-amber-900 px-2 py-0.5 rounded font-bold mr-2">CATECISMO</span><span class="text-xs font-bold text-mariana">${mod.title}</span></div><button onclick="toggleFavorite('${f}')" class="text-xs text-red-500 font-bold hover:underline">Remover</button></div>`;
+                                    }
+                                    return '';
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        };
+
+        /* ==========================================
+           5. FUNÇÕES AUXILIARES E INTERAÇÕES
+           ========================================== */
+        function goToPreviousLiturgicalDay(currentDate) {
+            let d = new Date(currentDate);
+            d.setDate(d.getDate() - 1);
+            router.navigate('liturgia', d.toISOString().split('T')[0]);
+        }
+
+        function goToTodayLiturgicalDay() {
+            router.navigate('liturgia', new Date().toISOString().split('T')[0]);
+        }
+
+        function goToNextLiturgicalDay(currentDate) {
+            let d = new Date(currentDate);
+            d.setDate(d.getDate() + 1);
+            router.navigate('liturgia', d.toISOString().split('T')[0]);
+        }
+
+        function markLiturgicalRead(date) {
+            if (AppState.liturgicalRead[date]) {
+                showToast("Esta liturgia já foi lida!", "info");
+                return;
+            }
+            AppState.liturgicalRead[date] = true;
+            AppState.xp += 15;
+            if (!AppState.unlockedAchievements.includes('first_liturgy')) {
+                AppState.unlockedAchievements.push('first_liturgy');
+                showToast("🏆 Conquista: Ouvinte da Palavra!", "success");
+            }
+            saveState();
+            showToast("Liturgia lida! +15 XP", "success");
+            router.navigate('liturgia', date);
+        }
+
+        function markPrayerDone() {
+            const today = new Date().toISOString().split('T')[0];
+            if (AppState.lastPrayerDate === today) {
+                showToast("Você já concluiu a oração de hoje.", "info");
+                return;
+            }
+            const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+            const yStr = yesterday.toISOString().split('T')[0];
+            AppState.streak = (AppState.lastPrayerDate === yStr) ? AppState.streak + 1 : 1;
+            AppState.lastPrayerDate = today;
+            AppState.xp += 10;
+            saveState();
+            showToast(`Momento de oração concluído! +10 XP • Ofensiva: ${AppState.streak} dia(s)`, "success");
+            router.navigate('oracao');
+        }
+
+        function filterPrayers(category, btn) {
+            document.querySelectorAll('.prayer-filter').forEach(b => {
+                b.classList.remove('bg-mariana', 'text-white');
+                b.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            btn.classList.remove('bg-slate-100', 'text-slate-700');
+            btn.classList.add('bg-mariana', 'text-white');
+            document.querySelectorAll('.prayer-item').forEach(item => {
+                item.style.display = (!category || item.dataset.category === category) ? '' : 'none';
+            });
+        }
+
+        function openPrayerModal(id) {
+            const p = PrayerContentProvider.prayers.find(x => x.id === id);
+            if (!p) return;
+            const isFav = AppState.favorites.includes('prayer_' + id);
+            const modal = document.getElementById('modal-container');
+            modal.innerHTML = `
+                <div class="bg-white w-full max-w-2xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border relative">
+                    <div class="absolute top-6 right-6 flex gap-3">
+                        <button onclick="toggleFavorite('prayer_${p.id}')" class="text-lg" title="Favoritar">${isFav ? '⭐' : '☆'}</button>
+                        <button onclick="closeModal()" class="text-slate-400 font-bold text-xl hover:text-red-500 transition">✕</button>
+                    </div>
+                    <div class="pr-16">
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] font-bold tracking-wider uppercase">${p.category}</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana mt-3 leading-tight">${p.title}</h3>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <p class="font-serif text-base text-slate-800 leading-loose whitespace-pre-line">${p.text}</p>
+                    </div>
+                    <button onclick="closeModal(); markPrayerDone();" class="w-full py-3.5 mariana-gradient text-white rounded-xl text-xs font-bold shadow-md transition hover:scale-105">🙏 Rezei esta oração (+10 XP)</button>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function openSaintModal(id) {
+            const s = SaintContentProvider.saints.find(x => x.id === id);
+            if (!s) return;
+            const isFav = AppState.favorites.includes('saint_' + id);
+            const modal = document.getElementById('modal-container');
+            modal.innerHTML = `
+                <div class="bg-white w-full max-w-2xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border relative">
+                    <div class="absolute top-6 right-6 flex gap-3">
+                        <button onclick="toggleFavorite('saint_${s.id}')" class="text-lg" title="Favoritar">${isFav ? '⭐' : '☆'}</button>
+                        <button onclick="closeModal()" class="text-slate-400 font-bold text-xl hover:text-red-500 transition">✕</button>
+                    </div>
+                    <div class="pr-16">
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] font-bold tracking-wider uppercase">Festa: ${s.feast}</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana mt-3 leading-tight">${s.name}</h3>
+                        <p class="text-xs text-slate-500 mt-1">${s.vocation}</p>
+                    </div>
+                    <p class="font-serif text-base text-dourado italic">"${s.mainTeaching}"</p>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <p class="text-sm text-slate-700 leading-relaxed">${s.biography}</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-xl"><span class="font-bold text-slate-500 block">Padroeiro de</span><span class="text-slate-800">${s.patronage}</span></div>
+                        <div class="p-3 bg-slate-50 rounded-xl"><span class="font-bold text-slate-500 block">Fontes</span><span class="text-slate-800">${s.sources}</span></div>
+                    </div>
+                    <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200/60">
+                        <h4 class="text-xs font-bold text-amber-900 uppercase tracking-wider mb-2">Oração</h4>
+                        <p class="text-xs text-amber-800 italic leading-relaxed">${s.prayer}</p>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function activatePlan(planId) {
+            AppState.activeStudyPlan = planId;
+            if (!AppState.planProgress[planId]) AppState.planProgress[planId] = [];
+            saveState();
+            showToast("Plano ativado! Avance uma aula por dia.", "success");
+            router.navigate('planos');
+        }
+
+        /* ---- Quiz engine ---- */
+        let QuizSession = null;
+
+        function startQuiz(category) {
+            let pool = category ? QuizContentProvider.questions.filter(q => q.category === category) : [...QuizContentProvider.questions];
+            pool = pool.sort(() => Math.random() - 0.5).slice(0, 5);
+            QuizSession = { questions: pool, index: 0, correct: 0, answered: false };
+            renderQuizQuestion();
+        }
+
+        function renderQuizQuestion() {
+            const area = document.getElementById('quiz-area');
+            if (!area || !QuizSession) return;
+            const s = QuizSession;
+            if (s.index >= s.questions.length) {
+                const pct = Math.round((s.correct / s.questions.length) * 100);
+                const xp = s.correct * 10;
+                AppState.xp += xp;
+                AppState.completedQuizzes.push(Date.now());
+                if (pct >= 80 && !AppState.unlockedAchievements.includes('quiz_master')) {
+                    AppState.unlockedAchievements.push('quiz_master');
+                    showToast("🏆 Conquista: Mente Iluminada!", "success");
+                }
+                saveState();
+                area.innerHTML = `
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow text-center space-y-4">
+                        <span class="text-5xl">${pct >= 80 ? '🏆' : pct >= 50 ? '💪' : '📖'}</span>
+                        <h3 class="font-serif text-2xl font-bold text-mariana">Quiz concluído!</h3>
+                        <p class="text-sm text-slate-600">Você acertou <strong>${s.correct} de ${s.questions.length}</strong> (${pct}%) e ganhou <strong>+${xp} XP</strong>.</p>
+                        <div class="flex gap-3 justify-center pt-2">
+                            <button onclick="startQuiz(null)" class="px-6 py-3 mariana-gradient text-white rounded-xl text-xs font-bold transition hover:scale-105">🎲 Novo quiz</button>
+                            <button onclick="router.navigate('catecismo')" class="px-6 py-3 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold transition hover:bg-slate-200">Estudar mais</button>
+                        </div>
+                    </div>
+                `;
+                QuizSession = null;
+                return;
+            }
+            const q = s.questions[s.index];
+            area.innerHTML = `
+                <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-5">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-500">
+                        <span>Pergunta ${s.index + 1} de ${s.questions.length}</span>
+                        <span class="px-2.5 py-1 bg-slate-100 rounded-lg">${q.category} • ${q.difficulty}</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                        <div class="gold-gradient h-full rounded-full transition-all" style="width: ${(s.index / s.questions.length) * 100}%"></div>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl font-bold text-mariana leading-snug">${q.question}</h3>
+                    <div class="space-y-2.5" id="quiz-options">
+                        ${q.options.map((opt, i) => `
+                            <button onclick="answerQuiz(${i})" data-idx="${i}" class="quiz-opt w-full p-4 text-left rounded-2xl border border-slate-200 bg-slate-50 hover:border-mariana hover:bg-blue-50 text-sm font-semibold text-slate-700 transition">
+                                ${String.fromCharCode(65 + i)}) ${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="quiz-feedback"></div>
+                </div>
+            `;
+        }
+
+        function answerQuiz(idx) {
+            const s = QuizSession;
+            if (!s || s.answered) return;
+            s.answered = true;
+            const q = s.questions[s.index];
+            const isCorrect = idx === q.correctAnswer;
+            if (isCorrect) s.correct++;
+            document.querySelectorAll('.quiz-opt').forEach(btn => {
+                const i = parseInt(btn.dataset.idx);
+                btn.disabled = true;
+                if (i === q.correctAnswer) btn.className = 'quiz-opt w-full p-4 text-left rounded-2xl border border-emerald-400 bg-emerald-50 text-sm font-semibold text-emerald-900 transition';
+                else if (i === idx) btn.className = 'quiz-opt w-full p-4 text-left rounded-2xl border border-red-300 bg-red-50 text-sm font-semibold text-red-800 transition';
+                else btn.className = 'quiz-opt w-full p-4 text-left rounded-2xl border border-slate-200 bg-slate-50 text-sm font-semibold text-slate-400 transition';
+            });
+            document.getElementById('quiz-feedback').innerHTML = `
+                <div class="p-4 rounded-2xl ${isCorrect ? 'bg-emerald-50 border border-emerald-200' : 'bg-red-50 border border-red-200'} space-y-1.5">
+                    <p class="text-xs font-bold ${isCorrect ? 'text-emerald-800' : 'text-red-800'}">${isCorrect ? '✓ Resposta correta!' : '✗ Resposta incorreta.'}</p>
+                    <p class="text-xs text-slate-700 leading-relaxed">${q.explanation}</p>
+                    <span class="text-[10px] font-bold text-dourado">${q.ccc}</span>
+                </div>
+                <button onclick="nextQuizQuestion()" class="w-full py-3 mariana-gradient text-white rounded-xl text-xs font-bold transition hover:scale-105 mt-3">${s.index + 1 >= s.questions.length ? 'Ver resultado' : 'Próxima pergunta →'}</button>
+            `;
+        }
+
+        function nextQuizQuestion() {
+            if (!QuizSession) return;
+            QuizSession.index++;
+            QuizSession.answered = false;
+            renderQuizQuestion();
+        }
+
+        function toggleFavorite(id) {
+            if (AppState.favorites.includes(id)) {
+                AppState.favorites = AppState.favorites.filter(f => f !== id);
+                showToast("Removido dos favoritos.");
+            } else {
+                AppState.favorites.push(id);
+                showToast("Salvo nos favoritos!");
+            }
+            saveState();
+            if (router.currentRoute === 'favoritos') router.navigate('favoritos');
+            
+            // Re-render modal se estiver aberto
+            const modal = document.getElementById('modal-container');
+            if (!modal.classList.contains('hidden') && id.startsWith('lesson_')) {
+                openLessonModal(id.replace('lesson_', ''));
+            }
+        }
+
+        function openLessonModal(id) {
+            const mod = CatecismContentProvider.modules.find(m => m.id === id);
+            if (!mod) return;
+            const isDone = AppState.completedLessons.includes(id);
+            const isFav = AppState.favorites.includes('lesson_' + id);
+
+            const modal = document.getElementById('modal-container');
+            modal.innerHTML = `
+                <div class="bg-white w-full max-w-2xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border relative">
+                    <div class="absolute top-6 right-6 flex gap-3">
+                        <button onclick="toggleFavorite('lesson_${mod.id}')" class="text-lg" title="Favoritar">${isFav ? '⭐' : '☆'}</button>
+                        <button onclick="closeModal()" class="text-slate-400 font-bold text-xl hover:text-red-500 transition">✕</button>
+                    </div>
+                    
+                    <div class="pr-16">
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] font-bold tracking-wider">${mod.ccc}</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana mt-3 leading-tight">${mod.title}</h3>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <p class="text-sm text-slate-700 leading-relaxed font-medium">${mod.explanation}</p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="text-xs font-bold text-mariana uppercase tracking-wider">Pontos Principais para Guardar</h4>
+                        <ul class="list-none space-y-2">
+                            ${mod.keyPoints.map(kp => `<li class="flex items-start gap-2 text-xs text-slate-600"><span class="text-dourado font-bold mt-0.5">•</span> <span>${kp}</span></li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200/60">
+                        <h4 class="text-xs font-bold text-amber-900 uppercase tracking-wider mb-2">Reflexão Prática</h4>
+                        <p class="text-xs text-amber-800 italic leading-relaxed">"${mod.reflection}"</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-slate-100">
+                        <button onclick="completeLesson('${mod.id}')" class="w-full sm:w-auto px-6 py-3.5 ${isDone ? 'bg-emerald-700 text-white' : 'mariana-gradient text-white'} rounded-xl text-xs font-bold shadow-md transition transform hover:scale-105">
+                            ${isDone ? '✓ Módulo Concluído' : '✅ Marcar como Concluído (+25 XP)'}
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function completeLesson(id) {
+            if (!AppState.completedLessons.includes(id)) {
+                AppState.completedLessons.push(id);
+                AppState.xp += 25;
+                saveState();
+                showToast("Parabéns! Aula concluída. +25 XP", "success");
+            } else {
+                showToast("Você já havia concluído este módulo.", "info");
+            }
+            closeModal();
+            if (router.currentRoute === 'catecismo') router.navigate('catecismo');
+            if (router.currentRoute === 'progresso') router.navigate('progresso');
+            if (router.currentRoute === 'home') router.navigate('home');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal-container');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function handleSearch(query) {
+            if (!query || query.length < 2) return;
+            router.navigate('pesquisa');
+            setTimeout(() => {
+                const input = document.getElementById('search-box-input');
+                if (input) { input.value = query; executeSearch(query); }
+            }, 50);
+        }
+
+        function executeSearch(query) {
+            const container = document.getElementById('search-results-container');
+            if (!query || query.length < 2) {
+                container.innerHTML = `<p class="text-xs text-slate-400 text-center py-6">Digite acima para pesquisar.</p>`;
+                return;
+            }
+
+            const q = query.toLowerCase();
+            const matchedModules = CatecismContentProvider.modules.filter(m => 
+                m.title.toLowerCase().includes(q) || 
+                m.description.toLowerCase().includes(q) || 
+                m.explanation.toLowerCase().includes(q) ||
+                m.ccc.toLowerCase().includes(q)
+            );
+
+            let html = '';
+            if (matchedModules.length > 0) {
+                html += `<h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">Catecismo da Igreja Católica (${matchedModules.length})</h4>`;
+                matchedModules.forEach(m => {
+                    html += `
+                        <div onclick="openLessonModal('${m.id}')" class="p-4 bg-white border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50 transition mb-2 shadow-sm">
+                            <span class="text-[10px] text-amber-600 font-bold block mb-1">${m.ccc}</span>
+                            <span class="text-sm font-bold text-mariana">${m.title}</span>
+                            <p class="text-xs text-slate-500 mt-1 line-clamp-1">${m.description}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            if (!html) html = `<p class="text-xs text-slate-400 text-center py-6">Nenhum resultado encontrado para "${query}".</p>`;
+            container.innerHTML = html;
+        }
+
+        window.onload = function() {
+            loadState();
+            router.navigate('home');
+        };
+    </script>
+</body>
+</html>

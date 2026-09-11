@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-11",
+  "year": 2026,
+  "month": 7,
+  "day": 11,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/11.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-11.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-11",
+      "name": "São Bento abade, Padroeiro da Europa",
+      "normalizedName": "sao bento abade, padroeiro da europa",
+      "imageUrl": "./assets/img/santos/07-11-sao-bento-abade-padroeiro-da-europa.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/11/s--bento-abade--padroeiro-da-europa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/11/s--bento-abade--padroeiro-da-europa.html",
+      "sourceText": "Bento é fundador da Ordem Beneditina, Padroeiro da Europa e Patriarca do monacato ocidental. Sua vida reflete-se fielmente na “Regra”, cujo espírito se resume no lema “Ora et labora”, onde ele indica aos monges os meios para seguir seu caminho. A festa de São Bento celebra-se em 11 de julho.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-11",
+      "name": "São Pio I, papa",
+      "normalizedName": "sao pio i, papa",
+      "imageUrl": "./assets/img/santos/07-11-sao-pio-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Aquileia, Papa Pio I, em 15 anos de pontificado, teve que enfrentar a heresia do gnóstico Marcião, que contrapunha Deus do Antigo Testamento com Cristo. Estabeleceu normas para a conversão dos Judeus e determinou o modo para calcular a data da Páscoa. Pio I faleceu no ano 155.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

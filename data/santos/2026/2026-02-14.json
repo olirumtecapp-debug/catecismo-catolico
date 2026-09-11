@@ -1,0 +1,56 @@
+{
+  "date": "2026-02-14",
+  "year": 2026,
+  "month": 2,
+  "day": 14,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/14.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-14.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-14",
+      "name": "SS. Cirilo, monge e Metódio, bispo - PADROEIROS DA EUROPA",
+      "normalizedName": "ss. cirilo, monge e metodio, bispo - padroeiros da europa",
+      "imageUrl": "./assets/img/santos/02-14-ss-cirilo-monge-e-metodio-bispo-padroeiros-da.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/14/ss--cirilo--monge-e-metodio--bispo---padroeiros-da-europa-.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/14/ss--cirilo--monge-e-metodio--bispo---padroeiros-da-europa-.html",
+      "sourceText": "Há quase 40 anos protegem a Europa que contribuíram para evangelizar há mais de mil anos. Aos Santos, e irmãos, Cirilo e Metódio, se deve a difusão da mensagem cristã, em particular no leste europeu, e a importância desta missão levou João Paulo II a proclamá-los “Co-patronos” do continente.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-14",
+      "name": "São Valentim, mártir, na via Flaminia",
+      "normalizedName": "sao valentim, martir, na via flaminia",
+      "imageUrl": "./assets/img/santos/02-14-sao-valentim-martir-na-via-flaminia.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/14/s--valentim--martir--na-via-flaminia.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/14/s--valentim--martir--na-via-flaminia.html",
+      "sourceText": "Considerado o Santo protetor dos namorados, São Valentim é um dos santos mais populares. É Padroeiro de Terni e sua festa é celebrada em 14 de fevereiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-14",
+      "name": "São Zenão, mártir, na via Ápia",
+      "normalizedName": "sao zenao, martir, na via apia",
+      "imageUrl": "./assets/img/santos/02-14-sao-zenao-martir-na-via-apia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Zeno foi indicado como presbítero pelo Papa Pascoal I, que transferiu seus restos mortais para o Oratório a ele dedicado na Basílica de Santa Praxedes, em Roma. O Santo era venerado, no século VII, em um lóculo da catacumba de Pretextato, ao longo da Via Ápia, depois restaurado por Adriano I.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

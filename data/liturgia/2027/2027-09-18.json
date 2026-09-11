@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-18",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "24a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Timóteo 6,13-16",
+      "text": "Caríssimo: 13Diante de Deus, que dá a vida a todas as coisas, e de Cristo Jesus, que deu o bom testemunho da verdade perante Pôncio Pilatos, eu te ordeno: 14guarda o teu mandato íntegro e sem mancha até à manifestação gloriosa de nosso Senhor Jesus Cristo. 15Esta manifestação será feita no tempo oportuno pelo bendito e único Soberano, o Rei dos reis e Senhor dos senhores, 16o único que possui a imortalidade e que habita numa luz inacessível, que nenhum homem viu, nem pode ver. A ele, honra e poder eterno. Amém."
+    },
+    "psalm": {
+      "reference": "Salmo 99 (100)",
+      "text": "- Aclamai o Senhor, ó terra inteira, servi ao Senhor com alegria, ide a ele cantando jubilosos!\n\n- Sabei que o Senhor, só ele, é Deus, Ele mesmo nos fez, e somos seus, nós somos seu povo e seu rebanho.\n\n- Entrai por suas portas dando graças, e em seus átrios com hinos de louvor; dai-lhe graças, seu nome bendizei!\n\n- Sim, é bom o Senhor e nosso Deus, sua bondade perdura para sempre, seu amor é fiel eternamente!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 8, 4-15",
+      "text": "Naquele tempo: 4Reuniu-se uma grande multidão, e de todas as cidades iam ter com Jesus. Então ele contou esta parábola: 5'O semeador saiu para semear a sua semente. Enquanto semeava, uma parte caiu à beira do caminho; foi pisada e os pássaros do céu a comeram. 6Outra parte caiu sobre pedras; brotou e secou, porque não havia umidade. 7Outra parte caiu no meio de espinhos; os espinhos cresceram juntos, e a sufocaram. 8Outra parte caiu em terra boa; brotou e deu fruto, cem por um.' Dizendo isso, Jesus exclamou: 'Quem tem ouvidos para ouvir, ouça.' 9Os discípulos lhe perguntaram o significado dessa parábola. 10Jesus respondeu: 'A vós foi dado conhecer os mistérios do Reino de Deus. Mas aos outros, só por meio de parábolas, para que olhando não vejam, e ouvindo não compreendam. 11A parábola quer dizer o seguinte: A semente é a Palavra de Deus. 12Os que estão à beira do caminho são aqueles que ouviram, mas, depois, vem o diabo e tira a Palavra do coração deles, para que não acreditem e não se salvem. 13Os que estão sobre a pedra são aqueles que, ouvindo, acolhem a Palavra com alegria. Mas eles não têm raiz: por um momento acreditam; mas na hora da tentação voltam atrás. 14Aquilo que caiu entre os espinhos são os que ouvem, mas, com o passar do tempo, são sufocados pelas preocupações, pela riqueza e pelos prazeres da vida, e não chegam a amadurecer. 15E o que caiu em terra boa são aqueles que, ouvindo com um coração bom e generoso, conservam a Palavra, e dão fruto na perseverança."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Gregório Magno (c. 540-604)<br/>",
+    "</b>",
+    "Papa, Doutor da Igreja<br/>",
+    "Homilias sobre o Evangelho<br/>",
+    "Dar fruto pela perseverança<br/>",
+    "Vigiai para que a palavra que recebestes ressoe no fundo do vosso coração e aí permaneça. Tende cuidado para que a semente não caia ao longo do caminho, e o espírito mau não venha apagar a palavra da vossa memória. [...] Tende cuidado para que o chão pedregoso não receba a semente e não produza uma boa acção desprovida das raízes da perseverança. Com efeito, muitos se alegram ao ouvir a palavra e se dispõem a empreender boas obras. Mas mal as provações começaram a apertar, renunciam ao que tinham empreendido. Assim é o solo pedregoso ao qual faltou a água, de tal forma que o germe da semente não chegou a dar o fruto da perseverança.<br/>",
+    "Mas a terra boa dá fruto pela paciência: entendamos por isso que as nossas boas obras podem ter valor se suportarmos pacientemente os inconvenientes que o nosso próximo nos provoca. Aliás, quanto mais avançamos para a perfeição, mais provas temos de suportar; uma vez que a nossa alma abandonou o amor do mundo presente, cresce a hostilidade desse mundo. É por isso que vemos muitos que penam sob um pesado fardo (Mt 11,28), embora as suas obras sejam boa. […] Mas, de acordo com a palavra do Senhor, «produzem fruto pela perseverança» suportando humildemente essas provas, de tal forma que, após terem penado, serão convidados a entrar na paz do céu.<br/>"
+  ]
+}

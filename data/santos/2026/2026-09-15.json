@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-15",
+  "year": 2026,
+  "month": 9,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-15",
+      "name": "São Nicomedes, mártir, na via Nomentana",
+      "normalizedName": "sao nicomedes, martir, na via nomentana",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nicomedes, sacerdote romano, na época de Domiciano, século I, enterrava os cristãos, vítimas das perseguições. Por isso, foi preso, e, ao se recusar a oferecer sacrifícios aos deuses, foi assassinado e jogado no rio Tibre, em Roma. Seu corpo, recolhido por um clérigo, foi enterrado na Via Nomentana.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "name": "São Catarina Fieschi de Gênova, viúva",
+      "normalizedName": "sao catarina fieschi de genova, viuva",
+      "imageUrl": "./assets/img/santos/09-15-sao-catarina-fieschi-de-genova-viuva.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Catarina, descendente da importante família Fieschi, tinha uma irmã freira, com a qual manteve um encontro decisivo: mudou de vida para se dedicar aos pobres, sobretudo, aos doentes de sífilis. Fundadora da Companhia das Damas da Misericórdia, Santa Catarina faleceu de peste, em 1510.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

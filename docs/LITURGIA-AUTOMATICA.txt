@@ -1,0 +1,48 @@
+CATECISMO — AUTOMACAO DA LITURGIA
+
+O pacote adiciona uma rotina que:
+- detecta o ano atual em America/Sao_Paulo;
+- verifica o ano atual e o ano seguinte;
+- preserva um ano que ja tenha todos os dias em JSON;
+- gera apenas uma base ausente/incompleta;
+- usa a ordem de fontes ja validada no projeto: API Liturgia -> Lirio Catolico -> OSA Brasil;
+- valida a estrutura dos JSONs antes de considerar a atualizacao concluida;
+- pode ser executada manualmente.
+
+ARQUIVOS
+scripts/build-liturgia.mjs
+  Importador principal ja usado no projeto.
+
+scripts/atualizar-liturgia.mjs
+  Automatiza a verificacao e a geracao do ano atual + proximo ano.
+
+scripts/verificar-liturgia.mjs
+  Confere quantidade de dias e campos minimos de cada JSON.
+
+.github/workflows/atualizar-liturgia.yml
+  Workflow do GitHub Actions: roda automaticamente no primeiro dia de cada mes e tambem manualmente.
+
+INSTALACAO LOCAL
+1) Extraia o ZIP na raiz de D:\Catecismo (mesclando as pastas).
+2) Confirme que existem:
+   D:\Catecismo\scripts\atualizar-liturgia.mjs
+   D:\Catecismo\scripts\verificar-liturgia.mjs
+   D:\Catecismo\.github\workflows\atualizar-liturgia.yml
+3) Na raiz do projeto execute:
+   node .\scripts\atualizar-liturgia.mjs
+
+TESTE FORCADO DE UM ANO
+   node .\scripts\atualizar-liturgia.mjs --year 2027 --force
+
+VALIDACAO MANUAL
+   node .\scripts\verificar-liturgia.mjs 2026
+
+AUTOMACAO NO GITHUB
+O arquivo .github/workflows/atualizar-liturgia.yml precisa estar no branch padrao.
+Ele usa schedule + workflow_dispatch. O workflow grava no repositorio qualquer nova pasta/JSON de liturgia gerada e faz push.
+
+IMPORTANTE
+- O banco da Biblia nao e alterado por estes scripts.
+- O updater nao substitui um ano que ja esteja completo, salvo com --force.
+- Se uma fonte falhar e nao houver fallback suficiente, a validacao falha e o workflow nao faz commit de uma base invalida.
+- O workflow pressupoe que o repositorio permite que GITHUB_TOKEN faca push no branch padrao. Se houver branch protection, o push devera ser ajustado.

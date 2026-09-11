@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-16",
+  "year": 2026,
+  "month": 5,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-16",
+      "name": "São Alexandre, bispo de Jerusalém e mártir",
+      "normalizedName": "sao alexandre, bispo de jerusalem e martir",
+      "imageUrl": "./assets/img/santos/05-16-sao-alexandre-bispo-de-jerusalem-e-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/16/s--alexandre--bispo-de-jerusalem-e-martir.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/16/s--alexandre--bispo-de-jerusalem-e-martir.html",
+      "sourceText": "Natural da Capadócia, Alexandre tornou-se bispo da Cidade Santa de Jerusalém, da qual cuidou e fundou uma biblioteca e uma escola. Ao retornar as perseguições contra os cristãos, sob o império de Décio, foi preso e morreu de fome no cárcere, no ano 250. Santo Alexandre é venerado como mártir.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-16",
+      "name": "São Ubaldo, bispo de Gúbio",
+      "normalizedName": "sao ubaldo, bispo de gubio",
+      "imageUrl": "./assets/img/santos/05-16-sao-ubaldo-bispo-de-gubio.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Ubaldo nasceu na Alemanha entre 1084/85. Ao tornar-se órfão, transferiu-se para Gúbio, na Itália, onde foi Prior e, depois, Bispo por 31 anos; salvou a cidade em vários períodos de crise, chegando a convencer Frederico Barbarossa a acabar com o assédio. Santo Ubaldo foi canonizado em 1192.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

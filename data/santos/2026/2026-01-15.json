@@ -1,0 +1,56 @@
+{
+  "date": "2026-01-15",
+  "year": 2026,
+  "month": 1,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-15",
+      "name": "São Paulo, primeiro eremita",
+      "normalizedName": "sao paulo, primeiro eremita",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sabe-se pouco sobre a vida de Paulo, um dos primeiros eremitas cristãos. Viveu no Egito, entre os séculos III e IV, mas fugiu para o deserto por causa da perseguição de Décio. Segundo a tradição, ainda existe uma sua cela em um santuário diante do Monte Sinai. Faleceu após 60 anos de vida solitária.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-15",
+      "name": "São Amaro, abade",
+      "normalizedName": "sao amaro, abade",
+      "imageUrl": "./assets/img/santos/01-15-sao-amaro-abade.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Mauro ou Amaro, filho de um patrício romano, foi confiado a São Bento de Núrsia, do qual era o discípulo favorito. Tornou-se abade de Subiaco e fundou um Mosteiro na França. Nele se inspirou a nova Congregação beneditina de São Mauro, exterminada na Revolução Francesa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-15",
+      "name": "São João Calibita, monge",
+      "normalizedName": "sao joao calibita, monge",
+      "imageUrl": "./assets/img/santos/01-15-sao-joao-calibita-monge.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "João, filho de aristocratas, viveu em Constantinopla, no século V. Com apenas 12 anos, fugiu para um mosteiro dos Acemitas, cuja regra de vida é o Evangelho, que sempre carregam consigo. Após alguns anos, porém, começou a viver uma vida de mendicante sem ser reconhecido, diante da casa paterna.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

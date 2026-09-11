@@ -1,0 +1,43 @@
+{
+  "date": "2026-01-05",
+  "year": 2026,
+  "month": 1,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-05",
+      "name": "São Eduardo, rei da Inglaterra",
+      "normalizedName": "sao eduardo, rei da inglaterra",
+      "imageUrl": "./assets/img/santos/01-05-sao-eduardo-rei-da-inglaterra.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Foi coroado Rei da Inglaterra em 1043. Muito amado pelo povo, Eduardo era um soberano de profunda oração, sereno e gentil: promoveu a paz e aboliu as taxas de guerra para ajudar os mais pobres. Construiu um mosteiro, que se tornou o primeiro núcleo da Abadia de Westminster.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-05",
+      "name": "São João Nepomuceno Neumann, bispo de Filadélfia nos Estados Unidos",
+      "normalizedName": "sao joao nepomuceno neumann, bispo de filadelfia nos estados unidos",
+      "imageUrl": "./assets/img/santos/01-05-sao-joao-nepomuceno-neumann-bispo-de-filadelf.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sacerdote boêmio, viveu nos Estados Unidos (1811-1860). Desempenhou seu ministério entre os pobres e migrantes. Entrou para a Congregação dos Redentoristas e tornou-se Bispo de Filadélfia, onde construiu igrejas e escolas, sobretudo nas periferias. Escreveu um Catecismo para Jovens.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

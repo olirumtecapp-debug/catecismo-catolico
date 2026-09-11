@@ -1,0 +1,43 @@
+{
+  "date": "2026-01-27",
+  "year": 2026,
+  "month": 1,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-27",
+      "name": "Santa Ângela Mérici, virgem, fundadora das Ursulinas",
+      "normalizedName": "santa angela merici, , fundadora das ursulinas",
+      "imageUrl": "",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/27/s--angela-merici--virgem--fundadora-das-ursulinas.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/27/s--angela-merici--virgem--fundadora-das-ursulinas.html",
+      "sourceText": "Santa Ângela Mérici viveu no século XVI e entrou para a história por sua visão emancipada da vida consagrada feminina. A Companhia de Santa Úrsula (Ursulinas), que fundou em 1535, em Brescia, foi a primeira Congregação secular feminina da Igreja. É celebrada em 27 de janeiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-27",
+      "name": "São Vitaliano, papa",
+      "normalizedName": "sao vitaliano, papa",
+      "imageUrl": "./assets/img/santos/01-27-sao-vitaliano-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Como Papa, de 657 a 672, esforçou-se para resolver os conflitos entre a Igreja de Roma e a do Oriente e para restabelecer o diálogo com o imperador, sem êxito algum. Deu novo impulso ao cristianismo britânico com a nomeação de novos Bispos. Foi sepultado na antiga basílica de San Pietro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

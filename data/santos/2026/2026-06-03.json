@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-03",
+  "year": 2026,
+  "month": 6,
+  "day": 3,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/03.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-03.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-03",
+      "name": "SS. Carlos Lwanga e Companheiros, mártires de Uganda",
+      "normalizedName": "ss. carlos lwanga e companheiros, de uganda",
+      "imageUrl": "./assets/img/santos/06-03-ss-carlos-lwanga-e-companheiros-martires-de-u.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/03/ss--carlos-lwanga-e-companheiros--martires-de-uganda.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/03/ss--carlos-lwanga-e-companheiros--martires-de-uganda.html",
+      "sourceText": "Assassinados por ódio à fé, São Carlos Lwanga e seus Companheiros, católicos e anglicanos, são os mártires mais famosos de Uganda, vítimas das perseguições anticristãs no país, perpetradas no final do século XIX. São recordados pela Igreja no dia em que foram queimados vivos, na colina Namugongo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Santa Clotilde, rainha da França",
+      "normalizedName": "santa clotilde, rainha da franca",
+      "imageUrl": "./assets/img/santos/06-03-santa-clotilde-rainha-da-franca.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nascida em Lyon, em 474, casou-se com Clóvis, rei dos Francos. O soberano, que era pagão, permitiu-lhe batizar seus cinco filhos, que, com a sua morte, brigaram pela sua sucessão. Clotilde retirou-se para Tour, cidade de São Martinho, onde se dedicou às obras de caridade e orações por seus filhos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

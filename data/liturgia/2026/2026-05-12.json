@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "6a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 16,22-34",
+      "text": "Naqueles dias: 22A multidão dos filipenses levantou-se contra Paulo e Silas; e os magistrados, depois de lhes rasgarem as vestes, mandaram açoitar os dois com varas. 23Depois de açoitá-los bastante, lançaram-nos na prisão, ordenando ao carcereiro que os guardasse com toda a segurança. 24Ao receber essa ordem, o carcereiro levou-os para o fundo da prisão e prendeu os pés deles no tronco. 25À meia noite, Paulo e Silas estavam rezando e cantando hinos a Deus. Os outros prisioneiros os escutavam. 26De repente, houve um terremoto tão violento que sacudiu os alicerces da prisão. Todas as portas se abriram e as correntes de todos se soltaram. 27O carcereiro acordou e viu as portas da prisão abertas. Pensando que os prisioneiros tivessem fugido, puxou da espada e estava para suicidar-se. 28Mas Paulo gritou com voz forte: 'Não te faças mal algum! Nós estamos todos aqui.' 29Então o carcereiro pediu tochas, correu para dentro e, tremendo, caiu aos pés de Paulo e Silas. 30Conduzindo-os para fora, perguntou: 'Senhores, que devo fazer para ser salvo?' 31Paulo e Silas responderam: 'Crê no Senhor Jesus, e sereis salvos tu e todos os de tua família.' 32Então Paulo e Silas anunciaram a Palavra do Senhor ao carcereiro e a todos os da sua família. 33Na mesma hora da noite, o carcereiro levou-os consigo para lavar as feridas causadas pelos açoites. E, imediatamente, foi batizado junto com todos os seus familiares. 34Depois fez Paulo e Silas subirem até sua casa, preparou-lhes um jantar e alegrou-se com todos os seus familiares por ter acreditado em Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 137 (138)",
+      "text": "- Ó Senhor, de coração eu vos dou graças, porque ouvistes as palavras dos meus lábios! Perante os vossos anjos vou cantar-vos e ante o vosso templo vou prostrar-me.\n\n- Eu agradeço vosso amor, vossa verdade, porque fizestes muito mais que prometestes; naquele dia em que gritei, vós me escutastes e aumentastes o vigor da minha alma.\n\n- Estendereis o vosso braço em meu auxílio e havereis de me salvar com vossa destra. Completai em mim a obra começada; ó Senhor, vossa bondade é para sempre! Eu vos peço: não deixeis inacabada esta obra que fizeram vossas mãos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 16, 5-11",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 5Agora, parto para aquele que me enviou, e nenhum de vós me pergunta:'Para onde vais?' 6Mas, porque vos disse isto, a tristeza encheu os vossos corações. 7No entanto, eu vos digo a verdade: É bom para vós que eu parta; se eu não for, não virá até vós o Defensor; mas, se eu me for, eu vo-lo mandarei. 8E quando vier, ele demonstrará ao mundo em que consistem o pecado, a justiça e o julgamento: 9o pecado, porque não acreditaram em mim; 10a justiça, porque vou para o Pai, de modo que não mais me vereis; 11e o julgamento, porque o chefe deste mundo já está condenado."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Bernardo, monge cisterciense, Doutor da Igreja<br/>",
+    "</b>",
+    "3.º sermão para o Pentecostes<br/>",
+    "«É do vosso interesse que Eu vá»<br/>",
+    "O Espírito Santo estendeu a sua sombra sobre a Virgem Maria (Lc 1,35) e, no dia de Pentecostes, fortificou os apóstolos; a Ela, fê-lo para suavizar o efeito da vinda da divindade ao seu corpo virginal e a eles, para os revestir com a força do alto (cf Lc 24,49), isto é, com a mais ardente caridade. [...] Como teriam eles, na sua fraqueza, podido cumprir a sua missão de triunfar sobre a morte sem esse amor mais forte que a morte, e de não permitir que as portas do abismo prevalecessem sobre eles sem esse amor mais inflexível que o abismo (cf Mt 16,18; Cant 8,6)? Ao ver esse zelo, alguns julgaram-nos ébrios (cf At 2,13). Efetivamente, estavam ébrios, mas de um vinho novo [...], aquele que a «verdadeira videira» deixara derramar do alto do Céu, aquele que «alegra o coração do homem» (Jo 15,1; Sl 103,15). [...] Era um vinho novo para os habitantes da Terra, mas que no Céu se encontrava em abundância [...], jorrava em golfadas pelas ruas e pelas praças da cidade santa, por onde espalhava a alegria do coração. [...]<br/>",
+    "Havia no Céu um vinho especial que a Terra desconhecia. Mas a Terra tinha também alguma coisa que lhe era própria e que era a sua glória - a carne de Cristo - e o Céu tinha uma grande sede da presença dessa carne. Quem poderia, pois, impedir essa troca tão certa e tão rica em graça entre o Céu e a Terra, entre os anjos e os apóstolos, de forma que a Terra possuísse o Espírito Santo e o Céu a carne de Cristo? [...] «Se Eu não for, o Paráclito não virá a vós», disse Jesus. Quer dizer, se não deixais partir aquilo que amais, não obtereis o que desejais. «É melhor para vós que Eu vá» e que vos transporte da Terra ao Céu, da carne ao espírito; pois o Pai é espírito, o Filho é espírito e o Espírito Santo é também espírito. [...] E o Pai «é espírito; por isso, os que O adoram devem adorá-l'O em espírito e verdade» (Jo 4,23-24).<br/>"
+  ]
+}

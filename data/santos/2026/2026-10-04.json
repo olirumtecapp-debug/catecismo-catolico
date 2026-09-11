@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-04",
+  "year": 2026,
+  "month": 10,
+  "day": 4,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/04.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-04.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-04",
+      "name": "São Francisco de Assis, fundador da Ordem franciscana, Padroeiro da Itália",
+      "normalizedName": "sao francisco de assis, fundador",
+      "imageUrl": "./assets/img/santos/10-04-sao-francisco-de-assis-fundador-da-ordem-fran.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/04/s--francisco-de-assis--fundador-da-ordem-franciscana--padroeiro-.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/04/s--francisco-de-assis--fundador-da-ordem-franciscana--padroeiro-.html",
+      "sourceText": "É um dos santos mais amados. Recordado em 4 de outubro, há 800 anos São Francisco de Assis é um farol para a Igreja pela sua plena adesão ao Evangelho, que lhe conferiu o nome de “alter Christus”: a escolha da pobreza para encontrar o Senhor, o amor a Deus Pai e aos irmãos, o respeito pela criação.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

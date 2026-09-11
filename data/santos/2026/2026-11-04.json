@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-04",
+  "year": 2026,
+  "month": 11,
+  "day": 4,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/04.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-04.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-04",
+      "name": "São Carlos Borromeu, arcebispo de Milão e cardeal",
+      "normalizedName": "sao carlos borromeu, arcebispo de milao e cardeal",
+      "imageUrl": "./assets/img/santos/11-04-sao-carlos-borromeu-arcebispo-de-milao-e-card.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/04/s--carlos-borromeu--arcebispo-de-milao-e-cardeal.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/04/s--carlos-borromeu--arcebispo-de-milao-e-cardeal.html",
+      "sourceText": "Recebeu o chapéu cardinalício aos 22 anos. O \"cardeal-menino\", descendente de uma família nobre da Lombardia, do século XVI, aproveitou da vida até à morte do seu irmão, quando descobriu o amor de Deus. Convenceu o Papa a retomar o Concílio de Trento. Como Bispo foi um “motor” de caridade com todos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "name": "SS. Vital e Agrícola, mártires de Bolonha",
+      "normalizedName": "ss. vital e agricola, de bolonha",
+      "imageUrl": "./assets/img/santos/11-04-ss-vital-e-agricola-martires-de-bolonha.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Estes Santos viveram entre os séculos III e IV. Agrícola era cristão de Bolonha e Vital era seu servo, que o seguiu em sua conversão. Perseguido por ser cristão, Vital foi preso por primeiro e torturado sob os olhos do seu patrão. Este, por sua vez, também aceitou o martírio com coragem.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

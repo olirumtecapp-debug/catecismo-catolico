@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-10",
+  "year": 2026,
+  "month": 10,
+  "day": 10,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/10.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-10.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-10",
+      "name": "São Paulino, bispo de York, discípulo de S. Gregório Magno",
+      "normalizedName": "sao paulino, bispo de york, discipulo de s. gregorio magno",
+      "imageUrl": "./assets/img/santos/10-10-sao-paulino-bispo-de-york-discipulo-de-s-greg.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "O monge Paulino foi enviado pelo Papa São Gregório Magno a re-evangelizar a Grã-Bretanha, onde predominavam os povos pagãos, como os Anglos e Saxões. Ao ser consagrado Bispo de Iorque, Paulino conseguiu até converter o rei, graças à sua \"gradual cristianização\". São Paulino faleceu no ano 664.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "name": "SS. Daniel, Samuel e Companheiros, primeiros mártires franciscanos",
+      "normalizedName": "ss. daniel, samuel e companheiros, primeiros franciscanos",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "A Ordem dos Frades Menores enviou, em 1227, sete confrades para pregar o Evangelho aos Mouros, no Marrocos: Daniel, Samuel, Ângelo, Donolo, Leão, Nicolau e Hugolino, que foram martirizados por não renunciar à sua fé. Conhecidos como Mártires de Ceuta, foram canonizados por Leão X, em 1516.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

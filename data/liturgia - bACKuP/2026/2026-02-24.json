@@ -1,0 +1,27 @@
+{
+  "date": "2026-02-24",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Is 55:10-11",
+    "psalm": "Sl 34:4-5, 6-7, 16-17, 18-19",
+    "secondReading": "",
+    "gospel": "Mt 6:7-15"
+  },
+  "calendar": {
+    "date": "2026-02-24",
+    "monthDay": "2/24",
+    "season": "Lent",
+    "celebration": {
+      "name": "Tuesday of the 1st week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/02-24.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/02-24.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-02-24"
+  }
+}

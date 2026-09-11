@@ -1,0 +1,32 @@
+{
+  "date": "2027-06-01",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Justino",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Tobias 2,9-14",
+      "text": "Eu, Tobias, na noite de Pentecostes, depois de ter sepultado um morto, 9tomei banho, entrei no pátio de minha casa e deitei-me, junto à parede do pátio, deixando o rosto descoberto por causa do calor. 10Não sabia que, na parede, por cima de mim, havia pardais aninhados. Seu excremento quente caiu nos meus olhos e provocou manchas brancas. Fui procurar os médicos para me tratarem. Quanto mais remédios me aplicavam, mais meus olhos se obscureciam com as manchas, até que fiquei completamente cego. Durante quatro anos estive privado da vista. Todos os meus irmãos se afligiram por minha causa. Aicar cuidou do meu sustento, durante dois anos, até que partiu para Elimaida. 11Naquela ocasião, Ana, minha mulher, dedicou-se a trabalhos femininos, tecendo ló. 12Entregava o produto aos patrões e estes lhe pagavam o salário No sétimo dia do mês de Distros, ela separou a peça de tecido que estava pronta, e mandou-a aos patrões. Estes pagaram-lhe todo o salário e ainda lhe deram um cabrito para a mesa. 13Quando entrou em minha casa, o cabrito começou a balar. Chamei minha mulher e perguntei-lhe: 'De onde vem este cabrito? Não terá sido roubado? Devolve-o a seus donos, pois não temos o direito de comer coisa alguma roubada'. 14Ela respondeu-me: 'É um presente que me foi dado além do salário'. Mas não acreditei nela e insisti que o devolvesse aos patrões, ficando bastante contrariado por causa disso. Ela então replicou: 'Onde estão as tuas esmolas? Onde estão as tuas obras de justiça? Vê-se bem em ti o que elas são!'"
+    },
+    "psalm": {
+      "reference": "Salmo 111 (112)",
+      "text": "- Feliz o homem que respeita o Senhor e que ama com carinho a sua lei! Sua descendência será forte sobre a terra, abençoada a geração dos homens retos!\n\n- Ele não teme receber notícias más: confiando em Deus, seu coração está seguro. Seu coração está tranqüilo e nada teme, e confusos há de ver seus inimigos.\n\n- Ele reparte com os pobres os seus bens, permanece para sempre o bem que fez, e crescerão a sua glória e seu poder."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 12, 13-17",
+      "text": "Naquele tempo: 13As autoridades mandaram alguns fariseus e alguns partidários de Herodes, para apanharem Jesus em alguma palavra. 14Quando chegaram, disseram a Jesus: 'Mestre, sabemos que tu és verdadeiro, e não dás preferência a ninguém. Com efeito, tu não olhas para as aparências do homem, mas ensinas, com verdade, o caminho de Deus. Dize-nos: É lícito ou não pagar o imposto a César? Devemos pagar ou não?' 15Jesus percebeu a hipocrisia deles, e respondeu: 'Por que me tentais? Trazei-me uma moeda para que eu a veja.' 16Eles levaram a moeda, e Jesus perguntou: 'De quem é a figura e a inscrição que está nessa moeda?' Eles responderam: 'É de César.' 17Então Jesus disse: 'Dai, pois, a César o que é de César, e a Deus o que é de Deus.' E eles ficaram admirados com Jesus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Atanásio <br/>",
+    "</b>",
+    "Bispo de Alexandria, Doutor da Igreja <br/>",
+    "Sobre a Encarnação do Verbo, 13<br/>",
+    "Cristo é a imagem de Deus invisível; nele temos a redenção e a remissão dos pecados (Col 1,14.15)<br/>",
+    "Dado que os homens se tornaram insensatos e que o engano dos demónios lançou sobre eles uma sombra que escondeu o conhecimento do verdadeiro Deus, o que haveria Deus de fazer? Calar-Se perante uma situação destas? Aceitar que os homens se extraviassem e não O conhecessem? [...] Deus não podia permitir que as suas criaturas se extraviassem para longe dele e fossem sujeitas ao nada, sobretudo se este extravio se tornasse para eles causa de ruína e perdição, quando os seres que participaram na imagem de Deus (Gn 1,26) não devem perecer. Que é pois necessário que Deus faça? Que fazer, senão renovar neles a sua imagem, a fim de que os homens possam de novo conhecê-lo? <br/>",
+    "Mas como fazer isto, a não ser pela presença da imagem do próprio Deus (Col 1,15), o nosso Salvador Jesus Cristo? Tal não é realizável pelos homens, porque eles não são a imagem, mas criados segundo a imagem; também não é realizável pelos anjos, porque nem eles são imagens. Foi por isso que o Verbo de Deus, Ele que é a imagem do Pai, veio até nós, a fim de estar em condições de restaurar a imagem no fundo do ser dos homens. Por outro lado, tal não poderia produzir-se se a morte e a degradação que a segue não fossem destruídas. Foi por isso que Ele tomou um corpo mortal, a fim de poder destruir a morte e restaurar os homens, feitos à imagem de Deus. Assim, pois, a imagem do Pai, o seu santíssimo Filho, veio até nós para renovar o homem feito à sua semelhança e para vir ao encontro dele, que estava perdido, oferecendo-lhe a remissão dos seus pecados, como Ele próprio disse: «Eu vim procurar e salvar o que estava perdido» (Lc 19,10). <br/>"
+  ]
+}

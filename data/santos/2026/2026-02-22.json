@@ -1,0 +1,43 @@
+{
+  "date": "2026-02-22",
+  "year": 2026,
+  "month": 2,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-22",
+      "name": "São Maximiano de Ravena, bispo",
+      "normalizedName": "sao maximiano de ravena, bispo",
+      "imageUrl": "./assets/img/santos/02-22-sao-maximiano-de-ravena-bispo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Ístria, Maximiano foi nomeado primeiro arcebispo de Ravena pelo imperador Justiniano; durante dez anos, desempenhou também a função de Primaz da Itália, quando o Papa se ausentava. A ele devemos algumas obras-primas, como as igrejas de São Miguel e São Vital, e a derrota do Arianismo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-22",
+      "name": "São Margarida de Cortona",
+      "normalizedName": "sao margarida de cortona",
+      "imageUrl": "./assets/img/santos/02-22-sao-margarida-de-cortona.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Margarida nasceu em 1247, como camponesa pobre. Tornou-se amante de um nobre de Montepulciano, com quem teve um filho. Quando o homem morreu, ficou sem nada. Atraída pela vida franciscana, converteu-se e dedicou-se aos enfermos. Fundou o primeiro hospital para pobres em Cortona. Ali faleceu em 1297.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

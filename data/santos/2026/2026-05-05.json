@@ -1,0 +1,30 @@
+{
+  "date": "2026-05-05",
+  "year": 2026,
+  "month": 5,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-05",
+      "name": "São Núncio Sulprício, jovem operário de Nápoles",
+      "normalizedName": "sao nuncio sulpricio, jovem operario de napoles",
+      "imageUrl": "./assets/img/santos/05-05-sao-nuncio-sulpricio-jovem-operario-de-napole.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/05/s--nuncio-sulpricio--jovem-operario-de-napoles.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/05/s--nuncio-sulpricio--jovem-operario-de-napoles.html",
+      "sourceText": "Núncio faleceu em 1836, com apenas 19 anos, por ter sido um operário explorado, mas não o foi espiritualmente, por ter tido a capacidade de oferecer seu sofrimento a Deus. Foi beatificado por Paulo VI, durante o Concílio Vaticano II, e canonizado pelo Papa Francisco, durante o Sínodo dos Jovens.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

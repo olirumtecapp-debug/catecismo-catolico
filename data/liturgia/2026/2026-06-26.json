@@ -1,0 +1,23 @@
+{
+  "date": "2026-06-26",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "12a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "2 Reis 25,1-12",
+      "text": "1No nono ano do reinado de Sedecias, no dia dez do décimo mês, Nobucodonosor, rei da Babilônia, veio atacar Jerusalém com todo o seu exército. Puseram-lhe um cerco e construíram torres de assalto ao seu redor. 2A cidade ficou sitiada e rodeada de valas até ao décimo primeiro ano do reinado de Sedecias. 3No dia nove do quarto mês, quando a fome se agravava na cidade e a população não tinha mais o que comer, 4abriram uma brecha na muralha da cidade. Então o rei fugiu de noite, com todos os guerreiros, pela porta entre os dois muros, perto do jardim real, se bem que os caldeus cercavam a cidade, e seguiram pela estrada que conduz à Araba. 5Mas o exército dos caldeus perseguiu o rei e alcançou-o na planície de Jericó, enquanto todo o seu exército se dispersou e o abandonou. 6Os caldeus prenderam o rei e levaram-no a Rebla, à presença do rei da Babilônia, que pronunciou sentença contra ele. 7Matou os filhos de Sedecias, na sua presença, vasou-lhe os olhos e, preso com uma corrente de bronze, levou-o para a Babilônia. 8No dia sete do quinto mês, data que corresponde ao ano dezenove do reinado de Nabucodonosor, rei da Babilônia, Nabuzardã, comandante da guarda e oficial do rei da Babilônia, fez a sua entrada em Jerusalém. 9Ele incendiou o templo do Senhor e o palácio do rei e entregou às chamas todas as casas e os edifícios de Jerusalém. 10Todo o exército dos caldeus, que acompanhava o comandante da guarda, destruiu as muralhas que rodeavam Jerusalém. 11Nabuzardã, comandante da guarda, exilou o resto da população que tinha ficado na cidade, os desertores que se tinham passado ao rei da Babilônia e o resto do povo. 12E, dos pobres do país, o comandante da guarda deixou uma parte, como vinhateiros e agricultores."
+    },
+    "psalm": {
+      "reference": "Salmo 136(137)",
+      "text": "- Junto aos rios da Babilônia nos sentávamos chorando, com saudades de Sião. Nos salgueiros por ali penduramos nossas harpas.\n\n- Pois foi lá que os opressores nos pediram nossos cânticos; nossos guardas exigiam alegria na tristeza: 'Cantai hoje para nós algum canto de Sião!'\n\n- Como havemos de cantar os cantares do Senhor numa terra estrangeira? Se de ti, Jerusalém, algum dia eu me esquecer, que resseque a minha mão!\n\n- Que se cole a minha língua e se prenda ao céu da boca, se de ti não me lembrar Se não for Jerusalém minha grande alegria!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 8,1-4",
+      "text": "1Tendo Jesus descido do monte, numerosas multidões o seguiam. 2Eis que um leproso se aproximou e se ajoelhou diante dele, dizendo: 'Senhor, se queres, tu tens o poder de me purificar.' 3Jesus estendeu a mão, tocou nele e disse: 'Eu quero, fica limpo.' No mesmo instante, o homem ficou curado da lepra. 4Então Jesus lhe disse: 'Olha, não digas nada a ninguém, mas vai mostrar-te ao sacerdote, e faze a oferta que Moisés ordenou, para servir de testemunho para eles.'"
+    }
+  },
+  "extra": []
+}

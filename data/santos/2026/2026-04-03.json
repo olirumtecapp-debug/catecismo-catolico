@@ -1,0 +1,56 @@
+{
+  "date": "2026-04-03",
+  "year": 2026,
+  "month": 4,
+  "day": 3,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/03.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-03.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-03",
+      "name": "São Sisto I, papa",
+      "normalizedName": "sao sisto i, papa",
+      "imageUrl": "./assets/img/santos/04-03-sao-sisto-i-papa.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/03/s--sisto-i--papa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/03/s--sisto-i--papa.html",
+      "sourceText": "Depois de São Pedro, São Sisto foi o sexto Papa, que viveu em Roma, em uma época de pouca tolerância com os cristãos; primeiro, no tempo do imperador Trajano e, depois, de Adriano. Sisto faleceu, após dez anos de pontificado, e foi sepultado ao lado de São Pedro, no Vaticano.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-03",
+      "name": "São João, bispo de Nápoles",
+      "normalizedName": "sao joao, bispo de napoles",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "João, Bispo de Nápoles, destacou-se, em um período bastante turbulento, por ter transferido os restos mortais de São Januário de Agro Marciano para o cemitério suburbano. São João faleceu na noite de Sábado Santo, no ano 432, enquanto começava a celebração litúrgica, foi sepultado no dia de Páscoa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-03",
+      "name": "São Ricardo, bispo de Chichester na Inglaterra",
+      "normalizedName": "sao ricardo, bispo de chichester na inglaterra",
+      "imageUrl": "./assets/img/santos/04-03-sao-ricardo-bispo-de-chichester-na-inglaterra.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Ricardo tornou-se sacerdote depois de ter conhecido Edmundo Rich. Como pároco, na Inglaterra, dedicou-se à reforma do clero, à administração gratuita dos Sacramentos, à celebração da Missa em condições dignas e, em particular, aos pobres e enfermos. São Ricardo faleceu em Dover, em 1253.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2027-10-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "28a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 2,1-11",
+      "text": "1Ó homem, qualquer que sejas, tu que julgas, não tens desculpa; pois, julgando os outros, te condenas a ti mesmo, já que fazes as mesmas coisas, tu que julgas. 2Ora, sabemos que o julgamento de Deus se exerce segundo a verdade contra os que praticam tais coisas. 3Â homem, tu que julgas os que praticam tais coisas e, no entanto, as fazes também tu, pensas que escaparás ao julgamento de Deus? 4Ou será que desprezas as riquezas de sua bondade, de sua tolerância, de sua longanimidade, não entendendo que a benignidade de Deus é um insistente convite para te converteres? 5Por causa de teu endurecimento no mal e por teu coração impenitente, estás acumulando ira para ti mesmo, no dia da ira, quando se revelará o justo juízo de Deus. 6Deus retribuirá a cada um segundo as suas obras. 7Para aqueles que, perseverando na prática do bem, buscam a glória, a honra e a incorruptibilidade, Deus dará a vida eterna; 8porém, para os que, por espírito de rebeldia, desobedecem à verdade e se submetem à iniquidade, estão reservadas ira e indignação. 9Tribulaçóo e angústia para toda pessoa que faz o mal, primeiro para o judeu, mas também para o grego; 10glória, honra e paz para todo aquele que pratica o bem, primeiro para o judeu, mas também para o grego; 11pois Deus não faz distinção de pessoas."
+    },
+    "psalm": {
+      "reference": "Salmo 61 (62)",
+      "text": "- Só em Deus a minha alma tem repouso, porque dele é que me vem a salvação! Só ele é meu rochedo e salvação, a fortaleza, onde encontro segurança!\n\n- Só em Deus a minha alma tem repouso, porque dele é que me vem a salvação! Só ele é meu rochedo e salvação, a fortaleza, onde encontro segurança!\n\n- Povo todo, esperai sempre no Senhor, e abri diante dele o coração: nosso Deus é um refúgio para nós!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 42-46",
+      "text": "Naquele tempo, disse o Senhor: 42Aí de vós, fariseus, porque pagais o dízimo da hortelã, da arruda e de todas as outras ervas, mas deixais de lado a justiça e o amor de Deus. Vós deveríeis praticar isso, sem deixar de lado aquilo. 43Aí de vós, fariseus, porque gostais do lugar de honra nas sinagogas, e de serdes cumprimentados nas praças públicas. 44Aí de vós, porque sois como túmulos que não se vêem, sobre os quais os homens andam sem saber.' 45Um mestre da Lei tomou a palavra e disse: 'Mestre, falando assim, insultas-nos também a nós!' 46Jesus respondeu: 'Ai de vós também, mestres da Lei, porque colocais sobre os homens cargas insuportáveis, e vós mesmos não tocais nessas cargas, nem com um só dedo."
+    }
+  },
+  "extra": []
+}

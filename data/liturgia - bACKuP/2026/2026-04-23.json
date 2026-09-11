@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-23",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 8:26-40",
+    "psalm": "Sl 66:8-9, 16-17, 20",
+    "secondReading": "",
+    "gospel": "Jo 6:44-51"
+  },
+  "calendar": {
+    "date": "2026-04-23",
+    "monthDay": "4/23",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint George, Martyr/Saint Adalbert, Bishop and Martyr",
+      "type": "OPT_MEMORIAL",
+      "quote": "We worship the Creator of the universe, and we affirm that Jesus Christ is His Son.",
+      "description": "A philosopher who converted to Christianity and became its first great apologist, eventually martyred for refusing to sacrifice to idols.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-23.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-23.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-23"
+  }
+}

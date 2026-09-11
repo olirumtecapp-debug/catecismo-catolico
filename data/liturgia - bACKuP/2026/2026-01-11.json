@@ -1,0 +1,27 @@
+{
+  "date": "2026-01-11",
+  "season": "Christmas",
+  "readings": {
+    "firstReading": "Is 42:1-4, 6-7",
+    "psalm": "Sl 29:1-2, 3-4, 3, 9-10",
+    "secondReading": "At 10:34-38",
+    "gospel": "Mt 3:13-17"
+  },
+  "calendar": {
+    "date": "2026-01-11",
+    "monthDay": "1/11",
+    "season": "Christmas",
+    "celebration": {
+      "name": "Baptism of the Lord",
+      "type": "FEAST",
+      "quote": "You are my beloved Son; with you I am well pleased.",
+      "description": "The Baptism of the Lord marks the beginning of Jesus' public ministry and reveals His identity as the Beloved Son of the Father.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/01-11.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/01-11.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-01-11"
+  }
+}

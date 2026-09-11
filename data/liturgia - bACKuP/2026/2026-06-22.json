@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-22",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "2Rs 17:5-8, 13-15a, 18",
+    "psalm": "Sl 60:3, 4-5, 12-13",
+    "secondReading": "",
+    "gospel": "Mt 7:1-5"
+  },
+  "calendar": {
+    "date": "2026-06-22",
+    "monthDay": "6/22",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saint Paulinus of Nola, Bishop/Saints John Fisher, Bishop and Thomas More, Martyrs",
+      "type": "OPT_MEMORIAL",
+      "quote": "O Lord, let me not be troubled for gold and silver, for where all my treasure is Thou knowest.",
+      "description": "A wealthy Roman nobleman who gave up everything to become a priest and then Bishop of Nola, known for his poetry.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/06-22.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/06-22.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-06-22"
+  }
+}

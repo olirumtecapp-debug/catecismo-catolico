@@ -1,0 +1,56 @@
+{
+  "date": "2026-04-12",
+  "year": 2026,
+  "month": 4,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-12",
+      "name": "São Júlio I, papa",
+      "normalizedName": "sao julio i, papa",
+      "imageUrl": "./assets/img/santos/04-12-sao-julio-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Campeão da ortodoxia romana e defensor da Doutrina trinitária. Durante seu Pontificado, Júlio I combateu muito os Arianos, buscando, várias vezes, uma reaproximação com eles, através do Concílio de Roma e, depois, de Sárdica, mas sem sucesso. São Júlio faleceu no ano 352.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-12",
+      "name": "São Zenão, bispo de Verona",
+      "normalizedName": "sao zenao, bispo de verona",
+      "imageUrl": "./assets/img/santos/04-12-sao-zenao-bispo-de-verona.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Quando Zenão tornou-se bispo de Verona, em 362, recebeu o apelido de \"mouro e pescador\", por suas origens no norte da África. Durante seu episcopado, enfrentou o Arianismo e o Paganismo, e deu grande exemplo de caridade, humildade e generosidade para com os pobres. Hoje, é Padroeiro da cidade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-12",
+      "name": "São José Moscati, médico de Nápoles",
+      "normalizedName": "sao jose moscati, medico de napoles",
+      "imageUrl": "./assets/img/santos/04-12-sao-jose-moscati-medico-de-napoles.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/12/s--jose-moscati--medico-de-napoles.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/12/s--jose-moscati--medico-de-napoles.html",
+      "sourceText": "“Médico e Apóstolo”: eis a síntese perfeita que descreve José Moscati, leigo, que, em Nápoles, entre os séculos XIX e XX, cuidava dos enfermos, sem distinção, sobretudo dos mais pobres. Faleceu de ataque cardíaco, em 1927, e foi canonizado por São João Paulo II, 60 anos depois.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

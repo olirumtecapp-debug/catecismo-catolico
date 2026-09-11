@@ -1,0 +1,28 @@
+{
+  "date": "2027-06-20",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "12o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jó 38,1.8-11",
+      "text": "1O Senhor respondeu a Jó, do meio da tempestade, e disse: 8Quem fechou o mar com portas, quando ele jorrou com ímpeto do seio materno, 9quando eu lhe dava nuvens por vestes e névoas espessas por faixas; 10quando marquei seus limites e coloquei portas e trancas, 11e disse: 'Até aqui chegarás, e não além;"
+    },
+    "psalm": {
+      "reference": "Salmo 106 (107)",
+      "text": "- Os que sulcam o alto-mar com seus navios, para ir comerciar nas grandes águas, testemunharam os prodígios do Senhor e as suas maravilhas no alto-mar.\n\n- Ele ordenou, e levantou-se o furacão, arremessando grandes ondas para o alto; aos céus subiam e desciam aos abismos, seus corações desfaleciam de pavor.\n\n- Mas gritaram ao Senhor na aflição, e ele os libertou daquela angústia. Transformou a tempestade em bonança, e as ondas do oceano se calaram.\n\n- Alegraram-se ao ver o mar tranquilo, e ao porto desejado os conduziu. Agradeçam ao Senhor por seu amor e por suas maravilhas entre os homens!"
+    },
+    "secondReading": {
+      "reference": "Coríntios 5,14-17",
+      "text": "Irmãos: 14O amor de Cristo nos pressiona, pois julgamos que um só morreu por todos, e que, logo, todos morreram. 15De fato, Cristo morreu por todos, para que os vivos não vivam mais para si mesmos, mas para aquele que por eles morreu e ressuscitou. 16Assim, doravante, não conhecemos ninguém conforme a natureza humana. E, se uma vez conhecemos Cristo segundo a carne, agora já não o conhecemos assim. 17Portanto, se alguém está em Cristo, é uma criatura nova. O mundo velho desapareceu. Tudo agora é novo."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 4, 35-41",
+      "text": "35Naquele dia, ao cair da tarde, Jesus disse a seus discípulos: 'Vamos para a outra margem!' 36Eles despediram a multidão e levaram Jesus consigo, assim como estava na barca. Havia ainda outras barcas com ele. 37Começou a soprar uma ventania muito forte e as ondas se lançavam dentro da barca, de modo que a barca já começava a se encher. 38Jesus estava na parte de trás, dormindo sobre um travesseiro. Os discípulos o acordaram e disseram: 'Mestre, estamos perecendo e tu não te importas?' 39Ele se levantou e ordenou ao vento e ao mar: 'Silêncio! Cala-te!' O ventou cessou e houve uma grande calmaria. 40Então Jesus perguntou aos discípulos: 'Por que sois tão medrosos? Ainda não tendes fé?' 41Eles sentiram um grande medo e diziam uns aos outros: 'Quem é este, a quem até o vento e o mar obedecem?'"
+    }
+  },
+  "extra": [
+    "- Graças a Deus<br/>"
+  ]
+}

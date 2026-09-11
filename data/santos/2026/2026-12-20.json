@@ -1,0 +1,30 @@
+{
+  "date": "2026-12-20",
+  "year": 2026,
+  "month": 12,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-20",
+      "name": "São Filogônio, bispo de Antioquia",
+      "normalizedName": "sao filogonio, bispo de antioquia",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Era um advogado sírio e grande orador, muito estimado pela sua sabedoria e equidade. Era casado mas, por inspiração divina, foi eleito Bispo de Antioquia, em 314. Lutou contra o arianismo, uma heresia que negava a divindade de Jesus. Morreu na prisão, dando corajoso testemunho da fé, no ano 324.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

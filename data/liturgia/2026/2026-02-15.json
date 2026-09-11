@@ -1,0 +1,26 @@
+{
+  "date": "2026-02-15",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "6o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Eclesiástico 15,16-21",
+      "text": "16Se quiseres observar os mandamentos, eles te guardarão; se confias em Deus, tu também viverás. 17Diante de ti, Ele colocou o fogo e a água; para o que quiseres, tu podes estender a mão. 18Diante do homem estão a vida e a morte, o bem e o mal; ele receberá aquilo que preferir. 19A sabedoria do Senhor é imensa, ele é forte e poderoso e tudo vê continuamente. 20Os olhos do Senhor estão voltados para os que o temem. Ele conhece todas as obras do homem. 21Não mandou a ninguém agir como ímpio e a ninguém deu licença de pecar."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Feliz o homem sem pecado em seu caminho, que na lei do Senhor Deus vai progredindo! Feliz o homem que observa seus preceitos, e de todo o coração procura a Deus!\n\n- Os vossos mandamentos vós nos destes, para serem fielmente observados. Oxalá seja bem firme a minha vida em cumprir vossa vontade e vossa lei!\n\n- Sede bom com vosso servo, e viverei, e guardarei vossa palavra, ó Senhor. Abri meus olhos, e então contemplarei as maravilhas que encerra a vossa lei!\n\n- Ensinai-me a viver vossos preceitos; quero guardá-los fielmente até o fim! Dai-me o saber, e cumprirei a vossa lei, e de todo o coração a guardarei."
+    },
+    "secondReading": {
+      "reference": "Coríntios 2,6-10",
+      "text": "Irmãos: 6Entre os perfeitos nós falamos de sabedoria, não da sabedoria deste mundo nem da sabedoria dos poderosos deste mundo, que, afinal, estão votados à destruição. 7Falamos, sim, da misteriosa sabedoria de Deus, sabedoria escondida, que, desde a eternidade, Deus destinou para nossa glória. 8Nenhum dos poderosos deste mundo conheceu essa sabedoria. Pois, se a tivessem conhecido, não teriam crucificado o Senhor da glória. 9Mas, como está escrito, 'o que Deus preparou para os que o amam é algo que os olhos jamais viram nem os ouvidos ouviram nem coração algum jamais pressentiu'. 10A nós Deus revelou esse mistério através do Espírito. Pois o Espírito esquadrinha tudo, mesmo as profundezas de Deus."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 17-37",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 17Não penseis que vim abolir a Lei e os Profetas. Não vim para abolir, mas para dar-lhes pleno cumprimento. 18Em verdade, eu vos digo: antes que o céu e a terra deixem de existir, nem uma só letra ou vírgula serão tiradas da Lei, sem que tudo se cumpra. 19Portanto, quem desobedecer a um só destes mandamentos, por menor que seja, e ensinar os outros a fazerem o mesmo, será considerado o menor no Reino dos Céus. Porém, quem os praticar e ensinar será considerado grande no Reino dos Céus. 20Porque eu vos digo: Se a vossa justiça não for maior que a justiça dos mestres da Lei e dos fariseus, vós não entrareis no Reino dos Céus. 21Vós ouvistes o que foi dito aos antigos: 'Não matarás! Quem matar será condenado pelo tribunal'. 22Eu, porém, vos digo: todo aquele que se encoleriza com seu irmão será réu em juízo; quem disser ao seu irmão: 'patife!' será condenado pelo tribunal; quem chamar o irmão de 'tolo' será condenado ao fogo do inferno. 23Portanto, quando tu estiveres levando a tua oferta para o altar, e ali te lembrares que teu irmão tem alguma coisa contra ti, 24deixa a tua oferta ali diante do altar, e vai primeiro reconciliar-te com o teu irmão. Só então vai apresentar a tua oferta. 25Procura reconciliar-te com teu adversário, enquanto caminha contigo para o tribunal. Senão o adversário te entregará ao juiz, o juiz te entregará ao oficial de justiça, e tu serás jogado na prisão. 26Em verdade eu te digo: dali não sairás, enquanto não pagares o último centavo. 27Ouvistes o que foi dito: 'Não cometerás adultério'. 28Eu, porém, vos digo: Todo aquele que olhar para uma mulher, com o desejo de possuí-la, já cometeu adultério com ela no seu coração. 29Se o teu olho direito é para ti ocasião de pecado, arranca-o e joga-o para longe de ti! De fato, é melhor perder um de teus membros, do que todo o teu corpo ser jogado no inferno. 30Se a tua mão direita é para ti ocasião de pecado, corta-a e joga-a para longe de ti! De fato, é melhor perder um dos teus membros, do que todo o teu corpo ir para o inferno. 3lFoi dito também: 'Quem se divorciar de sua mulher, dê-lhe uma certidão de divórcio'. 32Eu, porém, vos digo: Todo aquele que se divorcia de sua mulher, a não ser por motivo de união irregular, faz com que ela se torne adúltera; e quem se casa com a mulher divorciada comete adultério. 33Vós ouvistes também o que foi dito aos antigos: 'Não jurarás falso', mas 'cumprirás os teus juramentos feitos ao Senhor'. 34Eu, porém, vos digo: Não jureis de modo algum: nem pelo céu, porque é o trono de Deus; 35nem pela terra, porque é o suporte onde apóia os seus pés; nem por Jerusalém, porque é a cidade do Grande Rei. 36Não jures tão pouco pela tua cabeça, porque tu não podes tornar branco ou preto um só fio de cabelo. 37Seja o vosso 'sim': 'Sim', e o vosso 'não': 'Não'. Tudo o que for além disso vem do Maligno."
+    }
+  },
+  "extra": []
+}

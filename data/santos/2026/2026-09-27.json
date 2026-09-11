@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-27",
+  "year": 2026,
+  "month": 9,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-27",
+      "name": "São Vicente de Paulo, sacerdote, fundador da Congregação da Missão e das Filhas da Caridade, Padroeiro de todas as Associações de Caridade",
+      "normalizedName": "sao vicente de paulo, sacerdote, fundador da congregacao da missao e das filhas da caridade, padroeiro de todas as associacoes de caridade",
+      "imageUrl": "./assets/img/santos/09-27-sao-vicente-de-paulo-sacerdote-fundador-da-co.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/27/s--vicente-de-paulo--sacerdote--fundador-da-congregacao-da-missa.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/27/s--vicente-de-paulo--sacerdote--fundador-da-congregacao-da-missa.html",
+      "sourceText": "De origens humildes, Vicente tornou-se sacerdote aos 19 anos, apenas como meio de se estabilizar. Porém, mantendo contato com os pobres, decidiu dedicar a sua vida à caridade ativa: fundou as Damas, depois, Filhas da Caridade, e cuidou da formação do clero. Faleceu em 1600 e foi canonizado em 1737.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "name": "SS. Adolfo e João, mártires em Córdova",
+      "normalizedName": "ss. adolfo e joao, em cordova",
+      "imageUrl": "./assets/img/santos/09-27-ss-adolfo-e-joao-martires-em-cordova.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Naturais de Sevilha, os irmãos Adolfo e João eram filhos de um nobre muçulmano e de uma mulher cristã. Professaram sua fé em Córdova, onde foram martirizados, em 824, durante a perseguição dos Mouros, e, depois, enterrados na igreja de São Cipriano. A mãe, por sua vez, se trancou em um mosteiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

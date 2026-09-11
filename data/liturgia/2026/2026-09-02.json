@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "22a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 3,1-9",
+      "text": "1Irmãos, não pude falar-vos como a pessoas espirituais. Tive que vos falar como a pessoas carnais, como a crianças na vida em Cristo. 2Pude oferecer-vos somente leite, não alimento sólido, pois ainda não éreis capazes de tomá-lo. E nem atualmente sois capazes de receber alimento sólido, 3visto que ainda sois carnais. As rivalidades e rixas que existem aí, no meio de vós, acaso não mostram que sois carnais e que procedeis de acordo com os impulsos naturais? 4Quando um declara: 'Eu sou de Paulo', e outro : 'Eu sou de Apolo', não estais procedendo como pessoas simplesmente naturais? 5Pois, o que é Apolo? O que é Paulo? - Não passam de servidores, pelos quais chegastes à fé. E cada um deles exerce seu serviço segundo o dom recebido de Deus. 6Eu plantei, Apolo regou, mas Deus é que fazia crescer. 7De modo que nem o que planta, nem o que rega são, propriamente, importantes. Quem é importante é aquele que faz crescer: Deus. 8Aquele que planta e aquele que rega formam uma unidade, mas cada um receberá o seu próprio salário, proporcional ao seu trabalho. 9Com efeito, nós somos cooperadores de Deus, e vós sois lavoura de Deus, construção de Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 32 (33)",
+      "text": "- Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança! Dos altos céus o Senhor olha e observa; ele se inclina para olhar todos os homens.\n\n- Ele contempla do lugar onde reside e vê a todos os que habitam sobre a terra. Ele formou o coração de cada um e por todos os seus atos se interessa.\n\n- No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! Por isso o nosso coração se alegra nele, seu santo nome é nossa única esperança."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 4, 38-44",
+      "text": "Naquele tempo: 38Jesus saiu da sinagoga e entrou na casa de Simão. A sogra de Simão estava sofrendo com febre alta, e pediram a Jesus em favor dela. 39Inclinando-se sobre ela, Jesus ameaçou a febre, e a febre a deixou. Imediatamente, ela se levantou e começou a servi-los. 40Ao pôr do sol, todos os que tinham doentes atingidos por diversos males, os levaram a Jesus. Jesus colocava as mãos em cada um deles e os curava. 41De muitas pessoas também saíam demônios, gritando: 'Tu és o Filho de Deus.' Jesus os ameaçava, e não os deixava falar, porque sabiam que ele era o Messias. 42Ao raiar do dia, Jesus saiu, e foi para um lugar deserto. As multidões o procuravam e, indo até ele, tentavam impedi-lo que os deixasse. 43Mas Jesus disse: 'Eu devo anunciar a Boa Nova do Reino de Deus também a outras cidades, porque para isso é que eu fui enviado.' 44E pregava nas sinagogas da Judéia."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Bernardo, monge cisterciense, Doutor da Igreja<br/>",
+    "</b>",
+    "Sermões sobre o Cântico dos Cânticos, n.º 84, 2-3<br/>",
+    "«A multidão foi à procura d'Ele [...]. Mas Jesus disse-lhes: \"Tenho de ir também às outras cidades\"»<br/>",
+    "Saiba toda a alma que busca a Deus que foi por Ele procurada primeiro, que Ele a buscou antes que ela O buscasse. [...] «Toda a noite procurei Aquele que o meu coração ama» (Ct 3,1). A alma procura o Verbo, mas é o Verbo quem a procura de antemão. [...] Quando entregue a si própria, a nossa alma mais não é do que um sopro que passa e não volta (Sl 78,39). Escutai o que ela diz, ao longe fugitiva e à deriva: «Ando errante como ovelha perdida; vem à procura do teu servo» (Sl 119,176). Homem, queres voltar? Mas isso não depende da tua vontade, e por isso pedes auxílio. [...] Queres e não podes, pois não és mais do que um sopro errante, que não consegue voltar sozinho. [...] Mas donde lhe vem essa vontade? De que a procurou e visitou o Verbo, numa procura em tudo menos ociosa, uma vez que lhe despertou a vontade sem a qual não poderia voltar.<br/>",
+    "No entanto, não basta que o Senhor a tenha buscado uma vez, tanta é a lassidão e tantas as dificuldades da volta. [...] «O querer está ao meu alcance», diz, «mas realizar o bem, isso não» (Rom 7,18). O que busca, então, aquele que citámos no salmo? Apenas isso mesmo: que o busquem, pois nunca tal faria se não fosse de antemão buscado, nem recomeçaria a sua busca se o tivessem suficientemente buscado.<br/>"
+  ]
+}

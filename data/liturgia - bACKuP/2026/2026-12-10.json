@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-10",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "Is 41:13-20",
+    "psalm": "Sl 145:1 and 9, 10-11, 12-13ab",
+    "secondReading": "",
+    "gospel": "Mt 11:11-15"
+  },
+  "calendar": {
+    "date": "2026-12-10",
+    "monthDay": "12/10",
+    "season": "Advent",
+    "celebration": {
+      "name": "Our Lady of Loreto",
+      "type": "OPT_MEMORIAL",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-10.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-10.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-10"
+  }
+}

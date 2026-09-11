@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-03",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Gregorio Magno",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 3,18-23",
+      "text": "Irmãos: 18Ninguém se iluda: Se algum de vós pensa que é sábio nas coisas deste mundo, reconheça sua insensatez, para se tornar sábio de verdade; 19pois a sabedoria deste mundo é insensatez diante de Deus. Com efeito, está escrito: 'Aquele que apanha os sábios em sua própria astúcia', 20e ainda: 'O Senhor conhece os pensamentos dos sábios; sabe que são vãos'. 21Portanto, que ninguém ponha a sua glória em homem algum. Com efeito, tudo vos pertence: 22Paulo, Apolo, Cefas, o mundo, a vida, a morte, o presente, o futuro, tudo é vosso, 23mas vós sois de Cristo, e Cristo é de Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 23 (24)",
+      "text": "- Ao Senhor pertence a terra e o que ela encerra, o mundo inteiro com os seres que o povoam; porque ele a tornou firme sobre os mares, e sobre as águas a mantém inabalável.\n\n- 'Quem subirá até o monte do Senhor, quem ficará em sua santa habitação?' 'Quem tem mãos puras e inocente coração, quem não dirige sua mente para o crime.\n\n- Sobre este desce a bênção do Senhor e a recompensa de seu Deus e Salvador'. 'É assim a geração dos que o procuram, e do Deus de Israel buscam a face'."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 5, 1-11",
+      "text": "Naquele tempo: 1Jesus estava na margem do lago de Genesaré, e a multidão apertava-se ao seu redor para ouvir a palavra de Deus. 2Jesus viu duas barcas paradas na margem do lago. Os pescadores haviam desembarcado e lavavam as redes. 3Subindo numa das barcas, que era de Simão, pediu que se afastasse um pouco da margem. Depois sentou-se e, da barca, ensinava as multidões. 4Quando acabou de falar, disse a Simão: 'Avança para águas mais profundas, e lançai vossas redes para a pesca'. 5Simão respondeu: 'Mestre, nós trabalhamos a noite inteira e nada pescamos. Mas, em atenção à tua palavra, vou lançar as redes'. 6Assim fizeram, e apanharam tamanha quantidade de peixes que as redes se rompiam. 7Então fizeram sinal aos companheiros da outra barca, para que viessem ajudá-los. Eles vieram, e encheram as duas barcas, a ponto de quase afundarem. 8Ao ver aquilo, Simão Pedro atirou-se aos pés de Jesus, dizendo: 'Senhor, afasta-te de mim, porque sou um pecador!' 9É que o espanto se apoderara de Simão e de todos os seus companheiros, por causa da pesca que acabavam de fazer. 10Tiago e João, filhos de Zebedeu, que eram sócios de Simão, também ficaram espantados. Jesus, porém, disse a Simão: 'Não tenhas medo! De hoje em diante tu serás pescador de homens.' 11Então levaram as barcas para a margem, deixaram tudo e seguiram a Jesus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santa Teresinha do Menino Jesus, carmelita e Doutora da Igreja<br/>",
+    "</b>",
+    "Manuscrito autobiográfico<br/>",
+    "«Não temas. Daqui em diante serás pescador de homens»<br/>",
+    "Nessa noite de luz [no Natal dos catorze anos] começou o terceiro período da minha vida, o mais belo de todos, o mais repleto de graças do céu. [...] Tal como os seus apóstolos eu podia dizer: «Mestre, trabalhámos durante toda a noite e nada apanhámos». Sendo ainda mais misericordioso para comigo do que tinha sido para com os seus discípulos, Jesus pegou Ele mesmo na rede, lançou-a e retirou-a repleta de peixes. Fez de mim uma pescadora de almas; senti um grande desejo de trabalhar pela conversão dos pecadores. [...] O grito de Jesus na cruz ressoava também continuamente no meu coração: «Tenho sede!» (Jo 19,28). Essas palavras acendiam em mim um ardor desconhecido e muito vivo. Queria dar de beber ao meu Bem-Amado e sentia-me eu própria devorada pela sede das almas. [...]<br/>",
+    "A fim de aumentar o meu zelo, o Bom Deus mostrou-me que Lhe agradavam os meus desejos. Ouvi falar de um grande criminoso que tinha acabado de ser condenado à morte por crimes horríveis e que tudo levava a crer que morreria em pecado. Quis, a todo custo, impedi-lo de cair no inferno. [...] Sentia, no fundo do meu coração, a certeza de que [esses] desejos seriam satisfeitos, mas para me encher de coragem para continuar a rezar pelos pecadores disse ao Bom Deus que tinha a certeza de que Ele perdoaria ao pobre infeliz Pranzini, e que eu acreditaria nisso mesmo que ele não se confessasse nem desse nenhum sinal de arrependimento, tal era a confiança que eu tinha na misericórdia infinita de Jesus, mas que Lhe pedia apenas um «sinal» de arrependimento, só para minha consolação. A minha prece foi respondida à letra! [...]<br/>",
+    "Ah! Desde que recebi essa graça única, o meu desejo de salvar as almas aumentou dia a dia; parecia-me ouvir Jesus dizer-me, como à samaritana: «Dá-me de beber!» (Jo 4,7). Era uma verdadeira troca de amor; eu dava o sangue de Jesus às almas e oferecia a Jesus essas mesmas almas refrescadas pelo seu orvalho divino. Assim, Ele parecia ficar aliviado e, quanto mais Lhe dava a beber, mais a sede da minha pequena alma aumentava, e era essa sede ardente que Ele me dava como a mais deliciosa bebida do seu amor.<br/>"
+  ]
+}

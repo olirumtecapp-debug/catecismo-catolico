@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-30",
+  "year": 2026,
+  "month": 5,
+  "day": 30,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/30.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-30.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-30",
+      "name": "São Fernando III, rei de Castela",
+      "normalizedName": "sao fernando iii, rei de castela",
+      "imageUrl": "./assets/img/santos/05-30-sao-fernando-iii-rei-de-castela.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Com a reunificação dos reinos de Castela e León, Fernando tornou-se rei em 1217. Era conhecido como \"Conquistador de Andaluzia\", por ter liberado Sevilha e Córdoba dos sarracenos. Construiu a catedral de Burgos e ampliou a universidade de Salamanca. Foi canonizado pelo Papa Clemente X em 1671.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Santa Joana d'Arc, virgem",
+      "normalizedName": "santa joana d'arc,",
+      "imageUrl": "./assets/img/santos/05-30-santa-joana-d-arc-virgem.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/30/s--joana-d-arc--virgem.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/30/s--joana-d-arc--virgem.html",
+      "sourceText": "Joana D’Arc foi uma jovem que restituiu a honra à coroa da França e morreu acusada, falsamente, de heresia. Esta é a dramática história desta Santa, que, tendo sido queimada em uma fogueira, em 1431, guiou o exército para libertar Orléans das mãos dos britânicos, por uma imperiosa missão divina.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-30",
+      "name": "São Dimpna",
+      "normalizedName": "sao dimpna",
+      "imageUrl": "./assets/img/santos/05-30-sao-dimpna.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/30/s--dimpna.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/30/s--dimpna.html",
+      "sourceText": "Santa Dinfna, celebrada pelo 'Martirológio Romano' no dia 30 de maio, é considerada a santa padroeira das pessoas com distúrbios mentais e neurológicos, dos lugares de cura e profissionais médicos, que cuidam deste tipo de pacientes, mas também das mulheres vítimas de incesto e violência.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "date": "2027-02-08",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Gênesis 1,1-19",
+      "text": "1No princípio Deus criou o céu e a terra. 2A terra estava deserta e vazia, as trevas cobriam a face do abismo e o Espírito de Deus pairava sobre as águas. 3Deus disse: 'Faça-se a luz!' E a luz se fez. 4Deus viu que a luz era boa e separou a luz das trevas. 5E à luz Deus chamou 'dia' e às trevas, 'noite'. Houve uma tarde e uma manhã: primeiro dia. 6Deus disse: 'Faça-se um firmamento entre as águas, separando umas das outras'. 7E Deus fez o firmamento, e separou as águas que estavam embaixo, das que estavam em cima do firmamento. E assim se fez. 8Ao firmamento Deus chamou 'céu'. Houve uma tarde e uma manhã: segundo dia. 9Deus Disse: 'Juntem-se as águas que estão debaixo do céu num só lugar e apareça o solo enxuto!' E assim se fez. 10Ao solo enxuto Deus chamou 'terra' e ao ajuntamento das águas, 'mar'. E Deus viu que era bom. 11Deus disse: 'A terra faça brotar vegetação e plantas que dêem semente, e árvores frutíferas que dêem fruto segundo a sua espécie, que tenham nele sua semente sobre a terra'. E assim se fez. 12E a terra produziu vegetação e plantas que trazem semente segundo a sua espécie, e árvores que dão fruto tendo nele a semente da sua espécie. E Deus viu que era bom. 13Houve uma tarde e uma manhã: terceiro dia. 14Deus disse: 'Façam-se luzeiros no firmamento do céu, para separar o dia da noite. Que sirvam de sinais para marcar as épocas os dias e os anos, 15e que resplandeçam no firmamento do céu e iluminem a terra'. E assim se fez. 16Deus fez os dois grandes luzeiros: o luzeiro maior para presidir ao dia, e o luzeiro menor para presidir à noite, e as estrelas. 17Deus colocou-os no firmamento do céu para alumiar a terra, 18para presidir ao dia e à noite e separar a luz das trevas. E Deus viu que era bom. 19E houve uma tarde e uma manhã: quarto dia."
+    },
+    "psalm": {
+      "reference": "Salmo 103 (104)",
+      "text": "- Bendize, ó minha alma, ao Senhor! Ó meu Deus e meu Senhor, como sois grande! De majestade e esplendor vos revestis e de luz vos envolveis como num manto.\n\n- A terra vós firmastes em suas bases, ficará firme pelos séculos sem fim; os mares a cobriam como um manto, e as águas envolviam as montanhas.\n\n- Fazeis brotar em meio aos vales as nascentes que passam serpeando entre as montanhas; às suas margens vêm morar os passarinhos, entre os ramos eles erguem o seu canto.\n\n- Quão numerosas, ó Senhor, são vossas obras, e que sabedoria em todas elas! Encheu-se a terra com as vossas criaturas! Bendize, ó minha alma, ao Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 6, 53-56",
+      "text": "Naquele tempo: 53Tendo Jesus e seus discípulos acabado de atravessar o mar da Galiléia, chegaram a Genesaré e amarraram a barca. 54Logo que desceram da barca, as pessoas imediatamente reconheceram Jesus. 55Percorrendo toda aquela região, levavam os doentes deitados em suas camas para o lugar onde ouviam falar que Jesus estava. 56E, nos povoados, cidades e campos onde chegavam, colocavam os doentes nas praças e pediam-lhe para tocar, ao menos, a barra de sua veste. E todos quantos o tocavam ficavam curados."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Cirilo de Alexandria, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "<b>",
+    "Comentário ao Evangelho de São João, 4<br/>",
+    "</b>",
+    "«Todos os que O tocavam ficavam curados.»<br/>",
+    "Para ressuscitar os mortos, o Salvador não Se contenta em agir através da sua palavra, apesar de esta ser portadora das ordens divinas. Para esta magnífica obra, usa a cooperação, se assim se pode dizer, da sua própria carne, para mostrar que esta tem o poder de dar a Vida, e para que se perceba que forma uma só coisa com Ele: que é realmente a sua própria carne e não um corpo estranho a Ele.<br/>",
+    "Foi o que se passou quando ressuscitou a filha do chefe da sinagoga; ao dizer-lhe: «Levanta-te, minha filha!» (Mc 5,41), tomou-lhe a mão, conforme está escrito. Devolveu-a à vida, como Deus que era, com uma ordem todo-poderosa; e também lhe deu vida pelo contacto com a sua santa carne, testemunhando assim que tanto no seu corpo como na sua palavra existia uma nova energia divina. E, quando chegou a uma vila chamada Naim, onde o filho único de uma viúva ia a sepultar, tocou no caixão e disse: «Jovem, Eu te ordeno: levanta-te!» (Lc 7,14)<br/>",
+    "Assim, não só confere à sua Palavra o poder de ressuscitar os mortos, mas também, para mostrar que o seu corpo está vivo, toca nos mortos, e transmita a vida aos cadáveres pela sua carne. Se, pelo simples contacto da sua carne sagrada, Ele devolve a vida a um corpo em decomposição, qual não será o proveito que encontraremos na sua eucaristia viva, quando fazemos dela o nosso alimento! Ela transformará totalmente no seu bem próprio, que é a imortalidade, todos os que nela participarem.<br/>"
+  ]
+}

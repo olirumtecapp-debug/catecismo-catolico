@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-01",
+  "year": 2026,
+  "month": 8,
+  "day": 1,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/01.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-01.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-01",
+      "name": "São Afonso Maria de Ligório, bispo e doutor da Igreja, fundador da Congregação do Santíssimo Redentor",
+      "normalizedName": "sao afonso maria de ligorio, bispo e doutor da igreja, fundador da congregacao do santissimo redentor",
+      "imageUrl": "./assets/img/santos/08-01-sao-afonso-maria-de-ligorio-bispo-e-doutor-da.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/01/s--afonso-maria-de-ligorio--bispo-e-doutor-da-igreja--fundador-d.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/01/s--afonso-maria-de-ligorio--bispo-e-doutor-da-igreja--fundador-d.html",
+      "sourceText": "Afonso nasceu em uma nobre família napolitana. Era um advogado precoce, mas aos 30 anos, deixou tudo para ser sacerdote. Em 1732, fundou a Congregação do Santíssimo Redentor e, mais tarde, foi Bispo de Santa Águeda dos Godos. Foi canonizado em 1839 e proclamado Doutor da Igreja, em 1871, por Pio XI.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-01",
+      "name": "SS. Sete irmãos mártires Macabeus",
+      "normalizedName": "ss. sete irmaos macabeus",
+      "imageUrl": "./assets/img/santos/08-01-ss-sete-irmaos-martires-macabeus.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Estes sete irmãos foram assassinados, junto com sua mãe, por permanecerem fiéis às leis judaicas e por não terem cumprido as ordens do rei Antíoco IV Epifânio. Seu martírio parece ter ocorrido em Jerusalém, no ano 168 a.C. Estes Santos são considerados verdadeiros precursores dos mártires cristãos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-01",
+      "name": "São Pedro Fabro, presbítero jesuíta",
+      "normalizedName": "sao pedro fabro, presbitero jesuita",
+      "imageUrl": "./assets/img/santos/08-01-sao-pedro-fabro-presbitero-jesuita.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/01/s--pedro-fabro--presbitero-jesuita.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/01/s--pedro-fabro--presbitero-jesuita.html",
+      "sourceText": "No dia primeiro de agosto, celebra-se a festa litúrgica de São Pedro Fabro, contemporâneo de Santo Inácio de Loyola. Foi o primeiro sacerdote da Companhia de Jesus, homem de diálogo e estimado pela Igreja de Roma, enviado pelo Papa para resolver questões eclesiais delicadas.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

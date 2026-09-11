@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-22",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "1Sm 1:24-28",
+    "psalm": "1Sm 2:1, 4-5, 6-7, 8abcd",
+    "secondReading": "",
+    "gospel": "Lc 1:46-56"
+  },
+  "calendar": {
+    "date": "2026-12-22",
+    "monthDay": "12/22",
+    "season": "Advent",
+    "celebration": {
+      "name": "Tuesday of the 4th week of Advent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-22.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-22.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-22"
+  }
+}

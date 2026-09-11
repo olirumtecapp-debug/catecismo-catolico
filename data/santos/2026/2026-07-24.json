@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-24",
+  "year": 2026,
+  "month": 7,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-24",
+      "name": "São Charbel Makhluf, persbítero",
+      "normalizedName": "sao charbel makhluf, persbitero",
+      "imageUrl": "./assets/img/santos/07-24-sao-charbel-makhluf-persbitero.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/24/s--charbel-makhluf--persbitero.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/24/s--charbel-makhluf--persbitero.html",
+      "sourceText": "Conhecido como \"Padre Pio do Líbano\", Charbel Makhluf era um monge maronita que, em 1875, conseguiu a licença para viver como eremita. Vivia sempre com Deus, no silêncio e na oração. Após a sua morte, foram-lhe atribuídas muitas maravilhas, sobretudo curas milagrosas. Foi canonizado por Paulo VI.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Santa Cristina, virgem e mártir",
+      "normalizedName": "santa cristina, e martir",
+      "imageUrl": "./assets/img/santos/07-24-santa-cristina-virgem-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "A jovem Cristina, mártir dos primeiros séculos, criou inimizades, em sua família, por causa de Cristo. Seu pai e outras pessoas submeteram-na a crueldades, para que abjurasse a fé, sem sucesso, até que duas flechas dilaceraram a sua vida. Sua memória é viva, sobretudo em Bolsena, onde nasceu.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

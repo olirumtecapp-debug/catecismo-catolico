@@ -1,0 +1,31 @@
+{
+  "date": "2026-06-09",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Jose de Anchieta",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Reis 17,7-16",
+      "text": "Naqueles dias: 7Secou a torrente do lugar onde Elias estava escondido, porque não tinha chovido no país. 8Então a palavra do Senhor foi-lhe dirigida nestes termos: 'Levanta-te e vai a Sarepta dos sidônios, e fica morando lá, pois ordenei a uma viúva desse lugar que te dê sustento'. 10Elias pôs-se a caminho e foi para Sarepta. Ao chegar à porta da cidade, viu uma viúva apanhando lenha. Ele chamou-a e disse: 'Por favor, traze-me um pouco de água numa vasilha para eu beber'. 11Quando ela ia buscar água, Elias gritou-lhe: 'Por favor, traze-me também um pedaço de pão em tua mão!' 12Ela respondeu: 'Pela vida do Senhor, teu Deus, não tenho pão. Só tenho um punhado de farinha numa vasilha e um pouco de azeite na jarra. Eu estava apanhando dois pedaços de lenha, a fim de preparar esse resto para mim e meu filho, para comermos e depois esperar a morte'. 13Elias replicou-lhe: 'Não te preocupes! Vai e faze como disseste. Mas, primeiro, prepara-me com isso um pãozinho, e traze-o. Depois farás o mesmo para ti e teu filho. 14Porque assim fala o Senhor, Deus de Israel: 'A vasilha de farinha não acabará e a jarra de azeite não diminuirá, até ao dia em que o Senhor enviar a chuva sobre a face da terra'. 15A mulher foi e fez como Elias lhe tinha dito. E comeram, ele e ela e sua casa, durante muito tempo. 16A farinha da vasilha não acabou nem diminuiu o óleo da jarra, conforme o que o Senhor tinha dito por intermédio de Elias."
+    },
+    "psalm": {
+      "reference": "Salmo 4",
+      "text": "- Quando eu chamo, respondei-me, ó meu Deus, minha justiça! Vós que soubestes aliviar-me nos momentos de afliçóo, atendei-me por piedade e escutai minha oração! Filhos dos homens, até quando fechareis o coração? Por que amais a ilusão e procurais a falsidade?\n\n- Compreendei que nosso Deus faz maravilhas por seu servo, e que o Senhor me ouvirá quando lhe faço a minha prece! Se ficardes revoltados, não pequeis por vossa ira; meditai nos vossos leitos e calai o coração!\n\n- Muitos há que se perguntam:'Quem nos dá felicidade?' Sobre nós fazei brilhar o esplendor de vossa face! Vós me destes, ó Senhor, mais alegria ao coração, do que a outros na fartura do seu trigo e vinho novo."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 13-16",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 13Vós sois o sal da terra. Ora, se o sal se tornar insosso, com que salgaremos? Ele não servirá para mais nada, senão para ser jogado fora e ser pisado pelos homens. 14Vós sois a luz do mundo. Não pode ficar escondida uma cidade construída sobre um monte. 15Ninguém acende uma lâmpada, e a coloca debaixo de uma vasilha, mas sim, num candeeiro, onde brilha para todos que estão na casa. 16Assim também brilhe a vossa luz diante dos homens, para que vejam as vossas boas obras e louvem o vosso Pai que está nos céus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia: Homilia atribuída a São Máximo de Turim, Bispo <br/>",
+    "</b>",
+    "(Kephas, vol. 1) <br/>",
+    "«Vós sois o sal da terra. [...] Vós sois a luz do mundo»<br/>",
+    "O Senhor disse aos seus apóstolos: «Vós sois a luz do mundo». Como são justas as comparações que o Senhor emprega para designar os nossos pais na fé! Chama-lhes «sal», a eles que nos ensinam a sabedoria de Deus, e «luz», a eles que afastam dos nossos corações a cegueira e as trevas da incredulidade. Mas é justo que os apóstolos recebam o nome de luz, pois eles anunciam, na obscuridade do mundo, a claridade do Céu e o esplendor da eternidade. Não se tornou Pedro uma luz para o mundo inteiro e para todos os fiéis quando disse ao Senhor: «Tu és Cristo, o Filho de Deus vivo» (Mt 16,16)? Que maior claridade poderia o género humano receber do que ficar a saber por Pedro que o Filho de Deus vivo era o criador da sua luz? <br/>",
+    "E São Paulo não é uma luz menor para o mundo: quando a Terra estava cega pelas trevas da maldade, ele subiu ao Céu (2Cor 12,2) e, no seu regresso, revelou os mistérios do esplendor eterno. Foi por isso que não pôde, nem esconder-se, qual cidade fundada no alto duma montanha, nem deixar que o escondessem, pois Cristo, pela luz da sua majestade, tinha-o incendiado como candeia cheia do óleo do Espírito Santo. Por isso, bem-amados, se, renunciando às ilusões deste mundo, queremos procurar o sabor da sabedoria de Deus, provemos o sal dos apóstolos.<br/>"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-15",
+  "year": 2026,
+  "month": 5,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-15",
+      "name": "São Torquato, bispo de Guádix",
+      "normalizedName": "sao torquato, bispo de guadix",
+      "imageUrl": "./assets/img/santos/05-15-sao-torquato-bispo-de-guadix.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Torquato viveu entre os séculos III e IV e foi o primeiro Bispo da cidade de Acci, hoje Guadix, na Espanha. Segundo algumas fontes, era confessor, e, segundo outras, mártir. É recordado como o primeiro dos Sete “viri” espanhóis, Bispos de diversas cidades do sul da Espanha, venerados como Santos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "name": "São Isidro, lavrador",
+      "normalizedName": "sao isidro, lavrador",
+      "imageUrl": "./assets/img/santos/05-15-sao-isidro-lavrador.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Isidoro nasceu em Madri, por volta de 1070. Tornou-se santo mediante a oração, o trabalho na lavoura e a partilha dos seus bens com os mais pobres. Vivendo na era dos grandes conquistadores, superou as dificuldades com a ajuda de sua esposa Maria. O Santo é padroeiro dos agricultores e camponeses.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

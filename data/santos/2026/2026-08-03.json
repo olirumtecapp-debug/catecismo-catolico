@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-03",
+  "year": 2026,
+  "month": 8,
+  "day": 3,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/03.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-03.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-03",
+      "name": "São Lídia, discípula de S. Paulo",
+      "normalizedName": "sao lidia, discipula de s. paulo",
+      "imageUrl": "./assets/img/santos/08-03-sao-lidia-discipula-de-s-paulo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sua casa foi a primeira igreja fundada na Europa por São Paulo. Quando o Apóstolo pôs os pés em Filipos, Macedônia, encontrou hospitalidade na casa de Lídia, comerciante de púrpura, recém-convertida ao Evangelho com toda a família. Os Atos dos Apóstolos narram a sua história no capítulo 16.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

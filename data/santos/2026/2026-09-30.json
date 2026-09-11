@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-30",
+  "year": 2026,
+  "month": 9,
+  "day": 30,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/30.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-30.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-30",
+      "name": "São Jerônimo, presbítero e doutor da Igreja",
+      "normalizedName": "sao jeronimo, presbitero e doutor da igreja",
+      "imageUrl": "./assets/img/santos/09-30-sao-jeronimo-presbitero-e-doutor-da-igreja.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/30/s--jeronimo---presbitero-e-doutor-da-igreja.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/30/s--jeronimo---presbitero-e-doutor-da-igreja.html",
+      "sourceText": "Jerônimo, um dos Padres da Igreja Ocidental, dedicou toda a sua vida ao estudo das Escrituras, colocando em prática a Palavra de Deus. Asceta e literato, prestava serviço ao Papa São Dâmaso. Traduziu a Bíblia para o latim, a partir dos textos originais. Faleceu em 30 de setembro do ano 420.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "name": "São Simão, conde de Crépy",
+      "normalizedName": "sao simao, conde de crepy",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Simão, conde de Crépy, renunciou às suas riquezas e matrimônio para dedicar-se à vida monacal; depois, no eremitério do Monte Jura, recebia muitos peregrinos, que buscavam ser iluminados pela sua sabedoria. Transferiu-se para Roma, onde morreu em 1082, sepultado na Basílica de São Pedro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "name": "São Francisco de Borja, presbítero jesuíta",
+      "normalizedName": "sao francisco de borja, presbitero jesuita",
+      "imageUrl": "./assets/img/santos/09-30-sao-francisco-de-borja-presbitero-jesuita.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Descendente da família Borja, Francisco nasceu em Gandia, Espanha, em 1510. Casado e pai de 8 filhos, foi vice-Rei da Catalunha, mas jamais descuidou da sua fé. Viúvo, deixou tudo e entrou para a Companhia de Jesus, da qual foi Comissário Geral. Fundou as Missões na América do Sul e morreu em 1572.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-01-10",
+  "year": 2026,
+  "month": 1,
+  "day": 10,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/10.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-10.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-10",
+      "name": "São Agatão, papa",
+      "normalizedName": "sao agatao, papa",
+      "imageUrl": "./assets/img/santos/01-10-sao-agatao-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Agatão, de origem grega, nasceu em Palermo. Foi Papa de 678 a 681 e promoveu a unidade da Igreja. Opôs-se aos adeptos do monotelismo, segundo os quais havia uma só vontade em Cristo. O Concílio de Constantinopla afirmou que, em Cristo, há duas naturezas e também duas vontades: divina e humana.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-10",
+      "name": "São Milcíades, papa",
+      "normalizedName": "sao milciades, papa",
+      "imageUrl": "./assets/img/santos/01-10-sao-milciades-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Melquíades, de origem africana, foi testemunha da batalha de Ponte Milvio, na qual Constantino venceu Magêncio, isto é, a vitória da cruz sobre as perseguições contra os cristãos. Comprometeu-se com a reorganização da Igreja e dos lugares de culto. Faleceu em 314.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-10",
+      "name": "B. Gregório X, papa",
+      "normalizedName": "b. gregorio x, papa",
+      "imageUrl": "./assets/img/santos/01-10-b-gregorio-x-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Quando Tebaldo Visconti foi eleito Papa, no Conclave de Viterbo, que durou dois anos, estava na Terra Santa com os Cruzados e não era sacerdote. Recebendo o nome de Gregório X, trabalhou pela unidade com os Ortodoxos no Concílio de Lyon. Faleceu em 1276 e foi beatificado por Clemente XI, em 1713.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

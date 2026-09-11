@@ -1,0 +1,30 @@
+{
+  "date": "2026-04-26",
+  "year": 2026,
+  "month": 4,
+  "day": 26,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/26.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-26.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-26",
+      "name": "São Cleto, papa e mártir",
+      "normalizedName": "sao cleto, papa e martir",
+      "imageUrl": "./assets/img/santos/04-26-sao-cleto-papa-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Cleto, diminutivo de Anacleto, era romano, mas, provavelmente, de origem ateniense. Foi o terceiro Papa da Igreja, do ano 80 a 92, e autor da dedicatória sobre o túmulo de São Pedro, no Vaticano, ao lado do qual também foi sepultado. Durante seu Pontificado, foi inaugurado o Coliseu de Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

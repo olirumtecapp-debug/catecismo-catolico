@@ -1,0 +1,27 @@
+{
+  "date": "2026-02-03",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "2Sm 18:9-10, 14b, 24-25a, 30–19:3",
+    "psalm": "Sl 86:1-2, 3-4, 5-6",
+    "secondReading": "",
+    "gospel": "Mc 5:21-43"
+  },
+  "calendar": {
+    "date": "2026-02-03",
+    "monthDay": "2/3",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saint Blase, Bishop Martyr and Saint Ansgar, Bishop",
+      "type": "OPT_MEMORIAL",
+      "quote": "O Lord, deliver us from all evil of body and soul.",
+      "description": "Bishop and martyr known for his miraculous healing of a boy with a bone in his throat; he is the patron of those with throat ailments.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/02-03.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/02-03.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-02-03"
+  }
+}

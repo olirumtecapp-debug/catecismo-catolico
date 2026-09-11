@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "28a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Gálatas 5,1-6",
+      "text": "Irmãos: 1É para a liberdade que Cristo nos libertou. Ficai pois firmes e não vos deixeis amarrar de novo ao jugo da escravidão. 2Eis que eu, Paulo, vos digo que Cristo não será de nenhum proveito para vós, se vos deixardes circuncidar. 3Mais uma vez, atesto a todo homem circuncidado que ele está obrigado a observar toda a Lei. 4Vós que procurais a vossa justificação na Lei, rompestes com Cristo, decaístes da graça. 5Quanto a nós, que nos deixamos conduzir pelo Espírito, é da fé que aguardamos a justificação, objeto de nossa esperança. 6Com efeito, em Jesus Cristo, o que vale é a fé agindo pela caridade; observar ou não a circuncisão não tem valor algum."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Senhor, que desça sobre mim a vossa graça e a vossa salvação que prometestes!\n\n- Não retireis vossa verdade de meus lábios, pois eu confio em vossos justos julgamentos!\n\n- Cumprirei constantemente a vossa lei; para sempre, eternamente a cumprirei!\n\n- É amplo e agradável meu caminho, porque busco e pesquiso as vossas ordens.\n\n- Muito me alegro com os vossos mandamentos, que eu amo, amo tanto, mais que tudo!\n\n- Elevarei as minhas mãos para louvar-vos e com prazer meditarei vossa vontade."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 37-41",
+      "text": "Naquele tempo: 37Enquanto Jesus falava, um fariseu convidou-o para jantar com ele. Jesus entrou e pôs-se à mesa. 38O fariseu ficou admirado ao ver que Jesus não tivesse lavado as mãos antes da refeição. 39O Senhor disse ao fariseu: 'Vós fariseus, limpais o copo e o prato por fora, mas o vosso interior está cheio de roubos e maldades. 40Insensatos! Aquele que fez o exterior não fez também o interior? 41Antes, dai esmola do que vós possuís e tudo ficará puro para vós."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São João da Cruz, Carmelita descalço, Doutor da Igreja<br/>",
+    "</b>",
+    "Ditos de luz e amor, n.º 26 in OC, edições Carmelo 2005, p. 88, rev<br/>",
+    "«Quem fez o interior não fez também o exterior? [...] Tudo para vós tudo ficará limpo»<br/>",
+    "Oração da Alma Enamorada<br/>",
+    "Senhor Deus, Amado da minha alma! Se ainda Vos recordais dos meus pecados para não me fazerdes o que vos tenho andado a pedir, fazei, meu Deus, a vossa vontade, pois é o que eu mais quero; fazei sentir a vossa bondade e misericórdia e nelas sereis reconhecido. E, se estais à espera das minhas obras para atenderdes o meu pedido, dai-mas Vós e realizai-as por mim, e juntai-lhes as penas que quiserdes aceitar, e faça-se. [...]<br/>",
+    "Quem se poderá livrar destes modos e baixos termos se não sois Vós, meu Deus, a erguê-lo para Vós em pureza de amor? Como se elevará até Vós o homem gerado e criado em baixezas, se não sois Vós, Senhor, a deitar-lhe a mão com que o fizestes? Meu Deus, não me roubareis o que me destes um dia no vosso único Filho, Jesus Cristo, no qual me destes tudo quanto quero; por isso, espero e confio em que não tardareis.<br/>",
+    "E porquê tanta demora, se já podes amar a Deus no teu coração?<br/>",
+    "Os Céus são meus e a Terra é minha. Os povos são meus; meus sãos os justos e os pecadores. Os anjos são meus, a Mãe de Deus é minha, e minhas são todas as coisas. O próprio Deus é meu e para mim, porque Cristo é meu e todo para mim (cf 1Cor 3,22-23).<br/>",
+    "Então, que pedes e procuras, alma minha? Tudo isto é teu e para ti. Não te rebaixes nem olhes às migalhas que caem da mesa de teu Pai.<br/>",
+    "Sai para fora e gloria-te na tua glória; esconde-te nela e goza, pois alcançarás o que o teu coração deseja.<br/>"
+  ]
+}

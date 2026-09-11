@@ -1,0 +1,43 @@
+{
+  "date": "2026-02-23",
+  "year": 2026,
+  "month": 2,
+  "day": 23,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/23.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-23.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-23",
+      "name": "São Policarpo, bispo de Esmirna e mártir",
+      "normalizedName": "sao policarpo, bispo de esmirna e martir",
+      "imageUrl": "./assets/img/santos/02-23-sao-policarpo-bispo-de-esmirna-e-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/23/s--policarpo--bispo-de-esmirna-e-martir.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/23/s--policarpo--bispo-de-esmirna-e-martir.html",
+      "sourceText": "São Policarpo, martirizado em 23 de fevereiro de 155 aos 86 anos, está elencado entre os Padres Apostólicos, os autores cristãos que viveram entre os séculos I e II , e que tiveram estreita ligação com os apóstolos. Discípulo de João e bispo de Esmirna, foi um pastor amoroso e respeitado.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-23",
+      "name": "Santa Josefina Vannini, virgem",
+      "normalizedName": "santa josefina vannini,",
+      "imageUrl": "./assets/img/santos/02-23-santa-josefina-vannini-virgem.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/23/b--josefina-vannini--virgem.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/23/b--josefina-vannini--virgem.html",
+      "sourceText": "A fundadora das Filhas de São Camilo, conseguiu realizar a sua vocação um pouco tarde, mas de modo extraordinário: em 19 anos, a família feminina, dedicada ao cuidado dos enfermos, consolidou-se no mundo. Josefina foi beatificada por João Paulo II, em 1994, e canonizada pelo Papa Francisco, em 2019.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

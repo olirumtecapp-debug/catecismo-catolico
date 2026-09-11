@@ -1,0 +1,26 @@
+{
+  "date": "2027-04-25",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5o. Domingo da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 9,26-31",
+      "text": "Naqueles dias: 26Saulo chegou a Jerusalém e procurava juntar-se aos discípulos. Mas todos tinham medo dele, pois não acreditavam que ele fosse discípulo. 27Então Barnabé tomou Saulo consigo, levou-o aos apóstolos e contou-lhes como Saulo tinha visto o Senhor no caminho, como o Senhor lhe havia falado e como Saulo havia pregado, em nome de Jesus, publicamente, na cidade de Damasco. 28Daí em diante, Saulo permaneceu com eles em Jerusalém e pregava com firmeza em nome do Senhor. 29Falava também e discutia com os judeus de língua grega, mas eles procuravam matá-lo. 30Quando ficaram sabendo disso, os irmãos levaram Saulo para Cesaréia, e dali o mandaram para Tarso. 31A Igreja, porém, vivia em paz em toda a Judéia, Galiléia e Samaria. Ela consolidava-se e progredia no temor do Senhor e crescia em número com a ajuda do Espírito Santo."
+    },
+    "psalm": {
+      "reference": "Salmo 21 (22)",
+      "text": "- Sois meu louvor em meio à grande assembléia; cumpro meus votos ante aqueles que vos temem! Vossos pobres vão comer e saciar-se, e os que procuram o Senhor o louvarão; 'Seus corações tenham a vida para sempre!'\n\n- Lembrem-se disso os confins de toda a terra, para que voltem ao Senhor e se convertam, e se prostrem, adorando, diante dele todos os povos e as famílias das nações. Somente a ele adorarão os poderosos, e os que voltam para o pó o louvarão.\n\n- Para ele há de viver a minha alma, toda a minha descendência há de servi-lo; às futuras gerações anunciará o poder e a justiça do Senhor; ao povo novo que há de vir, ela dirá: 'Eis a obra que o Senhor realizou!'"
+    },
+    "secondReading": {
+      "reference": "São João 3,18-24",
+      "text": "18Filhinhos, não amemos só com palavras e de boca, mas com ações e de verdade! 19Aí está o critério para saber que somos da verdade e para sossegar diante dele o nosso coração, 20pois, se o nosso coração nos acusa, Deus é maior que o nosso coração e conhece todas as coisas. 21Caríssimos, se o nosso coração não nos acusa, temos confiança diante de Deus. 22E qualquer coisa que pedimos recebemos dele, porque guardamos os seus mandamentos e fazemos o que é do seu agrado. 23Este é o seu mandamento: que creiamos no nome do seu Filho, Jesus Cristo, e nos amemos uns aos outros, de acordo com o mandamento que ele nos deu. 24Quem guarda os seus mandamentos permanece com Deus e Deus permanece com ele. Que ele permanece conosco, sabemo-lo pelo Espírito que ele nos deu."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 15, 1-8",
+      "text": "Naquele tempo, Jesus disse a seus discípulos: 1'Eu sou a videira verdadeira e meu Pai é o agricultor. 2Todo ramo que em mim não dá fruto ele o corta; e todo ramo que dá fruto, ele o limpa, para que dê mais fruto ainda. 3Vós já estais limpos por causa da palavra que eu vos falei. 4Permanecei em mim e eu permanecerei em vós. Como o ramo não pode dar fruto por si mesmo, se não permanecer na videira, assim também vós não podereis dar fruto, se não permanecerdes em mim. 5Eu sou a videira e vós os ramos. Aquele que permaneceu em mim, e eu nele, esse produz muito fruto; porque sem mim nada podeis fazer. 6Quem não permanecer em mim, será lançado fora como um ramo e secará. Tais ramos são recolhidos, lançados no fogo e queimados. 7Se permanecerdes em mim e minhas palavras permanecerem em vós, pedí o que quiserdes e vós será dado. 8Nisto meu Pai é glorificado: que deis muito fruto e vos torneis meus discípulos."
+    }
+  },
+  "extra": []
+}

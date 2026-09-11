@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-23",
+  "year": 2026,
+  "month": 11,
+  "day": 23,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/23.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-23.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-23",
+      "name": "São Clemente I, papa e mártir: suas relíquias são veneradas na igreja com seu nome",
+      "normalizedName": "sao clemente i, papa e martir: suas reliquias sao veneradas na igreja com seu nome",
+      "imageUrl": "./assets/img/santos/11-23-sao-clemente-i-papa-e-martir-suas-reliquias-s.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Conhecido como Clemente Romano, foi o quarto Papa, do ano 88 a 97. É chamado \"Padre Apostólico\", por sua Carta aos Coríntios, para restabelecer a paz, considerada um dos documentos mais antigos sobre o exercício da primazia do Papa. Segundo uma tradição do século IV, Constantino foi martirizado.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "name": "São Columbano, abade",
+      "normalizedName": "sao columbano, abade",
+      "imageUrl": "./assets/img/santos/11-23-sao-columbano-abade.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Uma das celebridades que mais se destacaram na história da Irlanda foi Columbano. Aos 20 anos, tornou-se monge rigoroso e ascético e, aos 50, foi missionário, com 12 companheiros, na França, Suíça e norte da Itália. Fundou comunidades e reorganizou a vida eclesial, com sua Regra monacal exemplar.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "name": "Santa Felicidade, mártir",
+      "normalizedName": "santa felicidade, martir",
+      "imageUrl": "./assets/img/santos/11-23-santa-felicidade-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Segundo a tradição, Felicidade era uma viúva rica e cristã. Por isso, foi perseguida na época do imperador Antonino. Mãe de sete filhos, animou-os espiritualmente durante o martírio, que compartilhou por volta do ano 165. Felicidade foi sepultada na catacumba de Máximo, na Via Salária, em Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-16",
+  "year": 2026,
+  "month": 3,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-16",
+      "name": "SS. Hilário e Taciano, mártires de Aquileia",
+      "normalizedName": "ss. hilario e taciano, de aquileia",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Documentos antigos datam o martírio do Bispo Hilário e do diácono Taciano no ano 284. Suas relíquias, conservadas em Aquileia, foram transladadas para Grado, por temor dos Lombardos. A eles foi dedicada uma igreja que, depois, se tornou catedral, na cidade de Gorizia, da qual são padroeiros.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

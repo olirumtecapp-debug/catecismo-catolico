@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-07",
+  "year": 2026,
+  "month": 11,
+  "day": 7,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/07.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-07.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-07",
+      "name": "São Prosdócimo, primeiro bispo de Pádua",
+      "normalizedName": "sao prosdocimo, primeiro bispo de padua",
+      "imageUrl": "./assets/img/santos/11-07-sao-prosdocimo-primeiro-bispo-de-padua.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Seu nome significa \"o esperado\". Prosdócimo viveu no ano zero da Era Cristã. O próprio São Pedro o nomeou bispo e o enviou a Pádua, uma cidade que o recorda e homenageia como primeiro chefe da Igreja local. Os hagiógrafos atribuem-lhe muitos milagres e prodígios.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "name": "São Vilibrordo, bispo na Europa do Norte",
+      "normalizedName": "sao vilibrordo, bispo na europa do norte",
+      "imageUrl": "./assets/img/santos/11-07-sao-vilibrordo-bispo-na-europa-do-norte.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De origem britânica, Vilibrordo de York deixou Antuérpia para ir evangelizar a Frísia, a Alemanha além do Reno, Flandres e Luxemburgo. Consagrado Bispo de Utrecht, continuou a viajar, chegando até à Dinamarca, para levar a Palavra de Deus. Debilitado, faleceu em Echternach, em 739.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

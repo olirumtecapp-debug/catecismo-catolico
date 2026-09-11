@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-10",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Dn 3:25, 34-43",
+    "psalm": "Sl 25:4-5ab, 6 and 7bc, 8-9",
+    "secondReading": "",
+    "gospel": "Mt 18:21-35"
+  },
+  "calendar": {
+    "date": "2026-03-10",
+    "monthDay": "3/10",
+    "season": "Lent",
+    "celebration": {
+      "name": "Tuesday of the 3rd week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-10.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-10.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-10"
+  }
+}

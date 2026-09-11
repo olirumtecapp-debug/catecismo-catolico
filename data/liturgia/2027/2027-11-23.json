@@ -1,0 +1,31 @@
+{
+  "date": "2027-11-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "34a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Leitura da Profecia de Daniel 2,31-45",
+      "text": "Naqueles dias, disse Daniel a Nabucodonosor: 31Tu, ó rei, olhavas, e pareceu-te ver uma estátua grande, muito alta, erguida à tua frente, de aspecto aterrador. 32A cabeça da estátua era de ouro fino, peito e braços eram de prata, ventre e coxas, de bronze; 33sendo as pernas de ferro, e os pés, parte de ferro e parte de barro. 34Estavas olhando, quando uma pedra, sem ser empurrada por ninguém, se desprendeu de algum lugar, e veio bater na estátua, em seus pés de ferro e barro, fazendo-os em pedaços; 35então, a um só tempo, despedaçaram-se ferro, barro, bronze, prata e ouro, tudo ficando como a palha miúda das eiras, no verão, que o vento varre sem deixar vestígios; mas a pedra que atingira a estátua transformou-se num grande monte e encheu toda a terra. 36Este foi o sonho; vou dar também a interpretação, ó rei, em tua presença. 37Tu és um grande rei, e o Deus do céu te deu a realeza, o poder, a autoridade e a glória; 38ele entregou em tuas mãos os filhos dos homens, os animais do campo e as aves do céu, onde quer que habitem, e te constituiu senhor de todos eles: tu és a cabeça de ouro. 39Depois de ti, surgirá outro reino, que é inferior ao teu, e ainda um terceiro, que será de bronze, e dominará toda a terra. 40O quarto reino será forte como ferro; e assim como o ferro tudo esmaga e domina, do mesmo modo, à semelhança do ferro, ele esmagará e destruirá todos aqueles reinos. 41Viste os pés e dedos dos pés, parte de barro e parte de ferro, porque o reino será dividido; terá a força do ferro, conforme viste o ferro misturado com barro cozido. 42Viste também que os dedos dos pés eram parte de ferro e parte de barro, porque o reino em parte será sólido e em parte quebradiço. 43Quanto ao ferro misturado com barro cozido, haverá de certo ligações por via de casamentos, mas sem coesão entre as partes, assim como o ferro não faz liga com o barro. 44No tempo desses reinos, o Deus do céu suscitará um reino que nunca será destruído, um reino que não passará a outro povo; antes, esmagará e aniquilará todos esses reinos, e ele permanecerá para sempre. 45Quanto à pedra que, sem ser tocada por mãos, se desprendeu do monte e despedaçou o barro cozido, o ferro, o bronze, a prata e o ouro, o grande Deus faz saber ao rei o que acontecerá depois, no futuro. O sonho é verdadeiro, e sua interpretação, fiel'."
+    },
+    "psalm": {
+      "reference": "Salmo (Dn 3)",
+      "text": "- Obras do Senhor, bendizei o Senhor. Louvai-o e exaltai-o pelos séculos sem fim! Céus do Senhor, bendizei o Senhor! Anjos do Senhor, bendizei o Senhor!\n\n- Águas do alto céu, bendizei o Senhor! Potências do Senhor, bendizei o Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 21, 5-11",
+      "text": "Naquele tempo: 5Algumas pessoas comentavam a respeito do Templo que era enfeitado com belas pedras e com ofertas votivas. Jesus disse: 6'Vós admirais estas coisas? Dias virão em que não ficará pedra sobre pedra. Tudo será destruído.' 7Mas eles perguntaram: 'Mestre, quando acontecerá isto? E qual vai ser o sinal de que estas coisas estão para acontecer? 8Jesus respondeu: 'Cuidado para não serdes enganados, porque muitos virão em meu nome, dizendo: 'Sou eu!' - e ainda: 'O tempo está próximo.' Não sigais essa gente! 9Quando ouvirdes falar de guerras e revoluções, não fiqueis apavorados. É preciso que estas coisas aconteçam primeiro, mas não será logo o fim.' 10E Jesus continuou: 'Um povo se levantará contra outro povo, um país atacará outro país. 11Haverá grandes terremotos, fomes e pestes em muitos lugares; acontecerão coisas pavorosas e grandes sinais serão vistos no céu."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João Paulo II, Papa<br/>",
+    "</b>",
+    "Mensagem aos católicos da Áustria, Junho 1982<br/>",
+    "«Há de erguer-se povo contra povo»<br/>",
+    "Perante os múltiplos perigos e ameaças contra a existência da humanidade, os cristãos lutam, com toda a força da sua esperança e em união com todos os homens de boa vontade, por um futuro mais seguro, mais digno de ser vivido. Aliás, o que nos anima não é apenas uma esperança puramente terrena, mas é também, e sobretudo, a esperança que provém da fé, cujos fudamento e cujo objetivo são o próprio Deus: Deus que, em Cristo Jesus, disse o seu sim definitivo ao homem. Com a sua cruz e ressurreição, Cristo venceu todo o sofrimento e todas as calamidade do mundo, tornando-Se assim para todos nós sinal da esperança.<br/>",
+    "A esperança é uma virtude divina; é basicamente um dom que obtereis desde já [...] se o pedirdes inisistentemente a Deus, com os outros e pelos outros. [...] Nós, os cristãos, temos simultaneamente o dever de manifestar publicamente a nossa esperança e de a partilhar com os outros. Pelas nossas palavras e ações, ricas de esperança, ajudaremos os outros a vencerem o medo de viver, a resignação e a indiferença, e a terem confiança em Deus e nos homens. Como discípulos de Cristo [...], oferecereis ao Homem de hoje, cercado por mil ameaças e cheio de confusão, a palavra e a esperança que libertam.<br/>"
+  ]
+}

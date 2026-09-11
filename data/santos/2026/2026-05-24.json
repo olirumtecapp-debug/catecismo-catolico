@@ -1,0 +1,30 @@
+{
+  "date": "2026-05-24",
+  "year": 2026,
+  "month": 5,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-24",
+      "name": "São Vicente de Lérins, presbítero",
+      "normalizedName": "sao vicente de lerins, presbitero",
+      "imageUrl": "./assets/img/santos/05-24-sao-vicente-de-lerins-presbitero.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Vicente, nascido na Gália, no século V, em idade avançada retirou-se para o mosteiro de Lérins, na Provença, uma verdadeira forja de santos. Ali, escreveu o “Commonitorium”, um manual de regras para se viver plenamente o Evangelho, mas também para combater a heresia de Pelágio. Faleceu no ano 450.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

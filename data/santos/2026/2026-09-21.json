@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-21",
+  "year": 2026,
+  "month": 9,
+  "day": 21,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/21.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-21.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-21",
+      "name": "São Mateus, apóstolo e evangelista",
+      "normalizedName": "sao mateus, apostolo e evangelista",
+      "imageUrl": "./assets/img/santos/09-21-sao-mateus-apostolo-e-evangelista.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/21/s--mateus--apostolo-e-evangelista.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/21/s--mateus--apostolo-e-evangelista.html",
+      "sourceText": "Mateus era coletor de impostos em Cafarnaum. Era publicano e desprezado pelo povo por fazer parte dos romanos opressores. Certo dia, ouviu a voz de um homem, que lhe disse: “Segue-me”. Ele se levantou e o seguiu para sempre. Aquele homem era Jesus. Desde então, Mateus não foi mais o mesmo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "name": "São Pânfilo, mártir, na via Salária Antiga",
+      "normalizedName": "sao panfilo, martir, na via salaria antiga",
+      "imageUrl": "./assets/img/santos/09-21-sao-panfilo-martir-na-via-salaria-antiga.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Como muitos protomártires, sabemos apenas que Pânfilo foi enterrado ao longo da Via Salária Antiga, em Roma, e já era venerado no século VII. Introduzido no Martirológio de Usuardo, seu corpo pode ter sido trasladado para a igreja romana de São Silvestre “in Capite”.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "name": "São Efigênia",
+      "normalizedName": "sao efigenia",
+      "imageUrl": "./assets/img/santos/09-21-sao-efigenia.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/21/s--efigenia.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/21/s--efigenia.html",
+      "sourceText": "A difusão do Cristianismo na Etiópia é atribuída a Santa Efigênia, virgem, que é recordada pela Igreja no dia 21 de setembro, juntamente com São Mateus, que a converteu à religião cristã.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-07-27",
+  "year": 2026,
+  "month": 7,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-27",
+      "name": "São Pantaleão, médico, mártir",
+      "normalizedName": "sao pantaleao, medico, martir",
+      "imageUrl": "./assets/img/santos/07-27-sao-pantaleao-medico-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural da Nicomédia, na Bitínia, atual Turquia, Pantaleão foi educado por sua mãe na fé cristã. Ao tornar-se médico, começou a curar, gratuitamente, os pobres. Este seu gesto, porém, não agradou às autoridades pagãs. Por isso, foi denunciado, junto ao imperador, e condenado ao martírio, em 305.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "name": "São Celestino I, papa",
+      "normalizedName": "sao celestino i, papa",
+      "imageUrl": "./assets/img/santos/07-27-sao-celestino-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Campânia, Celestino I foi Papa de 422 a 432. Durante seu pontificado, mandou restaurar e construir muitas basílicas em Roma. É recordado, sobretudo, com firme defensor da pureza da fé, contra as heresias de Pelágio e Nestório, condenados, publicamente, no Sínodo de Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "name": "São Simeão Estilita",
+      "normalizedName": "sao simeao estilita",
+      "imageUrl": "./assets/img/santos/07-27-sao-simeao-estilita.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/27/s--simeao-estilita.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/27/s--simeao-estilita.html",
+      "sourceText": "Simeão, chamado \"o Velho\", para distinguir do seu homônimo, que, mais de um século depois, também viveu sobre uma coluna, era natural da Cilícia. Porém, viveu sobretudo na Síria, entre os séculos IV e V. Era um monge exemplar na prática extrema das virtudes. Faleceu em odor de santidade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

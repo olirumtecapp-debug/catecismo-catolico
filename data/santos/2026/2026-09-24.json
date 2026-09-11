@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-24",
+  "year": 2026,
+  "month": 9,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-24",
+      "name": "São Pacífico de S. Severino, sacerdote franciscano",
+      "normalizedName": "sao pacifico de s. severino, sacerdote franciscano",
+      "imageUrl": "./assets/img/santos/09-24-sao-pacifico-de-s-severino-sacerdote-francisc.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Carlos Antônio Divini nasceu em São Severino, nas Marcas, em 1653. Ainda jovem e órfão, entrou para os Frades Menores, recebendo o nome de Frei Pacífico, onde prestou um longo e apaixonado serviço apostólico à sua região. Cada vez mais frágil de saúde, faleceu em 1721 e canonizado em 1836.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "name": "B. Columba Gabriel, abadessa",
+      "normalizedName": "b. columba gabriel, abadessa",
+      "imageUrl": "./assets/img/santos/09-24-b-columba-gabriel-abadessa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "A professora polonesa, Joana Matilde Gabriel, tornou-se beneditina com o nome de Columba. Abadessa em Lviv, deixou o mosteiro e foi para Subiaco e, depois, para Roma, onde se dedicou aos pobres dos bairros romanos. Ali, em 1908, fundou as Beneditinas da Caridade, para assistir às jovens operárias.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

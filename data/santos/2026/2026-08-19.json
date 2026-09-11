@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-19",
+  "year": 2026,
+  "month": 8,
+  "day": 19,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/19.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-19.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-19",
+      "name": "São João Eudes, presbítero, fundador dos Eudistas",
+      "normalizedName": "sao joao eudes, presbitero, fundador dos eudistas",
+      "imageUrl": "./assets/img/santos/08-19-sao-joao-eudes-presbitero-fundador-dos-eudist.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Um dos gestos que bem o descreve é o cuidado das vítimas da peste. Em 1625, o sacerdote João Eudes dedicava-se às pessoas, sobretudo pobres. Percorreu por uma França embrutecida pela Guerra dos Trinta Anos. Fundou a Congregação de Jesus e Maria, de cuja devoção foi um grande apóstolo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "name": "São Sisto III, papa",
+      "normalizedName": "sao sisto iii, papa",
+      "imageUrl": "./assets/img/santos/08-19-sao-sisto-iii-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Papa desde o ano 432, Sisto III destacou-se pela luta contra as heresias de Pelágio e Nestor e pela reconciliação entre os Patriarcados de Antioquia e Alexandria. Consolidou o dogma trinitário e construiu a Basílica de Santa Maria Maior. Faleceu em 440 e foi sepultado em São Lourenço fora dos Muros.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "name": "São Magno, mártir no Lácio",
+      "normalizedName": "sao magno, martir no lacio",
+      "imageUrl": "./assets/img/santos/08-19-sao-magno-martir-no-lacio.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Em 285, Magno foi um dos soldados da Legião Tebana, liderada por São Maurício, que se recusaram justiçar os cristãos na região de Vallese, atual Piemonte, por ordem de Maximiano. Descoberto pelos seus perseguidores nos Alpes, onde se dedicava à evangelização, morreu como mártir.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2027-10-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "27a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jonas 4,1-11",
+      "text": "1Este desfecho causou em Jonas profunda mágoa e irritação; 2orou então ao Senhor, dizendo: 'Peço-te me ouças, Senhor: não era isto que eu receava, quando ainda estava em minha terra? Por isso, antecipei-me, fugindo para Társis. Sabia que és um Deus benigno e misericordioso, paciente e cheio de bondade, e que facilmente perdoas a punição. 3E agora, Senhor, peço que me tires a minha vida, para mim é melhor morrer do que viver'. 4Disse o Senhor: 'Achas que tens boas razões para irar-te?' 5Jonas saiu da cidade e estabeleceu-se na parte oriental e ali fez para si uma cabana, onde repousava à sombra, a ver o que ia acontecer à cidade. 6O Senhor Deus fez nascer uma hera, que cresceu sobre a cabana, para dar sombra à cabeça de Jonas e abrandar seu aborrecimento. E Jonas alegrou-se grandemente por causa da hera. 7Mas, ao raiar do dia seguinte, Deus determinou que um verme atacasse a hera, e ela secou. 8Quando o sol se levantou, mandou Deus do oriente um vento quente; e o sol bateu forte sobre a cabeça de Jonas, que se sentiu desfalecer; teve vontade de morrer, e disse: 'Para mim é melhor morrer do que viver.' 9Disse Deus a Jonas: 'Achas que tens boas razões para irar-te por esta hera?' 'Sim, respondeu ele, tenho razão até para morrer de raiva.' 10O Senhor replicou-lhe: 'Tu sofres por causa desta planta, que não te custou trabalho e não fizeste crescer, que nasceu numa noite e na outra morreu. 11E eu não haveria de salvar esta grande cidade de Nínive, em que vivem cento e vinte mil seres humanos, que não sabem distinguir a mão direita da esquerda, e um grande número de animais?'"
+    },
+    "psalm": {
+      "reference": "Salmo 85 (86)",
+      "text": "- Piedade de mim, ó Senhor, porque clamo por vós todo o dia! Animai e alegrai vosso servo, pois a vós eu elevo a minha alma.\n\n- Ó Senhor, vós sois bom e clemente, sois perdão para quem vos invoca. Escutai, ó Senhor, minha prece, o lamento da minha oração!\n\n- As nações que criastes virão adorar e louvar vosso nome. Sois tão grande e fazeis maravilhas: vós somente sois Deus e Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 1-4",
+      "text": "1Um dia, Jesus estava rezando num certo lugar. Quando terminou, um de seus discípulos pediu-lhe: 'Senhor, ensina-nos a rezar, como também João ensinou a seus discípulos.' 2Jesus respondeu: 'Quando rezardes, dizei: 'Pai, santificado seja o teu nome. Venha o teu Reino. 3Dá-nos a cada dia o pão de que precisamos, 4e perdoa-nos os nossos pecados, pois nós também perdoamos a todos os nossos devedores; e não nos deixes cair em tentação'.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Homilia do século V sobre a oração <br/>",
+    "</b>",
+    "PG 64, 461<br/>",
+    "«Ensina-nos a orar»<br/>",
+    "O bem supremo é a oração, a conversa familiar com Deus. Ela é relação com Deus e união com Ele. Tal como os olhos do corpo são iluminados à vista da luz, assim a alma voltada para Deus é iluminada com a sua luz inefável. A oração não resulta de uma atitude exterior, mas vem do coração. Não se limita a horas ou a momentos determinados, mas está em contínua atividade, de noite como de dia. Não nos contentemos com orientar o nosso pensamento para Deus quando estamos em oração; mas quando outras ocupações - como o cuidado dos pobres ou qualquer outra ocupação boa e útil - nos absorvem, é importante associar-lhes o desejo e a lembrança de Deus, a fim de oferecer ao Senhor do universo um alimento doce, temperado com o sal do amor de Deus. Podemos daí retirar grande vantagem, ao longo de toda a nossa vida, se a isso consagrarmos uma parte do nosso tempo. <br/>",
+    "A oração é a luz da alma, o verdadeiro conhecimento de Deus, a mediadora entre Deus e os homens. Por ela, a alma eleva-se ao céu e abraça o Senhor com um aperto inexprimível. Como um lactente a sua mãe, a alma grita a Deus chorando, ávida do leite divino; exprimindo assim os seus desejos profundos, recebe dons que ultrapassam tudo o que se pode ver na natureza. A oração, pela qual nos apresentamos respeitosamente perante Deus, é a alegria do coração e o repouso da alma.<br/>"
+  ]
+}

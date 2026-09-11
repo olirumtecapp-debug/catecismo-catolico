@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-17",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "24a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Timóteo 6,2-12",
+      "text": "Caríssimo: 2cEnsina e recomenda estas coisas. 3Quem ensina doutrinas estranhas e discorda das palavras salutares de Nosso Senhor Jesus Cristo e da doutrina conforme à piedade, 4é um obcecado pelo orgulho, um ignorante que morbidamente se compraz em questões e discussões de palavras. Daí é que nascem invejas, contendas, insultos, suspeitas, 5porfias de homens com mente corrompida e privados da verdade que fazem da piedade assunto de lucro. 6Sem dúvida, grande fonte de lucro é a piedade, mas quando acompanhada do espírito de desprendimento. 7Porque nada trouxemos ao mundo como tampouco nada poderemos levar. 8Tendo alimento e vestuário, fiquemos satisfeitos. 9Os que desejam enriquecer, caem em tentação e armadilhas, em muitos desejos loucos e perniciosos que afundam os homens na perdição e na ruína. 10A raiz de todos os males é a cobiça do dinheiro. Por se terem deixado levar por ela, muitos se extraviaram da fé e se atormentam a sim mesmos com muitos sofrimentos. 11Tu que és um homem de Deus, foge das coisas perversas, procura a justiça, a piedade, a fé, o amor, a firmeza, a mansidão. 12Combate o bom combate da fé, conquista a vida eterna, para a qual foste chamado e pela qual fizeste tua nobre profissão de fé diante de muitas testemunhas."
+    },
+    "psalm": {
+      "reference": "Salmo 48 (49)",
+      "text": "- Por que temer os dias maus e infelizes, quando a malícia dos perversos me circunda? Por que temer os que confiam nas riquezas e se gloriam na abundância de seus bens?\n\n- Ninguém se livra de sua morte por dinheiro nem a Deus pode pagar o seu resgate. A isenção da própria morte não tem preço; não há riqueza que a possa adquirir, nem dar ao homem uma vida sem limites e garantir-lhe uma existência imortal.\n\n- Não te inquietes, quando um homem fica rico e aumenta a opulência de sua casa; pois ao morrer não levará nada consigo, nem seu prestígio poderá acompanhá-lo.\n\n- Felicitava-se a si mesmo enquanto vivo: 'Todos te aplaudem, tudo bem, isto que é vida!' Mas vai-se ele para junto de seus pais, que nunca mais e nunca mais veróo a luz!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 8, 1-3",
+      "text": "Naquele tempo: 1Jesus andava por cidades e povoados, pregando e anunciando a Boa Nova do Reino de Deus. Os doze iam com ele; 2e também algumas mulheres que haviam sido curadas de maus espíritos e doenças: Maria, chamada Madalena, da qual tinham saído sete demônios; 3Joana, mulher de Cuza, alto funcionário de Herodes; Susana, e várias outras mulheres que ajudavam a Jesus e aos discípulos com os bens que possuíam."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João Paulo II (1920-2005), Papa <br/>",
+    "</b>",
+    "«Mulieris dignitatem», § 27<br/>",
+    "«Acompanhavam-no os Doze, bem como algumas mulheres»<br/>",
+    "Na história da Igreja, desde os primeiros tempos, existiram - ao lado dos homens - numerosas mulheres, para as quais a resposta da Esposa ao amor redentor do Esposo adquiriu plena força expressiva. Vemos primeiro aquelas mulheres que tinham conhecido pessoalmente a Cristo, O tinham seguido e, depois da sua partida, juntamente com os apóstolos, «eram assíduas na oração» no cenáculo de Jerusalém até ao dia do Pentecostes. Naquele dia, o Espírito Santo falou por meio dos «filhos e filhas» do Povo de Deus [...] (cf At 2,17). Aquelas mulheres, e a seguir muitas outras, tiveram parte ativa e importante na vida da Igreja primitiva, na edificação, desde os seus fundamentos, da primeira comunidade cristã - e das comunidades que se seguiram -, mediante os seus carismas e o seu multiforme serviço. [...] O apóstolo fala das suas «fadigas» por Cristo, e estas indicam os vários campos de serviço apostólico da Igreja, a começar pela «Igreja doméstica». Nesta, de facto, a «fé sincera» passa da mãe para os filhos e os netos, como se verificou em casa de Timóteo (cf 2Tim 1,5). <br/>",
+    "O mesmo se repete no decorrer dos séculos, de geração em geração, como demonstra a história da Igreja. A Igreja, com efeito, defendendo a dignidade da mulher e a sua vocação, expressou honra e gratidão por aquelas que - fiéis ao Evangelho - em todo o tempo participaram na missão apostólica do Povo de Deus. Trata-se de santas mártires, de virgens, de mães de família, que corajosamente deram testemunho da sua fé e, educando os próprios filhos no espírito do Evangelho, transmitiram a mesma fé e a tradição da Igreja. [...] Mesmo diante de graves discriminações sociais, as mulheres santas agiram de «modo livre», fortalecidas pela sua união com Cristo. [...] <br/>",
+    "Também nos nossos dias a Igreja não cessa de se enriquecer com o testemunho das numerosas mulheres que realizam a sua vocação à santidade. As mulheres santas são uma personificação do ideal feminino, mas são também um modelo para todos os cristãos, um modelo de «sequela Christi», um exemplo do amor com que a Esposa deve responder ao amor do Esposo.<br/>"
+  ]
+}

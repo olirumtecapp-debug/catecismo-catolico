@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-09",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 16,1-10",
+      "text": "Naqueles dias: 1Paulo foi para Derbe e Listra. Havia em Listra um discípulo chamado Timóteo, filho de uma judia, crente, e de pai grego. 2Os irmãos de Listra e Icônio davam bom testemunho de Timóteo. 3Paulo quis então que Timóteo partisse com ele. Tomou-o consigo e circuncidou-o, por causa dos judeus que se encontravam nessas regiões, pois todos sabiam que o pai de Timóteo era grego. 4Percorrendo as cidades, Paulo e Timóteo transmitiam as decisões que os apóstolos e anciãos de Jerusalém haviam tomado. E recomendavam que fossem observadas. 5As igrejas fortaleciam-se na fé e, de dia para dia, cresciam em número. 6Paulo e Timóteo atravessaram a Frígia e a região da Galácia, pois o Espírito Santo os proibira de pregar a Palavra de Deus na Ásia. 7Chegando perto da Mísia, eles tentaram entrar na Bitínia, mas o Espírito de Jesus os impediu. 8Então atravessaram a Mísia e desceram para Trôade. 9Durante a noite, Paulo teve uma visão: na sua frente, estava de pé um macedônio que lhe suplicava: 'Vem à Macedônia e ajuda-nos!' 10Depois dessa visão, procuramos partir imediatamente para a Macedônia, pois estávamos convencidos de que Deus acabava de nos chamar para pregar-lhes o Evangelho."
+    },
+    "psalm": {
+      "reference": "Salmo 99 (100)",
+      "text": "- Aclamai o Senhor, ó terra inteira, servi ao Senhor com alegria, ide a ele cantando jubilosos!\n\n- Sabei que o Senhor, só ele, é Deus, Ele mesmo nos fez, e somos seus, nós somos seu povo e seu rebanho.\n\n- Sim, é bom o Senhor e nosso Deus, sua bondade perdura para sempre, seu amor é fiel eternamente!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 15, 18-21",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 18Se o mundo vos odeia, sabei que primeiro me odiou a mim. 19Se fôsseis do mundo, o mundo gostaria daquilo que lhe pertence. Mas, porque não sois do mundo, porque eu vos escolhi e apartei do mundo, o mundo por isso vos odeia. 20Lembrai-vos daquilo que eu vos disse: 'O servo não é maior que seu senhor'. Se me perseguiram a mim, também perseguirão a vós. Se guardaram a minha palavra, também guardarão a vossa. 21Tudo isto eles farão contra vós por causa do meu nome, porque não conhecem aquele que me enviou."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Atanásio, Bispo de Alexandria, Doutor da Igreja<br/>",
+    "</b>",
+    "Sobre a Encarnação do Verbo, 27-29; PG 25,143; SC 199.<br/>",
+    "«Não sois do mundo, pois a minha escolha vos separou do mundo»<br/>",
+    "A morte, uma vez vencida pelo Salvador e pregada na cruz como que num pelourinho, será pisada por todos os que caminham em Cristo. Prestando homenagem a Cristo, estes zombam da morte, não lhe dão importância e repetem o que foi escrito sobre ela: «Morte, onde está a tua vitória? Inferno, onde está o teu ferrão?» (1Cor 15,55; Os 13,14). [...] Será fraca demonstração da vitória obtida pelo Salvador sobre ela que os cristãos, crianças e jovens, desprezem a vida presente e prefiram morrer a renegar a sua fé? O homem teme naturalmente a morte e a dissolução do seu corpo; mas, coisa extraordinária, aquele que se revestiu da fé na cruz despreza este sentimento natural e, por Cristo, já não teme a morte. [...]<br/>",
+    "Se a morte, outrora tão forte e por isso mesmo tão temível, é desprezada após a vinda do Salvador, após a sua morte corporal e a sua ressurreição, é evidente que foi por Cristo na cruz que ela foi aniquilada e vencida. Quando, no final da noite, o Sol aparece e ilumina toda a superfície da Terra, não há qualquer dúvida de que o sol que difunde a sua luz por toda a parte é o mesmo que afugentou as trevas e tudo iluminou. Assim, [...] é evidente que o Salvador manifestado no seu corpo é precisamente Aquele que destruiu a morte e que todos os dias demonstra a sua vitória sobre ela nos seus discípulos. [...] Quando vemos homens, mulheres e crianças correrem a lançar-se para a morte pela sua fé em Cristo, quem seria tão tolo, quem seria tão incrédulo, quem seria tão cego que não compreendesse e pensasse que é Cristo, a quem esses homens prestam homenagem, que dá a cada um a vitória sobre a morte, ao destruir o poder desta em todos os que têm fé n'Ele e ostentam o sinal da sua cruz?<br/>"
+  ]
+}

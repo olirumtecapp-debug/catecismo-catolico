@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-27",
+  "year": 2026,
+  "month": 10,
+  "day": 27,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/27.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-27.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-27",
+      "name": "São Evaristo, papa",
+      "normalizedName": "sao evaristo, papa",
+      "imageUrl": "./assets/img/santos/10-27-sao-evaristo-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Grego de Antioquia, mas nascido em Belém, Evaristo torna-se Papa - quarto ou quinto Sucessor de Pedro - por volta do ano 97. Governou a Igreja por 9 anos, até o ano 105. Nada se sabe sobre seu Pontificado. Mas, segundo algumas tradições, teria morrido como mártir sob o império de Trajano.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "name": "São Frumêncio, bispo, apóstolo da Etiópia",
+      "normalizedName": "sao frumencio, bispo, apostolo da etiopia",
+      "imageUrl": "./assets/img/santos/10-27-sao-frumencio-bispo-apostolo-da-etiopia.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/27/s--frumencio--bispo--apostolo-da-etiopia.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/27/s--frumencio--bispo--apostolo-da-etiopia.html",
+      "sourceText": "Frumêncio, um jovem do século IV, não era missionário, mas foi o primeiro a levar o Cristianismo à Etiópia, mas acabou na escravidão. Uma vez livre, foi consagrado Bispo, por santo Atanásio, e se estabeleceu em Axum, onde fez florescer a comunidade cristã local até à sua morte, no ano 383.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

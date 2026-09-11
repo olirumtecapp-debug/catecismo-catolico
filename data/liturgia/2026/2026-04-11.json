@@ -1,0 +1,33 @@
+{
+  "date": "2026-04-11",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Pascal Ciclo da Pascoa Memoria: Santo Estanislau",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos 4,13-21",
+      "text": "Naqueles dias: Os chefes dos sacerdotes, os anciãos e os escribas, 13ficaram admirados ao ver a segurança com que Pedro e João falavam, pois eram pessoas simples e sem instrução. Reconheciam que eles tinham estado com Jesus. 14No entanto viam, de pé, junto a eles, o homem que tinha sido curado. E não podiam dizer nada em contrário. 15Mandaram que saíssem para fora do Sinédrio, e começaram a discutir entre si: 16'O que vamos fazer com esses homens? Eles realizaram um milagre claríssimo, e o fato tornou-se de tal modo conhecido por todos os habitantes de Jerusalém, que não podemos negá-lo. 17Contudo, a fim de que a coisa não se espalhe ainda mais entre o povo, vamos ameaçá-los, para que não falem mais a ninguém a respeito do nome de Jesus.' 18Chamaram de novo Pedro e João e ordenaram-lhes que, de modo algum, falassem ou ensinassem em nome de Jesus. 19Pedro e João responderam: 'Julgai vós mesmos, se é justo diante de Deus que obedeçamos a vós e não a Deus! 20Quanto a nós, não nos podemos calar sobre o que vimos e ouvimos.' 21Então, insistindo em suas ameaças, deixaram Pedro e João em liberdade, já que não tinham meio de castigá-los, por causa do povo. Pois todos glorificavam a Deus pelo que havia acontecido."
+    },
+    "psalm": {
+      "reference": "Salmo 117 (118)",
+      "text": "- Dai graças ao Senhor, porque ele é bom! 'Eterna é a sua misericórdia!' O Senhor é minha força e o meu canto, e tornou-se para mim o Salvador. 'Clamores de alegria e de vitória ressoem pelas tendas dos fiéis.\n\n- A mão direita do Senhor fez maravilhas, a mão direita do Senhor me levantou, a mão direita do Senhor fez maravilhas!' O Senhor severamente me provou, mas não me abandonou às mãos da morte.\n\n- Abri-me vós, abri-me as portas da justiça; quero entrar para dar graças ao Senhor! 'Sim, esta é a porta do Senhor, por ela só os justos entrarão!' Dou-vos graças, ó Senhor, porque me ouvistes e vos tornastes para mim o Salvador!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 16, 9-15",
+      "text": "9Depois de ressuscitar, na madrugada do primeiro dia após o sábado, Jesus apareceu primeiro a Maria Madalena, da qual havia expulsado sete demônios. 10Ela foi anunciar isso aos seguidores de Jesus, que estavam de luto e chorando. 11Quando ouviram que ele estava vivo e fora visto por ela, não quiseram acreditar. 12Em seguida, Jesus apareceu a dois deles, com outra aparência, enquanto estavam indo para o campo. 13Eles também voltaram e anunciaram isso aos outros. Também a estes não deram crédito. 14Por fim, Jesus apareceu aos onze discípulos enquanto estavam comendo, repreendeu-os por causa da falta de fé e pela dureza de coração, porque não tinham acreditado naqueles que o tinham visto ressuscitado. 15E disse-lhes: 'Ide pelo mundo inteiro e anunciai o Evangelho a toda criatura!"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Romano, o Melodista, compositor de hinos <br/>",
+    "</b>",
+    "Hino «A missão dos apóstolos», 13ss. <br/>",
+    "«Proclamai o Evangelho a toda a criatura»<br/>",
+    "«De uma vez por todas, digo aos meus santos: ide pelo mundo inteiro, pelas nações e pelos reinos, e fazei discípulos. Porque tudo Me foi entregue por Aquele que Me gerou (cf Mt 28,18-19), tanto o mundo superior como o inferior, dos quais Eu era o Senhor antes mesmo de ter tomado carne. Agora tomei posse do meu domínio sobre todo o universo e tenho em vós um conselho de ministros sagrados, Eu, que sou o único que conhece as profundezas dos corações. Ide a todas as nações. Tendo lançado à terra a semente do arrependimento, irrigai-a com os vossos ensinamentos.» <br/>",
+    "Ouvindo estas palavras, os apóstolos olharam uns para os outros, meneando a cabeça: «De onde nos virão a voz e a língua para falar a todos? Quem nos dará forças para lutar com os povos e as nações como Tu nos ordenaste, a nós que não temos letras nem cultura, humildes pescadores que somos, sendo Tu o único a conhecer as profundezas dos corações?» <br/>",
+    "«Não atormenteis o vosso coração, que o Inimigo não vos perturbe o espírito. Não continueis a pensar como criancinhas. [...] Não quero vencer pela força, é através dos fracos que opero. Não procuro os que gostam de filosofar: escolhi aquilo que é louco aos olhos do mundo (cf 1Co r1,27), Eu, que sou o único a conhecer as profundezas dos corações. Ide, portanto, a toda a criação. Regai com os vossos ensinamentos a semente do arrependimento que semeastes. Velai para que nenhuma alma penitente se quede fora da vossa rede. Comprazo-Me naqueles que voltam para Mim, como vós sabeis. Ah, Se aquele que Me traiu tivesse voltado para Mim depois de Me ter vendido! Apagando o seu pecado, tê-lo-ia reunido a vós, Eu que sou o único que conhece as profundezas dos corações. [...] Dizei-lhes que sou Deus e que Eu, o Inexprimível, tomei a condição de servo (Fil 2,7). Mostrai-lhes que fiz minhas as feridas da carne. [...] Enterrado por ter sido condenado, assaltei o inferno, porque Eu sou o Senhor.» <br/>",
+    "Fortalecidos pelas suas palavras, os apóstolos disseram ao Criador: «Tu és o Deus que era antes dos séculos e jamais terás fim. [...] Proclamar-Te-emos como nos ordenaste. Fica connosco, sê o nosso defensor, Tu que és o único que conhece as profundezas dos corações.»<br/>"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2027-09-19",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "25o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Sabedoria 2,12.17-20",
+      "text": "Os ímpios dizem: 12Armemos ciladas ao justo, porque sua presença nos incomoda: ele se opõe ao nosso modo de agir, repreende em nós as transgressões da lei e nos reprova as faltas contra a nossa disciplina. 17Vejamos, pois, se é verdade o que ele diz, e comprovemos o que vai acontecer com ele. 18Se, de fato, o justo é 'filho de Deus', Deus o defenderá e o livrará das mãos dos seus inimigos. 19Vamos pô-lo à prova com ofensas e torturas, para ver a sua serenidade e provar a sua paciência; 20vamos condená-lo à morte vergonhosa, porque, de acordo com suas palavras, virá alguém em seu socorro'."
+    },
+    "psalm": {
+      "reference": "Salmo 53 (54)",
+      "text": "- Por vosso nome, salvai-me, Senhor; e dai-me a vossa justiça! Ó meu Deus, atendei minha prece e escutai as palavras que eu digo!\n\n- Pois contra mim orgulhosos se insurgem, e violentos perseguem-me a vida: não há lugar para Deus aos seus olhos. Quem me protege e me ampara é meu Deus; é o Senhor quem sustenta minha vida!\n\n- Quero ofertar-vos o meu sacrifício de coração e com muita alegria; quero louvar, ó Senhor, vosso nome, quero cantar vosso nome que é bom!"
+    },
+    "secondReading": {
+      "reference": "Tiago 3,16-4,3",
+      "text": "Caríssimos: 3,16Onde há inveja e rivalidade, aí estão as desordens e toda espécie de obras más. 17Por outra parte, a sabedoria que vem do alto é, antes de tudo, pura, depois pacífica, modesta, conciliadora, cheia de misericórdia e de bons frutos, sem parcialidade e sem fingimento. 18O fruto da justiça é semeado na paz, para aqueles que promovem a paz. 4,1De onde vêm as guerras? De onde vêm as brigas entre vós? Não vêm, justamente, das paixões que estão em conflito dentro de vós? 2Cobiçais, mas não conseguis ter. Matais e cultivais inveja, mas não conseguis êxito. Brigais e fazeis guerra, mas não conseguis possuir. E a razão está em que não pedis. 3Pedis, sim, mas não recebeis, porque pedis mal. Pois só quereis esbanjar o pedido nos vossos prazeres."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 9, 30-37",
+      "text": "Naquele tempo: 30Jesus e seus discípulos atravessavam a Galiléia. Ele não queria que ninguém soubesse disso, 31pois estava ensinando a seus discípulos. E dizia-lhes: 'O Filho do Homem vai ser entregue nas mãos dos homens, e eles o matarão. Mas, três dias após sua morte, ele ressuscitará'. 32Os discípulos, porém, não compreendiam estas palavras e tinham medo de perguntar. 33Eles chegaram a Cafarnaum. Estando em casa, Jesus perguntou-lhes: 'O que discutíeis pelo caminho?' 34Eles, porém, ficaram calados, pois pelo caminho tinham discutido quem era o maior. 35Jesus sentou-se, chamou os doze e lhes disse: 'Se alguém quiser ser o primeiro, que seja o último de todos e aquele que serve a todos!' 36Em seguida, pegou uma criança, colocou-a no meio deles, e abraçando-a disse: 37'Quem acolher em meu nome uma destas crianças, é a mim que estará acolhendo. E quem me acolher, está acolhendo, não a mim, mas àquele que me enviou'."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Leão Magno, Papa e Doutor da Igreja<br/>",
+    "</b>",
+    "6.º sermão para o Natal<br/>",
+    "«Quem receber uma destas crianças em meu nome é a Mim que recebe»<br/>",
+    "A majestade dos Filho de Deus não desprezou a infância. Mas a criança foi crescendo até à estatura do homem perfeito; seguidamente, quando realizou plenamente o triunfo da sua Paixão e ressurreição, todas as ações de condição humilde que fizera por amor a nós se tornaram passado. Contudo, a festa do seu nascimento recorda-nos os primeiros momentos de Jesus, nascido da Virgem Maria. E, quando adoramos o nascimento do nosso Salvador, celebramos a nossa própria origem.<br/>",
+    "Com efeito, o cristianismo inicia-se quando Cristo vem ao mundo: o aniversário da cabeça é o aniversário do corpo. Certamente que cada um dos que são chamados o é na sua vez, e que os filhos da Igreja aparecem em diferentes épocas. No entanto, assim como todos os fiéis, nascidos da fonte do batismo, foram crucificados com Cristo na sua Paixão, reanimados na sua ressurreição e se sentaram à direita do Pai na sua ascensão, assim também todos nasceram com Ele na sua natividade.<br/>",
+    "Todo o crente que renasce em Cristo após ter abandonado o caminho do pecado original, seja de que parte do mundo for, torna-se um homem novo pelo seu segundo nascimento. Já não pertence à descendência de seu pai pela carne, mas à estirpe do Salvador, porque este Se tornou Filho do homem para que nós possamos ser filhos de Deus.<br/>"
+  ]
+}

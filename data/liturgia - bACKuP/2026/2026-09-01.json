@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-01",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "1Cor 2:10b-16",
+    "psalm": "Psalm 145:8-9, 10-11, 12-13ab, 13cd-14",
+    "secondReading": "",
+    "gospel": "Lc 4:31-37"
+  },
+  "calendar": {
+    "date": "2026-09-01",
+    "monthDay": "9/1",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Tuesday of the 22nd week of Ordinary Time",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/09-01.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/09-01.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-09-01"
+  }
+}

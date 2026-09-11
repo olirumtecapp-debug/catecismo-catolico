@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-29",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 12:24—13:5a",
+    "psalm": "Sl 67:2-3, 5, 6 and 8",
+    "secondReading": "",
+    "gospel": "Jo 12:44-50"
+  },
+  "calendar": {
+    "date": "2026-04-29",
+    "monthDay": "4/29",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint Catherine of Siena, Virgin and Doctor of The Church, Patron of Europe",
+      "type": "MEMORIAL",
+      "quote": "Be who God meant you to be and you will set the world on fire.",
+      "description": "A mystic, advisor to Popes, and Doctor of the Church who worked for Church reform and unity through her prayers and writings.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Giovanni_Battista_Tiepolo_096.jpg/500px-Giovanni_Battista_Tiepolo_096.jpg"
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-29.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-29.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-29"
+  }
+}

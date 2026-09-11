@@ -1,0 +1,33 @@
+{
+  "date": "2027-09-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "22a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Colossenses 1,9-14",
+      "text": "Irmãos: 9Desde que recebemos essas notícias, não deixamos de rezar insistentemente por vós, para que chegueis a conhecer plenamente a vontade de Deus, com toda a sabedoria e com o discernimento da luz do Espírito. 10Pois deveis levar uma vida digna do Senhor, para lhe serdes agradáveis em tudo. Deveis produzir frutos em toda boa obra e crescer no conhecimento de Deus, 11animados de muita força, pelo poder de sua glória, de muita paciência e constância. 12Com alegria dai graças ao Pai, que vos tornou capazes de participar da luz, que é a herança dos santos. 13Ele nos libertou do poder das trevas e nos recebeu no reino de seu Filho amado, 14por quem temos a redenção, o perdão dos pecados."
+    },
+    "psalm": {
+      "reference": "Salmo 97 (98)",
+      "text": "- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram a salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!\n\n- Cantai salmos ao Senhor ao som da harpa e da cítara suave! Aclamai, com os clarins e as trombetas, ao Senhor, o nosso Rei!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 5, 1-11",
+      "text": "Naquele tempo: 1Jesus estava na margem do lago de Genesaré, e a multidão apertava-se ao seu redor para ouvir a palavra de Deus. 2Jesus viu duas barcas paradas na margem do lago. Os pescadores haviam desembarcado e lavavam as redes. 3Subindo numa das barcas, que era de Simão, pediu que se afastasse um pouco da margem. Depois sentou-se e, da barca, ensinava as multidões. 4Quando acabou de falar, disse a Simão: 'Avança para águas mais profundas, e lançai vossas redes para a pesca'. 5Simão respondeu: 'Mestre, nós trabalhamos a noite inteira e nada pescamos. Mas, em atenção à tua palavra, vou lançar as redes'. 6Assim fizeram, e apanharam tamanha quantidade de peixes que as redes se rompiam. 7Então fizeram sinal aos companheiros da outra barca, para que viessem ajudá-los. Eles vieram, e encheram as duas barcas, a ponto de quase afundarem. 8Ao ver aquilo, Simão Pedro atirou-se aos pés de Jesus, dizendo: 'Senhor, afasta-te de mim, porque sou um pecador!' 9É que o espanto se apoderara de Simão e de todos os seus companheiros, por causa da pesca que acabavam de fazer. 10Tiago e João, filhos de Zebedeu, que eram sócios de Simão, também ficaram espantados. Jesus, porém, disse a Simão: 'Não tenhas medo! De hoje em diante tu serás pescador de homens.' 11Então levaram as barcas para a margem, deixaram tudo e seguiram a Jesus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo António de Lisboa<br/>",
+    "</b>",
+    "Franciscano, Doutor da Igreja<br/>",
+    "Sermões para o Domingo e as festas dos santos<br/>",
+    "«Não temas. Daqui em diante serás pescador de homens.»<br/>",
+    "«Já que o dizes, lançarei as redes.» É por indicação da graça celeste, por inspiração sobrenatural, que se deve lançar a rede da pregação. Senão, é em vão que o pregador lança as linhas das suas palavras. A fé dos povos não se obtém através de discursos sabiamente compostos, mas pela graça da vocação divina. [...] Ó frutuosa humildade! Quando aqueles que até aí não tinham pescado nada confiam na palavra de Cristo, apanham uma multidão de peixes. [...]<br/>",
+    "«Já que o dizes, lançarei as redes.» Cada vez que por mim próprio as lancei, quis guardar o que me pertencia. Fui eu que pesquei e não Tu, foram as minhas palavras e não as tuas. Por isso não pesquei nada. Ou, se pesquei qualquer coisa, não foi peixe, mas rãs, prontas a espalhar lisonjas sobre mim. [...]<br/>",
+    "«Já que o dizes, lançarei as redes.» Lançar a linha por ordem de Jesus é atribuir-Lhe tudo e não guardar nada para si mesmo: é viver em conformidade com o que se pesca. Nessa altura, apanhamos uma grande quantidade de peixes.<br/>"
+  ]
+}

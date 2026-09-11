@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-27",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Jr 20:10-13",
+    "psalm": "Sl 18:2-3a, 3bc-4, 5-6, 7",
+    "secondReading": "",
+    "gospel": "Jo 10:31-42"
+  },
+  "calendar": {
+    "date": "2026-03-27",
+    "monthDay": "3/27",
+    "season": "Lent",
+    "celebration": {
+      "name": "Friday of the 5th week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-27.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-27.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-27"
+  }
+}

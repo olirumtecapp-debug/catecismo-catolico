@@ -1,0 +1,32 @@
+{
+  "date": "2027-11-03",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "31a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 13,8-10",
+      "text": "Irmãos: 8Não fiqueis devendo nada a ninguém, a não ser o amor mútuo, - pois quem ama o próximo está cumprindo a Lei-. 9De fato, os mandamentos: 'Não cometerás adultério', 'Não matarás', 'Não roubarás', 'Não cobiçarás', e qualquer outro mandamento se resumem neste: 'Amarás a teu próximo como a ti mesmo'. 10O amor não faz nenhum mal contra o próximo. Portanto, o amor é o cumprimento perfeito da Lei."
+    },
+    "psalm": {
+      "reference": "Salmo 111 (112)",
+      "text": "- Feliz o homem que respeita o Senhor e que ama com carinho a sua lei! Sua descendência será forte sobre a terra, abençoada a geração dos homens retos!\n\n- Ele é correto, generoso e compassivo, como luz brilha nas trevas para os justos. Feliz o homem caridoso e prestativo, que resolve seus negócios com justiça.\n\n- Ele reparte com os pobres os seus bens, permanece para sempre o bem que fez, e crescerão a sua glória e seu poder."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 14, 25-33",
+      "text": "Naquele tempo: 25Grandes multidões acompanhavam Jesus. Voltando-se, ele lhes disse: 26'Se alguém vem a mim, mas não se desapega de seu pai e sua mãe, sua mulher e seus filhos, seus irmãos e suas irmãs e até da sua própria vida, não pode ser meu discípulo. 27Quem não carrega sua cruz e não caminha atrás de mim, não pode ser meu discípulo. 28Com efeito: qual de vós, querendo construir uma torre, não se senta primeiro e calcula os gastos, para ver se tem o suficiente para terminar? Caso contrário, 29ele vai lançar o alicerce e não será capaz de acabar. E todos os que virem isso começarão a caçoar, dizendo: 30'Este homem começou a construir e não foi capaz de acabar!' 31Ou ainda: Qual o rei que ao sair para guerrear com outro, não se senta primeiro e examina bem se com dez mil homens poderá enfrentar o outro que marcha contra ele com vinte mil? 32Se ele vê que não pode, enquanto o outro rei ainda está longe, envia mensageiros para negociar as condições de paz. 33Do mesmo modo, portanto, qualquer um de vós, se não renunciar a tudo o que tem, não pode ser meu discípulo!'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Basílio<br/>",
+    "</b>",
+    "Monge, Bispo de Cesareia da Capadócia, Doutor da Igreja<br/>",
+    "Grandes Regras Monásticas; questão 8<br/>",
+    "Nada preferir a Cristo<br/>",
+    "Nosso Senhor Jesus Cristo disse a todos, por várias vezes e apresentando diversas provas: «Se alguém quiser vir após Mim, que renuncie a si mesmo, tome a sua cruz e Me siga»; e também: «Aquele de entre vós que não renunciar a tudo o que tem não pode ser meu discípulo». Parece, pois, exigir a renúncia mais completa. [...] «Onde estiver o teu tesouro», diz noutra altura, «aí estará o teu coração» (Mt 6,21). Portanto, se reservamos para nós bens terrenos ou qualquer provisão fugaz, o nosso espírito permanece aí atolado, como que na lama. É então inevitável que a nossa alma seja incapaz de contemplar a Deus e se torne insensível ao desejo dos esplendores do céu e dos bens que nos foram prometidos. Só poderemos obter esses bens se os pedirmos sem cessar, com um desejo ardente, que, de resto, nos tornará leve o esforço para os atingir.<br/>",
+    "Renunciar a nós mesmos é, pois, soltar os laços que nos prendem a esta vida terrena e passageira, libertar-nos das contingências humanas, a fim de sermos mais capazes de caminhar na via que conduz a Deus. É libertar-nos dos entraves, a fim de possuirmos e usarmos bens que são «muito mais preciosos do que o ouro e a prata» (Sl 18,11). Em suma, renunciar a nós mesmos é transportar o coração humano para a vida no céu, de tal forma que possamos dizer: «A nossa pátria está nos céus» (Fil 3,20). E, sobretudo, é começarmos a tornar-nos semelhantes a Cristo, que Se fez pobre por nós, Ele que era rico (2Cor 8,9). Temos de nos assemelhar a Ele se quisermos viver em conformidade com o Evangelho.<br/>"
+  ]
+}

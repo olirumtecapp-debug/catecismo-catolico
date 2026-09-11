@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-11",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Martinho de Tours",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Tito 3,1-7",
+      "text": "Caríssimo, 1admoesta a todos que vivam submissos aos príncipes e às autoridades, que lhes obedeçam e estejam prontos para qualquer boa obra. 2Não injuriem a ninguém, sejam pacíficos, afáveis e deem provas de mansidão para com todos os homens. 3Porque nós outrora éramos insensatos, rebeldes, extraviados, escravos de toda sorte de paixões e prazeres, vivendo na maldade e na inveja, dignos de ódio e odiando uns aos outros. 4Mas um dia manifestou-se a bondade de Deus, nosso salvador, e o seu amor pelos homens: 5ele salvou-nos não por causa dos atos de justiça que tivéssemos praticado, mas por sua misericórdia; quando renascemos e fomos renovados no batismo pelo Espírito Santo, 6que ele derramou abundantemente sobre nós por meio de nosso salvador, Jesus Cristo. 7Justificados, assim, pela sua graça, nos tornamos na esperança herdeiros da vida eterna."
+    },
+    "psalm": {
+      "reference": "Salmo 22 (23)",
+      "text": "- O Senhor é o pastor que me conduz; não me falta coisa alguma. Pelos prados e campinas verdejantes ele me leva a descansar. Para as águas repousantes me encaminha e restaura as minhas forças.\n\n- Ele me guia no caminho mais seguro, pela honra do seu nome. Mesmo que eu passe pelo vale tenebroso, nenhum mal eu temerei. Estais comigo com bastão e com cajado, eles me dão a segurança!\n\n- Preparais à minha frente uma mesa, bem à vista do inimigo; com óleo vós ungis minha cabeça, e o meu cálice transborda.\n\n- Felicidade e todo bem hão de seguir-me, por toda a minha vida; e na casa do Senhor habitarei pelos tempos infinitos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 11-19",
+      "text": "11Aconteceu que, caminhando para Jerusalém, Jesus passava entre a Samaria e a Galileia. 12Quando estava para entrar num povoado, dez leprosos vieram ao seu encontro. Pararam a distância 13e gritaram: \"Jesus, mestre, tem compaixão de nós!\" 14Ao vê-los, Jesus disse: \"Ide apresentar-vos aos sacerdotes\". Enquanto caminhavam, aconteceu que ficaram curados. 15Um deles, ao perceber que estava curado, voltou glorificando a Deus em alta voz; 16atirou-se aos pés de Jesus com o rosto por terra e lhe agradeceu. E este era um samaritano. 17Então Jesus lhe perguntou: \"Não foram dez os curados? E os outros nove, onde estão? 18Não houve quem voltasse para dar glória a Deus, a não ser este estrangeiro?\" 19E disse-lhe: \"Levanta-te e vai! Tua fé te salvou\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Bernardo, Doutor da Igreja<br/>",
+    "</b>",
+    "Sermões diversos, n.º 27<br/>",
+    "«Onde estão os outros nove?»<br/>",
+    "São muitas as pessoas que rezam, mas depois não as vemos a voltar atrás para dar graças a Deus [...] «Não foram dez os que ficaram curados? Onde estão os outros nove?» Recordar-vos-eis de que foi nestes termos que o Salvador Se lamentou da ingratidão dos outros nove leprosos. Eles sabiam rezar, suplicar e pedir, pois tinham levantado a voz para exclamar: «Jesus, Mestre, tem compaixão de nós!» Mas faltou-lhes uma coisa, a que o apóstolo Paulo chama «a ação de graças» (1Tim 2,1): não voltaram para dar graças a Deus.<br/>",
+    "Nos nossos dias, ainda é frequente vermos muitas pessoas pedirem a Deus com insistência o que lhes falta, mas são poucas as que se mostram reconhecidas pelos dons recebidos. Não é mau pedir com insistência, mas o que faz com que Deus não nos atenda é a nossa falta de gratidão. E talvez seja até um ato de clemência da sua parte recusar aos ingratos o que estes pedem, para que não venham a ser julgados com rigor por causa da sua ingratidão [...]. É pois por misericórdia que Deus retém por vezes a sua misericórdia. [...]<br/>",
+    "Vede como tantos dos que foram curados da lepra do mundo, isto é, de desordens evidentes, não aproveitam a sua cura. Alguns, com efeito, foram atingidos por uma chaga bem pior do que a lepra, tanto mais perigosa por ser uma chaga mais interior. É por isso com razão que o Senhor do mundo pergunta onde estão os outros nove leprosos, porque os pecadores se afastam da salvação. E foi por isso que, depois de o primeiro homem ter pecado, Deus lhe perguntou: «Onde estás?» (Gn 3,9).<br/>"
+  ]
+}

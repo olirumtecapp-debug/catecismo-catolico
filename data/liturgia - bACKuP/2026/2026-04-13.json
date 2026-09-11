@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-13",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 4:23-31",
+    "psalm": "Sl 2:1-3, 4-7a, 7b-9",
+    "secondReading": "",
+    "gospel": "Jo 3:1-8"
+  },
+  "calendar": {
+    "date": "2026-04-13",
+    "monthDay": "4/13",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint Martin I, Pope and Martyr",
+      "type": "OPT_MEMORIAL",
+      "quote": "I fear not exile or death; I fear only failing the truth.",
+      "description": "The last martyr Pope, he was exiled and suffered for his defense of Christ's two wills against the Monothelite heresy.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-13.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-13.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-13"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "date": "2026-04-27",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 11,1-18",
+      "text": "Naqueles dias: 1Os apóstolos e os irmãos, que viviam na Judéia, souberam que também os pagãos haviam acolhido a Palavra de Deus. 2Quando Pedro subiu a Jerusalém, os fiéis de origem judaica começaram a discutir com ele, dizendo: 3'Tu entraste na casa de pagãos e comeste com eles!' 4Então, Pedro começou a contar-lhes, ponto por ponto, o que havia acontecido: 5'Eu estava na cidade de Jope e, ao fazer oração, entrei em êxtase e tive a seguinte visão: vi uma coisa parecida com uma grande toalha que, sustentada pelas quatro pontas, descia do céu e chegava até junto de mim. 6Olhei atentamente e vi dentro dela quadrúpedes da terra, animais selvagens, répteis e aves do céu. 7Depois ouvi uma voz que me dizia: 'Levanta-te, Pedro, mata e come.' 8Eu respondi: 'De modo nenhum, Senhor! Porque jamais entrou coisa profana e impura na minha boca'. 9A voz me disse pela segunda vez: 'Não chames impuro o que Deus purificou'. 10Isso repetiu-se por três vezes. Depois a coisa foi novamente levantada para o céu. 11Nesse momento, três homens se apresentaram na casa em que nos encontrávamos. Tinham sido enviados de Cesaréia, à minha procura. 12O Espírito me disse que eu fosse com eles sem hesitar. Os seis irmãos que estão aqui me acompanharam e nós entramos na casa daquele homem. 13Então ele nos contou que tinha visto um anjo apresentar-se em sua casa e dizer: 'Manda alguém a Jope para chamar Simão, conhecido como Pedro. 14Ele te falará de acontecimentos que trazem a salvação para ti e para toda a tua família'. 15Logo que comecei a falar, o Espírito Santo desceu sobre eles, da mesma forma que desceu sobre nós no princípio. 16Então eu me lembrei do que o Senhor havia dito: 'João batizou com água, mas vós sereis batizados no Espírito Santo'. 17Deus concedeu a eles o mesmo dom que deu a nós que acreditamos no Senhor Jesus Cristo. Quem seria eu para me opor à ação de Deus?' 18Ao ouvirem isso, os fiéis de origem judaica se acalmaram e glorificavam a Deus, dizendo: 'Também aos pagãos Deus concedeu a conversão que leva para a vida!'"
+    },
+    "psalm": {
+      "reference": "Salmo 41 (42)",
+      "text": "- Assim como a corça suspira pelas águas correntes, suspira igualmente minha alma por vós, ó meu Deus!\n\n- A minha alma tem sede de Deus, e deseja o Deus vivo. Quando terei a alegria de ver a face de Deus?\n\n- Enviai vossa luz, vossa verdade: elas serão o meu guia; que me levem ao vosso Monte santo, até a vossa morada!\n\n- Então irei aos altares do Senhor, Deus da minha alegria. Vosso louvor cantarei, ao som da harpa, meu Senhor e meu Deus!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 10, 1-10",
+      "text": "Naquele tempo, disse Jesus: 1'Em verdade, em verdade vos digo, quem não entra no redil das ovelhas pela porta, mas sobe por outro lugar, é ladrão e assaltante. 2Quem entra pela porta é o pastor das ovelhas. 3A esse o porteiro abre, e as ovelhas escutam a sua voz; ele chama as ovelhas pelo nome e as conduz para fora. 4E, depois de fazer sair todas as que são suas, caminha à sua frente, e as ovelhas o seguem, porque conhecem a sua voz. 5Mas não seguem um estranho, antes fogem dele, porque não conhecem a voz dos estranhos.' 6Jesus contou-lhes esta parábola, mas eles não entenderam o que ele queria dizer. 7Então Jesus continuou: 'Em verdade, em verdade vos digo, eu sou a porta das ovelhas. 8Todos aqueles que vieram antes de mim são ladrões e assaltantes, mas as ovelhas não os escutaram. 9Eu sou a porta. Quem entrar por mim, será salvo; entrará e sairá e encontrará pastagem. 10O ladrão só vem para roubar, matar e destruir. Eu vim para que tenham vida e a tenham em abundância."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Tomás de Aquino, teólogo dominicano, Doutor da Igreja<br/>",
+    "</b>",
+    "<b>",
+    "Comentário ao Evangelho de João 10, 3<br/>",
+    "</b>",
+    "«Quem entrar por Mim será salvo»<br/>",
+    "«Eu sou o bom pastor». É evidente que o título de pastor convém a Cristo. Porque, assim como um pastor leva o seu rebanho a pastar, assim também Cristo restaura os fiéis através do alimento espiritual, que é o seu corpo e o seu sangue. [...] Por outro lado, Cristo afirmou que o pastor entra pela porta e que Ele próprio é essa porta; temos de compreender, pois, que é Ele que entra, e que entra por Si mesmo. E é bem verdade: é por Si mesmo que Ele entra; manifesta-Se a Si mesmo e mostra que conhece o Pai por Si mesmo, enquanto nós entramos por Ele e é Ele que nos dá a felicidade perfeita.<br/>",
+    "Mais ninguém é a porta, porque mais ninguém é «a luz verdadeira que a todo o homem ilumina» (Jo 1,9). [...] É por isso que nenhum homem afirma ser a porta; Cristo reservou para Si este nome, como pertencendo-Lhe com propriedade. O título de pastor, porém, comunicou-o a outros, deu-o a alguns dos seus membros. Com efeito, também Pedro o foi (Jo 21,15) e os outros apóstolos, e todos os bispos. «Dar-vos-ei pastores segundo o meu coração», diz a Escritura (Jer 3,15). [...] Nenhum pastor é bom se não estiver unido a Cristo pela caridade, tornando-se assim membro do verdadeiro pastor.<br/>",
+    "O serviço do Bom Pastor é a caridade. É por isso que Jesus afirma que dá a vida pelas suas ovelhas (Jo 10,11). [...] Cristo deu-nos o exemplo: «Ele deu a sua vida por nós, e nós devemos dar a vida pelos nossos irmãos» (1Jo 3,16).<br/>"
+  ]
+}

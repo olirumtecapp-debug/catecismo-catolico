@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-16",
+  "year": 2026,
+  "month": 8,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-16",
+      "name": "São Estêvão, rei da Hungria",
+      "normalizedName": "sao estevao, rei da hungria",
+      "imageUrl": "./assets/img/santos/08-16-sao-estevao-rei-da-hungria.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Estêvão nasceu por volta de 969 e, em 997, tornou-se rei da Hungria. Ao ser batizado, organizou seu reino e permitiu à Igreja maior estruturação. Criou dez dioceses, cuidou da fundação e da consolidação de muitas abadias, inspirando-se na reforma de Cluny. Muito hábil em política, faleceu em 1038.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-16",
+      "name": "São Roque, peregrino",
+      "normalizedName": "sao roque, peregrino",
+      "imageUrl": "./assets/img/santos/08-16-sao-roque-peregrino.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Montpellier, aos 20 anos, Roque despojou-se de todos os seus bens e partiu em peregrinação para Roma. Ao chegar a Acquapendente, colocou-se ao serviço dos doentes de peste, realizando curas milagrosas. Suspeito de espionagem, foi preso e faleceu no cárcere de Voghera, por volta de 1379.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

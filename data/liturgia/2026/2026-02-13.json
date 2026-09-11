@@ -1,0 +1,32 @@
+{
+  "date": "2026-02-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Reis 11,29-32; 12,19",
+      "text": "29Aconteceu, naquele tempo, que, tendo Jeroboão saído de Jerusalém, veio ao seu encontro o profeta Aías, de Silo, coberto com um manto novo. Os dois achavam-se sós no campo. 30Aías, tomando o manto novo que vestia, rasgou-o em doze pedaços 31e disse a Jeroboão: \"Toma para ti dez pedaços. Pois assim fala o Senhor, Deus de Israel: Eis que vou arrancar o reino das mãos de Salomão e te darei dez tribos. 32Mas ele ficará com uma tribo, por consideração para com meu servo Davi e para com Jerusalém, cidade que escolhi dentre todas as tribos de Israel\". 12,19Israel rebelou-se contra a casa de Davi até o dia de hoje."
+    },
+    "psalm": {
+      "reference": "Salmo 80 (81)",
+      "text": "- Em teu meio não exista um deus estranho, nem adores a um deus desconhecido! Porque eu sou o teu Deus e teu Senhor, que da terra do Egito te arranquei.\n\n- Mas meu povo não ouviu a minha voz, Israel não quis saber de obedecer-me. Deixei, então, que eles seguissem seus caprichos, abandonei-os ao seu duro coração.\n\n- Quem me dera que meu povo me escutasse! Que Israel andasse sempre em meus caminhos! Seus inimigos, sem demora, humilharia e voltaria minha mão contra o opressor."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 7, 31-37",
+      "text": "Naquele tempo, 31Jesus saiu de novo da região de Tiro, passou por Sidônia e continuou até o mar da Galileia, atravessando a região da Decápole. 32Trouxeram então um homem surdo, que falava com dificuldade, e pediram que Jesus lhe impusesse a mão. 33Jesus afastou-se com o homem para fora da multidão; em seguida, colocou os dedos nos seus ouvidos, cuspiu e, com a saliva, tocou a língua dele. 34Olhando para o céu, suspirou e disse: \"Efatá!\", que quer dizer: \"Abre-te!\" 35Imediatamente seus ouvidos se abriram, sua língua se soltou e ele começou a falar sem dificuldade. 36Jesus recomendou com insistência que não contassem a ninguém. Mas, quanto mais ele recomendava, mais eles divulgavam. 37Muito impressionados, diziam: \"Ele tem feito bem todas as coisas: aos surdos faz ouvir e aos mudos falar\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho <br/>",
+    "</b>",
+    "Bispo e Doutor da Igreja<br/>",
+    "Discursos sobre os salmos, 4.º sobre o salmo 103, § 17<br/>",
+    "«Cheios de assombro, diziam: \"Tudo o que faz é admirável: faz que os surdos oiçam e que os mudos falem.\"»<br/>",
+    "«Cantarei ao Senhor enquanto viver» (Sl 103,33). O que cantará o salmista? Cantará tudo aquilo que Deus é. Cantemos a glória do Senhor durante toda a nossa vida. A nossa vida atual mais não é que uma esperança; a nossa vida futura será a eternidade. A vida desta vida mortal é a esperança da vida imortal: «Cantarei ao Senhor enquanto viver; louvarei o meu Deus enquanto existir.» E, porque viverei nele sem fim, enquanto viver cantarei ao meu Deus.<br/>",
+    "Não pensemos que, quando tivermos começado a cantar ao Senhor na cidade do céu, quereremos fazer outra coisa; nessa altura, toda a nossa vida consistirá em cantar a glória de Deus. Se, neste mundo, o objeto dos nossos louvores nos aborrece, também os nossos cantos de louvor poderão aborrecer-nos. Se, porém, o amarmos eternamente, também eternamente o louvaremos: «Louvarei o meu Deus, enquanto existir.»<br/>"
+  ]
+}

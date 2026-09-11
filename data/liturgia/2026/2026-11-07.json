@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-07",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "31a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Filipenses 4,10-19",
+      "text": "Irmãos: 10Grande foi minha alegria no Senhor, porque afinal vi florescer vosso afeto por mim. Na verdade estava sempre vivo mas faltava-lhe oportunidade de manifestar-se. 11Não é por necessidade minha que vos digo, pois aprendi muito bem a contentar-me em qualquer situação. 12Sei viver na miséria e sei viver na abundância. Eu aprendi o segredo de viver em toda e qualquer situação, estando farto ou passando fome, tendo de sobra ou sofrendo necessidade. 13Tudo posso naquele que me dá força. 14No entanto, fizestes bem em compartilhar as minhas dificuldades. 15Filipenses, bem sabeis que, no início da pregação do evangelho, quando parti da Macedônia, nenhuma igreja, a não ser a vossa, se juntou a mim numa relação de crédito. 16Já em Tessalônica, mais de uma vez, me enviastes o que eu precisava. 17Não que eu procure presentes, porém, o que eu busco é o fruto que cresça no vosso crédito. 18Agora, tenho tudo em abundância. Tenho até de sobra, desde que recebi de Epafrodito o vosso donativo, qual perfume suave, sacrifício aceito e agradável a Deus. 19O meu Deus proverá esplendidamente com sua riqueza a todas as vossas necessidades, em Cristo Jesus."
+    },
+    "psalm": {
+      "reference": "Salmo 111 (112)",
+      "text": "- Feliz o homem que respeita o Senhor e que ama com carinho a sua lei! 2Sua descendência será forte sobre a terra, abençoada a geração dos homens retos!\n\n- Feliz o homem caridoso e prestativo, que resolve seus negócios com justiça. Porque jamais vacilará o homem reto, sua lembrança permanece eternamente!\n\n- Seu coração está tranquilo e nada teme, e confusos há de ver seus inimigos. Ele reparte com os pobres os seus bens, permanece para sempre o bem que fez, e crescerão a sua glória e seu poder."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 16, 9-15",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 9Usai o dinheiro injusto para fazer amigos, pois, quando acabar, eles vos receberão nas moradas eternas. 10Quem é fiel nas pequenas coisas também é fiel nas grandes, e quem é injusto nas pequenas também é injusto nas grandes. 11Por isso, se vós não sois fiéis no uso do dinheiro injusto, quem vos confiará o verdadeiro bem? 12E se não sois fiéis no que é dos outros, quem vos dará aquilo que é vosso? 13Ninguém pode servir a dois senhores. porque ou odiará um e amará o outro, ou se apegará a um e desprezará o outro. Vós não podeis servir a Deus e ao dinheiro.' 14Os fariseus, que eram amigos do dinheiro, ouviam tudo isso e riam de Jesus. 15Então, Jesus lhes disse: 'Vós gostais de parecer justos diante dos homens, mas Deus conhece vossos corações. Com efeito, o que é importante para os homens, é detestável para Deus.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Gregório de Nazianzo (330-390)<br/>",
+    "</b>",
+    "Bispo, Doutor da Igreja<br/>",
+    "Sermão 14 sobre o amor aos pobres, 24-25 (trad. Breviário: segunda-feira da I semana da Quaresma)<br/>",
+    "«Se não fostes fiéis no que se refere ao vil dinheiro, quem vos confiará o verdadeiro bem?»<br/>",
+    "Não, meus irmãos e amigos, não sejamos maus administradores dos bens que a misericórdia divina nos concedeu (Lc 16,1s), se não queremos merecer a repreensão de Pedro: «Tende vergonha, vós que vos apoderais do que não é vosso; imitai a bondade de Deus, e assim ninguém será pobre». Não nos preocupemos em acumular e conservar riquezas, enquanto outros sofrem necessidade, para não merecermos aquelas duras e ameaçadoras palavras do profeta Amós: «Escutai, vós que dizeis: 'Quando passará a lua nova para vendermos o trigo, e o sábado para abrirmos os celeiros?'» (8,5).<br/>",
+    "Imitemos aquela suprema e primordial lei de Deus, que faz chover sobre justos e pecadores e faz nascer o sol igualmente para todos (Mt 5,45); que oferece a todos os animais terrestres os campos, as fontes, os rios e as florestas; que dá às aves a amplidão dos céus e aos animais aquáticos a vastidão das águas; que proporciona a todos liberalmente os meios necessários para a sua subsistência, sem restrições, sem condições, sem fronteiras, que tudo põe em comum à disposição de todos eles, com abundância e generosidade, sem que nada lhes falte. Assim procede Deus para com as suas criaturas, a fim de conceder a cada um os bens de que necessita segundo a sua natureza e dignidade, e manifestar a todos a magnificência da sua bondade.<br/>"
+  ]
+}

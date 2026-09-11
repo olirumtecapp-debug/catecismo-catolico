@@ -1,0 +1,30 @@
+{
+  "date": "2026-03-28",
+  "year": 2026,
+  "month": 3,
+  "day": 28,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/28.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-28.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-28",
+      "name": "São Castor, mártir de Tarso",
+      "normalizedName": "sao castor, martir de tarso",
+      "imageUrl": "./assets/img/santos/03-28-sao-castor-martir-de-tarso.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "É comemorado pelo Martirológio Jeronimiano (o mais antigo catálogo dos mártires cristãos da Igreja Latina, século V) e pelo Martirológio Romano: segundo a tradição, teria sido martirizado em Tarso, na Cilícia (atual Turquia) com outro cristão, Dorotheus e Estêvão",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2027-05-04",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "6a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 16,22-34",
+      "text": "Naqueles dias, 22a multidão dos filipenses levantou-se contra Paulo e Silas; e os magistrados, depois de lhes rasgarem as vestes, mandaram açoitar os dois com varas. 23Depois de açoitá-los bastante, lançaram-nos na prisão, ordenando ao carcereiro que os guardasse com toda a segurança. 24Ao receber essa ordem, o carcereiro levou-os para o fundo da prisão e prendeu os pés deles no tronco. 25À meia-noite, Paulo e Silas estavam rezando e cantando hinos a Deus. Os outros prisioneiros os escutavam. 26De repente, houve um terremoto tão violento, que sacudiu os alicerces da prisão. Todas as portas se abriram, e as correntes de todos se soltaram. 27O carcereiro acordou e viu as portas da prisão abertas. Pensando que os prisioneiros tivessem fugido, puxou da espada e estava para suicidar-se. 28Mas Paulo gritou com voz forte: \"Não te faças mal algum! Nós estamos todos aqui\". 29Então o carcereiro pediu tochas, correu para dentro e, tremendo, caiu aos pés de Paulo e Silas. 30Conduzindo-os para fora, perguntou: \"Senhores, que devo fazer para ser salvo?\" 31Paulo e Silas responderam: \"Crê no Senhor Jesus e sereis salvos tu e todos os de tua família\". 32Então Paulo e Silas anunciaram a Palavra do Senhor ao carcereiro e a todos os da sua família. 33Na mesma hora da noite, o carcereiro levou-os consigo para lavar as feridas causadas pelos açoites. E, imediatamente, foi batizado junto com todos os seus familiares. 34Depois fez Paulo e Silas subirem até sua casa, preparou-lhes um jantar e alegrou-se com todos os seus familiares por ter acreditado em Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 137 (138)",
+      "text": "- Ó Senhor, de coração eu vos dou graças, porque ouvistes as palavras dos meus lábios! Perante os vossos anjos vou cantar-vos e ante o vosso templo vou prostrar-me.\n\n- Eu agradeço vosso amor, vossa verdade, porque fizestes muito mais que prometestes; naquele dia em que gritei, vós me escutastes e aumentastes o vigor da minha alma.\n\n- Estendereis o vosso braço em meu auxílio e havereis de me salvar com vossa destra. Completai em mim a obra começada; ó Senhor, vossa bondade é para sempre! Eu vos peço: não deixeis inacabada esta obra que fizeram vossas mãos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 16, 5-11",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 5\"Agora, parto para aquele que me enviou e nenhum de vós me pergunta: 'Para onde vais?' 6Mas, porque vos disse isso, a tristeza encheu os vossos corações. 7No entanto, eu vos digo a verdade: é bom para vós que eu parta; se eu não for, não virá até vós o defensor; mas, se eu me for, eu vo-lo mandarei. 8E quando vier, ele demonstrará ao mundo em que consistem o pecado, a justiça e o julgamento: 9o pecado, porque não acreditaram em mim; 10a justiça, porque vou para o Pai, de modo que não mais me vereis; 11e o julgamento, porque o chefe deste mundo já está condenado\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Beato John Henry Newman, Fundador do Oratório em Inglaterra<br/>",
+    "</b>",
+    "Meditações e Devoções, cap. 14, 3<br/>",
+    "«Se Eu não for, o Paráclito não virá a vós; mas se Eu for, Eu vo-l'O enviarei»<br/>",
+    "Meu Deus, eterno Paráclito, adoro-Te, a Ti que és luz e vida. Podias ter-Te limitado a enviar-me de fora bons pensamentos, para além da graça que os inspira e os realiza; poderias conduzir-me pela vida dessa maneira, limitando-Te a purificar-me, pela tua ação interior, no momento da minha passagem para o outro mundo. Na tua compaixão infinita, porém, entraste na minha alma desde o começo, dela Te apossaste, dela fizeste o teu templo. Pela tua graça, habitas em mim de modo inefável, unindo-me a Ti e a toda a assembleia dos anjos e dos santos. Mais ainda, estás pessoalmente presente em mim, não apenas pela tua graça, mas pelo teu próprio ser, como se, mantendo embora a minha personalidade, eu fosse de alguma maneira absorvido em Ti, a partir dessa vida. E, como quiseste mesmo apossar-Te do meu corpo, na sua fraqueza, ele se tornou igualmente templo teu (1Cor 6,19). Verdade espantosa e temível! Ó meu Deus, creio que assim é, sei que assim é!<br/>",
+    "Poderei pecar, estando Tu tão intimamente comigo? Poderei esquecer quem está comigo, quem está em mim? Poderei expulsar o hóspede divino por via daquilo que Ele abomina mais do que tudo, da única coisa que pode ofendê-l'O, da única realidade que não é sua? […] Meu Deus, possuo uma dupla segurança contra o pecado: a primeira é o temor de semelhante profanação, na tua presença, de tudo quanto és em mim; a segunda é a confiança de que essa mesma presença me protegerá do mal. […] Nas provas e na tentação, chamarei por Ti. […] Graças a Ti, nunca Te abandonarei.<br/>"
+  ]
+}

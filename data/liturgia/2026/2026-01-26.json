@@ -1,0 +1,32 @@
+{
+  "date": "2026-01-26",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Tito e Sao Timoteo",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Samuel 5,1-7.10",
+      "text": "1 Então todas as tribos de Israel vieram a Davi, em Hebrom, e falaram, dizendo: Eis-nos aqui, somos teus ossos e tua carne. 2 E também outrora, sendo Saul ainda rei sobre nós, eras tu o que saías e entravas com Israel; e também o Senhor te disse: Tu apascentarás o meu povo de Israel, e tu serás príncipe sobre Israel. 3 Assim, pois, todos os anciãos de Israel vieram ao rei, em Hebrom; e o rei Davi fez com eles acordo em Hebrom, perante o Senhor; e ungiram a Davi rei sobre Israel. 4 Da idade de trinta anos era Davi quando começou a reinar; quarenta anos reinou. 5 Em Hebrom reinou sobre Judá sete anos e seis meses, e em Jerusalém reinou trinta e três anos sobre todo o Israel e Judá. 6 E partiu o rei com os seus homens a Jerusalém, contra os jebuseus que habitavam naquela terra; e falaram a Davi, dizendo: Não entrarás aqui, pois os cegos e os coxos te repelirão, querendo dizer: Não entrará Davi aqui. 7 Porém Davi tomou a fortaleza de Sião; esta é a cidade de Davi. 10 Davi ia, cada vez mais, aumentando e crescendo, porque o Senhor Deus dos Exércitos era com ele."
+    },
+    "psalm": {
+      "reference": "Salmo 88 (89)",
+      "text": "- Outrora vós falastes em visões a vossos santos: \"Coloquei uma coroa na cabeça de um herói e do meio deste povo escolhi o meu eleito.\n\n- Encontrei e escolhi a Davi, meu servidor, e o ungi, para ser rei, com meu óleo consagrado. Estará sempre com ele minha mão onipotente, e meu braço poderoso há de ser a sua força.\n\n- Minhas verdade e meu amor estarão sempre com ele, sua força e seu poder, por meu nome, crescerão. Eu farei que ele estenda sua mão por sobre os mares, e a sua mão direita estenderei por sobre os rios\"."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 22-30",
+      "text": "Naquele tempo, 22os mestres da Lei, que tinham vindo de Jerusalém, diziam que ele estava possuído por Beelzebul, e que pelo príncipe dos demônios ele expulsava os demônios. 23Então Jesus os chamou e falou-lhes em parábolas: \"Como é que Satanás pode expulsar a Satanás? 24Se um reino se divide contra si mesmo ele não poderá manter-se. 25Se uma família se divide contra si mesma, ela não poderá manter-se. 26Assim, se Satanás se levanta contra si mesmo e se divide, não poderá sobreviver, mas será destruído. 27Ninguém pode entrar na casa de um homem forte para roubar seus bens, sem antes o amarrar. Só depois poderá saquear sua casa. 28Em verdade vos digo: tudo será perdoado aos homens, tanto nos pecados, como qualquer blasfêmia que tiverem dito. 29Mas quem blasfemar contra o Espírito Santo, nunca será perdoado, mas será culpado de um pecado eterno\". 30Jesus falou isso, porque diziam: \"Ele está possuído por um espírito mau\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Tomás de Aquino <br/>",
+    "</b>",
+    "Teólogo dominicano, Doutor da Igreja<br/>",
+    "Suma Teológica<br/>",
+    "O príncipe deste mundo vai ser lançado fora<br/>",
+    "Os milagres de Cristo visavam manifestar a sua divindade; ora, esta devia ficar oculta aos demónios, senão o mistério da Paixão seria impedido: «Se eles tivessem conhecido o Senhor de glória, não O teriam crucificado» (1Cor 2,8). Parece portanto que Cristo não devia fazer milagres sobre os demónios. […] No entanto, o profeta Zacarias predissera esses prodígios, ao dizer: «Expulsarei do país o espírito de impureza» (Zac 13,2). De facto, os milagres de Cristo eram provas em favor da fé que Ele ensinava; desse modo, era natural que, pela força da sua divindade, Ele abolisse o poder dos demónios nos homens que iam crer em Si, segundo as palavras de S. João : «Agora, o príncipe deste mundo vai ser lançado fora» (Jo 12,31).<br/>",
+    "Convinha portanto que, entre outros milagres, Cristo libertasse dos demónios os homens que estavam por eles possuídos. […] Por outro lado, escreve S.to Agostinho, «Cristo deu-Se a conhecer aos demónios tanto quanto quis, e qui-lo quanto Lhe foi preciso, […] através de certos efeitos materiais do seu poder». Ao ver os seus milagres, o demónio acreditou por conjetura que Cristo era Filho de Deus: «Os demónios sabiam que Ele era Cristo», diz S. Lucas; se reconheciam que Ele era o Filho de Deus, «era mais por via da conjetura do que pela via da certeza», faz notar S. Beda. Quanto aos milagres que Cristo realizou ao expulsar os demónios, não os fez para utilidade destes, mas para a dos homens, para que estes dessem glória a Deus. Era por isso que Ele impedia os demónios de dizerem fosse o que fosse em seu louvor. S. João Crisóstomo observa : «Não convinha que os demónios se arrogassem a glória do papel desempenhado pelos apóstolos, nem que línguas de mentira pregassem o mistério de Cristo».<br/>"
+  ]
+}

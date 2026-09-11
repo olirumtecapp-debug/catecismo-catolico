@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-24",
+  "year": 2026,
+  "month": 8,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-24",
+      "name": "São Bartolomeu, apóstolo",
+      "normalizedName": "sao bartolomeu, apostolo",
+      "imageUrl": "./assets/img/santos/08-24-sao-bartolomeu-apostolo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24/s--bartolomeu--apostolo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24/s--bartolomeu--apostolo.html",
+      "sourceText": "Bartolomeu ou Natanael era um dos Doze Apóstolos que acompanham Jesus, desde o seu Batismo até ao Jordão e à sua morte na Cruz e muito mais. As notícias que temos sobre ele vêm dos Evangelhos: era um pescador de Caná e, no início, era muito cético. Evangelizou a Índia e foi martirizado na Armênia.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "name": "Santa Joana Antida Thouret, virgem, fundadora das Irmãs da Caridade",
+      "normalizedName": "santa joana antida thouret, , fundadora das irmas da caridade",
+      "imageUrl": "./assets/img/santos/08-24-santa-joana-antida-thouret-virgem-fundadora-d.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24/s--joana-antida-thouret--virgem--fundadora-das-irmas-da-caridade.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24/s--joana-antida-thouret--virgem--fundadora-das-irmas-da-caridade.html",
+      "sourceText": "Nascida em uma família pobre francesa, Joana ficou órfã muito cedo. Primeiro, entrou a fazer parte das Filhas da Caridade, depois, fundou o Instituto das Irmãs da Caridade, pela qual teve que se sacrificar muito. Faleceu em Nápoles, em 1826; foi beatificada e canonizada por Pio XI, em 1934.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "name": "São Emilìa de Vialar",
+      "normalizedName": "sao emilia de vialar",
+      "imageUrl": "./assets/img/santos/08-24-sao-emilia-de-vialar.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24/s--emilia-de-vialar.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/24/s--emilia-de-vialar.html",
+      "sourceText": "Emília nasceu em 1797, em Gaillac, na França, onde, em 1832, fundou a Congregação missionária das Irmãs de São José da Aparição, que tem como carisma contribuir para a realização do plano salvífico de Deus para a humanidade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

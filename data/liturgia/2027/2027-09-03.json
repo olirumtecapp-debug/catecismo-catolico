@@ -1,0 +1,31 @@
+{
+  "date": "2027-09-03",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Gregorio Magno",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Colossenses 1,15-20",
+      "text": "15Cristo é a imagem do Deus invisível, o primogênito de toda a criação, 16pois por causa dele, foram criadas todas as coisas no céu e na terra, as visíveis e as invisíveis, tronos e dominações, soberanias e poderes. Tudo foi criado por meio dele e para ele. 17Ele existe antes de todas as coisas e todas têm nele a sua consistência. 18Ele é a Cabeça do corpo, isto é, da Igreja. Ele é o Princípio, o Primogênito dentre os mortos; de sorte que em tudo ele tem a primazia, 19porque Deus quis habitar nele com toda a sua plenitude 20e por ele reconciliar consigo todos os seres, os que estão na terra e no céu, realizando a paz pelo sangue da sua cruz."
+    },
+    "psalm": {
+      "reference": "Salmo 99 (100)",
+      "text": "- Aclamai o Senhor, ó terra inteira, servi ao Senhor com alegria, ide a ele cantando jubilosos!\n\n- Sabei que o Senhor, só ele, é Deus, Ele mesmo nos fez, e somos seus, nós somos seu povo e seu rebanho.\n\n- Entrai por suas portas dando graças, e em seus átrios com hinos de louvor; dai-lhe graças, seu nome bendizei!\n\n- Sim, é bom o Senhor e nosso Deus, sua bondade perdura para sempre, seu amor é fiel eternamente!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 5, 33-39",
+      "text": "Naquele tempo: 33Os fariseus e os mestres da Lei disseram a Jesus: 'Os discípulos de João, e também os discípulos dos fariseus, jejuam com freqüência e fazem orações. Mas os teus discípulos comem e bebem.' 34Jesus, porém, lhes disse: 'Os convidados de um casamento podem fazer jejum enquanto o noivo está com eles? 35Mas dias virão em que o noivo será tirado do meio deles. Então, naqueles dias, eles jejuarão.' 36Jesus contou-lhes ainda uma parábola: 'Ninguém tira retalho de roupa nova para fazer remendo em roupa velha; senão vai rasgar a roupa nova, e o retalho novo não combinará com a roupa velha. 37Ninguém coloca vinho novo em odres velhos; porque, senão, o vinho novo arrebenta os odres velhos e se derrama; e os odres se perdem. 38Vinho novo deve ser colocado em odres novos. 39E ninguém, depois de beber vinho velho, deseja vinho novo; porque diz: o velho é melhor.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Pascácio Radbert (?-c. 849)<br/>",
+    "</b>",
+    "Monge beneditino - Comentário sobre o evangelho de Mateus<br/>",
+    "«E serão ambos uma só carne. É grande este mistério: refiro-me a Cristo e à sua Igreja» (Ef 5,31)<br/>",
+    "Uma união estranha e extraordinária teve lugar logo que «o Verbo encarnou» no seio da Virgem e «habitou entre nós» (Jo 1,14). Da mesma forma que todos os eleitos ressuscitaram em Cristo quando Ele ressuscitou, assim também nele foram celebradas núpcias: a Igreja foi unida a um Esposo pelos laços do matrimónio quando o homem-Deus recebeu em plenitude os dons do Espírito Santo e toda a divindade veio habitar num corpo semelhante ao nosso. [...] Cristo tornou-Se homem pelo Espírito Santo e, «como um esposo que sai do seu quarto» (Sl 18,6), saiu do seio da Virgem que foi o seu quarto nupcial. Mas a Igreja, renascendo da água no mesmo Espírito, torna-se um só corpo em Cristo, de tal modo que «os dois são uma só carne» (Mt 19,5), coisa que, em relação a Cristo e à Igreja, é um grande mistério (Ef 5,31).<br/>",
+    "Esse casamento dura desde o princípio da Encarnação de Cristo até ao momento em que Cristo virá e em que todos os ritos da união nupcial se realizarão. Então, aqueles que estiverem prontos e que tiverem observado convenientemente as condições de uma tão grande união, entrarão com Ele, cheios de respeito, na sala das núpcias eternas (Mt 25,10). Enquanto espera, a esposa prometida a Cristo caminha para o seu Esposo, e observa a aliança com Ele todos os dias, com fé e com ternura, até que Ele venha.<br/>"
+  ]
+}

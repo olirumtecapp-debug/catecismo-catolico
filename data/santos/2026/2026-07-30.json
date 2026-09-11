@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-30",
+  "year": 2026,
+  "month": 7,
+  "day": 30,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/30.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-30.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-30",
+      "name": "São Pedro Crisólogo, bispo de Ravena e doutor da Igreja",
+      "normalizedName": "sao pedro crisologo, bispo de ravena e doutor da igreja",
+      "imageUrl": "./assets/img/santos/07-30-sao-pedro-crisologo-bispo-de-ravena-e-doutor-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Desde o início do século V, Ravena era a capital do Império Romano do Ocidente. O Bispo da cidade, Pedro, era homem de paz, apesar das revoltas. Os 180 Sermões falam da sua vida de fé e de fervor como “homem de Deus”. Encantou Papas e Reis com \"palavras de ouro\": daí seu apelido \"crisólogo\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "name": "SS. Abdon e Sénen, mártires",
+      "normalizedName": "ss. abdon e senen,",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Originários da Pérsia, talvez fossem príncipes: Abdon era mais velho e Senén mais novo. Convertidos ao cristianismo, em Roma, sepultavam os mártires com generosidade. Era o século III, durante a perseguição de Décio. Presos, ambos se recusam oferecer sacrifícios aos ídolos e morreram como mártires.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

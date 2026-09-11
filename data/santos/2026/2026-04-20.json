@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-20",
+  "year": 2026,
+  "month": 4,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-20",
+      "name": "São Aniceto, papa",
+      "normalizedName": "sao aniceto, papa",
+      "imageUrl": "./assets/img/santos/04-20-sao-aniceto-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural da Síria, Aniceto, Papa desde o ano 155, se preocupava com a data da Páscoa, comemorada, em dias diferentes, no Oriente e Ocidente. Por isso, convocou o Bispo de Esmirna, São Policarpo, a Roma. Ambos mantiveram relações amigáveis, mas a questão permaneceu em aberto. Aniceto faleceu em 166.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Santa Inês de Montepulciano, virgem dominicana",
+      "normalizedName": "santa ines de montepulciano, dominicana",
+      "imageUrl": "./assets/img/santos/04-20-santa-ines-de-montepulciano-virgem-dominicana.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "De família nobre, aos 9 anos, Inês entra para a comunidade de virgens chamadas \"monjas do prostíbulo\"; aos 15 anos, já era Superiora de um novo mosteiro fundado em Proceno. Ao voltar para Montepulciano, em 1306, fundou o mosteiro de Santa Maria Novela. Foi canonizada por Bento XIII, em 1726.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

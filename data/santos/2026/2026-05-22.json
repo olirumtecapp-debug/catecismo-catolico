@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-22",
+  "year": 2026,
+  "month": 5,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-22",
+      "name": "Santa Rita de Cássia, religiosa agostiniana",
+      "normalizedName": "santa rita de cassia, agostiniana",
+      "imageUrl": "./assets/img/santos/05-22-santa-rita-de-cassia-religiosa-agostiniana.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/22/s--rita-de-cassia--religiosa-agostiniana.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/22/s--rita-de-cassia--religiosa-agostiniana.html",
+      "sourceText": "A Igreja recorda Santa Rita no dia 22 de maio. Ela é conhecida como a Santa das causas impossíveis, porque, graças à sua intercessão, foram resolvidos, milagrosamente, diversos casos insolúveis. Mulher e mãe exemplar, depois monja beneditina, ela pediu a Cristo para poder compartilhar dos padeciment",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Santa Júlia, virgem e mártir na Córsega",
+      "normalizedName": "santa julia, e martir na corsega",
+      "imageUrl": "./assets/img/santos/05-22-santa-julia-virgem-e-martir-na-corsega.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/22/s--julia--virgem-e-martir-na-corsega.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/22/s--julia--virgem-e-martir-na-corsega.html",
+      "sourceText": "Padroeira da Córsega, Júlia foi uma das jovens cartaginenses que um mercante de escravos queria vender na Gália. Foi sequestrada em um porto da Córsega. Fiel à sua fé recusou-se oferecer sacrifícios às divindades pagãs. Sua festa é celebrada no dia 22 de maio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

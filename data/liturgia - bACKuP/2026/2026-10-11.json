@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-11",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Is 25:6-10a",
+    "psalm": "Sl 23:1-3a, 3b-4, 5, 6",
+    "secondReading": "Fl 4:12-14, 19-20",
+    "gospel": "Mt 22:1-14"
+  },
+  "calendar": {
+    "date": "2026-10-11",
+    "monthDay": "10/11",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "28th Sunday of Ordinary Time",
+      "type": "SUNDAY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/10-11.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/10-11.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-10-11"
+  }
+}

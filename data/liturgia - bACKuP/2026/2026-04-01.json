@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-01",
+  "season": "Holy Week",
+  "readings": {
+    "firstReading": "Is 50:4-9a",
+    "psalm": "Sl 69:8-10, 21-22, 31 and 33-34",
+    "secondReading": "",
+    "gospel": "Mt 26:14-25"
+  },
+  "calendar": {
+    "date": "2026-04-01",
+    "monthDay": "4/1",
+    "season": "Holy Week",
+    "celebration": {
+      "name": "Wednesday of Holy Week",
+      "type": "HOLY_WEEK",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-01.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-01.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-01"
+  }
+}

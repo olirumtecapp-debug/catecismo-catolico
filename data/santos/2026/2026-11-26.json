@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-26",
+  "year": 2026,
+  "month": 11,
+  "day": 26,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/26.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-26.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-26",
+      "name": "São Sirício, papa",
+      "normalizedName": "sao siricio, papa",
+      "imageUrl": "./assets/img/santos/11-26-sao-siricio-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sirício tornou-se Papa em 384. Desde o início, estabeleceu boas relações de confiança e colaboração com Santo Ambrósio de Milão. Este pontífice, moderado e equilibrado, segundo os historiadores, foi o primeiro, entre outras coisas, a confirmar a primazia do grande \"Pedro\" e a ser chamado \"Papa\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "name": "São Leonardo de Porto Maurício, sacerdote franciscano",
+      "normalizedName": "sao leonardo de porto mauricio, sacerdote franciscano",
+      "imageUrl": "./assets/img/santos/11-26-sao-leonardo-de-porto-mauricio-sacerdote-fran.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/26/s--leonardo-de-porto-mauricio--sacerdote-franciscano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/26/s--leonardo-de-porto-mauricio--sacerdote-franciscano.html",
+      "sourceText": "Leonardo, sacerdote franciscano de “palavra ardente”, percorreu a Itália, “admoestando e convertendo imensas multidões”, e apelando “à penitência e à piedade”. Este era, segundo São João Paulo II, o santo da Ligúria, que criou 14 oratórios, no Coliseu de Roma, para a celebração da Via Sacra.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "name": "São Silvestre, abade, fundador dos Silvestrinos",
+      "normalizedName": "sao silvestre, abade, fundador dos silvestrinos",
+      "imageUrl": "./assets/img/santos/11-26-sao-silvestre-abade-fundador-dos-silvestrinos.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/26/s--silvestre--abade--fundador-dos-silvestrinos.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/26/s--silvestre--abade--fundador-dos-silvestrinos.html",
+      "sourceText": "Silvestre foi um dos fundadores da vida monacal reformada. Após anos de vida eremítica, nas Marcas, foi circundado por uma comunidade, com a qual viveu a Regra de São Bento. Os novos monges Beneditinos chamaram-se \"Silvestrinos\". O Santo faleceu em 1267 e foi canonizado por Clemente VIII, em 1589.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

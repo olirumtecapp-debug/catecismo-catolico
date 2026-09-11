@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-01",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "Is 11:1-10",
+    "psalm": "Sl 72:1-2, 7-8, 12-13, 17",
+    "secondReading": "",
+    "gospel": "Lc 10:21-24"
+  },
+  "calendar": {
+    "date": "2026-12-01",
+    "monthDay": "12/1",
+    "season": "Advent",
+    "celebration": {
+      "name": "Tuesday of the 1st week of Advent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-01.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-01.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-01"
+  }
+}

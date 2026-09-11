@@ -1,0 +1,27 @@
+{
+  "date": "2026-02-21",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Is 58:9b-14",
+    "psalm": "Sl 86:1-2, 3-4, 5-6",
+    "secondReading": "",
+    "gospel": "Lc 5:27-32"
+  },
+  "calendar": {
+    "date": "2026-02-21",
+    "monthDay": "2/21",
+    "season": "Lent",
+    "celebration": {
+      "name": "Saint Peter Damian, Bishop and Doctor of the Church",
+      "type": "COMMEMORATION",
+      "quote": "He does not love Christ who does not love the cross of Christ.",
+      "description": "A monk, cardinal, and reformer, he was a powerful voice for Church renewal and advocate for clerical discipline.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/02-21.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/02-21.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-02-21"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "date": "2027-01-29",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "3a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 10,32-39",
+      "text": "Irmãos: 32Lembrai-vos dos primeiros dias, quando, apenas iluminados, suportastes longas e dolorosas lutas. 33És vezes, éreis apresentados como espetáculo, debaixo de injúrias e tribulações; outras vezes, vos tornáveis solidários dos que assim eram tratados. 34Com efeito, participastes dos sofrimentos dos prisioneiros e aceitastes com alegria o confisco dos vossos bens, na certeza de possuir uma riqueza melhor e mais durável. 35Não abandoneis, pois, a vossa coragem, que merece grande recompensa. 36De fato, precisais de perseverança para cumprir a vontade de Deus e alcançar o que ele prometeu. 37Porque ainda bem pouco tempo, e aquele que deve vir, virá e não tardará. 38O meu justo viverá por causa de sua fidelidade, mas, se esmorecer, não encontrarei mais satisfação nele.' 39Nós não somos desertores, para a perdição. Somos homens da fé, para a salvação da alma."
+    },
+    "psalm": {
+      "reference": "Salmo 36 (37)",
+      "text": "- Confia no Senhor e faze o bem, e sobre a terra habitarás em segurança. Coloca no Senhor tua alegria, e ele dará o que pedir teu coração.\n\n- Deixa aos cuidados do Senhor o teu destino; confia nele, e com certeza ele agirá. Fará brilhar tua inocência como a luz, e o teu direito, como o sol do meio-dia.\n\n- É o Senhor quem firma os passos dos mortais e dirige o caminhar dos que lhe agradam; mesmo se caem, não irão ficar prostrados, pois é o Senhor quem os sustenta pela mão.\n\n- A salvação dos piedosos vem de Deus; ele os protege nos momentos de aflição. O Senhor lhes dá ajuda e os liberta, defende-os e protege-os contra os ímpios, e os guarda porque nele confiaram."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 4, 26-34",
+      "text": "Naquele tempo: 26Jesus disse à multidão: 'O Reino de Deus é como quando alguém espalha a semente na terra. 27Ele vai dormir e acorda, noite e dia, e a semente vai germinando e crescendo, mas ele não sabe como isso acontece. 28A terra, por si mesma, produz o fruto: primeiro aparecem as folhas, depois vem a espiga e, por fim, os grãos que enchem a espiga. 29Quando as espigas estão maduras, o homem mete logo a foice, porque o tempo da colheita chegou'. 30E Jesus continuou: 'Com que mais poderemos comparar o Reino de Deus? Que parábola usaremos para representá-lo? 31O Reino de Deus é como um grão de mostarda que, ao ser semeado na terra, é a menor de todas as sementes da terra. 32Quando é semeado, cresce e se torna maior do que todas as hortaliças, e estende ramos tão grandes, que os pássaros do céu podem abrigar-se à sua sombra'. 33Jesus anunciava a Palavra usando muitas parábolas como estas, conforme eles podiam compreender. 34E só lhes falava por meio de parábolas, mas, quando estava sozinho com os discípulos, explicava tudo."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Ambrósio, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Comentário ao evangelho de Lucas, VII<br/>",
+    "Cristo semeado na terra<br/>",
+    "Foi num jardim que Cristo foi preso e sepultado; Ele cresceu neste jardim e aí também ressuscitou, tornando-Se uma árvore. [...] Vós também, semeai Cristo no vosso jardim. [...] Com Cristo moei o grão de mostarda, prensai-o e semeai a fé. A fé é prensada quando cremos em Cristo crucificado. Paulo semeava a fé quando dizia: «Quando eu fui ter convosco, irmãos, para vos anunciar o testemunho de Cristo, não fui com sublimidade de espírito ou de sabedoria. Julguei não dever saber coisa alguma entre vós a não ser Jesus Cristo, e Este crucificado» (1Cor 2,1-2). [...] Nós semeamos a fé quando, apoiados no Evangelho ou nas leituras dos apóstolos e dos profetas, cremos na Paixão do Senhor; semeamos a fé quando a cobrimos com terra lavrada com a carne do Senhor. [...] Com efeito, quem crê que o Filho de Deus Se fez homem, crê que Ele morreu por nós e crê que ressuscitou por nós. Assim sendo, semeio a fé quando planto a sepultura de Cristo no meio do meu jardim.<br/>",
+    "Quereis saber se Cristo é uma semente e se é Ele que é semeado? «Se o grão de trigo, caindo na terra, não morrer, fica ele só; mas se morrer dá muito fruto» (Jo 12,24). [...] Foi o próprio Cristo que o disse. Portanto, Ele é ao mesmo tempo semente de trigo porque «robustece o coração do homem» (Sl 103,15), e semente de mostarda porque aquece o coração do homem. [...] É grão de trigo quando falamos da sua ressurreição, porque a palavra de Deus e a prova da sua ressurreição alimentam as almas, aumentam a esperança e fortalecem o amor - pois Cristo é «o pão de Deus que desce do Céu» (Jo 6,33); e é grão de mostarda porque há mais amargura e azedume quando falamos da Paixão do Senhor.<br/>"
+  ]
+}

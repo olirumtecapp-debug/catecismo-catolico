@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-03",
+  "season": "Holy Week",
+  "readings": {
+    "firstReading": "Is 52:13—53:12",
+    "psalm": "Sl 31:2, 6, 12-13, 15-16, 17, 25",
+    "secondReading": "Hb 4:14-16; 5:7-9",
+    "gospel": "Jo 18:1—19:42"
+  },
+  "calendar": {
+    "date": "2026-04-03",
+    "monthDay": "4/3",
+    "season": "Holy Week",
+    "celebration": {
+      "name": "Good Friday",
+      "type": "TRIDUUM",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-03.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-03.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-03"
+  }
+}

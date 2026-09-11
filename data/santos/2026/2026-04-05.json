@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-05",
+  "year": 2026,
+  "month": 4,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-05",
+      "name": "São Vicente Ferrer, presbítero dominicano",
+      "normalizedName": "sao vicente ferrer, presbitero dominicano",
+      "imageUrl": "./assets/img/santos/04-05-sao-vicente-ferrer-presbitero-dominicano.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/05/s--vicente-ferrer--presbitero-dominicano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/05/s--vicente-ferrer--presbitero-dominicano.html",
+      "sourceText": "Vicente Ferrer era espanhol e um ilustre pregador. Não por acaso, era dominicano. Durante o grande Cisma do Ocidente, iniciado em 1378, trabalhou com afinco pela unidade da Igreja e pela restauração dos bons costumes. Falecendo durante uma viagem, foi canonizado pelo Papa Calisto III, em 1458.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Santa Irene, virgem e mártir",
+      "normalizedName": "santa irene, e martir",
+      "imageUrl": "./assets/img/santos/04-05-santa-irene-virgem-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Paz, caridade e pureza: com estes nomes as três irmãs mártires foram batizadas em Tessalônica, no ano 304, sob o governo de Dulcézio, durante as perseguições de Diocleciano. Irene foi martirizada por ter escondido as Sagradas Escrituras da lei e por não comer o alimento oferecido aos deuses.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-12-16",
+  "year": 2026,
+  "month": 12,
+  "day": 16,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/16.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-16.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-16",
+      "name": "São Davi, rei e profeta",
+      "normalizedName": "sao davi, rei e profeta",
+      "imageUrl": "./assets/img/santos/12-16-sao-davi-rei-e-profeta.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Deus escolheu Davi como Rei de Israel (séc. X a.C.), enquanto apascentava as ovelhas, apesar de ser o menor dos filhos de Jessé: Deus não olha a aparência, mas o coração do homem. Guerreiro e poeta, foi um grande pecador. Porém, reconheceu seus erros e pediu perdão. Jesus nasceu da sua estirpe.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-12-16",
+      "name": "São Adelaide, imperatriz",
+      "normalizedName": "sao adelaide, imperatriz",
+      "imageUrl": "./assets/img/santos/12-16-sao-adelaide-imperatriz.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Adelaide, filha do Rei de Borgonha, nasceu em 931. Casou-se com Otão o Grande, imperador alemão do Sacro Império Romano. Dirigiu o império, em nome do sobrinho, Otão III, ainda menor, dispensando grande atenção aos pobres. Construiu igrejas e mosteiros. Morreu em um mosteiro beneditino em 999.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

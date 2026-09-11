@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-19",
+  "season": "Advent",
+  "readings": {
+    "firstReading": "Jz 13:2-7, 24-25a",
+    "psalm": "Sl 71:3-4a, 5-6ab, 16-17",
+    "secondReading": "",
+    "gospel": "Lc 1:5-25"
+  },
+  "calendar": {
+    "date": "2026-12-19",
+    "monthDay": "12/19",
+    "season": "Advent",
+    "celebration": {
+      "name": "Saturday of the 3rd week of Advent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-19.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-19.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-19"
+  }
+}

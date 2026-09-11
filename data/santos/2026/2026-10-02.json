@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-02",
+  "year": 2026,
+  "month": 10,
+  "day": 2,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/02.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-02.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-02",
+      "name": "SS. Anjos da Guarda",
+      "normalizedName": "ss. anjos da guarda",
+      "imageUrl": "./assets/img/santos/10-02-ss-anjos-da-guarda.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/02/ss--anjos-da-guarda.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/02/ss--anjos-da-guarda.html",
+      "sourceText": "A Igreja dedica o dia de hoje à memória dos Santos Anjos da Guarda, figuras celestiais presentes no universo religioso da Bíblia. Estes contempladores do rosto de Deus desempenham, muitas vezes, a função de enviados do Senhor aos homens, os quais acompanham com a sua presença invisível e silenciosa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

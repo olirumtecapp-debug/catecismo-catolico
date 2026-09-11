@@ -1,0 +1,30 @@
+{
+  "date": "2026-04-09",
+  "year": 2026,
+  "month": 4,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-09",
+      "name": "São Libório, bispo de Le Mans",
+      "normalizedName": "sao liborio, bispo de le mans",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Eleito, no ano 348, como quarto Bispo de Le Mans, Libório governou a sua diocese por 49 anos: ordenou 217 sacerdotes e 186 diáconos e se dedicou às obras de caridade para os últimos. Foram-lhe atribuídas curas de doentes com cálculos renais. Por isso, é representado, geralmente, com pequenas pedras.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

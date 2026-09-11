@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-12",
+  "year": 2026,
+  "month": 5,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-12",
+      "name": "SS. Nereu e Aquileu, mártires, na via Ardeatina",
+      "normalizedName": "ss. nereu e aquileu, , na via ardeatina",
+      "imageUrl": "./assets/img/santos/05-12-ss-nereu-e-aquileu-martires-na-via-ardeatina.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/12/ss--nereu-e-aquileu--martires--na-via-ardeatina.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/12/ss--nereu-e-aquileu--martires--na-via-ardeatina.html",
+      "sourceText": "Nereu e Aquiles, mártires romanos do século III, provavelmente decapitados durante a perseguição anticristã do imperador Diocleciano, foram enterrados em Roma, no cemitério de Domitila, ao longo da Via Ardeatina. Os dois Santos também são venerados em uma basílica nas Termas de Caracala.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-12",
+      "name": "São Pancrácio, mártir, na via Aurélia",
+      "normalizedName": "sao pancracio, martir, na via aurelia",
+      "imageUrl": "./assets/img/santos/05-12-sao-pancracio-martir-na-via-aurelia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Pancrácio faz parte do rol das tantas crianças-mártires da Igreja. Ainda adolescente romano, converteu-se ao cristianismo e, por isso, acabou na rede da perseguição de Diocleciano. Por recusar-se renegar a Cristo, foi condenado à decapitação no ano 304. É padroeiro dos Jovens da Ação Católica.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-12",
+      "name": "São Germano de Constantinopla, bispo",
+      "normalizedName": "sao germano de constantinopla, bispo",
+      "imageUrl": "./assets/img/santos/05-12-sao-germano-de-constantinopla-bispo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/12/s--germano-de-constantinopla--bispo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/12/s--germano-de-constantinopla--bispo.html",
+      "sourceText": "Germano passou de simples clérigo a Patriarca. Teve alguns inimigos em Constantinopla por não querer apoiar a heresia monotelita e por lutar, com vigor, contra a iconoclastia. Porém, era muito estimado pelo Papa Gregório II por defender a ortodoxia. Faleceu em Platanion, em 732, aos 98 anos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

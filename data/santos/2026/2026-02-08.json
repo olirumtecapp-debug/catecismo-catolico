@@ -1,0 +1,43 @@
+{
+  "date": "2026-02-08",
+  "year": 2026,
+  "month": 2,
+  "day": 8,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/08.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-08.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-08",
+      "name": "São Jerônimo Emiliano, fundador dos Somascos, padroeiro dos órfãos e da juventude abandonada",
+      "normalizedName": "sao jeronimo emiliano, fundador dos somascos, padroeiro dos orfaos e da juventude abandonada",
+      "imageUrl": "./assets/img/santos/02-08-sao-jeronimo-emiliano-fundador-dos-somascos-p.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/08/s--jeronimo-emiliano--fundador-dos-somascos--padroeiro-dos-orfao.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/08/s--jeronimo-emiliano--fundador-dos-somascos--padroeiro-dos-orfao.html",
+      "sourceText": "Jerônimo nasceu em Veneza, em 1486, e empreendeu uma carreira militar. Ao ser preso, fez um voto a Maria, em troca da sua liberdade, saindo completamente renovado. Assim, dedicou-se aos órfãos, fundando, na cidade de Somasca, a Companhia dos Servos dos Pobres, os Clérigos Regulares Somascos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-08",
+      "name": "Santa Josefina Bakhita, virgem",
+      "normalizedName": "santa josefina bakhita,",
+      "imageUrl": "./assets/img/santos/02-08-santa-josefina-bakhita-virgem.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/08/s--josefina-bakhita--virgem.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/08/s--josefina-bakhita--virgem.html",
+      "sourceText": "É uma das histórias de opressão e resgate mais extraordinárias dentro da Igreja: Santa Giuseppina Bakhita, a escrava sudanesa que se tornou religiosa canossiana. A Santa de Darfur viveu entre os séculos XIX e XX, tendo passado das cadeias dos negreiros ao serviço do Evangelho.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

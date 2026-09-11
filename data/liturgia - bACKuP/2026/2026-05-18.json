@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-18",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 19:1-8",
+    "psalm": "Sl 68:2-3ab, 4-5acd, 6-7ab",
+    "secondReading": "",
+    "gospel": "Jo 16:29-33"
+  },
+  "calendar": {
+    "date": "2026-05-18",
+    "monthDay": "5/18",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint John I, Pope and Martyr",
+      "type": "OPT_MEMORIAL",
+      "quote": "The peace of Christ in the kingdom of Christ.",
+      "description": "A Pope and martyr who was imprisoned by the Arian King Theodoric after a diplomatic mission to Constantinople.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-18.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-18.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-18"
+  }
+}

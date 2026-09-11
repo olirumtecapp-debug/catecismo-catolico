@@ -1,0 +1,43 @@
+{
+  "date": "2026-02-01",
+  "year": 2026,
+  "month": 2,
+  "day": 1,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/01.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-01.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-01",
+      "name": "B. Ludovica Albertoni, viúva romana",
+      "normalizedName": "b. ludovica albertoni, viuva romana",
+      "imageUrl": "./assets/img/santos/02-01-b-ludovica-albertoni-viuva-romana.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/01/b--ludovica-albertoni--viuva-romana.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/01/b--ludovica-albertoni--viuva-romana.html",
+      "sourceText": "Ludovica ou Luísa, de nobre família romana, realizou sua vocação somente ao se tornar viúva. Entrou para a Ordem Terceira de São Francisco, onde trabalhou, de modo particular, pela educação das jovens mais vulneráveis. É recordada em Roma pela esplêndida escultura que Bernini lhe dedicou.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-02-01",
+      "name": "Santa Brígida, abadessa na Irlanda",
+      "normalizedName": "santa brigida, abadessa na irlanda",
+      "imageUrl": "./assets/img/santos/02-01-santa-brigida-abadessa-na-irlanda.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Brígida, que continuou a obra evangelizadora de São Patrício, foi fundadora de um dos primeiros mosteiros da Irlanda, em Kildare, perto de Dublin, onde foi abadessa dos ramos masculino e feminino. Na Idade Média, os peregrinos a ela recorriam, dizendo: \"Santa Brígida, protege-nos na nossa viagem\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

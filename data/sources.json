@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-09-10",
+  "sources": [
+    {
+      "id": "biblia-db",
+      "name": "Dancrf/biblia-db",
+      "url": "https://github.com/Dancrf/biblia-db",
+      "rawBaseUrl": "https://raw.githubusercontent.com/Dancrf/biblia-db/main/",
+      "role": "Bíblia Católica em português",
+      "note": "Tradução de 1956 de Padre Manuel de Matos Soares. Revisar direitos/licença da tradução antes da redistribuição integral."
+    },
+    {
+      "id": "liturgia-diaria",
+      "name": "Dancrf/liturgia-diaria",
+      "url": "https://github.com/Dancrf/liturgia-diaria",
+      "role": "Leituras e orações da Santa Missa",
+      "note": "v2 estável; v3 beta com múltiplas celebrações e leituras em array."
+    },
+    {
+      "id": "api-liturgia-diaria-josue",
+      "name": "JosueSantos/api_liturgia_diaria",
+      "url": "https://github.com/JosueSantos/api_liturgia_diaria",
+      "apiBaseUrl": "https://api-liturgia-diaria.vercel.app/",
+      "role": "Liturgia por data; fallback/enriquecimento",
+      "note": "Endpoint raiz aceita ?date=AAAA-MM-DD; /santo-do-dia representa o conteúdo atual, sem parâmetro histórico."
+    }
+  ]
+}

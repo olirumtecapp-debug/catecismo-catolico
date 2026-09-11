@@ -1,0 +1,69 @@
+{
+  "date": "2026-05-08",
+  "year": 2026,
+  "month": 5,
+  "day": 8,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/08.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-08.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-08",
+      "name": "São Vítor, mártir de Milão",
+      "normalizedName": "sao vitor, martir de milao",
+      "imageUrl": "",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/08/s--vitor--martir-de-milao.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/08/s--vitor--martir-de-milao.html",
+      "sourceText": "Milão, ano 290. Três soldados mouros serviam o exército imperial: Vítor, Narbor e Félix. Todos eles eram cristãos e todos os três preferiram morrer como mártires em vez de renunciar à sua fé. Por isso, a Liturgia os celebra juntos, embora Vítor tenha morrido em Milão e os outros dois em Lodi.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "name": "São Bonifácio IV, papa",
+      "normalizedName": "sao bonifacio iv, papa",
+      "imageUrl": "./assets/img/santos/05-08-sao-bonifacio-iv-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Monge beneditino, proveniente de Marsi, o Papa Bonifácio IV subiu ao trono Pontifício em 608, após um período vacante de 9 meses. Ele é conhecido por ter consagrado o Panteão de Roma, antigo templo pagão, - que recebera do imperador Foca - a Nossa Senhora e a Todos os Santos, em 1º de novembro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "name": "São Bento II, papa",
+      "normalizedName": "sao bento ii, papa",
+      "imageUrl": "./assets/img/santos/05-08-sao-bento-ii-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Com o Pontificado de Bento II, que gozava da estima de Constantino IV, imperador do Oriente, se interrompeu uso da eleição de um Papa, que devia deve ser ratificada por Constantinopla: desde então, era suficiente a aprovação do governador Bizantino, em Ravenna. Bento II faleceu no ano 685.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "name": "São Arsênio, diácono romano, anacoreta no Egito",
+      "normalizedName": "sao arsenio, diacono romano, anacoreta no egito",
+      "imageUrl": "./assets/img/santos/05-08-sao-arsenio-diacono-romano-anacoreta-no-egito.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Na época do imperador Teodósio, entre os séculos IV e V, a Igreja de Roma contava, entre seus diáconos, certo Arsênio. Em um determinado momento da sua vida, retirou-se para o Monte Scete, no Egito, onde se tornou anacoreta, ou seja, um eremita que se dedica à contemplação e à ascese.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

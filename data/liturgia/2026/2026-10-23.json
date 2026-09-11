@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "29a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Efésios 4,7-16",
+      "text": "Irmãos: 7Cada um de nós recebeu a graça na medida em que Cristo lha deu. 8Daí esta palavra: 'Tendo subido às alturas, ele capturou prisioneiros, e distribuiu dons aos homens'. 9'Ele subiu'! Que significa isso, senão que ele desceu também às profundezas da terra? 10Aquele que desceu é o mesmo que subiu mais alto do que todos os céus, a fim de encher o universo. 11E foi ele quem instituiu alguns como apóstolos, outros como profetas, outros ainda como evangelistas, outros, enfim, como pastores e mestres. 12Assim, ele capacitou os santos para o ministério, para edificar o corpo de Cristo, 13até que cheguemos todos juntos à unidade da fé e do conhecimento do Filho de Deus, ao estado do homem perfeito e à estatura de Cristo em sua plenitude. 14Assim, não seremos mais crianças ao sabor das ondas, arrastados por todo vento de doutrina, ludibriados pelos homens e induzidos por sua astúcia ao erro. 15Motivados pelo amor queremos ater-nos à verdade e crescer em tudo até atingirmos aquele que é a Cabeça, Cristo. 16Graças a ele, o corpo, coordenado e bem unido, por meio de todas as articulações que o servem, realiza o seu crescimento, segundo uma atividade à medida de cada membro, para a sua edificação no amor."
+    },
+    "psalm": {
+      "reference": "Salmo 121 (122)",
+      "text": "- Que alegria, quando ouvi que me disseram: 'Vamos à casa do Senhor!' E agora nossos pés já se detêm, Jerusalém, em tuas portas.\n\n- Jerusalém,cidade bem edificada num conjunto harmonioso; para lá sobem as tribos de Israel, as tribos do Senhor.\n\n- Para louvar, segundo a lei de Israel, o nome do Senhor. A sede da justiça lá está e o trono de Davi."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 13, 1-9",
+      "text": "1Naquele tempo, vieram algumas pessoas trazendo notícias a Jesus a respeito dos galileus que Pilatos tinha matado, misturando seu sangue com o dos sacrifícios que ofereciam. 2Jesus lhes respondeu: 'Vós pensais que esses galileus eram mais pecadores do que todos os outros galileus, por terem sofrido tal coisa? 3Eu vos digo que não. Mas se vós não vos converterdes, ireis morrer todos do mesmo modo. 4E aqueles dezoito que morreram, quando a torre de Siloé caiu sobre eles? Pensais que eram mais culpados do que todos os outros moradores de Jerusalém? 5Eu vos digo que não. Mas, se não vos converterdes, ireis morrer todos do mesmo modo.' 6E Jesus contou esta parábola: 'Certo homem tinha uma figueira plantada na sua vinha. Foi até ela procurar figos e não encontrou. 7Então disse ao vinhateiro: 'Já faz três anos que venho procurando figos nesta figueira e nada encontro. Corta-a! Por que está ela inutilizando a terra?' 8Ele, porém, respondeu: 'Senhor, deixa a figueira ainda este ano. Vou cavar em volta dela e colocar adubo. 9Pode ser que venha a dar fruto. Se não der, então tu a cortarás.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Agostinho, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Confissões, livro 8<br/>",
+    "Responder ao apelo de Deus e converter-se<br/>",
+    "Elas prendiam-me, aquelas velhas amigas, aquelas bagatelas de bagatela, vaidades de vaidade! Mansamente, puxavam-me pela veste de carne e murmuravam em voz baixa: «Queres mandar-nos embora? Deixa-te disso! Quando deixarmos de estar contigo, já não te será permitido fazer isto, ou aquilo». Oh! o que elas me sugeriam, meu Deus! [...] Eu hesitava em as afastar, em saltar para onde Tu me chamavas; os maus hábitos diziam-me, tirânicos: «Julgas que poderás viver sem elas?» Mas a sua voz já era fraca, porque, do lado para onde eu voltava a cara e receava passar, a casta dignidade da continência convidava-me, nobre e graciosamente, a avançar sem receio, mostrando-me uma multidão de bons exemplos: [...] «Foi o Senhor seu Deus que me entregou a eles. Porque te hás de apoiar em ti mesmo, se não te aguentas em pé? Lança-te nos seus braços, não tenhas medo. Ele não Se vai afastar para que caias. Lança-te sem receio; ele te receberá e curará». [...]<br/>",
+    "Esta disputa no meu coração era uma luta de mim contra mim mesmo. [...] Quando o meu olhar conseguiu por fim retirar do fundo do meu coração todas as minhas misérias, ergueu-se uma imensa tempestade de lágrimas. Para apaziguar a tormenta, levantei-me e saí. [...] Sem saber muito bem como, estendi-me debaixo de uma figueira e abandonei-me completamente às lágrimas, que correram em cascata - sacrifício digno de Ti, meu Deus. E, sem poder conter-me, perguntei-Te: «E tu, Senhor, até quando? Até quando estarás irritado? Não guardes a lembrança das nossas antigas iniquidades» (Sl 6,4; 78,5). [...] E lancei gritos pungentes: «Quanto tempo mais? Quanto tempo? Amanhã, sempre amanhã. Porque não já?» [...]<br/>",
+    "E eis que ouvi uma voz vinda da casa ao lado, uma voz de criança ou de donzela, que cantava e repetia: «Toma e lê! Toma e lê!» Nesse instante, voltei a mim e tentei lembrar-me se seria o refrão de algum jogo infantil; mas nada me vinha à memória. Reprimindo as lágrimas, levantei-me com a ideia de que o Céu me ordenava que abrisse o livro do apóstolo Paulo e lesse a primeira passagem em que os meus olhos se fixassem. [...] Voltei para casa à pressa, agarrei no livro e li a primeira coisa que vi: «Nada de comezainas e bebedeiras, nada de devassidão e libertinagens, nada de discórdias e invejas. Revesti-vos do Senhor Jesus Cristo. Não vos entregueis às coisas da carne, satisfazendo os seus desejos» (Rom 13,13-14). Não valia a pena ler mais; já não era preciso. Mal acabei de ler aqueles linhas, uma luz de segurança derramou-se no meu coração e todas as trevas da minha incerteza se dissiparam.<br/>"
+  ]
+}

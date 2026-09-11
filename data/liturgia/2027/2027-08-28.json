@@ -1,0 +1,23 @@
+{
+  "date": "2027-08-28",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santo Agostinho",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Tessalonicenses 4,9-11",
+      "text": "Irmãos: 9Não é preciso escrever-vos a respeito do amor fraterno, pois já aprendestes de Deus mesmo a amar-vos uns aos outros. 10É o que já estais fazendo com todos os irmãos, em toda a Macedônia. Só podemos exortar-vos, irmãos, a progredirdes sempre mais. 11Procurai viver com tranqüilidade, dedicando-vos aos vossos afazeres e trabalhando com as próprias mãos, como recomendamos."
+    },
+    "psalm": {
+      "reference": "Salmo 97 (98)",
+      "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- Aplauda o mar com todo ser que nele vive, o mundo inteiro e toda gente! As montanhas e os rios batam palmas e exultem de alegria.\n\n- Na presença do Senhor, pois ele vem, vem julgar a terra inteira. Julgará o universo com justiça e as nações com equidade."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 25, 14-30",
+      "text": "Naquele tempo, Jesus contou esta parábola a seus discípulos: 14Um homem ia viajar para o estrangeiro. Chamou seus empregados e lhes entregou seus bens. 15A um deu cinco talentos, a outro deu dois e ao terceiro, um; a cada qual de acordo com a sua capacidade. Em seguida viajou. 16O empregado que havia recebido cinco talentos saiu logo, trabalhou com eles, e lucrou outros cinco. 17Do mesmo modo, o que havia recebido dois lucrou outros dois. 18Mas aquele que havia recebido um só, saiu, cavou um buraco na terra, e escondeu o dinheiro do seu patrão. 19Depois de muito tempo, o patrão voltou e foi acertar contas com os empregados. 20O empregado que havia recebido cinco talentos entregou-lhe mais cinco, dizendo: `Senhor, tu me entregaste cinco talentos. Aqui estão mais cinco que lucrei'. 21O patrão lhe disse: `Muito bem, servo bom e fiel! como foste fiel na administração de tão pouco, eu te confiarei muito mais. Vem participar da minha alegria!' 22Chegou também o que havia recebido dois talentos, e disse: `Senhor, tu me entregaste dois talentos. Aqui estão mais dois que lucrei'. 23O patrão lhe disse: `Muito bem, servo bom e fiel! Como foste fiel na administração de tão pouco, eu te confiarei muito mais. Vem participar da minha alegria!' 24Por fim, chegou aquele que havia recebido um talento, e disse: `Senhor, sei que és um homem severo, pois colhes onde não plantaste e ceifas onde não semeaste. 25Por isso fiquei com medo e escondi o teu talento no chão. Aqui tens o que te pertence'. 26O patrão lhe respondeu: `Servo mau e preguiçoso! Tu sabias que eu colho onde não plantei e que ceifo onde não semeei? 27Então devias ter depositado meu dinheiro no banco, para que, ao voltar, eu recebesse com juros o que me pertence.' 28Em seguida, o patrão ordenou: `Tirai dele o talento e dai-o àquele que tem dez! 29Porque a todo aquele que tem será dado mais, e terá em abundância, mas daquele que não tem, até o que tem lhe será tirado. 30Quanto a este servo inútil, jogai-o lá fora, na escuridão. Ali haverá choro e ranger de dentes!'"
+    }
+  },
+  "extra": []
+}

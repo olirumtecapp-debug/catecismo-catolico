@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-10",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "27a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Gálatas 3,22-29",
+      "text": "Irmãos: 22A Escritura pôs todos e tudo sob o jugo do pecado, a fim de que, pela fé em Jesus Cristo, se cumprisse a promessa em favor dos que crêem. 23Antes que se inaugurasse o regime da fé, nós éramos guardados, como prisioneiros, sob o jugo da Lei. Éramos guardados para o regime da fé, que estava para ser revelado. 24Assim, a Lei foi como um pedagogo que nos conduziu até Cristo, para que fôssemos justificados pela fé. 25Mas, uma vez inaugurado o regime da fé, já não estamos na dependência desse pedagogo. 26Com efeito, vós todos sois filhos de Deus pela fé em Jesus Cristo. 27Vós todos que fostes batizados em Cristo vos revestistes de Cristo. 28O que vale não é mais ser judeu nem grego, nem escravo nem livre, nem homem nem mulher, pois todos vós sois um só, em Jesus Cristo. 29Sendo de Cristo, sois então descendência de Abraão, herdeiros segundo a promessa."
+    },
+    "psalm": {
+      "reference": "Salmo 104 (105)",
+      "text": "- Cantai, entoai salmos para ele, publicai todas as suas maravilhas! Gloriai-vos em seu nome que é santo, exulte o coração que busca a Deus!\n\n- Procurai o Senhor Deus e seu poder, buscai constantemente a sua face! Lembrai as maravilhas que ele fez, seus prodígios e as palavras de seus lábios!\n\n- Descendentes de Abraão, seu servidor, e filhos de Jacó, seu escolhido, ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 27-28",
+      "text": "Naquele tempo: 27Enquanto Jesus falava, uma mulher levantou a voz no meio da multidão e lhe disse: 'Feliz o ventre que te trouxe e os seios que te amamentaram.' 28Jesus respondeu: 'Muito mais felizes são aqueles que ouvem a palavra de Deus e a põem em prática.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Agostinho, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Sermão sobre o Evangelho de Mateus, n° 25, 7-8; PL 46, 937<br/>",
+    "«Feliz Aquela que Te trouxe no seu ventre»<br/>",
+    "Tomai atenção ao que Cristo diz, indicando com a mão os discípulos: «Aí estão minha mãe e meus irmãos». E em seguida: «Pois todo aquele que fizer a vontade de meu Pai que está nos Céus, esse é meu irmão, minha irmã e minha mãe» (Mt 12,49-50). Não fez a Virgem Maria a vontade do Pai, Ela que acreditou pela fé, que concebeu pela fé? [...] Sim, Santa Maria fez a vontade do Pai e, consequentemente, [...] Maria era bem-aventurada porque, antes mesmo de dar à luz o Mestre, O trouxe no seu seio.<br/>",
+    "Vede se aquilo que digo não é verdade. Quando o Senhor caminhava, seguido pela multidão e realizando milagres divinos, uma mulher exclamou: «Feliz Aquela que Te trouxe no seu ventre e Te amamentou ao seu peito!» E que replicou o Senhor, para evitar que a tónica da felicidade fosse colocada na carne? «Mais felizes são os que ouvem a palavra de Deus e a põem em prática». Ou seja, Maria também é feliz porque escutou a palavra de Deus e a pôs em prática; mais do que guardar a carne no seu seio, guardou a verdade na sua alma. A verdade é Cristo; a carne é Cristo. A verdade é Cristo na alma de Maria; a carne é Cristo no seio de Maria. Aquilo que está na alma é mais do que o que está no seio. Santa Maria, feliz Maria! [...]<br/>",
+    "Mas vós, meus caros, vede que sois corpo de Cristo e seus membros (1Cor 12,27). [...] «Pois aquele que faz a vontade de Meu Pai que está nos céus, esse é meu irmão, minha irmã e minha mãe». [...] É que só há uma herança. Foi por isso que Cristo, embora fosse Filho único, não quis permanecer só; na sua misericórdia, quis que fôssemos herdeiros do Pai, que fôssemos co-herdeiros com Ele (Rom 8,17).<br/>"
+  ]
+}

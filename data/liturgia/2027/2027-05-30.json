@@ -1,0 +1,34 @@
+{
+  "date": "2027-05-30",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "9o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Deuteronômio 5,12-15",
+      "text": "Assim fala o Senhor: 12'Guarda o dia de sábado, para o santificares, como o Senhor teu Deus te mandou. 13Trabalharás seis dias e neles farás todas as tuas obras. 14O sétimo dia é o do sábado, o dia do descanso dedicado ao Senhor teu Deus. Não farás trabalho algum, nem tu, nem teu filho, nem tua filha, nem teu escravo, nem tua escrava, nem teu boi, nem teu jumento, nem algum de teus animais, nem o estrangeiro que vive em tuas cidades, para que assim teu escravo e tua escrava repousem da mesma forma que tu. 15Lembra-te de que foste escravo no Egito e que de lá o Senhor teu Deus te fez sair com mão forte e braço estendido. É por isso que o Senhor teu Deus te mandou guardar o sábado."
+    },
+    "psalm": {
+      "reference": "Salmo 80 (81)",
+      "text": "- Cantai salmos, tocai tamborim, harpa e lira suaves tocai! Na lua nova soai a trombeta, na lua cheia, na festa solene!\n\n- Porque isto é costume em Jacó, um preceito do Deus de Israel; uma lei que foi dada a José, quando o povo saiu do Egito.\n\n- Eis que ouço uma voz que não conheço: 'Aliviei as tuas costas de seu fardo, cestos pesados eu tirei de tuas mãos. Na angústia a mim clamaste, e te salvei.\n\n- Em teu meio não exista um deus estranho nem adores a um deus desconhecido! Porque eu sou o teu Deus e teu Senhor, que da terra do Egito te arranquei."
+    },
+    "secondReading": {
+      "reference": "Coríntios 4,6-11",
+      "text": "Irmãos: 6Deus que disse: 'Do meio das trevas brilhe a luz', é o mesmo que fez brilhar a sua luz em nossos corações, para tornar claro o conhecimento da sua glória na face de Cristo. 7Ora, trazemos esse tesouro em vasos de barro, para que todos reconheçam que este poder extraordinário vem de Deus e não de nós. 8Somos afligidos de todos os lados, mas não vencidos pela angústia; postos entre os maiores apuros, mas sem perder a esperança; 9perseguidos, mas não desamparados; derrubados, mas não aniquilados; 10por toda parte e sempre levamos em nós mesmos os sofrimentos mortais de Jesus, para que também a vida de Jesus seja manifestada em nossos corpos. 11De fato, nós, os vivos, somos continuamente entregues à morte, por causa de Jesus, para que também a vida de Jesus seja manifestada em nossa natureza mortal."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 2, 23-3,6 ou 23-28",
+      "text": "23Jesus estava passando por uns campos de trigo, em dia de sábado. Seus discípulos começaram a arrancar espigas, enquanto caminhavam. 24Então os fariseus disseram a Jesus: 'Olha! Por que eles fazem em dia de sábado o que não é permitido?' 25Jesus lhes disse: 'Por acaso, nunca lestes o que Davi e seus companheiros fizeram quando passaram necessidade e tiveram fome? 26Como ele entrou na casa de Deus, no tempo em que Abiatar era sumo sacerdote, comeu os pães oferecidos a Deus, e os deu também aos seus companheiros? No entanto, só aos sacerdotes é permitido comer esses pães'. 27E acrescentou: 'O sábado foi feito para o homem, e não o homem para o sábado. 28Portanto, o Filho do Homem é senhor também do sábado'. 3,1Jesus entrou de novo na sinagoga. Havia ali um homem com a mão seca. 2Alguns o observavam para ver se haveria de curar em dia de sábado, para poderem acusá-lo. 3Jesus disse ao homem da mão seca: 'Levanta-te e fica aqui no meio!' 4E perguntou-lhes: 'É permitido no sábado fazer o bem ou fazer o mal? Salvar uma vida ou deixá-la morrer?' Mas eles nada disseram. 5Jesus, então, olhou ao seu redor, cheio de ira e tristeza, porque eram duros de coração; e disse ao homem: 'Estende a mão'. Ele a estendeu e a mão ficou curada. 6Ao sairem, os fariseus com os partidários de Herodes, imediatamente tramaram, contra Jesus, a maneira como haveriam de matá-lo."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Hilário, Bispo de Poitiers, Doutor da Igreja <br/>",
+    "</b>",
+    "Tratado sobre o Salmo 91, 3 <br/>",
+    "Todas as coisas são recriadas pelo Filho a cada dia, visto que o Pai tudo opera pelo Filho<br/>",
+    "Em dia de sábado, era imposto a todos, sem exceção, que não fizessem qualquer trabalho e que o próprio descanso decorresse em perfeita inatividade. Porque foi então que o Senhor violou a norma do sábado? [...] Na verdade, como são grandes as obras de Deus, que sustenta os céus, fornece luz ao sol e a todos os astros, faz crescer as plantas da terra e conserva a vida aos homens. [...] Sim, tudo o que existe na terra e debaixo do céu fica a dever-se a Deus Pai; tudo vem de Deus e tudo existe pelo Filho. Com efeito, Ele é a cabeça e o princípio de tudo; n'Ele tudo foi criado (Col 1,16-18). E foi da sua plenitude que, por iniciativa do seu eterno poder, Ele tudo criou. <br/>",
+    "Ora, se Cristo opera em tudo, é necessariamente pela ação daquele que opera em Cristo. É por isso que Ele diz: «o Meu Pai trabalha a cada momento e eu também trabalho» (Jo 5,17), porque tudo o que faz Cristo, Filho de Deus em quem o Pai habita, é obra do Pai. Assim, todas as coisas são recriadas pelo Filho a cada dia, visto que o Pai tudo opera pelo Filho. Por conseguinte, é diária a ação de Cristo e, no meu parecer, as leis da Natureza, as formas dos corpos, o desenvolvimento e o crescimento de tudo o que existe são manifestações dessa mesma ação.<br/>"
+  ]
+}

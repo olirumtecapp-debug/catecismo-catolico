@@ -1,0 +1,43 @@
+{
+  "date": "2026-03-24",
+  "year": 2026,
+  "month": 3,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-24",
+      "name": "Santo Óscar Romero, mártir",
+      "normalizedName": "sao oscar romero, martir",
+      "imageUrl": "./assets/img/santos/03-24-santo-oscar-romero-martir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/24/santo-oscar-romero--martir.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/24/santo-oscar-romero--martir.html",
+      "sourceText": "Este corajoso arcebispo, martirizado em 1980, era a voz dos que não tinham voz em El Salvador. Assassinado enquanto celebrava Missa, seu sangue foi derramado pela \"redenção e ressurreição\" de seu povo sofredor. Sua memória litúrgica é dia 24 de março.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "name": "Santa Catarina da Suécia, virgem, filha de S. Brígida",
+      "normalizedName": "santa catarina da suecia, , filha de s. brigida",
+      "imageUrl": "./assets/img/santos/03-24-santa-catarina-da-suecia-virgem-filha-de-s-br.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/24/s--catarina-da-suecia--virgem--filha-de-s--brigida.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/24/s--catarina-da-suecia--virgem--filha-de-s--brigida.html",
+      "sourceText": "Catarina da Suécia, filha de Santa Brígida, casou-se com um nobre, por desejo do pai, mas manteve a sua virgindade. Oração e ascese diferenciaram a sua vida entrelaçada com a da sua mãe. Santa Catarina foi a primeira abadessa do mosteiro de Vadstena e faleceu em 24 de março de 1381.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

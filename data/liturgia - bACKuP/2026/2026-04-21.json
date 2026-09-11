@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-21",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 7:51—8:1a",
+    "psalm": "Sl 31:3cd-4, 6 and 7b and 8a, 17 and 21ab",
+    "secondReading": "",
+    "gospel": "Jo 6:30-35"
+  },
+  "calendar": {
+    "date": "2026-04-21",
+    "monthDay": "4/21",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint Anselm of Canterbury, Bishop and Doctor of the Church",
+      "type": "OPT_MEMORIAL",
+      "quote": "I believe in order to understand.",
+      "description": "The 'Father of Scholasticism,' he was a philosopher and Archbishop of Canterbury who sought to understand faith through reason.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-21.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-21.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-21"
+  }
+}

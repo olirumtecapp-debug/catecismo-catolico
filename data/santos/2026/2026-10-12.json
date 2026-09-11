@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-12",
+  "year": 2026,
+  "month": 10,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-12",
+      "name": "São Hedisto, mártir, na via Ardeatina",
+      "normalizedName": "sao hedisto, martir, na via ardeatina",
+      "imageUrl": "./assets/img/santos/10-12-sao-hedisto-martir-na-via-ardeatina.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Edisto, também conhecido como Orestes ou Aristo, mártir do século I, era é um escudeiro de Nero. Enquanto acompanhava o imperador, em Laurento, conheceu um presbítero local, que o converteu, e foi batizado por São Pedro. Segundo uma \"passio\" lendária, foi sepultado na Via Laurentina, em Roma.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "name": "São Serafim de Monte Granaro, leigo capuchinho",
+      "normalizedName": "sao serafim de monte granaro, leigo capuchinho",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Serafim, irmão leigo da Ordem dos Frades Capuchinhos, passou por muitos conventos antes de se estabelecer em Ascoli Piceno. Humilde, paciente e sempre criticado, consolava todos os coirmãos com seus \"dois livros\": o crucifixo e o terço. Faleceu em 1604 e foi canonizado por Clemente XIII, em 1767.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Nossa Senhora Aparecida",
+      "normalizedName": "nossa senhora aparecida",
+      "imageUrl": "./assets/img/santos/10-12-nossa-senhora-aparecida.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12/nossa-senhora-aparecida.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12/nossa-senhora-aparecida.html",
+      "sourceText": "No mês de outubro, tradicionalmente dedicado à Virgem Maria, devido à festa de Nossa Senhora do Rosário, celebra-se outra festa dedicada à Mãe de Deus: Nossa Senhora Aparecida, Padroeira do Brasil, que se celebra em 12 de outubro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

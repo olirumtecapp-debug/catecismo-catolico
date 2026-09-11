@@ -1,0 +1,33 @@
+{
+  "date": "2027-10-15",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santa Teresa de Jesus",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 4,1-8",
+      "text": "Irmãos: 1Que vantagem diremos ter obtido Abraão, nosso pai segundo a carne? 2Pois se Abraóo se tornou justo em virtude das obras, está aí seu motivo de glória... mas nóo perante Deus! 3Com efeito, o que diz a Escritura? 'Abraão creu em Deus, e isso lhe foi creditado como justiça'. 4Ora, para quem faz um trabalho, o salário nóo é creditado como um presente gratuito, mas como uma dívida. 5Porém, para a pessoa que, em vez de fazer um trabalho, crê naquele que torna justo o ímpio, a sua fé lhe é creditada como atestado de justiça. 6É assim que Davi declara feliz o homem a quem Deus credita a justiça independentemente das obras: 7'Felizes aqueles cujas transgressões foram remidas e cujos pecados foram perdoados; 8feliz o homem do qual Deus nóo leva em conta o pecado.'"
+    },
+    "psalm": {
+      "reference": "Salmo 31 (32)",
+      "text": "- Feliz o homem que foi perdoado e cuja falta já foi encoberta! Feliz o homem a quem o Senhor não olha mais como sendo culpado, e em cuja alma nóo há falsidade!\n\n- Eu confessei, afinal, meu pecado, e minha falta vos fiz conhecer. Disse: 'Eu irei confessar meu pecado!' E perdoastes, Senhor, minha falta.\n\n- Regozijai-vos, ó justos, em Deus, e no Senhor exultai de alegria! Corações retos, cantai jubilosos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 1-7",
+      "text": "Naquele tempo: 1Milhares de pessoas se reuniram, a ponto de uns pisarem os outros. Jesus começou a falar, primeiro a seus discípulos: 'Tomai cuidado com o fermento dos fariseus, que é a hipocrisia. 2Não há nada de escondido, que não venha a ser revelado, e não há nada de oculto que não venha a ser conhecido. 3Portanto, tudo o que tiverdes dito na escuridão, será ouvido à luz do dia; e o que tiverdes pronunciado ao pé do ouvido, no quarto, será proclamado sobre os telhados. 4Pois bem, meus amigos, eu vos digo: não tenhais medo daqueles que matam o corpo, não podendo fazer mais do que isto. 5Vou mostrar-vos a quem deveis temer: temei aquele que, depois de tirar a vida, tem o poder de lançar-vos no inferno. Sim, eu vos digo, a este temei. 6Não se vendem cinco pardais por uma pequena quantia? No entanto, nenhum deles é esquecido por Deus. 7Até mesmo os cabelos de vossa cabeça estão todos contados. Não tenhais medo! Vós valeis mais do que muitos pardais."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Inácio de Loyola<br/>",
+    "</b>",
+    "Fundador dos jesuítas <br/>",
+    "Carta de 17/11/1555 <br/>",
+    "«Não temais»<br/>",
+    "Parece-me que deveríeis decidir-vos a fazer calmamente o que podeis. Não vos inquieteis com o resto, mas deixai nas mãos da divina Providência o que não podeis cumprir por vós mesmos. São agradáveis a Deus a solicitude e o cuidado que, com razoabilidade, pomos nas tarefas que nos competem, para conseguirmos concretizá-las da melhor maneira. Não Lhe são agradáveis a ansiedade e a inquietação do espírito: o Senhor quer que os nossos limites e fraquezas encontrem apoio na sua fortaleza e omnipotência, quer que tenhamos confiança em que a sua bondade suprirá a imperfeição dos nossos meios. <br/>",
+    "Os que se ocupam com muitos assuntos, mesmo que o façam com boas intenções, devem resolver-se a fazer apenas o que está ao seu alcance. Se tivermos de deixar de lado certas coisas, há que ter paciência, e não pensar que Deus espera de nós o que não podemos fazer. Ele não quer que o homem se atormente com as próprias limitações; não é preciso cansarmo-nos excessivamente. Quando de facto nos esforçámos por dar o melhor de nós, podemos deixar o resto nas mãos daquele que tem o poder de realizar tudo o que quer. <br/>",
+    "Que a bondade divina nos comunique sempre a luz da sabedoria, para que possamos ver com clareza e realizar a sua vontade com profunda convicção, em nós e nos outros […], para que das suas mãos aceitemos o que nos envia, considerando o que é de maior importância: a paciência, a humildade, a obediência e a caridade.<br/>"
+  ]
+}

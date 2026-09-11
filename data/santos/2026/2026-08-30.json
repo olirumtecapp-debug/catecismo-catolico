@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-30",
+  "year": 2026,
+  "month": 8,
+  "day": 30,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/30.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-30.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-30",
+      "name": "SS. Félix sacerdote, e Adauto, mártires, na via Ostiense",
+      "normalizedName": "ss. felix sacerdote, e adauto, , na via ostiense",
+      "imageUrl": "./assets/img/santos/08-30-ss-felix-sacerdote-e-adauto-martires-na-via-o.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Identificados como irmãos, pela tradição, foram enterrados no cemitério de Comodila. Uma antiga Passio narra que, na época de Diocleciano, enquanto Félix era levado para o martírio, ajuntou-se a ele um homem (Adauctus=adjunto), que se declarou cristão, com o qual partilhou o mesmo destino.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-30",
+      "name": "São Pamáquio, senador romano",
+      "normalizedName": "sao pamaquio, senador romano",
+      "imageUrl": "./assets/img/santos/08-30-sao-pamaquio-senador-romano.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Senador romano cristão, em 387, Pamáquio tornou-se monge e decidiu dedicar a sua vida aos pobres. Foi um dos fundadores de uma hospedaria, na foz do rio Tibre, que acolhia, gratuitamente, peregrinos pobres e enfermos. Contribuiu para a construção da Basílica dos Santos João e Paulo, no Célio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

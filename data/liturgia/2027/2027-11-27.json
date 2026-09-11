@@ -1,0 +1,32 @@
+{
+  "date": "2027-11-27",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "34a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Daniel 7,15-27",
+      "text": "15Fiquei chocado em meu íntimo: eu, Daniel, fiquei aterrorizado com estas coisas, e as visões da imaginação me deixaram perturbado. 16Aproximei-me de um dos presentes e pedi-lhe que me desse explicações sobre o significado de tudo aquilo. Respondeu-me, fazendo-me conhecer a interpretação das coisas: 17Estes quatro possantes animais são quatro reinos que surgirão na terra; 18mas os que receberão o reino, são os santos do Altíssimo; eles ficarão de posse do reino por todos os séculos, eternamente.` 19Depois, quis ser mais bem informado a respeito do quarto animal, que era bastante diferente dos outros e o mais terrível de todos, com seus dentes de ferro e garras de bronze, sempre devorando e triturando, e calcando aos pés o que restava; 20e ainda a respeito dos dez chifres que tinha na cabeça, e sobre o outro que nascera e fizera cair outros três, sobre o chifre que tinha olhos e boca, e que fazia ouvir uma fala forte, e era maior que os outros. 21Eu continuava a olhar, e eis que este chifre combatia contra os santo e vencia, 22até que veio o Ancião de muitos dias e fez justiça aos santos do Altíssimo, e chegou o tempo para os santos entrarem na posse do reino. 23Respondeu-me assim: 'O quarto animal é um quarto reino que surgirá na terra, e que será maior do que todos os outros reinos; há de devorar a terra inteira, espezinhá-la e esmagá-la. 24Quanto aos dez chifres do reino, serão dez reis; um outro surgirá depois deles, e este será mais poderoso do que seus antecessores, e abaterá os três reis, 25e articulará insolências contra o Altíssimo e perseguirá seus santos e se julgará em condições de mudar os tempos e a lei; os santos serão entregues ao seu arbítrio por um tempo, por tempos e por um meio-tempo; 26o tribunal se estabelecerá, e ao chifre será tirado o poder, até ser destruído e desaparecer para sempre; 27e então, que seja dado o reino, o poder e a grandeza dos reinos que existem sob o céu ao povo dos santos do Altíssimo, cujo reino é um reino eterno, e a quem todos os reis servirão e prestarão obediência.'"
+    },
+    "psalm": {
+      "reference": "Salmo (Dn 3)",
+      "text": "- Filhos dos homens, bendizei o Senhor! Filhos de Israel, bendizei o Senhor!\n\n- Sacerdotes do Senhor, bendizei o Senhor! Servos do Senhor, bendizei o Senhor!\n\n- Almas dos justos, bendizei o Senhor! Santos e humildes, bendizei o Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 21, 34-36",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 34Tomai cuidado para que vossos corações não fiquem insensíveis por causa da gula, da embriaguez e das preocupações da vida, e esse dia não caia de repente sobre vós; 35pois esse dia cairá como uma armadilha sobre todos os habitantes de toda a terra. 36Portanto, ficai atentos e orai a todo momento, a fim de terdes força para escapar de tudo o que deve acontecer e para ficardes em pé diante do Filho do Homem.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja <br/>",
+    "Homília sobre o salmo 95<br/>",
+    "«Exulte a Terra [...] diante do Senhor que vem» (Sl 95,11s)<br/>",
+    "«Alegrem-se as árvores dos bosques» (Sl 96,12). Ele veio a primeira vez, e virá de novo para julgar a Terra; e encontrará cheios de alegria os que acreditaram na sua primeira vinda, «porque Ele vem». [...] Por tu seres injusto, o juiz não é justo? Ou por tu seres infiel, a fidelidade não é fiel? Ora, se desejas que Ele seja misericordioso para contigo, sê tu misericordioso antes que Ele venha: perdoa a quem te ofendeu; dá do que tens em abundância. <br/>",
+    "De quem é o que dás, senão dele? Se desses do que era teu, seria liberalidade; mas porque dás do que é dele, é uma restituição. Pois «que tens tu que não tivesses recebido?» (1Cor 4,7) São estes os sacrifícios mais agradáveis a Deus: a misericórdia, a humildade, o louvor, a paz, a caridade. Apresentemos estas ofertas e esperemos com segurança a vinda do juiz, que «julgará o mundo com justiça e os povos com fidelidade» (Sl 96,13).<br/>"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-20",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 20:28-38",
+    "psalm": "Sl 68:29-30, 33-35a, 35bc-36ab",
+    "secondReading": "",
+    "gospel": "Jo 17:11b-19"
+  },
+  "calendar": {
+    "date": "2026-05-20",
+    "monthDay": "5/20",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint Bernardine of Siena, Priest",
+      "type": "OPT_MEMORIAL",
+      "quote": "The name of Jesus is a glory for the preacher, because of the shining splendor of that name.",
+      "description": "A Franciscan preacher who promoted devotion to the Holy Name of Jesus and reformed his order with great zeal.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-20.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-20.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-20"
+  }
+}

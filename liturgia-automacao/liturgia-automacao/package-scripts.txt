@@ -1,0 +1,5 @@
+Se seu package.json ja possui "scripts", adicione estas entradas sem apagar as existentes:
+
+"liturgia:atualizar": "node ./scripts/atualizar-liturgia.mjs",
+"liturgia:verificar": "node ./scripts/verificar-liturgia.mjs",
+"liturgia:2026": "node ./scripts/verificar-liturgia.mjs 2026"

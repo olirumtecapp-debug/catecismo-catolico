@@ -1,0 +1,26 @@
+{
+  "date": "2026-05-17",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Pascal Ciclo da Pascoa Solenidade: Ascensao do Senhor",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 1,1-11",
+      "text": "1No meu primeiro livro, ó Teófilo, já tratei de tudo o que Jesus fez e ensinou, desde o começo, 2até ao dia em que foi levado para o céu, depois de ter dado instruções pelo Espírito Santo, aos apóstolos que tinha escolhido. 3Foi a eles que Jesus se mostrou vivo depois da sua paixão, com numerosas provas. Durante quarenta dias, apareceu-lhes falando do Reino de Deus. 4Durante uma refeição, deu-lhes esta ordem: 'Não vos afasteis de Jerusalém, mas esperai a realização da promessa do Pai, da qual vós me ouvistes falar: 5`João batizou com água; vós, porém, sereis batizados com o Espírito Santo, dentro de poucos dias\". 6Então os que estavam reunidos perguntaram a Jesus: 'Senhor, é agora que vais restaurar o Reino em Israel?' 7Jesus respondeu: 'Não vos cabe saber os tempos e os momentos que o Pai determinou com a sua própria autoridade. 8Mas recebereis o poder do Espírito Santo que descerá sobre vós, para serdes minhas testemunhas em Jerusalém, em toda a Judéia e na Samaria, e até os confins da terra'. 9Depois de dizer isto, Jesus foi levado ao céu, à vista deles. Uma nuvem o encobriu, de forma que seus olhos não mais podiam vê-lo. 10Os apóstolos continuavam olhando para o céu, enquanto Jesus subia. Apareceram então dois homens vestidos de branco, 11que lhes disseram:'Homens da Galiléia, por que ficais aqui, parados, olhando para o céu? Esse Jesus que vos foi levado para o céu, virá do mesmo modo como o vistes partir para o céu'."
+    },
+    "psalm": {
+      "reference": "Salmo 46 (47)",
+      "text": "- Povos todos do universo, batei palmas, gritai a Deus aclamações de alegria! Porque sublime é o Senhor, o Deus Altíssimo, o soberano que domina toda a terra.\n\n- Por entre aclamações Deus se elevou, o Senhor subiu ao toque da trombeta. Salmodiai ao nosso Deus ao som da harpa, salmodiai ao som da harpa ao nosso Rei!\n\n- Porque Deus é o grande Rei de toda a terra, ao som da harpa acompanhai os seus louvores! Deus reina sobre todas as nações, está sentado no seu trono glorioso."
+    },
+    "secondReading": {
+      "reference": "Efésios 1,17-23",
+      "text": "Irmãos: 17O Deus de nosso Senhor Jesus Cristo, o Pai a quem pertence a glória, vos dê um espírito de sabedoria que vo-lo revele e faça verdadeiramente conhecer. 18Que ele abra o vosso coração à sua luz, para que saibais qual a esperança que o seu chamamento vos dá, qual a riqueza da glória que está na vossa herança com os santos, 19e que imenso poder ele exerceu em favor de nós que cremos, de acordo com a sua ação e força onipotente. 20Ele manifestou sua força em Cristo, quando o ressuscitou dos mortos e o fez sentar-se à sua direita nos céus, 21bem acima de toda a autoridade, poder, potência, soberania ou qualquer título que se possa nomear não somente neste mundo, mas ainda no mundo futuro. 22Sim, ele pôs tudo sob os seus pés e fez dele, que está acima de tudo, a Cabeça da Igreja, 23que é o seu corpo, a plenitude daquele que possui a plenitude universal."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 16, 15-20",
+      "text": "Naquele tempo: Jesus se manifestou aos onze discípulos, 15e disse-lhes: 'Ide pelo mundo inteiro e anunciai o Evangelho a toda criatura! 16Quem crer e for batizado será salvo. Quem não crer será condenado. 17Os sinais que acompanharão aqueles que crerem serão estes: expulsarão demônios em meu nome, falarão novas línguas; 18se pegarem em serpentes ou beberem algum veneno mortal não lhes fará mal algum; quando impuserem as mãos sobre os doentes, eles ficarão curados'. 19Depois de falar com os discípulos, o Senhor Jesus foi levado ao céu, e sentou-se à direita de Deus. 20Os discípulos então saíram e pregaram por toda parte. O Senhor os ajudava e confirmava sua palavra por meio dos sinais que a acompanhavam."
+    }
+  },
+  "extra": []
+}

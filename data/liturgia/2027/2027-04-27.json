@@ -1,0 +1,35 @@
+{
+  "date": "2027-04-27",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "5a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 14,19-28",
+      "text": "Naqueles dias, 19de Antioquia e Icônio chegaram judeus que convenceram as multidões. Então apedrejaram Paulo e arrastaram-no para fora da cidade, pensando que ele estivesse morto. 20Mas, enquanto os discípulos o rodeavam, Paulo levantou-se e entrou na cidade. No dia seguinte, partiu para Derbe com Barnabé. 21Depois de terem pregado o evangelho naquela cidade e feito muitos discípulos, voltaram para Listra, Icônio e Antioquia. 22Encorajando os discípulos, eles os exortavam a permanecerem firmes na fé, dizendo-lhes: \"É preciso que passemos por muitos sofrimentos para entrar no reino de Deus\". 23Os apóstolos designaram presbíteros para cada comunidade. Com orações e jejuns, eles os confiavam ao Senhor, em quem haviam acreditado. 24Em seguida, atravessando a Pisídia, chegaram à Panfília. 25Anunciaram a Palavra em Perge e depois desceram para Atália. 26Dali embarcaram para Antioquia, de onde tinham saído, entregues à graça de Deus, para o trabalho que haviam realizado. 27Chegando ali, reuniram a comunidade. Contaram-lhe tudo o que Deus fizera por meio deles e como havia aberto a porta da fé para os pagãos. 28E passaram então algum tempo com os discípulos."
+    },
+    "psalm": {
+      "reference": "Salmo 144 (145)",
+      "text": "- Que vossas obras, ó Senhor, vos glorifiquem, e os vossos santos com louvores vos bendigam! Narrem a glória e o esplendor do vosso reino e saibam proclamar vosso poder!\n\n- Para espalhar vossos prodígios entre os homens e o fulgor de vosso reino esplendoroso. O vosso reino é um reino para sempre, vosso poder, de geração em geração.\n\n- Que a minha boca cante a glória do Senhor e que bendiga todo ser seu nome santo, desde agora, para sempre e pelos séculos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 14, 27-31",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 27\"Deixo-vos a paz, a minha paz vos dou; mas não a dou como o mundo. Não se perturbe nem se intimide o vosso coração. 28Ouvistes que eu vos disse: 'Vou, mas voltarei a vós'. Se me amásseis, ficaríeis alegres porque vou para o Pai, pois o Pai é maior do que eu. 29Disse-vos isso agora, antes que aconteça, para que, quando acontecer, vós acrediteis. 30Já não falarei muito convosco, pois o chefe deste mundo vem. Ele não tem poder sobre mim, 31mas, para que o mundo reconheça que eu amo o Pai, eu procedo conforme o Pai me ordenou\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Imitação de Cristo<br/>",
+    "</b>",
+    "Tratado espiritual do século XV, Livraria Moraes, 1959<br/>",
+    "Livro 1, cap. 11<br/>",
+    "«Dou-vos a minha paz»<br/>",
+    "Grande paz poderíamos alcançar se nos não quiséssemos ocupar das palavras e dos atos alheios e do que não nos diz respeito. Como poderá permanecer em paz aquele que interfere nos problemas dos outros, que busca o que é exterior e, pouco ou muito, raramente se recolhe? Felizes os simples, porque terão grande paz.<br/>",
+    "Por que razão qualquer dos santos foi tão perfeito e contemplativo? Porque a todo o momento matavam em si os desejos do mundo, de todo o coração pertenciam a Deus e então livremente se ocupavam de si. Mas nós ocupamo-nos muito das nossas paixões e daquilo que passa. Raramente vencemos por completo um defeito, e não conseguimos um progresso diário: assim nos mantemos frios ou mornos.<br/>",
+    "Se estivéssemos completamente mortos para nós próprios e mais livres por dentro, saberíamos o gosto do divino e alguma coisa da contemplação do Céu. O nosso maior e único obstáculo é não estarmos livres de paixões e desejos e não nos esforçarmos por entrar na perfeita via dos santos. Quando nos sucede qualquer adversidade, imediatamente desanimamos e voltamos às consolações humanas.<br/>",
+    "Se nos mantivermos quais homens fortes no combate, depressa veremos sobre nós o auxílio de Deus. Na verdade, Ele está pronto a ajudar os que combatem e esperam na sua graça, pois é Ele quem nos favorece as ocasiões de lutar, para que vençamos. [...]<br/>",
+    "Oh, soubesses quanta paz para ti e alegria para os outros a tua vida santa causaria, julgo que terias mais ardor no teu progresso espiritual.<br/>"
+  ]
+}

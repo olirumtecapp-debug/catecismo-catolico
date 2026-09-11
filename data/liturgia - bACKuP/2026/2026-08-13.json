@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-13",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Ez 12:1-12",
+    "psalm": "Sl 78:56-57, 58-59, 61-62",
+    "secondReading": "",
+    "gospel": "Mt 18:21–19:1"
+  },
+  "calendar": {
+    "date": "2026-08-13",
+    "monthDay": "8/13",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saints Pontian, Pope and Hippolytus, Priest, Martyrs",
+      "type": "OPT_MEMORIAL",
+      "quote": "The Lord is our strength and our shield.",
+      "description": "A Pope who was exiled to the mines of Sardinia and resigned his office to allow for a successor, dying as a martyr.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/08-13.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/08-13.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-08-13"
+  }
+}

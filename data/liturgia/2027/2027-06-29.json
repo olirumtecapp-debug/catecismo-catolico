@@ -1,0 +1,23 @@
+{
+  "date": "2027-06-29",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "13a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Gênesis 19,15-29",
+      "text": "Naqueles dias: 15Os anjos insistiram com Ló, dizendo: 'Levanta-te, toma tua mulher e tuas duas filhas, e sai, para não morreres também por causa das iniqüidades da cidade'. 16Como ele hesitasse, os homens tomaram-no pela mão, a ele, à mulher e às duas filhas - pois o Senhor tivera compaixão dele -, fizeram-nos sair e deixaram-nos fora da cidade. 17Uma vez fora, disseram: 'Trata de salvar a tua vida. Não olhes para trás, nem te detenhas em parte alguma desta região. Mas foge para a montanha, se não quiseres morrer'. 18Ló respondeu: 'Não, meu Senhor, eu te peço! 19O teu servo encontrou teu favor e foi grande a tua bondade, salvando-me a vida. Mas receio não poder salvar-me na montanha, antes que a calamidade me atinja e eu morra. 20Eis aí perto uma cidade onde poderei refugiar-me; é pequena, mas aí salvarei a minha vida'. E ele lhe disse: 'Pois bem, concedo-te também este favor: não destruirei a cidade de que falas. 22Refugia-te lá depressa, pois nada posso fazer enquanto não tiveres entrado na cidade'. Por isso foi dado àquela cidade o nome de Segor. 23O sol estava nascendo, quando Ló entrou em Segor. 24O Senhor fez então chover do céu enxofre e fogo sobre Sodoma e Gomorra. 25Destruiu as cidades e toda a região, todos os habitantes das cidades e até a vegetação do solo. 26Ora, a mulher de Ló olhou para trás e tornou-se uma estátua de sal. 27Abraão levantou-se bem cedo e foi até o lugar onde antes tinha estado com o Senhor. 28Olhando para Sodoma e Gomorra, e para toda a região, viu levantar-se da terra uma densa fumaça, como a fumaça de uma fornalha. 29Mas, ao destruir as cidades da região, Deus lembrou-se de Abraão e salvou Ló da catástrofe que arrasou as cidades onde Ló havia morado."
+    },
+    "psalm": {
+      "reference": "Salmo 25 (26)",
+      "text": "- Provai-me, ó Senhor, e examinai-me, sondai meu coração e o meu íntimo! Pois tenho sempre vosso amor ante meus olhos; vossa verdade escolhi por meu caminho.\n\n- Não junteis a minha alma à dos malvados, nem minha vida à dos homens sangüinários; eles têm as suas mãos cheias de crime; sua direita está repleta de suborno.\n\n- Eu, porém, vou caminhando na inocência; libertai-me, ó Senhor, tende piedade! Está firme o meu pé na estrada certa; ao Senhor eu bendirei nas assembléias."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 8, 23-27",
+      "text": "Naquele tempo: 23Jesus entrou na barca, e seus discípulos o acompanharam. 24E eis que houve uma grande tempestade no mar, de modo que a barca estava sendo coberta pelas ondas. Jesus, porém, dormia. 25Os discípulos aproximaram-se e o acordaram, dizendo: 'Senhor, salva-nos, pois estamos perecendo!' 26Jesus respondeu: 'Por que tendes tanto medo, homens fracos na fé?' Então, levantando-se, ameaçou os ventos e o mar, e fez-se uma grande calmaria. 27Os homens ficaram admirados e diziam: 'Quem é este homem, que até os ventos e o mar lhe obedecem?'"
+    }
+  },
+  "extra": []
+}

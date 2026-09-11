@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-14",
+  "year": 2026,
+  "month": 11,
+  "day": 14,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/14.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-14.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-14",
+      "name": "São Serapião",
+      "normalizedName": "sao serapiao",
+      "imageUrl": "./assets/img/santos/11-14-sao-serapiao.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Nasceu em Londres em 1179. Ainda criança, participou com seu pai da terceira Cruzada de Ricardo Coração de Leão. Depois de várias peripécias, entrou para a Ordem dos Mercedários, dedicando-se ao resgate e à conversão de escravos na França, Espanha e Argel, onde foi martirizado pelos Mouros em 1240.",
+      "a12": {
+        "profileUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=14&month=11",
+        "source": "A12 — Portal A12",
+        "sourceUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=14&month=11",
+        "sourceText": {
+          "paragraphs": [
+            "A Igreja venera pelo menos dois santos com o nome de Serapião. Um deles foi monge dos primeiros séculos e viveu vida de solidão no encontro com Deus. O segundo, aqui apresentado, era filho de nobres ingleses e viveu no século XII.",
+            "Serapião ainda jovem seguiu o pai na carreira militar, auxiliando nas esquadras do lendário rei Ricardo Coração de Leão. Durante um naufrágio próximo de Veneza o jovem foi aprisionado pelo duque da Áustria. Entretanto, o duque gostou da inteligência e da vida cristã exemplar do jovem, e o conservou na corte como assessor.",
+            "Após a morte dos pais, Serapião resolveu ficar na Áustria e passou a combater junto aos exércitos cristãos contra os muçulmanos. Conheceu assim o exército do rei Afonso III da Espanha e ingressou nas fileiras de combate. Como militar, lutou em várias cruzadas.",
+            "Em 1220, morando na Espanha, conheceu São Pedro Nolasco, fundador da Ordem de Nossa Senhora das Mercês. Esta se dedicava à defesa da fé, buscando libertar os cristãos cativos dos muçulmanos. Serapião ingressou na Ordem e recebeu o hábito mercedário em 1222.",
+            "Numa campanha de libertação, acabou preso. Como não tinha dinheiro para pagar a liberdade, e nem renegou a fé, Serapião foi martirizado. Em 14 de novembro de 1240, foi colocado numa cruz e teve todas as juntas dos seus ossos quebradas.",
+            "Reflexão:",
+            "A vida de são Serapião foi uma luta constante. Seu espírito militar não o impediu de lutar também pela fé em Cristo. Seu prêmio foi o martírio. No seu sangue derramado a Igreja encontra forças para continuar proclamando a fé no Cristo, que é o único Senhor da Vida. Hoje também são muitas as pessoas a derramar o sangue em nome de Jesus. E nós, como estamos vivendo nosso cristianismo?",
+            "Oração:",
+            "Deus Todo-Poderoso, que na Vossa imensa bondade destes aos homens, pelo exemplo de São Serapião, a certeza de que Convosco a vida tem sentido, dai-nos forças para lutar contra o pecado e propagar a Vossa santa Palavra. Por Cristo Nosso Senhor. Amém.",
+            "Enviar por e-mail"
+          ]
+        }
+      },
+      "enrichment": {
+        "a12Found": true
+      }
+    }
+  ]
+}

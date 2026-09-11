@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-21",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 22:30; 23:6-11",
+    "psalm": "Sl 16:1-2a and 5, 7-8, 9-10, 11",
+    "secondReading": "",
+    "gospel": "Jo 17:20-26"
+  },
+  "calendar": {
+    "date": "2026-05-21",
+    "monthDay": "5/21",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Saint Christopher Magallanes and Companions, Martyrs",
+      "type": "OPT_MEMORIAL",
+      "quote": "I am innocent and I die innocent. I forgive with all my heart those responsible for my death.",
+      "description": "A Mexican priest martyred during the Cristero War for his faith, forgiving his executioners with his last breath.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-21.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-21.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-21"
+  }
+}

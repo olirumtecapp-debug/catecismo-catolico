@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-02",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Dn 9:4b-10",
+    "psalm": "Sl 79:8, 9, 11 and 13",
+    "secondReading": "",
+    "gospel": "Lc 6:36-38"
+  },
+  "calendar": {
+    "date": "2026-03-02",
+    "monthDay": "3/2",
+    "season": "Lent",
+    "celebration": {
+      "name": "Monday of the 2nd week of Lent",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/03-02.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/03-02.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-03-02"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-30",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "17a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jeremias 18,1-6",
+      "text": "1Palavra dirigida a Jeremias, da parte do Senhor: 2\"Levanta-te e vai à casa do oleiro, e ali te farei ouvir minhas palavras\". 3Fui à casa do oleiro, e eis que ele estava trabalhando ao torno; 4quando o vaso que moldava com barro se avariava em suas mãos, ei-lo de novo a fazer com esse material um outro vaso, conforme melhor lhe parecesse aos olhos. 5Fez-se em mim a palavra do Senhor: 6\"Acaso não posso fazer convosco como este oleiro, casa de Israel? - diz o Senhor. Como é o barro na mão do oleiro, assim sois vós em minha mão, casa de Israel\"."
+    },
+    "psalm": {
+      "reference": "Salmo 145 (146)",
+      "text": "- Bendize, minha alma, ao Senhor! Bendirei ao Senhor toda a vida, cantarei ao meu Deus sem cessar!\n\n- Não ponhais vossa fé nos que mandam, não há homem que possa salvar. Ao faltar-lhe o respiro, ele volta para a terra de onde saiu; nesse dia seus planos perecem.\n\n- É feliz todo homem que busca seu auxílio no Deus de Jacó e que põe no Senhor a esperança. O Senhor fez o céu e a terra, fez o mar e o que neles existe."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 47-53",
+      "text": "Naquele tempo, disse Jesus à multidão: 47\"O reino dos céus é ainda como uma rede lançada ao mar e que apanha peixes de todo tipo. 48Quando está cheia, os pescadores puxam a rede para a praia, sentam-se e recolhem os peixes bons em cestos e jogam fora os que não prestam. 49Assim acontecerá no fim dos tempos: os anjos virão para separar os homens maus dos que são justos 50e lançarão os maus na fornalha de fogo. E aí haverá choro e ranger de dentes. 51Compreendestes tudo isso?\" Eles responderam: \"Sim\". 52Então Jesus acrescentou: \"Assim, pois, todo mestre da lei que se torna discípulo do reino dos céus é como um pai de família que tira do seu tesouro coisas novas e velhas\". 53Quando Jesus terminou de contar essas parábolas, partiu dali."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Bento XVI, Papa de 2005 a 2013<br/>",
+    "</b>",
+    "Encíclica «Spe Salvi», §§ 45-46 (trad. © copyright Libreria Editrice Vaticana)<br/>",
+    "Puxam-na para a praia<br/>",
+    "Com a morte, a opção de vida feita pelo homem torna-se definitiva; esta sua vida está diante do Juiz. A sua opção, que tomou forma ao longo de toda a vida, pode ter caracteres diversos. Pode haver pessoas que destruíram totalmente em si próprias o desejo da verdade e a disponibilidade para o amor; pessoas nas quais tudo se tornou mentira; pessoas que viveram para o ódio e espezinharam o amor em si mesmas. Trata-se de uma perspectiva terrível, mas algumas figuras da nossa mesma história deixam entrever, de forma assustadora, perfis deste género. Em tais indivíduos, não haveria nada de remediável e a destruição do bem seria irrevogável: é já isto que se indica com a palavra «inferno».<br/>",
+    "Por outro lado, podem existir pessoas puríssimas, que se deixaram penetrar inteiramente por Deus e, consequentemente, estão totalmente abertas ao próximo - pessoas em quem a comunhão com Deus orienta desde já todo o seu ser e cuja chegada a Deus apenas leva a cumprimento aquilo que já são.<br/>",
+    "Mas, segundo a nossa experiência, nem um nem outro são o caso normal da existência humana. Na maioria dos homens - como podemos supor - perdura no mais profundo da sua essência uma derradeira abertura interior para a verdade, para o amor, para Deus. Nas opções concretas da vida, porém, aquela é sepultada sob repetidos compromissos com o mal. […] O que acontece a tais indivíduos quando comparecem diante do Juiz? Será que todas as coisas imundas que acumularam na sua vida se tornarão de repente irrelevantes? Ou acontecerá algo de diverso? São Paulo, na Primeira Carta aos Coríntios, dá-nos uma ideia da distinta repercussão do juízo de Deus sobre o homem, conforme as suas condições. […] «Se alguém edifica sobre este fundamento com ouro, prata, pedras preciosas, madeiras, feno ou palha, a obra de cada um ficará patente, pois o dia do Senhor a fará conhecer. Pelo fogo será revelada, e o fogo provará o que vale a obra de cada um. Se a obra construída subsistir, o construtor receberá a paga. Se a obra de alguém se queimar, sofrerá a perda. Ele, porém, será salvo, como que através do fogo» (3,12-15).<br/>"
+  ]
+}

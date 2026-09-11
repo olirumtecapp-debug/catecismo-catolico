@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-24",
+  "year": 2026,
+  "month": 6,
+  "day": 24,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/24.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-24.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-24",
+      "name": "SOLENIDADE DO NASCIMENTO DE SÃO JOÃO BATISTA",
+      "normalizedName": "solenidade do nascimento de sao joao batista",
+      "imageUrl": "./assets/img/santos/06-24-solenidade-do-nascimento-de-sao-joao-batista.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/24/solenidade-do-nascimento-de-sao-joao-batista.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/24/solenidade-do-nascimento-de-sao-joao-batista.html",
+      "sourceText": "Cristo definiu “o maior entre os nascidos de mulher”. S. João Batista é um dos santos mais venerados no mundo e o único do qual a Igreja celebra o dia de nascimento terreno, em 24 de junho, além do seu martírio celebrado em 29 de agosto. Foi aquele que viu o Messias com seus olhos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "name": "SS. João e Festo, mártires, na via Salária Antiga",
+      "normalizedName": "ss. joao e festo, , na via salaria antiga",
+      "imageUrl": "./assets/img/santos/06-24-ss-joao-e-festo-martires-na-via-salaria-antig.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "São poucas as informações sobre a vida destes dois mártires romanos, provavelmente comemorados juntos no dia da sua morte. Segundo algumas fontes, João era um sacerdote, decapitado na época de Juliano, o Apóstata. Ambos foram sepultados em um cemitério, ao longo da Via Salária antiga.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

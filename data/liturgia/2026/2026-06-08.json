@@ -1,0 +1,23 @@
+{
+  "date": "2026-06-08",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "10a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Reis 17,1-6",
+      "text": "Naqueles dias: 1O profeta Elias, tesbita de Tesbi de Galaad, disse a Acab: 'Pela vida do Senhor, o Deus de Israel, a quem sirvo, não haverá nestes anos nem orvalho nem chuva, senão quando eu disser!' 2E a palavra do Senhor foi dirigida a Elias nestes termos: 3'Parte daqui e toma a direção do oriente. Vai esconder-te junto à torrente de Carit, que está defronte ao Jordão. 4Lá beberás da torrente. E eu ordenei aos corvos que te deem alimento'. 5Elias partiu e fez como o Senhor lhe tinha ordenado, e foi morar junto à torrente de Carit, que está defronte ao Jordão. 6Os corvos traziam-lhe pão e carne, tanto de manhã como de tarde, e ele bebia da torrente."
+    },
+    "psalm": {
+      "reference": "Salmo 120 (121)",
+      "text": "- Eu levanto os meus olhos para os montes: de onde pode vir o meu socorro? 'Do Senhor é que me vem o meu socorro, do Senhor que fez o céu e fez a terra!'\n\n- Ele não deixa tropeçarem os meus pés, e não dorme quem te guarda e te vigia. Oh! não! ele não dorme nem cochila, aquele que é o guarda de Israel!\n\n- O Senhor é o teu guarda, o teu vigia, é uma sombra protetora à tua direita. Não vai ferir-te o sol durante o dia, nem a lua através de toda a noite.\n\n- O Senhor te guardará de todo o mal, ele mesmo vai cuidar da tua vida! Deus te guarda na partida e na chegada. Ele te guarda desde agora e para sempre!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 5,1-12",
+      "text": "Naquele tempo: 1Vendo Jesus as multidões, subiu ao monte e sentou-se. Os discípulos aproximaram-se, 2e Jesus começou a ensiná-los: 3'Bem-aventurados os pobres em espírito, porque deles é o Reino dos Céus. 4Bem-aventurados os aflitos, porque serão consolados. 5Bem-aventurados os mansos, porque possuirão a terra. 6Bem-aventurados os que têm fome e sede de justiça, porque serão saciados. 7Bem-aventurados os misericordiosos, porque alcançarão misericórdia. 8Bem-aventurados os puros de coração, porque verão a Deus. 9Bem-aventurados os que promovem a paz, porque serão chamados filhos de Deus. 10Bem-aventurados os que são perseguidos por causa da justiça, porque deles é o Reino dos Céus. 11Bem-aventurados sois vós, quando vos injuriarem e perseguirem, e mentindo, disserem todo tipo de mal contra vós, por causa de mim. 12aAlegrai-vos e exultai, porque será grande a vossa recompensa nos céus."
+    }
+  },
+  "extra": []
+}

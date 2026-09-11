@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-22",
+  "year": 2026,
+  "month": 9,
+  "day": 22,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/22.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-22.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-22",
+      "name": "SS. Maurício e Companheiros, soldados e mártires",
+      "normalizedName": "ss. mauricio e companheiros, soldados e",
+      "imageUrl": "./assets/img/santos/09-22-ss-mauricio-e-companheiros-soldados-e-martire.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Pelo ano 287, o imperador Maximiano, antes de atacar os gauleses rebeldes, quis oferecer um sacrifício aos deuses. Maurício, chefe da Legião cristã Tíbia, recusou-se, com outros, a participar: \"Somos seus soldados, mas também servos de Deus\", disseram. Então, Maximiano decretou a sua morte.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "name": "São Emérita, mártir, na via Ostiense",
+      "normalizedName": "sao emerita, martir, na via ostiense",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Emérita era uma virgem romana, martirizada durante a perseguição de Valeriano. Enterrada na catacumba de Comodila, na Via Ostiense, em Roma, seu corpo foi trasladado para a igreja de São Marcelo no Corso pelo Papa São Leão IV. Às vezes, é celebrada junto com outra mártir, Santa Deodata.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "name": "São Basila, mártir, na via Salária Antiga",
+      "normalizedName": "sao basila, martir, na via salaria antiga",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/langpt-330px-Flag_of_the_United_Kingdom_%281-2%29.svg.png?utm_source=pt.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sobre Basília sabemos alguns detalhes do seu martírio, durante a perseguição de Diocleciano e Maximiano: foi decapitada e, nos lugares por onde a sua cabeça rolou, brotaram, milagrosamente, sete fontes. Foi enterrada na Via Salária Antiga, mas suas relíquias são veneradas em Couvert, França.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

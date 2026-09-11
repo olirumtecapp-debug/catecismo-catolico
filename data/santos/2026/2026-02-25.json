@@ -1,0 +1,30 @@
+{
+  "date": "2026-02-25",
+  "year": 2026,
+  "month": 2,
+  "day": 25,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/25.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-25.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-25",
+      "name": "São Nestor, bispo de Magido e mártir",
+      "normalizedName": "sao nestor, bispo de magido e martir",
+      "imageUrl": "./assets/img/santos/02-25-sao-nestor-bispo-de-magido-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Durante as perseguições do imperador Décio, Nestor defendeu e ocultou as comunidades cristãs de Panfília, atual Turquia. Estando em oração em casa, foi preso e torturado por se recusar a oferecer sacrifícios aos ídolos. São Nestor foi crucificado diante de uma enorme multidão de fiéis em oração.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2027-12-31",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "7o. dia Oitava de Natal Ciclo do Natal",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "São João 2,18-21",
+      "text": "18Filhinhos, esta é a última hora. Ouvistes dizer que o Anticristo virá. Com efeito, muitos anticristos já apareceram. Por isso, sabemos que chegou a última hora. 19Eles saíram do nosso meio, mas não eram dos nossos, pois se fossem realmente dos nossos, teriam permanecido conosco. Mas era necessário ficar claro que nem todos são dos nossos. 20Vós já recebestes a unção do Santo, e todos tendes conhecimento. 21Se eu vos escrevi, não é porque ignorais a verdade, mas porque a conheceis, e porque nenhuma mentira provém da verdade."
+    },
+    "psalm": {
+      "reference": "Salmo 95 (96)",
+      "text": "- Cantai ao Senhor Deus um canto novo, cantai ao Senhor Deus, ó terra inteira! Cantai e bendizei seu santo nome! Dia após dia anunciai sua salvação.\n\n- O céu se rejubile e exulte a terra, aplauda o mar com o que vive em suas águas; os campos com seus frutos rejubilem e exultem as florestas e as matas\n\n- Na presença do Senhor, pois ele vem, porque vem para julgar a terra inteira. Governará o mundo todo com justiça, e os povos julgará com lealdade."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 1, 1-18",
+      "text": "1No princípio era a Palavra, e a Palavra estava com Deus; e a Palavra era Deus. 2No princípio estava ela com Deus. 3Tudo foi feito por ela e sem ela nada se fez de tudo que foi feito. 4Nela estava a vida, e a vida era a luz dos homens. 5E a luz brilha nas trevas, e as trevas não conseguiram dominá-la. 6Surgiu um homem enviado por Deus; Seu nome era João. 7Ele veio como testemunha, para dar testemunho da luz, para que todos chegassem à fé por meio dele. 8Ele não era a luz, mas veio para dar testemunho da luz: 9daquele que era a luz de verdade, que, vindo ao mundo, ilumina todo ser humano. 10A Palavra estava no mundo - e o mundo foi feito por meio dela - mas o mundo não quis conhecê-la. 11Veio para o que era seu, e os seus não a acolheram. 12Mas, a todos que a receberam, deu-lhes capacidade de se tornarem filhos de Deus isto é, aos que acreditam em seu nome, 13pois estes não nasceram do sangue nem da vontade da carne nem da vontade do varão, mas de Deus mesmo. 14E a Palavra se fez carne e habitou entre nós. E nós contemplamos a sua glória, glória que recebe do Pai como filho unigênito, cheio de graça e de verdade. 15Dele, João dá testemunho, clamando: 'Este é aquele de quem eu disse: O que vem depois de mim passou à minha frente, porque ele existia antes de mim'. 16De sua plenitude todos nós recebemos graça por graça. 17Pois por meio de Moisés foi dada a Lei, mas a graça e a verdade nos chegaram através de Jesus Cristo. 18A Deus, ninguém jamais viu. Mas o Unigênito de Deus, que está na intimidade do Pai, ele no-lo deu a conhecer."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Máximo de Turim, Bispo<br/>",
+    "</b>",
+    "Sermão 10, sobre o Natal do Senhor, PL 57, 24 (a partir da trad. Année en fêtes, Migne 2000, p. 78 rev.)<br/>",
+    "«Nascido do Pai antes de todos os séculos [...] fez-Se homem [...] e nasceu da Virgem Maria» (Credo)<br/>",
+    "Caríssimos irmãos, há dois nascimentos em Cristo, e tanto um como o outro são a expressão de um poder divino que nos ultrapassa absolutamente. Por um lado, Deus gera o seu Filho a partir de Si mesmo; por outro, Ele é concebido por uma virgem por intervenção de Deus. [...] Por um lado, Ele nasce para criar a vida; por outro, para eliminar a morte. Ali, nasce de seu Pai; aqui, é trazido ao mundo pelos homens. Por ter sido gerado pelo Pai, está na origem do homem; por ter nascido humanamente, liberta o homem. Uma e outra formas de nascimento são propriamente inexprimíveis e ao mesmo tempo inseparáveis. [...]<br/>",
+    "Quando ensinamos que há dois nascimentos em Cristo, não queremos com isto dizer que o Filho de Deus nasça duas vezes; mas afirmamos a dualidade de natureza num só e mesmo Filho de Deus. Por um lado, nasceu Aquele que já existia; por outro, foi produzido Aquele que ainda não existia. O bem-aventurado evangelista João afirma isto mesmo com as seguintes palavras: «No princípio existia o Verbo; o Verbo estava em Deus; e o Verbo era Deus»; e ainda: «E o Verbo fez-Se homem».<br/>",
+    "Assim, pois, Deus, que estava junto de Deus, saiu dele, e a carne de Deus, que não estava nele, saiu de uma mulher. O Verbo fez-Se carne, não de maneira que Deus Se diluísse no homem, mas para que o homem fosse gloriosamente elevado em Deus. É por isso que Deus não nasce duas vezes; mas, por estes dois géneros de nascimento - a saber, o de Deus e o do homem -, o Filho único do Pai quis ser, a um tempo, Deus e homem na mesma pessoa: «E quem poderá contar o seu nascimento?» (Is 53, 8 Vulg)<br/>"
+  ]
+}

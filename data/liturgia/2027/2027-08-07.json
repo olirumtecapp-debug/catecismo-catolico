@@ -1,0 +1,32 @@
+{
+  "date": "2027-08-07",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "18a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Deuteronômio 6,4-13",
+      "text": "Moisés falou ao povo, dizendo: 4Ouve, Israel, o Senhor, nosso Deus, é o único Senhor. 5Amarás o Senhor teu Deus com todo o teu coração, com toda a tua alma e com todas as tuas forças. 6E trarás gravadas em teu coração todas estas palavras que hoje te ordeno. 7Tu as repetirás com insistência aos teus filhos e delas falarás quando estiveres sentado em tua casa, ou andando pelos caminhos, quando te deitares, ou te levantares. 8Tu as prenderás como sinal em tua mão e as colocarás como um sinal entre os teus olhos; 9tu as escreverás nas entradas da tua casa e nas portas da tua cidade. 10Quando o Senhor te introduzir na terra que prometeu com juramento a teus pais, Abraão, Isaac e Jacó, que te daria, com cidades grandes e belas que não edificaste, 11casas cheias de toda espécie de bens que não acumulaste, cisternas já escavadas que não cavaste, vinhas e oliveiras que não plantaste; e quando comeres e te fartares, 12então, cuida bem de não esqueceres o Senhor que te tirou do Egito, da casa da escravidão. 13Temerás o Senhor teu Deus, a ele servirás e só pelo seu nome jurarás."
+    },
+    "psalm": {
+      "reference": "Salmo 17 (18)",
+      "text": "- Eu vos amo, ó Senhor! Sois minha força, minha rocha, meu refúgio e Salvador! Ó meu Deus, sois o rochedo que me abriga, minha força e poderosa salvação.\n\n- Ó meu Deus, sois o rochedo que me abriga sois meu escudo e proteçóo: em vós espero! Invocarei o meu Senhor: a ele a glória! e dos meus perseguidores serei salvo!\n\n- Viva o Senhor! Bendito seja o meu Rochedo! E louvado seja Deus, meu Salvador! Concedeis ao vosso rei grandes vitórias e mostrais misericórdia ao vosso Ungido."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 17, 14-20",
+      "text": "14Naquele tempo, chegando Jesus e seus discípulos junto da multidão, um homem aproximou-se de Jesus, ajoelhou-se e disse: 15'Senhor, tem piedade do meu filho. Ele é epilético, e sofre ataques tão fortes que muitas vezes cai no fogo ou na água. 16Levei-o aos teus discípulos, mas eles não conseguiram curá-lo!' 17Jesus respondeu: 'Ó gente sem fé e perversa! Até quando deverei ficar convosco? Até quando vos suportarei? Trazei aqui o menino.' 18Então Jesus o ameaçou e o demônio saiu dele. Na mesma hora o menino ficou curado. 19Então, os discípulos aproximaram-se de Jesus e lhe perguntaram em particular: 'Por que nós não conseguimos expulsar o demônio?' 20Jesus respondeu: 'Porque a vossa fé é demasiado pequena. Em verdade vos digo, se vós tiverdes fé do tamanho de uma semente de mostarda, direis a esta montanha: 'Vai daqui para lá e ela irá. E nada vos será impossível.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Tomás Moro <br/>",
+    "</b>",
+    "Estadista inglês, mártir<br/>",
+    "Diálogo sobre o Conforto na Tribulação, I,2<br/>",
+    "«Eu creio! Ajuda a minha incredulidade!» (Mc 9,24)<br/>",
+    "Ninguém pode dar a si mesmo a virtude da fé [...]; a fé é um dom gratuito de Deus. Como diz S. Tiago, «Toda a boa dádiva e todo o dom perfeito vêm do alto, descendo do Pai das luzes» (1,17). Assim, pois, quando sentirmos que a nossa fé enfraquece, rezemos Àquele que no-la pode fortificar: «Eu creio! Ajuda a minha incredulidade!» (Mc 9,24); e, com os apóstolos: «Senhor, aumenta a nossa fé» (Lc l7,6). E depois, meditemos nas palavras de Cristo quando nos diz que, se não queremos que a nossa fé amorne e até arrefeça ccompletamente, perdendo a sua força pela dispersão dos nossos pensamentos nas futilidades deste mundo, temos de nos retirar para o nosso quarto (cf Mt 6,6) e aí reforçar a nossa fé, deixando de dar importância às ilusões deste mundo.<br/>",
+    "E, como o grão de mostarda, que é por natureza ardente, temos de semear a fé no jardim do nosso coração, depois de termos arrancado dele as ervas más. E a semente crescerá de tal maneira, que as aves do céu, isto é, os santos anjos, virão fazer morada na nossa alma, e dará o fruto das virtudes nos seus ramos (cf Mt 13,1s). Então, confiantes na palavra de Deus, teremos uma segurança firme nas suas promessas e poderemos expulsar no nosso coração uma montanha de aflições (cf Mt 17,20) ao passo que, se a nossa fé for fraca e oscilante, nem sequer um montículo deslocará.<br/>"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-28",
+  "year": 2026,
+  "month": 9,
+  "day": 28,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/28.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-28.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-28",
+      "name": "São Venceslau, duque da Boêmia, mártir",
+      "normalizedName": "sao venceslau, duque da boemia, martir",
+      "imageUrl": "./assets/img/santos/09-28-sao-venceslau-duque-da-boemia-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Venceslau, nasceu em Praga, em 907. Ainda jovem, tornou-se duque da Boêmia. Cristianizou seu país como um verdadeiro nobre. Certa vez, decidiu fazer um duelo para não envolver seus soldados na guerra, mas seu adversário se reconciliou com ele. Morreu em 935 por uma conspiração do seu irmão.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "name": "SS. Lourenço e Companheiros, mártires",
+      "normalizedName": "ss. lourenco e companheiros,",
+      "imageUrl": "./assets/img/santos/09-28-ss-lourenco-e-companheiros-martires.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/28/ss--lourenco-e-companheiros--martires.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/28/ss--lourenco-e-companheiros--martires.html",
+      "sourceText": "A Igreja recorda, hoje, São Lourenço Ruiz, leigo de origem filipina, junto com outros 15 mártires, todos vinculados à Ordem Dominicana, assassinados em Nagasaki, Japão, entre 1633 e 1637. Os 16 mártires foram beatificados em 1981 por João Paulo II, que também os canonizou seis anos depois em Manila.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "name": "Santa Eustóquia, virgem, filha de S. Paula",
+      "normalizedName": "santa eustoquia, , filha de s. paula",
+      "imageUrl": "./assets/img/santos/09-28-santa-eustoquia-virgem-filha-de-s-paula.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Terceira filha da matrona Paula, Eustóquia converteu-se ao cristianismo, consagrou-se virgem e partiu com sua mãe para a Terra Santa, nas pegadas de São Jerônimo. Fixaram morada em Belém, onde fundaram dois mosteiros. Eustóquia estudou e tornou-se hábil hebraísta. Morreu, de repente, em 419.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

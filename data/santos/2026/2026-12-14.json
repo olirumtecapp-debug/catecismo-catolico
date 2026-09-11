@@ -1,0 +1,30 @@
+{
+  "date": "2026-12-14",
+  "year": 2026,
+  "month": 12,
+  "day": 14,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/14.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-12-14.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-12-14",
+      "name": "São João da Cruz, presbítero e doutor da Igreja, carmelita descalço",
+      "normalizedName": "sao joao da cruz, presbitero e doutor da igreja, carmelita descalco",
+      "imageUrl": "./assets/img/santos/12-14-sao-joao-da-cruz-presbitero-e-doutor-da-igrej.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/14/s--joao-da-cruz--presbitero-e-doutor-da-igreja--carmelita-descal.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/12/14/s--joao-da-cruz--presbitero-e-doutor-da-igreja--carmelita-descal.html",
+      "sourceText": "São João da Cruz, mestre de teologia e místico espanhol do século XVI, reformou a família Carmelita, junto com sua amiga Santa Teresa de Ávila. Proclamado Doutor da Igreja, em 1926, pelo Papa Pio XI, é chamado, segundo a tradição, como “Doutor místico”. Sua festa litúrgica ocorre em 14 de dezembro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-04",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 14:5-18",
+    "psalm": "Sl 115:1-2, 3-4, 15-16",
+    "secondReading": "",
+    "gospel": "Jo 14:21-26"
+  },
+  "calendar": {
+    "date": "2026-05-04",
+    "monthDay": "5/4",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Monday of the 5th week of Easter",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/05-04.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/05-04.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-05-04"
+  }
+}

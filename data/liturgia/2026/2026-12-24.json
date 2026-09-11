@@ -1,0 +1,33 @@
+{
+  "date": "2026-12-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4a. Semana do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Samuel 1,24-28",
+      "text": "24 Ana, logo que o desmamou, levou consigo Samuel à casa do Senhor em Silo, e mais um novilho de três anos, três arrobas de farinha e um odre de vinho. O menino, porém, era ainda uma criança. 25 Depois de sacrificarem o novilho, apresentaram o menino a Eli. 26 E Ana disse-lhe: 'Ouve, meu senhor, por tua vida, eu sou a mulher que esteve aqui orando ao Senhor, na tua presença. 27 Eis o menino por quem eu pedi, e o Senhor ouviu a minha súplica. 28 Portanto, eu também o ofereço ao Senhor, a fim de que só a ele sirva em todos os dias da sua vida'. E adoraram o Senhor."
+    },
+    "psalm": {
+      "reference": "Salmo 1Sm 2",
+      "text": "- Exulta no Senhor meu coração, e se eleva a minha fronte no meu Deus. Minha boca desafia os meus rivais porque me alegro com a vossa salvação.\n\n- O arco dos fortes foi dobrado, foi quebrado, mas os fracos se vestiram de vigor. Os saciados se empregaram por um pão, mas os pobres e os famintos se fartaram. Muitas vezes deu à luz a que era estéril, mas a mãe de muitos filhos definhou.\n\n- É o Senhor quem dá a morte e dá a vida, faz descer à sepultura e faz voltar; é o Senhor quem faz o pobre e faz o rico, é o Senhor quem nos humilha e nos exalta.\n\n- O Senhor ergue do pó o homem fraco, e do lixo ele retira o indigente, para fazê-los assentar-se com os nobres num lugar de muita honra e distinção."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 46-56",
+      "text": "Naquele tempo: 46 Maria disse: 'A minha alma engrandece o Senhor, 47 e o meu espírito se alegra em Deus, meu Salvador, 48 porque olhou para a humildade de sua serva. Doravante todas as gerações me chamarão bem-aventurada, 49 porque o Todo-poderoso fez grandes coisas em meu favor. O seu nome é santo, 50 e sua misericórdia se estende, de geração em geração, a todos os que o temem. 51 Ele mostrou a força de seu braço: dispersou os soberbos de coração. 52 Derrubou do trono os poderosos e elevou os humildes. 53 Encheu de bens os famintos, e despediu os ricos de mãos vazias. 54 Socorreu Israel, seu servo, lembrando-se de sua misericórdia, 55 conforme prometera aos nossos pais, em favor de Abraão e de sua descendência, para sempre.' 56 Maria ficou três meses com Isabel; depois voltou para casa."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Luis-Maria Grignion de Monfort (1673-1716)<br/>",
+    "</b>",
+    "Pregador, Fundador de Comunidades Religiosas<br/>",
+    "«Tratado da Verdadeira Devoção à Virgem Santíssima»<br/>",
+    "«O Todo-Poderoso fez em mim maravilhas»<br/>",
+    "Ao longo da sua vida, Maria deu muito pouco nas vistas. {...] A sua humildade era tão profunda que não teve na Terra interesse mais forte e mais constante do que esconder-se perante si mesma e perante toda a criatura, para só ser conhecida por Deus. [...] Deus Pai consentiu que ela não fizesse qualquer milagre durante a sua vida, pelo menos que se soubesse. [...] Deus Filho consentiu que ela quase não falasse, embora lhe tivesse comunicado a sua sabedoria. Deus Espírito Santo consentiu que os apóstolos e os evangelistas falassem muito pouco dela, apenas o necessário para dar a conhecer Jesus Cristo, embora ela tivesse sido a sua Esposa fiel.<br/>",
+    "Maria é a excelente obra-prima do Altíssimo, da qual só Ele tem o conhecimento e a posse. [...] Maria é a fonte selada e a Esposa fiel do Espírito Santo, onde só Ele pode entrar. Maria é o santuário e o lugar do repouso da Santíssima Trindade, onde Deus está de forma mais magnífica e divina do que em qualquer outro lugar do universo, incluindo a sua morada acima dos querubins e dos serafins; e não é permitido a nenhuma criatura, por mais pura que seja, entrar nela sem um privilégio especial.<br/>",
+    "Digo-o com todos os santos: Maria é o paraíso terrestre do novo Adão. [...] É o grande e divino mundo de Deus, onde há belezas e tesouros inefáveis. É a magnificência do Altíssimo, onde Ele escondeu, como em seu próprio seio, o seu Filho único e, nele, tudo o que há de mais excelente e mais precioso. Oh! quantas coisas grandes e ocultas fez o Deus poderoso nesta criatura admirável, como ela mesma se sente obrigada a dizer, apesar da sua profunda humildade: «O Todo-Poderoso fez em mim maravilhas!» O mundo não as conhece porque é disso incapaz e indigno.<br/>"
+  ]
+}

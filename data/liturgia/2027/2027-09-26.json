@@ -1,0 +1,34 @@
+{
+  "date": "2027-09-26",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "26o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Números 11,25-29",
+      "text": "Naqueles dias: 25O Senhor desceu na nuvem e falou a Moisés. Retirou um pouco do espírito que Moisés possuía e o deu aos setenta anciãos. Assim que repousou sobre eles o espírito, puseram-se a profetizar, mas não continuaram. 26Dois homens, porém, tinham ficado no acampamento. Um chamava-se Eldad e o outro Medad. O espírito repousou igualmente sobre os dois, que estavam na lista mas não tinham ido à Tenda, e eles profetizavam no acampamento. 27Um jovem correu a avisar Moisés que Eldad e Medad estavam profetizando no acampamento. 28Josué, filho de Nun, ajudante de Moisés desde a juventude, disse: 'Moisés, meu Senhor, manda que eles se calem!' 29Moisés respondeu: 'Tens ciúmes por mim? Quem dera que todo o povo do Senhor fosse profeta, e que o Senhor lhe concedesse o seu espírito!'"
+    },
+    "psalm": {
+      "reference": "Salmo 18 (19)",
+      "text": "- A lei do Senhor Deus é perfeita, conforto para a alma! O testemunho do Senhor é fiel, sabedoria dos humildes.\n\n- É puro o temor do Senhor, imutável para sempre. Os julgamentos do Senhor são corretos e justos igualmente.\n\n- E vosso servo, instruído por elas, se empenha em guardá-las. Mas quem pode perceber suas faltas? Perdoai as que não vejo!\n\n- E preservai o vosso servo do orgulho: não domine sobre mim! E assim puro, eu serei preservado dos delitos mais perversos."
+    },
+    "secondReading": {
+      "reference": "Tiago 5,1-6",
+      "text": "1E agora, ricos, chorai e gemei, por causa das desgraças que estão para cair sobre vós. 2Vossa riqueza está apodrecendo, e vossas roupas estão carcomidas pelas traças. 3Vosso ouro e vossa prata estão enferrujados, e a ferrugem deles vai servir de testemunho contra vós e devorar vossas carnes, como fogo! Amontoastes tesouros nos últimos dias. 4Vede: o salário dos trabalhadores que ceifaram os vossos campos, que vós deixastes de pagar, está gritando, e o clamor dos trabalhadores chegou aos ouvidos do Senhor todo-poderoso. 5Vós vivestes luxuosamente na terra, entregues à boa vida, cevando os vossos coraçðes para o dia da matança. 6Condenastes o justo e o assassinastes; ele não resiste a vós."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 9, 38-43.45.47-48",
+      "text": "Naquele tempo: 38João disse a Jesus: 'Mestre, vimos um homem expulsar demônios em teu nome. Mas nós o proibimos, porque ele não nos segue'. 39Jesus disse: 'Não o proíbais, pois ninguém faz milagres em meu nome para depois falar mal de mim. 40Quem não é contra nós é a nosso favor. 41Em verdade eu vos digo: quem vos der a beber um copo de água, porque sois de Cristo, não ficará sem receber a sua recompensa. 42E, se alguém escandalizar um destes pequeninos que crêem, melhor seria que fosse jogado no mar com uma pedra de moinho amarrada ao pescoço. 43Se tua mão te leva a pecar, corta-a! É melhor entrar na Vida sem uma das mãos, do que, tendo as duas, ir para o inferno, para o fogo que nunca se apaga. 45Se teu pé te leva a pecar, corta-o! É melhor entrar na Vida sem um dos pés, do que, tendo os dois, ser jogado no inferno. 47Se teu olho te leva a pecar, arranca-o! É melhor entrar no Reino de Deus com um olho só, do que, tendo os dois, ser jogado no inferno, 48'onde o verme deles não morre, e o fogo não se apaga''."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São João Crisóstomo, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "3.ª Homilia sobre a 1.ª Carta aos Coríntios<br/>",
+    "«Ele não anda connosco»<br/>",
+    "«Que digais todos o mesmo, e que entre vós não haja divisões» (1Cor 1,10). As diversas partes da Igreja deixam de estar completas quando uma delas sofre e morre. Se cada Igreja fosse, por si mesma, um corpo completo, haveria numerosas assembleias e reuniões; mas elas formam um só corpo e a divisão destrói a sua unidade. […] Depois de ter denunciado este mal utilizando essa amarga palavra - divisões -, o apóstolo Paulo suaviza a sua linguagem ao acrescentar: «Sede perfeitos no mesmo espírito e no mesmo parecer.» Não se trata apenas de um acordo de palavras, mas de uma união de pensamento e de sentimentos. E, como pode acontecer que as pessoas estejam unidas em determinado ponto, mas divididas noutros, Paulo insiste: «Estai unidos de maneira perfeita» […], sede perfeitos na caridade.<br/>",
+    "Podemos estar unidos em pensamento e divididos nas ações, ter uma mesma fé sem estar ligados por uma mesma caridade. Era o que se passava em Corinto, onde uns se ligavam a um mestre, outros a outro. Paulo não lhes censura as divergências na fé, mas as diferentes maneiras de agir, as rivalidades humanas […]: «Soube que entre vós há contendas. […] Estará Cristo dividido?» (1Cor 1, 12-13).<br/>"
+  ]
+}

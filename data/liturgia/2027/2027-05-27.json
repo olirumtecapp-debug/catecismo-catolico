@@ -1,0 +1,37 @@
+{
+  "date": "2027-05-27",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Solenidade: Corpus Christi",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Deuteronômio 8,2-3.14-16",
+      "text": "Moisés falou ao povo, dizendo: 2Lembra-te de todo o caminho por onde o Senhor teu Deus te conduziu, esses quarenta anos, no deserto, para te humilhar e te pôr à prova, para saber o que tinhas no teu coração, e para ver se observarias ou não seus mandamentos. 3Ele te humilhou, fazendo-te passar fome e alimentando-te com o maná que nem tu nem teus pais conheciam, para te mostrar que nem só de pão vive o homem, mas de toda a palavra que sai da boca do Senhor. 14bNão te esqueças do Senhor teu Deus que te fez sair do Egito da casa da escravidão, 15e que foi teu guia no vasto e terrível deserto, onde havia serpentes abrasadoras, escorpiões, e uma terra árida e sem água nenhuma. Foi ele que fez jorrar água para ti da pedra duríssima, 16ae te alimentou no deserto com maná, que teus pais não conheciam."
+    },
+    "psalm": {
+      "reference": "Salmo 147 (147B)",
+      "text": "- Glorifica o Senhor, Jerusalém! Â Sião, canta louvores ao teu Deus! Pois reforçou com segurança as tuas portas, e os teus filhos em teu seio abençoou.\n\n- A paz em teus limites garantiu e te dá como alimento a flor do trigo. Ele envia suas ordens para a terra, e a palavra que ele diz corre veloz.\n\n- Anuncia a Jacó sua palavra, seus preceitos suas leis a Israel. Nenhum povo recebeu tanto carinho, a nenhum outro revelou os seus preceitos."
+    },
+    "secondReading": {
+      "reference": "Coríntios 10,16-17",
+      "text": "Irmãos: 16O cálice da bênção, o cálice que abençoamos, não é comunhão com o sangue de Cristo? E o pão que partimos, não é comunhão com o corpo de Cristo? 17Porque há um só pão, nós todos somos um só corpo, pois todos participamos desse único pão."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 6, 51-58",
+      "text": "Naquele tempo: disse Jesus às multidões dos judeus: 51'Eu sou o pão vivo descido do céu. Quem comer deste pão viverá eternamente. E o pão que eu darei é a minha carne dada para a vida do mundo'. 52Os judeus discutiam entre si, dizendo: 'Como é que ele pode dar a sua carne a comer?' 53Então Jesus disse: 'Em verdade, em verdade vos digo, se não comerdes a carne do Filho do Homem e não beberdes o seu sangue, não tereis a vida em vós. 54Quem come a minha carne e bebe o meu sangue tem a vida eterna, e eu o ressuscitarei no último dia. 55Porque a minha carne é verdadeira comida e o meu sangue, verdadeira bebida. 56Quem come a minha carne e bebe o meu sangue permanece em mim e eu nele. 57Como o Pai, que vive, me enviou, e eu vivo por causa do Pai, assim o que me come viverá por causa de mim. 58Este é o pão que desceu do céu. Não é como aquele que os vossos pais comeram. Eles morreram. Aquele que come este pão viverá para sempre.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São João-Maria Vianney (1786-1859)<br/>",
+    "</b>",
+    "Presbítero, Cura de Ars<br/>",
+    "«Pensamentos escolhidos do Santo Cura d'Ars»<br/>",
+    "A Eucaristia abre a porta do Paraíso<br/>",
+    "Se fôssemos capazes de compreender todos os bens que a sagrada comunhão encerra, nada mais seria preciso para contentar o coração do homem.<br/>",
+    "Nosso Senhor afirmou: «Tudo o que pedirdes a meu Pai em meu nome, Ele vo-lo concederá» (Jo 16,23). Nunca nos teríamos lembrado de pedir a Deus o seu próprio Filho. Mas Deus faz aquilo que o homem não seria capaz de imaginar. Deus, no seu amor, concebeu e executou aquilo que o homem não é capaz de dizer nem de conceber, e que não teria jamais ousado desejar.<br/>",
+    "Sem a divina Eucaristia, não haveria felicidade neste mundo, a vida seria insuportável. Quando recebemos a sagrada comunhão, recebemos a nossa alegria e a nossa felicidade. Querendo dar-Se a nós no sacramento do seu amor, Deus deu-nos um desejo enorme, que só Ele pode satisfazer. [...] Ao lado deste belo sacramento, somos como uma pessoa que morre de sede à beira de um rio - e contudo, bastava-lhe baixar a cabeça!... Somos como uma pessoa que permanece pobre ao lado de um tesouro - e bastava-lhe estender a mão!<br/>",
+    "Se fôssemos capazes de compreender todos os bens que a sagrada comunhão encerra, nada mais seria preciso para contentar o coração do homem.<br/>"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-16",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santos Cornelio e Cipriano",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 12,31-13,13",
+      "text": "Irmãos: 31Aspirai aos dons mais elevados. Eu vou ainda mostrar-vos um caminho incomparavelmente superior. 13,1Se eu falasse todas as línguas, as dos homens e as dos anjos, mas não tivesse caridade, eu seria como um bronze que soa ou um címbalo que retine. 2Se eu tivesse o dom da profecia, se conhecesse todos os mistérios e toda a ciência, se tivesse toda a fé, a ponto de transportar montanhas, mas se não tivesse caridade, eu não seria nada. 3Se eu gastasse todos os meus bens para sustento dos pobres, se entregasse o meu corpo às chamas, mas não tivesse caridade, isso de nada me serviria. 4A caridade é paciente, é benigna; não é invejosa, não é vaidosa, não se ensoberbece; 5não faz nada de inconveniente, não é interesseira, não se encoleriza, não guarda rancor; 6não se alegra com a iniqüidade, mas se regozija com a verdade. 7Suporta tudo, crê tudo, espera tudo, desculpa tudo. 8A caridade não acabará nunca. As profecias desaparecerão, as línguas cessarão, a ciência desaparecerá. 9Com efeito, o nosso conhecimento é limitado e a nossa profecia é imperfeita. 10Mas, quando vier o que é perfeito, desaparecerá o que é imperfeito. 11Quando eu era criança, falava como criança, pensava como criança, raciocinava como criança. Quando me tornei adulto, rejeitei o que era próprio de criança. 12Agora nós vemos num espelho, confusamente, mas, então, veremos face a face. Agora, conheço apenas de modo imperfeito, mas, então, conhecerei como sou conhecido. 13Atualmente permanecem estas três coisas: fé, esperança, caridade. Mas a maior delas é a caridade."
+    },
+    "psalm": {
+      "reference": "Salmo 32 (33)",
+      "text": "- Dai graças ao Senhor ao som da harpa, na lira de dez cordas celebrai-o! Cantai para o Senhor um canto novo, com arte sustentai a louvação!\n\n- Pois reta é a palavra do Senhor, e tudo o que ele faz merece fé. Deus ama o direito e a justiça, transborda em toda a terra a sua graça.\n\n- Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança! Sobre nós venha, Senhor, a vossa graça, da mesma forma que em vós nós esperamos!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 7, 31-35",
+      "text": "Naquele tempo, disse Jesus: 31Com quem hei de comparar os homens desta geração? Com quem eles se parecem? 32São como crianças que se sentam nas praças, e se dirigem aos colegas, dizendo: 'Tocamos flauta para vós e não dançastes; fizemos lamentações e não chorastes!' 33Pois veio João Batista, que não comia pão nem bebia vinho, e vós dissestes: 'Ele está com um demônio!' 34Veio o Filho do Homem, que come e bebe, e vós dizeis: 'Ele é um comilão e beberrão, amigo dos publicanos e dos pecadores!' 35Mas a sabedoria foi justificada por todos os seus filhos.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São João Paulo II, Papa<br/>",
+    "</b>",
+    "Encíclica «Dives in Misericordia» § 13 (trad. © copyright Libreria Editrice Vaticana)<br/>",
+    "Na Igreja, Cristo chama-nos à conversão<br/>",
+    "A Igreja vive vida autêntica quando professa e proclama a misericórdia, o mais admirável atributo do Criador e do Redentor, e quando aproxima os homens das fontes da misericórdia do Salvador, das quais é depositária e dispensadora. Neste contexto, assumem grande significado a meditação constante da Palavra de Deus, e sobretudo a participação consciente e refletida na Eucaristia e no sacramento da Penitência ou Reconciliação.<br/>",
+    "A Eucaristia aproxima-nos sempre do amor que é mais forte do que a morte (Cant 8,6). Com efeito, «todas as vezes que comemos deste pão e bebemos deste cálice», não só anunciamos a morte do Redentor, mas proclamamos a sua ressurreição, «enquanto esperamos a sua vinda gloriosa» (Missal Romano; cf 1Cor 11,26). A própria liturgia eucarística, celebrada em memória daquele que, na sua missão messiânica, nos revelou o Pai por meio da Palavra e da Cruz, atesta o inexaurível amor em virtude do qual Ele deseja sempre unir-Se e como que tornar-Se uma só coisa connosco, indo ao encontro de todos os corações humanos.<br/>",
+    "O sacramento da Penitência ou Reconciliação aplana o caminho a cada um dos homens (cf Lc 3,3; Is 40,3), mesmo quando sobrecarregados por faltas graves. Neste sacramento, todos os homens podem experimentar de modo singular a misericórdia, isto é, o amor que é mais forte do que o pecado.<br/>"
+  ]
+}

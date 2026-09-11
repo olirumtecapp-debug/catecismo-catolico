@@ -1,0 +1,69 @@
+{
+  "date": "2026-05-10",
+  "year": 2026,
+  "month": 5,
+  "day": 10,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/10.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-10.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-10",
+      "name": "São Gordiano, mártir, na via Latina",
+      "normalizedName": "sao gordiano, martir, na via latina",
+      "imageUrl": "./assets/img/santos/05-10-sao-gordiano-martir-na-via-latina.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Perseguidor dos cristãos, sob o império de Juliano o Apóstata, Gordiano julgou o presbítero Januário, graças ao qual se converteu. Foi martirizado no ano 300 e enterrado na Via Latina, em uma cripta, que já continha as relíquias de Santo Epímaco. Por isso, às vezes, são celebrados juntos.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-10",
+      "name": "São João de Ávila, sacerdote",
+      "normalizedName": "sao joao de avila, sacerdote",
+      "imageUrl": "./assets/img/santos/05-10-sao-joao-de-avila-sacerdote.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sacerdote espanhol, de origem judaica, João de Ávila viveu no século XVI, um período de grandes reformas. Era místico, grande pregador e conselheiro de muitos Santos contemporâneos, entre os quais Santo Inácio de Loyola. O Papa Bento XVI o proclamou Doutor da Igreja em 2012.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-10",
+      "name": "SS. Quarto e Quinto, mártires, na via Latina",
+      "normalizedName": "ss. quarto e quinto, , na via latina",
+      "imageUrl": "./assets/img/santos/05-10-ss-quarto-e-quinto-martires-na-via-latina.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sabe-se pouco sobre a vida destes dois Santos, do século IV, sepultados em Roma, ao longo da Via Latina, segundo os \"Itinerários\" do século VII, na Catacumba dos Santos Gordiano e Epímaco. Talvez, ambos eram Bispos, naturais da cidade de Cápua, martirizados em Roma, após 269.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-10",
+      "name": "São Jó",
+      "normalizedName": "sao jo",
+      "imageUrl": "./assets/img/santos/05-10-sao-jo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "A história de Jó, modelo de paciência e santidade, é uma metáfora para o sofrimento do mundo e uma prefiguração de Cristo sofredor. Este homem, que era rico e feliz, perdeu tudo de repente, até seus próprios filhos. Ao adoecer, suportou tudo, dizendo: \"Javé dá e Javé tira. Bendito seja Javé!\"",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2027-09-10",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "23a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Timóteo 1,1-2.12-14",
+      "text": "1Paulo, apóstolo de Cristo Jesus, por ordem de Deus, nosso Salvador, e de Cristo Jesus, nossa esperança, 2a Timóteo, verdadeiro filho na fé: a graça, a misericórdia e a paz de Deus Pai e de Cristo Jesus, Nosso Senhor. 12Agradeço àquele que me deu força, Cristo Jesus, nosso Senhor, pela confiança que teve em mim ao designar-me para o seu serviço, 13a mim, que antes blasfemava, perseguia e insultava. Mas encontrei misericórdia, porque agia com a ignorância de quem não tem fé. 14Transbordou a graça de nosso Senhor com a fé e o amor que há em Cristo Jesus."
+    },
+    "psalm": {
+      "reference": "Salmo 15 (16)",
+      "text": "- Guardai-me, ó Deus, porque em vós me refugio! Digo ao Senhor: 'Somente vós sois meu Senhor. Ó Senhor, sois minha herança e minha taça, meu destino está seguro em vossas mãos!\n\n- Eu bendigo o Senhor, que me aconselha, e até de noite me adverte o coração. Tenho sempre o Senhor ante meus olhos, pois se o tenho a meu lado não vacilo.\n\n- Vós me ensinais vosso caminho para a vida; junto a vós, felicidade sem limites, delícia eterna e alegria ao vosso lado!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 39-42",
+      "text": "Naquele tempo: 39Jesus contou uma parábola aos discípulos: 'Pode um cego guiar outro cego? Não cairão os dois num buraco? 40Um discípulo não é maior do que o mestre; todo discípulo bem formado será como o mestre. 41Por que vês tu o cisco no olho do teu irmão, e não percebes a trave que há no teu próprio olho? 42Como podes dizer a teu irmão: Irmão, deixa-me tirar o cisco do teu olho, quando tu não vês a trave no teu próprio olho? Hipócrita! Tira primeiro a trave do teu olho, e então poderás enxergar bem para tirar o cisco do olho do teu irmão."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Cirilo de Alexandria (380-444)<br/>",
+    "</b>",
+    "Bispo, Doutor da Igreja<br/>",
+    "Comentário sobre oevangelho de Lucas, 6<br/>",
+    "O discípulo bem formado será como o seu mestre<br/>",
+    "«O discípulo não está acima do mestre. Será perfeito se for como o mestre.» Os bem-aventurados discípulos estavam destinados a tornar-se guias e mestres espirituais da terra inteira. Por isso, tinham de dar provas, mais do que quaisquer outros, de um fervor visível, e de estar familiarizados com a maneira de viver segundo o Evangelho e dispostos a praticar qualquer boa obra. Pois teriam de transmitir àqueles que instruíssem a doutrina exacta, salutar e estritamente conforme à verdade, depois de primeiramente a terem contemplado e de terem deixado a luz divina iluminar-lhes a inteligência. Sem isso, seriam cegos a conduzir outros cegos. É que os que estão mergulhados nas trevas da ignorância não podem conduzir ao conhecimento da verdade os homens que sofrem essa mesma ignorância. Aliás, correriam o risco de cair todos juntos no abismo das suas más tendências.<br/>",
+    "Foi por isso que, querendo travar a inclinação para a vanglória que se encontra em tantas pessoas e dissuadi-las de rivalizar com os seus mestres para ultrapassarem a reputação destes, o Senhor disse: «Não está o discípulo acima do mestre.» Mesmo se acontecer que alguém atinja um grau de virtude igual à dos seus predecessores, essa pessoa deverá sobretudo imitar a modéstia deles. Paulo dá-nos uma prova disso quando diz: «Sede meus imitadores, como eu próprio o sou de Cristo» (1Cor 11,1).<br/>",
+    "Se é assim, porque julgas, se o Mestre não julga ainda? Com efeito, Ele não veio para julgar o mundo (Jo 12,47), mas para lhe trazer a graça. [...] «Se Eu não julgo, diz-te Ele, não julgues também tu, que és meu discípulo. Pode acontecer que sejas mais culpado do que aquele que estás a julgar. [...] Porque reparas na palha que está no olho do teu irmão?»<br/>"
+  ]
+}

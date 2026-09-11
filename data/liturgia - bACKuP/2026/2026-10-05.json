@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-05",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Gl 1:6-12",
+    "psalm": "Psalm 111:1b-2, 7-8, 9, 10c",
+    "secondReading": "",
+    "gospel": "Lc 10:25-37"
+  },
+  "calendar": {
+    "date": "2026-10-05",
+    "monthDay": "10/5",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Monday of the 27th week of Ordinary Time",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/10-05.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/10-05.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-10-05"
+  }
+}

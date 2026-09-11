@@ -1,0 +1,43 @@
+{
+  "date": "2026-01-09",
+  "year": 2026,
+  "month": 1,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-09",
+      "name": "B. Antônio Fatati, bispo de Ancona",
+      "normalizedName": "b. antonio fatati, bispo de ancona",
+      "imageUrl": "./assets/img/santos/01-09-b-antonio-fatati-bispo-de-ancona.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Antônio, filho de uma nobre família de Téramo, estudou em Bolonha para se tornar sacerdote. Ao voltar para casa, ocupou vários cargos até ser nomeado bispo de Ancona, em 1463. Foi um pastor prudente, generoso com os pobres e severo consigo mesmo. Foi beatificado em 1765.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-09",
+      "name": "São André Corsini, carmelita, bispo de Fiésole",
+      "normalizedName": "sao andre corsini, carmelita, bispo de fiesole",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "André Corsini, de nobre família florentina (1301-1373), foi Superior provincial da Ordem Carmelita e, depois, Bispo de Fiesole. Restaurou conventos, devastados pela peste, ajudou os pobres e realizou obras de pacificação entre os combatentes da época. Pagou com a prisão a sua benemérita conduta.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

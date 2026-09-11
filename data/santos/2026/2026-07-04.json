@@ -1,0 +1,56 @@
+{
+  "date": "2026-07-04",
+  "year": 2026,
+  "month": 7,
+  "day": 4,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/04.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-04.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-04",
+      "name": "Santa Isabel, rainha de Portugal",
+      "normalizedName": "santa isabel, rainha de portugal",
+      "imageUrl": "./assets/img/santos/07-04-santa-isabel-rainha-de-portugal.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Enquanto rainha, Isabel seguiu seu caminho para a santidade, cuidando dos pobres e apaziguando as dinastias da Europa, em 1300. Após a morte do seu marido, Dionísio, partiu em peregrinação a Santiago de Compostela, onde ofereceu sua coroa e, depois, entrou para o mosteiro das Clarissas de Coimbra.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "name": "São Ulrico, bispo de Augsburgo",
+      "normalizedName": "sao ulrico, bispo de augsburgo",
+      "imageUrl": "./assets/img/santos/07-04-sao-ulrico-bispo-de-augsburgo.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Ulrico foi encaminhado ao sacerdócio pelo seu tio, Adalberone, Bispo de Augsburgo. A sua sucessão foi oferecida ao jovem clérigo Ulrico, mas ele não aceitou. Entretanto, liderou o episcopado, por 50 anos, a partir de 923, sendo um defensor convicto do povo, do clero local e da própria cidade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "name": "São Pier Giorgio Frassati",
+      "normalizedName": "sao pier giorgio frassati",
+      "imageUrl": "./assets/img/santos/07-04-sao-pier-giorgio-frassati.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/04/s--pier-giorgio-frassati.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/04/s--pier-giorgio-frassati.html",
+      "sourceText": "Entre os “Santos sociais” do Piemonte está o jovem Piergiorgio Frassati, que voltou à Casa do Pai em 4 de julho de 1925, aos 24 anos. O Papa Leão XIV o canonizou em 7 de setembro de 2025, lembrando seu testemunho do Evangelho na alegria de viver, na oração, na amizade e na caridade.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

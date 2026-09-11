@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-09",
+  "year": 2026,
+  "month": 5,
+  "day": 9,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/09.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-09.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-09",
+      "name": "São Pacómio, abade",
+      "normalizedName": "sao pacomio, abade",
+      "imageUrl": "./assets/img/santos/05-09-sao-pacomio-abade.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Pacômio era um jovem do Alto Egito. Obrigado a se alistar no Exército, foi logo preso em Tebas. No cárcere, converteu-se ao cristianismo; mas, quando ficou livre, se colocou ao serviço de uma Comunidade, mas preferiu seguir a vida ascética, junto com outros monges, que o seguiram.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-09",
+      "name": "São Isaías, profeta",
+      "normalizedName": "sao isaias, profeta",
+      "imageUrl": "./assets/img/santos/05-09-sao-isaias-profeta.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/09/s--isaias--profeta.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/09/s--isaias--profeta.html",
+      "sourceText": "Descendente da casa do Rei Davi, Santo Isaías é o maior entre os chamados \"Grandes Profetas\" de Israel, que viveu cerca de oitocentos anos antes de Jesus. Segundo a tradição, ele teve uma longa existência e, no final, morreu como mártir.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-09",
+      "name": "São Luísa de Marillac, co-fundadora das Filhas da Caridade",
+      "normalizedName": "sao luisa de marillac, co-fundadora das filhas da caridade",
+      "imageUrl": "./assets/img/santos/05-09-sao-luisa-de-marillac-co-fundadora-das-filhas.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/09/s--luisa-de-marillac--co-fundadora-das-filhas-da-caridade.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/09/s--luisa-de-marillac--co-fundadora-das-filhas-da-caridade.html",
+      "sourceText": "Luísa nasceu na França, no final do século XVI, e foi uma esposa e mãe dedicada. Ao ficar viúva, dedicou toda a sua vida à caridade e à assistência aos pobres. Em 1633, junto com São Vicente de Paolo, fundou a Companhia das \"Filhas da Caridade\". A Igreja celebra a sua festa em 9 de maio.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

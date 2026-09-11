@@ -1,0 +1,56 @@
+{
+  "date": "2026-04-14",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos 4,32-37",
+      "text": "32A multidão dos fiéis era um só coração e uma só alma. Ninguém considerava como próprias as coisas que possuía, mas tudo entre eles era posto em comum. 33Com grandes sinais de poder, os apóstolos davam testemunho da ressurreição do Senhor Jesus. E os fiéis eram estimados por todos. 34Entre eles ninguém passava necessidade, pois aqueles que possuíam terras ou casas, vendiam-nas, levavam o dinheiro, 35e o colocavam aos pés dos apóstolos. Depois, era distribuído conforme a necessidade de cada um. 36José, chamado pelos apóstolos de Barnabé, que significa filho da consolação, levita e natural de Chipre, 37possuía um campo. Vendeu e foi depositar o dinheiro aos pés dos apóstolos."
+    },
+    "psalm": {
+      "reference": "Salmo 92 (93)",
+      "text": "- Deus é Rei e se vestiu de majestade, brevestiu-se de poder e de esplendor!\n\n- Vós firmastes o universo inabalável, vós firmastes vosso trono desde a origem, desde sempre, ó Senhor, vós existis!\n\n- Verdadeiros são os vossos testemunhos, refulge a santidade em vossa casa, refulge a santidade em vossa casa, refulge a santidade em vossa casa, pelos séculos dos séculos, Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 3, 7-15",
+      "text": "Naquele tempo disse Jesus a Nicodemos: 7Vós deveis nascer do alto. 8O vento sopra onde quer e tu podes ouvir o seu ruído, mas não sabes de onde vem, nem para onde vai. Assim acontece a todo aquele que nasceu do Espírito'. 7Não te admires por eu haver dito: Vós deveis nascer do alto. 8O vento sopra onde quer e tu podes ouvir o seu ruído, mas não sabes de onde vem, nem para onde vai. Assim acontece a todo aquele que nasceu do Espírito'. 9Nicodemos perguntou: 'Como é que isso pode acontecer?' 10Respondeu-lhe Jesus: 'Tu és mestre em Israel, mas não sabes estas coisas? 11Em verdade, em verdade te digo, nós falamos daquilo que sabemos e damos testemunho daquilo que temos visto, mas vós não aceitais o nosso testemunho. 12Se não acreditais, quando vos falo das coisas da terra, como acreditareis se vos falar das coisas do céu? 13E ninguém subiu ao céu, a não ser aquele que desceu do céu, o Filho do Homem. 14Do mesmo modo como Moisés levantou a serpente no deserto, assim é necessário que o Filho do Homem seja levantado, 15para que todos os que nele crerem tenham a vida eterna."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santa Teresa Benedita da Cruz (Edith Stein)<br/>",
+    "</b>",
+    "Carmelita, mártir, Co-Padroeira da Europa <br/>",
+    "«Pentecostes» 1942 <br/>",
+    "«Não sabes donde vem nem para onde vai»<br/>",
+    "Quem és Tu, suave luz que me sacias <br/>",
+    "e que iluminas as trevas do meu coração? <br/>",
+    "Guias-me como a mão de uma mãe, <br/>",
+    "e, se me soltasses, <br/>",
+    "não poderia dar nem mais um passo. <br/>",
+    "És o espaço <br/>",
+    "que envolve o meu ser e me protege. <br/>",
+    "Longe de Ti, naufragaria no abismo do nada <br/>",
+    "de onde me tiraste para me criar para a luz. <br/>",
+    "Tu, mais próximo de mim <br/>",
+    "que eu própria, <br/>",
+    "mais íntimo que as profundezas da minha alma, <br/>",
+    "e contudo incompreensível e inefável, <br/>",
+    "para além de todo o nome, <br/>",
+    "Espírito Santo, Amor Eterno! <br/>",
+    "Não és Tu o doce maná <br/>",
+    "que do coração do Filho <br/>",
+    "transborda para o meu, <br/>",
+    "o alimento dos anjos e dos bem-aventurados? <br/>",
+    "Aquele que Se elevou da morte à vida <br/>",
+    "também me despertou do sono da morte para uma vida nova. <br/>",
+    "E, dia após dia, <br/>",
+    "continua a dar-me uma nova vida, <br/>",
+    "cuja plenitude me inundará um dia por completo, <br/>",
+    "vida procedente da tua vida, sim, Tu mesmo, <br/>",
+    "Espírito Santo, Vida Eterna!<br/>"
+  ]
+}

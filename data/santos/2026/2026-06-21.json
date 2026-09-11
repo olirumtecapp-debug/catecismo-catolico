@@ -1,0 +1,30 @@
+{
+  "date": "2026-06-21",
+  "year": 2026,
+  "month": 6,
+  "day": 21,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/21.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-06-21.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-06-21",
+      "name": "São Luís Gonzaga, jesuíta, padroeiro da juventude católica",
+      "normalizedName": "sao luis gonzaga, jesuita, padroeiro da juventude catolica",
+      "imageUrl": "./assets/img/santos/06-21-sao-luis-gonzaga-jesuita-padroeiro-da-juventu.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/21/s--luis-gonzaga--jesuita--padroeiro-da-juventude-catolica.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/21/s--luis-gonzaga--jesuita--padroeiro-da-juventude-catolica.html",
+      "sourceText": "Nobre herdeiro de um distinto marquês, Luiz entendeu logo que o Senhor o queria em outro lugar. Por isso, renunciou às riquezas e ao mundanismo, dando prioridade à oração, à penitência e ao serviço na vida comunitária dos Jesuítas. Faleceu de peste em Roma, em 1591, como \"mártir da caridade\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

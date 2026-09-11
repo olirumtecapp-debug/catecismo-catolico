@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-19",
+  "year": 2026,
+  "month": 7,
+  "day": 19,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/19.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-19.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-19",
+      "name": "São Símaco, papa",
+      "normalizedName": "sao simaco, papa",
+      "imageUrl": "./assets/img/santos/07-19-sao-simaco-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Quando Símaco foi eleito Papa, em 498, teve que enfrentar os desafios do rei ostrogodo, Teodorico, e a oposição do antipapa Lourenço. Mas, ele não desanimou, aliás, até encontrou tempo para resgatar e libertar os escravos. A São Símaco foi atribuído o primeiro palácio do Vaticano.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

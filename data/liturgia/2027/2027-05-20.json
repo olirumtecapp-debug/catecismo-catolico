@@ -1,0 +1,31 @@
+{
+  "date": "2027-05-20",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "7a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Eclesiástico 5,1-10",
+      "text": "1Não confies nas tuas riquezas e não digas: \"Basta-me viver!\" 2 Não deixes que tua força te leve a seguir as paixões do coração. 3 Não digas: \"Quem terá poder sobre mim?\" ou: \"Quem me fará prestar contas das minhas ações?\", pois o Senhor, com certeza, te castigará. 4 Não digas: \"Pequei, e que de mal me aconteceu?\", pois o Altíssimo é paciente. 5 Não percas o temor por causa do perdão, cometendo pecado sobre pecado. 6 Não digas: \"A misericórdia do Senhor é grande, ele me perdoará a multidão dos meus pecados!\", 7 pois dele procedem misericórdia e cólera, e sua ira se abate sobre os pecadores. 8 Não demores em voltar para o Senhor, e não adies de um dia para outro, 9 pois a sua cólera vem de repente e, no dia do castigo, serás aniquilado. 10 Não te apoies em riquezas injustas, pois elas de nada te valerão no dia da desgraça."
+    },
+    "psalm": {
+      "reference": "Salmo 1",
+      "text": "- Feliz é todo aquele que não anda conforme os conselhos dos perversos; que não entra no caminho dos malvados, nem junto aos zombadores vai sentar-se; mas encontra seu prazer na lei de Deus e a medita, dia e noite, sem cessar.\n\n- Eis que ele é semelhante a uma árvore que à beira da torrente está plantada; ela sempre dá seus frutos a seu tempo, e jamais as suas folhas vão murchar. Eis que tudo o que ele faz vai prosperar.\n\n- Mas bem outra é a sorte dos perversos. Ao contrário, são iguais à palha seca espalhada e dispersada pelo vento. Pois Deus vigia o caminho dos eleitos, mas a estrada dos malvados leva à morte."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 9, 41-50",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 41Quem vos der a beber um copo de água, porque sois de Cristo, não ficará sem receber a sua recompensa. 42E se alguém escandalizar um desses pequeninos que creem, melhor seria que fosse jogado no mar com uma pedra de moinho amarrada ao pescoço. 43Se tua mão te leva a pecar, corta-a! 44É melhor entrar na Vida sem uma das mãos, do que, tendo as duas, ir para o inferno, para o fogo que nunca se apaga. 45Se teu pé te leva a pecar, corta-o! 46É melhor entrar na Vida sem um dos pés, do que, tendo os dois, ser jogado no inferno. 47Se teu olho te leva a pecar, arranca-o! É melhor entrar no Reino de Deus com um olho só, do que, tendo os dois, ser jogado no inferno, 48'onde o verme deles não morre, e o fogo não se apaga'\". 49Pois todos hão de ser salgados pelo fogo. 50Coisa boa é o sal. Mas se o sal se tornar insosso, com que lhe restituireis o tempero? Tende, pois, sal em vós mesmos e vivei em paz uns com os outros."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Paulo VI, Papa de 1963 a 1978<br/>",
+    "</b>",
+    "Constituição apostólica «Paenitemini»<br/>",
+    "O sal da penitência<br/>",
+    "Todo o cristão deve seguir o Mestre renunciando a si mesmo, carregando a sua cruz e participando nos sofrimentos de Cristo (Mt 16,24). Assim, transfigurado à imagem da sua morte, torna-se capaz de meditar na glória da ressurreição. Seguirá igualmente o Mestre não vivendo já para si mesmo, mas para aquele que o amou e Se deu a Si mesmo por ele, e também pelos seus irmãos, completando «na sua carne o que falta aos padecimentos de Cristo pelo seu corpo que é a Igreja» (Gal 2,20; Col 1,24).<br/>",
+    "Por outro lado, estando a Igreja intimamente ligada a Cristo, a penitência de cada cristão tem igualmente uma relação própria e íntima com toda a comunidade eclesial. Com efeito, é apenas no seio da Igreja que, pelo batismo, ele recebe o dom fundamental da metanóia, quer dizer da mudança e da renovação do homem todo; mas este dom é restaurado e fortalecido pelo sacramento da penitência nos membros do corpo de Cristo que caíram em pecado. «Os que se aproximam do sacramento da penitência recebem da misericórdia de Deus o perdão da ofensa que Lhe fizeram, ao mesmo tempo que são reconciliados com a Igreja, que foi ferida pelo seu pecado e que, pela caridade, o exemplo e as orações, trabalha pela sua conversão» (Lumen Gentium, 11). É na Igreja que a pequena obra da penitência imposta a cada penitente no sacramento participa de uma maneira especial na expiação infinita de Cristo.<br/>"
+  ]
+}

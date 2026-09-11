@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-29",
+  "season": "Christmas",
+  "readings": {
+    "firstReading": "1Jo 2:3-11",
+    "psalm": "Sl 96:1-2a, 2b-3, 5b-6",
+    "secondReading": "",
+    "gospel": "Lc 2:22-35"
+  },
+  "calendar": {
+    "date": "2026-12-29",
+    "monthDay": "12/29",
+    "season": "Christmas",
+    "celebration": {
+      "name": "Saint Thomas Becket, Bishop and Martyr",
+      "type": "OPT_MEMORIAL",
+      "quote": "We worship the Creator of the universe, and we affirm that Jesus Christ is His Son.",
+      "description": "A philosopher who converted to Christianity and became its first great apologist, eventually martyred for refusing to sacrifice to idols.",
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-29.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-29.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-29"
+  }
+}

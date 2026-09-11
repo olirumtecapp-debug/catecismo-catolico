@@ -1,0 +1,32 @@
+{
+  "date": "2027-05-11",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "7a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 20,17-27",
+      "text": "Naqueles dias: 17De Mileto, Paulo mandou um recado a Éfeso, convocando os anciãos da Igreja. 18Quando os anciãos chegaram, Paulo disse-lhes: 'Vós bem sabeis de que modo me comportei em relação a vós, durante todo o tempo, desde o primeiro dia em que cheguei à Ásia. 19Servi ao Senhor com toda a humildade, com lágrimas e no meio das provações que sofri por causa das ciladas dos judeus. 20Nunca deixei de anunciar aquilo que pudesse ser de proveito para vós, nem de vos ensinar publicamente e também de casa em casa. 21Insisti, com judeus e gregos, para que se convertessem a Deus e acreditassem em Jesus nosso Senhor. 22E agora, prisioneiro do Espírito, vou para Jerusalém sem saber o que aí me acontecerá. 23Sei apenas que, de cidade em cidade, o Espírito Santo me adverte, dizendo que me aguardam cadeias e tribulações. 24Mas, de modo nenhum, considero a minha vida preciosa para mim mesmo, contanto que eu leve a bom termo a minha carreira e realize o serviço que recebi do Senhor Jesus, ou seja, testemunhar o Evangelho da graça de Deus. 25Agora, porém, tenho a certeza que vós não vereis mais o meu rosto, todos vós entre os quais passei anunciando o Reino. 26Portanto, hoje dou testemunho diante de todos vós: eu não sou responsável se algum de vós se perder, 27pois não deixei de vos anunciar todo o projeto de Deus a vosso respeito."
+    },
+    "psalm": {
+      "reference": "Salmo 67 (68)",
+      "text": "- Derramastes lá do alto uma chuva generosa, e vossa terra, vossa herança, já cansada, renovastes; e ali vosso rebanho encontrou sua morada; com carinho preparastes essa terra para o pobre.\n\n- Bendito seja Deus, bendito seja cada dia, o Deus da nossa salvação, que carrega os nossos fardos! Nosso Deus é um Deus que salva, é um Deus libertador; o Senhor, só o Senhor, nos poderá livrar da morte!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 17, 1-11a",
+      "text": "Naquele tempo: 1Jesus ergueu os olhos ao céu e disse: 'Pai, chegou a hora. Glorifica o teu Filho, para que o teu Filho te glorifique a ti, 2e, porque lhe deste poder sobre todo homem, ele dê a vida eterna a todos aqueles que lhe confiaste. 3Ora, a vida eterna é esta: que eles te conheçam a ti, o único Deus verdadeiro, e àquele que tu enviaste, Jesus Cristo. 4Eu te glorifiquei na terra e levei a termo a obra que me deste para fazer. 5E agora, Pai, glorifica-me junto de ti, com a glória que eu tinha junto de ti antes que o mundo existisse. 6Manifestei o teu nome aos homens que tu me deste do meio do mundo. Eram teus, e tu os confiaste a mim, e eles guardaram a tua palavra. 7Agora eles sabem que tudo quanto me deste vem de ti, 8pois dei-lhes as palavras que tu me deste, e eles as acolheram, e reconheceram verdadeiramente que eu saí de ti e acreditaram que tu me enviaste. 9Eu te rogo por eles. Não te rogo pelo mundo, mas por aqueles que me deste, porque são teus. 10Tudo o que é meu é teu e tudo o que é teu é meu. E eu sou glorificado neles. 11aJá não estou no mundo, mas eles permanecem no mundo, enquanto eu vou para junto de ti'."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia POR Santo Ireneu de Lyon (c. 130-c. 208), Bispo, teólogo, mártir<br/>",
+    "</b>",
+    "«Contra as Heresias», IV, 14<br/>",
+    "«Para que Ele dê a vida eterna a todos os que Lhe confiaste.»<br/>",
+    "No princípio, não foi porque precisasse do homem que Deus modelou Adão, mas para ter alguém em quem depositar os seus benefícios. Porque, não só antes de Adão mas mesmo antes de toda a criação, já o Verbo glorificava o Pai, permanecendo nele, e era glorificado pelo Pai, tal como Ele próprio disse: «Pai, glorifica-Me junto de Ti mesmo com aquela glória que tinha em Ti antes que houvesse mundo». Também não foi porque tivesse necessidade do nosso serviço que Ele nos ordenou que O seguíssemos, mas para nos obter a salvação. Porque seguir o Salvador é participar da salvação, tal como seguir a luz é tomar parte da luz.<br/>",
+    "Quando os homens estão na luz, não são eles que iluminam a luz e a fazem resplandecer, antes são iluminados e tornados resplandecentes por ela; longe de lhe acrescentar o que quer que seja, eles beneficiam da luz e por ela são iluminados. O mesmo acontece com o serviço prestado a Deus; o nosso serviço não acrescenta nada a Deus, porque Deus não precisa do serviço dos homens; mas, àqueles que O servem e O seguem, Deus dá a vida, a incorruptibilidade e a glória eterna. [...]<br/>",
+    "Se Deus solicita o serviço dos homens, é para poder, Ele que é bom e misericordioso, conceder os seus benefícios aos que perseveram no seu serviço. Porque, se Deus não precisa de nada, o homem precisa da comunhão de Deus. A glória do homem é perseverar no serviço de Deus. É por isso que o Senhor dizia aos seus discípulos: «Não fostes vós que Me escolhestes, fui Eu que vos escolhi a vós» (Jo 15,16). Indicava assim que não eram eles que O glorificavam, seguindo-O, mas que, por terem seguido o Filho de Deus, eram glorificados por Ele. «Pai, quero que onde Eu estiver eles estejam também comigo, para contemplarem a minha glória» (Jo 17,24).<br/>"
+  ]
+}

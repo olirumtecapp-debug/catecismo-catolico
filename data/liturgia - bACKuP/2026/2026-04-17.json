@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-17",
+  "season": "Eastertide",
+  "readings": {
+    "firstReading": "At 5:34-42",
+    "psalm": "Sl 27:1, 4, 13-14",
+    "secondReading": "",
+    "gospel": "Jo 6:1-15"
+  },
+  "calendar": {
+    "date": "2026-04-17",
+    "monthDay": "4/17",
+    "season": "Eastertide",
+    "celebration": {
+      "name": "Friday of the 2nd week of Easter",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/04-17.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/04-17.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-04-17"
+  }
+}

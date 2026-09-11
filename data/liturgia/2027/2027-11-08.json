@@ -1,0 +1,32 @@
+{
+  "date": "2027-11-08",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "32a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Início do Livro da Sabedoria 1,1-7",
+      "text": "1Amai a justiça, vós que governais a terra; tende bons sentimentos para com o Senhor e procurai-o com simplicidade de coração. 2Ele se deixa encontrar pelos que não exigem provas, e se manifesta aos que nele confiam. 3Pois os pensamentos perversos afastam de Deus; e seu poder, posto à prova, confunde os insensatos. 4A Sabedoria não entra numa alma que trama o mal nem mora num corpo sujeito ao pecado. 5O espírito santo, que a ensina, foge da astúcia, afasta-se dos pensamentos insensatos e retrai-se quando sobrevém a injustiça. 6Com efeito, a Sabedoria é o espírito que ama os homens, mas não deixa sem castigo quem blasfema com seus próprios lábios, pois Deus é testemunha dos seus pensamentos, investiga seu coração segundo a verdade e mantém-se à escuta da sua língua; 7porque o espírito do Senhor enche toda a terra, mantém unidas todas as coisas e tem conhecimento de tudo o que se diz."
+    },
+    "psalm": {
+      "reference": "Salmo 138(139)",
+      "text": "-Senhor, vós me sondais e conheceis, sabeis quando me sento ou me levanto; de longe penetrais meus pensamentos, percebeis quando me deito e quando eu ando, os meus caminhos vos são todos conhecidos.\n\n-A palavra nem chegou à minha língua, e já, Senhor, a conheceis inteiramente. Por detrás e pela frente me envolveis; pusestes sobre mim a vossa mão. Esta Verdade é por demais maravilhosa, é tão sublime que não posso compreendê-la.\n\n-Em que lugar me ocultarei de vosso espírito? E para onde fugirei de vossa face? Se eu subir até os céus, ali estais; se eu descer até o abismo, estais presente.\n\n-Se a aurora me emprestar as suas asas, para eu voar e habitar no fim dos mares; mesmo lá vai me guiar a vossa mão e segurar-me com firmeza a vossa destra."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17,1-6",
+      "text": "Naquele tempo: 1Jesus disse a seus discípulos: 'É inevitável que aconteçam escândalos. Mas ai daquele que produz escândalos! 2Seria melhor para ele que lhe amarrassem uma pedra de moinho no pescoço e o jogassem no mar, do que escandalizar um desses pequeninos. 3Prestai atenção: se o teu irmão pecar, repreende-o. Se ele se converter, perdoa-lhe. 4Se ele pecar contra ti sete vezes num só dia, e sete vezes vier a ti, dizendo: 'Estou arrependido', tu deves perdoá-lo.' 5Os apóstolos disseram ao Senhor: 'Aumenta a nossa fé!' 6O Senhor respondeu: 'Se vós tivésseis fé, mesmo pequena como um grão de mostarda, poderíeis dizer a esta amoreira: 'Arranca-te daqui e planta-te no mar', e ela vos obedeceria."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Beato Charles de Foucauld, eremita e missionário no Saara<br/>",
+    "</b>",
+    "Carta de 15/07/1916<br/>",
+    "«Perdoa-lhe»<br/>",
+    "O amor não consiste em sentirmos que amamos, mas em querermos amar. Quando queremos amar, amamos; quando queremos amar acima de tudo, amamos acima de tudo. Se acontecer sucumbirmos a uma tentação, é porque o amor é demasiado fraco, não é porque ele não exista. Temos de chorar, como S. Pedro, de nos arrepender, como S. Pedro, [...] mas, também como ele, de dizer três vezes: «Amo-Te, amo-Te, amo-Te, Tu sabes que, apesar das minhas fragilidades e dos meus pecados, eu Te amo» (Jo 21,15s).<br/>",
+    "Quanto ao amor que Jesus tem por nós, provou-o à abundância, para que nele acreditemos mesmo sem o sentirmos. Sentir que O amamos e que Ele nos ama seria o céu; mas o céu, salvo em raros momentos e com algumas exceções, não é aqui em baixo.<br/>",
+    "Lembremos sempre uns aos outros esta dupla história: a das graças que Deus nos deu pessoalmente desde o nascimento e a das nossas infidelidades; aí acharemos [...] motivos infinitos para nos perdermos, com ilimitada confiança, no seu amor. Ele ama-nos porque é bom, não porque nós sejamos bons; não é verdade que as mães amam os filhos desencaminhados? E muitas razões havemos de encontrar para nos enterrarmos na humildade e na falta de confiança em nós próprios. Procuremos resgatar uma parte dos nossos pecados através do amor ao próximo, do bem que fazemos ao próximo. A caridade para com o próximo, os esforços para fazer bem aos outros são um excelente remédio para as tentações: é passar da simples defesa ao contra-ataque.<br/>"
+  ]
+}

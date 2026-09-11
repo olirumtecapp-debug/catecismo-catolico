@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-14",
+  "season": "Ordinary Time",
+  "readings": {
+    "firstReading": "Ez 16:1-15, 60, 63",
+    "psalm": "Is 12:2-3, 4bcd, 5-6",
+    "secondReading": "",
+    "gospel": "Mt 19:3-12"
+  },
+  "calendar": {
+    "date": "2026-08-14",
+    "monthDay": "8/14",
+    "season": "Ordinary Time",
+    "celebration": {
+      "name": "Saint Maximilian Mary Kolbe, Priest and Martyr",
+      "type": "MEMORIAL",
+      "quote": "No one in the world can change Truth. What we can do and should do is to seek truth and to serve it when we have found it.",
+      "description": "A Franciscan who gave his life for a fellow prisoner at Auschwitz, a martyr of charity and devotee of the Immaculata.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Fr.Maximilian_Kolbe_in_1936.jpg/500px-Fr.Maximilian_Kolbe_in_1936.jpg"
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/08-14.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/08-14.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-08-14"
+  }
+}

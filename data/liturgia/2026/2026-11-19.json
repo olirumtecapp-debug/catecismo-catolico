@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-19",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Roque Gozalez, Sto. Afonso Rodriguez e Sao Joao Del Castilho",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Apocalipse 5,1-10",
+      "text": "Eu, João, 1vi um livro na mão direita daquele que estava sentado no trono. Era um rolo escrito por dentro e por fora, e estava lacrado com sete selos. 2Vi então um anjo forte, que proclamava em voz alta: \"Quem é digno de romper os selos e abrir o livro?\" 3Ninguém no céu nem na terra nem debaixo da terra era digno de abrir o livro ou de ler o que nele estava escrito. 4Eu chorava muito, porque ninguém foi considerado digno de abrir ou de ler o livro. 5Um dos anciãos me consolou: \"Não chores! Eis que o Leão da tribo de Judá, o Rebento de Davi, saiu vencedor. Ele pode romper os selos e abrir o livro\". 6De fato, vi um Cordeiro. Estava no centro do trono e dos quatro Seres vivos, no meio dos Anciãos. Estava de pé como que imolado. O Cordeiro tinha sete chifres e sete olhos, que são os sete Espíritos de Deus, enviados por toda a terra.7Então, o Cordeiro veio receber o livro da mão direita daquele que está sentado no trono. 8Quando ele recebeu o livro, os quatro Seres vivos e os vinte e quatro Anciãos prostraram-se diante do Cordeiro. Todos tinham harpas e taças de ouro cheias de incenso, que são as orações dos santos.9E entoaram um cântico novo: \"Tu és digno de receber o livro e abrir seus selos, porque foste imolado, e com teu sangue adquiriste para Deus homens de toda a tribo, língua, povo e nação. 10Deles fizeste para o nosso Deus um reino de sacerdotes. E eles reinarão sobre a terra\"."
+    },
+    "psalm": {
+      "reference": "Salmo 149",
+      "text": "- Cantai ao Senhor Deus um canto novo, e o seu louvor na assembleia dos fiéis! Alegre-se Israel em Quem o fez, e Sião se rejubile no seu Rei!\n\n- Com danças glorifiquem o seu nome, toquem harpa e tambor em sua honra! Porque, de fato, o Senhor ama seu povo e coroa com vitória os seus humildes.\n\n- Exultem os fiéis por sua glória, e cantando se levantem de seus leitos, com louvores do Senhor em sua boca. Eis a glória para todos os seus santos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 19, 41-44",
+      "text": "Naquele tempo, 41quando Jesus se aproximou de Jerusalém e viu a cidade, começou a chorar. E disse: 42\"Se tu também compreendesses hoje o que te pode trazer a paz! Agora, porém, isso está escondido aos teus olhos! 43Dias virão em que os inimigos farão trincheiras contra ti e te cercarão de todos os lados. 44Eles esmagarão a ti e a teus filhos. E não deixarão em ti pedra sobre pedra. Porque tu não reconheceste o tempo em que foste visitada\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Rafael Arnaiz Baron (1911-1938)<br/>",
+    "</b>",
+    "Monge trapista espanhol - Escritos espirituais 23/02/1938<br/>",
+    "«Se neste dia também tu tivesses conhecido o que te pode trazer a paz!»<br/>",
+    "Debrucei-me um pouco da janela. […] O sol começava a levantar-se. Uma paz muito grande reinava sobre a natureza. Tudo começava a despertar, a terra, o céu, os pássaros. Tudo, pouco a pouco, começava a despertar sob as ordens de Deus. Tudo obedecia às suas leis divinas, sem queixas nem sobressaltos, suavemente, com mansidão, tanto a luz como as trevas, tanto o céu azul como a terra dura coberta pelo orvalho da alvorada. Que bom é Deus!, pensava eu. Há paz em todo o lado, excepto no coração humano.<br/>",
+    "E delicada, suavemente, Deus ensinou-me também, nessa madrugada suave e tranquila, a obedecer; uma grande paz preencheu a minha alma. Pensei que só Deus é bom, que tudo é ordenado por Ele, que nada no que os homens fazem ou dizem tem importância, e que, para mim, só uma coisa deve haver no mundo: Deus. Deus, que tudo vai ordenar para o meu bem. Deus, que faz que a cada manhã o sol se levante, que faz que a geada derreta, que faz que os pássaros cantem, e que transmuta as nuvens do céu em mil cores suaves. Deus, que me oferece um cantinho nesta Terra para eu orar, que me dá um cantinho onde poder ficar à espera daquilo em que ponho a minha esperança.<br/>",
+    "Deus, tão bom para comigo que, no silêncio, me fala ao coração, e me ensina aos poucos, talvez em lágrimas, sempre com a cruz, a desligar-me das criaturas; a não procurar a perfeição a não ser nele; que me mostra Maria e me diz: «Eis a única criatura perfeita; nela encontrarás o amor e a caridade que não encontras junto dos homens. De que te queixas tu, Irmão Rafael? Ama-Me, sofre comigo; sou eu, Jesus!»<br/>"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "21o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 22,19-23",
+      "text": "Assim diz o Senhor a Sobna, o administrador do palácio: 19`Eu vou te destituir do posto que ocupas e demitir-te do teu cargo. 20Acontecerá que nesse dia chamarei meu servo Eliacim, filho de Helcias, 21e o vestirei com a tua túnica e colocarei nele a tua faixa, porei em suas mãos a tua autoridade; ele será um pai para os habitantes de Jerusalém e para a casa de Judá. 22Eu o farei portar aos ombros a chave da casa de Davi; ele abrirá, e ninguém poderá fechar; ele fechará, e ninguém poderá abrir. 23Hei de fixá-lo como estaca em lugar seguro e aí ele terá o trono de glória na casa de seu pai."
+    },
+    "psalm": {
+      "reference": "Salmo 137 (138)",
+      "text": "- Ó Senhor, de coração eu vos dou graças, porque ouvistes as palavras dos meus lábios! Perante os vossos anjos vou cantar-vos e ante o vosso templo vou prostrar-me.\n\n- Eu agradeço vosso amor, vossa verdade, porque fizestes muito mais que prometestes; naquele dia em que gritei, vós me escutastes e aumentastes o vigor da minha alma.\n\n- Altíssimo é o Senhor, mas olha os pobres, e de longe reconhece os orgulhosos. Ó Senhor, vossa bondade é para sempre! Eu vos peço: nóo deixeis inacabada, esta obra que fizeram vossas mãos!"
+    },
+    "secondReading": {
+      "reference": "Romanos 11,33-36",
+      "text": "33Ó profundidade da riqueza, da sabedoria e da ciência de Deus! Como são inescrutáveis os seus juízos e impenetráveis os seus caminhos! 34De fato, quem conheceu o pensamento do Senhor? Ou quem foi seu conselheiro? 35Ou quem se antecipou em dar-lhe alguma coisa, de maneira a ter direito a uma retribuição? 36Na verdade, tudo é dele, por ele, e para ele. A ele, a glória para sempre. Amém!"
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 16, 13-20",
+      "text": "Naquele tempo: 13Jesus foi à região de Cesaréia de Filipe e ali perguntou a seus discípulos: 'Quem dizem os homens ser o Filho do Homem?' 14Eles responderam: 'Alguns dizem que é João Batista; outros que é Elias; Outros ainda, que é Jeremias ou algum dos profetas.' 15Então Jesus lhes perguntou: 'E vós, quem dizeis que eu sou?' 16Simão Pedro respondeu: 'Tu és o Messias, o Filho do Deus vivo.' 17Respondendo, Jesus lhe disse: 'Feliz és tu, Simão, filho de Jonas, porque não foi um ser humano que te revelou isso, mas o meu Pai que está no céu. 18Por isso eu te digo que tu és Pedro, e sobre esta pedra construirei a minha Igreja, e o poder do inferno nunca poderá vencê-la. 19Eu te darei as chaves do Reino dos Céus: tudo o que tu ligares na terra será ligado nos céus; tudo o que tu desligares na terra será desligado nos céus.' 20Jesus, então, ordenou aos discípulos que não dissessem a ninguém que ele era o Messias."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Hilário<br/>",
+    "</b>",
+    "Bispo de Poitiers, Doutor da Igreja<br/>",
+    "Comentários sobre Mateus, 16<br/>",
+    "«Tu és [...] o Filho do Deus vivo»<br/>",
+    "O Senhor tinha perguntado: «Quem dizem os homens que é o Filho do homem?» Naturalmente que o aspeto do seu corpo manifestava o Filho do homem; mas, ao fazer esta pergunta, Ele dava a entender que, para além do que se via nele, havia outra coisa a discernir. [...] O objeto da pergunta era um mistério para o qual a fé dos crentes devia orientar-se.<br/>",
+    "A confissão de Pedro obteve em pleno a recompensa que merecia por ter visto naquele homem o Filho de Deus. «Feliz» é ele, louvado por ter prolongado a sua vista para além dos olhos humanos, não olhando para o que vinha da carne e do sangue, mas contemplando o Filho de Deus revelado pelo Pai dos céus: foi considerado digno de ser o primeiro a reconhecer o que em Cristo era de Deus. Que belo alicerce pôde ele dar à Igreja, confirmado pelo seu novo nome! Ele torna-se a pedra digna de edificar a Igreja de forma a ela romper as leis do inferno [...] e todas as cadeias da morte. Feliz porteiro do Céu, a quem são confiadas as chaves do acesso à eternidade; a sua sentença na Terra antecipa a autoridade do Céu, de tal forma que o que tiver ligado ou desligado na Terra o será também no Céu.<br/>",
+    "Jesus ordena ainda aos discípulos que não digam a ninguém que Ele é o Cristo, porque vai ser preciso que outros, quer dizer, a Lei e os profetas, sejam testemunhas do seu Espírito, uma vez que o testemunho da ressurreição caberá aos apóstolos. E, assim como foi manifestada a felicidade daqueles que conhecem Cristo no Espírito, foi igualmente manifestado o perigo de se desconhecer a sua humildade e a sua Paixão.<br/>"
+  ]
+}

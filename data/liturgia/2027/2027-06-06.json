@@ -1,0 +1,26 @@
+{
+  "date": "2027-06-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "10o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Gênesis 3,9-15",
+      "text": "Depois que o homem comeu da fruta da árvore, 9o Senhor Deus chamou Adão, dizendo: 'Onde estás?' 10E ele respondeu: 'Ouvi tua voz no jardim, e fiquei com medo, porque estava nu; e me escondi'. 11Disse-lhe o Senhor Deus: 'E quem te disse que estavas nu? Então comeste da árvore, de cujo fruto te proibi comer?' 12Adão disse: 'A mulher que tu me deste por companheira, foi ela que me deu do fruto da árvore, e eu comi'. 13Disse o Senhor Deus à mulher: 'Por que fizeste isso?' E a mulher respondeu: 'A serpente enganou-me e eu comi'. 14Então o Senhor Deus disse à serpente: 'Porque fizeste isso, serás maldita entre todos os animais domésticos e todos os animais selvagens! Rastejarás sobre o ventre e comerás pó todos os dias da tua vida! 15Porei inimizade entre ti e a mulher, entre a tua descendência e a dela. Esta te ferirá a cabeça e tu lhe ferirás o calcanhar'."
+    },
+    "psalm": {
+      "reference": "Salmo 129 (130)",
+      "text": "- Das profundezas eu clamo a vós, Senhor, escutai a minha voz! Vossos ouvidos estejam bem atentos ao clamor da minha prece!\n\n- Se levardes em conta nossas faltas, quem haverá de subsistir? Mas em vós se encontra o perdão, eu vos temo e em vós espero.\n\n- No Senhor ponho a minha esperança, espero em sua palavra. A minha alma espera no Senhor mais que o vigia pela aurora.\n\n- Espere Israel pelo Senhor, pois no Senhor se encontra toda graça e copiosa redenção. Ele vem libertar a Israel de toda a sua culpa."
+    },
+    "secondReading": {
+      "reference": "Coríntios 4,13-5,1",
+      "text": "Irmãos: 13Sustentados pelo mesmo espírito de fé, conforme o que está escrito: 'Eu creio e, por isso, falei', nós também cremos e, por isso, falamos, 14certos de que aquele que ressuscitou o Senhor Jesus nos ressuscitará também com Jesus e nos colocará ao seu lado, juntamente convosco. 15E tudo isso é por causa de vós, para que a abundância da graça em um número maior de pessoas faça crescer a ação de graças para a glória de Deus. 16Por isso, não desanimamos. Mesmo se o nosso homem exterior se vai arruinando, o nosso homem interior, pelo contrário, vai-se renovando, dia a dia. 17Com efeito, o volume insignificante de uma tribulação momentânea acarreta para nós uma glória eterna e incomensurável. 18E isso acontece, porque voltamos os nossos olhares para as coisas invisíveis e não para as coisas visíveis. Pois o que é visível é passageiro, mas o que é invisível é eterno. 5,1De fato, sabemos que, se a tenda em que moramos neste mundo for destruída, Deus nos dá uma outra moradia no céu que não é obra de mãos humanas, mas que é eterna."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 20-35",
+      "text": "Naquele tempo: 20Jesus voltou para casa com os seus discípulos. E de novo se reuniu tanta gente que eles nem sequer podiam comer. 21Quando souberam disso, os parentes de Jesus saíram para agarrá-lo, porque diziam que estava fora de si. 22Os mestres da Lei, que tinham vindo de Jerusalém, diziam que ele estava possuído por Belzebu, e que pelo príncipe dos demônios ele expulsava os demônios. 23Então Jesus os chamou e falou-lhes em parábolas: 'Como é que Satanás pode expulsar a Satanás? 24Se um reino se divide contra si mesmo, ele não poderá manter-se. 25Se uma família se divide contra si mesma, ela não poderá manter-se. 26Assim, se Satanás se levanta contra si mesmo e se divide, não poderá sobreviver, mas será destruído. 27Ninguém pode entrar na casa de um homem forte para roubar seus bens, sem antes o amarrar. Só depois poderá saquear sua casa. 28Em verdade vos digo: tudo será perdoado aos homens, tanto os pecados, como qualquer blasfêmia que tiverem dito. 29Mas quem blasfemar contra o Espírito Santo, nunca será perdoado, mas será culpado de um pecado eterno'. 30Jesus falou isso, porque diziam: 'Ele está possuído por um espírito mau'. 31Nisso chegaram sua móe e seus irmãos. Eles ficaram do lado de fora e mandaram chamá-lo. 32Havia uma multidão sentada ao redor dele. Então lhe disseram: 'Tua mãe e teus irmãos estão lá fora à tua procura'. 33Ele respondeu: 'Quem é minha mãe, e quem são meus irmãos?' 34E olhando para os que estavam sentados ao seu redor, disse:'Aqui estão minha mãe e meus irmãos. 35Quem faz a vontade de Deus, esse é meu irmão, minha irmã e minha mãe'."
+    }
+  },
+  "extra": []
+}

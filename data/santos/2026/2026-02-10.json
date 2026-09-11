@@ -1,0 +1,62 @@
+{
+  "date": "2026-02-10",
+  "year": 2026,
+  "month": 2,
+  "day": 10,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/10.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-02-10.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-02-10",
+      "name": "Santa Escolástica virgem, irmã de S. Bento",
+      "normalizedName": "santa escolastica , irma de s. bento",
+      "imageUrl": "./assets/img/santos/02-10-santa-escolastica-virgem-irma-de-s-bento.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/10/s--escolastica-virgem--irma-de-s--bento.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/02/10/s--escolastica-virgem--irma-de-s--bento.html",
+      "sourceText": "Irmã gêmea de São Bento, Escolástica foi a primeira monja beneditina, sempre devota ao irmão e fiel intérprete da sua Regra. Dedicou toda a sua vida à oração, à pobreza, à caridade e à obediência. Sua festa litúrgica é celebrada pela Igreja em 10 de fevereiro.",
+      "a12": {
+        "profileUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=10&month=2",
+        "source": "A12 — Portal A12",
+        "sourceUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=10&month=2",
+        "sourceText": {
+          "paragraphs": [
+            "Escolástica, irmã gêmea de São Bento, o pai do monaquismo ocidental, nasceu em Núrcia, Úmbria, na Itália central, em 480. A mãe faleceu no parto dos irmãos, que desde sempre foram gêmeos também na vocação religiosa e de fundadores de mosteiros. Escolástica inclusive abraçou antes que Bento a vida monástica, quando este estudava retórica em Roma.",
+            "Escolástica e suas monjas seguiam a regra beneditina, e ela buscava a solidão na oração ou conversas pias sobre assuntos de Deus. Estes colóquios lhe eram muito edificantes e felizes com o irmão. Os respectivos mosteiros, masculino e feminino, dos irmãos, ficavam próximos, mas por motivo de mortificação e ascese eles se encontravam apenas uma vez por ano, numa propriedade do mosteiro de Monte Cassino onde Bento era abade.",
+            "Segundo a biografia de ambos escrita por São Gregório Magno, a partir de testemunhas oculares, no ano de 543, compreendendo que sua morte estava próxima, Escolástica foi como de costume visitar Bento, que desceu do seu mosteiro com alguns irmãos para encontrá-la. Passaram o dia juntos em santa comunhão e conversação, jantaram, e, à mesa, ela lhe pediu que ficassem ali naquela noite, falando sobre as coisas de Deus. Bento recusou-se, pois isto seria contra as regras do mosteiro.",
+            "Ela então rezou em silêncio, e o tempo, antes calmo e agradável, transformou-se numa chuva tão violenta que Bento e seus monges não podiam sequer sair da sala onde se encontravam. Ele se queixou, dizendo: “Que Deus onipotente te perdoe, irmã! Que fizeste?” Ao que ela respondeu: “Eu pedi a ti e não me quiseste ouvir; pedi ao Senhor, e Ele me escutou. Sai pois agora, se podes!”. Assim, passaram a noite em santas conversas, e no dia seguinte Bento retornou a Monte Cassino. Dias depois, ele teve a visão da alma da irmã, indo para o Céu. Mandou então buscar o seu corpo e o depositou na tumba que havia preparado para si, no próprio mosteiro. Pouco tempo depois, também ele faleceu.",
+            "Santa Escolástica é invocada nas situações em que o clima está hostil. A sua memória litúrgica, a 10 de fevereiro, é obrigatória.",
+            "Reflexão:",
+            "A busca do silêncio para a oração, e das boas conversas, evitando assuntos frívolos e vãos, bem como a companhia das pessoas de Deus é um exemplo de como devemos orientar a nossa vida, A comunhão fraterna, não apenas com os irmãos naturais, mas também com os de espírito, é uma vocação universal, refletido não apenas na vida de Santa Escolástica, mas igualmente no seu nome – pois “escolástica” se refere ao ensino da Igreja na Idade Média, conciliando as ideias de racionalidade de Aristóteles com a Fé da Verdade revelada.",
+            "Oração:",
+            "Deus, Pai de toda a Humanidade, concede-nos por intercessão de Santa Escolástica a busca constante do amor aos irmãos, a partir da comunhão Convosco, de modo a que Vossa família não seja separada nem na morte, mas permaneça unida desde já, pelas torrentes da Vossa graça, no clima de paz que infinitamente desejais para nós. Por Nosso Senhor Jesus Cristo, Vosso Filho, e a Virgem Maria, Vossa e nossa Mãe. Amém.",
+            "Enviar por e-mail"
+          ]
+        }
+      },
+      "enrichment": {
+        "a12Found": true
+      }
+    },
+    {
+      "date": "2026-02-10",
+      "name": "SS. Zótico, Jacinto e Amâncio, mártires, na via Labicana",
+      "normalizedName": "ss. zotico, jacinto e amancio, , na via labicana",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Estes três mártires são, às vezes, acompanhados por Santo Irineu, que também morreu durante as perseguições de Diocleciano, entre os séculos III e IV. Foram sepultados em antigos cemitérios, ao longo da Via Labicana, em Roma. Seus restos mortais foram trasladados para a Basílica de Santa Praxedes.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

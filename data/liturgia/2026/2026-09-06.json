@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "23o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Ezequiel 33,7-9",
+      "text": "Assim diz o Senhor: 7'Quanto a ti, filho do homem, eu te estabeleci como vigia para a casa de Israel. Logo que ouvires alguma palavra de minha boca, tu os deves advertir em meu nome. 8Se eu disser ao ímpio que ele vai morrer, e tu não lhe falares, advertindo-o a respeito de sua conduta, o ímpio vai morrer por própria culpa, mas eu te pedirei contas da sua morte. 9Mas, se advertires o ímpio a respeito de sua conduta, para que se arrependa, e ele não se arrepender, o ímpio morrerá por própria culpa, porém, tu, salvarás tua vida."
+    },
+    "psalm": {
+      "reference": "Salmo 94 (95)",
+      "text": "- Vinde, exultemos de alegria no Senhor, aclamemos o Rochedo que nos salva! Ao seu encontro caminhemos com louvores, e com cantos de alegria o celebremos!\n\n- Vinde adoremos e prostremo-nos por terra, e ajoelhemos ante o Deus que nos criou! Porque ele é o nosso Deus, nosso Pastor, e nós somos o seu povo e seu rebanho, as ovelhas que conduz com sua mão.\n\n- Oxalá ouvísseis hoje a sua voz: 'Não fecheis os corações como em Meriba, como em Massa, no deserto, aquele dia, em que outrora vossos pais me provocaram, apesar de terem visto as minhas obras'."
+    },
+    "secondReading": {
+      "reference": "Romanos 13,8-10",
+      "text": "Irmãos: 8Não fiqueis devendo nada a ninguém, a não ser o amor mútuo, - pois quem ama o próximo está cumprindo a Lei-. 9De fato, os mandamentos: 'Não cometerás adultério', 'Não matarás', 'Não roubarás', 'Não cobiçarás', e qualquer outro mandamento se resumem neste: 'Amarás a teu próximo como a ti mesmo'. 10O amor não faz nenhum mal contra o próximo. Portanto, o amor é o cumprimento perfeito da Lei."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 18, 15-20",
+      "text": "Naquele tempo, Jesus disse a seus discípulos: 15Se o teu irmão pecar contra ti, vai corrigi-lo, mas em particular, à sós contigo! Se ele te ouvir, tu ganhaste o teu irmão. 16Se ele não te ouvir, toma contigo mais uma ou duas pessoas, para que toda a questão seja decidida sob a palavra de duas ou três testemunhas. 17Se ele não vos der ouvido, dize-o à Igreja. Se nem mesmo à Igreja ele ouvir, seja tratado como se fosse um pagão ou um pecador público. 18Em verdade vos digo, tudo o que ligardes na terra será ligado no céu, e tudo o que desligardes na terra será desligado no céu. 19De novo, eu vos digo: se dois de vós estiverem de acordo na terra sobre qualquer coisa que quiserem pedir, isto vos será concedido por meu Pai que está nos céus. 20Pois onde dois ou três estiverem reunidos em meu nome eu estou ali, no meio deles.'"
+    }
+  },
+  "extra": []
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2027-10-05",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "27a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Jonas 3,1-10",
+      "text": "1A palavra do Senhor foi dirigida a Jonas, pela segunda vez: 2'Levanta-te e põe-te a caminho da grande cidade de Nínive e anuncia-lhe a mensagem que eu te vou confiar'. 3Jonas pôs-se a caminho de Nínive, conforme a ordem do Senhor. Ora, Nínive era uma cidade muito grande; eram necessários três dias para ser atravessada. 4Jonas entrou na cidade, percorrendo o caminho de um dia; pregava ao povo, dizendo: 'Ainda quarenta dias, e Nínive será destruída.' 5Os ninivitas acreditaram em Deus; aceitaram fazer jejum, e vestiram sacos, desde o superior ao inferior. 6A pregação chegara aos ouvidos do rei de Nínive; ele levantou-se do trono e pôs de lado o manto real, vestiu-se de saco e sentou-se em cima de cinza. 7Em seguida, fez proclamar, em Nínive, como decreto do rei e dos príncipes: 'Homens e animais bovinos e ovinos não provarão nada! Não comerão e não beberão água. 8Homens e animais se cobrirão de sacos, e os homens rezarão a Deus com força; cada um deve afastar-se do mau caminho e de suas práticas perversas. 9Deus talvez volte atrás, para perdoar-nos e aplacar sua ira, e assim não venhamos a perecer.' 10Vendo Deus as suas obras de conversão e que os ninivitas se afastavam do mau caminho, compadeceu-se e suspendeu o mal, que tinha ameaçado fazer-lhes, e não o fez."
+    },
+    "psalm": {
+      "reference": "Salmo 129 (130)",
+      "text": "-Das profundezas eu clamo a vós, Senhor, escutai a minha voz! Vossos ouvidos estejam bem atentos ao clamor da minha prece!\n\n- Se levardes em conta nossas faltas, quem haverá de subsistir? Mas em vós se encontra o perdão, eu vos temo e em vós espero.\n\n- Espere Israel pelo Senhor mais que o vigia pela aurora! Pois no Senhor se encontra toda graça e copiosa redenção. Ele vem libertar a Israel de toda a sua culpa."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 10, 38-42",
+      "text": "Naquele tempo: 38Jesus entrou num povoado, e certa mulher, de nome Marta, recebeu-o em sua casa. 39Sua irmã, chamada Maria, sentou-se aos pés do Senhor, e escutava a sua palavra. 40Marta, porém, estava ocupada com muitos afazeres. Ela aproximou-se e disse: 'Senhor, não te importas que minha irmó me deixe sozinha, com todo o serviço? Manda que ela me venha ajudar!' 41O Senhor, porém, lhe respondeu: 'Marta, Marta! Tu te preocupas e andas agitada por muitas coisas. 42Porém, uma só coisa é necessária. Maria escolheu a melhor parte e esta não lhe será tirada.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Agostinho<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja <br/>",
+    "Sermão 104; PL 38, 616 <br/>",
+    "Duas mulheres, duas imagens da nossa vida<br/>",
+    "Creio que compreendeis que estas duas mulheres, ambas diletas do Senhor, dignas do seu amor e suas discípulas, [...] são a imagem de duas formas de vida: a vida deste mundo e a vida do mundo futuro, a vida de trabalho e a vida de repouso, a vida das preocupações e a vida da bem-aventurança, a vida no tempo e a vida eterna. <br/>",
+    "Duas vidas: meditemos mais longamente sobre elas, e consideremos de que é feita esta vida. Não me refiro a uma vida censurável [...], a uma vida de vícios, de impiedades; não, falo de uma vida de trabalho, carregada de provações, de angústias, de tentações, de uma vida que não tem nada de culpável, de uma vida que era efetivamente a de Marta. [...] O mal estava ausente desta casa, tanto em Marta como em Maria; se estivesse presente, a chegada do Senhor tê-lo-ia dissipado. Duas mulheres aí viveram e as duas receberam o Senhor, duas vidas admiráveis, retas, uma feita de trabalho, a outra de repouso. [...] Uma de trabalho, mas livre de perturbações, que são obstáculo à vida entregue à ação; a outra isenta de ociosidade, que é obstáculo à vida contemplativa. Havia nesta casa as duas vidas, mas a fonte era a mesma. [...] <br/>",
+    "A vida de Marta é o nosso mundo; a vida de Maria é o mundo que esperamos. Vivamos neste mundo com retidão, para obtermos o outro em plenitude. Que possuímos já dessa vida? [...] Precisamente, neste momento, vivemos de certa maneira essa vida: afastando o trabalho, pondo de parte as preocupações familiares, reuni-vos e escutais. Comportando-vos assim, assemelhais-vos a Maria. Isso torna-se-vos mais fácil do que a mim, que tenho de tomar a palavra. No entanto, o que digo é a Cristo que vou buscá-lo, e este alimento é de Cristo. Porque é o pão comum a todos, e é para isso que vivo em comunhão convosco.<br/>"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2027-10-16",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "28a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 4,13.16-18",
+      "text": "Irmãos: 13Não foi por causa da Lei, mas por causa da justiça que vem da fé, que Deus prometeu o mundo como herança a Abraão ou à sua descendência. 16É em virtude da fé que alguém se torna herdeiro. Logo, a condiçóo de herdeiro é uma graça, um dom gratuito, e a promessa de Deus continua valendo para toda a descendência de Abraóo, tanto para a descendência que se apega à Lei, quanto para a que se apóia somente na fé de Abraão, que é o pai de todos nós. 17Pois está escrito: 'Eu fiz de ti pai de muitos povos'. Ele é pai diante de Deus, porque creu em Deus que vivifica os mortos e faz existir o que antes nóo existia. 18Contra toda a humana esperança, ele firmou-se na esperança e na fé. Assim, tornou-se pai de muitos povos, conforme lhe fora dito: 'Assim será a tua posteridade'."
+    },
+    "psalm": {
+      "reference": "Salmo 104 (105)",
+      "text": "- Descendentes de Abraóo, seu servidor, e filhos de Jacó, seu escolhido, ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra.\n\n- Ele sempre se recorda da Aliança, promulgada a incontáveis geraçðes; da Aliança que ele fez com Abraão, e do seu santo juramento a Isaac.\n\n- Ele lembrou-se de seu santo juramento, que fizera a Abraão, seu servidor. Fez sair com grande júbilo o seu povo, e seus eleitos, entre gritos de alegria."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 8-12",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 8Todo aquele que der testemunho de mim diante dos homens, o Filho do Homem também dará testemunho dele diante dos anjos de Deus. 9Mas aquele que me renegar diante dos homens, será negado diante dos anjos de Deus. 10Todo aquele que disser alguma coisa contra o Filho do Homem será perdoado. Mas quem blasfemar contra o Espírito Santo não será perdoado. 11Quando vos conduzirem diante das sinagogas, magistrados e autoridades, não fiqueis preocupados como ou com que vos defendereis, ou com o que direis. 12Pois nessa hora o Espírito Santo vos ensinará o que deveis dizer.'"
+    }
+  },
+  "extra": []
+}

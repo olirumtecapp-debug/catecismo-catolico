@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-29",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1o. Domingo do Advento Ciclo do Natal",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 63,16-17.19;64,2-7",
+      "text": "16bSenhor, tu és nosso Pai, nosso redentor; eterno é o teu nome. 17Como nos deixaste andar longe de teus caminhos e endureceste nossos coraçðes para não termos o teu temor? Por amor de teus servos, das tribos de tua herança, volta atrás. 19bAh! se rompesses os céus e descesses! As montanhas se desmanchariam diante de ti. 64,2bDesceste, pois, e as montanhas se derreteram diante de ti. 3Nunca se ouviu dizer nem chegou aos ouvidos de ninguém, jamais olhos viram que um Deus, exceto tu, tenha feito tanto pelos que nele esperam. 4Vens ao encontro de quem pratica a justiça com alegria, de quem se lembra de ti em teus caminhos. Tu te irritaste, porque nós pecamos; é nos caminhos de outrora que seremos salvos. 5Todos nós nos tornamos imundície, e todas as nossas boas obras são como um pano sujo; murchamos todos como folhas, e nossas maldades empurram-nos como o vento. 6Não há quem invoque teu nome, quem se levante para encontrar-se contigo, escondeste de nós tua face e nos entregaste à mercê da nossa maldade. 7Assim mesmo, Senhor, tu és nosso pai, nós somos barro; tu, nosso oleiro, e nós todos, obra de tuas mãos."
+    },
+    "psalm": {
+      "reference": "Salmo 79 (80)",
+      "text": "- Ó Pastor de Israel, prestai ouvidos. Vós que sobre os querubins vos assentais, aparecei cheio de glória e esplendor! Despertai vosso poder, ó nosso Deus e vinde logo nos trazer a salvação!\n\n- Voltai-vos para nós, Deus do universo! Olhai dos altos céus e observai. Visitai a vossa vinha e protegei-a! Foi a vossa mão direita que a plantou; protegei-a, e ao rebento que firmastes!\n\n- Pousai a mão por sobre o vosso Protegido, o filho do homem que escolhestes para vós! E nunca mais vos deixaremos, Senhor Deus! Dai-nos vida, e louvaremos vosso nome!"
+    },
+    "secondReading": {
+      "reference": "Coríntios 1,3-9",
+      "text": "Irmãos: 3Para vós, graça e paz, da parte de Deus, nosso Pai, e do Senhor Jesus Cristo. 4Dou graças a Deus sempre a vosso respeito, por causa da graça que Deus vos concedeu em Cristo Jesus: 5Nele fostes enriquecidos em tudo, em toda palavra e em todo conhecimento, 6à medida que o testemunho sobre Cristo se confirmou entre vós. 7Assim, não tendes falta de nenhum dom, vós que aguardais a revelação do Senhor nosso, Jesus Cristo. 8É ele também que vos dará perseverança em vosso procedimento irrepreensível, até ao fim, até ao dia de nosso Senhor, Jesus Cristo. 9Deus é fiel; por ele fostes chamados à comunhão com seu Filho, Jesus Cristo, Senhor nosso."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 13, 33-37",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 33Cuidado! Ficai atentos, porque não sabeis quando chegará o momento. 34É como um homem que, ao partir para o estrangeiro, deixou sua casa sob a responsabilidade de seus empregados, distribuindo a cada um sua tarefa. E mandou o porteiro ficar vigiando. 35Vigiai, portanto, porque não sabeis quando o dono da casa vem: à tarde, à meia-noite, de madrugada ou ao amanhecer. 36Para que não suceda que, vindo de repente, ele vos encontre dormindo. 37O que vos digo, digo a todos: Vigiai!'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Gregório de Nissa, Monge, Bispo <br/>",
+    "</b>",
+    "Sermões sobre o Cântico dos Cânticos, n.º 11, 1 <br/>",
+    "«Vigiai, portanto, visto que não sabeis quando virá o dono da casa»<br/>",
+    "Eis um dos grandes preceitos do Senhor: que os seus discípulos sacudam tudo o que é terreno como se fosse poeira [...], para se deixarem levar, num grande impulso, para o Céu. Ele exorta-nos a vencer o sono, a procurar as realidades do alto (Col 3,1), a ter o espírito permanentemente desperto, a afastar dos olhos o adormecimento sedutor. Quero falar deste torpor e desta sonolência que conduzem o Homem ao erro e forjam imagens de sonhos: honra, riqueza, poder, grandeza, prazer, êxito, lucro ou prestígio. [...] <br/>",
+    "Para esquecermos tais sonhos, o Senhor pede-nos que ultrapassemos este sono pesado: não deixemos escapar o real na busca frenética do nada. Ele chama-nos, pois, a velar: «Tende os rins cingidos e as lâmpadas acesas» (Lc 12,35). A luz que arde nos nossos olhos expulsa o sono; a cinta que nos rodeia os rins mantém o nosso corpo em alerta, exprimindo um esforço que não tolera qualquer torpor. <br/>",
+    "Como é claro o sentido desta imagem! Cingir os rins com a temperança é viver à luz de uma consciência pura. A lâmpada acesa da franqueza ilumina o rosto, faz brilhar a verdade, mantém a alma desperta, tornando-a impermeável à falsidade e estranha à futilidade dos nossos pobres sonhos. Vivamos segundo a exigência de Cristo e partilharemos a vida dos anjos. Com efeito, é a eles que Ele nos une neste preceito: «Sede semelhantes aos homens que esperam o seu senhor ao voltar da boda, para lhe abrirem a porta quando ele chegar e bater» (Lc 12,36). Pois eles estão sentados junto às portas do Céu, de olhar desperto, para que o Rei da glória (Sl 23,7) por aí passe ao voltar da boda.<br/>"
+  ]
+}

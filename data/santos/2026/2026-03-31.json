@@ -1,0 +1,43 @@
+{
+  "date": "2026-03-31",
+  "year": 2026,
+  "month": 3,
+  "day": 31,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/31.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-31.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-31",
+      "name": "São Balbina, matrona romana, fundadora da igreja homônima",
+      "normalizedName": "sao balbina, matrona romana, fundadora da igreja homonima",
+      "imageUrl": "./assets/img/santos/03-31-sao-balbina-matrona-romana-fundadora-da-igrej.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Filha do tribuno romano Quirino, conta a tradição, foi batizada pelo Papa Alexandre I, junto com o pai, convertido ao cristianismo. Presa com o pai por ordem do imperador Adriano, foi decapitada após longas torturas por volta de 130 e sepultada na Via Appia.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "name": "São Benjamim, diácono e mártir",
+      "normalizedName": "sao benjamim, diacono e martir",
+      "imageUrl": "./assets/img/santos/03-31-sao-benjamim-diacono-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Os primeiros cristãos eram mal vistos também na Pérsia. Em 420, Benjamim, diácono de Ergol, foi martirizado. Segundo a tradição, foi vítima de uma represália, depois da destruição de um templo ao deus fogo, atribuída aos cristãos. O diácono não desmentiu e morreu com um grupo de fiéis.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

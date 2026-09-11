@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-29",
+  "year": 2026,
+  "month": 9,
+  "day": 29,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-29.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-29",
+      "name": "B. Nicolau de Furca Palena, presbítero da Ordem de S. Jerônimo",
+      "normalizedName": "b. nicolau de furca palena, presbitero",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural da cidade de Teatino, o jovem sacerdote da Ordem dos Eremitas de São Jerônimo (dissolvida em 1933), transferiu-se para Roma, onde, na colina do Janículo, fundou um eremitério, sob o patrocínio de Santo Onofre. Ali, morreu com cerca de cem anos, em 1449, sem ver a conclusão da igreja anexa.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "name": "São Miguel Arcanjo",
+      "normalizedName": "sao miguel arcanjo",
+      "imageUrl": "./assets/img/santos/09-29-sao-miguel-arcanjo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/sao-miguel-arcanjo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/sao-miguel-arcanjo.html",
+      "sourceText": "Este Santo príncipe das milícias celestes, em contínua batalha contra as forças do mal, é celebrado pela Igreja em 29 de setembro. Ao longo da história e em todos os lugares do mundo, há edifícios e lugares sagrados, entre os mais diversos, dedicados ao nome deste defensor da Igreja e da fé cristã.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "name": "San Gabriel Arcanjo",
+      "normalizedName": "san gabriel arcanjo",
+      "imageUrl": "./assets/img/santos/09-29-san-gabriel-arcanjo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-gabriel-arcanjo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-gabriel-arcanjo.html",
+      "sourceText": "O nome Gabriel significa \"força de Deus\". Ele é um dos três Arcanjos que a Igreja celebra em 29 de setembro, junto com Miguel e Rafael. Este mensageiro de Deus teve a tarefa de anunciar a sua Vontade. Em 1° de abril de 1951, Pio XII o proclamou Padroeiro das telecomunicações.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "name": "San Rafael Arcanjo",
+      "normalizedName": "san rafael arcanjo",
+      "imageUrl": "./assets/img/santos/09-29-san-rafael-arcanjo.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-rafael-arcanjo.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-rafael-arcanjo.html",
+      "sourceText": "O culto a São Rafael começou a partir do século XI. Sua festa litúrgica é celebrada em 29 de setembro, junto com os Santos arcanjos Miguel e Gabriel. Seu nome vem do hebraico \"Rafa-El\", que significa \"remédio de El\", em contraposição do nome do demônio Asmodeus, \"aquele que faz perecer\".",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

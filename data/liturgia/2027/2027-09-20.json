@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-20",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santo Andre Kim Taegon, Paulo Chong Masang e Comps.",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Esdras 1,1-6",
+      "text": "1No primeiro ano do reinado de Ciro, rei da Pérsia, para que se cumprisse a palavra do Senhor pronunciada pela boca de Jeremias, o Senhor moveu o espírito de Ciro, rei da Pérsia, que mandou publicar em todo o seu reino, de viva voz e por escrito, a seguinte proclamação: 2'Assim fala Ciro, rei da Pérsia: O Senhor, Deus do Céu, me deu todos os reinos da terra e me encarregou de lhe construir um templo em Jerusalém, na terra de Judá. 3Quem, dentre vós todos, pertence ao seu povo? Que o Senhor, seu Deus, esteja com ele, e que se ponha a caminho e suba a Jerusalém, e construa o templo do Senhor, Deus de Israel, o Deus que está em Jerusalém. 4E a todos os sobreviventes, onde quer que residam, as pessoas do lugar proporcionem prata, ouro, bens e animais, além de donativos espontâneos para o templo de Deus, que está em Jerusalém'. 5Então se levantaram os chefes de família de Judá e de Benjamim, os sacerdotes e os levitas, todos aqueles que se sentiram inspirados por Deus para ir edificar o templo do Senhor, que está em Jerusalém. 6E todos os seus vizinhos lhes trouxeram toda a espécie de ajuda em prata, ouro, bens, animais e objetos preciosos, sem falar em todas as doações espontâneas."
+    },
+    "psalm": {
+      "reference": "Salmo 125 (126)",
+      "text": "- Quando o Senhor reconduziu nossos cativos, parecíamos sonhar; encheu-se de sorriso nossa boca, nossos lábios, de canções.\n\n- Entre os gentios se dizia: 'Maravilhas fez com eles o Senhor!' Sim, maravilhas fez conosco o Senhor, exultemos de alegria!\n\n- Mudai a nossa sorte, ó Senhor, como torrentes no deserto. Os que lançam as sementes entre lágrimas, ceifarão com alegria.\n\n- Chorando de tristeza sairão, espalhando suas sementes; cantando de alegria voltarão, carregando os seus feixes!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 8, 16-18",
+      "text": "Naquele tempo, disse Jesus à multidão: 16Ninguém acende uma lâmpada para cobri-la com uma vasilha ou colocá-la debaixo da cama; ao contrário, coloca-a no candeeiro, a fim de que todos os que entram, vejam a luz. 17Com efeito, tudo o que está escondido deverá tornar-se manifesto; e tudo o que está em segredo deverá tornar-se conhecido e claramente manifesto. 18Portanto, prestai atenção à maneira como vós ouvis! Pois a quem tem alguma coisa, será dado ainda mais; e àquele que não tem, será tirado até mesmo o que ele pensa ter.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia: Sermão atribuído a Santo Agostinho<br/>",
+    "</b>",
+    "Bispo de Hipona (norte de África), Doutor da Igreja <br/>",
+    "Cf. Discurso sobre o salmo 139,15; Sermões sobre S. João, n.º 57<br/>",
+    "«Tende cuidado com a maneira como ouvis»<br/>",
+    "«Que cada um esteja sempre pronto para escutar, mas seja lento para falar» (Tim 1,19). Sim, irmãos, digo-vos francamente [...], eu que muitas vezes vos falo a vosso pedido: a minha alegria é sem mancha quando me sento entre os ouvintes; a minha alegria é sem mancha quando escuto e não quando falo. É então que saboreio a palavra com toda a segurança, pois a minha satisfação não é ameaçada pela vanglória. Quem pode recear o precipício do orgulho se estiver sentado sobre a pedra sólida da verdade? «Escutarei e encher-me-ás de alegria e de júbilo», diz o salmista (Sl 50,10). É quando escuto que me sinto mais alegre; é o papel de ouvintes que nos mantém numa atitude de humildade. <br/>",
+    "Pelo contrário, quando tomamos a palavra, [...] precisamos de uma certa contenção; pois, mesmo que não ceda ao orgulho, tenho receio de o fazer. Mas, se escuto, ninguém me pode roubar a alegria (Jo 16,22), porque ninguém é testemunha dela. É verdadeiramente a alegria do amigo do esposo de quem S. João diz que «fica de pé e escuta» (Jo 3,29). Fica de pé porque escuta. Também o primeiro homem escutava Deus de pé; quando escutou a serpente, caiu. O amigo de esposo fica, pois, «transbordante de alegria à voz do Esposo»; o que faz a sua alegria não é a sua voz de pregador ou de profeta, mas a voz do próprio Esposo.<br/>"
+  ]
+}

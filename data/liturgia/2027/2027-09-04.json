@@ -1,0 +1,23 @@
+{
+  "date": "2027-09-04",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "22a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Colossenses 1,21-23",
+      "text": "Irmãos: 21E vós, que outrora éreis estrangeiros e inimigos pelas manifestas más obras, 22eis que agora Cristo vos reconciliou pela morte que sofreu no seu corpo mortal, para vos apresentar como santos, imaculados, irrepreensíveis diante de si. 23Mas é necessário que permaneçais inabaláveis e firmes na fé, sem vos afastardes da esperança que vos dá o evangelho, que ouvistes, que foi anunciado a toda criatura debaixo do céu e do qual eu, Paulo, me tornei ministro."
+    },
+    "psalm": {
+      "reference": "Salmo 53 (54)",
+      "text": "- Por vosso nome, salvai-me, Senhor; e dai-me a vossa justiça! Ó meu Deus, atendei minha prece e escutai as palavras que eu digo!\n\n- Quem me protege e me ampara é meu Deus; é o Senhor quem sustenta minha vida! Quero ofertar-vos o meu sacrifício de coração e com muita alegria; quero louvar, ó Senhor, vosso nome, quero cantar vosso nome que é bom!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 6,1-5",
+      "text": "1Num sábado, Jesus estava passando através de plantações de trigo. Seus discípulos arrancavam e comiam as espigas, debulhando-as com as mãos. 2Então alguns fariseus disseram: 'Por que fazeis o que não é permitido em dia de sábado?' 3Jesus respondeu-lhes: 'Acaso vós não lestes o que Davi e seus companheiros fizeram, quando estavam sentindo fome? 4Davi entrou na casa de Deus, pegou dos pães oferecidos a Deus e os comeu, e ainda por cima os deu a seus companheiros. No entanto, só os sacerdotes podem comer desses pães.' 5E Jesus acrescentou: 'O Filho do Homem é senhor também do sábado.'"
+    }
+  },
+  "extra": []
+}

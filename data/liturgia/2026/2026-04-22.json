@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-22",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "3a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 8,1-8",
+      "text": "1Naquele dia começou uma grande perseguição contra a Igreja de Jerusalém. E todos, com exceção dos apóstolos, se dispersaram pelas regiões da Judéia e da Samaria. 2Algumas pessoas piedosas sepultaram Estêvão e observaram grande luto por causa dele. 3Saulo, porém, devastava a Igreja: entrava nas casas e arrastava para fora homens e mulheres, para atirá-los na prisão. 4Entretanto, aqueles que se tinham dispersado iam por toda a parte, pregando a Palavra. 5Filipe desceu a uma cidade da Samaria e anunciou-lhes o Cristo. 6As multidões seguiam com atenção as coisas que Filipe dizia. E todos unânimes o escutavam, pois viam os milagres que ele fazia. 7De muitos possessos saíam os espíritos maus, dando grandes gritos. Numerosos paralíticos e aleijados também foram curados. 8Era grande a alegria naquela cidade."
+    },
+    "psalm": {
+      "reference": "Salmo 65 (66)",
+      "text": "- Aclamai o Senhor Deus, ó terra inteira, cantai salmos a seu nome glorioso, dai a Deus a mais sublime louvação! Dizei a Deus: 'Como são grandes vossas obras!\n\n- Toda a terra vos adore com respeito e proclame o louvor de vosso nome!' Vinde ver todas as obras do Senhor: seus prodígios estupendos entre os homens!\n\n- O mar ele mudou em terra firme, e passaram pelo rio a pé enxuto. Exultemos de alegria no Senhor! Ele domina para sempre com poder!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 6, 35-40",
+      "text": "Naquele tempo, disse Jesus à multidão: 35'Eu sou o pão da vida. Quem vem a mim não terá mais fome e quem crê em mim nunca mais terá sede. 36Eu, porém, vos disse que vós me vistes, mas não acreditais. 37Todos os que o Pai me confia virão a mim, e quando vierem, não os afastarei. 38Pois eu desci do céu não para fazer a minha vontade, mas a vontade daquele que me enviou. 39E esta é a vontade daquele que me enviou: que eu não perca nenhum daqueles que ele me deu, mas os ressuscite no último dia. 40Pois esta é a vontade do meu Pai: que toda pessoa que vê o Filho e nele crê tenha a vida eterna. E eu o ressuscitarei no último dia.'"
+    }
+  },
+  "extra": []
+}

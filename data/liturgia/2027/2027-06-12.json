@@ -1,0 +1,31 @@
+{
+  "date": "2027-06-12",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "10a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 5,14-21",
+      "text": "Irmãos, 14o amor de Cristo nos pressiona, pois julgamos que um só morreu por todos e que, logo, todos morreram. 15De fato, Cristo morreu por todos, para que os vivos não vivam mais para si mesmos, mas para aquele que por eles morreu e ressuscitou. 16Assim, doravante, não conhecemos ninguém conforme a natureza humana. E, se uma vez conhecemos Cristo segundo a carne, agora já não o conhecemos assim. 17Portanto, se alguém está em Cristo, é uma criatura nova. O mundo velho desapareceu. Tudo agora é novo. 18E tudo vem de Deus, que, por Cristo, nos reconciliou consigo e nos confiou o ministério da reconciliação. 19Com efeito, em Cristo, Deus reconciliou o mundo consigo, não imputando aos homens as suas faltas e colocando em nós a palavra da reconciliação. 20Somos, pois, embaixadores de Cristo, e é Deus mesmo que exorta através de nós. Em nome de Cristo, nós vos suplicamos: deixai-vos reconciliar com Deus. 21Aquele que não cometeu nenhum pecado, Deus o fez pecado por nós, para que nele nós nos tornemos justiça de Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 102 (103)",
+      "text": "- Bendize, ó minha alma, ao Senhor, e todo o meu ser, seu santo nome! Bendize, ó minha alma, ao Senhor, não te esqueças de nenhum de seus favores!\n\n- Pois ele te perdoa toda culpa e cura toda a tua enfermidade; da sepultura ele salva a tua vida e te cerca de carinho e compaixão.\n\n- O Senhor é indulgente, é favorável, é paciente, é bondoso e compassivo. Não fica sempre repetindo as suas queixas nem guarda eternamente o seu rancor.\n\n- Quanto os céus por sobre a terra se elevam, tanto é grande o seu amor aos que o temem; quanto dista o nascente do poente, tanto afasta para longe nossos crimes."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 33-37",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 33\"Vós ouvistes o que foi dito aos antigos: 'Não jurarás falso', mas 'cumprirás os teus juramentos feitos ao Senhor'. 34Eu, porém, vos digo, não jureis de modo algum: nem pelo céu, porque é o trono de Deus; 35nem pela terra, porque é o suporte onde apoia os seus pés; nem por Jerusalém, porque é a cidade do grande rei. 36Não jures tampouco pela tua cabeça, porque tu não podes tornar branco ou preto um só fio de cabelo. 37Seja o vosso 'sim' sim e o vosso 'não' não. Tudo o que for além disso vem do maligno\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santa Teresa de Ávila, Carmelita descalça e Doutora da Igreja<br/>",
+    "</b>",
+    "Castelo Interior, Terceiras Moradas, capítulo 1 (Ed. Carmelo, 2000)<br/>",
+    "«Seja o vosso sim, sim», como o de Maria<br/>",
+    "Bem sabe Sua Majestade que só posso presumir da sua misericórdia; e, já que não posso deixar de ser a que tenho sido, não tenho outro remédio senão acolher-me a ela, e confiar nos méritos de seu Filho e da Virgem, sua Mãe, cujo hábito indignamente trago e vós trazeis também. Louvai-O, minhas filhas, pois verdadeiramente o sois desta senhora; e assim não tendes de vos afrontar que eu seja ruim, pois tendes tão boa Mãe. Imitai-a e considerai qual deve ser a grandeza dessa Senhora, e o bem de a ter por Padroeira. [...] Mas duma coisa vos aviso: que nem por ser tal e ter tão boa Mãe estais seguras. [...]<br/>",
+    "Parecer-nos-á a nós, que temos hábito de religião e o tomámos por nossa vontade, e deixámos todas as coisas do mundo e o que tínhamos por amor dele (ainda que sejam as redes de São Pedro, pois parece que dá muito quem dá o que tem), que já está tudo feito. Muito boa disposição é, se se persevera e não se volta às sevandijas dos primeiros aposentos, mesmo que só com o desejo; pois não há dúvida de que, se se persevera nesta desnudez e no desprendimento de tudo, se alcançará o que se pretende. Mas há de ser com a condição, e vede que vos aviso disto, de que se tenha por servo sem proveito - como disse São Paulo, ou Cristo - e não se creia que assim se obrigou Nosso Senhor a fazer-nos semelhantes mercês; antes, como quem mais recebeu, fica-se mais endividado.<br/>"
+  ]
+}

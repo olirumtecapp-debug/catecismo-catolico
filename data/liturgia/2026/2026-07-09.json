@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-09",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santa Paulina",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Oseias 11,1-4.8-9",
+      "text": "Assim fala o Senhor: 1\"Quando Israel era criança, eu já o amava, e desde o Egito chamei meu filho. 2Quanto mais eu os chamava, tanto mais eles se afastavam de mim; imolavam aos Baals e sacrificavam aos ídolos. 3Ensinei Efraim a dar os primeiros passos, tomei-o em meus braços, mas eles não reconheceram que eu cuidava deles. 4Eu os atraía com laços de humanidade, com laços de amor; era para eles como quem leva uma criança ao colo e rebaixava-me a dar-lhes de comer. 8Meu coração comove-se no íntimo e arde de compaixão. 9Não darei largas à minha ira, não voltarei a destruir Efraim, eu sou Deus e não homem; o santo no meio de vós, e não me servirei do terror\"."
+    },
+    "psalm": {
+      "reference": "Salmo 79 (80)",
+      "text": "- Ó pastor de Israel, prestai ouvidos. Vós, que sobre os querubins vos assentais, despertai vosso poder, ó nosso Deus, e vinde logo nos trazer a salvação!\n\n- Voltai-vos para nós, Deus do universo! Olhai dos altos céus e observai. Visitai a vossa vinha e protegei-a! Foi a vossa mão direita que a plantou; protegei-a, e ao rebento que firmastes!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 10, 7-15",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 7\"Em vosso caminho, anunciai: 'O reino dos céus está próximo'. 8Curai os doentes, ressuscitai os mortos, purificai os leprosos, expulsai os demônios. De graça recebestes, de graça deveis dar! 9Não leveis ouro, nem prata, nem dinheiro nos vossos cintos; 10nem sacola para o caminho, nem duas túnicas, nem sandálias, nem bastão, porque o operário tem direito ao seu sustento. 11Em qualquer cidade ou povoado onde entrardes, informai-vos para saber quem ali seja digno. Hospedai-vos com ele até a vossa partida. 12Ao entrardes numa casa, saudai-a. 13Se a casa for digna, desça sobre ela a vossa paz; se ela não for digna, volte para vós a vossa paz. 14Se alguém não vos receber nem escutar vossa palavra, saí daquela casa ou daquela cidade e sacudi a poeira dos vossos pés. 15Em verdade vos digo, as cidades de Sodoma e Gomorra serão tratadas com menos dureza do que aquela cidade, no dia do juízo\"."
+    }
+  },
+  "extra": [
+    "Comentário por São Boaventura, Franciscano, Doutor da Igreja<br/>",
+    "Vida de São Francisco, Legenda major, cap. 3<br/>",
+    "«Ide e proclamai que está próximo o reino dos céus»<br/>",
+    "[O jovem] Francisco assistia devotamente à Missa em honra dos apóstolos; o Evangelho era aquele em que Jesus envia os seus discípulos a pregar e lhes ensina a maneira evangélica de viver: «Não adquirais ouro, prata ou cobre, para guardardes nas vossas bolsas; nem alforge para o caminho, nem duas túnicas, nem sandálias, nem cajado». Compreendendo e interiorizando este texto, ficou apaixonado por essa pobreza dos apóstolos e gritou, num transporte de alegria: «É isto que eu quero! É isto que desejo com toda a minha alma!» E, sem mais, tirou os sapatos, deixou cair o cajado, abandonou o alforje e o dinheiro como objetos dignos de repúdio, ficando apenas com a túnica, e deitou fora o cinto, que substituiu por uma corda: pôs todo o seu empenho em concretizar o que acabara de ouvir e quis conformar-se em tudo com esse código de perfeição, dado aos apóstolos.<br/>",
+    "Um impulso comunicado por Deus levou-o, desde então, à conquista da perfeição evangélica e a uma campanha de penitência. Quando ele falava [...], as suas palavras, totalmente impregnadas pela força do Espírito Santo, penetravam até ao mais profundo dos corações e mergulhavam os ouvintes no espanto. Toda a sua pregação era um anúncio de paz, e ele começava cada um dos seus sermões com esta saudação ao povo: «Que o Senhor vos dê a paz!» «Foi uma revelação do Senhor que me ensinou esta fórmula», declarou mais tarde. [...]<br/>",
+    "Falava-se cada vez mais do homem de Deus, dos seus ensinamentos simples e da sua vida, e alguns, vendo o seu exemplo e tocados por esse espírito de penitência, juntaram-se a ele e, deixando tudo e vestindo-se como ele, começaram a partilhar a sua vida.<br/>"
+  ]
+}

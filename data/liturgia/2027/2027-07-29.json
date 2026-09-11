@@ -1,0 +1,23 @@
+{
+  "date": "2027-07-29",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santa Marta",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Êxodo 40,16-21.34-38",
+      "text": "Naqueles dias: 16Moisés fez tudo o que o Senhor lhe havia ordenado. 17No primeiro mês do segundo ano, no primeiro dia do mês, o santuário foi levantado. 18Moisés levantou o santuário, colocou as bases e as tábuas, assentou as vigas e ergueu as colunas. 19Estendeu a tenda sobre o santuário, pondo em cima a cobertura da tenda, como o Senhor lhe havia mandado. 20Depois, tomando o documento da aliança, depositou-o dentro da arca e colocou sobre ela o propiciatório. 21E, introduzindo a arca no santuário, pendurou diante dela o véu de proteção, como o Senhor tinha prescrito a Moisés. 34Então a nuvem cobriu a Tenda da Reunião e a glória do Senhor encheu o santuário. 35Moisés não podia entrar na Tenda da Reunião, porque a nuvem permanecia sobre ela, e a glória do Senhor tomava todo o santuário. 36Em todas as etapas da viagem, sempre que a nuvem se elevava de cima do santuário, os filhos de Israel punham-se a caminho; 37e nunca partiam antes que a nuvem se levantasse. 38Pois, de dia, a nuvem do Senhor repousava sobre o santuário, e de noite aparecia sobre ela um fogo, que todos os filhos de Israel viam, em todas as suas etapas."
+    },
+    "psalm": {
+      "reference": "Salmo 83 (84)",
+      "text": "- Minha alma desfalece de saudades e anseia pelos átrios do Senhor! Meu coração e minha carne rejubilam e exultam de alegria no Deus vivo!\n\n- Mesmo o pardal encontra abrigo em vossa casa, e a andorinha ali prepara o seu ninho, para nele seus filhotes colocar: vossos altares, ó Senhor Deus do universo! vossos altares, ó meu Rei e meu Senhor!\n\n- Felizes os que habitam vossa casa; para sempre haverão de vos louvar! Felizes os que em vós têm sua força, Caminharão com um ardor sempre crescente.\n\n- Na verdade, um só dia em vosso templo vale mais do que milhares fora dele! Prefiro estar no limiar de vossa casa, a hospedar-me na mansão dos pecadores!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 47-53",
+      "text": "Naquele tempo, disse Jesus à multidão: 47O Reino dos Céus é ainda como uma rede lançada ao mar e que apanha peixes de todo tipo. 48Quando está cheia, os pescadores puxam a rede para a praia, sentam-se e recolhem os peixes bons em cestos e jogam fora os que não prestam. 49Assim acontecerá no fim dos tempos: os anjos virão para separar os homens maus dos que são justos, 50e lançarão os maus na fornalha de fogo. E ai, haverá choro e ranger de dentes. 51Compreendestes tudo isso?' Eles responderam: 'Sim.' 52Então Jesus acrescentou: 'Assim, pois, todo mestre da Lei, que se torna discípulo do Reino dos Céus, é como um pai de família que tira do seu tesouro coisas novas e velhas.' 53Quando Jesus terminou de contar essas parábolas, partiu dali."
+    }
+  },
+  "extra": []
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-02-22",
+  "season": "Lent",
+  "readings": {
+    "firstReading": "Gn 2:7-9; 3:1-7",
+    "psalm": "Sl 51:3-4, 5-6, 12-13, 17",
+    "secondReading": "Rm 5:12-19 or 5:12, 17-19",
+    "gospel": "Mt 4:1-11"
+  },
+  "calendar": {
+    "date": "2026-02-22",
+    "monthDay": "2/22",
+    "season": "Lent",
+    "celebration": {
+      "name": "1st Sunday of Lent",
+      "type": "SUNDAY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/02-22.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/02-22.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-02-22"
+  }
+}

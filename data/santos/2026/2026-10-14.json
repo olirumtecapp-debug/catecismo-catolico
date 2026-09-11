@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-14",
+  "year": 2026,
+  "month": 10,
+  "day": 14,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/14.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-14.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-14",
+      "name": "São Calisto I, papa e mártir",
+      "normalizedName": "sao calisto i, papa e martir",
+      "imageUrl": "./assets/img/santos/10-14-sao-calisto-i-papa-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Calisto era escravo e foi exilado para a Sardenha. Retornou a Roma por desejo do Papa Zeferino, que lhe confiou o trabalho de cuidar dos cemitérios da Igreja. Assim, teve início a construção do pequeno cemitério na Via Ápia, que recebeu seu nome. Como Papa, defendeu a doutrina e faleceu como mártir.",
+      "a12": {
+        "profileUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=14&month=10",
+        "source": "A12 — Portal A12",
+        "sourceUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=14&month=10",
+        "sourceText": {
+          "paragraphs": [
+            "Calisto nasceu em Roma no século II, num bairro pobre e foi escravo. Trabalhando para um comerciante, fracassou nos negócios e foi obrigado a indenizar o patrão, mas decidiu fugir. Encontrado, foi deportado para a ilha da Sardenha e punido com trabalhos forçados. Porém, foi nesta prisão que sua vida se iluminou.",
+            "Nas minas da Sardenha, ele tinha contato direto com os cristãos que também cumpriam penas por causa da sua religião. Ao vê-los suportando o desterro, a humilhação e as torturas sem nunca perder a fé e a esperança, em Cristo, Calisto se converteu.",
+            "Depois de alguns anos, Calisto reconquistou sua liberdade e estabeleceu-se na cidade de Anzio, tornando-se diácono. Quando o Papa Zeferino assumiu o governo, chamou o diácono para trabalhar com ele e o nomeou responsável pelos cemitérios da Igreja.",
+            "Chamados de catacumbas, estes cemitérios subterrâneos da Via Ápia, em Roma, tiveram importância vital para os cristãos. Além de ali enterrarem seus mortos, as catacumbas serviam também para cerimônias e cultos, principalmente durante os períodos de perseguição.",
+            "Com a morte do Papa Zeferino, o clero e o povo elegeram Calisto para substituí-lo. Ele era misericordioso com os pecadores e dizia: \"Todo pecado pode ser perdoado pela Igreja, cumpridas as devidas penitências\". O Papa Calisto governou por seis anos. Em 222 ele se tornou vítima da perseguição, foi espancado e assassinado durante um confronto entre cristãos e pagãos.",
+            "Colaboração: Padre Evaldo César de Souza, C.Ss.R.",
+            "Reflexão:",
+            "As catacumbas de São Calisto estão entre as maiores e mais imponentes de Roma. Surgiram pela metade do século segundo e fazem parte de um complexo que ocupa uma área de 15 hectares de terreno, com uma rede de galerias de quase 20 quilômetros, em diversos planos, e atingem uma profundidade superior a 20 metros. Nelas encontraram sepultura dezenas de mártires, pontífices e muitíssimos cristãos.",
+            "Oração:",
+            "Senhor, nosso Deus e Pai dos Mártires, que o sangue derramado pelos mártires da missão, sobretudo nos dias de hoje, seja fonte de vida para o mundo e de libertação para os mais pobres. Por Cristo nosso Senhor. Amém!",
+            "Enviar por e-mail"
+          ]
+        }
+      },
+      "enrichment": {
+        "a12Found": true
+      }
+    }
+  ]
+}

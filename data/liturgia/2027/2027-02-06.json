@@ -1,0 +1,23 @@
+{
+  "date": "2027-02-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Paulo Miki e Comps.",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 13,15-17.20-21",
+      "text": "Irmãos: 15Por meio de Jesus, ofereçamos a Deus um perene sacrifício de louvor, isto é, o fruto dos lábios que celebram o seu nome. 16Não vos esqueçais das boas ações e da comunhão, pois estes são os sacrifícios que agradam a Deus. 17Obedecei aos vossos líderes e segui suas orientações, porque eles cuidam de vós como quem há de prestar contas. Que possam fazê-lo com alegria, e não com queixas, que não seriam coisa boa para vós. 20O Deus da paz, que fez subir dentre os mortos aquele que se tornou, pelo sangue de uma aliança eterna, o grande pastor das ovelhas, nosso Senhor Jesus, 21vos torne aptos a todo bem, para fazerdes a sua vontade; que ele realize em nós o que lhe é agradável, por Jesus Cristo, ao qual seja dada a glória pelos séculos dos séculos. Amém!"
+    },
+    "psalm": {
+      "reference": "Salmo 22 (23)",
+      "text": "- O Senhor é o pastor que me conduz; não me falta coisa alguma. Pelos prados e campinas verdejantes ele me leva a descansar. Para as águas repousantes me encaminha, e restaura as minhas forças.\n\n- Ele me guia no caminho mais seguro, pela honra do seu nome. Mesmo que eu passe pelo vale tenebroso, nenhum mal eu temerei. Estais comigo com bastão e com cajado, eles me dão a segurança!\n\n- Preparais à minha frente uma mesa, bem à vista do inimigo; com óleo vós ungis minha cabeça, e o meu cálice transborda.\n\n- Felicidade e todo bem hão de seguir-me, por toda a minha vida; e, na casa do Senhor, habitarei pelos tempos infinitos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 6, 30-34",
+      "text": "Naquele tempo: 30Os apóstolos reuniram-se com Jesus e contaram tudo o que haviam feito e ensinado. 31Ele lhes disse: 'Vinde sozinhos para um lugar deserto, e descansai um pouco'. Havia, de fato, tanta gente chegando e saindo que não tinham tempo nem para comer. 32Então foram sozinhos, de barco, para um lugar deserto e afastado. 33Muitos os viram partir e reconheceram que eram eles. Saindo de todas as cidades, correram a pé, e chegaram lá antes deles. 34Ao desembarcar, Jesus viu uma numerosa multidão e teve compaixão, porque eram como ovelhas sem pastor. Começou, pois, a ensinar-lhes muitas coisas."
+    }
+  },
+  "extra": []
+}

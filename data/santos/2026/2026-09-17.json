@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-17",
+  "year": 2026,
+  "month": 9,
+  "day": 17,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/17.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-09-17.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-09-17",
+      "name": "São Roberto Belarmino, cardeal, bispo e doutor da Igreja",
+      "normalizedName": "sao roberto belarmino, cardeal, bispo e doutor da igreja",
+      "imageUrl": "./assets/img/santos/09-17-sao-roberto-belarmino-cardeal-bispo-e-doutor-.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "O pai de Roberto queria que fosse político, mas o filho entrou para os Jesuítas. Humanista e distinto teólogo da Igreja pós-tridentina, Roberto Belarmino foi criado Cardeal em 1599. Este homem culto distribuiu todos os seus bens aos pobres. Pio XI o proclamou Beato, Santo e Doutor da Igreja.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "name": "Santa Columba, virgem e mártir de Córdova",
+      "normalizedName": "santa columba, e martir de cordova",
+      "imageUrl": "./assets/img/santos/09-17-santa-columba-virgem-e-martir-de-cordova.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Atraída por uma vida de total dedicação ao Senhor, Columba trancou-se em um mosteiro, perto de Córdova, Espanha. Foi um exemplo de santidade e de dedicação ao estudo das Escrituras. Durante a perseguição dos Mouros, confessou ser cristã, contra o desejo dos Bispos. Por isso, foi martirizada em 853.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

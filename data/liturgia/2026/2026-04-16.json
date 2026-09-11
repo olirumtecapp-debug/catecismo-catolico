@@ -1,0 +1,33 @@
+{
+  "date": "2026-04-16",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "2a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 5,27-33",
+      "text": "Naqueles dias: 27Eles levaram os apóstolos e os apresentaram ao Sinédrio. O sumo sacerdote começou a interrogá-los, 28dizendo: 'Nós tínhamos proibido expressamente que vós ensinásseis em nome de Jesus. Apesar disso, enchestes a cidade de Jerusalém com a vossa doutrina. E ainda nos quereis tornar responsáveis pela morte desse homem!' 29Então Pedro e os outros apóstolos responderam: 'É preciso obedecer a Deus, antes que aos homens. 30O Deus de nossos pais ressuscitou Jesus, a quem vós matastes, pregando-o numa cruz. 31Deus, por seu poder, o exaltou, tornando-o Guia Supremo e Salvador, para dar ao povo de Israel a conversão e o perdão dos seus pecados. 32E disso somos testemunhas, nós e o Espírito Santo, que Deus concedeu àqueles que lhe obedecem.' 33Quando ouviram isto, ficaram furiosos e queriam matá-los."
+    },
+    "psalm": {
+      "reference": "Salmo 33 (34)",
+      "text": "- Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Provai e vede quóo suave é o Senhor! Feliz o homem que tem nele o seu refúgio!\n\n- Mas ele volta a sua face contra os maus, para da terra apagar sua lembrança. Clamam os justos, e o Senhor bondoso escuta e de todas as angústias os liberta.\n\n- Do coração atribulado ele está perto e conforta os de espírito abatido. Muitos males se abatem sobre os justos, mas o Senhor de todos eles os liberta."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 3, 31-36",
+      "text": "31- 'Aquele que vem do alto está acima de todos. O que é da terra, pertence à terra e fala das coisas da terra. Aquele que vem do céu está acima de todos. 32Dá testemunho daquilo que viu e ouviu, mas ninguém aceita o seu testemunho. 33Quem aceita o seu testemunho atesta que Deus é verdadeiro. 34De fato, aquele que Deus enviou fala as palavras de Deus, porque Deus lhe dá o espírito sem medida. 35O Pai ama o Filho e entregou tudo em sua mão. 36Aquele que acredita no Filho possui a vida eterna. Aquele, porém, que rejeita o Filho não verá a vida, pois a ira de Deus permanece sobre ele'."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Vicente de Paulo <br/>",
+    "</b>",
+    "Presbítero, Fundador de comunidades religiosas <br/>",
+    "Exercício espiritual de 19/01/1642 <br/>",
+    "«Aquele que Deus enviou diz palavras de Deus, porque Deus dá o Espírito sem medida»<br/>",
+    "Deus dá-nos as suas graças conforme as nossas necessidades. Deus é uma fonte à qual todos vão buscar água segundo as suas necessidades. Assim como uma pessoa que precisa de seis baldes traz seis; outra que precisa de três traz três; um pássaro que apenas precisa de um golo é isso que toma; ou um peregrino que sacia a sede com uma mão cheia de água, o mesmo se passa connosco em relação a Deus. <br/>",
+    "Devemos sentir uma profunda emoção quando nos fidelizamos à leitura de um capítulo do Novo Testamento e produzimos os correspondentes atos: adorar a palavra de Deus e a sua verdade; penetrar nos sentimentos com os quais Nosso Senhor a pronunciou e aceitar essas verdades; decidir praticá-las. [...] Devemos sobretudo evitar ler como se estivéssemos simplesmente a estudar, dizendo: «Esta passagem vai servir-me para esta ou aquela prédica»; pelo contrário, convém-nos ler para o nosso progresso interior. <br/>",
+    "Não desanimemos se, depois de lermos a mesma passagem várias vezes, [...] não nos sentimos tocados por ela. Vai acontecer-nos que um dia veremos uma pequena luz, depois outra maior, e outra maior ainda quando tivermos necessidade dela. Uma só palavra é capaz de nos converter; basta uma.<br/>"
+  ]
+}

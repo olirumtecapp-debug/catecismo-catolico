@@ -1,0 +1,43 @@
+{
+  "date": "2026-01-20",
+  "year": 2026,
+  "month": 1,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-20",
+      "name": "São Fabiano, papa e mártir",
+      "normalizedName": "sao fabiano, papa e martir",
+      "imageUrl": "./assets/img/santos/01-20-sao-fabiano-papa-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Em 14 anos de Pontificado, Fabiano manteve relações com os cristãos do Oriente e dividiu Roma em sete diaconias para a assistência dos pobres. Depois, começaram as perseguições de Décio: Fabiano foi preso e morreu em 250. Os cristãos o veneram como mártir na catacumba de São Calixto, na Via Ápia.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-01-20",
+      "name": "São Sebastião, mártir",
+      "normalizedName": "sao sebastiao, martir",
+      "imageUrl": "./assets/img/santos/01-20-sao-sebastiao-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Milão, Sebastião foi um alto oficial do exército imperial. Diocleciano o estimava pelas suas qualidades, mas não suspeitava que fosse cristão. Por isso, foi condenado, sobrevivendo às flechadas, mas foi açoitado à morte. Ajudou os cristãos encarcerados e converteu militares e nobres.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

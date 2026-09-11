@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "34a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Apocalipse 14,1-5",
+      "text": "Eu, João, 1tive esta visão: o Cordeiro estava de pé sobre o monte Sião. Com ele, os cento e quarenta e quatro mil que tinham a fronte marcada com o nome dele e o nome do seu Pai. 2Ouvi uma voz que vinha do céu; parecia o barulho de águas torrenciais e o estrondo de um forte trovão. O ruído que ouvi era como o som de músicos tocando harpa. 3Estavam diante do trono, diante dos quatro seres vivos e dos anciãos, e cantavam um cântico novo. Era um cântico que ninguém podia aprender; só os cento e quarenta e quatro mil marcados, que foram resgatados da terra. 4Eles seguem o Cordeiro aonde quer que vá. Foram resgatados do meio dos homens, como primeira oferta a Deus e ao Cordeiro. 5Na sua boca nunca foi encontrada mentira. São íntegros!"
+    },
+    "psalm": {
+      "reference": "Salmo 23 (24)",
+      "text": "- Ao Senhor pertence a terra e o que ela encerra, o mundo inteiro com os seres que o povoam; porque ele a tornou firme sobre os mares e, sobre as águas, a mantém inabalável.\n\n- \"Quem subirá até o monte do Senhor, quem ficará em sua santa habitação?\" \"Quem tem mãos puras e inocente coração, quem não dirige sua mente para o crime.\n\n- Sobre este desce a bênção do Senhor e a recompensa de seu Deus e salvador.\" \"É assim a geração dos que o procuram e do Deus de Israel buscam a face.\""
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 21, 1-4",
+      "text": "Naquele tempo, 1Jesus ergueu os olhos e viu pessoas ricas depositando ofertas no tesouro do templo. 2Viu também uma pobre viúva que depositou duas pequenas moedas. 3Diante disso, ele disse: \"Em verdade vos digo que essa pobre viúva ofertou mais do que todos. 4Pois todos eles depositaram, como oferta feita a Deus, aquilo que lhes sobrava. Mas a viúva, na sua pobreza, ofertou tudo quanto tinha para viver\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por Santo Ambrósio, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Exortação às viúvas §§ 27ss.<br/>",
+    "«Esta viúva pobre deu mais do que todos os outros»<br/>",
+    "No Evangelho de Lucas, o Senhor ensina-nos como devemos ser misericordiosos e generosos para com os pobres, sem nos determos a pensar na nossa pobreza; porque a generosidade não se avalia segundo a abundância do património, mas segundo a disposição de dar. É por isso que a palavra do Senhor deu preferência entre todos à viúva, acerca da qual diz: «Esta viúva deu mais do que todos». No aspeto moral, o Senhor ensina-nos que não devemos deixar de fazer o bem por vergonha da pobreza, e que os ricos não se devem vangloriar por parecer que dão mais que os pobres. Uma pequena moeda tirada de poucos bens prevalece sobre um tesouro tirado da abundância; não se avalia o que é dado, mas sim o que fica. Ninguém deu mais do que aquela que nada guardou para si. [...]<br/>",
+    "Em sentido místico, não podemos esquecer esta mulher que põe duas moedas no tesouro. É seguramente grande, esta mulher que mereceu ser preferida a todos no juízo de Deus! Não terá sido ela que, pela sua fé, foi beber aos dois Testamentos, para auxílio dos homens? Por conseguinte ninguém fez mais que ela e nenhum homem pôde igualar a grandeza do seu donativo, dado que ela uniu a fé à misericórdia. Também tu, quem quer que sejas, [...] não hesites em trazer para o tesouro duas moedas cheias de fé e graça.<br/>"
+  ]
+}

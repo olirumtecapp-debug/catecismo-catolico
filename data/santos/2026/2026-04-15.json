@@ -1,0 +1,30 @@
+{
+  "date": "2026-04-15",
+  "year": 2026,
+  "month": 4,
+  "day": 15,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/15.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-15.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-15",
+      "name": "São Abúndio, mansionário vaticano",
+      "normalizedName": "sao abundio, mansionario vaticano",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "As poucas notícias sobre a vida de Abôndio chegaram até nós por São Gregório Magno, que descreveu este funcionário do Vaticano como um homem humilde e de grande dignidade no cumprimento do seu serviço. O Papa narrou também sobre uma cura milagrosa realizada por Abôndio, que faleceu no ano 564.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

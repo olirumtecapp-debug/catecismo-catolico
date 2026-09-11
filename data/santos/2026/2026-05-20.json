@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-20",
+  "year": 2026,
+  "month": 5,
+  "day": 20,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/20.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-20.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-20",
+      "name": "São Bernardino de Sena, presbítero franciscano",
+      "normalizedName": "sao bernardino de sena, presbitero franciscano",
+      "imageUrl": "./assets/img/santos/05-20-sao-bernardino-de-sena-presbitero-franciscano.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/20/s--bernardino-de-sena--presbitero-franciscano.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/20/s--bernardino-de-sena--presbitero-franciscano.html",
+      "sourceText": "Seguido por Papas e analfabetos, por seu estilo de pregação sem bizantinismos, Bernardino de Sena foi um dos santos franciscanos mais conhecidos e um grande reformador da sua Ordem, no século XV. Foi proclamado Santo por Nicolau V, em 1450, a apenas seis anos da sua morte.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-20",
+      "name": "São Áurea, mártir de Óstia",
+      "normalizedName": "sao aurea, martir de ostia",
+      "imageUrl": "./assets/img/santos/05-20-sao-aurea-martir-de-ostia.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Na época do imperador Cláudio, no I século, a nobre matrona romana, Áurea, que se converteu ao cristianismo, foi torturada; por não negar à sua fé, ficou confinada em Óstia. Depois, foi novamente presa e martirizada; segundo a tradição, seu corpo foi jogado no mar, mas trazido de volta pelas ondas.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

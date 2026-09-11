@@ -1,0 +1,32 @@
+{
+  "date": "2026-07-25",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Festa: Sao Tiago Maior, Apostolo",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Coríntios 4,7-15",
+      "text": "Irmãos, 7trazemos esse tesouro em vasos de barro, para que todos reconheçam que esse poder extraordinário vem de Deus e não de nós. 8Somos afligidos de todos os lados, mas não vencidos pela angústia; postos entre os maiores apuros, mas sem perder a esperança; 9perseguidos, mas não desamparados; derrubados, mas não aniquilados; 10por toda parte e sempre levamos em nós mesmos os sofrimentos mortais de Jesus, para que também a vida de Jesus seja manifestada em nossos corpos. 11De fato, nós, os vivos, somos continuamente entregues à morte por causa de Jesus, para que também a vida de Jesus seja manifestada em nossa natureza mortal. 12Assim, a morte age em nós, enquanto a vida age em vós. 13Mas, sustentados pelo mesmo espírito de fé, conforme o que está escrito: \"Eu creio e, por isso, falei\", nós também cremos e, por isso, falamos, 14certos de que aquele que ressuscitou o Senhor Jesus nos ressuscitará também com Jesus e nos colocará ao seu lado, juntamente convosco. 15E tudo isso é por causa de vós, para que a abundância da graça em um número maior de pessoas faça crescer a ação de graças para a glória de Deus."
+    },
+    "psalm": {
+      "reference": "Salmo 125 (126)",
+      "text": "- Quando o Senhor reconduziu nossos cativos, parecíamos sonhar; encheu-se de sorriso nossa boca, nossos lábios, de canções.\n\n- Entre os gentios se dizia: \"Maravilhas fez com eles o Senhor!\" Sim, maravilhas fez conosco o Senhor, exultemos de alegria!\n\n- Mudai a nossa sorte, ó Senhor, como torrentes no deserto. Os que lançam as sementes entre lágrimas ceifarão com alegria.\n\n- Chorando de tristeza, sairão, espalhando suas sementes; cantando de alegria, voltarão, carregando os seus feixes!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 20, 20-28",
+      "text": "Naquele tempo, 20a mãe dos filhos de Zebedeu aproximou-se de Jesus com seus filhos e ajoelhou-se com a intenção de fazer um pedido. 21Jesus perguntou: \"O que tu queres?\" Ela respondeu: \"Manda que estes meus dois filhos se sentem, no teu reino, um à tua direita e outro à tua esquerda\". 22Jesus, então, respondeu-lhes: \"Não sabeis o que estais pedindo. Por acaso podeis beber o cálice que eu vou beber?\" Eles responderam: \"Podemos\". 23Então Jesus lhes disse: \"De fato, vós bebereis do meu cálice, mas não depende de mim conceder o lugar à minha direita ou à minha esquerda. Meu Pai é quem dará esses lugares àqueles para os quais ele os preparou\". 24Quando os outros dez discípulos ouviram isso, ficaram irritados contra os dois irmãos. 25Jesus, porém, chamou-os e disse: \"Vós sabeis que os chefes das nações têm poder sobre elas e os grandes as oprimem. 26Entre vós não deverá ser assim. Quem quiser tornar-se grande torne-se vosso servidor; 27quem quiser ser o primeiro seja vosso servo. 28Pois o Filho do homem não veio para ser servido, mas para servir e dar a sua vida como resgate em favor de muitos\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São João Crisóstomo, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Homilias sobre o Evangelho de São Mateus, n.º 65, 2-4; PG 58, 619<br/>",
+    "Beber do seu cálice e sentar-se à sua direita<br/>",
+    "Por intermédio de sua mãe, os filhos de Zebedeu fazem ao Mestre este pedido, na presença dos companheiros : «Ordena que nos sentemos um à tua direita e o outro à tua esquerda». [...] Cristo apressa-Se a tirar-lhes as ilusões, dizendo-lhes que devem estar prontos a sofrer injúrias, perseguições e mesmo a morte: «Não sabeis o que estais a pedir. Podeis beber o cálice que Eu hei de beber?» Que ninguém se espante por ver os apóstolos presa de tão imperfeitas inclinações. Espera que o mistério da cruz seja cumprido, que a força do Espírito Santo lhes seja comunicada. Se queres ver a sua força de alma, observa-os mais tarde, e vê-los-ás superiores a todas as fragilidades humanas. Cristo não esconde as suas fraquezas, para que tu vejas aquilo em que depois se hão de tornar, pela força da graça que os há de transformar [...].<br/>",
+    "«Não sabeis o que estais a pedir». Não sabeis quão grande e prodigiosa é essa honra. Sentar-se à minha direita? Isso ultrapassa os próprios poderes angélicos. «Podeis beber o cálice que Eu hei de beber?» Falais-Me de tronos e de diademas insignificantes; Eu falo-vos de combates e de sofrimentos. Não é agora que receberei a minha realeza; ainda não chegou a hora da glória. Para Mim e para os meus, é tempo de violência, de combates e de perigos.<br/>",
+    "Repara que Ele não lhes pergunta diretamente: «Tereis coragem para derramar o vosso sangue?» Para os encorajar, propõe-lhes que partilhem o seu cálice, que vivam em comunhão com Ele [...]. Mais tarde, verás São João, o mesmo que agora deseja o primeiro lugar, ceder a presidência a São Pedro [...]. Quanto a Tiago, o seu apostolado não durou muito tempo. Ardente de fervor, desprezando por completo os interesses meramente humanos, com seu zelo, mereceu ser o primeiro mártir de entre os apóstolos (cf At 12,2).<br/>"
+  ]
+}

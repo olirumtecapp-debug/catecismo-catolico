@@ -1,0 +1,43 @@
+{
+  "date": "2026-03-12",
+  "year": 2026,
+  "month": 3,
+  "day": 12,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/12.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-12.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-12",
+      "name": "São Maximiliano, mártir na África",
+      "normalizedName": "sao maximiliano, martir na africa",
+      "imageUrl": "./assets/img/santos/03-12-sao-maximiliano-martir-na-africa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Maximiliano, filho de um veterano, foi obrigado a ser soldado por lei. Porém, diante do procônsul, Dion, recusou se alistar, por ser cristão, pois devia reconhecer a divindade dos imperadores e realizar atos de violência. São Maximiliano foi martirizado no ano 295, em Tebessa, Numídia.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-12",
+      "name": "São Inocêncio I, papa",
+      "normalizedName": "sao inocencio i, papa",
+      "imageUrl": "./assets/img/santos/03-12-sao-inocencio-i-papa.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Natural de Albano, no Lácio, desde o início do seu Pontificado, Inocêncio sentiu-se chefe tanto da Igreja do Oriente como do Ocidente. Como Papa, teve que enfrentar o assédio de Roma, pelos visigodos de Alarico, e condenar com firmeza a heresia de Pelágio, no Concílio Milevitano. Faleceu em 417.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

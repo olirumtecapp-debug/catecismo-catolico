@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-25",
+  "year": 2026,
+  "month": 11,
+  "day": 25,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/25.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-11-25.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-11-25",
+      "name": "São Moisés, mártir em Roma",
+      "normalizedName": "sao moises, martir em roma",
+      "imageUrl": "./assets/img/santos/11-25-sao-moises-martir-em-roma.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Moisés era decano do Colégio sacerdotal de Roma, durante a perseguição contra o cristianismo, por parte de Décio, imperador romano, no século III. Distinguiu-se por sua posição indulgente para com aqueles, que haviam renegado à sua fé, para se salvar. Faleceu após uma longa detenção, em 251.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "name": "São Pedro de Alexandria, bispo e mártir",
+      "normalizedName": "sao pedro de alexandria, bispo e martir",
+      "imageUrl": "./assets/img/santos/11-25-sao-pedro-de-alexandria-bispo-e-martir.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Pedro era Bispo de Alexandria, no Egito, durante a perseguição de Diocleciano. Sendo obrigado a se esconder, na sua ausência, houve um cisma na sua Igreja. Pedro, preso e morto no ano 311, é celebrado junto com outros três santos Bispos egípcios mártires: Hesíquio, Pacômio e Teodoro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "name": "BB. Luís e Maria Beltrame Quattrocchi, cônjuges",
+      "normalizedName": "bb. luis e maria beltrame quattrocchi, conjuges",
+      "imageUrl": "",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/25/bb--luis-e-maria-beltrame-quattrocchi--conjuges.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/11/25/bb--luis-e-maria-beltrame-quattrocchi--conjuges.html",
+      "sourceText": "O casal tornou-se santo vivendo seu matrimônio como um caminho para Deus. Luís e Maria Beltrame Quattrocchi foram o primeiro casal a ser beatificado por desejo do Papa Wojtyla. Sua memória litúrgica é celebrada em 25 de novembro, dia do aniversário de casamento, em 1905.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "name": "São Catarina de Alexandria",
+      "normalizedName": "sao catarina de alexandria",
+      "imageUrl": "./assets/img/santos/11-25-sao-catarina-de-alexandria.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Diz a lenda que Catarina não abjurou à fé, diante do governador do Egito e Síria, Maximino, mas convenceu os dignitários a se converterem. Maximino mandou matá-los e pediu a jovem em casamento. Ao se recusar, foi assassinada em 305. Seus restos mortais descansam em Gebel Katherin, no Sinai.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

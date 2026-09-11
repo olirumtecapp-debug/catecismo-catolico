@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-06",
+  "year": 2026,
+  "month": 4,
+  "day": 6,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/06.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-04-06.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-04-06",
+      "name": "São Gala, viúva romana",
+      "normalizedName": "sao gala, viuva romana",
+      "imageUrl": "./assets/img/santos/04-06-sao-gala-viuva-romana.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/06/s--gala--viuva-romana.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/06/s--gala--viuva-romana.html",
+      "sourceText": "Gala, filha de Símaco, cônsul romano, ficou viúva após apenas um ano de casamento. Converteu-se ao cristianismo e rejeitou casar-se de novo; dedicou sua vida ao jejum e às obras de caridade para com os mais pobres, até decidir retirar-se para o mosteiro. Faleceu por volta do ano 550.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-04-06",
+      "name": "São Pedro de Verona, presbítero dominicano e mártir",
+      "normalizedName": "sao pedro de verona, presbitero dominicano e martir",
+      "imageUrl": "./assets/img/santos/04-06-sao-pedro-de-verona-presbitero-dominicano-e-m.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Filho de maniqueístas, Pedro opôs-se logo à sua família ao entrar para a Ordem Dominicana. O Santo foi um firme defensor da doutrina católica, a ponto de ser nomeado Inquisidor Geral para a Lombardia. Faleceu como mártir, em 1252, assassinado pelos mesmos heréticos dos quais foi opositor.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

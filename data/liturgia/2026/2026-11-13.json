@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "32a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "São João 4-9",
+      "text": "4Muito me alegrei, senhora, por ter encontrado alguns dos teus filhos que caminham conforme a verdade, segundo o mandamento que recebemos do Pai. 5E agora, senhora, eu te peço - não que te esteja escrevendo a respeito de um novo mandamento, pois trata-se daquele que temos desde o princípio -, amemo-nos uns aos outros. 6E amar consiste no seguinte: em viver conforme os seus mandamentos. Este é o mandamento que ouvistes desde o início para guiar o vosso proceder. 7Acontece que se espalharam pelo mundo muitos sedutores, que não confessam a Jesus Cristo encarnado. Está aí o sedutor, o anticristo. 8Tomai cuidado, se não quereis perder o fruto do vosso trabalho, mas sim receber a plena recompensa. 9Todo o que não permanece na doutrina de Cristo, mas passa além, não possui a Deus. Aquele que permanece na doutrina é o que possui o Pai e o Filho."
+    },
+    "psalm": {
+      "reference": "Salmo 118 (119)",
+      "text": "- Feliz o homem sem pecado em seu caminho, que na lei do Senhor Deus vai progredindo!\n\n- Feliz o homem que observa seus preceitos e de todo o coração procura a Deus!\n\n- De todo o coração eu vos procuro, não deixeis que eu abandone a vossa lei!\n\n- Conservei no coração vossas palavras, a fim de que eu não peque contra vós.\n\n- Sede bom com vosso servo, e viverei, e guardarei vossa palavra, ó Senhor.\n\n- Abri meus olhos, e então contemplarei as maravilhas que encerra a vossa lei!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 26-37",
+      "text": "Naquele tempo, disse Jesus aos seus discípulos: 26\"Como aconteceu nos dias de Noé, assim também acontecerá nos dias do Filho do homem. 27Eles comiam, bebiam, casavam-se e se davam em casamento, até o dia em que Noé entrou na arca. Então chegou o dilúvio e fez morrer todos eles. 28Acontecerá como nos dias de Ló: comiam e bebiam, compravam e vendiam, plantavam e construíam. 29Mas, no dia em que Ló saiu de Sodoma, Deus fez chover fogo e enxofre do céu e fez morrer todos. 30O mesmo acontecerá no dia em que o Filho do homem for revelado. 31Nesse dia, quem estiver no terraço não desça para apanhar os bens que estão em sua casa. E quem estiver nos campos não volte para trás. 32Lembrai-vos da mulher de Ló. 33Quem procura ganhar a sua vida vai perdê-la, e quem a perde vai conservá-la. 34Eu vos digo, nessa noite dois estarão numa cama: um será tomado e o outro será deixado. 35Duas mulheres estarão moendo juntas: uma será tomada e a outra será deixada. 36Dois homens estarão no campo: um será levado e o outro será deixado\". 37Os discípulos perguntaram: \"Senhor, onde acontecerá isso?\" Jesus respondeu: \"Onde estiver o cadáver, aí se reunirão os abutres\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Cirilo de Jerusalém, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "Catequese baptismal 15, 1-3<br/>",
+    "As duas vindas de Cristo<br/>",
+    "Anunciamos a vinda de Cristo: não apenas a sua primeira vinda, mas também uma segunda, bem mais gloriosa. Com efeito, a primeira foi marcada pelo signo da paciência, enquanto a outra trará o diadema da realeza divina. Aquando da primeira vinda, Ele foi enfaixado e deitado na manjedoura; aquando da segunda, será «envolvido em luz como num manto» (Sl 103,2). Aquando da primeira, suportou a cruz e desprezou a vergonha; aquando da segunda, avançará para a glória escoltado por um exército de anjos.<br/>",
+    "Não nos basta já apoiarmo-nos na primeira vinda; continuamos à espera da segunda. E, depois de termos dito, aquando da primeira: «Bendito seja Aquele que vem em nome do Senhor!» (Mt 21,9), voltaremos a dizer-Lho aquando da segunda, quando viermos, com os anjos, ao encontro do Senhor para O adorar. O Salvador virá, não para ser novamente julgado, mas para julgar aqueles que julgaram. Ele tinha vindo realizar a salvação e ensinar os homens através da persuasão; nesse dia, porém, tudo submeterá à sua realeza.<br/>"
+  ]
+}

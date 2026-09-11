@@ -1,0 +1,26 @@
+{
+  "date": "2027-06-24",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Solenidade: Natividade de Sao Joao Batista",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Isaías 49,1-6",
+      "text": "1Nações marinhas, ouvi-me, povos distantes, prestai atenção: o Senhor chamou-me antes de eu nascer, desde o ventre de minha mãe ele tinha na mente o meu nome; 2fez de minha palavra uma espada afiada, protegeu-me à sombra de sua mão e fez de mim uma flecha aguçada, escondida em sua aljava, 3e disse-me:'Tu és o meu Servo, Israel, em quem serei glorificado'. 4E eu disse:'Trabalhei em vão, gastei minhas forças sem fruto, inutilmente; entretanto o Senhor me fará justiça e o meu Deus me dará recompensa'. 5E agora diz-me o Senhor - ele que me preparou desde o nascimento para ser seu Servo - que eu recupere Jacó para ele e faça Israel unir-se a ele; aos olhos do Senhor esta é a minha glória. 6Disse ele:'Não basta seres meu Servo para restaurar as tribos de Jacó e reconduzir os remanescentes de Israel: eu te farei luz das nações, para que minha salvação chegue até aos confins da terra'."
+    },
+    "psalm": {
+      "reference": "Salmo 138 (139)",
+      "text": "- Senhor, vós me sondais e conheceis, sabeis quando me sento ou me levanto; de longe penetrais meus pensamentos; percebeis quando me deito e quando eu ando, os meus caminhos vos são todos conhecidos.\n\n- Fostes vós que me formastes as entranhas, e no seio de minha mãe vós me tecestes. Eu vos louvo e vos dou graças, ó Senhor, porque de modo admirável me formastes!\n\n- Até o mais íntimo, Senhor, me conheceis; nem uma sequer de minhas fibras ignoráveis quando eu era modelado ocultamente, era formado nas entranhas subterrâneas."
+    },
+    "secondReading": {
+      "reference": "Atos dos Apóstolos 13,22-26",
+      "text": "Naqueles dias, Paulo disse: 22Deus fez surgir Davi como rei e assim testemunhou a seu respeito: 'Encontrei Davi, filho de Jessé, homem segundo o meu coração, que vai fazer em tudo a minha vontade'. 23Conforme prometera, da descendência de Davi Deus fez surgir para Israel um Salvador, que é Jesus. 24Antes que ele chegasse, João pregou um batismo de conversão para todo o povo de Israel. 25Estando para terminar sua missão, João declarou: 'Eu não sou aquele que pensais que eu seja! Mas vede: depois de mim vem aquele, do qual nem mereço desamarrar as sandálias'. 26Irmãos, descendentes de Abraão, e todos vós que temeis a Deus, a nós foi enviada esta mensagem de salvação."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 57-66.80",
+      "text": "57Completou-se o tempo da gravidez de Isabel, e ela deu à luz um filho. 58Os vizinhos e parentes ouviram dizer como o Senhor tinha sido misericordioso para com Isabel, e alegraram-se com ela. 59No oitavo dia, foram circuncidar o menino, e queriam dar-lhe o nome de seu pai, Zacarias. 60A mãe porém disse: 'Não! Ele vai chamar-se João.' 61Os outros disseram: 'Não existe nenhum parente teu com esse nome!' 62Então fizeram sinais ao pai, perguntando como ele queria que o menino se chamasse. 63Zacarias pediu uma tabuinha, e escreveu: 'João é o seu nome.' 64No mesmo instante, a boca de Zacarias se abriu, sua língua se soltou, e ele começou a louvar a Deus. 65Todos os vizinhos ficaram com medo, e a notícia espalhou-se por toda a região montanhosa da Judéia. 66E todos os que ouviam a notícia, ficavam pensando: 'O que virá a ser este menino?' De fato, a mão do Senhor estava com ele. 80E o menino crescia e se fortalecia em espírito. Ele vivia nos lugares desertos, até o dia em que se apresentou publicamente a Israel."
+    }
+  },
+  "extra": []
+}

@@ -1,0 +1,62 @@
+name: Atualizar Liturgia
+
+on:
+  schedule:
+    # Primeiro dia de cada mês, 03:17 no horário de São Paulo.
+    - cron: '17 3 1 * *'
+      timezone: 'America/Sao_Paulo'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Ano específico (deixe vazio para ano atual + próximo ano)'
+        required: false
+        type: string
+      force:
+        description: 'Forçar reconstrução dos anos-alvo'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-liturgia
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Atualizar e validar Liturgia
+        shell: bash
+        env:
+          INPUT_YEAR: ${{ inputs.year }}
+          INPUT_FORCE: ${{ inputs.force }}
+        run: |
+          ARGS=()
+          if [ -n "$INPUT_YEAR" ]; then ARGS+=(--year "$INPUT_YEAR"); fi
+          if [ "$INPUT_FORCE" = "true" ]; then ARGS+=(--force); fi
+          node scripts/atualizar-liturgia.mjs "${ARGS[@]}"
+
+      - name: Commit das atualizações
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/liturgia scripts/build-liturgia.mjs scripts/atualizar-liturgia.mjs scripts/verificar-liturgia.mjs
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração para gravar.'
+            exit 0
+          fi
+          git commit -m 'chore: atualizar liturgia automaticamente'
+          git push

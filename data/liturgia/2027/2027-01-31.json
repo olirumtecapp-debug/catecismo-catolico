@@ -1,0 +1,35 @@
+{
+  "date": "2027-01-31",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4o. Domingo do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Deuteronômio 18,15-20",
+      "text": "Moisés falou ao povo, dizendo: 15\"O Senhor teu Deus fará surgir para ti, da tua nação e do meio de teus irmãos, um profeta como eu: a ele deverás escutar. 16Foi exatamente o que pediste ao Senhor teu Deus, no monte Horeb, quando todo o povo estava reunido, dizendo: 'Não quero mais escutar a voz do Senhor meu Deus nem ver este grande fogo, para não acabar morrendo'. 17Então o Senhor me disse: 'Está bem o que disseram. 18Farei surgir para eles, do meio de seus irmãos, um profeta semelhante a ti. Porei em sua boca as minhas palavras e ele lhes comunicará tudo o que eu lhe mandar. 19Eu mesmo pedirei contas a quem não escutar as minhas palavras que ele pronunciar em meu nome. 20Mas o profeta que tiver a ousadia de dizer em meu nome alguma coisa que não lhe mandei ou se falar em nome de outros deuses, esse profeta deverá morrer'\"."
+    },
+    "psalm": {
+      "reference": "Salmo 94 (95)",
+      "text": "- Vinde, exultemos de alegria no Senhor, aclamemos o rochedo que nos salva! Ao seu encontro caminhemos com louvores e com cantos de alegria o celebremos!\n\n- Vinde, adoremos e prostremo-nos por terra, e ajoelhemos ante o Deus que nos criou! Porque ele é o nosso Deus, nosso pastor, e nós somos o seu povo e seu rebanho, as ovelhas que conduz com sua mão.\n\n- Oxalá ouvísseis hoje a sua voz: \"Não fecheis os corações como em Meriba, como em Massa, no deserto, aquele dia, em que outrora vossos pais me provocaram, apesar de terem visto as minhas obras\"."
+    },
+    "secondReading": {
+      "reference": "Coríntios 7,32-35",
+      "text": "Irmãos, 32eu gostaria que estivésseis livres de preocupações. O homem não casado é solícito pelas coisas do Senhor e procura agradar ao Senhor. 33O casado preocupa-se com as coisas do mundo e procura agradar à sua mulher, 34e, assim, está dividido. Do mesmo modo, a mulher não casada e a jovem solteira têm zelo pelas coisas do Senhor e procuram ser santas de corpo e espírito. Mas a que se casou preocupa-se com as coisas do mundo e procura agradar ao seu marido. 35Digo isso para o vosso próprio bem e não para vos armar um laço. O que eu desejo é levar-vos ao que é melhor, permanecendo junto ao Senhor, sem outras preocupações."
+    },
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 21-28",
+      "text": "21Na cidade de Cafarnaum, num dia de sábado, Jesus entrou na sinagoga e começou a ensinar. 22Todos ficavam admirados com o seu ensinamento, pois ensinava como quem tem autoridade, não como os mestres da lei. 23Estava então na sinagoga um homem possuído por um espírito mau. Ele gritou: 24\"Que queres de nós, Jesus nazareno? Vieste para nos destruir? Eu sei quem tu és: tu és o santo de Deus\". 25Jesus o intimou: \"Cala-te e sai dele!\" 26Então o espírito mau sacudiu o homem com violência, deu um grande grito e saiu. 27E todos ficaram muito espantados e perguntavam uns aos outros: \"O que é isso? Um ensinamento novo, dado com autoridade: ele manda até nos espíritos maus, e eles obedecem!\" 28E a fama de Jesus logo se espalhou por toda parte, em toda a região da Galileia."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Jerónimo (347-420)<br/>",
+    "</b>",
+    "Presbítero, tradutor da Bíblia, Doutor da Igreja<br/>",
+    "Comentário sobre o evangelho de S. Marcos, 2; PLS 2, 125s<br/>",
+    "«Uma nova doutrina»<br/>",
+    "«O espírito impuro, agitando-o violentamente, soltou um forte grito e saiu dele.» É esta a sua maneira de exprimir a sua dor: sacudindo o homem com violência. Uma vez que não podia alterar a alma deste homem, o demónio exerceu a sua violência no corpo. Estas manifestações físicas eram, aliás, o único meio que tinha à sua disposição para demonstrar que estava a sair. Tendo o espírito puro manifestado a sua presença, o espírito impuro bate em retirada. [...]<br/>",
+    "«Ficaram todos tão admirados, que perguntavam uns aos outros: \"Que vem a ser isto?\"» Olhemos para os Atos dos Apóstolos, e para os sinais que os primeiros profetas nos deram. Que dizem os magos do faraó perante os prodígios de Moisés? «Está aí o dedo de Deus» (Ex 8,15). É Moisés que os realiza, mas eles reconhecem o poder de outrem. Posteriormente, os apóstolos fizeram outros prodígios: «Em nome de Jesus, levanta-te e anda!» (At 3,6); «E Paulo disse ao espírito: \"Ordeno-te, em nome de Jesus Cristo, que saias desta mulher\"» (At 16,18). O nome de Jesus é sempre citado. Mas aqui, que diz Ele? «Sai desse homem», sem mais achegas. É em seu próprio nome que Ele ordena ao espírito que saia. «Ficaram todos tão admirados, que perguntavam uns aos outros: \"Que vem a ser isto? Uma nova doutrina?\"» A expulsão do demónio não tinha em si nada de novo: os exorcistas dos hebreus faziam-no frequentemente. Mas que diz Jesus? Que doutrina nova é esta? Onde está a novidade? É que Ele impõe-Se com a sua própria autoridade aos espíritos impuros. Ele não cita ninguém: é Ele próprio que dá as ordens; Ele não fala em nome de ninguém, mas com a sua própria autoridade.<br/>"
+  ]
+}

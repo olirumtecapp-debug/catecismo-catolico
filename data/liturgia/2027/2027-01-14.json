@@ -1,0 +1,33 @@
+{
+  "date": "2027-01-14",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "1a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Hebreus 3,7-14",
+      "text": "Irmãos: 7Escutai o que declara o Espírito Santo: 'Hoje, se ouvirdes a sua voz, 8não endureçais os vossos corações, como aconteceu na provacação, no dia da tentação, no deserto, 9onde vossos pais me tentaram, colocando-me à prova, 10embora vissem as minhas obras, durante quarenta anos. Por isso me irritei com essa geração e afirmei: sempre se enganam no coração e desconhecem os meus caminhos. 11Assim jurei em minha ira: não entrarão no meu repouso'. 12Cuidai, irmãos, que não se ache em algum de vós um coração transviado pela incredulidade, levando-o a afastar-se do Deus vivo. 13Antes, animai-vos uns aos outros, dia após dia, enquanto ainda se disser 'hoje', para que nenhum de vós se endureça pela sedução do pecado 14- pois tornamo-nos companheiros de Cristo, contanto que mantenhamos firme até ao fim a nossa confiança inicial."
+    },
+    "psalm": {
+      "reference": "Salmo 94 (95)",
+      "text": "- Vinde adoremos e prostremo-nos por terra, e ajoelhemos ante o Deus que nos criou! Porque ele é o nosso Deus, nosso Pastor, e nós somos o seu povo e seu rebanho, as ovelhas que conduz com sua mão.\n\n- Oxalá ouvísseis hoje a sua voz: 'Não fecheis os corações como em Meriba, como em Massa, no deserto, aquele dia, em que outrora vossos pais me provocaram, apesar de terem visto as minhas obras'.\n\n- Quarenta anos desgostou-me aquela raça e eu disse: 'Eis um povo transviado, seu coração não conheceu os meus caminhos!' E por isso lhes jurei na minha ira: 'Não entrarão no meu repouso prometido!'"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1,40-45",
+      "text": "Naquele tempo: 40Um leproso chegou perto de Jesus, e de joelhos pediu: 'Se queres tens o poder de curar-me'. 41Jesus, cheio de compaixão, estendeu a mão, tocou nele, e disse: 'Eu quero: fica curado!' 42No mesmo instante a lepra desapareceu e ele ficou curado. 43Então Jesus o mandou logo embora, 44falando com firmeza: 'Não contes nada disso a ninguém! Vai, mostra-te ao sacerdote e oferece, pela tua purificação, o que Moisés ordenou, como prova para eles!' 45Ele foi e começou a contar e a divulgar muito o fato. Por isso Jesus não podia mais entrar publicamente numa cidade: ficava fora, em lugares desertos. E de toda parte vinham procurá-lo."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Boaventura (1221-1274)<br/>",
+    "</b>",
+    "Franciscano, Doutor da Igreja<br/>",
+    "Vida de S. Francisco, Legenda Major 1, 5-6<br/>",
+    "«Jesus, compadecido, estendeu a mão e tocou-lhe»<br/>",
+    "Certo dia em que passeava a cavalo na planície que fica perto de Assis, Francisco cruzou-se inesperadamente com um leproso. Teve um sentimento de horror intenso mas, lembrando-se da resolução de vida perfeita que tomara, e de que devia, antes de mais, vencer-se a si mesmo, se queria ser «soldado de Cristo» (2Tim 2,3), saltou do cavalo para abraçar o infeliz. Este, que estendia a mão pedindo uma esmola, recebeu um beijo com o dinheiro. Em seguida, Francisco voltou a montar o cavalo. Mas, por muito que olhasse para um lado e para o outro, não viu o leproso. Cheio de admiração e de alegria, pôs-se a cantar louvores ao Senhor e prometeu não se deter neste ato de generosidade. […]<br/>",
+    "Abandonou-se então ao espírito de pobreza, ao gosto da humildade e aos impulsos de uma piedade profunda. Se até então a simples visão de um leproso o fazia estremecer de horror, passou a fazer-lhes todos os favores possíveis, com perfeita despreocupação por si mesmo, sempre humilde e muito humano; fazia-o por causa de Cristo crucificado que, nas palavras do profeta, «foi desprezado como um leproso» (Is 53,3). Ia visitá-los com frequência, dava-lhes esmolas e, emocionado de compaixão, beijava-lhes afetuosamente as mãos e o rosto. E aos mendigos, não se contentando em lhes dar o que tinha, quereria dar-se a si mesmo - de maneira que, quando não levava dinheiro consigo, dava-lhes as suas vestes, descosendo-as ou rasgando-as para as distribuir.<br/>",
+    "Foi por esta altura que realizou a peregrinação ao túmulo do apóstolo Pedro, em Roma. Quando viu os mendigos que fervilhavam no chão da basílica, levado pela compaixão e atraído pelo amor da pobreza, escolheu um dos mais miseráveis, propôs-lhe trocar as suas vestes pelos farrapos com que o homem se cobria, e passou todo o dia na companhia dos pobres, com a alma cheia de uma alegria que nunca, até então, conhecera.<br/>"
+  ]
+}

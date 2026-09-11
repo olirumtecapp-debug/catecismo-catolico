@@ -1,0 +1,32 @@
+{
+  "date": "2027-10-25",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Santo Antonio de Sant’Ana Galvao",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Romanos 8,12-17",
+      "text": "12Irmãos, temos uma dívida, mas não para com a carne, para vivermos segundo a carne. 13Pois, se viverdes segundo a carne, morrereis, mas se, pelo espírito, matardes o procedimento carnal, então vivereis. 14Todos aqueles que se deixam conduzir pelo Espírito de Deus são filhos de Deus. 15De fato, vós não recebestes um espírito de escravos, para recairdes no medo, mas recebestes um espírito de filhos adotivos, no qual todos nós clamamos: Abá - ó Pai! 16O próprio Espírito se une ao nosso espírito para nos atestar que somos filhos de Deus. 17E, se somos filhos, somos também herdeiros - herdeiros de Deus e co-herdeiros de Cristo -; se realmente sofremos com ele, é para sermos também glorificados com ele."
+    },
+    "psalm": {
+      "reference": "Salmo 67 (68)",
+      "text": "- Eis que Deus se põe de pé, e os inimigos se dispersam! Fogem longe de sua face os que odeiam o Senhor! Mas os justos se alegram na presença do Senhor rejubilam satisfeitos e exultam de alegria!\n\n- Dos órfãos ele é pai, e das viúvas protretor; é assim o nosso Deus em sua santa habitação. É o Senhor quem dá abrigo, dá um lar aos deserdados, quem liberta os prisioneiros e os sacia com fartura.\n\n- Bendito seja Deus, bendito seja cada dia, o Deus da nossa salvação, que carrega os nossos fardos! Nosso Deus é um Deus que salva, é um Deus libertador; o Senhor, só o Senhor, nos poderá livrar da morte!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 13, 10-17",
+      "text": "Naquele tempo: 10Jesus estava ensinando numa sinagoga, em dia de sábado. 11Havia aí uma mulher que, fazia dezoito anos, estava com um espírito que a tornava doente. Era encurvada e incapaz de se endireitar. 12Vendo-a, Jesus chamou-a e lhe disse: 'Mulher, estás livre da tua doença.' 13Jesus colocou as mãos sobre ela, e imediatamente a mulher se endireitou, e começou a louvar a Deus. 14O chefe da sinagoga ficou furioso, porque Jesus tinha feito uma cura em dia de sábado. E, tomando a palavra, começou a dizer à multidão: 'Existem seis dias para trabalhar. Vinde, então, nesses dias para serdes curados, mas não em dia de sábado.' 15O Senhor lhe respondeu: 'Hipócritas! Cada um de vós não solta do curral o boi ou o jumento, para dar-lhe de beber, mesmo que seja dia de sábado? 16Esta filha de Abraão, que Satanás amarrou durante dezoito anos, não deveria ser libertada dessa prisão, em dia de sábado?' 17Esta resposta envergonhou todos os inimigos de Jesus. E a multidão inteira se alegrava com as maravilhas que ele fazia."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Gregório Magno<br/>",
+    "</b>",
+    "Papa, Doutor da Igreja<br/>",
+    "Homílias sobre o Evangelho, n.° 31<br/>",
+    "«Mulher, estás livre da tua enfermidade»<br/>",
+    "«Naquele tempo, estava Jesus a ensinar ao sábado numa sinagoga. Apareceu lá uma mulher com um espírito que a tornava enferma havia dezoito anos; andava curvada e não podia de modo algum endireitar-se.» [...] O pecador, preocupado com as coisas da terra e não procurando as do Céu, torna-se incapaz de olhar para o alto: ao seguir os desejos que o conduzem para baixo, a sua alma, perdendo a retidão, curva-se, e apenas vê aquilo em que pensa incessantemente. Voltai-vos para dentro do vosso coração, irmãos muito estimados, e examinai continuamente os pensamentos que não cessam de agitar o vosso espírito. Um pensa nas honras, outro no dinheiro, outro ainda em aumentar as suas propriedades. Todas essas coisas são inferiores e, quando o espírito investe nisso, altera-se, perdendo a sua retidão. E, porque não se engrandece para desejar os bens do alto, está como esta mulher curvada, que não consegue de modo nenhum olhar para cima. [...]<br/>",
+    "Efetivamente, o salmista descreveu bem a nossa curvatura quando disse de si próprio, como símbolo de todo o género humano: «Ando cabisbaixo e profundamente abatido» (Sl 37,7). Considerava que o homem, tendo sido criado para contemplar a luz do alto, fora expulso do paraíso devido aos seus pecados, e que, consequentemente, as trevas reinavam na sua alma, fazendo-o perder o apetite das coisas do alto e arrastando toda a sua atenção para as inferiores. [...] Se o homem que perdeu de vista as coisas do Céu pensasse apenas nas necessidades deste mundo, andaria sem dúvida curvado e humilhado, mas não «em excesso». Ora, como não é só a necessidade que faz descer os seus pensamentos [...], mas também o prazer proibido que o esmaga, não anda somente curvado, mas curvado em excesso.<br/>"
+  ]
+}

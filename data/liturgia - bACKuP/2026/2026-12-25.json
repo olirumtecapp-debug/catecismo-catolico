@@ -1,0 +1,27 @@
+{
+  "date": "2026-12-25",
+  "season": "Christmas",
+  "readings": {
+    "firstReading": "Is 52:7-10",
+    "psalm": "Sl 98:1, 2-3, 3-4, 5-6.",
+    "secondReading": "Hb 1:1-6",
+    "gospel": "Jo 1:1-18"
+  },
+  "calendar": {
+    "date": "2026-12-25",
+    "monthDay": "12/25",
+    "season": "Christmas",
+    "celebration": {
+      "name": "Christmas",
+      "type": "SOLEMNITY",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/12-25.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/12-25.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-12-25"
+  }
+}

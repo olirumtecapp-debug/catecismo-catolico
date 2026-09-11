@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-21",
+  "year": 2026,
+  "month": 10,
+  "day": 21,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/21.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-10-21.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-10-21",
+      "name": "São Gaspar del Búfalo, presbítero, fundador dos Missionários do Preciosíssimo Sangue de Cristo",
+      "normalizedName": "sao gaspar del bufalo, presbitero, fundador dos missionarios do preciosissimo sangue de cristo",
+      "imageUrl": "./assets/img/santos/10-21-sao-gaspar-del-bufalo-presbitero-fundador-dos.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/21/s--gaspar-del-bufalo--presbitero--fundador-dos-missionarios-do-p.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/21/s--gaspar-del-bufalo--presbitero--fundador-dos-missionarios-do-p.html",
+      "sourceText": "Gaspar nasceu em Roma, em 1786, e, desde criança, sentiu o chamado do Senhor. Como sacerdote, evangelizou os pobres, recusou-se obedecer a Napoleão, converteu os maçons e bandidos que infestavam o Estado Pontifício. Em 1815, fundou os dois ramos dos Missionários do Preciosíssimo Sangue.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "name": "São Hilarião, abade",
+      "normalizedName": "sao hilariao, abade",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Hilarião, palestino de origem pagã, estudou em Alexandria, Egito, e se converteu ao cristianismo. Sob a guia de Santo Antônio Abade, aprendeu a amar a solidão, a oração e a penitência. Retirou-se como eremita para Majuma, onde fundou vários mosteiros e obteve conversões. Faleceu em Chipre, em 372.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "name": "Santa Úrsula",
+      "normalizedName": "santa ursula",
+      "imageUrl": "./assets/img/santos/10-21-santa-ursula.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Filha esplêndida de um rei bretão, no século IV, Úrsula concordou em se casar com um rei pagão, desde que se convertesse ao cristianismo. Então, partiu para Colônia com 11 virgens – que se tornaram 11.000 por erro de transcrição – onde recebeu a palma do martírio por mãos dos Hunos de Átila.",
+      "a12": {
+        "profileUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=21&month=10",
+        "source": "A12 — Portal A12",
+        "sourceUrl": "https://www.a12.com/reze-no-santuario/santo-do-dia?day=21&month=10",
+        "sourceText": {
+          "paragraphs": [
+            "Úrsula nasceu no ano 362, filha dos reis da Cornúbia, na Inglaterra. Era uma linda menina, meiga, inteligente e caridosa. Cresceu muito ligada à religião, seguindo aos princípios da fé e amor em Cristo. A fama de sua beleza se espalhou e logo os pedidos de casamento sugiram. Por motivos políticos, seu pai aceitou a proposta feita por um duque pagão. Pela obediência à seu pai Ùrsula aceitou, mas pediu que ficasse ainda três anos solteira. Neste tempo pensava em converter o pretendente ou fazê-lo desistir das núpcias. Mas ao seu tempo a jovem precisou ir ao encontro do noivo. Com ela viajaram mais onze meninas virgens, que se casariam com soldados do rei. Aconteceu então o imprevisto. Navegando pelo Reno, o navio de Úrsula cruzou o território dominado pelos Hunos, povo bárbaro e pagão. Logo os soldados hunos mataram todos e apenas Úrsula escapou, pois Átila, o rei dos Hunos, ficou maravilhado com a beleza e juventude da nobre princesa. Ele tentou seduzi-la e lhe propôs casamento. Mas, a custo da própria vida, Úrsula o recusou dizendo que já era esposa do mais poderoso de todos os reis da Terra, Jesus Cristo. Cego de ódio ele pessoalmente a degolou. Tudo aconteceu em 21 de outubro de 383.",
+            "Reflexão:",
+            "O martírio de Ùrsula e de suas companheiras retrata para nós a perseverança na fé mesmo em condições adversas. Sabemos que em períodos de tranquilidade é fácil manter o coração e a boca no louvor ao Senhor. Mas será que quando vierem as dores e as cruzes saberemos reconhecer a bondade de Deus em nossa vida?",
+            "Oração:",
+            "Ó Deus, destes a Santa Úrsula a fortaleza da graça para ir ao encontro do martírio com toda a coragem: concedei que, apoiados em suas preces e instruídos pelo seu exemplo, possamos avançar no caminho do vosso amor, por entre as dificuldades da vida, e chegar à contemplação de vossa beleza. Por Cristo nosso Senhor. Amém.",
+            "Enviar por e-mail"
+          ]
+        }
+      },
+      "enrichment": {
+        "a12Found": true
+      }
+    }
+  ]
+}

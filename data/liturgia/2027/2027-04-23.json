@@ -1,0 +1,33 @@
+{
+  "date": "2027-04-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "4a. Semana da Pascoa Ciclo da Pascoa",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Atos dos Apóstolos 13,26-33",
+      "text": "Naqueles dias, tendo chegado a Antioquia da Pisídia, Paulo disse na sinagoga: 26\"Irmãos, descendentes de Abraão, e todos vós que temeis a Deus, a nós foi enviada esta mensagem de salvação. 27Os habitantes de Jerusalém e seus chefes não reconheceram a Jesus e, ao condená-lo, cumpriram as profecias que se leem todos os sábados. 28Embora não encontrassem nenhum motivo para a sua condenação, pediram a Pilatos que fosse morto. 29Depois de realizarem tudo o que a Escritura diz a respeito de Jesus, eles o tiraram da cruz e o colocaram num túmulo. 30Mas Deus o ressuscitou dos mortos 31e, durante muitos dias, ele foi visto por aqueles que o acompanharam desde a Galileia até Jerusalém. Agora eles são testemunhas de Jesus diante do povo. 32Por isso, nós vos anunciamos este evangelho: a promessa que Deus fez aos antepassados, 33ele a cumpriu para nós, seus filhos, quando ressuscitou Jesus, como está escrito no salmo segundo: 'Tu és o meu filho, eu hoje te gerei'\"."
+    },
+    "psalm": {
+      "reference": "Salmo 2",
+      "text": "- \"Fui eu mesmo que escolhi este meu rei e, em Sião, meu monte santo, o consagrei!\" O decreto do Senhor promulgarei, foi assim que me falou o Senhor Deus: \"Tu és meu Filho, e eu hoje te gerei!\"\n\n- Podes pedir-me e, em resposta, eu te darei por tua herança os povos todos e as nações, e há de ser a terra inteira o teu domínio. Com cetro férreo haverás de dominá-los e quebrá-los como um vaso de argila!\n\n- E agora, poderosos, entendei; soberanos, aprendei esta lição: com temor servi a Deus, rendei-lhe glória e prestai-lhe homenagem com respeito!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São João 14, 1-6",
+      "text": "Naquele tempo, disse Jesus a seus discípulos: 1\"Não se perturbe o vosso coração. Tendes fé em Deus, tende fé em mim também. 2Na casa de meu Pai há muitas moradas. Se assim não fosse, eu vos teria dito. Vou preparar um lugar para vós 3e, quando eu tiver ido preparar-vos um lugar, voltarei e vos levarei comigo, a fim de que, onde eu estiver, estejais também vós. 4E para onde eu vou, vós conheceis o caminho\". 5Tomé disse a Jesus: \"Senhor, nós não sabemos para onde vais. Como podemos conhecer o caminho?\" 6Jesus respondeu: \"Eu sou o caminho, a verdade e a vida. Ninguém vai ao Pai senão por mim\"."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Cirilo de Alexandria, Bispo e Doutor da Igreja<br/>",
+    "</b>",
+    "<b>",
+    "Comentário ao Evangelho de João, 9 ; PG 74, 182-183<br/>",
+    "</b>",
+    "«Para que, onde Eu estou, estejais vós também»<br/>",
+    "«Em casa de meu Pai há muitas moradas; se assim não fosse, Eu vos teria dito que vou preparar-vos um lugar?» [...] Se as moradas do Pai não fossem numerosas, o Senhor teria dito que falava como precursor, a fim de preparar as moradas dos santos. Mas Ele sabia que já estavam preparadas muitas moradas, à espera da chegada dos amigos de Deus. Apresenta, pois, outra justificação para a sua partida: preparar o caminho da nossa ascensão para esses lugares do céu, abrindo-nos uma passagem para lá chegarmos, quando anteriormente esta rota era impraticável para nós. Porque o Céu estava absolutamente encerrado para os homens, e nunca ser algum de carne tinha penetrado neste santíssimo e puríssimo domínio dos anjos.<br/>",
+    "Cristo inaugurou este caminho para as alturas. Oferecendo-Se a Si mesmo a Deus Pai como primícias dos que dormem nos túmulos da terra, permitiu à carne ascender ao Céu e foi o primeiro homem a aparecer aos habitantes lá do alto. Os anjos não conheciam o augusto e grandioso mistério de uma entronização celeste da carne. Foi com espanto e admiração que assistiram a esta ascensão de Cristo. Quase perplexos por tão inaudito espetáculo, exclamaram: «Quem é Esse, que vem de Edom?» (Is 63,1), ou seja, da terra. Assim, pois, Nosso Senhor Jesus Cristo abriu-nos um caminho novo e vivo (Heb 10,20). «Cristo não entrou num santuário feito por mão de homem, figura do verdadeiro, mas no próprio Céu, para Se apresentar agora diante de Deus por nós» (Heb 9,24).<br/>"
+  ]
+}

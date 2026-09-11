@@ -1,0 +1,13 @@
+{
+  "startYear": 2026,
+  "endYear": 2026,
+  "ok": 365,
+  "errors": [],
+  "source": {
+    "readings": "https://cpbjr.github.io/catholic-readings-api/readings",
+    "calendar": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar",
+    "portugueseLiveEnrichment": "https://api-liturgia-diaria.vercel.app/?date=",
+    "license": "MIT for catholic-readings-api metadata source"
+  },
+  "note": "Local files store liturgical metadata and Bible references. Scripture text should be resolved from the local Catholic Bible dataset; third-party full reading text is not copied by this builder."
+}

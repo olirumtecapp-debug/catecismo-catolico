@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-05",
+  "year": 2026,
+  "month": 7,
+  "day": 5,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/05.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-07-05.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-07-05",
+      "name": "São Antônio Maria Zacarias, presbítero, fundador dos Barnabitas",
+      "normalizedName": "sao antonio maria zacarias, presbitero, fundador dos barnabitas",
+      "imageUrl": "./assets/img/santos/07-05-sao-antonio-maria-zacarias-presbitero-fundado.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Com 36 anos, Antônio contribuiu para o avanço da Igreja no século XV: fundou os Clérigos de São Paulo, as Angélicas de São Paulo - primeiro exemplo de Irmãs fora da clausura - e os Casados de São Paolo, um grupo de leigos casados, que se dedicava ao Evangelho. Acusado de heresia, Roma o absolveu.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

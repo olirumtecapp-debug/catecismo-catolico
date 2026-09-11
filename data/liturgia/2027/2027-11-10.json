@@ -1,0 +1,33 @@
+{
+  "date": "2027-11-10",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Leao Magno",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Sabedoria 6,1-11",
+      "text": "1Escutai, ó reis, e compreendei. Instrui-vos, governadores dos confins da terra! 2Prestai atenção, vós que dominais as multidões e vos orgulhais do número de vossos súditos. 3Pois o poder vos foi dado pelo Senhor e a soberania, pelo Altíssimo. É ele quem examinará as vossas obras e sondará as vossas intenções; 4apesar de estardes ao serviço do seu reino, não julgastes com retidão, nem observastes a Lei, nem procedestes conforme a vontade de Deus. 5Por isso, ele cairá de repente sobre vós, de modo terrível, porque um julgamento implacável será feito sobre os poderosos. 6O pequeno pode ser perdoado por misericórdia, mas os poderosos serão examinados com poder. 7O Senhor de todos não recuará diante de ninguém nem se deixará impressionar pela grandeza, porque o pequeno e o grande, foi ele quem os fez, e a sua providência é a mesma para com todos; 8mas para os poderosos, o julgamento será severo. 9A vós, pois, governantes, dirigem-se as minhas palavras, para que aprendais a Sabedoria e não venhais a tropeçar. 10Os que observam fielmente as coisas santas serão justificados; e os que as aprenderem vão encontrar sua defesa. 11Portanto, desejai ardentemente minhas palavras, amai-as e sereis instruídos."
+    },
+    "psalm": {
+      "reference": "Salmo 81 (82)",
+      "text": "- Fazei justiça aos indefesos e aos órfãos, ao pobre e ao humilde absolvei! Libertai o oprimido, o infeliz, da mão dos opressores arrancai-os!'\n\n- Eu disse: 'Ó juízes, vós sois deuses, sois filhos todos vós do Deus Altíssimo! E, contudo, como homens morrereis, caireis como qualquer dos poderosos!'"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 11-19",
+      "text": "11Aconteceu que, caminhando para Jerusalém, Jesus passava entre a Samaria e a Galiléia. 12Quando estava para entrar num povoado, dez leprosos vieram ao seu encontro. Pararam à distância, 13e gritaram: 'Jesus, Mestre, tem compaixão de nós!' 14Ao vê-los, Jesus disse: 'Ide apresentar-vos aos sacerdotes.' Enquanto caminhavam, aconteceu que ficaram curados. 15Um deles, ao perceber que estava curado, voltou glorificando a Deus em alta voz; 16atirou-se aos pés de Jesus, com o rosto por terra, e lhe agradeceu. E este era um samaritano. 17Então Jesus lhe perguntou: 'Não foram dez os curados? E os outro nove, onde estão? 18Não houve quem voltasse para dar glória a Deus, a não ser este estrangeiro?' 19E disse-lhe: 'Levanta-te e vai! Tua fé te salvou.'"
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia: Vida de São Francisco de Assis, chamada «Colectânea de Perugia» (c. 1311) <br/>",
+    "</b>",
+    "§43 <br/>",
+    "«Dar glória a Deus»<br/>",
+    "Dois anos antes da sua morte, o bem-aventurado Francisco estava já muito doente, sofrendo especialmente dos olhos. [...] Esteve mais de cinquenta dias sem poder suportar a luz do sol durante o dia, nem a claridade do lume durante a noite. Permanecia na obscuridade dentro de casa, na sua cela. [...] Certa noite, refletindo acerca das tribulações que sofria, teve pena de si mesmo e disse: «Senhor, socorre-me nas minhas enfermidades, para que eu tenha força para suportá-las com paciência!» E, de repente, ouviu em espírito uma voz: «Diz-me, irmão: se, como compensação dos teus sofrimentos e tribulações, te dessem um tesouro imenso e precioso, [...] não te alegrarias? [...] Compraz-te e vive na alegria, no meio das tuas enfermidades e tribulações: a partir de agora, vive em paz como se participasses já do meu Reino». <br/>",
+    "No dia seguinte, disse aos seus companheiros [...]: «Deus deu-me uma tal graça e bênção que, na sua misericórdia, Se dignou assegurar-me, a mim, seu indigno servo que ainda vivo aqui em baixo, que participarei do seu Reino. Assim, para sua glória, para minha consolação e edificação do próximo, quero compor um novo louvor ao Senhor pelas suas criaturas. Todos os dias estas atendem às nossas necessidades, sem elas não poderíamos viver, e por elas o género humano ofende muito o Criador. E todos os dias nós ignoramos tão grande bem, não louvando como deveríamos o Criador e dispensador de todos este dons». [...] <br/>",
+    "A esse louvor ao Senhor, que começa por: «Altíssimo, omnipotente e bom Senhor», chamou-lhe Cântico do irmão Sol. Com efeito, essa é a mais bela das criaturas, que podemos, mais que qualquer outra, comparar a Deus. E ele dizia: «Ao nascer do Sol, todo o homem deveria louvar a Deus por ter criado esse astro que durante o dia dá aos olhos a sua luz; à tardinha, quando cai a noite, todo o homem deveria louvar a Deus por esta outra criatura, o nosso irmão fogo, que, nas trevas, permite que os nossos olhos vejam claro. Somos todos como cegos, e é por estas duas criaturas que Deus nos dá a luz. Por isso, por estas criaturas e pelas outras que nos servem diariamente, devemos louvar muito particularmente o seu glorioso Criador». <br/>",
+    "Ele próprio o fazia de todo o coração, estivesse doente ou são, e incitava os outros a cantarem a glória do Senhor. Já doente, entoava muitas vezes este cântico e pedia aos seus companheiros que o prosseguissem; esquecia, deste modo, considerando a glória do Senhor, a violência das suas dores e dos seus males. Procedeu assim até ao dia da sua morte.<br/>"
+  ]
+}

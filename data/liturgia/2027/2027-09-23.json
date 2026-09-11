@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-23",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Pio de Pietrelcina",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Ageu 1,1-8",
+      "text": "1No segundo ano do reinado de Dario, no sexto mês, no primeiro dia, foi dirigida a palavra do Senhor, mediante o profeta Ageu, a Zorobabel, filho de Salatiel, governador de Judá, e a Josué, filho de Josedec, sumo sacerdote: 2'Isto diz o Senhor dos exércitos: Este povo diz: Ainda não chegou o momento de edificar a casa do Senhor'. 3A palavra do Senhor foi assim dirigida, por intermédio do profeta Ageu: 4'Acaso para vós é tempo de morardes em casas revestidas de lambris, enquanto esta casa está em ruínas? 5Isto diz, agora, o Senhor dos exércitos: Considerai, com todo o coração, a conjuntura que estais passando: 6tendes semeado muito, e colhido pouco; tendes-vos alimentado, e não vos sentis satisfeitos, bebeis e não vos embriagais; estais vestidos, e não vos aqueceis; quem trabalha por salário, guarda-o em saco roto. 7Isto diz o Senhor dos exércitos: Considerai, com todo o coração, a difícil conjuntura que estais passando: 8mas subi ao monte, trazei madeira e edificai a casa; ela me será aceitável, nela me glorificarei, diz o Senhor."
+    },
+    "psalm": {
+      "reference": "Salmo 149",
+      "text": "- Cantai ao Senhor Deus um canto novo, e o seu louvor na assembléia dos fiéis! Alegre-se Israel em Quem o fez, e Sião se rejubile no seu Rei!\n\n- Com danças glorifiquem o seu nome, toquem harpa e tambor em sua honra! Porque, de fato, o Senhor ama seu povo e coroa com vitória os seus humildes.\n\n- Exultem os fiéis por sua glória, e cantando se levantem de seus leitos; com louvores do Senhor em sua boca eis a glória para todos os seus santos."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 7-9",
+      "text": "Naquele tempo: 7O tetrarca Herodes ouviu falar de tudo o que estava acontecendo, e ficou perplexo, porque alguns diziam que João Batista tinha ressuscitado dos mortos. 8Outros diziam que Elias tinha aparecido; outros ainda, que um dos antigos profetas tinha ressuscitado. 9Então Herodes disse: 'Eu mandei degolar João. Quem é esse homem, sobre quem ouço falar essas coisas?' E procurava ver Jesus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por Santo Ambrósio <br/>",
+    "</b>",
+    "Bispo de Milão, Doutor da Igreja <br/>",
+    "Comentário sobre o evangelho de S. Lucas, I, 27 <br/>",
+    "«[Herodes] procurava ver Jesus»<br/>",
+    "Neste mundo, o Senhor só é visto quando quer, e não podemos espantar-nos com isso. Mesmo na ressurreição, só será dado ver a Deus aos que tiverem o coração puro: «Bem-aventurados os puros de coração, porque verão a Deus» (Mt 5,8). Quantas bem-aventuranças não tinha Jesus enumerado já e, contudo, não lhes tinha prometido esta possibilidade: de verem Deus. Se, portanto, aqueles que têm o coração puro hão de ver a Deus, seguramente que os outros não O verão [...]; aquele que não quis ver a Deus não poderá vê-lo. <br/>",
+    "Porque Deus não se vê num luga,r mas através de um coração puro. Não são os olhos do corpo que procuram Deus; Ele não é captado pelo olhar, nem tocado pelo tato, nem ouvido numa conversa, nem reconhecido pela sua postura. Julgamo-lo ausente e vemo-lo; está presente e não O vemos. Aliás, nem todos os apóstolos viam Cristo; foi por isso que Ele lhes disse: «Há tanto tempo que estou convosco e ainda não Me conheceis?» (Jo 19,9) Com efeito, todo aquele que conheceu qual é «a largura, o comprimento, a altura e a profundidade do amor de Cristo que ultrapassa todo o conhecimento» (Ef 3,18-19), esse viu a Cristo e viu também o Pai. Porque não é segundo a carne que conhecemos a Cristo (2Cor 6,16), mas segundo o Espírito: «O Espírito que está diante da nossa face é o Ungido do Senhor, o Cristo» (Lam 4,20). Que Ele Se digne, na sua misericórdia, cumular-nos de toda a plenitude de Deus, a fim de que possamos vê-lo!<br/>"
+  ]
+}

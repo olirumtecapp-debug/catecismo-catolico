@@ -1,0 +1,29 @@
+{
+  "date": "2027-11-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Solenidade: Fieis Defuntos",
+  "color": "roxo",
+  "readings": {
+    "firstReading": {
+      "reference": "Filipenses 1,18-26",
+      "text": "Irmãos, 18de qualquer maneira, com segundas intenções ou com sinceridade, Cristo é anunciado. E eu me alegro com isso e sempre me alegrarei. 19Pois eu sei que isso resultará na minha salvação graças à vossa oração e à assistência do Espírito de Jesus Cristo. 20Segundo a minha viva expectativa e a minha esperança, não terei de corar de vergonha. Se a minha firmeza continuar total, como sempre, então Cristo vai ser glorificado no meu corpo, seja pela minha vida, seja pela minha morte. 21Pois, para mim, o viver é Cristo e o morrer é lucro. 22Entretanto, se o viver na carne significa que meu trabalho será frutuoso, neste caso não sei o que escolher. 23Sinto-me atraído para os dois lados: tenho o desejo de partir, para estar com Cristo - o que para mim seria de longe o melhor -, 24mas para vós é mais necessário que eu continue minha vida neste mundo. 25Por isso, sei com certeza que vou ficar e continuar com vós todos, para que possais progredir e alegrar-vos na fé. 26Assim, com a minha volta para junto de vós, vai aumentar ainda a razão de vos gloriardes em Cristo Jesus."
+    },
+    "psalm": {
+      "reference": "Salmo 41 (42)",
+      "text": "- Assim como a corça suspira pelas águas correntes, suspira igualmente minha alma por vós, ó meu Deus!\n\n- Minha alma tem sede de Deus e deseja o Deus vivo. Quando terei a alegria de ver a face de Deus?\n\n- Peregrino e feliz caminhando para a casa de Deus, entre gritos, louvor e alegria da multidão jubilosa."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 14, 1.7-11",
+      "text": "1Aconteceu que, num dia de sábado, Jesus foi comer na casa de um dos chefes dos fariseus. E eles o observavam. 7Jesus notou como os convidados escolhiam os primeiros lugares. Então, contou-lhes uma parábola: 8\"Quando tu fores convidado para uma festa de casamento, não ocupes o primeiro lugar. Pode ser que tenha sido convidado alguém mais importante do que tu, 9e o dono da casa, que convidou os dois, venha te dizer: 'Dá o lugar a ele'. Então tu ficarás envergonhado e irás ocupar o último lugar. 10Mas, quando tu fores convidado, vai sentar-te no último lugar. Assim, quando chegar quem te convidou, te dirá: 'Amigo, vem mais para cima'. E isso vai ser uma honra para ti diante de todos os convidados. 11Porque quem se eleva será humilhado, e quem se humilha será elevado\"."
+    }
+  },
+  "extra": [
+    "Comenário ao Evangelho por São Francisco de Sales, Bispo e Doutor da Igreja<br/>",
+    "Palestra 5<br/>",
+    "«Quem se humilha será exaltado»<br/>",
+    "A humildade não consiste apenas em desconfiarmos de nós mesmos, mas também em confiarmos em Deus; a desconfiança de nós e das nossas próprias forças produz a confiança em Deus, e desta confiança nasce a generosidade de espírito. Nossa Senhora, a Santíssima Virgem, deu-nos um exemplo notável disto quando pronunciou estas palavras: «Eis aqui a serva do Senhor, faça-se em mim segundo a tua palavra» (Lc 1,38). Quando diz que é a serva do Senhor, demonstra uma enorme humildade, tanto mais que opõe o que diz aos louvores que o anjo lhe dirige: que será Mãe de Deus, que o Menino que sairá do seu ventre será chamado Filho do Altíssimo, uma dignidade maior do que se poderia imaginar; ora, ela opõe, como eu dizia, a todos estes louvores e grandezas a sua baixeza e a sua indignidade, afirmando que é a serva do Senhor. Mas reparai que, após ter prestado tributo à humildade, tem de imediato uma atitude de enorme generosidade ao dizer: «Faça-se em mim segundo a tua palavra».<br/>",
+    "É certo, queria ela dizer, que não tenho qualquer capacidade para receber esta graça, tendo em consideração o que sou; mas na medida em que aquilo que é bom em mim pertence a Deus e em que aquilo que me dizes é a sua santa vontade, creio que pode fazer-se e se fará; e, sem a mínima hesitação, diz: «Faça-se em mim segundo a tua palavra».<br/>"
+  ]
+}

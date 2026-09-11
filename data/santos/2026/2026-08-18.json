@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-18",
+  "year": 2026,
+  "month": 8,
+  "day": 18,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/18.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-08-18.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-08-18",
+      "name": "São Agapito, mártir de Palestrina, Itália",
+      "normalizedName": "sao agapito, martir de palestrina, italia",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Agapito, Papa por quase um ano, foi enviado pelo rei dos Godos a Constantinopla para dissuadir o imperador Justiniano de retomar a Itália. A missão não teve êxito, mas o Papa conseguiu uma nova vitória contra a heresia do monofisismo. Durante o seu retorno a Roma, Agapito faleceu, em 536.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "name": "São Helena, imperatriz",
+      "normalizedName": "sao helena, imperatriz",
+      "imageUrl": "./assets/img/santos/08-18-sao-helena-imperatriz.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/18/s--helena--imperatriz.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/08/18/s--helena--imperatriz.html",
+      "sourceText": "Santa Helena era mãe de Constantino, o imperador que deu liberdade de culto aos cristãos. Atenciosa com os pobres e de profunda fé cristã, construiu importantes basílicas. Celebrada pela Igreja no dia 18 de agosto, Santa Helena é recordada pela descoberta da verdadeira Cruz de Cristo.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

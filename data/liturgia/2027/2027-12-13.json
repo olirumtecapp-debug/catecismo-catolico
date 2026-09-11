@@ -1,0 +1,32 @@
+{
+  "date": "2027-12-13",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Advento Ciclo do Natal Memoria: Santa Luzia",
+  "color": "vermelho",
+  "readings": {
+    "firstReading": {
+      "reference": "Jeremias 23,5-8",
+      "text": "5Eis que virão dias, diz o Senhor, em que farei nascer um descendente de Davi; reinará como rei e será sábio, fará valer a justiça e a retidão na terra. 6Naqueles dias, Judá será salvo e Israel viverá tranqüilo; este é o nome com que o chamarão: 'Senhor, nossa Justiça.' 7Eis que virão dias, diz o Senhor, em que já não se usará jurar 'Pela vida do Senhor que tirou os filhos de Israel do Egito' 8- mas sim: 'Pela vida do Senhor que tirou e reconduziu os descendentes da casa de Israel desde o país do norte e todos os outros países`, para onde os expulsará; eles então irão habitar em sua terra'."
+    },
+    "psalm": {
+      "reference": "Salmo 71 (72)",
+      "text": "- Dai ao Rei vossos poderes, Senhor Deus, vossa justiça ao descendente da realeza! Com justiça ele governe o vosso povo, com eqüidade ele julgue os vossos pobres.\n\n- Libertará o indigente que suplica, e o pobre ao qual ninguém quer ajudar. Terá pena do indigente e do infeliz, e a vida dos humildes salvará.\n\n- Bendito seja o Senhor Deus de Israel, porque só ele realiza maravilhas! Bendito seja o seu nome glorioso! Bendito seja eternamente! Amém, amém!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 1, 18-24",
+      "text": "18A origem de Jesus Cristo foi assim: Maria, sua mãe, estava prometida em casamento a José, e, antes de viverem juntos, ela ficou grávida pela ação do Espírito Santo. 19José, seu marido, era justo e, não querendo denunciá-la, resolveu abandonar Maria, em segredo. 20Enquanto José pensava nisso, eis que o anjo do Senhor apareceu-lhe, em sonho, e lhe disse: 'José, Filho de Davi, não tenhas medo de receber Maria como tua esposa, porque ela concebeu pela ação do Espírito Santo. 21Ela dará à luz um filho, e tu lhe darás o nome de Jesus, pois ele vai salvar o seu povo dos seus pecados'. 22Tudo isso aconteceu para se cumprir o que o Senhor havia dito pelo profeta: 23'Eis que a virgem conceberá e dará à luz um filho. Ele será chamado pelo nome de Emanuel, que significa: Deus está conosco.' 24Quando acordou, José fez conforme o anjo do Senhor havia mandado, e aceitou sua esposa."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Beda, o Venerável<br/>",
+    "</b>",
+    "Monge beneditino, Doutor da Igreja <br/>",
+    "Homilia 5 <br/>",
+    "«Por-Lhe-ás o nome de Jesus»<br/>",
+    "Em hebraico, «Jesus» significa «salvação» ou «Salvador», um nome que designava para os profetas uma vocação muito determinada. Assim se compreendem estas palavras, cantadas com um grande desejo de O ver: «A minha alma exultará no Senhor, e rejubilará na sua salvação, a minha alma consuma-se pela tua salvação» (Sl 12,6; 34,9; 118,81). «Alegrar-me-ei no Senhor, exultarei em Deus meu Salvador» (Hab 3,18). E, acima de tudo, «Salva-me ó Deus, por teu nome» (Sl 54,3). É como se disséssemos: «Tu que Te chamas Salvador, manifesta a glória do teu nome salvando-me». Portanto, o nome do Filho que nasceu da Virgem Maria é Jesus, segundo a explicação do anjo: «Ele salvará o povo dos seus pecados». [...] <br/>",
+    "A palavra «Cristo», por sua vez, designa a dignidade sacerdotal ou real. Com efeito, os sacerdotes e os reis eram «crismados», ou seja, ungidos dos óleos santos; por isso, eram sinal daquele que, aparecendo no mundo como o verdadeiro rei, o grande pai, recebeu a unção do «óleo da alegria, preferindo-te aos teus companheiros» (Sl 44,8). É por causa desta unção que Ele é chamado Cristo, e que aqueles que tomam parte nesta mesma unção da graça espiritual são chamados cristãos. Que, pelo seu nome de Salvador, Ele Se digne salvar-nos dos nossos pecados! Que, pela sua unção de grande pai, Ele Se digne reconciliar-nos com Deus Pai. Que, pela sua unção de rei, nos dê o reino eterno de seu Pai.<br/>"
+  ]
+}

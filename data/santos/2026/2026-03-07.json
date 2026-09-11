@@ -1,0 +1,43 @@
+{
+  "date": "2026-03-07",
+  "year": 2026,
+  "month": 3,
+  "day": 7,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/03/07.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-03-07.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-03-07",
+      "name": "SS. Perpétua e Felicidade, mártires",
+      "normalizedName": "ss. perpetua e felicidade,",
+      "imageUrl": "./assets/img/santos/03-07-ss-perpetua-e-felicidade-martires.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Martirizadas em Cartago, sob o império de Septimio Severo, em 203, Perpétua era uma dama e Felicidade a filha mais nova dos seus servos. A primeira, mãe há pouco tempo, e a segunda parturiente, se encorajaram na arena até o fim. O diário da Perpétua narra seus últimos dias na prisão romana.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "name": "Santa Teresa Margarida Redi, virgem carmelita",
+      "normalizedName": "santa teresa margarida redi, carmelita",
+      "imageUrl": "./assets/img/santos/03-07-santa-teresa-margarida-redi-virgem-carmelita.jpg",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Inspirando-se em Santa Teresa de Ávila, Ana Maria entrou para o Carmelo de Florença. Durante toda a sua existência, conjugou a vida contemplativa com a assistência às coirmãs enfermas, a ponto de ser chamada \"enfermeira santa\". Faleceu aos 23 anos, em 1770, e foi canonizada por Pio XI em 1934.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

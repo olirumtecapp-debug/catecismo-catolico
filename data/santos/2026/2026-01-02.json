@@ -1,0 +1,30 @@
+{
+  "date": "2026-01-02",
+  "year": 2026,
+  "month": 1,
+  "day": 2,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/02.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-01-02.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-01-02",
+      "name": "SS. Basílio Magno e Gregório Nazianzeno, bispos e doutores da Igreja",
+      "normalizedName": "ss. basilio magno e gregorio nazianzeno, bispos e doutores da igreja",
+      "imageUrl": "./assets/img/santos/01-02-ss-basilio-magno-e-gregorio-nazianzeno-bispos.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/02/ss--basilio-magno-e-gregorio-nazianzeno--bispos-e-doutores-da-ig.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/01/02/ss--basilio-magno-e-gregorio-nazianzeno--bispos-e-doutores-da-ig.html",
+      "sourceText": "São Basílio Magno e São Gregório de Nazianzeno viveram interligados por uma profunda amizade, tanto que são festejados pela Igreja no mesmo dia 2 de janeiro.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

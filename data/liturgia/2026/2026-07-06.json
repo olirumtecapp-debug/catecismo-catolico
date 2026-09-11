@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "14a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Oséias 2,16-18.21-22",
+      "text": "Assim fala o Senhor: 16Eis que eu a vou seduzir, levando-a à solidão, onde lhe falarei ao coração; 17be ela aí responderá ao compromisso, como nos dias de sua juventude, nos dias da sua vinda da terra do Egito. 18Acontecerá nesse dia, diz o Senhor, que ela me chamará 'Meu marido', e não mais chamará 'Meu Baal. 21Eu te desposarei para sempre; eu te desposarei conforme as sanções da justiça e conforme as práticas da misericórdia. 22Eu te desposarei para manter fidelidade e tu conhecerás o Senhor."
+    },
+    "psalm": {
+      "reference": "Salmo 144 (145)",
+      "text": "- Todos os dias haverei de bendizer-vos, hei de louvar o vosso nome para sempre. Grande é o Senhor e muito digno de louvores, e ninguém pode medir sua grandeza.\n\n- Uma idade conta à outra vossas obras e publica os vossos feitos poderosos; proclamam todos o esplendor de vossa glória e divulgam vossas obras portentosas!\n\n- Narram todos vossas obras poderosas, e de vossa imensidade todos falam. Eles recordam vosso amor tão grandioso\n\nR: Misericórdia e piedade é o Senhor.\n\nR: Misericórdia e piedade é o Senhor.\n\nEvangelho de Jesus Cristo segundo São Mateus 9, 18-26\n\n- Aleluia, Aleluia, Aleluia!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "text": "</b>"
+    }
+  },
+  "extra": [
+    "«Jesus entrou e tomou a menina pela mão»<br/>",
+    "Assim que Cristo entra em nós com a sua própria carne, nós revivemos inteiramente; é inconcebível ou, mais ainda, impossível, que a vida não faça viver aqueles nos quais se introduziu. Tal como se cobre um tição ardente com um monte de palha para manter intacto o germe do fogo, assim nosso Senhor Jesus Cristo esconde a vida em nós pela sua própria carne e coloca aí como que uma semente de imortalidade, que afasta toda a corrupção que trazemos em nós.<br/>",
+    "Não é pois apenas pela sua palavra que ele realiza a ressurreição dos mortos. Para mostrar que o seu corpo dá a vida, como tínhamos dito, ele toca os cadáveres e, pelo seu corpo, dá a vida a esses corpos já em vias de desintegração. Se o simples contacto da sua carne sagrada restitui a vida a esses mortos, que benefício não encontraremos nós na sua Eucaristia vivificante quando a recebemos! [...] Não basta que apenas a nossa alma seja regenerada pelo Espírito para uma vida nova. O nosso corpo denso e terrestre também deve ser santificado, pela sua participação num corpo igualmente denso e com a mesma origem que o nosso, sendo desse modo chamado à incorruptibilidade.<br/>"
+  ]
+}

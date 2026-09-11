@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-17",
+  "year": 2026,
+  "month": 5,
+  "day": 17,
+  "source": "Vatican News",
+  "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/17.html",
+  "liturgicalCelebration": null,
+  "methodology": {
+    "primarySaintSource": "Vatican News",
+    "enrichmentSource": "A12 — Portal A12",
+    "liturgySource": "data/liturgia/2026/2026-05-17.json",
+    "rule": "A celebração litúrgica e a lista de santos são dados distintos. Vatican News define os santos associados à data; a Liturgia local define a celebração quando o JSON possui campo explícito; o A12 apenas enriquece perfis."
+  },
+  "saints": [
+    {
+      "date": "2026-05-17",
+      "name": "São Vítor, mártir, na via Salária Antiga",
+      "normalizedName": "sao vitor, martir, na via salaria antiga",
+      "imageUrl": "",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Sabemos, por meio de antigos testemunhos, que Vítor, mártir romano do século IV, foi enterrado no cemitério de Santa Basila, ao longo da Via Salária antiga. Às vezes, é recordado junto com outro mártir de origem egípcia: Santo Andrione de Alexandria, do qual, porém, se conhece apenas o nome.",
+      "enrichment": {
+        "a12Found": false
+      }
+    },
+    {
+      "date": "2026-05-17",
+      "name": "São Pascoal Bailão, leigo franciscano, padroeiro das Associações Eucarísticas",
+      "normalizedName": "sao pascoal bailao, leigo franciscano, padroeiro das associacoes eucaristicas",
+      "imageUrl": "./assets/img/santos/05-17-sao-pascoal-bailao-leigo-franciscano-padroeir.jpg",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/17/s--pascoal-bailao--leigo-franciscano--padroeiro-das-associacoes-.html",
+      "source": "Vatican News",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/17/s--pascoal-bailao--leigo-franciscano--padroeiro-das-associacoes-.html",
+      "sourceText": "Nascido em Aragão, Pascoal era um pastor. Tentou e conseguiu entrar para os Franciscanos Alcantarinos de Santa Maria de Loreto, mas permaneceu leigo, por não se sentir digno de emitir os votos. Pela sua devoção, foi chamado \"serafim da Eucaristia\". Faleceu em 1592 e foi canonizado em 1690.",
+      "enrichment": {
+        "a12Found": false
+      }
+    }
+  ]
+}

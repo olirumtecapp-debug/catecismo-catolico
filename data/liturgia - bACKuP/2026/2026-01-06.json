@@ -1,0 +1,27 @@
+{
+  "date": "2026-01-06",
+  "season": "Christmas",
+  "readings": {
+    "firstReading": "1Jo 4:7-10",
+    "psalm": "Psalm 72:1-2, 3-4, 7-8",
+    "secondReading": "",
+    "gospel": "Mc 6:34-44"
+  },
+  "calendar": {
+    "date": "2026-01-06",
+    "monthDay": "1/6",
+    "season": "Christmas",
+    "celebration": {
+      "name": "Tuesday after Epiphany",
+      "type": "FERIA",
+      "quote": null,
+      "description": null,
+      "image": null
+    }
+  },
+  "verification": {
+    "readingsUrl": "https://cpbjr.github.io/catholic-readings-api/readings/2026/01-06.json",
+    "calendarUrl": "https://cpbjr.github.io/catholic-readings-api/liturgical-calendar/2026/01-06.json",
+    "portugueseApiUrl": "https://api-liturgia-diaria.vercel.app/?date=2026-01-06"
+  }
+}

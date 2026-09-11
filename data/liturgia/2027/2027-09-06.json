@@ -1,0 +1,32 @@
+{
+  "date": "2027-09-06",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "23a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Colossenses 1,24-2,3",
+      "text": "Irmãos: 24Alegro-me de tudo o que já sofri por vós e procuro completar na minha própria carne o que falta das tribulações de Cristo, em solidariedade com o seu corpo, isto é, a Igreja. 25A ela eu sirvo, exercendo o cargo que Deus me confiou de vos transmitir a palavra de Deus em sua plenitude: 26o mistério escondido por séculos e gerações, mas agora revelado aos seus santos. 27A este Deus quis manifestar como é rico e glorioso entre as nações este mistério: a presença de Cristo em vós, a esperança da glória. 28Nós o anunciamos, admoestando a todos e ensinando a todos, com toda sabedoria, para a todos tornar perfeitos em sua união com Cristo. 29Para isso eu me esforço com todo o empenho, sustentado pela sua força que em mim opera. 2,1Quero pois que saibais que luta difícil sustento por vós, pelos fiéis de Laodicéia e por tantos outros, que não me conhecem pessoalmente, 2para que sejam consolados e se mantenham unidos na caridade, para que eles cheguem a entender profunda e plenamente o mistério de Deus Pai e de Cristo Jesus, 3no qual estão encerrados todos os tesouros da sabedoria e da ciência."
+    },
+    "psalm": {
+      "reference": "Salmo 61 (62)",
+      "text": "- Só em Deus a minha alma tem repouso, porque dele é que me vem a salvação! Só ele é meu rochedo e salvação, a fortaleza, onde encontro segurança!\n\n- Povo todo, esperai sempre no Senhor, e abri diante dele o coração: nosso Deus é um refúgio para nós!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 6-11",
+      "text": "Aconteceu num dia de sábado que, 6Jesus entrou na sinagoga, e começou a ensinar. Aí havia um homem cuja mão direita era seca. 7Os mestres da Lei e os fariseus o observavam, para verem se Jesus iria curá-lo em dia de sábado, e assim encontrarem motivo para acusá-lo. 8Jesus, porém, conhecendo seus pensamentos, disse ao homem da mão seca: 'Levanta-te, e fica aqui no meio.' Ele se levantou, e ficou de pé. 9Disse-lhes Jesus: 'Eu vos pergunto: O que é permitido fazer no sábado: o bem ou o mal, salvar uma vida ou deixar que se perca?' 10Então Jesus olhou para todos os que estavam ao seu redor, e disse ao homem: 'Estende a tua mão.' O homem assim o fez e sua mão ficou curada. 11Eles ficaram com muita raiva, e começaram a discutir entre si sobre o que poderiam fazer contra Jesus."
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário do dia por São Cesário de Arles (470-543), monge, bispo<br/>",
+    "</b>",
+    "Sermões ao povo nº 57, 4<br/>",
+    "«Os escribas e os fariseus espiavam-no, a fim de encontrarem motivo para O acusar»<br/>",
+    "O Senhor dirá àqueles que desprezaram a sua misericórdia: «Homem, fui Eu que, com as minhas mãos, te formei do pó da terra, fui Eu que insuflei o espírito no teu corpo de terra, fui Eu que Me dignei atribuir-te a nossa imagem e a nossa semelhança, fui Eu que te coloquei no meio das delícias do paraíso. Mas tu, desprezando os mandamentos da vida, preferiste seguir o sedutor a seguir o Senhor.<br/>",
+    "»Consequentemente, quando foste expulso do paraíso e ficaste preso nas cadeias da morte pelo pecado, enternecido de misericórdia, Eu entrei num seio virginal para vir ao mundo, sem prejuízo para essa virgindade. Fui estendido numa manjedoura, envolvido em panos; suportei os dissabores da infância e os sofrimentos humanos, pelos quais Me fiz semelhante a ti, com o único objectivo de te tornar semelhante a Mim. Suportei as bofetadas e os escarros daqueles que se riam de Mim, bebi vinagre com fel. Flagelado com varas, coroado de espinhos, pregado à cruz, trespassado pela lança, entreguei a alma aos tormentos para te arrancar à morte. Vê a marca dos cravos com que fui pregado; vê o meu lado trespassado. Suportei estes sofrimentos para te dar a minha glória; suportei a tua morte para tu vivesses para toda a eternidade. Repousei, encerrado no sepulcro, para que tu reinasses no céu.<br/>",
+    "»Porque perdeste aquilo que sofri por ti? Porque renunciaste às graças da tua redenção? Dá-Me a tua vida, pela qual dei a minha; dá-Me a tua vida, que destróis sem cessar pelos ferimentos dos teus pecados.»<br/>"
+  ]
+}

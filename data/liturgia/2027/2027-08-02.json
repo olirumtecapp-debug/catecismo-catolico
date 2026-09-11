@@ -1,0 +1,28 @@
+{
+  "date": "2027-08-02",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "18a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Números 11,4-15",
+      "text": "Naqueles dias: 4bOs filhos de Israel começaram a lamentar-se, dizendo: 'Quem nos dará carne para comer? 5Vêm-nos à memória os peixes que comíamos de graça no Egito , os pepinos e os melões, as verduras, as cebolas e os alhos. 6Aqui nada tem gosto ao nosso paladar, não vemos outra coisa a não ser o maná'. 7O maná era parecido com a semente do coentro e amarelado como certa resina. 8O povo se dispersava para o recolher e o moía num moinho, ou socava num pilão. Depois o cozinhavam numa panela e faziam broas com gosto de pão amassado com azeite. 9É noite, quando o orvalho caía no acampamento, caía também o maná. 10Moisés ouviu, pois, o povo lamentar-se em cada família, cada um à entrada de sua tenda. 11Então o Senhor tomou-se de uma cólera violenta, e Moisés, achando também tal coisa intolerável, disse ao Senhor: 'Por que maltrataste assim o teu povo? Por que gozo tão pouco do teu favor, a ponte de descarregares sobre mim o peso de todo este povo? 12Acaso fui eu quem concebeu e deu à luz todo este povo, para que me digas: 'Carrega-o ao colo, como a ama costuma fazer com a criança; e leva-o à terra que juraste dar a seus pais! 13Onde conseguirei carne para dar a toda esta gente? Pois se lamentam contra mim, dizendo: 'Dá-nos carne para comer!'. 14Já não posso suportar sozinho o peso de todo este povo: é grande demais para mim. 15Se queres continuar a tratar-me assim, peço-te que me tires a vida, se achei graça a teus olhos, para que eu não veja mais tamanha desgraça'."
+    },
+    "psalm": {
+      "reference": "Salmo 80 (81)",
+      "text": "- Mas meu povo não ouviu a minha voz, Israel não quis saber de obedecer-me. Deixei, então, que eles seguissem seus caprichos,\n\nR: Exultai no Senhor nossa força.\n\nR: Exultai no Senhor nossa força.\n\nR: Exultai no Senhor nossa força.\n\nEvangelho de Jesus Cristo segundo São Mateus 14, 13-21\n\n- Aleluia, Aleluia, Aleluia!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "text": "</b>"
+    }
+  },
+  "extra": [
+    "«Vou conduzi-la ao deserto e aí lhe falarei ao coração» (Os 2, l6)<br/>",
+    "Mateus dá mais explicações [que Marcos] sobre o modo como Jesus teve piedade da multidão, quando diz: «cheio de compaixão, curou os seus doentes». Porque ter compaixão dos pobres e daqueles que não têm pastor é precisamente abrir-lhes o caminho da verdade, instruindo-os, é fazer desaparecer as suas enfermidades físicas, sarando-as, mas é também alimentá-los quando têm fome e, assim, encorajá-los a louvar a generosidade de Deus. Foi o que Jesus fez. [...]<br/>",
+    "Mas Ele também pôs à prova a fé da multidão e, tendo-a provado, deu-lhe uma recompensa proporcional. Efectivamente, Ele procurou um lugar isolado, para ver se as pessoas tinham o desejo de O seguir. E elas seguiram-No: tomaram a toda a pressa o caminho do deserto, não de burro ou em veículos, mas a pé, mostrando assim, através do seu esforço pessoal, a grande preocupação que tinham com a sua salvação.<br/>",
+    "Por seu lado, Jesus acolheu esta gente fatigada. Como Salvador e médico cheio de poder e de bondade, instruiu os ignorantes, curou os doentes e alimentou os famintos, manifestando assim quanta alegria Lhe dá o amor dos que crêem.<br/>"
+  ]
+}

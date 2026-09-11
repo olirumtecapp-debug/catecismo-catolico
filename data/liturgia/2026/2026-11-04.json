@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-04",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "Tempo: Comum Memoria: Sao Carlos Borromeu",
+  "color": "branco",
+  "readings": {
+    "firstReading": {
+      "reference": "Filipenses 2,12-18",
+      "text": "12Meus queridos, como sempre fostes obedientes, não só em minha presença, mas ainda mais agora na minha ausência, trabalhai para a vossa salvação, com temor e tremor. 13Pois é Deus que realiza em vós tanto o querer como o fazer, conforme o seu desígnio benevolente. 14Fazei tudo sem reclamar ou murmurar, 15para que sejais livres de repreensão e ambiguidade, filhos de Deus sem defeito, no meio desta geração depravada e pervertida, na qual brilhais como os astros no universo. 16Conservai com firmeza a palavra da vida. Assim, no dia de Cristo, terei a glória de não ter corrido em vão nem trabalhado inutilmente. 17E ainda que eu seja oferecido em libação, no sacrifício que é o sagrado serviço de vossa fé, fico feliz e alegro-me com todos vós. 18Vós também, alegrai-vos pelo mesmo motivo e congratulai-vos comigo."
+    },
+    "psalm": {
+      "reference": "Salmo 26 (27)",
+      "text": "- O Senhor é minha luz e salvação; de quem eu terei medo? O Senhor é a proteção da minha vida; perante quem eu tremerei?\n\n- Ao Senhor eu peço apenas uma coisa, e é só isto que eu desejo: habitar no santuário do Senhor por toda a minha vida; saborear a suavidade do Senhor e contemplá-lo no seu templo.\n\n- Sei que a bondade do Senhor eu hei de ver na terra dos viventes. Espera no Senhor e tem coragem, espera no Senhor!"
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Lucas 14,25-33",
+      "text": "Naquele tempo, 25grandes multidões acompanhavam Jesus. Voltando-se, ele lhes disse: 26\"Se alguém vem a mim, mas não se desapega de seu pai e sua mãe, sua mulher e seus filhos, seus irmãos e suas irmãs e até da sua própria vida, não pode ser meu discípulo. 27Quem não carrega sua cruz e não caminha atrás de mim não pode ser meu discípulo. 28Com efeito, qual de vós, querendo construir uma torre, não senta primeiro e calcula os gastos, para ver se tem o suficiente para terminar? Caso contrário, 29ele vai lançar o alicerce e não será capaz de acabar. E todos os que virem isso começarão a caçoar, dizendo: 30'Este homem começou a construir e não foi capaz de acabar!' 31Ou ainda, qual o rei que, ao sair para guerrear com outro, não se senta primeiro e examina bem se, com dez mil homens, poderá enfrentar o outro que marcha contra ele com vinte mil? 32Se ele vê que não pode, enquanto o outro rei ainda está longe, envia mensageiros para negociar as condições de paz. 33Do mesmo modo, portanto, qualquer um de vós, se não renunciar a tudo o que tem, não pode ser meu discípulo!\""
+    }
+  },
+  "extra": [
+    "<b>",
+    "Comentário ao Evangelho por São Boaventura, franciscano, Doutor da Igreja<br/>",
+    "</b>",
+    "A Vida de São Francisco, Legenda major, cap. 2<br/>",
+    "São Francisco renuncia a tudo para seguir Cristo<br/>",
+    "O pai de Francisco queria que ele comparecesse perante o bispo para renunciar a todos os seus direitos de herdeiro, e que lhe restituísse o que ainda possuía. Como verdadeiro amante da pobreza, Francisco prestou-se de boa vontade à cerimónia, apresentou-se no tribunal do bispo e, sem esperar um momento nem hesitar sobre fosse o que fosse, sem esperar por uma ordem nem pedir qualquer explicação, despiu todas as suas roupas e entregou-as a seu pai. [...] A seguir, cheio de fervor e levado pela embriaguez espiritual, descalçou os sapatos e, completamente nu perante a assistência, declarou a seu pai: «Até agora chamei-te pai na Terra; doravante poderei dizer com segurança: \"Pai Nosso que estais no Céu\", pois foi a Ele que confiei o meu tesouro e entreguei a minha fé».<br/>",
+    "O bispo, homem santo e muito digno, chorava de admiração ao ver os excessos a que o levava o seu amor a Deus; levantou-se, tomou o jovem nos braços, cobriu-o com o seu manto e mandou buscar alguma coisa para lhe vestir. Trouxeram-lhe um pobre manto de burel de um camponês que estava ao serviço do bispo. Francisco recebeu-o com gratidão e, apanhando em seguida do chão um pedaço de giz, traçou nele uma cruz: a veste significava este homem crucificado, este pobre meio despido. Foi assim que o servidor do Grande Rei ficou nu para caminhar atrás do seu Senhor, pregado à cruz na sua nudez.<br/>"
+  ]
+}

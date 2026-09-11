@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-18",
+  "source": "api-liturgia-diaria / Sagrada Liturgia",
+  "sourceUrl": "https://sagradaliturgia.com.br/",
+  "heading": "20a. Semana do Tempo Comum",
+  "color": "verde",
+  "readings": {
+    "firstReading": {
+      "reference": "Ezequiel 28,1-10",
+      "text": "A palavra do Senhor foi-me dirigida nestes termos: 2'Filho do homem, dize ao príncipe da cidade de Tiro: Assim fala o Senhor Deus: Porque o teu coração se tornou orgulhoso, tu disseste: 'Eu sou um deus e ocupo o trono divino no coração dos mares. Tu, porém, és um homem e não um deus, mas pensaste ter a mente igual à de um deus. 3Sim, tu és mais sábio do que Daniel! Segredo algum te é obscuro. 4Com talento e habilidade adquiriste uma fortuna, acumulaste ouro e prata em teus tesouros. 5Com grande tino comercial aumentaste tua fortuna, e com ela teu coração se tornou soberbo. 6Por isso, assim diz o Senhor Deus: Por teres igualado tua mente à de um deus, 7vou trazer contra ti os povos mais violentos dos estrangeiros. Eles puxarão suas espadas contra a tua bela sabedoria e profanarão o teu esplendor. 8Eles te farão baixar à cova, e morrerás de morte violenta no coração dos mares. 9Porventura, ousarás dizer: 'Sou um deus! na presença de teus algozes, tu que és um homem e não deus, nas mãos dos que te apunhalam? 10Morrerás da morte dos incircuncisos, pela mão de estrangeiros, pois fui eu que falei - oráculo do Senhor Deus'."
+    },
+    "psalm": {
+      "reference": "Salmo (Dt 32)",
+      "text": "- Pensei: 'Vou espalhá-los pela terra, farei cessar sua memória inteiramente'. Mas receava a reação dos inimigos, a má interpretação dos adversários.\n\n- Eles diriam: Nossa mão prevaleceu, não foi o Senhor Deus que isto fez. Porque meu povo é gente sem juízo, é gente que não tem discernimento.\n\n- Como pode um homem só perseguir mil, como dois podem fazer fugir dez mil? Não é porque sua Rocha os vendeu, não é porque o Senhor os entregou?\n\n- Já vem o dia em que serão arruinados de o seu destino se apressa em chegar. Porque o Senhor fará justiça ao seu povo e salvará todos aqueles que o servem."
+    },
+    "secondReading": null,
+    "gospel": {
+      "reference": "Evangelho de Jesus Cristo segundo São Mateus 19, 23-30",
+      "text": "Naquele tempo: 23Jesus disse aos discípulos: 'Em verdade vos digo, dificilmente um rico entrará no Reino dos Céus. 24E digo ainda: é mais fácil um camelo entrar pelo buraco de uma agulha, do que um rico entrar no Reino de Deus.' 25Ouvindo isso, os discípulos ficaram muito espantados, e perguntaram: 'Então, quem pode ser salvo?' 26Jesus olhou para eles e disse: 'Para os homens isso é impossível, mas para Deus tudo é possível.' 27Pedro tomou a palavra e disse a Jesus: 'Vê! Nós deixamos tudo e te seguimos. O que haveremos de receber?' 28Jesus respondeu: 'Em verdade vos digo, quando o mundo for renovado e o Filho do Homem se sentar no trono de sua glória, também vós, que me seguistes, havereis de sentar-vos em doze tronos, para julgar as doze tribos de Israel. 29E todo aquele que tiver deixado casas, irmãos, irmãs, pai, mãe, filhos, campos, por causa do meu nome, receberá cem vezes mais e terá como herança a vida eterna. 30Muitos que agora são os primeiros, serão os últimos. E muitos que agora são os últimos, serão os primeiros."
+    }
+  },
+  "extra": []
+}
