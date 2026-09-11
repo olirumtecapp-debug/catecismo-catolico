@@ -3289,21 +3289,374 @@
         }
         window.showToast = showToast;
 
-        function checkAchievements() {
-            const achievements = [
-                { id: 'first_study', title: 'Primeiro Estudo', condition: AppState.completedLessons.length > 0 },
-                { id: 'five_lessons', title: 'Peregrino da Fé', condition: AppState.completedLessons.length >= 5 },
-                { id: 'first_quiz', title: 'Primeiro Quiz', condition: AppState.completedQuizzes.length > 0 },
-                { id: 'prayer_streak', title: 'Amigo da Oração', condition: AppState.streak >= 3 },
-                { id: 'fav_collector', title: 'Colecionador de Tesouros', condition: AppState.favorites.length >= 3 }
-            ];
+        /* ========================================================
+           SISTEMA EXPANDIDO DE CONQUISTAS (24 CONQUISTAS TEMÁTICAS)
+           ======================================================== */
+        const AchievementsManager = {
+            categories: [
+                { id: 'todas', label: 'Todas (24)', icon: '🏆' },
+                { id: 'doutrina', label: 'Doutrina', icon: '📜' },
+                { id: 'oracao', label: 'Oração & Terço', icon: '📿' },
+                { id: 'escritura', label: 'Bíblia & Liturgia', icon: '📖' },
+                { id: 'quizzes', label: 'Quizzes', icon: '🧠' },
+                { id: 'constancia', label: 'Constância & Nível', icon: '🔥' }
+            ],
 
-            achievements.forEach(ach => {
-                if (ach.condition && !AppState.unlockedAchievements.includes(ach.id)) {
+            achievements: [
+                // 1. DOUTRINA & CATECISMO
+                {
+                    id: 'first_study',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Primeiro Passo',
+                    desc: 'Conclua sua 1ª aula do Catecismo',
+                    icon: '📖',
+                    xp: 25,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 aula` };
+                    }
+                },
+                {
+                    id: 'five_lessons',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Peregrino da Fé',
+                    desc: 'Conclua 5 aulas do Catecismo',
+                    icon: '🥾',
+                    xp: 35,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 5, current: Math.min(count, 5), max: 5, progressLabel: `${Math.min(count, 5)} / 5 aulas` };
+                    }
+                },
+                {
+                    id: 'ten_lessons',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Estudioso da Doutrina',
+                    desc: 'Conclua 10 aulas do Catecismo',
+                    icon: '🎓',
+                    xp: 50,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 10, current: Math.min(count, 10), max: 10, progressLabel: `${Math.min(count, 10)} / 10 aulas` };
+                    }
+                },
+                {
+                    id: 'pillar_master',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Pilar da Fé Concluído',
+                    desc: 'Conclua todas as 5 aulas de um dos pilares (Creio, Celebro, Vivo ou Rezo)',
+                    icon: '🏛️',
+                    xp: 50,
+                    check: (s) => {
+                        const done = s.completedLessons || [];
+                        const pillars = ['creio', 'celebro', 'vivo', 'rezo'];
+                        let maxPillar = 0;
+                        let anyComplete = false;
+                        pillars.forEach(p => {
+                            const count = done.filter(id => id.startsWith(p + '_')).length;
+                            if (count > maxPillar) maxPillar = count;
+                            if (count >= 5) anyComplete = true;
+                        });
+                        return { unlocked: anyComplete, current: Math.min(maxPillar, 5), max: 5, progressLabel: `${Math.min(maxPillar, 5)} / 5 aulas de um pilar` };
+                    }
+                },
+                {
+                    id: 'all_lessons',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Mestre do Catecismo',
+                    desc: 'Conclua todas as 20 aulas do Catecismo',
+                    icon: '👑',
+                    xp: 100,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 20, current: Math.min(count, 20), max: 20, progressLabel: `${Math.min(count, 20)} / 20 aulas` };
+                    }
+                },
+
+                // 2. ORAÇÃO & SANTO TERÇO
+                {
+                    id: 'first_rosary',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Coração Mariano',
+                    desc: 'Reze um Santo Terço interativo completo',
+                    icon: '📿',
+                    xp: 30,
+                    check: (s, m) => {
+                        const rosaryCount = (s.completedRosaries ? s.completedRosaries.length : 0) || (m && m.rosary ? m.rosary.totalPrayed : 0);
+                        return { unlocked: rosaryCount >= 1, current: Math.min(rosaryCount, 1), max: 1, progressLabel: `${Math.min(rosaryCount, 1)} / 1 Terço` };
+                    }
+                },
+                {
+                    id: 'four_mysteries',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Coroa de Rosas',
+                    desc: 'Reze todos os 4 Mistérios do Rosário (Gozosos, Dolorosos, Gloriosos e Luminosos)',
+                    icon: '🌹',
+                    xp: 60,
+                    check: (s, m) => {
+                        const byM = (m && m.rosary && m.rosary.byMystery) ? m.rosary.byMystery : {};
+                        const keys = ['gozosos', 'dolorosos', 'gloriosos', 'luminosos'];
+                        const count = keys.filter(k => (byM[k] || 0) > 0).length;
+                        return { unlocked: count >= 4, current: count, max: 4, progressLabel: `${count} / 4 mistérios rezados` };
+                    }
+                },
+                {
+                    id: 'rosary_apostle',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Apóstolo do Rosário',
+                    desc: 'Reze 5 Terços completos no aplicativo',
+                    icon: '🌺',
+                    xp: 75,
+                    check: (s, m) => {
+                        const rosaryCount = (s.completedRosaries ? s.completedRosaries.length : 0) || (m && m.rosary ? m.rosary.totalPrayed : 0);
+                        return { unlocked: rosaryCount >= 5, current: Math.min(rosaryCount, 5), max: 5, progressLabel: `${Math.min(rosaryCount, 5)} / 5 Terços` };
+                    }
+                },
+                {
+                    id: 'first_lectio',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Na Presença de Deus',
+                    desc: 'Pratique a Lectio Divina e salve uma anotação de oração',
+                    icon: '🕊️',
+                    xp: 30,
+                    check: (s) => {
+                        const count = Object.keys(s.lectioNotes || {}).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 meditação` };
+                    }
+                },
+                {
+                    id: 'fav_collector',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Colecionador de Tesouros',
+                    desc: 'Salve 3 ou mais conteúdos nos seus Favoritos',
+                    icon: '⭐',
+                    xp: 30,
+                    check: (s) => {
+                        const count = (s.favorites || []).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 favoritos` };
+                    }
+                },
+
+                // 3. BÍBLIA & LITURGIA
+                {
+                    id: 'first_liturgy',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Ouvinte da Palavra',
+                    desc: 'Leia a Liturgia Diária e marque como lida',
+                    icon: '✝️',
+                    xp: 25,
+                    check: (s) => {
+                        const count = Object.keys(s.liturgicalRead || {}).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 dia` };
+                    }
+                },
+                {
+                    id: 'three_liturgies',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Pão Cotidiano',
+                    desc: 'Acompanhe a Liturgia Diária em 3 datas diferentes',
+                    icon: '🍞',
+                    xp: 40,
+                    check: (s) => {
+                        const count = Object.keys(s.liturgicalRead || {}).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 dias` };
+                    }
+                },
+                {
+                    id: 'seven_liturgies',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Discípulo do Evangelho',
+                    desc: 'Acompanhe a Liturgia Diária em 7 datas diferentes',
+                    icon: '📜',
+                    xp: 70,
+                    check: (s) => {
+                        const count = Object.keys(s.liturgicalRead || {}).length;
+                        return { unlocked: count >= 7, current: Math.min(count, 7), max: 7, progressLabel: `${Math.min(count, 7)} / 7 dias` };
+                    }
+                },
+                {
+                    id: 'bible_explorer',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Lâmpada para os Meus Pés',
+                    desc: 'Leia 3 capítulos bíblicos no leitor da Bíblia Sagrada',
+                    icon: '🕯️',
+                    xp: 35,
+                    check: (s) => {
+                        const count = Object.keys(s.readBibleChapters || {}).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 capítulos` };
+                    }
+                },
+                {
+                    id: 'saints_friend',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Comunhão dos Santos',
+                    desc: 'Conheça a história e oração do Santo do Dia em 3 datas',
+                    icon: '🌟',
+                    xp: 35,
+                    check: (s) => {
+                        const count = Object.keys(s.readSaints || {}).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 santos` };
+                    }
+                },
+
+                // 4. QUIZZES & SABEDORIA
+                {
+                    id: 'first_quiz',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Primeiro Desafio',
+                    desc: 'Conclua seu primeiro Quiz de Conhecimento',
+                    icon: '⚡',
+                    xp: 25,
+                    check: (s) => {
+                        const count = (s.completedQuizzes || []).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 quiz` };
+                    }
+                },
+                {
+                    id: 'quiz_master',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Mente Iluminada',
+                    desc: 'Acerte 80% ou mais em um quiz de conhecimento',
+                    icon: '💡',
+                    xp: 40,
+                    check: (s) => {
+                        const unlocked = (s.unlockedAchievements || []).includes('quiz_master');
+                        return { unlocked, current: unlocked ? 1 : 0, max: 1, progressLabel: unlocked ? 'Atingido (80%+)' : 'Meta: 80%+ acerto' };
+                    }
+                },
+                {
+                    id: 'marathon_perfect',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Gabarito Canônico',
+                    desc: 'Conquiste 100% de acerto na Maratona de 10 perguntas',
+                    icon: '🎯',
+                    xp: 60,
+                    check: (s) => {
+                        const unlocked = (s.unlockedAchievements || []).includes('marathon_perfect');
+                        return { unlocked, current: unlocked ? 1 : 0, max: 1, progressLabel: unlocked ? '10/10 na Maratona' : 'Meta: 10/10 na Maratona' };
+                    }
+                },
+                {
+                    id: 'five_quizzes',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Teólogo Leigo',
+                    desc: 'Complete 5 sessões de quizzes',
+                    icon: '🧠',
+                    xp: 50,
+                    check: (s) => {
+                        const count = (s.completedQuizzes || []).length;
+                        return { unlocked: count >= 5, current: Math.min(count, 5), max: 5, progressLabel: `${Math.min(count, 5)} / 5 quizzes` };
+                    }
+                },
+                {
+                    id: 'quiz_fifty_hits',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Sábio na Doutrina',
+                    desc: 'Alcance 30 acertos totais em perguntas de quizzes',
+                    icon: '🏅',
+                    xp: 60,
+                    check: (s, m) => {
+                        const correct = (m && m.quizzes) ? (m.quizzes.totalCorrect || 0) : 0;
+                        return { unlocked: correct >= 30, current: Math.min(correct, 30), max: 30, progressLabel: `${Math.min(correct, 30)} / 30 acertos` };
+                    }
+                },
+
+                // 5. CONSTÂNCIA & NÍVEL ESPIRITUAL
+                {
+                    id: 'prayer_streak',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Chama Acesa',
+                    desc: 'Alcance 3 dias consecutivos de oração (Ofensiva)',
+                    icon: '🥉',
+                    xp: 30,
+                    check: (s) => {
+                        const streak = s.streak || 0;
+                        return { unlocked: streak >= 3, current: Math.min(streak, 3), max: 3, progressLabel: `${Math.min(streak, 3)} / 3 dias` };
+                    }
+                },
+                {
+                    id: 'week_streak',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Alma Perseverante',
+                    desc: 'Alcance 7 dias consecutivos de oração',
+                    icon: '🥈',
+                    xp: 60,
+                    check: (s) => {
+                        const streak = s.streak || 0;
+                        return { unlocked: streak >= 7, current: Math.min(streak, 7), max: 7, progressLabel: `${Math.min(streak, 7)} / 7 dias` };
+                    }
+                },
+                {
+                    id: 'two_weeks_streak',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Fiel na Pequenez',
+                    desc: 'Alcance 14 dias consecutivos de oração',
+                    icon: '🥇',
+                    xp: 100,
+                    check: (s) => {
+                        const streak = s.streak || 0;
+                        return { unlocked: streak >= 14, current: Math.min(streak, 14), max: 14, progressLabel: `${Math.min(streak, 14)} / 14 dias` };
+                    }
+                },
+                {
+                    id: 'xp_master',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Servo Fiel',
+                    desc: 'Alcance 500 ou mais XP acumulados na jornada da fé',
+                    icon: '💎',
+                    xp: 100,
+                    check: (s) => {
+                        const xp = s.xp || 0;
+                        return { unlocked: xp >= 500, current: Math.min(xp, 500), max: 500, progressLabel: `${Math.min(xp, 500)} / 500 XP` };
+                    }
+                }
+            ]
+        };
+        window.AchievementsManager = AchievementsManager;
+
+        function checkAchievements() {
+            if (!AppState.unlockedAchievements) AppState.unlockedAchievements = [];
+            const metrics = window.MetricsTracker ? MetricsTracker.getData() : null;
+            let newlyUnlocked = 0;
+
+            AchievementsManager.achievements.forEach(ach => {
+                const res = ach.check(AppState, metrics);
+                if (res.unlocked && !AppState.unlockedAchievements.includes(ach.id)) {
                     AppState.unlockedAchievements.push(ach.id);
-                    showToast(`🏆 Conquista desbloqueada: ${ach.title}!`, 'success');
+                    AppState.xp = (AppState.xp || 0) + (ach.xp || 25);
+                    newlyUnlocked++;
+                    showToast(`🏆 Conquista Desbloqueada: ${ach.title}! (+${ach.xp} XP)`, 'success');
                 }
             });
+
+            if (newlyUnlocked > 0) {
+                localStorage.setItem('catecismo_state_v5', JSON.stringify(AppState));
+                updateHeaderBadges();
+            }
         }
         window.checkAchievements = checkAchievements;
 
@@ -4544,39 +4897,138 @@
                 `;
             },
 
-            renderConquistas() {
-                const all = [
-                    { id: 'first_study', title: 'Primeiro Estudo', desc: 'Conclua sua primeira aula do Catecismo', icon: '📖' },
-                    { id: 'five_lessons', title: 'Peregrino da Fé', desc: 'Conclua 5 aulas do Catecismo', icon: '🥾' },
-                    { id: 'ten_lessons', title: 'Estudioso da Doutrina', desc: 'Conclua 10 aulas do Catecismo', icon: '🎓' },
-                    { id: 'all_lessons', title: 'Mestre do Catecismo', desc: 'Conclua todas as 20 aulas', icon: '👑' },
-                    { id: 'first_quiz', title: 'Primeiro Quiz', desc: 'Complete um quiz de conhecimento', icon: '🧠' },
-                    { id: 'quiz_master', title: 'Mente Iluminada', desc: 'Acerte 80% ou mais em um quiz', icon: '💡' },
-                    { id: 'prayer_streak', title: 'Amigo da Oração', desc: 'Alcance 3 dias consecutivos de oração', icon: '🙏' },
-                    { id: 'week_streak', title: 'Alma Perseverante', desc: 'Alcance 7 dias consecutivos de oração', icon: '🔥' },
-                    { id: 'fav_collector', title: 'Colecionador de Tesouros', desc: 'Salve 3 conteúdos nos favoritos', icon: '⭐' },
-                    { id: 'first_liturgy', title: 'Ouvinte da Palavra', desc: 'Leia a liturgia diária pela primeira vez', icon: '✝️' }
-                ];
-                const unlocked = AppState.unlockedAchievements;
+            renderConquistas(activeCategory = 'todas') {
+                checkAchievements();
+                const metrics = window.MetricsTracker ? MetricsTracker.getData() : null;
+                const all = AchievementsManager.achievements;
+                const unlocked = AppState.unlockedAchievements || [];
+                const unlockedCount = all.filter(a => unlocked.includes(a.id)).length;
+                const pct = Math.round((unlockedCount / all.length) * 100);
+
+                const currentCat = activeCategory || 'todas';
+                const filtered = currentCat === 'todas' 
+                    ? all 
+                    : all.filter(a => a.category === currentCat);
+
                 return `
-                    <div class="max-w-4xl mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-2">
-                            <h2 class="font-serif text-3xl font-bold text-mariana">Conquistas</h2>
-                            <p class="text-sm text-slate-600">${unlocked.length} de ${all.length} conquistas desbloqueadas — a perseverança na fé é coroada passo a passo.</p>
-                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden mt-4">
-                                <div class="gold-gradient h-full rounded-full transition-all" style="width: ${Math.round((unlocked.length / all.length) * 100)}%"></div>
+                    <div class="max-w-5xl mx-auto space-y-6">
+                        <!-- Painel de Resumo & Coroa de Glória -->
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-5">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
+                                            Jornada da Santidade
+                                        </span>
+                                        <span class="text-xs font-semibold text-slate-400">• ${unlockedCount}/${all.length} Desbloqueadas</span>
+                                    </div>
+                                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-mariana dark:text-slate-100 mt-2">
+                                        Conquistas da Fé
+                                    </h2>
+                                    <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                                        Cada oração, meditação doutrinária e perseverança diária frutificam em virtudes e graças na sua vida cristã.
+                                    </p>
+                                </div>
+                                <div class="bg-amber-50 dark:bg-slate-700/60 p-4 rounded-2xl border border-amber-200/80 dark:border-slate-600 text-center flex-none min-w-[150px]">
+                                    <span class="text-3xl block animate-pulse">🏆</span>
+                                    <span class="font-bold text-xl text-amber-900 dark:text-amber-300 block mt-1">${pct}%</span>
+                                    <span class="text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Completude Geral</span>
+                                </div>
+                            </div>
+
+                            <!-- Barra de Progresso Geral -->
+                            <div class="space-y-1.5 pt-2 border-t border-slate-100 dark:border-slate-700">
+                                <div class="flex justify-between text-[11px] font-bold text-slate-600 dark:text-slate-300">
+                                    <span>Progresso Total da Jornada</span>
+                                    <span>${unlockedCount} de ${all.length} conquistas</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-3 rounded-full overflow-hidden shadow-inner">
+                                    <div class="gold-gradient h-full rounded-full transition-all duration-700" style="width: ${pct}%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Filtros por Categoria -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                ${AchievementsManager.categories.map(c => {
+                                    const isAct = currentCat === c.id;
+                                    const countInCat = c.id === 'todas' ? all.length : all.filter(a => a.category === c.id).length;
+                                    const unlockedInCat = c.id === 'todas' 
+                                        ? unlockedCount 
+                                        : all.filter(a => a.category === c.id && unlocked.includes(a.id)).length;
+                                    return `
+                                        <button onclick="router.navigate('conquistas', '${c.id}')" class="px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${isAct 
+                                            ? 'mariana-gradient text-white shadow-md scale-105' 
+                                            : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600'}">
+                                            <span>${c.icon}</span>
+                                            <span>${c.label}</span>
+                                            <span class="text-[10px] opacity-75 ml-0.5">(${unlockedInCat}/${countInCat})</span>
+                                        </button>
+                                    `;
+                                }).join('')}
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            ${all.map(a => {
+
+                        <!-- Grid de Conquistas -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${filtered.map(a => {
                                 const has = unlocked.includes(a.id);
+                                const res = a.check(AppState, metrics);
+                                const progressPct = Math.round((res.current / res.max) * 100);
+
                                 return `
-                                    <div class="p-5 rounded-3xl border ${has ? 'bg-amber-50 border-amber-300' : 'bg-white border-slate-200 opacity-60'} card-shadow flex items-center gap-4">
-                                        <div class="w-14 h-14 flex-none rounded-2xl ${has ? 'gold-gradient' : 'bg-slate-100'} flex items-center justify-center text-2xl ${has ? '' : 'grayscale'}">${a.icon}</div>
-                                        <div>
-                                            <h3 class="font-serif text-lg font-bold ${has ? 'text-amber-900' : 'text-slate-500'}">${a.title}</h3>
-                                            <p class="text-xs ${has ? 'text-amber-700' : 'text-slate-400'}">${a.desc}</p>
-                                            ${has ? '<span class="text-[10px] font-bold text-emerald-700">✓ Desbloqueada</span>' : '<span class="text-[10px] font-bold text-slate-400">🔒 Bloqueada</span>'}
+                                    <div class="p-5 rounded-3xl border transition card-shadow relative flex flex-col justify-between space-y-3.5 ${has 
+                                        ? 'bg-gradient-to-br from-amber-50/90 to-amber-100/40 dark:from-amber-950/30 dark:to-slate-900 border-2 border-amber-300 dark:border-amber-700/80 shadow-md' 
+                                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 opacity-85 hover:opacity-100'}">
+                                        
+                                        <div class="flex items-start gap-4">
+                                            <!-- Ícone da Conquista -->
+                                            <div class="w-14 h-14 flex-none rounded-2xl flex items-center justify-center text-2xl transition shadow-xs ${has 
+                                                ? 'gold-gradient text-white shadow-amber-400/30' 
+                                                : 'bg-slate-100 dark:bg-slate-700 text-slate-400 grayscale'}">
+                                                ${a.icon}
+                                            </div>
+
+                                            <div class="min-w-0 flex-1">
+                                                <div class="flex items-center justify-between gap-2">
+                                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                                                        ${a.categoryLabel}
+                                                    </span>
+                                                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-md ${has ? 'bg-amber-200/80 dark:bg-amber-900 text-amber-900 dark:text-amber-200' : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400'}">
+                                                        +${a.xp} XP
+                                                    </span>
+                                                </div>
+
+                                                <h3 class="font-serif text-lg font-bold mt-1 leading-snug ${has ? 'text-amber-950 dark:text-slate-100' : 'text-slate-700 dark:text-slate-300'}">
+                                                    ${a.title}
+                                                </h3>
+
+                                                <p class="text-xs mt-1 leading-relaxed ${has ? 'text-amber-900/80 dark:text-slate-300' : 'text-slate-500 dark:text-slate-400'}">
+                                                    ${a.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rodapé do Card com Barra de Progresso -->
+                                        <div class="pt-3 border-t ${has ? 'border-amber-200/60 dark:border-slate-700/80' : 'border-slate-100 dark:border-slate-700/60'}">
+                                            <div class="flex items-center justify-between text-[11px] font-bold">
+                                                ${has ? `
+                                                    <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300 bg-emerald-100/90 dark:bg-emerald-950 px-2.5 py-1 rounded-lg border border-emerald-300 dark:border-emerald-800">
+                                                        <span>✓</span> <span>Conquistada (+${a.xp} XP)</span>
+                                                    </span>
+                                                    <span class="text-xs text-amber-700 dark:text-amber-400">Glória a Deus! 🌟</span>
+                                                ` : `
+                                                    <span class="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/80 px-2.5 py-1 rounded-lg">
+                                                        <span>🔒</span> <span>${res.progressLabel}</span>
+                                                    </span>
+                                                    <span class="text-slate-400 text-[10px] font-mono">${progressPct}%</span>
+                                                `}
+                                            </div>
+
+                                            ${!has ? `
+                                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden mt-2">
+                                                    <div class="gold-gradient h-full rounded-full transition-all duration-500" style="width: ${progressPct}%"></div>
+                                                </div>
+                                            ` : ''}
                                         </div>
                                     </div>
                                 `;
@@ -4729,6 +5181,23 @@
             router.navigate('oracao');
         }
 
+        function toggleFavorite(id) {
+            if (!AppState.favorites) AppState.favorites = [];
+            const idx = AppState.favorites.indexOf(id);
+            if (idx > -1) {
+                AppState.favorites.splice(idx, 1);
+                showToast('Item removido dos favoritos.', 'info');
+            } else {
+                AppState.favorites.push(id);
+                showToast('Adicionado aos favoritos! ⭐', 'success');
+            }
+            saveState();
+            if (router.currentRoute === 'favoritos') {
+                router.navigate('favoritos');
+            }
+        }
+        window.toggleFavorite = toggleFavorite;
+
         function filterPrayers(category, btn) {
             document.querySelectorAll('.prayer-filter').forEach(b => {
                 b.classList.remove('bg-mariana', 'text-white');
@@ -4769,6 +5238,12 @@
         function openSaintModal(id) {
             const s = SaintContentProvider.saints.find(x => x.id === id);
             if (!s) return;
+            if (!AppState.readSaints) AppState.readSaints = {};
+            if (s.id && !AppState.readSaints[s.id]) {
+                AppState.readSaints[s.id] = true;
+                AppState.xp = (AppState.xp || 0) + 5;
+                saveState();
+            }
             const isFav = AppState.favorites.includes('saint_' + id);
             const modal = document.getElementById('modal-container');
             modal.innerHTML = `
@@ -4806,6 +5281,13 @@
             if (router.currentRoute !== 'biblia' && !targetMain) router.navigate('biblia', bookCode + ':' + ch);
             const area = document.getElementById('bible-content');
             if (!area) return;
+            if (!AppState.readBibleChapters) AppState.readBibleChapters = {};
+            const chKey = bookCode + '_' + ch;
+            if (!AppState.readBibleChapters[chKey]) {
+                AppState.readBibleChapters[chKey] = true;
+                AppState.xp = (AppState.xp || 0) + 5;
+                saveState();
+            }
             area.innerHTML = `<div class="py-16 text-center"><div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-xl text-xs font-semibold text-slate-500">📖 Carregando ${book.name} ${ch}…</div></div>`;
             try {
                 const data = await BibleProvider.fetchChapter(bookCode, ch);
@@ -4920,7 +5402,15 @@
                     QuizAudio.playVictory();
                     if (!AppState.unlockedAchievements.includes('quiz_master')) {
                         AppState.unlockedAchievements.push('quiz_master');
-                        showToast("🏆 Conquista Desbloqueada: Mente Iluminada!", "success");
+                        AppState.xp = (AppState.xp || 0) + 40;
+                        showToast("🏆 Conquista Desbloqueada: Mente Iluminada! (+40 XP)", "success");
+                    }
+                }
+                if (s.questions.length >= 10 && pct === 100) {
+                    if (!AppState.unlockedAchievements.includes('marathon_perfect')) {
+                        AppState.unlockedAchievements.push('marathon_perfect');
+                        AppState.xp = (AppState.xp || 0) + 60;
+                        showToast("🏆 Conquista Desbloqueada: Gabarito Canônico! (+60 XP)", "success");
                     }
                 }
                 saveState();
@@ -6014,6 +6504,12 @@
             AppState.xp = (AppState.xp || 0) + 25;
             AppState.streak = (AppState.streak || 1);
             AppState.lastPrayerDate = getLocalDateString();
+            if (!AppState.completedRosaries) AppState.completedRosaries = [];
+            AppState.completedRosaries.push({
+                mystery: typeof currentRosaryMysteryKey !== 'undefined' ? currentRosaryMysteryKey : 'gozosos',
+                date: getLocalDateString(),
+                timestamp: Date.now()
+            });
             if (window.CloudSyncManager) {
                 CloudSyncManager.checkPromptOnAction('Concluir o Santo Terço');
             }
