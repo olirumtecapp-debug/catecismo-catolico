@@ -65,6 +65,16 @@
       "streak": 5,
       "reflectionsCount": 2,
       "updatedAt": "2026-09-11T15:41:20.858Z"
+    },
+    "teste.esposa@gmail.com": {
+      "email": "teste.esposa@gmail.com",
+      "updatedAt": "2026-09-11T15:48:19.497Z",
+      "createdAt": "2026-09-11T15:48:19.497Z",
+      "xp": 0,
+      "streak": 0,
+      "level": "Iniciante",
+      "reflectionsCount": 0,
+      "appState": {}
     }
   }
 }
