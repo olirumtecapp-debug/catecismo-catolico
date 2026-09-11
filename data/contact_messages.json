@@ -3,18 +3,5 @@
     "created": "2026-09-11T16:17:55.688Z",
     "description": "Caixa Postal & Mensagens de Fieis - CATECISMO"
   },
-  "messages": [
-    {
-      "id": "msg_1789154457291_0zvvp",
-      "name": "Teste de Envio",
-      "email": "teste@exemplo.com",
-      "type": "Oração",
-      "subject": "Teste de Confirmação",
-      "message": "Testando se o envio funciona perfeitamente.",
-      "status": "novo",
-      "createdAt": "2026-09-11T19:20:57.291Z",
-      "updatedAt": "2026-09-11T19:20:57.293Z",
-      "reply": null
-    }
-  ]
+  "messages": []
 }
