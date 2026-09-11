@@ -6787,12 +6787,7 @@
                                             </td>
                                             <td class="py-2.5 px-3 text-right whitespace-nowrap">
                                                 <div class="flex items-center justify-end gap-1.5">
-                                                    <a href="mailto:${m.email}?subject=Re: ${encodeURIComponent(m.subject)}&body=${encodeURIComponent('Olá ' + m.name + ', paz e bem!
-
-Recebemos sua mensagem no CATECISMO:
-"' + m.message + '"
-
-')}" class="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold transition shadow-2xs">
+                                                    <a href="mailto:${m.email}?subject=Re: ${encodeURIComponent(m.subject)}" class="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold transition shadow-2xs">
                                                         ✉️ Responder
                                                     </a>
                                                     <button onclick="markAdminMessageStatus('${m.id}', '${m.status === 'novo' ? 'respondido' : 'novo'}')" class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-[10px] font-bold text-slate-600 dark:text-slate-300 transition">
