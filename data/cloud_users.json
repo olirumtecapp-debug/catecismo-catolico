@@ -6,12 +6,12 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-11T23:30:05.870Z",
-      "createdAt": "2026-09-11T23:30:05.870Z",
+      "updatedAt": "2026-09-11T23:31:31.506Z",
+      "createdAt": "2026-09-11T23:31:31.506Z",
       "xp": 235,
       "streak": 1,
       "level": "Peregrino",
-      "reflectionsCount": 0,
+      "reflectionsCount": 1,
       "appState": {
         "xp": 235,
         "streak": 1,
@@ -27,11 +27,13 @@
           "first_quiz"
         ],
         "liturgicalRead": {},
-        "lectioNotes": {},
+        "lectioNotes": {
+          "2026-09-11": "Nos faz entender que é mais fácil olhar as falhas dos outros do que as nossas mesmas."
+        },
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-11T23:25:12.009Z"
+        "lastCloudSync": "2026-09-11T23:30:07.136Z"
       }
     }
   }
