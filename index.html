@@ -72,6 +72,20 @@
             line-height: calc(1.6 + 0.1 * (var(--reading-scale, 1) - 1));
         }
 
+        /* ESCALA TIPOGRÁFICA DO CATECISMO (MODAL E PÁGINAS) */
+        .lesson-reading-title {
+            font-size: calc(1.65rem * var(--reading-scale, 1)) !important;
+            line-height: 1.25 !important;
+        }
+        .lesson-reading-body {
+            font-size: calc(1.125rem * var(--reading-scale, 1)) !important;
+            line-height: calc(1.7 + 0.1 * (var(--reading-scale, 1) - 1)) !important;
+        }
+        .lesson-reading-subtext {
+            font-size: calc(0.92rem * var(--reading-scale, 1)) !important;
+            line-height: calc(1.58 + 0.08 * (var(--reading-scale, 1) - 1)) !important;
+        }
+
 
         /* ==========================================
            MODO ESCURO SUAVE & VELUDO (Sem Preto Puro)
@@ -4004,10 +4018,25 @@
 
                 return `
                     <div class="max-w-5xl mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow">
-                            <h2 class="font-serif text-3xl font-bold text-mariana mb-2">Catecismo da Igreja Católica</h2>
-                            <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">Estudo sistemático estruturado nos quatro pilares tradicionais da fé.</p>
-                            <div class="flex flex-wrap gap-2 mt-6">
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-5">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div>
+                                    <h2 class="font-serif text-3xl font-bold text-mariana dark:text-slate-100 mb-1">Catecismo da Igreja Católica</h2>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">Estudo sistemático estruturado nos quatro pilares tradicionais da fé.</p>
+                                </div>
+                                <div class="flex items-center gap-2 self-start md:self-auto bg-slate-50 dark:bg-slate-700/60 px-3 py-1.5 rounded-2xl border border-slate-200 dark:border-slate-600">
+                                    <span class="text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
+                                        <span>🔤</span> Fonte:
+                                    </span>
+                                    <div class="flex items-center bg-white dark:bg-slate-800 p-0.5 rounded-xl border border-slate-200/80 dark:border-slate-600 shadow-2xs">
+                                        <button onclick="FontScaleManager.decrease()" title="Diminuir fonte (A-)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A-</button>
+                                        <span class="font-scale-indicator text-[11px] font-bold text-slate-600 dark:text-slate-300 px-1.5 min-w-[36px] text-center">${FontScaleManager.labels[FontScaleManager.currentIndex]}</span>
+                                        <button onclick="FontScaleManager.increase()" title="Aumentar fonte (A+)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100 dark:border-slate-700">
                                 <button onclick="router.navigate('catecismo')" class="px-4 py-2 rounded-xl text-xs font-bold ${!filterCat ? 'bg-mariana text-white' : 'bg-slate-100 text-slate-700'}">Todos (${CatecismContentProvider.modules.length})</button>
                                 ${CatecismContentProvider.categories.map(c => `
                                     <button onclick="router.navigate('catecismo', '${c.id}')" class="px-4 py-2 rounded-xl text-xs font-bold ${filterCat === c.id ? 'bg-mariana text-white' : 'bg-slate-100 text-slate-700'}">${c.title.split('—')[0]}</button>
@@ -4022,9 +4051,9 @@
                                     <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow flex flex-col justify-between space-y-4 relative">
                                         ${isDone ? '<div class="absolute -top-3 -right-3 w-8 h-8 bg-emerald-500 rounded-full text-white flex items-center justify-center font-bold shadow-md">✓</div>' : ''}
                                         <div class="space-y-2">
-                                            <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] uppercase font-bold tracking-wider">${mod.ccc}</span>
-                                            <h3 class="font-serif text-xl font-bold text-mariana mt-2 leading-tight">${mod.title}</h3>
-                                            <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${mod.description}</p>
+                                            <span class="px-2.5 py-1 bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 rounded-lg text-[10px] uppercase font-bold tracking-wider">${mod.ccc}</span>
+                                            <h3 class="font-serif font-bold text-mariana dark:text-slate-100 mt-2 leading-tight lesson-reading-title" style="font-size: calc(1.25rem * var(--reading-scale, 1)) !important;">${mod.title}</h3>
+                                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2 lesson-reading-subtext">${mod.description}</p>
                                         </div>
                                         <button onclick="openLessonModal('${mod.id}')" class="w-full py-3 ${isDone ? 'bg-slate-100 text-slate-700' : 'mariana-gradient text-white'} rounded-xl text-xs font-bold shadow-sm transition hover:scale-105">${isDone ? 'Revisar Módulo' : 'Estudar Módulo'}</button>
                                     </div>
@@ -5406,15 +5435,22 @@
 
             modal.innerHTML = `
                 <div class="bg-white dark:bg-slate-800 w-full max-w-3xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
-                    <!-- Botão Fechar -->
-                    <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-xl transition cursor-pointer">✕</button>
+                    <!-- Barra Superior: Controles de Fonte e Fechar -->
+                    <div class="absolute top-5 right-5 flex items-center gap-2 z-10">
+                        <div class="flex items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/80 p-0.5 shadow-xs" title="Ajustar tamanho da fonte de leitura">
+                            <button onclick="FontScaleManager.decrease()" title="Diminuir fonte (A-)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-600 rounded-lg transition cursor-pointer">A-</button>
+                            <span class="font-scale-indicator px-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 font-mono select-none">${FontScaleManager.labels[FontScaleManager.currentIndex]}</span>
+                            <button onclick="FontScaleManager.increase()" title="Aumentar fonte (A+)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-600 rounded-lg transition cursor-pointer">A+</button>
+                        </div>
+                        <button onclick="closeModal()" title="Fechar" class="w-8 h-8 flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl font-bold text-lg transition cursor-pointer leading-none">✕</button>
+                    </div>
 
                     <!-- Cabeçalho do Módulo -->
                     <div class="flex items-start gap-4 pb-4 border-b border-slate-100 dark:border-slate-700">
                         <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-400 to-amber-600 text-white flex items-center justify-center text-2xl shrink-0 shadow-md">
                             ${cat ? cat.icon : '📖'}
                         </div>
-                        <div class="min-w-0 flex-1 pr-6">
+                        <div class="min-w-0 flex-1 pr-28 sm:pr-32">
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
                                     ${cat ? cat.title : 'CATECISMO'}
@@ -5425,10 +5461,10 @@
                                 ${mod.bibleRef ? `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300">📖 ${mod.bibleRef}</span>` : ''}
                                 ${isDone ? '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">✓ Concluído</span>' : ''}
                             </div>
-                            <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana dark:text-slate-100 mt-1.5 leading-tight">
+                            <h3 class="font-serif font-bold text-mariana dark:text-slate-100 mt-1.5 leading-tight lesson-reading-title">
                                 ${mod.title}
                             </h3>
-                            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed lesson-reading-subtext">
                                 ${mod.description}
                             </p>
                         </div>
@@ -5439,7 +5475,7 @@
                         <div class="flex items-center gap-2 text-mariana dark:text-amber-300 font-bold text-xs uppercase tracking-wider">
                             <span>📖</span> <span>Doutrina & Magistério da Igreja</span>
                         </div>
-                        <p class="text-xs md:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-serif text-base md:text-lg">
+                        <p class="text-slate-700 dark:text-slate-200 leading-relaxed font-serif lesson-reading-body">
                             ${mod.explanation}
                         </p>
                     </div>
@@ -5452,7 +5488,7 @@
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
                                 ${mod.keyPoints.map(kp => `
-                                    <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300 font-medium flex items-start gap-2 shadow-2xs">
+                                    <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium flex items-start gap-2 shadow-2xs lesson-reading-subtext">
                                         <span class="text-amber-500 font-bold shrink-0">✦</span>
                                         <span>${kp}</span>
                                     </div>
@@ -5467,7 +5503,7 @@
                             <div class="flex items-center gap-2 text-amber-900 dark:text-amber-200 font-bold text-xs">
                                 <span>🕊️</span> <span>Reflexão Espiritual para a Vida Diária</span>
                             </div>
-                            <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed">
+                            <p class="text-slate-700 dark:text-slate-300 italic leading-relaxed lesson-reading-subtext">
                                 "${mod.reflection}"
                             </p>
                         </div>
@@ -5480,9 +5516,9 @@
                                 <span>❓</span> <span>Pergunta & Resposta Catequética</span>
                             </h4>
                             ${mod.questions.map(q => `
-                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-1.5 text-xs">
-                                    <p class="font-bold text-slate-800 dark:text-slate-200">Q: ${q.q}</p>
-                                    <p class="text-slate-600 dark:text-slate-300 pl-3 border-l-2 border-amber-400">R: ${q.a}</p>
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-1.5">
+                                    <p class="font-bold text-slate-800 dark:text-slate-200 lesson-reading-subtext">Q: ${q.q}</p>
+                                    <p class="text-slate-600 dark:text-slate-300 pl-3 border-l-2 border-amber-400 lesson-reading-subtext">R: ${q.a}</p>
                                 </div>
                             `).join('')}
                         </div>
