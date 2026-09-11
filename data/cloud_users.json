@@ -3,5 +3,39 @@
     "created": "2026-09-11T16:17:55.685Z",
     "description": "Banco de Dados Real de Usuários e Sincronização em Nuvem - CATECISMO"
   },
-  "users": {}
+  "users": {
+    "olirumdev1@gmail.com": {
+      "email": "olirumdev1@gmail.com",
+      "updatedAt": "2026-09-11T16:29:46.509Z",
+      "createdAt": "2026-09-11T16:29:46.509Z",
+      "xp": 215,
+      "streak": 4,
+      "level": "Peregrino",
+      "reflectionsCount": 0,
+      "appState": {
+        "xp": 215,
+        "streak": 4,
+        "lastPrayerDate": null,
+        "completedLessons": [
+          "creio_1",
+          "creio_2"
+        ],
+        "completedQuizzes": [],
+        "favorites": [],
+        "unlockedAchievements": [
+          "first_liturgy",
+          "prayer_streak",
+          "first_study"
+        ],
+        "liturgicalRead": {
+          "2026-09-11": true
+        },
+        "lectioNotes": {},
+        "activeStudyPlan": null,
+        "planProgress": {},
+        "cloudSyncEmail": "olirumdev1@gmail.com",
+        "lastCloudSync": "2026-09-11T15:46:07.879Z"
+      }
+    }
+  }
 }
