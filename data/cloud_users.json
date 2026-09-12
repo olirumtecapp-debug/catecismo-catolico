@@ -6,30 +6,42 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-12T09:54:59.386Z",
-      "createdAt": "2026-09-12T09:54:59.386Z",
-      "xp": 165,
-      "streak": 4,
-      "level": "Peregrino",
-      "reflectionsCount": 0,
+      "updatedAt": "2026-09-12T12:56:25.895Z",
+      "createdAt": "2026-09-12T12:56:25.895Z",
+      "xp": 395,
+      "streak": 1,
+      "level": "Discípulo",
+      "reflectionsCount": 1,
       "appState": {
-        "xp": 165,
-        "streak": 4,
-        "lastPrayerDate": null,
-        "completedLessons": [],
-        "completedQuizzes": [],
+        "xp": 395,
+        "streak": 1,
+        "lastPrayerDate": "2026-09-11",
+        "completedLessons": [
+          "creio_1",
+          "creio_2",
+          "creio_3",
+          "creio_4"
+        ],
+        "completedQuizzes": [
+          1789169276326
+        ],
         "favorites": [],
         "unlockedAchievements": [
-          "prayer_streak"
+          "prayer_streak",
+          "quiz_master",
+          "first_quiz",
+          "first_study",
+          "first_rosary",
+          "first_lectio"
         ],
-        "liturgicalRead": {
-          "2026-09-12": true
+        "liturgicalRead": {},
+        "lectioNotes": {
+          "2026-09-11": "Nos faz entender que é mais fácil olhar as falhas dos outros do que as nossas mesmas."
         },
-        "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-11T21:32:46.615Z"
+        "lastCloudSync": "2026-09-11T23:31:48.500Z"
       }
     }
   }
