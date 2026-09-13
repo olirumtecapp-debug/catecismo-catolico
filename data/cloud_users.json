@@ -6,19 +6,20 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-13T11:35:06.308Z",
-      "createdAt": "2026-09-13T11:35:06.308Z",
-      "xp": 235,
+      "updatedAt": "2026-09-13T12:18:52.519Z",
+      "createdAt": "2026-09-13T12:18:52.519Z",
+      "xp": 260,
       "streak": 4,
       "level": "Peregrino",
-      "reflectionsCount": 0,
+      "reflectionsCount": 1,
       "appState": {
-        "xp": 235,
+        "xp": 260,
         "streak": 4,
         "lastPrayerDate": null,
         "completedLessons": [
           "creio_1",
-          "creio_2"
+          "creio_2",
+          "creio_3"
         ],
         "completedQuizzes": [],
         "favorites": [],
@@ -31,11 +32,13 @@
           "2026-09-11": true,
           "2026-09-13": true
         },
-        "lectioNotes": {},
+        "lectioNotes": {
+          "2026-09-13": "Perdoar sem medidas"
+        },
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-11T21:32:26.242Z",
+        "lastCloudSync": "2026-09-13T11:35:06.939Z",
         "readBibleChapters": {
           "MAT_18": true
         }
