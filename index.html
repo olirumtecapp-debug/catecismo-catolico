@@ -4585,18 +4585,18 @@
 
                         <!-- 3. MODO: MAPA MUNDIAL DA SANTIDADE (131 LUGARES EM PORTUGUÊS) -->
                         <div id="saints-mode-map" class="space-y-6 hidden">
-                            <div class="bg-gradient-to-r from-mariana via-slate-900 to-amber-950 text-white p-6 rounded-3xl shadow-xl border border-dourado/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                <div class="flex items-center gap-4">
-                                    <span class="text-4xl">🗺️</span>
-                                    <div>
-                                        <h3 class="font-serif text-2xl font-bold text-amber-200">Mapa Mundial da Santidade</h3>
-                                        <p class="text-xs text-slate-300 mt-1">Peregrine pelos 131 Santuários, Basílicas e Locais de Devoção e Martírio dos Santos ao redor do planeta com nomes em Português.</p>
+                            <div class="bg-gradient-to-r from-mariana via-slate-900 to-amber-950 text-white p-5 sm:p-6 rounded-3xl shadow-xl border border-dourado/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div class="flex items-start sm:items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                                    <span class="text-3xl sm:text-4xl shrink-0 select-none">🗺️</span>
+                                    <div class="min-w-0 flex-1">
+                                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-amber-200">Mapa Mundial da Santidade</h3>
+                                        <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed break-words">Peregrine pelos 131 santuários, basílicas e locais de devoção e martírio dos santos ao redor do planeta.</p>
                                     </div>
                                 </div>
-                                <span class="px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-widest whitespace-nowrap">131 Santuários</span>
+                                <span class="self-start md:self-center shrink-0 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-widest whitespace-nowrap shadow-sm">131 Santuários</span>
                             </div>
 
-                            <div class="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200 dark:border-slate-800 card-shadow">
+                            <div class="bg-white dark:bg-slate-900 p-3 sm:p-4 rounded-3xl border border-slate-200 dark:border-slate-800 card-shadow">
                                 <div id="mapa-santidade" style="width: 100%; height: 600px;" class="w-full rounded-2xl shadow-inner border border-slate-200 dark:border-slate-700 overflow-hidden relative"></div>
                             </div>
                         </div>
@@ -9046,13 +9046,31 @@
                 attributionControl: true
             });
 
-            // CAMADA DE MAPA LOCALIZADA EM PORTUGUÊS / LATIM (CartoDB Voyager)
-            // Países traduzidos: Lituânia, Polônia, Alemanha, Grécia, Roma, Jerusalém, etc.
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-                subdomains: 'abcd',
+            // Camadas Confiáveis e Livres (Sem exigência de API Key)
+            const esriStreet = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+                attribution: '&copy; Esri &mdash; Santuários Católicos',
+                maxZoom: 18
+            });
+
+            const osmStandard = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                 maxZoom: 19
-            }).addTo(saintsLeafletMap);
+            });
+
+            const esriImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: '&copy; Esri &mdash; Satélite',
+                maxZoom: 18
+            });
+
+            // Ativa camada detalhada de ruas e cidades como padrão
+            esriStreet.addTo(saintsLeafletMap);
+
+            // Controle para alternar o estilo do mapa
+            L.control.layers({
+                "🗺️ Mapa Mundial (Esri)": esriStreet,
+                "🌍 OpenStreetMap": osmStandard,
+                "🛰️ Satélite (Esri)": esriImagery
+            }, null, { position: 'topright' }).addTo(saintsLeafletMap);
 
             const mapData = (window.SAINTS_DATA && window.SAINTS_DATA.mapSaints) ? window.SAINTS_DATA.mapSaints : [];
             const markers = [];
@@ -9069,16 +9087,17 @@
                 if (!santo.lat || !santo.lng) return;
 
                 const popupHtml = `
-                    <div style="min-width: 200px; max-width: 240px; padding: 12px; font-family: sans-serif; text-align: left;">
-                        ${santo.image ? `<img src="${santo.image}" alt="${santo.name}" style="width: 100%; height: 110px; object-fit: cover; object-position: top; border-radius: 8px; margin-bottom: 8px;" onerror="this.style.display='none'">` : ''}
+                    <div style="min-width: 210px; max-width: 250px; padding: 12px; font-family: sans-serif; text-align: left;">
+                        ${santo.image ? `<img src="${santo.image}" alt="${santo.name}" style="width: 100%; height: 115px; object-fit: cover; object-position: top; border-radius: 8px; margin-bottom: 8px;" onerror="this.style.display='none'">` : ''}
                         <div style="font-size: 10px; text-transform: uppercase; font-weight: 800; color: #d97706; margin-bottom: 2px;">
                             ${santo.seculo || 'Tradição Católica'} • ${santo.pais || 'Igreja Universal'}
                         </div>
                         <h4 style="font-size: 14px; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; line-height: 1.2;">
                             ${santo.name}
                         </h4>
+                        ${santo.santuario ? `<p style="font-size: 11px; color: #0284c7; font-weight: 600; margin: 0 0 4px 0;">📍 ${santo.santuario}</p>` : ''}
                         ${santo.virtudes ? `<p style="font-size: 11px; color: #64748b; font-style: italic; margin: 0 0 8px 0;">Virtudes: ${santo.virtudes}</p>` : ''}
-                        <button onclick="openSaintModal('${santo.id}')" style="display: block; width: 100%; padding: 6px 10px; background: #0f172a; color: #fff; text-align: center; border-radius: 8px; font-size: 11px; font-weight: 700; border: none; cursor: pointer;">
+                        <button onclick="openSaintModal('${santo.id}')" style="display: block; width: 100%; padding: 7px 10px; background: #0f172a; color: #fff; text-align: center; border-radius: 8px; font-size: 11px; font-weight: 700; border: none; cursor: pointer;">
                             Ver Biografia Completa ➔
                         </button>
                     </div>
