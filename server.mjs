@@ -2,6 +2,7 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { spawn } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -235,6 +236,117 @@ const server = http.createServer(async (req, res) => {
         return;
     }
 
+        // ==========================================
+    // 4.1 API: STATUS DA LITURGIA (ANOS BAIXADOS)
+    // ==========================================
+    if (pathname === '/api/admin/liturgia/status' && req.method === 'GET') {
+        const litDir = path.join(__dirname, 'data', 'liturgia');
+        const result = {};
+        const currentYear = new Date().getFullYear();
+        const yearsToCheck = [currentYear, currentYear + 1, currentYear + 2, currentYear + 3];
+
+        yearsToCheck.forEach(y => {
+            const yDir = path.join(litDir, String(y));
+            const isLeap = (y % 4 === 0 && y % 100 !== 0) || (y % 400 === 0);
+            const expected = isLeap ? 366 : 365;
+
+            if (fs.existsSync(yDir)) {
+                const files = fs.readdirSync(yDir).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f));
+                result[y] = {
+                    year: y,
+                    count: files.length,
+                    expected,
+                    complete: files.length >= expected,
+                    status: files.length >= expected ? 'Completo' : `${files.length}/${expected} dias`
+                };
+            } else {
+                result[y] = {
+                    year: y,
+                    count: 0,
+                    expected,
+                    complete: false,
+                    status: 'Pendente'
+                };
+            }
+        });
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+            success: true,
+            years: result,
+            currentYear,
+            isUpdating: !!global.isLiturgiaUpdating
+        }));
+        return;
+    }
+
+    // ==========================================
+    // 4.2 API: ATUALIZAR ANO DA LITURGIA (MANUAL VIA PAINEL)
+    // ==========================================
+    if (pathname === '/api/admin/liturgia/atualizar' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const payload = body ? JSON.parse(body) : {};
+                const targetYear = Number(payload.year || new Date().getFullYear());
+                const force = !!payload.force;
+
+                if (!targetYear || targetYear < 2020 || targetYear > 2050) {
+                    res.writeHead(400, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Ano inválido fornecido.' }));
+                    return;
+                }
+
+                if (global.isLiturgiaUpdating) {
+                    res.writeHead(429, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Já existe uma atualização de liturgia em andamento.' }));
+                    return;
+                }
+
+                global.isLiturgiaUpdating = true;
+                console.log(`[LiturgiaAuto] Solicitada atualização para o ano ${targetYear} (force=${force})...`);
+
+                const scriptPath = path.join(__dirname, 'scripts', 'atualizar-liturgia.mjs');
+                const args = ['--year', String(targetYear)];
+                if (force) args.push('--force');
+
+                const proc = spawn(process.execPath, [scriptPath, ...args], { cwd: __dirname });
+                let logOutput = '';
+
+                proc.stdout.on('data', d => {
+                    logOutput += d.toString();
+                    process.stdout.write(d);
+                });
+                proc.stderr.on('data', d => {
+                    logOutput += d.toString();
+                    process.stderr.write(d);
+                });
+
+                proc.on('close', code => {
+                    global.isLiturgiaUpdating = false;
+                    if (code === 0) {
+                        console.log(`[LiturgiaAuto] ✅ Ano ${targetYear} concluído e validado com êxito!`);
+                    } else {
+                        console.error(`[LiturgiaAuto] ⚠️ Erro no processamento do ano ${targetYear} (código ${code})`);
+                    }
+                });
+
+                res.writeHead(202, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({
+                    success: true,
+                    message: `Atualização do ano ${targetYear} iniciada em segundo plano!`,
+                    year: targetYear
+                }));
+            } catch (err) {
+                global.isLiturgiaUpdating = false;
+                res.writeHead(500, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: false, error: 'Falha ao iniciar: ' + err.message }));
+            }
+        });
+        return;
+    }
+
     // ==========================================
     // 5. SERVIDOR DE ARQUIVOS ESTÁTICOS
     // ==========================================
@@ -274,3 +386,41 @@ server.listen(PORT, () => {
     console.log(`☁️ Cloud Sync & Community Metrics API inicializadas.`);
     console.log(`=======================================================`);
 });
+
+// =======================================================
+// ROTINA AUTOMÁTICA EM SEGUNDO PLANO (SCHEDULER LITÚRGICO)
+// =======================================================
+function scheduleAutomaticLiturgyCheck() {
+    async function checkAndAutoUpdate() {
+        if (global.isLiturgiaUpdating) return;
+        const currentYear = new Date().getFullYear();
+        const targets = [currentYear, currentYear + 1];
+        const scriptPath = path.join(__dirname, 'scripts', 'atualizar-liturgia.mjs');
+
+        for (const y of targets) {
+            const yDir = path.join(__dirname, 'data', 'liturgia', String(y));
+            const isLeap = (y % 4 === 0 && y % 100 !== 0) || (y % 400 === 0);
+            const expected = isLeap ? 366 : 365;
+            let currentCount = 0;
+            if (fs.existsSync(yDir)) {
+                currentCount = fs.readdirSync(yDir).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).length;
+            }
+            if (currentCount < expected) {
+                console.log(`[LiturgiaAuto] Rotina de verificação: ano ${y} incompleto (${currentCount}/${expected}). Disparando download autônomo...`);
+                global.isLiturgiaUpdating = true;
+                const proc = spawn(process.execPath, [scriptPath, '--year', String(y)], { cwd: __dirname });
+                proc.on('close', code => {
+                    global.isLiturgiaUpdating = false;
+                    console.log(`[LiturgiaAuto] Download autônomo do ano ${y} finalizado (código ${code})`);
+                });
+                break; // Processa um ano de cada vez
+            }
+        }
+    }
+
+    // Executa 45 segundos após o boot e repete a cada 24 horas
+    setTimeout(checkAndAutoUpdate, 45 * 1000);
+    setInterval(checkAndAutoUpdate, 24 * 60 * 60 * 1000);
+}
+
+scheduleAutomaticLiturgyCheck();

@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA & Ícones de Atalho para Smartphone e Desktop -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1e293b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Catecismo">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>CATECISMO — Conhecer, compreender e viver a fé</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -70,6 +80,20 @@
         .meditation-text {
             font-size: calc(1em * var(--reading-scale, 1));
             line-height: calc(1.6 + 0.1 * (var(--reading-scale, 1) - 1));
+        }
+
+        /* ESCALA TIPOGRÁFICA DO CATECISMO (MODAL E PÁGINAS) */
+        .lesson-reading-title {
+            font-size: calc(1.65rem * var(--reading-scale, 1)) !important;
+            line-height: 1.25 !important;
+        }
+        .lesson-reading-body {
+            font-size: calc(1.125rem * var(--reading-scale, 1)) !important;
+            line-height: calc(1.7 + 0.1 * (var(--reading-scale, 1) - 1)) !important;
+        }
+        .lesson-reading-subtext {
+            font-size: calc(0.92rem * var(--reading-scale, 1)) !important;
+            line-height: calc(1.58 + 0.08 * (var(--reading-scale, 1) - 1)) !important;
         }
 
 
@@ -315,6 +339,33 @@
         })();
     </script>
 
+    <!-- Leaflet 1.9.4 & Santos Dataset (Mapa da Santidade em Português) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="assets/data/santos_data.js"></script>
+    <style>
+        .leaflet-popup-content-wrapper {
+            border-radius: 1.25rem !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25) !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+        .leaflet-popup-content {
+            margin: 0 !important;
+            line-height: 1.4 !important;
+        }
+        .custom-santo-pin {
+            transition: transform 0.2s ease;
+        }
+        .custom-santo-pin:hover {
+            transform: scale(1.22);
+        }
+        .filter-chip-active {
+            background-color: #6B2D2D !important;
+            color: #ffffff !important;
+            border-color: #6B2D2D !important;
+        }
+    </style>
 </head>
 <body class="h-full flex flex-col custom-scrollbar overflow-hidden">
 
@@ -463,6 +514,9 @@
 
                 <!-- Ações do Rodapé: Apoio & Desenvolvedor -->
                 <div class="space-y-1.5 pt-1">
+                    <button onclick="shareCatecismo('sidebar')" class="w-full py-2 px-3 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 border border-blue-200 dark:border-blue-900 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-xs transition flex items-center justify-center gap-2 cursor-pointer">
+                        <span class="text-sm">📤</span> <span>Compartilhar Plataforma</span>
+                    </button>
                     <button onclick="openApoioModal()" class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs shadow-sm hover:shadow transition flex items-center justify-center gap-2 cursor-pointer">
                         <span>☕</span> <span>Apoiar o Projeto</span>
                     </button>
@@ -512,6 +566,11 @@
                     </div>
                     
                     <!-- BOTÃO MODO ESCURO / CLARO (SEMPRE VISÍVEL NO SMARTPHONE!) -->
+                    <!-- BOTÃO COMPARTILHAR CATECISMO (DISCRETO & VIRAL) -->
+                    <button onclick="shareCatecismo('header')" id="header-share-btn" title="Compartilhar Catecismo Digital" class="w-8 h-8 p-1.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-800 dark:text-blue-300 transition flex items-center justify-center shadow-xs cursor-pointer">
+                        <span class="text-sm">📤</span>
+                    </button>
+
                     <button onclick="ThemeManager.toggle()" id="header-theme-toggle" title="Alternar Modo Escuro / Claro" class="w-8 h-8 p-1.5 rounded-xl border border-slate-200 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800 transition flex items-center justify-center shadow-xs cursor-pointer">
                         <span class="theme-toggle-icon">
                             <svg class="w-4 h-4 text-slate-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -582,6 +641,9 @@
                     </nav>
                     <!-- Mobile Drawer Footer Actions -->
                     <div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 space-y-2">
+                        <button onclick="shareCatecismo('mobile_drawer'); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-xs flex items-center justify-center gap-2 cursor-pointer">
+                            <span class="text-sm">📤</span> <span>Compartilhar Catecismo</span>
+                        </button>
                         <button onclick="openApoioModal(); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-amber-500 text-white font-bold text-xs shadow-sm flex items-center justify-center gap-2">
                             <span>☕</span> <span>Apoiar o Projeto (PIX)</span>
                         </button>
@@ -3275,21 +3337,374 @@
         }
         window.showToast = showToast;
 
-        function checkAchievements() {
-            const achievements = [
-                { id: 'first_study', title: 'Primeiro Estudo', condition: AppState.completedLessons.length > 0 },
-                { id: 'five_lessons', title: 'Peregrino da Fé', condition: AppState.completedLessons.length >= 5 },
-                { id: 'first_quiz', title: 'Primeiro Quiz', condition: AppState.completedQuizzes.length > 0 },
-                { id: 'prayer_streak', title: 'Amigo da Oração', condition: AppState.streak >= 3 },
-                { id: 'fav_collector', title: 'Colecionador de Tesouros', condition: AppState.favorites.length >= 3 }
-            ];
+        /* ========================================================
+           SISTEMA EXPANDIDO DE CONQUISTAS (24 CONQUISTAS TEMÁTICAS)
+           ======================================================== */
+        const AchievementsManager = {
+            categories: [
+                { id: 'todas', label: 'Todas (24)', icon: '🏆' },
+                { id: 'doutrina', label: 'Doutrina', icon: '📜' },
+                { id: 'oracao', label: 'Oração & Terço', icon: '📿' },
+                { id: 'escritura', label: 'Bíblia & Liturgia', icon: '📖' },
+                { id: 'quizzes', label: 'Quizzes', icon: '🧠' },
+                { id: 'constancia', label: 'Constância & Nível', icon: '🔥' }
+            ],
 
-            achievements.forEach(ach => {
-                if (ach.condition && !AppState.unlockedAchievements.includes(ach.id)) {
+            achievements: [
+                // 1. DOUTRINA & CATECISMO
+                {
+                    id: 'first_study',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Primeiro Passo',
+                    desc: 'Conclua sua 1ª aula do Catecismo',
+                    icon: '📖',
+                    xp: 25,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 aula` };
+                    }
+                },
+                {
+                    id: 'five_lessons',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Peregrino da Fé',
+                    desc: 'Conclua 5 aulas do Catecismo',
+                    icon: '🥾',
+                    xp: 35,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 5, current: Math.min(count, 5), max: 5, progressLabel: `${Math.min(count, 5)} / 5 aulas` };
+                    }
+                },
+                {
+                    id: 'ten_lessons',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Estudioso da Doutrina',
+                    desc: 'Conclua 10 aulas do Catecismo',
+                    icon: '🎓',
+                    xp: 50,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 10, current: Math.min(count, 10), max: 10, progressLabel: `${Math.min(count, 10)} / 10 aulas` };
+                    }
+                },
+                {
+                    id: 'pillar_master',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Pilar da Fé Concluído',
+                    desc: 'Conclua todas as 5 aulas de um dos pilares (Creio, Celebro, Vivo ou Rezo)',
+                    icon: '🏛️',
+                    xp: 50,
+                    check: (s) => {
+                        const done = s.completedLessons || [];
+                        const pillars = ['creio', 'celebro', 'vivo', 'rezo'];
+                        let maxPillar = 0;
+                        let anyComplete = false;
+                        pillars.forEach(p => {
+                            const count = done.filter(id => id.startsWith(p + '_')).length;
+                            if (count > maxPillar) maxPillar = count;
+                            if (count >= 5) anyComplete = true;
+                        });
+                        return { unlocked: anyComplete, current: Math.min(maxPillar, 5), max: 5, progressLabel: `${Math.min(maxPillar, 5)} / 5 aulas de um pilar` };
+                    }
+                },
+                {
+                    id: 'all_lessons',
+                    category: 'doutrina',
+                    categoryLabel: 'Doutrina & Fé',
+                    title: 'Mestre do Catecismo',
+                    desc: 'Conclua todas as 20 aulas do Catecismo',
+                    icon: '👑',
+                    xp: 100,
+                    check: (s) => {
+                        const count = (s.completedLessons || []).length;
+                        return { unlocked: count >= 20, current: Math.min(count, 20), max: 20, progressLabel: `${Math.min(count, 20)} / 20 aulas` };
+                    }
+                },
+
+                // 2. ORAÇÃO & SANTO TERÇO
+                {
+                    id: 'first_rosary',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Coração Mariano',
+                    desc: 'Reze um Santo Terço interativo completo',
+                    icon: '📿',
+                    xp: 30,
+                    check: (s, m) => {
+                        const rosaryCount = (s.completedRosaries ? s.completedRosaries.length : 0) || (m && m.rosary ? m.rosary.totalPrayed : 0);
+                        return { unlocked: rosaryCount >= 1, current: Math.min(rosaryCount, 1), max: 1, progressLabel: `${Math.min(rosaryCount, 1)} / 1 Terço` };
+                    }
+                },
+                {
+                    id: 'four_mysteries',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Coroa de Rosas',
+                    desc: 'Reze todos os 4 Mistérios do Rosário (Gozosos, Dolorosos, Gloriosos e Luminosos)',
+                    icon: '🌹',
+                    xp: 60,
+                    check: (s, m) => {
+                        const byM = (m && m.rosary && m.rosary.byMystery) ? m.rosary.byMystery : {};
+                        const keys = ['gozosos', 'dolorosos', 'gloriosos', 'luminosos'];
+                        const count = keys.filter(k => (byM[k] || 0) > 0).length;
+                        return { unlocked: count >= 4, current: count, max: 4, progressLabel: `${count} / 4 mistérios rezados` };
+                    }
+                },
+                {
+                    id: 'rosary_apostle',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Apóstolo do Rosário',
+                    desc: 'Reze 5 Terços completos no aplicativo',
+                    icon: '🌺',
+                    xp: 75,
+                    check: (s, m) => {
+                        const rosaryCount = (s.completedRosaries ? s.completedRosaries.length : 0) || (m && m.rosary ? m.rosary.totalPrayed : 0);
+                        return { unlocked: rosaryCount >= 5, current: Math.min(rosaryCount, 5), max: 5, progressLabel: `${Math.min(rosaryCount, 5)} / 5 Terços` };
+                    }
+                },
+                {
+                    id: 'first_lectio',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Na Presença de Deus',
+                    desc: 'Pratique a Lectio Divina e salve uma anotação de oração',
+                    icon: '🕊️',
+                    xp: 30,
+                    check: (s) => {
+                        const count = Object.keys(s.lectioNotes || {}).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 meditação` };
+                    }
+                },
+                {
+                    id: 'fav_collector',
+                    category: 'oracao',
+                    categoryLabel: 'Oração & Devoção',
+                    title: 'Colecionador de Tesouros',
+                    desc: 'Salve 3 ou mais conteúdos nos seus Favoritos',
+                    icon: '⭐',
+                    xp: 30,
+                    check: (s) => {
+                        const count = (s.favorites || []).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 favoritos` };
+                    }
+                },
+
+                // 3. BÍBLIA & LITURGIA
+                {
+                    id: 'first_liturgy',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Ouvinte da Palavra',
+                    desc: 'Leia a Liturgia Diária e marque como lida',
+                    icon: '✝️',
+                    xp: 25,
+                    check: (s) => {
+                        const count = Object.keys(s.liturgicalRead || {}).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 dia` };
+                    }
+                },
+                {
+                    id: 'three_liturgies',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Pão Cotidiano',
+                    desc: 'Acompanhe a Liturgia Diária em 3 datas diferentes',
+                    icon: '🍞',
+                    xp: 40,
+                    check: (s) => {
+                        const count = Object.keys(s.liturgicalRead || {}).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 dias` };
+                    }
+                },
+                {
+                    id: 'seven_liturgies',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Discípulo do Evangelho',
+                    desc: 'Acompanhe a Liturgia Diária em 7 datas diferentes',
+                    icon: '📜',
+                    xp: 70,
+                    check: (s) => {
+                        const count = Object.keys(s.liturgicalRead || {}).length;
+                        return { unlocked: count >= 7, current: Math.min(count, 7), max: 7, progressLabel: `${Math.min(count, 7)} / 7 dias` };
+                    }
+                },
+                {
+                    id: 'bible_explorer',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Lâmpada para os Meus Pés',
+                    desc: 'Leia 3 capítulos bíblicos no leitor da Bíblia Sagrada',
+                    icon: '🕯️',
+                    xp: 35,
+                    check: (s) => {
+                        const count = Object.keys(s.readBibleChapters || {}).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 capítulos` };
+                    }
+                },
+                {
+                    id: 'saints_friend',
+                    category: 'escritura',
+                    categoryLabel: 'Bíblia & Liturgia',
+                    title: 'Comunhão dos Santos',
+                    desc: 'Conheça a história e oração do Santo do Dia em 3 datas',
+                    icon: '🌟',
+                    xp: 35,
+                    check: (s) => {
+                        const count = Object.keys(s.readSaints || {}).length;
+                        return { unlocked: count >= 3, current: Math.min(count, 3), max: 3, progressLabel: `${Math.min(count, 3)} / 3 santos` };
+                    }
+                },
+
+                // 4. QUIZZES & SABEDORIA
+                {
+                    id: 'first_quiz',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Primeiro Desafio',
+                    desc: 'Conclua seu primeiro Quiz de Conhecimento',
+                    icon: '⚡',
+                    xp: 25,
+                    check: (s) => {
+                        const count = (s.completedQuizzes || []).length;
+                        return { unlocked: count >= 1, current: Math.min(count, 1), max: 1, progressLabel: `${Math.min(count, 1)} / 1 quiz` };
+                    }
+                },
+                {
+                    id: 'quiz_master',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Mente Iluminada',
+                    desc: 'Acerte 80% ou mais em um quiz de conhecimento',
+                    icon: '💡',
+                    xp: 40,
+                    check: (s) => {
+                        const unlocked = (s.unlockedAchievements || []).includes('quiz_master');
+                        return { unlocked, current: unlocked ? 1 : 0, max: 1, progressLabel: unlocked ? 'Atingido (80%+)' : 'Meta: 80%+ acerto' };
+                    }
+                },
+                {
+                    id: 'marathon_perfect',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Gabarito Canônico',
+                    desc: 'Conquiste 100% de acerto na Maratona de 10 perguntas',
+                    icon: '🎯',
+                    xp: 60,
+                    check: (s) => {
+                        const unlocked = (s.unlockedAchievements || []).includes('marathon_perfect');
+                        return { unlocked, current: unlocked ? 1 : 0, max: 1, progressLabel: unlocked ? '10/10 na Maratona' : 'Meta: 10/10 na Maratona' };
+                    }
+                },
+                {
+                    id: 'five_quizzes',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Teólogo Leigo',
+                    desc: 'Complete 5 sessões de quizzes',
+                    icon: '🧠',
+                    xp: 50,
+                    check: (s) => {
+                        const count = (s.completedQuizzes || []).length;
+                        return { unlocked: count >= 5, current: Math.min(count, 5), max: 5, progressLabel: `${Math.min(count, 5)} / 5 quizzes` };
+                    }
+                },
+                {
+                    id: 'quiz_fifty_hits',
+                    category: 'quizzes',
+                    categoryLabel: 'Quizzes & Sabedoria',
+                    title: 'Sábio na Doutrina',
+                    desc: 'Alcance 30 acertos totais em perguntas de quizzes',
+                    icon: '🏅',
+                    xp: 60,
+                    check: (s, m) => {
+                        const correct = (m && m.quizzes) ? (m.quizzes.totalCorrect || 0) : 0;
+                        return { unlocked: correct >= 30, current: Math.min(correct, 30), max: 30, progressLabel: `${Math.min(correct, 30)} / 30 acertos` };
+                    }
+                },
+
+                // 5. CONSTÂNCIA & NÍVEL ESPIRITUAL
+                {
+                    id: 'prayer_streak',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Chama Acesa',
+                    desc: 'Alcance 3 dias consecutivos de oração (Ofensiva)',
+                    icon: '🥉',
+                    xp: 30,
+                    check: (s) => {
+                        const streak = s.streak || 0;
+                        return { unlocked: streak >= 3, current: Math.min(streak, 3), max: 3, progressLabel: `${Math.min(streak, 3)} / 3 dias` };
+                    }
+                },
+                {
+                    id: 'week_streak',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Alma Perseverante',
+                    desc: 'Alcance 7 dias consecutivos de oração',
+                    icon: '🥈',
+                    xp: 60,
+                    check: (s) => {
+                        const streak = s.streak || 0;
+                        return { unlocked: streak >= 7, current: Math.min(streak, 7), max: 7, progressLabel: `${Math.min(streak, 7)} / 7 dias` };
+                    }
+                },
+                {
+                    id: 'two_weeks_streak',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Fiel na Pequenez',
+                    desc: 'Alcance 14 dias consecutivos de oração',
+                    icon: '🥇',
+                    xp: 100,
+                    check: (s) => {
+                        const streak = s.streak || 0;
+                        return { unlocked: streak >= 14, current: Math.min(streak, 14), max: 14, progressLabel: `${Math.min(streak, 14)} / 14 dias` };
+                    }
+                },
+                {
+                    id: 'xp_master',
+                    category: 'constancia',
+                    categoryLabel: 'Constância & Nível',
+                    title: 'Servo Fiel',
+                    desc: 'Alcance 500 ou mais XP acumulados na jornada da fé',
+                    icon: '💎',
+                    xp: 100,
+                    check: (s) => {
+                        const xp = s.xp || 0;
+                        return { unlocked: xp >= 500, current: Math.min(xp, 500), max: 500, progressLabel: `${Math.min(xp, 500)} / 500 XP` };
+                    }
+                }
+            ]
+        };
+        window.AchievementsManager = AchievementsManager;
+
+        function checkAchievements() {
+            if (!AppState.unlockedAchievements) AppState.unlockedAchievements = [];
+            const metrics = window.MetricsTracker ? MetricsTracker.getData() : null;
+            let newlyUnlocked = 0;
+
+            AchievementsManager.achievements.forEach(ach => {
+                const res = ach.check(AppState, metrics);
+                if (res.unlocked && !AppState.unlockedAchievements.includes(ach.id)) {
                     AppState.unlockedAchievements.push(ach.id);
-                    showToast(`🏆 Conquista desbloqueada: ${ach.title}!`, 'success');
+                    AppState.xp = (AppState.xp || 0) + (ach.xp || 25);
+                    newlyUnlocked++;
+                    showToast(`🏆 Conquista Desbloqueada: ${ach.title}! (+${ach.xp} XP)`, 'success');
                 }
             });
+
+            if (newlyUnlocked > 0) {
+                localStorage.setItem('catecismo_state_v5', JSON.stringify(AppState));
+                updateHeaderBadges();
+            }
         }
         window.checkAchievements = checkAchievements;
 
@@ -4004,10 +4419,25 @@
 
                 return `
                     <div class="max-w-5xl mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow">
-                            <h2 class="font-serif text-3xl font-bold text-mariana mb-2">Catecismo da Igreja Católica</h2>
-                            <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">Estudo sistemático estruturado nos quatro pilares tradicionais da fé.</p>
-                            <div class="flex flex-wrap gap-2 mt-6">
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-5">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div>
+                                    <h2 class="font-serif text-3xl font-bold text-mariana dark:text-slate-100 mb-1">Catecismo da Igreja Católica</h2>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">Estudo sistemático estruturado nos quatro pilares tradicionais da fé.</p>
+                                </div>
+                                <div class="flex items-center gap-2 self-start md:self-auto bg-slate-50 dark:bg-slate-700/60 px-3 py-1.5 rounded-2xl border border-slate-200 dark:border-slate-600">
+                                    <span class="text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
+                                        <span>🔤</span> Fonte:
+                                    </span>
+                                    <div class="flex items-center bg-white dark:bg-slate-800 p-0.5 rounded-xl border border-slate-200/80 dark:border-slate-600 shadow-2xs">
+                                        <button onclick="FontScaleManager.decrease()" title="Diminuir fonte (A-)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A-</button>
+                                        <span class="font-scale-indicator text-[11px] font-bold text-slate-600 dark:text-slate-300 px-1.5 min-w-[36px] text-center">${FontScaleManager.labels[FontScaleManager.currentIndex]}</span>
+                                        <button onclick="FontScaleManager.increase()" title="Aumentar fonte (A+)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100 dark:border-slate-700">
                                 <button onclick="router.navigate('catecismo')" class="px-4 py-2 rounded-xl text-xs font-bold ${!filterCat ? 'bg-mariana text-white' : 'bg-slate-100 text-slate-700'}">Todos (${CatecismContentProvider.modules.length})</button>
                                 ${CatecismContentProvider.categories.map(c => `
                                     <button onclick="router.navigate('catecismo', '${c.id}')" class="px-4 py-2 rounded-xl text-xs font-bold ${filterCat === c.id ? 'bg-mariana text-white' : 'bg-slate-100 text-slate-700'}">${c.title.split('—')[0]}</button>
@@ -4022,9 +4452,9 @@
                                     <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow flex flex-col justify-between space-y-4 relative">
                                         ${isDone ? '<div class="absolute -top-3 -right-3 w-8 h-8 bg-emerald-500 rounded-full text-white flex items-center justify-center font-bold shadow-md">✓</div>' : ''}
                                         <div class="space-y-2">
-                                            <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] uppercase font-bold tracking-wider">${mod.ccc}</span>
-                                            <h3 class="font-serif text-xl font-bold text-mariana mt-2 leading-tight">${mod.title}</h3>
-                                            <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${mod.description}</p>
+                                            <span class="px-2.5 py-1 bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 rounded-lg text-[10px] uppercase font-bold tracking-wider">${mod.ccc}</span>
+                                            <h3 class="font-serif font-bold text-mariana dark:text-slate-100 mt-2 leading-tight lesson-reading-title" style="font-size: calc(1.25rem * var(--reading-scale, 1)) !important;">${mod.title}</h3>
+                                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2 lesson-reading-subtext">${mod.description}</p>
                                         </div>
                                         <button onclick="openLessonModal('${mod.id}')" class="w-full py-3 ${isDone ? 'bg-slate-100 text-slate-700' : 'mariana-gradient text-white'} rounded-xl text-xs font-bold shadow-sm transition hover:scale-105">${isDone ? 'Revisar Módulo' : 'Estudar Módulo'}</button>
                                     </div>
@@ -4074,49 +4504,104 @@
                 const today = getLocalDateString();
                 const date = /^\d{4}-\d{2}-\d{2}$/.test(String(state || '')) ? state : today;
                 const esc = v => String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+                
                 return `
-                    <div id="santo-view" data-date="${date}" class="max-w-4xl mx-auto space-y-8 min-w-0">
-                        <div class="bg-white rounded-3xl p-5 border border-slate-200 card-shadow flex flex-wrap items-center justify-between gap-3 min-w-0">
-                            <div class="min-w-0">
-                                <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">Calendário do Santo / celebração</span>
-                                <h3 class="font-serif text-xl font-bold text-mariana mt-1">Santo ou celebração da data</h3>
+                    <div id="santo-view" data-date="${date}" class="max-w-5xl mx-auto space-y-6 min-w-0">
+                        <!-- NAVEGAÇÃO DE ABAS: HOJE, CATÁLOGO 140 SANTOS E MAPA MUNDIAL -->
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-3 border border-slate-200 dark:border-slate-800 card-shadow flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-2 overflow-x-auto custom-scrollbar p-1 w-full sm:w-auto">
+                                <button id="saints-tab-today" onclick="setSaintsViewMode('today')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-2 whitespace-nowrap">
+                                    <span>📅</span> <span>Santo do Dia</span>
+                                </button>
+                                <button id="saints-tab-catalog" onclick="setSaintsViewMode('catalog')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap">
+                                    <span>👑</span> <span>140 Grandes Padroeiros</span>
+                                </button>
+                                <button id="saints-tab-map" onclick="setSaintsViewMode('map')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap">
+                                    <span>🗺️</span> <span>Mapa da Santidade (131 Lugares)</span>
+                                </button>
                             </div>
-                            <div class="flex items-center gap-2 flex-wrap max-w-full">
-                                <button onclick="navigateSaintDay('${date}',-1)" class="px-3 py-2 bg-slate-100 rounded-xl text-xs font-bold">← Anterior</button>
-                                <input type="date" value="${date}" onchange="router.navigate('santo', this.value)" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 max-w-full">
-                                <button onclick="navigateSaintDay('${date}',1)" class="px-3 py-2 bg-slate-100 rounded-xl text-xs font-bold">Próximo →</button>
-                            </div>
-                        </div>
-                        <div id="santo-hero" class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30 min-w-0">
-                            <div class="absolute -right-6 -bottom-6 w-64 h-64 opacity-10 select-none pointer-events-none text-dourado">
-                            <svg viewBox="0 0 120 120" fill="currentColor" class="w-full h-full">
-                                <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                                <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width="1"/>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 4"/>
-                                <path d="M57 18 h6 v84 h-6 z M30 42 h60 v6 h-60 z" fill="currentColor"/>
-                                <path d="M60 10 v-6 M60 110 v6 M10 60 h-6 M110 60 h6 M25 25 l-5-5 M95 95 l5 5 M25 95 l-5 5 M95 25 l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                            <div class="relative z-10 space-y-3 min-w-0">
-                                <span class="inline-flex max-w-full px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40 break-words">${date.split('-').reverse().join('/')}</span>
-                                <h2 class="font-serif text-3xl md:text-4xl font-bold break-words">Consultando a data...</h2>
-                                <p class="text-slate-200 text-sm leading-6 break-words">Carregando a celebração litúrgica e, quando disponível, o Santo do Dia.</p>
+
+                            <div class="flex items-center gap-2 flex-wrap ml-auto pr-2">
+                                <button onclick="navigateSaintDay('${date}',-1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">← Anterior</button>
+                                <input type="date" value="${date}" onchange="router.navigate('santo', this.value)" class="px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">
+                                <button onclick="navigateSaintDay('${date}',1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">Próximo →</button>
                             </div>
                         </div>
-                        <div id="santo-detail" class="grid grid-cols-1 md:grid-cols-3 gap-6 min-w-0">
-                            <div class="md:col-span-2 min-w-0">
-                                <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow text-center min-w-0">
-                                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-xl text-xs text-slate-500">⏳ Carregando conteúdo da data...</div>
+
+                        <!-- 1. MODO: SANTO DO DIA (HOJE) -->
+                        <div id="saints-mode-today" class="space-y-8 min-w-0">
+                            <div id="santo-hero" class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30 min-w-0">
+                                <div class="absolute -right-6 -bottom-6 w-64 h-64 opacity-10 select-none pointer-events-none text-dourado">
+                                    <svg viewBox="0 0 120 120" fill="currentColor" class="w-full h-full">
+                                        <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                                        <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width="1"/>
+                                        <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 4"/>
+                                        <path d="M57 18 h6 v84 h-6 z M30 42 h60 v6 h-60 z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="relative z-10 space-y-3 min-w-0">
+                                    <span class="inline-flex max-w-full px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40 break-words">Consultando Registros Canônicos…</span>
+                                    <p class="text-slate-200 text-xs">Carregando celebração e santos associados à data de ${date.split('-').reverse().join('/')}...</p>
                                 </div>
                             </div>
-                            <div class="space-y-6 min-w-0">
-                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3 min-w-0 overflow-hidden">
-                                    <h3 class="font-serif text-lg font-bold text-mariana">Como funciona</h3>
-                                    <p class="text-xs text-slate-600 leading-relaxed break-words">A data selecionada é consultada diretamente na fonte litúrgica. O Santo do Dia usa o conteúdo da API em português quando existe para a data atual. Não usamos Wikipédia para montar biografias.</p>
-                                </div>
+                            <div id="santo-detail" class="space-y-8 min-w-0">
+                                <div class="p-8 text-center text-xs text-slate-400 animate-pulse">Carregando biografia e reflexões do Santo...</div>
                             </div>
                         </div>
-                    </div>`;
+
+                        <!-- 2. MODO: CATÁLOGO DOS 140 GRANDES PADROEIROS -->
+                        <div id="saints-mode-catalog" class="space-y-6 hidden">
+                            <!-- Barra de Busca e Filtros -->
+                            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 card-shadow space-y-4">
+                                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100">Galeria dos 140 Grandes Padroeiros</h3>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Doutores da Igreja, Mártires, Apóstolos e Modelos de Virtude da Cristandade</p>
+                                    </div>
+                                    <div class="w-full md:w-72">
+                                        <input type="text" id="saints-search-input" oninput="filterSaintsCatalog()" placeholder="Buscar por santo, país ou causa..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 outline-none focus:border-mariana">
+                                    </div>
+                                </div>
+
+                                <!-- Filtro por Século -->
+                                <div>
+                                    <span class="text-[11px] uppercase font-bold text-slate-400 tracking-wider block mb-2">Filtrar por Época / Século:</span>
+                                    <div id="saints-century-chips" class="flex flex-wrap gap-2"></div>
+                                </div>
+
+                                <!-- Filtro por Causa / Padroado -->
+                                <div>
+                                    <span class="text-[11px] uppercase font-bold text-slate-400 tracking-wider block mb-2">Filtrar por Patronato / Causa:</span>
+                                    <div id="saints-causa-chips" class="flex flex-wrap gap-2"></div>
+                                </div>
+                            </div>
+
+                            <!-- Grade de Cards dos Santos -->
+                            <div id="saints-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+                            <!-- Paginação -->
+                            <div id="saints-catalog-pagination" class="flex justify-center items-center gap-2 pt-4"></div>
+                        </div>
+
+                        <!-- 3. MODO: MAPA MUNDIAL DA SANTIDADE (131 LUGARES EM PORTUGUÊS) -->
+                        <div id="saints-mode-map" class="space-y-6 hidden">
+                            <div class="bg-gradient-to-r from-mariana via-slate-900 to-amber-950 text-white p-6 rounded-3xl shadow-xl border border-dourado/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-4xl">🗺️</span>
+                                    <div>
+                                        <h3 class="font-serif text-2xl font-bold text-amber-200">Mapa Mundial da Santidade</h3>
+                                        <p class="text-xs text-slate-300 mt-1">Peregrine pelos 131 Santuários, Basílicas e Locais de Devoção e Martírio dos Santos ao redor do planeta com nomes em Português.</p>
+                                    </div>
+                                </div>
+                                <span class="px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-widest whitespace-nowrap">131 Santuários</span>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200 dark:border-slate-800 card-shadow">
+                                <div id="mapa-santidade" style="width: 100%; height: 600px;" class="w-full rounded-2xl shadow-inner border border-slate-200 dark:border-slate-700 overflow-hidden relative"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             },
 
             async loadSantoAsync(dateStr, mainView) {
@@ -4515,39 +5000,138 @@
                 `;
             },
 
-            renderConquistas() {
-                const all = [
-                    { id: 'first_study', title: 'Primeiro Estudo', desc: 'Conclua sua primeira aula do Catecismo', icon: '📖' },
-                    { id: 'five_lessons', title: 'Peregrino da Fé', desc: 'Conclua 5 aulas do Catecismo', icon: '🥾' },
-                    { id: 'ten_lessons', title: 'Estudioso da Doutrina', desc: 'Conclua 10 aulas do Catecismo', icon: '🎓' },
-                    { id: 'all_lessons', title: 'Mestre do Catecismo', desc: 'Conclua todas as 20 aulas', icon: '👑' },
-                    { id: 'first_quiz', title: 'Primeiro Quiz', desc: 'Complete um quiz de conhecimento', icon: '🧠' },
-                    { id: 'quiz_master', title: 'Mente Iluminada', desc: 'Acerte 80% ou mais em um quiz', icon: '💡' },
-                    { id: 'prayer_streak', title: 'Amigo da Oração', desc: 'Alcance 3 dias consecutivos de oração', icon: '🙏' },
-                    { id: 'week_streak', title: 'Alma Perseverante', desc: 'Alcance 7 dias consecutivos de oração', icon: '🔥' },
-                    { id: 'fav_collector', title: 'Colecionador de Tesouros', desc: 'Salve 3 conteúdos nos favoritos', icon: '⭐' },
-                    { id: 'first_liturgy', title: 'Ouvinte da Palavra', desc: 'Leia a liturgia diária pela primeira vez', icon: '✝️' }
-                ];
-                const unlocked = AppState.unlockedAchievements;
+            renderConquistas(activeCategory = 'todas') {
+                checkAchievements();
+                const metrics = window.MetricsTracker ? MetricsTracker.getData() : null;
+                const all = AchievementsManager.achievements;
+                const unlocked = AppState.unlockedAchievements || [];
+                const unlockedCount = all.filter(a => unlocked.includes(a.id)).length;
+                const pct = Math.round((unlockedCount / all.length) * 100);
+
+                const currentCat = activeCategory || 'todas';
+                const filtered = currentCat === 'todas' 
+                    ? all 
+                    : all.filter(a => a.category === currentCat);
+
                 return `
-                    <div class="max-w-4xl mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-2">
-                            <h2 class="font-serif text-3xl font-bold text-mariana">Conquistas</h2>
-                            <p class="text-sm text-slate-600">${unlocked.length} de ${all.length} conquistas desbloqueadas — a perseverança na fé é coroada passo a passo.</p>
-                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden mt-4">
-                                <div class="gold-gradient h-full rounded-full transition-all" style="width: ${Math.round((unlocked.length / all.length) * 100)}%"></div>
+                    <div class="max-w-5xl mx-auto space-y-6">
+                        <!-- Painel de Resumo & Coroa de Glória -->
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-5">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
+                                            Jornada da Santidade
+                                        </span>
+                                        <span class="text-xs font-semibold text-slate-400">• ${unlockedCount}/${all.length} Desbloqueadas</span>
+                                    </div>
+                                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-mariana dark:text-slate-100 mt-2">
+                                        Conquistas da Fé
+                                    </h2>
+                                    <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                                        Cada oração, meditação doutrinária e perseverança diária frutificam em virtudes e graças na sua vida cristã.
+                                    </p>
+                                </div>
+                                <div class="bg-amber-50 dark:bg-slate-700/60 p-4 rounded-2xl border border-amber-200/80 dark:border-slate-600 text-center flex-none min-w-[150px]">
+                                    <span class="text-3xl block animate-pulse">🏆</span>
+                                    <span class="font-bold text-xl text-amber-900 dark:text-amber-300 block mt-1">${pct}%</span>
+                                    <span class="text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Completude Geral</span>
+                                </div>
+                            </div>
+
+                            <!-- Barra de Progresso Geral -->
+                            <div class="space-y-1.5 pt-2 border-t border-slate-100 dark:border-slate-700">
+                                <div class="flex justify-between text-[11px] font-bold text-slate-600 dark:text-slate-300">
+                                    <span>Progresso Total da Jornada</span>
+                                    <span>${unlockedCount} de ${all.length} conquistas</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-3 rounded-full overflow-hidden shadow-inner">
+                                    <div class="gold-gradient h-full rounded-full transition-all duration-700" style="width: ${pct}%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Filtros por Categoria -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                ${AchievementsManager.categories.map(c => {
+                                    const isAct = currentCat === c.id;
+                                    const countInCat = c.id === 'todas' ? all.length : all.filter(a => a.category === c.id).length;
+                                    const unlockedInCat = c.id === 'todas' 
+                                        ? unlockedCount 
+                                        : all.filter(a => a.category === c.id && unlocked.includes(a.id)).length;
+                                    return `
+                                        <button onclick="router.navigate('conquistas', '${c.id}')" class="px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${isAct 
+                                            ? 'mariana-gradient text-white shadow-md scale-105' 
+                                            : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600'}">
+                                            <span>${c.icon}</span>
+                                            <span>${c.label}</span>
+                                            <span class="text-[10px] opacity-75 ml-0.5">(${unlockedInCat}/${countInCat})</span>
+                                        </button>
+                                    `;
+                                }).join('')}
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            ${all.map(a => {
+
+                        <!-- Grid de Conquistas -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${filtered.map(a => {
                                 const has = unlocked.includes(a.id);
+                                const res = a.check(AppState, metrics);
+                                const progressPct = Math.round((res.current / res.max) * 100);
+
                                 return `
-                                    <div class="p-5 rounded-3xl border ${has ? 'bg-amber-50 border-amber-300' : 'bg-white border-slate-200 opacity-60'} card-shadow flex items-center gap-4">
-                                        <div class="w-14 h-14 flex-none rounded-2xl ${has ? 'gold-gradient' : 'bg-slate-100'} flex items-center justify-center text-2xl ${has ? '' : 'grayscale'}">${a.icon}</div>
-                                        <div>
-                                            <h3 class="font-serif text-lg font-bold ${has ? 'text-amber-900' : 'text-slate-500'}">${a.title}</h3>
-                                            <p class="text-xs ${has ? 'text-amber-700' : 'text-slate-400'}">${a.desc}</p>
-                                            ${has ? '<span class="text-[10px] font-bold text-emerald-700">✓ Desbloqueada</span>' : '<span class="text-[10px] font-bold text-slate-400">🔒 Bloqueada</span>'}
+                                    <div class="p-5 rounded-3xl border transition card-shadow relative flex flex-col justify-between space-y-3.5 ${has 
+                                        ? 'bg-gradient-to-br from-amber-50/90 to-amber-100/40 dark:from-amber-950/30 dark:to-slate-900 border-2 border-amber-300 dark:border-amber-700/80 shadow-md' 
+                                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 opacity-85 hover:opacity-100'}">
+                                        
+                                        <div class="flex items-start gap-4">
+                                            <!-- Ícone da Conquista -->
+                                            <div class="w-14 h-14 flex-none rounded-2xl flex items-center justify-center text-2xl transition shadow-xs ${has 
+                                                ? 'gold-gradient text-white shadow-amber-400/30' 
+                                                : 'bg-slate-100 dark:bg-slate-700 text-slate-400 grayscale'}">
+                                                ${a.icon}
+                                            </div>
+
+                                            <div class="min-w-0 flex-1">
+                                                <div class="flex items-center justify-between gap-2">
+                                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                                                        ${a.categoryLabel}
+                                                    </span>
+                                                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-md ${has ? 'bg-amber-200/80 dark:bg-amber-900 text-amber-900 dark:text-amber-200' : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400'}">
+                                                        +${a.xp} XP
+                                                    </span>
+                                                </div>
+
+                                                <h3 class="font-serif text-lg font-bold mt-1 leading-snug ${has ? 'text-amber-950 dark:text-slate-100' : 'text-slate-700 dark:text-slate-300'}">
+                                                    ${a.title}
+                                                </h3>
+
+                                                <p class="text-xs mt-1 leading-relaxed ${has ? 'text-amber-900/80 dark:text-slate-300' : 'text-slate-500 dark:text-slate-400'}">
+                                                    ${a.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rodapé do Card com Barra de Progresso -->
+                                        <div class="pt-3 border-t ${has ? 'border-amber-200/60 dark:border-slate-700/80' : 'border-slate-100 dark:border-slate-700/60'}">
+                                            <div class="flex items-center justify-between text-[11px] font-bold">
+                                                ${has ? `
+                                                    <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300 bg-emerald-100/90 dark:bg-emerald-950 px-2.5 py-1 rounded-lg border border-emerald-300 dark:border-emerald-800">
+                                                        <span>✓</span> <span>Conquistada (+${a.xp} XP)</span>
+                                                    </span>
+                                                    <span class="text-xs text-amber-700 dark:text-amber-400">Glória a Deus! 🌟</span>
+                                                ` : `
+                                                    <span class="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/80 px-2.5 py-1 rounded-lg">
+                                                        <span>🔒</span> <span>${res.progressLabel}</span>
+                                                    </span>
+                                                    <span class="text-slate-400 text-[10px] font-mono">${progressPct}%</span>
+                                                `}
+                                            </div>
+
+                                            ${!has ? `
+                                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden mt-2">
+                                                    <div class="gold-gradient h-full rounded-full transition-all duration-500" style="width: ${progressPct}%"></div>
+                                                </div>
+                                            ` : ''}
                                         </div>
                                     </div>
                                 `;
@@ -4700,6 +5284,23 @@
             router.navigate('oracao');
         }
 
+        function toggleFavorite(id) {
+            if (!AppState.favorites) AppState.favorites = [];
+            const idx = AppState.favorites.indexOf(id);
+            if (idx > -1) {
+                AppState.favorites.splice(idx, 1);
+                showToast('Item removido dos favoritos.', 'info');
+            } else {
+                AppState.favorites.push(id);
+                showToast('Adicionado aos favoritos! ⭐', 'success');
+            }
+            saveState();
+            if (router.currentRoute === 'favoritos') {
+                router.navigate('favoritos');
+            }
+        }
+        window.toggleFavorite = toggleFavorite;
+
         function filterPrayers(category, btn) {
             document.querySelectorAll('.prayer-filter').forEach(b => {
                 b.classList.remove('bg-mariana', 'text-white');
@@ -4740,6 +5341,12 @@
         function openSaintModal(id) {
             const s = SaintContentProvider.saints.find(x => x.id === id);
             if (!s) return;
+            if (!AppState.readSaints) AppState.readSaints = {};
+            if (s.id && !AppState.readSaints[s.id]) {
+                AppState.readSaints[s.id] = true;
+                AppState.xp = (AppState.xp || 0) + 5;
+                saveState();
+            }
             const isFav = AppState.favorites.includes('saint_' + id);
             const modal = document.getElementById('modal-container');
             modal.innerHTML = `
@@ -4777,6 +5384,13 @@
             if (router.currentRoute !== 'biblia' && !targetMain) router.navigate('biblia', bookCode + ':' + ch);
             const area = document.getElementById('bible-content');
             if (!area) return;
+            if (!AppState.readBibleChapters) AppState.readBibleChapters = {};
+            const chKey = bookCode + '_' + ch;
+            if (!AppState.readBibleChapters[chKey]) {
+                AppState.readBibleChapters[chKey] = true;
+                AppState.xp = (AppState.xp || 0) + 5;
+                saveState();
+            }
             area.innerHTML = `<div class="py-16 text-center"><div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-xl text-xs font-semibold text-slate-500">📖 Carregando ${book.name} ${ch}…</div></div>`;
             try {
                 const data = await BibleProvider.fetchChapter(bookCode, ch);
@@ -4842,10 +5456,36 @@
         /* ---- Quiz engine ---- */
         let QuizSession = null;
 
+        function shuffleQuizQuestion(q) {
+            if (!q || !Array.isArray(q.options) || q.options.length <= 1) return q;
+            const originalCorrect = q.correctAnswer !== undefined ? q.correctAnswer : (q.correct !== undefined ? q.correct : 0);
+            const items = q.options.map((opt, idx) => ({
+                text: opt,
+                isCorrect: idx === originalCorrect
+            }));
+            
+            // Fisher-Yates shuffle para distribuição uniforme e imprevisível entre A, B, C e D
+            for (let i = items.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [items[i], items[j]] = [items[j], items[i]];
+            }
+            
+            const newOptions = items.map(item => item.text);
+            const newCorrect = items.findIndex(item => item.isCorrect);
+            
+            return {
+                ...q,
+                options: newOptions,
+                correctAnswer: newCorrect,
+                correct: newCorrect
+            };
+        }
+        window.shuffleQuizQuestion = shuffleQuizQuestion;
+
         function startQuiz(category = null, limit = 5) {
             QuizAudio.init();
             let pool = category ? QuizContentProvider.questions.filter(q => q.category === category) : [...QuizContentProvider.questions];
-            pool = pool.sort(() => Math.random() - 0.5).slice(0, limit);
+            pool = pool.sort(() => Math.random() - 0.5).slice(0, limit).map(q => shuffleQuizQuestion(q));
             QuizSession = { questions: pool, index: 0, correct: 0, answered: false, category, limit };
             renderQuizQuestion();
             const area = document.getElementById('quiz-area');
@@ -4865,7 +5505,15 @@
                     QuizAudio.playVictory();
                     if (!AppState.unlockedAchievements.includes('quiz_master')) {
                         AppState.unlockedAchievements.push('quiz_master');
-                        showToast("🏆 Conquista Desbloqueada: Mente Iluminada!", "success");
+                        AppState.xp = (AppState.xp || 0) + 40;
+                        showToast("🏆 Conquista Desbloqueada: Mente Iluminada! (+40 XP)", "success");
+                    }
+                }
+                if (s.questions.length >= 10 && pct === 100) {
+                    if (!AppState.unlockedAchievements.includes('marathon_perfect')) {
+                        AppState.unlockedAchievements.push('marathon_perfect');
+                        AppState.xp = (AppState.xp || 0) + 60;
+                        showToast("🏆 Conquista Desbloqueada: Gabarito Canônico! (+60 XP)", "success");
                     }
                 }
                 saveState();
@@ -4933,6 +5581,10 @@
                 QuizAudio.playCorrect();
             } else {
                 QuizAudio.playWrong();
+            }
+
+            if (window.MetricsTracker) {
+                MetricsTracker.trackQuizAttempt(isCorrect, q.category);
             }
 
             document.querySelectorAll('.quiz-opt').forEach(btn => {
@@ -5371,17 +6023,27 @@
             const modal = document.getElementById('modal-container');
             if (!modal) return;
 
+            // Embaralha opções do mini-quiz da aula dinamicamente para distribuir as alternativas
+            const lessonQuizzes = (mod.quizQuestions || []).map(qq => shuffleQuizQuestion(qq));
+
             modal.innerHTML = `
                 <div class="bg-white dark:bg-slate-800 w-full max-w-3xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
-                    <!-- Botão Fechar -->
-                    <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-xl transition cursor-pointer">✕</button>
+                    <!-- Barra Superior: Controles de Fonte e Fechar -->
+                    <div class="absolute top-5 right-5 flex items-center gap-2 z-10">
+                        <div class="flex items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/80 p-0.5 shadow-xs" title="Ajustar tamanho da fonte de leitura">
+                            <button onclick="FontScaleManager.decrease()" title="Diminuir fonte (A-)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-600 rounded-lg transition cursor-pointer">A-</button>
+                            <span class="font-scale-indicator px-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 font-mono select-none">${FontScaleManager.labels[FontScaleManager.currentIndex]}</span>
+                            <button onclick="FontScaleManager.increase()" title="Aumentar fonte (A+)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-600 rounded-lg transition cursor-pointer">A+</button>
+                        </div>
+                        <button onclick="closeModal()" title="Fechar" class="w-8 h-8 flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl font-bold text-lg transition cursor-pointer leading-none">✕</button>
+                    </div>
 
                     <!-- Cabeçalho do Módulo -->
                     <div class="flex items-start gap-4 pb-4 border-b border-slate-100 dark:border-slate-700">
                         <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-400 to-amber-600 text-white flex items-center justify-center text-2xl shrink-0 shadow-md">
                             ${cat ? cat.icon : '📖'}
                         </div>
-                        <div class="min-w-0 flex-1 pr-6">
+                        <div class="min-w-0 flex-1 pr-28 sm:pr-32">
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
                                     ${cat ? cat.title : 'CATECISMO'}
@@ -5392,10 +6054,10 @@
                                 ${mod.bibleRef ? `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300">📖 ${mod.bibleRef}</span>` : ''}
                                 ${isDone ? '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">✓ Concluído</span>' : ''}
                             </div>
-                            <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana dark:text-slate-100 mt-1.5 leading-tight">
+                            <h3 class="font-serif font-bold text-mariana dark:text-slate-100 mt-1.5 leading-tight lesson-reading-title">
                                 ${mod.title}
                             </h3>
-                            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed lesson-reading-subtext">
                                 ${mod.description}
                             </p>
                         </div>
@@ -5406,7 +6068,7 @@
                         <div class="flex items-center gap-2 text-mariana dark:text-amber-300 font-bold text-xs uppercase tracking-wider">
                             <span>📖</span> <span>Doutrina & Magistério da Igreja</span>
                         </div>
-                        <p class="text-xs md:text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-serif text-base md:text-lg">
+                        <p class="text-slate-700 dark:text-slate-200 leading-relaxed font-serif lesson-reading-body">
                             ${mod.explanation}
                         </p>
                     </div>
@@ -5419,7 +6081,7 @@
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
                                 ${mod.keyPoints.map(kp => `
-                                    <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300 font-medium flex items-start gap-2 shadow-2xs">
+                                    <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium flex items-start gap-2 shadow-2xs lesson-reading-subtext">
                                         <span class="text-amber-500 font-bold shrink-0">✦</span>
                                         <span>${kp}</span>
                                     </div>
@@ -5434,7 +6096,7 @@
                             <div class="flex items-center gap-2 text-amber-900 dark:text-amber-200 font-bold text-xs">
                                 <span>🕊️</span> <span>Reflexão Espiritual para a Vida Diária</span>
                             </div>
-                            <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed">
+                            <p class="text-slate-700 dark:text-slate-300 italic leading-relaxed lesson-reading-subtext">
                                 "${mod.reflection}"
                             </p>
                         </div>
@@ -5447,16 +6109,16 @@
                                 <span>❓</span> <span>Pergunta & Resposta Catequética</span>
                             </h4>
                             ${mod.questions.map(q => `
-                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-1.5 text-xs">
-                                    <p class="font-bold text-slate-800 dark:text-slate-200">Q: ${q.q}</p>
-                                    <p class="text-slate-600 dark:text-slate-300 pl-3 border-l-2 border-amber-400">R: ${q.a}</p>
+                                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-1.5">
+                                    <p class="font-bold text-slate-800 dark:text-slate-200 lesson-reading-subtext">Q: ${q.q}</p>
+                                    <p class="text-slate-600 dark:text-slate-300 pl-3 border-l-2 border-amber-400 lesson-reading-subtext">R: ${q.a}</p>
                                 </div>
                             `).join('')}
                         </div>
                     ` : ''}
 
                     <!-- Mini-Quiz Interativo de Fixação -->
-                    ${mod.quizQuestions && mod.quizQuestions.length > 0 ? `
+                    ${lessonQuizzes && lessonQuizzes.length > 0 ? `
                         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-3">
                             <div class="flex items-center justify-between">
                                 <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
@@ -5464,7 +6126,7 @@
                                 </h4>
                                 <span class="text-[10px] text-slate-400">Teste sua retenção</span>
                             </div>
-                            ${mod.quizQuestions.map((qq, qIdx) => `
+                            ${lessonQuizzes.map((qq, qIdx) => `
                                 <div class="space-y-2" id="lesson-quiz-${qIdx}">
                                     <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">${qq.q}</p>
                                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -5506,32 +6168,34 @@
             const isCorrect = selectedIdx === correctIdx;
             const feedbackEl = document.getElementById(`lq-feedback-${qIdx}`);
 
-            // Desabilita botões desta pergunta
-            for (let i = 0; i < 3; i++) {
-                const btn = document.getElementById(`lq-btn-${qIdx}-${i}`);
-                if (btn) {
-                    btn.disabled = true;
-                    if (i === correctIdx) {
-                        btn.className = 'py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 text-xs font-bold';
-                    } else if (i === selectedIdx && !isCorrect) {
-                        btn.className = 'py-2.5 px-3 rounded-xl border-2 border-rose-500 bg-rose-50 dark:bg-rose-950/60 text-rose-900 dark:text-rose-200 text-xs font-bold';
-                    } else {
-                        btn.className = 'py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 opacity-50 text-xs';
-                    }
+            // Desabilita botões desta pergunta dinamicamente
+            const optButtons = document.querySelectorAll(`[id^="lq-btn-${qIdx}-"]`);
+            optButtons.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === correctIdx) {
+                    btn.className = 'py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 text-xs font-bold';
+                } else if (i === selectedIdx && !isCorrect) {
+                    btn.className = 'py-2.5 px-3 rounded-xl border-2 border-rose-500 bg-rose-50 dark:bg-rose-950/60 text-rose-900 dark:text-rose-200 text-xs font-bold';
+                } else {
+                    btn.className = 'py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 opacity-50 text-xs';
                 }
-            }
+            });
 
             if (feedbackEl) {
                 feedbackEl.classList.remove('hidden');
                 if (isCorrect) {
                     feedbackEl.className = 'text-[11px] font-bold py-1.5 px-3 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200';
                     feedbackEl.innerText = '✓ Resposta Correta! Deus abençoe sua dedicação.';
-                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.play(true);
+                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.playCorrect();
                 } else {
                     feedbackEl.className = 'text-[11px] font-bold py-1.5 px-3 rounded-lg bg-rose-100 dark:bg-rose-950 text-rose-900 dark:text-rose-200';
                     feedbackEl.innerText = '✕ Resposta Incorreta. A opção destacada em verde é a correta pela doutrina da Igreja.';
-                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.play(false);
+                    if (window.QuizAudio && QuizAudio.enabled) QuizAudio.playWrong();
                 }
+            }
+
+            if (window.MetricsTracker) {
+                MetricsTracker.trackQuizAttempt(isCorrect, 'Catecismo');
             }
         }
         window.handleLessonQuizAnswer = handleLessonQuizAnswer;
@@ -5563,11 +6227,126 @@
         window.completeLesson = completeLesson;
 
         function closeModal() {
+            stopApoioStatusPolling();
             const modal = document.getElementById('modal-container');
             modal.classList.add('hidden');
             modal.classList.remove('flex');
         }
         window.closeModal = closeModal;
+
+        // --- SISTEMA DE COMPARTILHAMENTO VIRAL DISCRETO (CATECISMO) ---
+        function shareCatecismo(source) {
+            const title = 'Catecismo Católico Digital';
+            const message = '🙏 Recomendo o Catecismo Católico Digital: doutrina, liturgia diária, orações e santos do dia com busca inteligente para fortalecer a fé. Acesse gratuitamente:';
+            const shareUrl = 'https://catecismo.creativeam.com.br';
+
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: message,
+                    url: shareUrl
+                }).catch(function(err) {
+                    if (err.name !== 'AbortError') {
+                        openCatecismoShareModal(message, shareUrl);
+                    }
+                });
+                return;
+            }
+
+            openCatecismoShareModal(message, shareUrl);
+        }
+        window.shareCatecismo = shareCatecismo;
+
+        function openCatecismoShareModal(customMsg, targetUrl) {
+            const shareUrl = targetUrl || 'https://catecismo.creativeam.com.br';
+            const textMsg = customMsg || '🙏 Recomendo o Catecismo Católico Digital: doutrina, liturgia diária, orações e santos do dia com busca inteligente para fortalecer a fé. Acesse gratuitamente:';
+            const encodedUrl = encodeURIComponent(shareUrl);
+            const encodedFullText = encodeURIComponent(textMsg + ' ' + shareUrl);
+
+            const modal = document.getElementById('modal-container');
+            if (!modal) return;
+
+            modal.innerHTML = `
+                <div class="bg-white dark:bg-slate-800 w-full max-w-md rounded-3xl p-6 md:p-8 space-y-4 text-center shadow-2xl border border-slate-200 dark:border-slate-700 relative">
+                    <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-lg transition cursor-pointer">✕</button>
+
+                    <div class="w-12 h-12 mx-auto rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 text-blue-800 dark:text-blue-300 flex items-center justify-center text-2xl shadow-inner">
+                        📤
+                    </div>
+
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100">Compartilhar a Palavra e a Fé</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Evangelize e compartilhe o Catecismo Católico Digital com sua família, paróquia e grupos de oração.</p>
+                    </div>
+
+                    <!-- Preview da Mensagem -->
+                    <div class="p-3.5 bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 rounded-2xl text-left text-xs text-slate-700 dark:text-slate-300">
+                        <div class="text-[11px] font-bold text-blue-700 dark:text-blue-400 mb-1 flex items-center gap-1 font-serif">
+                            <span>✝️ Mensagem Evangelizadora</span>
+                        </div>
+                        <div class="text-slate-600 dark:text-slate-300 leading-relaxed font-sans">
+                            "${textMsg} <span class="text-blue-600 dark:text-blue-400 underline font-semibold break-all">${shareUrl}</span>"
+                        </div>
+                    </div>
+
+                    <!-- Botões Sociais -->
+                    <div class="grid grid-cols-2 gap-2 text-xs font-bold pt-1 font-sans">
+                        <a href="https://api.whatsapp.com/send?text=${encodedFullText}" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl transition shadow cursor-pointer">
+                            <span class="text-sm">💬</span> WhatsApp
+                        </a>
+                        <a href="https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(textMsg)}" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-sky-600 hover:bg-sky-500 text-white rounded-xl transition shadow cursor-pointer">
+                            <span class="text-sm">✈️</span> Telegram
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-blue-700 hover:bg-blue-600 text-white rounded-xl transition shadow cursor-pointer">
+                            <span class="text-sm">📘</span> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(textMsg)}&url=${encodedUrl}" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl transition cursor-pointer">
+                            <span class="text-sm">𝕏</span> Twitter / X
+                        </a>
+                    </div>
+
+                    <!-- Copiar Link / Mensagem -->
+                    <div class="pt-2 flex flex-col gap-2">
+                        <button onclick="copyCatecismoShareText('${textMsg.replace(/'/g, "\\'")}', '${shareUrl}')" id="btn-copy-catecismo-share" class="w-full py-2.5 bg-gradient-to-r from-blue-700 to-indigo-800 hover:from-blue-600 hover:to-indigo-700 text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-2 cursor-pointer shadow-md">
+                            <span>📋</span> Copiar Link & Mensagem Completa
+                        </button>
+                        <button onclick="closeModal()" class="w-full py-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-medium transition cursor-pointer">
+                            Fechar Janela
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        window.openCatecismoShareModal = openCatecismoShareModal;
+
+        function copyCatecismoShareText(text, url) {
+            const fullText = (text ? text + ' ' : '') + (url || 'https://catecismo.creativeam.com.br');
+            navigator.clipboard.writeText(fullText).then(function() {
+                const btn = document.getElementById('btn-copy-catecismo-share');
+                if (btn) {
+                    const orig = btn.innerHTML;
+                    btn.innerHTML = '<span>✅</span> Mensagem Copiada com Sucesso!';
+                    btn.className = 'w-full py-2.5 bg-emerald-600 text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-2 shadow-md';
+                    setTimeout(function() {
+                        if (btn) {
+                            btn.innerHTML = orig;
+                            btn.className = 'w-full py-2.5 bg-gradient-to-r from-blue-700 to-indigo-800 hover:from-blue-600 hover:to-indigo-700 text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-2 cursor-pointer shadow-md';
+                        }
+                    }, 2500);
+                }
+                if (typeof showToast === 'function') {
+                    showToast('Mensagem e link copiados com sucesso!', 'success');
+                }
+            }).catch(function() {
+                if (typeof showToast === 'function') {
+                    showToast('Link: ' + fullText, 'info');
+                }
+            });
+        }
+        window.copyCatecismoShareText = copyCatecismoShareText;
 
         function handleSearch(query) {
             if (!query || query.length < 2) return;
@@ -5942,6 +6721,12 @@
             AppState.xp = (AppState.xp || 0) + 25;
             AppState.streak = (AppState.streak || 1);
             AppState.lastPrayerDate = getLocalDateString();
+            if (!AppState.completedRosaries) AppState.completedRosaries = [];
+            AppState.completedRosaries.push({
+                mystery: typeof currentRosaryMysteryKey !== 'undefined' ? currentRosaryMysteryKey : 'gozosos',
+                date: getLocalDateString(),
+                timestamp: Date.now()
+            });
             if (window.CloudSyncManager) {
                 CloudSyncManager.checkPromptOnAction('Concluir o Santo Terço');
             }
@@ -7104,6 +7889,7 @@
         window.loadAdminCommunityTable = loadAdminCommunityTable;
 
         function renderAdminDashboardModal() {
+            setTimeout(loadAdminLiturgiaStatus, 100);
             const modal = document.getElementById('modal-container');
             if (!modal) return;
 
@@ -7500,6 +8286,53 @@
 
 
                     
+                    <!-- 8. GESTÃO E ATUALIZAÇÃO DA LITURGIA DIÁRIA -->
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🕊️</span>
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-mariana dark:text-slate-100 flex items-center gap-2">
+                                        Gestão da Liturgia Diária
+                                        <span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200">Autônomo</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Monitore os arquivos locais de lecionário e baixe novos anos diretamente por este painel.</p>
+                                </div>
+                            </div>
+                            <button onclick="loadAdminLiturgiaStatus()" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition flex items-center gap-1.5">
+                                <span>🔄</span> <span>Atualizar Status</span>
+                            </button>
+                        </div>
+
+                        <!-- Status dos Anos -->
+                        <div id="admin-liturgia-years-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-center animate-pulse">
+                                <span class="text-xs text-slate-400">Verificando anos...</span>
+                            </div>
+                        </div>
+
+                        <!-- Barra de Ação Manual -->
+                        <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="text-left">
+                                <h5 class="text-sm font-bold text-amber-900 dark:text-amber-200">Baixar / Atualizar Ano Específico</h5>
+                                <p class="text-xs text-amber-800/80 dark:text-amber-300/70">O servidor fará o download silencioso de todos os 365 dias daquele ano.</p>
+                            </div>
+                            <div class="flex items-center gap-2 w-full sm:w-auto">
+                                <select id="admin-liturgia-year-select" class="px-3 py-2 rounded-xl bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-xs font-bold text-slate-700 dark:text-slate-200 outline-none">
+                                    <option value="2026">Ano 2026</option>
+                                    <option value="2027">Ano 2027</option>
+                                    <option value="2028" selected>Ano 2028</option>
+                                    <option value="2029">Ano 2029</option>
+                                    <option value="2030">Ano 2030</option>
+                                </select>
+                                <button id="btn-trigger-liturgia" onclick="triggerAdminLiturgiaUpdate()" class="px-5 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow transition whitespace-nowrap flex items-center gap-1.5">
+                                    <span>🔄</span> <span>Baixar Ano Agora</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="admin-liturgia-feedback" class="text-xs text-slate-500 italic hidden"></div>
+                    </div>
+
                     <!-- GESTÃO DINÂMICA DE MENUS & MÓDULOS (FEATURE FLAGS) -->
                     <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 space-y-4 text-left">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-700/80 pb-4">
@@ -7993,6 +8826,33 @@
         window.copyPixKey = copyPixKey;
         window.copyDirectPixEmail = copyPixKey;
 
+        
+        // Monitoramento em tempo real do apoio via Webhook do Asaas
+        let apoioPollingInterval = null;
+
+        function startApoioStatusPolling() {
+            stopApoioStatusPolling();
+            apoioPollingInterval = setInterval(async () => {
+                try {
+                    const res = await fetch(`/api/asaas-webhook?value=${currentApoioVal || 10}`);
+                    if (!res.ok) return;
+                    const data = await res.json();
+                    if (data.approved) {
+                        stopApoioStatusPolling();
+                        closeModal();
+                        showToast('🎉 Doação recebida com sucesso! Que Deus abençoe imensamente o seu apoio ao Catecismo! 🙏✨', 'success');
+                    }
+                } catch(e) {}
+            }, 3000);
+        }
+
+        function stopApoioStatusPolling() {
+            if (apoioPollingInterval) {
+                clearInterval(apoioPollingInterval);
+                apoioPollingInterval = null;
+            }
+        }
+
         function openApoioModal() {
             if (window.MetricsTracker) MetricsTracker.trackApoioAction('open');
             const modal = document.getElementById('modal-container');
@@ -8086,38 +8946,29 @@
                         </div>
 
                         <!-- Status dinâmico -->
+                        <!-- Status dinâmico -->
                         <div class="flex items-center justify-center gap-2 py-1.5 px-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 rounded-xl text-amber-800 dark:text-amber-300 text-[11px] font-medium">
                             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                             <span id="apoio-status-text">Aguardando recebimento via PIX Asaas...</span>
                         </div>
-
-                        
                     </div>
 
-                    <!-- Caixa Chave PIX Direta (E-mail Asaas) -->
-                    <div class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 flex items-center justify-between gap-2">
-                        <div class="text-left">
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Chave PIX Direta (E-mail):</span>
-                            <input id="pix-copy-input" type="text" readonly value="olirumdev1@gmail.com" class="bg-transparent text-xs font-mono font-bold text-slate-800 dark:text-slate-200 select-all border-none p-0 focus:outline-none">
-                        </div>
-                        <button onclick="copyPixKey()" class="px-3 py-1.5 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-bold transition flex items-center gap-1 shrink-0">
-                            <span>📋</span> <span>Copiar Chave</span>
-                        </button>
-                    </div>
-
-                    <!-- Footer do Modal -->
+                    <!-- Footer do Modal Limpo -->
                     <div class="pt-1 flex items-center justify-between text-[11px] text-slate-400">
-                        <span>🔒 Processamento seguro via Asaas</span>
-                        <button onclick="closeModal(); showToast('Muito obrigado pelo carinho e apoio ao CATECISMO! Que Deus o abençoe! 🙏✨', 'success');" class="px-4 py-2 rounded-xl bg-mariana text-white font-bold text-xs hover:opacity-90 transition cursor-pointer shadow-xs">
-                            Já realizei o apoio!
+                        <span>🔒 Processamento seguro via Asaas PIX</span>
+                        <button onclick="closeModal()" class="px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-xs transition cursor-pointer">
+                            Fechar
                         </button>
                     </div>
                 </div>
+
+                    
             `;
 
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             selectApoioTip(currentApoioVal || 10);
+            startApoioStatusPolling();
         }
         window.openApoioModal = openApoioModal;
 
@@ -8130,5 +8981,319 @@
             router.navigate('home');
         };
     </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            });
+        }
+    
+
+        /* =========================================================================
+           MOTOR DO MAPA MUNDIAL, CATÁLOGO E MODAL DOS SANTOS (PORTUGUÊS)
+           ========================================================================= */
+        let saintsLeafletMap = null;
+        let currentSaintsViewMode = 'today';
+        let selectedCenturyFilter = 'Todos';
+        let selectedCausaFilter = null;
+        let currentCatalogPage = 1;
+        const CATALOG_PAGE_SIZE = 24;
+        let activeModalSaint = null;
+
+        function setSaintsViewMode(mode) {
+            currentSaintsViewMode = mode;
+            ['today', 'catalog', 'map'].forEach(m => {
+                const panel = document.getElementById(`saints-mode-${m}`);
+                const tab = document.getElementById(`saints-tab-${m}`);
+                if (panel) panel.classList.toggle('hidden', m !== mode);
+                if (tab) {
+                    if (m === mode) {
+                        tab.className = "px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-2 whitespace-nowrap";
+                    } else {
+                        tab.className = "px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap";
+                    }
+                }
+            });
+
+            if (mode === 'catalog') {
+                renderCenturyChips();
+                renderCausaChips();
+                filterSaintsCatalog();
+            }
+            if (mode === 'map') {
+                setTimeout(() => {
+                    initSaintsMap();
+                    if (saintsLeafletMap) saintsLeafletMap.invalidateSize();
+                }, 150);
+            }
+        }
+
+        function initSaintsMap() {
+            const mapEl = document.getElementById('mapa-santidade');
+            if (!mapEl || typeof L === 'undefined') return;
+
+            if (saintsLeafletMap) {
+                saintsLeafletMap.invalidateSize();
+                return;
+            }
+
+            // Centralizado na Europa / Mediterrâneo com zoom adequado
+            saintsLeafletMap = L.map('mapa-santidade', {
+                center: [42.0, 14.0],
+                zoom: 4,
+                zoomControl: true,
+                attributionControl: true
+            });
+
+            // CAMADA DE MAPA LOCALIZADA EM PORTUGUÊS / LATIM (CartoDB Voyager)
+            // Países traduzidos: Lituânia, Polônia, Alemanha, Grécia, Roma, Jerusalém, etc.
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(saintsLeafletMap);
+
+            const mapData = (window.SAINTS_DATA && window.SAINTS_DATA.mapSaints) ? window.SAINTS_DATA.mapSaints : [];
+            const markers = [];
+
+            const iconSanto = L.divIcon({
+                className: 'custom-santo-pin',
+                html: '<div style="background: #0284c7; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; border: 2.5px solid #f59e0b; box-shadow: 0 4px 10px rgba(0,0,0,0.35); cursor: pointer;">&#9768;</div>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 16],
+                popupAnchor: [0, -18]
+            });
+
+            mapData.forEach(santo => {
+                if (!santo.lat || !santo.lng) return;
+
+                const popupHtml = `
+                    <div style="min-width: 200px; max-width: 240px; padding: 12px; font-family: sans-serif; text-align: left;">
+                        ${santo.image ? `<img src="${santo.image}" alt="${santo.name}" style="width: 100%; height: 110px; object-fit: cover; object-position: top; border-radius: 8px; margin-bottom: 8px;" onerror="this.style.display='none'">` : ''}
+                        <div style="font-size: 10px; text-transform: uppercase; font-weight: 800; color: #d97706; margin-bottom: 2px;">
+                            ${santo.seculo || 'Tradição Católica'} • ${santo.pais || 'Igreja Universal'}
+                        </div>
+                        <h4 style="font-size: 14px; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; line-height: 1.2;">
+                            ${santo.name}
+                        </h4>
+                        ${santo.virtudes ? `<p style="font-size: 11px; color: #64748b; font-style: italic; margin: 0 0 8px 0;">Virtudes: ${santo.virtudes}</p>` : ''}
+                        <button onclick="openSaintModal('${santo.id}')" style="display: block; width: 100%; padding: 6px 10px; background: #0f172a; color: #fff; text-align: center; border-radius: 8px; font-size: 11px; font-weight: 700; border: none; cursor: pointer;">
+                            Ver Biografia Completa ➔
+                        </button>
+                    </div>
+                `;
+
+                const m = L.marker([santo.lat, santo.lng], { icon: iconSanto })
+                    .bindPopup(popupHtml, { maxWidth: 260 });
+                markers.push(m);
+            });
+
+            if (markers.length > 0) {
+                const group = L.featureGroup(markers).addTo(saintsLeafletMap);
+                try {
+                    saintsLeafletMap.fitBounds(group.getBounds().pad(0.1));
+                } catch(e) {}
+            }
+        }
+
+        // --- CATÁLOGO DE SANTOS ---
+        function renderCenturyChips() {
+            const container = document.getElementById('saints-century-chips');
+            if (!container || !window.SAINTS_DATA?.centuries) return;
+            container.innerHTML = window.SAINTS_DATA.centuries.map(c => {
+                const active = c.name === selectedCenturyFilter;
+                return `<button onclick="selectCenturyFilter('${c.name}')" class="px-3 py-1 rounded-full text-xs font-bold transition ${active ? 'bg-mariana text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'}">${c.name} (${c.count})</button>`;
+            }).join('');
+        }
+
+        function renderCausaChips() {
+            const container = document.getElementById('saints-causa-chips');
+            if (!container || !window.SAINTS_DATA?.patronages) return;
+            const allBtn = `<button onclick="selectCausaFilter(null)" class="px-3 py-1 rounded-full text-xs font-bold transition ${selectedCausaFilter === null ? 'bg-amber-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'}">Todos os Patronatos</button>`;
+            container.innerHTML = allBtn + window.SAINTS_DATA.patronages.map(p => {
+                const active = p.name === selectedCausaFilter;
+                return `<button onclick="selectCausaFilter('${p.name}')" class="px-3 py-1 rounded-full text-xs font-bold transition ${active ? 'bg-amber-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'}">${p.name} (${p.count})</button>`;
+            }).join('');
+        }
+
+        function selectCenturyFilter(century) {
+            selectedCenturyFilter = century;
+            currentCatalogPage = 1;
+            renderCenturyChips();
+            filterSaintsCatalog();
+        }
+
+        function selectCausaFilter(causa) {
+            selectedCausaFilter = causa;
+            currentCatalogPage = 1;
+            renderCausaChips();
+            filterSaintsCatalog();
+        }
+
+        function filterSaintsCatalog() {
+            const grid = document.getElementById('saints-catalog-grid');
+            if (!grid || !window.SAINTS_DATA?.catalog) return;
+
+            const searchInp = document.getElementById('saints-search-input');
+            const query = (searchInp ? searchInp.value : '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+            let list = window.SAINTS_DATA.catalog;
+
+            // Filtro por Século
+            if (selectedCenturyFilter !== 'Todos') {
+                list = list.filter(s => s.seculo === selectedCenturyFilter || (s.seculos && s.seculos.includes(selectedCenturyFilter)));
+            }
+
+            // Filtro por Causa
+            if (selectedCausaFilter) {
+                list = list.filter(s => (s.causas && s.causas.includes(selectedCausaFilter)) || s.category === selectedCausaFilter);
+            }
+
+            // Filtro por Busca
+            if (query) {
+                list = list.filter(s => {
+                    const norm = (s.name + ' ' + (s.pais || '') + ' ' + (s.virtudes || '') + ' ' + (s.bio || '')).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                    return norm.includes(query);
+                });
+            }
+
+            const total = list.length;
+            const totalPages = Math.ceil(total / CATALOG_PAGE_SIZE) || 1;
+            if (currentCatalogPage > totalPages) currentCatalogPage = totalPages;
+
+            const start = (currentCatalogPage - 1) * CATALOG_PAGE_SIZE;
+            const paged = list.slice(start, start + CATALOG_PAGE_SIZE);
+
+            if (paged.length === 0) {
+                grid.innerHTML = '<div class="col-span-full p-12 text-center text-sm text-slate-400 font-serif">Nenhum santo encontrado para os filtros selecionados.</div>';
+            } else {
+                grid.innerHTML = paged.map(s => {
+                    return `
+                        <article class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 card-shadow flex flex-col justify-between transition hover:-translate-y-1">
+                            <div>
+                                <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-4 border border-amber-200/60 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
+                                    <img src="${s.image}" alt="${s.name}" onerror="handleSaintImageError(this, '${s.name}')" class="w-full h-full object-cover object-top" loading="lazy">
+                                    <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs text-amber-300 text-[10px] font-bold uppercase tracking-wider">${s.seculo || 'Século Sagrado'}</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-black text-mariana dark:text-slate-100 leading-tight mb-1.5">${s.name}</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-3 mb-3 font-serif">${s.bio || 'Modelo de santidade, virtude cristã e intercessão diante de Deus.'}</p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1 mb-4">
+                                    ${(s.causas || []).slice(0, 2).map(c => `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60">${c}</span>`).join('')}
+                                </div>
+                                <button onclick="openSaintModal('${s.id}')" class="w-full py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow-xs transition flex items-center justify-center gap-1.5">
+                                    <span>Conhecer História</span> <span>➔</span>
+                                </button>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            }
+
+            // Paginação
+            const pag = document.getElementById('saints-catalog-pagination');
+            if (pag) {
+                if (totalPages <= 1) {
+                    pag.innerHTML = '';
+                } else {
+                    let pagHtml = `<button onclick="currentCatalogPage--; filterSaintsCatalog();" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold ${currentCatalogPage === 1 ? 'opacity-40 cursor-not-allowed' : 'hover:bg-slate-100 dark:hover:bg-slate-800'}" ${currentCatalogPage === 1 ? 'disabled' : ''}>← Anterior</button>`;
+                    pagHtml += `<span class="text-xs font-bold text-slate-500 px-3">Página ${currentCatalogPage} de ${totalPages}</span>`;
+                    pagHtml += `<button onclick="currentCatalogPage++; filterSaintsCatalog();" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold ${currentCatalogPage === totalPages ? 'opacity-40 cursor-not-allowed' : 'hover:bg-slate-100 dark:hover:bg-slate-800'}" ${currentCatalogPage === totalPages ? 'disabled' : ''}>Próxima →</button>`;
+                    pag.innerHTML = pagHtml;
+                }
+            }
+        }
+
+        // --- MODAL DO SANTO ---
+        function openSaintModal(sId) {
+            const all = [...(window.SAINTS_DATA?.catalog || []), ...(window.SAINTS_DATA?.mapSaints || [])];
+            const s = all.find(x => x.id === sId || x.slug === sId);
+            if (!s) return;
+
+            const modal = document.getElementById('saint-modal');
+            if (!modal) return;
+
+            document.getElementById('sm-image').src = s.image || '';
+            document.getElementById('sm-name').innerText = s.name || '';
+            document.getElementById('sm-date').innerText = (s.seculo || '') + (s.pais ? ' • ' + s.pais : '');
+            document.getElementById('sm-meta').innerText = s.virtudes ? 'Virtudes: ' + s.virtudes : '';
+
+            const badges = document.getElementById('sm-badges');
+            if (badges) {
+                badges.innerHTML = (s.causas || []).map(c => `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">${c}</span>`).join('');
+            }
+
+            const bioBox = document.getElementById('sm-bio');
+            if (bioBox) {
+                if (s.richBio) {
+                    bioBox.innerHTML = s.richBio;
+                } else {
+                    bioBox.innerHTML = `<p class="mb-3 leading-relaxed">${s.bio || 'Biografia venerável guardada na Tradição da Santa Igreja.'}</p>`;
+                }
+            }
+
+            const prayerBox = document.getElementById('sm-prayer-box');
+            const prayerEl = document.getElementById('sm-prayer');
+            if (s.oracao || s.prayer) {
+                if (prayerBox) prayerBox.classList.remove('hidden');
+                if (prayerEl) prayerEl.innerText = s.oracao || s.prayer;
+            } else {
+                if (prayerBox) prayerBox.classList.add('hidden');
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSaintModal() {
+            const modal = document.getElementById('saint-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeSaintModal();
+        });
+
+</script>
+
+    <!-- MODAL SOLENE DE DETALHES DO SANTO (RAIZ BODY, LIVRE DE TRANSFORMS) -->
+    <div id="saint-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto" onclick="if(event.target === this) closeSaintModal()">
+        <div class="relative bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full p-6 md:p-8 overflow-hidden shadow-2xl border border-amber-300/40 my-8">
+            <button onclick="closeSaintModal()" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold transition">✕</button>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 border-b border-slate-100 dark:border-slate-800 pb-6">
+                <div class="relative w-28 h-28 rounded-2xl overflow-hidden shadow-md border-2 border-amber-400 shrink-0 bg-slate-100">
+                    <img id="sm-image" src="" alt="" class="w-full h-full object-cover object-top" onerror="handleSaintImageError(this, document.getElementById('sm-name')?.innerText)">
+                </div>
+                <div class="text-center sm:text-left">
+                    <span id="sm-date" class="text-xs uppercase font-bold text-dourado tracking-wider"></span>
+                    <h3 id="sm-name" class="text-2xl font-serif font-black text-mariana dark:text-slate-100 my-1"></h3>
+                    <p id="sm-meta" class="text-xs text-slate-500 dark:text-slate-400 font-serif italic"></p>
+                    <div id="sm-badges" class="flex flex-wrap gap-1.5 mt-2 justify-center sm:justify-start"></div>
+                </div>
+            </div>
+            <div class="mt-6 space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed max-h-[60vh] overflow-y-auto custom-scrollbar pr-2">
+                <div>
+                    <h4 class="font-serif font-bold text-mariana dark:text-amber-400 text-base mb-1">Biografia & Vida Santa</h4>
+                    <div id="sm-bio" class="space-y-3 font-serif leading-relaxed"></div>
+                </div>
+                <div id="sm-prayer-box" class="p-5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 mt-4">
+                    <h5 class="text-xs uppercase font-black text-amber-900 dark:text-amber-300 tracking-wider mb-2 flex items-center gap-1.5">
+                        <span>🙏</span> <span>Oração Litúrgica</span>
+                    </h5>
+                    <p id="sm-prayer" class="font-serif italic text-amber-950 dark:text-amber-100 leading-relaxed"></p>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                <button onclick="closeSaintModal()" class="px-6 py-2.5 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold shadow transition">Fechar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

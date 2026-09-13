@@ -339,6 +339,33 @@
         })();
     </script>
 
+    <!-- Leaflet 1.9.4 & Santos Dataset (Mapa da Santidade em Português) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="assets/data/santos_data.js"></script>
+    <style>
+        .leaflet-popup-content-wrapper {
+            border-radius: 1.25rem !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25) !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+        .leaflet-popup-content {
+            margin: 0 !important;
+            line-height: 1.4 !important;
+        }
+        .custom-santo-pin {
+            transition: transform 0.2s ease;
+        }
+        .custom-santo-pin:hover {
+            transform: scale(1.22);
+        }
+        .filter-chip-active {
+            background-color: #6B2D2D !important;
+            color: #ffffff !important;
+            border-color: #6B2D2D !important;
+        }
+    </style>
 </head>
 <body class="h-full flex flex-col custom-scrollbar overflow-hidden">
 
@@ -4477,49 +4504,104 @@
                 const today = getLocalDateString();
                 const date = /^\d{4}-\d{2}-\d{2}$/.test(String(state || '')) ? state : today;
                 const esc = v => String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+                
                 return `
-                    <div id="santo-view" data-date="${date}" class="max-w-4xl mx-auto space-y-8 min-w-0">
-                        <div class="bg-white rounded-3xl p-5 border border-slate-200 card-shadow flex flex-wrap items-center justify-between gap-3 min-w-0">
-                            <div class="min-w-0">
-                                <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">Calendário do Santo / celebração</span>
-                                <h3 class="font-serif text-xl font-bold text-mariana mt-1">Santo ou celebração da data</h3>
+                    <div id="santo-view" data-date="${date}" class="max-w-5xl mx-auto space-y-6 min-w-0">
+                        <!-- NAVEGAÇÃO DE ABAS: HOJE, CATÁLOGO 140 SANTOS E MAPA MUNDIAL -->
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-3 border border-slate-200 dark:border-slate-800 card-shadow flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center gap-2 overflow-x-auto custom-scrollbar p-1 w-full sm:w-auto">
+                                <button id="saints-tab-today" onclick="setSaintsViewMode('today')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-2 whitespace-nowrap">
+                                    <span>📅</span> <span>Santo do Dia</span>
+                                </button>
+                                <button id="saints-tab-catalog" onclick="setSaintsViewMode('catalog')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap">
+                                    <span>👑</span> <span>140 Grandes Padroeiros</span>
+                                </button>
+                                <button id="saints-tab-map" onclick="setSaintsViewMode('map')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap">
+                                    <span>🗺️</span> <span>Mapa da Santidade (131 Lugares)</span>
+                                </button>
                             </div>
-                            <div class="flex items-center gap-2 flex-wrap max-w-full">
-                                <button onclick="navigateSaintDay('${date}',-1)" class="px-3 py-2 bg-slate-100 rounded-xl text-xs font-bold">← Anterior</button>
-                                <input type="date" value="${date}" onchange="router.navigate('santo', this.value)" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 max-w-full">
-                                <button onclick="navigateSaintDay('${date}',1)" class="px-3 py-2 bg-slate-100 rounded-xl text-xs font-bold">Próximo →</button>
-                            </div>
-                        </div>
-                        <div id="santo-hero" class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30 min-w-0">
-                            <div class="absolute -right-6 -bottom-6 w-64 h-64 opacity-10 select-none pointer-events-none text-dourado">
-                            <svg viewBox="0 0 120 120" fill="currentColor" class="w-full h-full">
-                                <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                                <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width="1"/>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 4"/>
-                                <path d="M57 18 h6 v84 h-6 z M30 42 h60 v6 h-60 z" fill="currentColor"/>
-                                <path d="M60 10 v-6 M60 110 v6 M10 60 h-6 M110 60 h6 M25 25 l-5-5 M95 95 l5 5 M25 95 l-5 5 M95 25 l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                            <div class="relative z-10 space-y-3 min-w-0">
-                                <span class="inline-flex max-w-full px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40 break-words">${date.split('-').reverse().join('/')}</span>
-                                <h2 class="font-serif text-3xl md:text-4xl font-bold break-words">Consultando a data...</h2>
-                                <p class="text-slate-200 text-sm leading-6 break-words">Carregando a celebração litúrgica e, quando disponível, o Santo do Dia.</p>
+
+                            <div class="flex items-center gap-2 flex-wrap ml-auto pr-2">
+                                <button onclick="navigateSaintDay('${date}',-1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">← Anterior</button>
+                                <input type="date" value="${date}" onchange="router.navigate('santo', this.value)" class="px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">
+                                <button onclick="navigateSaintDay('${date}',1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">Próximo →</button>
                             </div>
                         </div>
-                        <div id="santo-detail" class="grid grid-cols-1 md:grid-cols-3 gap-6 min-w-0">
-                            <div class="md:col-span-2 min-w-0">
-                                <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow text-center min-w-0">
-                                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-xl text-xs text-slate-500">⏳ Carregando conteúdo da data...</div>
+
+                        <!-- 1. MODO: SANTO DO DIA (HOJE) -->
+                        <div id="saints-mode-today" class="space-y-8 min-w-0">
+                            <div id="santo-hero" class="mariana-gradient text-white rounded-3xl p-8 relative overflow-hidden shadow-xl border border-dourado/30 min-w-0">
+                                <div class="absolute -right-6 -bottom-6 w-64 h-64 opacity-10 select-none pointer-events-none text-dourado">
+                                    <svg viewBox="0 0 120 120" fill="currentColor" class="w-full h-full">
+                                        <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+                                        <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width="1"/>
+                                        <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 4"/>
+                                        <path d="M57 18 h6 v84 h-6 z M30 42 h60 v6 h-60 z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="relative z-10 space-y-3 min-w-0">
+                                    <span class="inline-flex max-w-full px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40 break-words">Consultando Registros Canônicos…</span>
+                                    <p class="text-slate-200 text-xs">Carregando celebração e santos associados à data de ${date.split('-').reverse().join('/')}...</p>
                                 </div>
                             </div>
-                            <div class="space-y-6 min-w-0">
-                                <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3 min-w-0 overflow-hidden">
-                                    <h3 class="font-serif text-lg font-bold text-mariana">Como funciona</h3>
-                                    <p class="text-xs text-slate-600 leading-relaxed break-words">A data selecionada é consultada diretamente na fonte litúrgica. O Santo do Dia usa o conteúdo da API em português quando existe para a data atual. Não usamos Wikipédia para montar biografias.</p>
-                                </div>
+                            <div id="santo-detail" class="space-y-8 min-w-0">
+                                <div class="p-8 text-center text-xs text-slate-400 animate-pulse">Carregando biografia e reflexões do Santo...</div>
                             </div>
                         </div>
-                    </div>`;
+
+                        <!-- 2. MODO: CATÁLOGO DOS 140 GRANDES PADROEIROS -->
+                        <div id="saints-mode-catalog" class="space-y-6 hidden">
+                            <!-- Barra de Busca e Filtros -->
+                            <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 card-shadow space-y-4">
+                                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                                    <div>
+                                        <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100">Galeria dos 140 Grandes Padroeiros</h3>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Doutores da Igreja, Mártires, Apóstolos e Modelos de Virtude da Cristandade</p>
+                                    </div>
+                                    <div class="w-full md:w-72">
+                                        <input type="text" id="saints-search-input" oninput="filterSaintsCatalog()" placeholder="Buscar por santo, país ou causa..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 outline-none focus:border-mariana">
+                                    </div>
+                                </div>
+
+                                <!-- Filtro por Século -->
+                                <div>
+                                    <span class="text-[11px] uppercase font-bold text-slate-400 tracking-wider block mb-2">Filtrar por Época / Século:</span>
+                                    <div id="saints-century-chips" class="flex flex-wrap gap-2"></div>
+                                </div>
+
+                                <!-- Filtro por Causa / Padroado -->
+                                <div>
+                                    <span class="text-[11px] uppercase font-bold text-slate-400 tracking-wider block mb-2">Filtrar por Patronato / Causa:</span>
+                                    <div id="saints-causa-chips" class="flex flex-wrap gap-2"></div>
+                                </div>
+                            </div>
+
+                            <!-- Grade de Cards dos Santos -->
+                            <div id="saints-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+                            <!-- Paginação -->
+                            <div id="saints-catalog-pagination" class="flex justify-center items-center gap-2 pt-4"></div>
+                        </div>
+
+                        <!-- 3. MODO: MAPA MUNDIAL DA SANTIDADE (131 LUGARES EM PORTUGUÊS) -->
+                        <div id="saints-mode-map" class="space-y-6 hidden">
+                            <div class="bg-gradient-to-r from-mariana via-slate-900 to-amber-950 text-white p-6 rounded-3xl shadow-xl border border-dourado/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="text-4xl">🗺️</span>
+                                    <div>
+                                        <h3 class="font-serif text-2xl font-bold text-amber-200">Mapa Mundial da Santidade</h3>
+                                        <p class="text-xs text-slate-300 mt-1">Peregrine pelos 131 Santuários, Basílicas e Locais de Devoção e Martírio dos Santos ao redor do planeta com nomes em Português.</p>
+                                    </div>
+                                </div>
+                                <span class="px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-widest whitespace-nowrap">131 Santuários</span>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 p-4 rounded-3xl border border-slate-200 dark:border-slate-800 card-shadow">
+                                <div id="mapa-santidade" style="width: 100%; height: 600px;" class="w-full rounded-2xl shadow-inner border border-slate-200 dark:border-slate-700 overflow-hidden relative"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             },
 
             async loadSantoAsync(dateStr, mainView) {
@@ -7807,6 +7889,7 @@
         window.loadAdminCommunityTable = loadAdminCommunityTable;
 
         function renderAdminDashboardModal() {
+            setTimeout(loadAdminLiturgiaStatus, 100);
             const modal = document.getElementById('modal-container');
             if (!modal) return;
 
@@ -8203,6 +8286,53 @@
 
 
                     
+                    <!-- 8. GESTÃO E ATUALIZAÇÃO DA LITURGIA DIÁRIA -->
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🕊️</span>
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-mariana dark:text-slate-100 flex items-center gap-2">
+                                        Gestão da Liturgia Diária
+                                        <span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200">Autônomo</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Monitore os arquivos locais de lecionário e baixe novos anos diretamente por este painel.</p>
+                                </div>
+                            </div>
+                            <button onclick="loadAdminLiturgiaStatus()" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition flex items-center gap-1.5">
+                                <span>🔄</span> <span>Atualizar Status</span>
+                            </button>
+                        </div>
+
+                        <!-- Status dos Anos -->
+                        <div id="admin-liturgia-years-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-center animate-pulse">
+                                <span class="text-xs text-slate-400">Verificando anos...</span>
+                            </div>
+                        </div>
+
+                        <!-- Barra de Ação Manual -->
+                        <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="text-left">
+                                <h5 class="text-sm font-bold text-amber-900 dark:text-amber-200">Baixar / Atualizar Ano Específico</h5>
+                                <p class="text-xs text-amber-800/80 dark:text-amber-300/70">O servidor fará o download silencioso de todos os 365 dias daquele ano.</p>
+                            </div>
+                            <div class="flex items-center gap-2 w-full sm:w-auto">
+                                <select id="admin-liturgia-year-select" class="px-3 py-2 rounded-xl bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-xs font-bold text-slate-700 dark:text-slate-200 outline-none">
+                                    <option value="2026">Ano 2026</option>
+                                    <option value="2027">Ano 2027</option>
+                                    <option value="2028" selected>Ano 2028</option>
+                                    <option value="2029">Ano 2029</option>
+                                    <option value="2030">Ano 2030</option>
+                                </select>
+                                <button id="btn-trigger-liturgia" onclick="triggerAdminLiturgiaUpdate()" class="px-5 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow transition whitespace-nowrap flex items-center gap-1.5">
+                                    <span>🔄</span> <span>Baixar Ano Agora</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="admin-liturgia-feedback" class="text-xs text-slate-500 italic hidden"></div>
+                    </div>
+
                     <!-- GESTÃO DINÂMICA DE MENUS & MÓDULOS (FEATURE FLAGS) -->
                     <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 space-y-4 text-left">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-700/80 pb-4">
@@ -8858,6 +8988,312 @@
                 navigator.serviceWorker.register('/sw.js').catch(() => {});
             });
         }
-    </script>
+    
+
+        /* =========================================================================
+           MOTOR DO MAPA MUNDIAL, CATÁLOGO E MODAL DOS SANTOS (PORTUGUÊS)
+           ========================================================================= */
+        let saintsLeafletMap = null;
+        let currentSaintsViewMode = 'today';
+        let selectedCenturyFilter = 'Todos';
+        let selectedCausaFilter = null;
+        let currentCatalogPage = 1;
+        const CATALOG_PAGE_SIZE = 24;
+        let activeModalSaint = null;
+
+        function setSaintsViewMode(mode) {
+            currentSaintsViewMode = mode;
+            ['today', 'catalog', 'map'].forEach(m => {
+                const panel = document.getElementById(`saints-mode-${m}`);
+                const tab = document.getElementById(`saints-tab-${m}`);
+                if (panel) panel.classList.toggle('hidden', m !== mode);
+                if (tab) {
+                    if (m === mode) {
+                        tab.className = "px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-2 whitespace-nowrap";
+                    } else {
+                        tab.className = "px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap";
+                    }
+                }
+            });
+
+            if (mode === 'catalog') {
+                renderCenturyChips();
+                renderCausaChips();
+                filterSaintsCatalog();
+            }
+            if (mode === 'map') {
+                setTimeout(() => {
+                    initSaintsMap();
+                    if (saintsLeafletMap) saintsLeafletMap.invalidateSize();
+                }, 150);
+            }
+        }
+
+        function initSaintsMap() {
+            const mapEl = document.getElementById('mapa-santidade');
+            if (!mapEl || typeof L === 'undefined') return;
+
+            if (saintsLeafletMap) {
+                saintsLeafletMap.invalidateSize();
+                return;
+            }
+
+            // Centralizado na Europa / Mediterrâneo com zoom adequado
+            saintsLeafletMap = L.map('mapa-santidade', {
+                center: [42.0, 14.0],
+                zoom: 4,
+                zoomControl: true,
+                attributionControl: true
+            });
+
+            // CAMADA DE MAPA LOCALIZADA EM PORTUGUÊS / LATIM (CartoDB Voyager)
+            // Países traduzidos: Lituânia, Polônia, Alemanha, Grécia, Roma, Jerusalém, etc.
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(saintsLeafletMap);
+
+            const mapData = (window.SAINTS_DATA && window.SAINTS_DATA.mapSaints) ? window.SAINTS_DATA.mapSaints : [];
+            const markers = [];
+
+            const iconSanto = L.divIcon({
+                className: 'custom-santo-pin',
+                html: '<div style="background: #0284c7; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; border: 2.5px solid #f59e0b; box-shadow: 0 4px 10px rgba(0,0,0,0.35); cursor: pointer;">&#9768;</div>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 16],
+                popupAnchor: [0, -18]
+            });
+
+            mapData.forEach(santo => {
+                if (!santo.lat || !santo.lng) return;
+
+                const popupHtml = `
+                    <div style="min-width: 200px; max-width: 240px; padding: 12px; font-family: sans-serif; text-align: left;">
+                        ${santo.image ? `<img src="${santo.image}" alt="${santo.name}" style="width: 100%; height: 110px; object-fit: cover; object-position: top; border-radius: 8px; margin-bottom: 8px;" onerror="this.style.display='none'">` : ''}
+                        <div style="font-size: 10px; text-transform: uppercase; font-weight: 800; color: #d97706; margin-bottom: 2px;">
+                            ${santo.seculo || 'Tradição Católica'} • ${santo.pais || 'Igreja Universal'}
+                        </div>
+                        <h4 style="font-size: 14px; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; line-height: 1.2;">
+                            ${santo.name}
+                        </h4>
+                        ${santo.virtudes ? `<p style="font-size: 11px; color: #64748b; font-style: italic; margin: 0 0 8px 0;">Virtudes: ${santo.virtudes}</p>` : ''}
+                        <button onclick="openSaintModal('${santo.id}')" style="display: block; width: 100%; padding: 6px 10px; background: #0f172a; color: #fff; text-align: center; border-radius: 8px; font-size: 11px; font-weight: 700; border: none; cursor: pointer;">
+                            Ver Biografia Completa ➔
+                        </button>
+                    </div>
+                `;
+
+                const m = L.marker([santo.lat, santo.lng], { icon: iconSanto })
+                    .bindPopup(popupHtml, { maxWidth: 260 });
+                markers.push(m);
+            });
+
+            if (markers.length > 0) {
+                const group = L.featureGroup(markers).addTo(saintsLeafletMap);
+                try {
+                    saintsLeafletMap.fitBounds(group.getBounds().pad(0.1));
+                } catch(e) {}
+            }
+        }
+
+        // --- CATÁLOGO DE SANTOS ---
+        function renderCenturyChips() {
+            const container = document.getElementById('saints-century-chips');
+            if (!container || !window.SAINTS_DATA?.centuries) return;
+            container.innerHTML = window.SAINTS_DATA.centuries.map(c => {
+                const active = c.name === selectedCenturyFilter;
+                return `<button onclick="selectCenturyFilter('${c.name}')" class="px-3 py-1 rounded-full text-xs font-bold transition ${active ? 'bg-mariana text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'}">${c.name} (${c.count})</button>`;
+            }).join('');
+        }
+
+        function renderCausaChips() {
+            const container = document.getElementById('saints-causa-chips');
+            if (!container || !window.SAINTS_DATA?.patronages) return;
+            const allBtn = `<button onclick="selectCausaFilter(null)" class="px-3 py-1 rounded-full text-xs font-bold transition ${selectedCausaFilter === null ? 'bg-amber-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'}">Todos os Patronatos</button>`;
+            container.innerHTML = allBtn + window.SAINTS_DATA.patronages.map(p => {
+                const active = p.name === selectedCausaFilter;
+                return `<button onclick="selectCausaFilter('${p.name}')" class="px-3 py-1 rounded-full text-xs font-bold transition ${active ? 'bg-amber-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'}">${p.name} (${p.count})</button>`;
+            }).join('');
+        }
+
+        function selectCenturyFilter(century) {
+            selectedCenturyFilter = century;
+            currentCatalogPage = 1;
+            renderCenturyChips();
+            filterSaintsCatalog();
+        }
+
+        function selectCausaFilter(causa) {
+            selectedCausaFilter = causa;
+            currentCatalogPage = 1;
+            renderCausaChips();
+            filterSaintsCatalog();
+        }
+
+        function filterSaintsCatalog() {
+            const grid = document.getElementById('saints-catalog-grid');
+            if (!grid || !window.SAINTS_DATA?.catalog) return;
+
+            const searchInp = document.getElementById('saints-search-input');
+            const query = (searchInp ? searchInp.value : '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+            let list = window.SAINTS_DATA.catalog;
+
+            // Filtro por Século
+            if (selectedCenturyFilter !== 'Todos') {
+                list = list.filter(s => s.seculo === selectedCenturyFilter || (s.seculos && s.seculos.includes(selectedCenturyFilter)));
+            }
+
+            // Filtro por Causa
+            if (selectedCausaFilter) {
+                list = list.filter(s => (s.causas && s.causas.includes(selectedCausaFilter)) || s.category === selectedCausaFilter);
+            }
+
+            // Filtro por Busca
+            if (query) {
+                list = list.filter(s => {
+                    const norm = (s.name + ' ' + (s.pais || '') + ' ' + (s.virtudes || '') + ' ' + (s.bio || '')).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                    return norm.includes(query);
+                });
+            }
+
+            const total = list.length;
+            const totalPages = Math.ceil(total / CATALOG_PAGE_SIZE) || 1;
+            if (currentCatalogPage > totalPages) currentCatalogPage = totalPages;
+
+            const start = (currentCatalogPage - 1) * CATALOG_PAGE_SIZE;
+            const paged = list.slice(start, start + CATALOG_PAGE_SIZE);
+
+            if (paged.length === 0) {
+                grid.innerHTML = '<div class="col-span-full p-12 text-center text-sm text-slate-400 font-serif">Nenhum santo encontrado para os filtros selecionados.</div>';
+            } else {
+                grid.innerHTML = paged.map(s => {
+                    return `
+                        <article class="bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 card-shadow flex flex-col justify-between transition hover:-translate-y-1">
+                            <div>
+                                <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-4 border border-amber-200/60 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
+                                    <img src="${s.image}" alt="${s.name}" onerror="handleSaintImageError(this, '${s.name}')" class="w-full h-full object-cover object-top" loading="lazy">
+                                    <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs text-amber-300 text-[10px] font-bold uppercase tracking-wider">${s.seculo || 'Século Sagrado'}</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-black text-mariana dark:text-slate-100 leading-tight mb-1.5">${s.name}</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-3 mb-3 font-serif">${s.bio || 'Modelo de santidade, virtude cristã e intercessão diante de Deus.'}</p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-1 mb-4">
+                                    ${(s.causas || []).slice(0, 2).map(c => `<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60">${c}</span>`).join('')}
+                                </div>
+                                <button onclick="openSaintModal('${s.id}')" class="w-full py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow-xs transition flex items-center justify-center gap-1.5">
+                                    <span>Conhecer História</span> <span>➔</span>
+                                </button>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            }
+
+            // Paginação
+            const pag = document.getElementById('saints-catalog-pagination');
+            if (pag) {
+                if (totalPages <= 1) {
+                    pag.innerHTML = '';
+                } else {
+                    let pagHtml = `<button onclick="currentCatalogPage--; filterSaintsCatalog();" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold ${currentCatalogPage === 1 ? 'opacity-40 cursor-not-allowed' : 'hover:bg-slate-100 dark:hover:bg-slate-800'}" ${currentCatalogPage === 1 ? 'disabled' : ''}>← Anterior</button>`;
+                    pagHtml += `<span class="text-xs font-bold text-slate-500 px-3">Página ${currentCatalogPage} de ${totalPages}</span>`;
+                    pagHtml += `<button onclick="currentCatalogPage++; filterSaintsCatalog();" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold ${currentCatalogPage === totalPages ? 'opacity-40 cursor-not-allowed' : 'hover:bg-slate-100 dark:hover:bg-slate-800'}" ${currentCatalogPage === totalPages ? 'disabled' : ''}>Próxima →</button>`;
+                    pag.innerHTML = pagHtml;
+                }
+            }
+        }
+
+        // --- MODAL DO SANTO ---
+        function openSaintModal(sId) {
+            const all = [...(window.SAINTS_DATA?.catalog || []), ...(window.SAINTS_DATA?.mapSaints || [])];
+            const s = all.find(x => x.id === sId || x.slug === sId);
+            if (!s) return;
+
+            const modal = document.getElementById('saint-modal');
+            if (!modal) return;
+
+            document.getElementById('sm-image').src = s.image || '';
+            document.getElementById('sm-name').innerText = s.name || '';
+            document.getElementById('sm-date').innerText = (s.seculo || '') + (s.pais ? ' • ' + s.pais : '');
+            document.getElementById('sm-meta').innerText = s.virtudes ? 'Virtudes: ' + s.virtudes : '';
+
+            const badges = document.getElementById('sm-badges');
+            if (badges) {
+                badges.innerHTML = (s.causas || []).map(c => `<span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">${c}</span>`).join('');
+            }
+
+            const bioBox = document.getElementById('sm-bio');
+            if (bioBox) {
+                if (s.richBio) {
+                    bioBox.innerHTML = s.richBio;
+                } else {
+                    bioBox.innerHTML = `<p class="mb-3 leading-relaxed">${s.bio || 'Biografia venerável guardada na Tradição da Santa Igreja.'}</p>`;
+                }
+            }
+
+            const prayerBox = document.getElementById('sm-prayer-box');
+            const prayerEl = document.getElementById('sm-prayer');
+            if (s.oracao || s.prayer) {
+                if (prayerBox) prayerBox.classList.remove('hidden');
+                if (prayerEl) prayerEl.innerText = s.oracao || s.prayer;
+            } else {
+                if (prayerBox) prayerBox.classList.add('hidden');
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSaintModal() {
+            const modal = document.getElementById('saint-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeSaintModal();
+        });
+
+</script>
+
+    <!-- MODAL SOLENE DE DETALHES DO SANTO (RAIZ BODY, LIVRE DE TRANSFORMS) -->
+    <div id="saint-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto" onclick="if(event.target === this) closeSaintModal()">
+        <div class="relative bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full p-6 md:p-8 overflow-hidden shadow-2xl border border-amber-300/40 my-8">
+            <button onclick="closeSaintModal()" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold transition">✕</button>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 border-b border-slate-100 dark:border-slate-800 pb-6">
+                <div class="relative w-28 h-28 rounded-2xl overflow-hidden shadow-md border-2 border-amber-400 shrink-0 bg-slate-100">
+                    <img id="sm-image" src="" alt="" class="w-full h-full object-cover object-top" onerror="handleSaintImageError(this, document.getElementById('sm-name')?.innerText)">
+                </div>
+                <div class="text-center sm:text-left">
+                    <span id="sm-date" class="text-xs uppercase font-bold text-dourado tracking-wider"></span>
+                    <h3 id="sm-name" class="text-2xl font-serif font-black text-mariana dark:text-slate-100 my-1"></h3>
+                    <p id="sm-meta" class="text-xs text-slate-500 dark:text-slate-400 font-serif italic"></p>
+                    <div id="sm-badges" class="flex flex-wrap gap-1.5 mt-2 justify-center sm:justify-start"></div>
+                </div>
+            </div>
+            <div class="mt-6 space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed max-h-[60vh] overflow-y-auto custom-scrollbar pr-2">
+                <div>
+                    <h4 class="font-serif font-bold text-mariana dark:text-amber-400 text-base mb-1">Biografia & Vida Santa</h4>
+                    <div id="sm-bio" class="space-y-3 font-serif leading-relaxed"></div>
+                </div>
+                <div id="sm-prayer-box" class="p-5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 mt-4">
+                    <h5 class="text-xs uppercase font-black text-amber-900 dark:text-amber-300 tracking-wider mb-2 flex items-center gap-1.5">
+                        <span>🙏</span> <span>Oração Litúrgica</span>
+                    </h5>
+                    <p id="sm-prayer" class="font-serif italic text-amber-950 dark:text-amber-100 leading-relaxed"></p>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                <button onclick="closeSaintModal()" class="px-6 py-2.5 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold shadow transition">Fechar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -17,14 +17,15 @@
       "date": "2026-02-04",
       "name": "São José de Leonessa, presbítero, capuchinho",
       "normalizedName": "sao jose de leonessa, presbitero, capuchinho",
-      "imageUrl": "",
+      "imageUrl": "./assets/img/santos/ns_sao-jose.jpg",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
       "sourceText": "Nascido em 1556, foi para Constantinopla, onde ajudou os cristãos prisioneiros turcos. Querendo anunciar o Evangelho ao sultão, foi preso, torturado e expulso. Na Itália, passando cidade por cidade, pregou a Boa Nova aos pobres, enfermos, encarcerados. Faleceu em Amatrice, em 1612.",
       "enrichment": {
         "a12Found": false
-      }
+      },
+      "hasSacredImage": true
     }
   ]
 }

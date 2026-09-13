@@ -17,14 +17,15 @@
       "date": "2026-07-16",
       "name": "Santa Maria Madalena Postel, virgem, fundadora da Congregação das Filhas da Misericórdia",
       "normalizedName": "santa maria madalena postel, , fundadora da congregacao das filhas da misericordia",
-      "imageUrl": "",
+      "imageUrl": "./assets/img/santos/ns_santa-maria-madalena.jpg",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
       "sourceText": "Júlia nasceu na Normandia e dedicou-se à instrução dos jovens e ao catecismo das crianças. Depois do período obscuro da revolução francesa, abriu uma escola em Cherbourg. Em 1806, emitiu os votos, recebendo o nome de Maria Madalena. Assim, nasceu a Congregação das Filhas da Misericórdia.",
       "enrichment": {
         "a12Found": false
-      }
+      },
+      "hasSacredImage": true
     }
   ]
 }
