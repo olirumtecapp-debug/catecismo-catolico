@@ -6,31 +6,39 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-12T13:45:34.600Z",
-      "createdAt": "2026-09-12T13:45:34.600Z",
-      "xp": 165,
+      "updatedAt": "2026-09-13T11:35:06.308Z",
+      "createdAt": "2026-09-13T11:35:06.308Z",
+      "xp": 235,
       "streak": 4,
       "level": "Peregrino",
       "reflectionsCount": 0,
       "appState": {
-        "xp": 165,
+        "xp": 235,
         "streak": 4,
         "lastPrayerDate": null,
-        "completedLessons": [],
+        "completedLessons": [
+          "creio_1",
+          "creio_2"
+        ],
         "completedQuizzes": [],
         "favorites": [],
         "unlockedAchievements": [
+          "first_liturgy",
           "prayer_streak",
-          "first_liturgy"
+          "first_study"
         ],
         "liturgicalRead": {
-          "2026-09-12": true
+          "2026-09-11": true,
+          "2026-09-13": true
         },
         "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-12T09:55:00.449Z"
+        "lastCloudSync": "2026-09-11T21:32:26.242Z",
+        "readBibleChapters": {
+          "MAT_18": true
+        }
       }
     }
   }
