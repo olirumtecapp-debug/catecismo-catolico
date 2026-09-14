@@ -6,27 +6,52 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-13T17:45:08.692Z",
-      "createdAt": "2026-09-13T17:45:08.692Z",
-      "xp": 180,
+      "updatedAt": "2026-09-14T09:08:21.453Z",
+      "createdAt": "2026-09-14T09:08:21.453Z",
+      "xp": 360,
       "streak": 4,
-      "level": "Peregrino",
-      "reflectionsCount": 0,
+      "level": "Discípulo",
+      "reflectionsCount": 1,
       "appState": {
-        "xp": 180,
+        "xp": 360,
         "streak": 4,
-        "lastPrayerDate": null,
-        "completedLessons": [],
+        "lastPrayerDate": "2026-09-13",
+        "completedLessons": [
+          "creio_1",
+          "creio_2",
+          "creio_3"
+        ],
         "completedQuizzes": [],
         "favorites": [],
         "unlockedAchievements": [
-          "prayer_streak"
+          "first_liturgy",
+          "prayer_streak",
+          "first_study",
+          "first_lectio",
+          "first_rosary"
         ],
-        "liturgicalRead": {},
-        "lectioNotes": {},
+        "liturgicalRead": {
+          "2026-09-11": true,
+          "2026-09-13": true,
+          "2026-09-14": true
+        },
+        "lectioNotes": {
+          "2026-09-13": "Perdoar sem medidas"
+        },
         "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "olirumdev1@gmail.com"
+        "cloudSyncEmail": "olirumdev1@gmail.com",
+        "lastCloudSync": "2026-09-13T12:19:30.590Z",
+        "readBibleChapters": {
+          "MAT_18": true
+        },
+        "completedRosaries": [
+          {
+            "mystery": "gloriosos",
+            "date": "2026-09-13",
+            "timestamp": 1789301969248
+          }
+        ]
       }
     }
   }
