@@ -6,14 +6,14 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-14T09:08:21.453Z",
-      "createdAt": "2026-09-14T09:08:21.453Z",
-      "xp": 360,
+      "updatedAt": "2026-09-14T09:12:44.794Z",
+      "createdAt": "2026-09-14T09:12:44.794Z",
+      "xp": 400,
       "streak": 4,
       "level": "Discípulo",
-      "reflectionsCount": 1,
+      "reflectionsCount": 2,
       "appState": {
-        "xp": 360,
+        "xp": 400,
         "streak": 4,
         "lastPrayerDate": "2026-09-13",
         "completedLessons": [
@@ -28,7 +28,8 @@
           "prayer_streak",
           "first_study",
           "first_lectio",
-          "first_rosary"
+          "first_rosary",
+          "three_liturgies"
         ],
         "liturgicalRead": {
           "2026-09-11": true,
@@ -36,12 +37,13 @@
           "2026-09-14": true
         },
         "lectioNotes": {
-          "2026-09-13": "Perdoar sem medidas"
+          "2026-09-13": "Perdoar sem medidas",
+          "2026-09-14": "Ele veio foi humilde e voltou ensinando o melhor, Jesus Seja Louvado."
         },
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-13T12:19:30.590Z",
+        "lastCloudSync": "2026-09-14T09:08:22.409Z",
         "readBibleChapters": {
           "MAT_18": true
         },
