@@ -55,6 +55,31 @@
           }
         ]
       }
+    },
+    "oliveiramodenaroseli@gmail.com": {
+      "email": "oliveiramodenaroseli@gmail.com",
+      "updatedAt": "2026-09-14T10:38:19.272Z",
+      "createdAt": "2026-09-14T10:38:19.272Z",
+      "xp": 180,
+      "streak": 4,
+      "level": "Peregrino",
+      "reflectionsCount": 0,
+      "appState": {
+        "xp": 180,
+        "streak": 4,
+        "lastPrayerDate": null,
+        "completedLessons": [],
+        "completedQuizzes": [],
+        "favorites": [],
+        "unlockedAchievements": [
+          "prayer_streak"
+        ],
+        "liturgicalRead": {},
+        "lectioNotes": {},
+        "activeStudyPlan": null,
+        "planProgress": {},
+        "cloudSyncEmail": "oliveiramodenaroseli@gmail.com"
+      }
     }
   }
 }
