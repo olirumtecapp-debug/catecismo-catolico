@@ -7787,38 +7787,64 @@
         }
 
         const AdminSecurity = {
-            getPin() {
-                return localStorage.getItem('catecismo_admin_pin') || '16Bl33@p';
+            // A senha NAO fica mais no HTML: e validada no servidor (/api/admin/auth)
+            // e guardada no banco apenas como hash.
+            async verify(inputVal) {
+                try {
+                    const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/auth'), {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'login', password: inputVal })
+                    });
+                    const data = await res.json();
+                    return !!data.ok;
+                } catch (err) {
+                    console.warn('[Admin] API de login indisponivel.', err);
+                    return false;
+                }
             },
-            setPin(newPin) {
+            async setPin(newPin, senhaAtual) {
                 if (!newPin || newPin.trim().length < 4) {
                     showToast('A senha deve conter ao menos 4 caracteres.', 'error');
                     return false;
                 }
-                localStorage.setItem('catecismo_admin_pin', newPin.trim());
-                showToast('Senha de administrador atualizada com sucesso! 🔒', 'success');
-                return true;
-            },
-            verify(inputVal) {
-                const currentPin = this.getPin();
-                return inputVal === currentPin || inputVal === '16Bl33@p';
+                try {
+                    const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/auth'), {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'set-password', currentPassword: senhaAtual || '', newPassword: newPin.trim() })
+                    });
+                    const data = await res.json();
+                    if (data.ok) {
+                        showToast('Senha de administrador atualizada com sucesso!', 'success');
+                        return true;
+                    }
+                    showToast(data.error || 'Nao foi possivel alterar a senha.', 'error');
+                    return false;
+                } catch (err) {
+                    showToast('Erro de conexao ao salvar a senha.', 'error');
+                    return false;
+                }
             }
         };
         window.AdminSecurity = AdminSecurity;
 
-        function changeAdminPinFromInput() {
+        async function changeAdminPinFromInput() {
             const inp = document.getElementById('new-admin-pin-input');
+            const atual = document.getElementById('current-admin-pin-input');
             const val = inp ? inp.value.trim() : '';
-            if (AdminSecurity.setPin(val)) {
+            const atualVal = atual ? atual.value : '';
+            if (await AdminSecurity.setPin(val, atualVal)) {
                 if (inp) inp.value = '';
+                if (atual) atual.value = '';
             }
         }
         window.changeAdminPinFromInput = changeAdminPinFromInput;
 
-        function verifyAdminPin() {
+        async function verifyAdminPin() {
             const inp = document.getElementById('admin-pin-input');
             const val = inp ? inp.value.trim() : '';
-            if (AdminSecurity.verify(val)) {
+            if (await AdminSecurity.verify(val)) {
                 adminPinVerified = true;
                 renderAdminDashboardModal();
             } else {
@@ -8416,7 +8442,8 @@
                             </div>
                         </div>
                         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
-                            <input type="text" id="new-admin-pin-input" placeholder="Digite a nova senha (ex.: 16Bl33@p)..." class="flex-1 px-4 py-2.5 rounded-xl border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-800 text-xs font-mono font-bold text-slate-800 dark:text-slate-100 focus:outline-none focus:border-amber-500">
+                            <input type="password" id="current-admin-pin-input" placeholder="Senha atual" class="flex-1 px-4 py-2.5 rounded-xl border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-800 text-xs font-mono font-bold text-slate-800 dark:text-slate-100 focus:outline-none focus:border-amber-500">
+                            <input type="password" id="new-admin-pin-input" placeholder="Nova senha (minimo 4 caracteres)" class="flex-1 px-4 py-2.5 rounded-xl border border-amber-200 dark:border-amber-800 bg-white dark:bg-slate-800 text-xs font-mono font-bold text-slate-800 dark:text-slate-100 focus:outline-none focus:border-amber-500">
                             <button onclick="changeAdminPinFromInput()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold text-xs shadow-xs transition cursor-pointer">
                                 Salvar Nova Senha
                             </button>

@@ -228,3 +228,29 @@ export async function updateMessageInDatabase(messageId, updates) {
         return false;
     }
 }
+
+// ================= AUTENTICACAO DO PAINEL ADMIN =================
+// A senha do painel NAO fica no HTML: fica aqui como HMAC-SHA256, usando um segredo que
+// so existe no servidor (variavel de ambiente ADMIN_AUTH_SECRET na Vercel).
+
+export const COL_ADMIN_AUTH = 'catecismo_admin_auth';
+
+export async function getAdminAuth() {
+    const res = await fsRequest(basePath(COL_ADMIN_AUTH) + '/main');
+    if (res.ok && res.body && res.body.fields) return docToObject(res.body);
+    return null;
+}
+
+export async function saveAdminAuth(registro) {
+    const res = await fsRequest(basePath(COL_ADMIN_AUTH) + '/main', {
+        method: 'PATCH',
+        body: JSON.stringify({ fields: toFields(registro) })
+    });
+    if (!res.ok) console.error('[db] falha ao gravar a senha do admin:', res.status, res.raw && res.raw.slice(0, 200));
+    return res.ok;
+}
+
+export async function clearAdminAuth() {
+    const res = await fsRequest(basePath(COL_ADMIN_AUTH) + '/main', { method: 'DELETE' });
+    return res.ok;
+}
