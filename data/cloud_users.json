@@ -57,6 +57,31 @@
         "planProgress": {},
         "cloudSyncEmail": "oliveiramodenaroseli@gmail.com"
       }
+    },
+    "patriciamedino1@gmail.com": {
+      "email": "patriciamedino1@gmail.com",
+      "updatedAt": "2026-09-15T12:52:06.910Z",
+      "createdAt": "2026-09-15T12:52:06.910Z",
+      "xp": 180,
+      "streak": 4,
+      "level": "Peregrino",
+      "reflectionsCount": 0,
+      "appState": {
+        "xp": 180,
+        "streak": 4,
+        "lastPrayerDate": null,
+        "completedLessons": [],
+        "completedQuizzes": [],
+        "favorites": [],
+        "unlockedAchievements": [
+          "prayer_streak"
+        ],
+        "liturgicalRead": {},
+        "lectioNotes": {},
+        "activeStudyPlan": null,
+        "planProgress": {},
+        "cloudSyncEmail": "patriciamedino1@gmail.com"
+      }
     }
   }
 }
