@@ -88,16 +88,16 @@
     },
     "rodrigoalmeidadeoliveira@gmail.com": {
       "email": "rodrigoalmeidadeoliveira@gmail.com",
-      "updatedAt": "2026-09-15T13:04:54.653Z",
-      "createdAt": "2026-09-15T13:04:54.653Z",
-      "xp": 180,
+      "updatedAt": "2026-09-15T13:16:11.764Z",
+      "createdAt": "2026-09-15T13:16:11.764Z",
+      "xp": 205,
       "streak": 4,
       "level": "Peregrino",
       "reflectionsCount": 0,
       "appState": {
-        "xp": 180,
+        "xp": 205,
         "streak": 4,
-        "lastPrayerDate": null,
+        "lastPrayerDate": "2026-09-15",
         "completedLessons": [],
         "completedQuizzes": [],
         "favorites": [],
@@ -108,7 +108,15 @@
         "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "rodrigoalmeidadeoliveira@gmail.com"
+        "cloudSyncEmail": "rodrigoalmeidadeoliveira@gmail.com",
+        "lastCloudSync": "2026-09-15T13:04:56.726Z",
+        "completedRosaries": [
+          {
+            "mystery": "dolorosos",
+            "date": "2026-09-15",
+            "timestamp": 1789478172586
+          }
+        ]
       }
     }
   }
