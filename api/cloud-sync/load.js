@@ -15,7 +15,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ success: false, error: 'Parâmetro de e-mail não informado.' });
     }
 
-    const db = getDatabase();
+    const db = await getDatabase();
     const user = db.users[email];
 
     if (!user) {

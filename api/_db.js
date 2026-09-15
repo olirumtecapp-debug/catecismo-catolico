@@ -1,138 +1,231 @@
-import https from 'https';
+// api/_db.js — camada de dados do Catecismo
+//
+// ANTES: gravava JSON dentro do proprio repositorio GitHub usando a API do GitHub,
+// com um token embutido no arquivo (o token ficou exposto em repositorio publico).
+//
+// AGORA: usa Firestore pelo mesmo modelo que o CodeLogic ja usa no navegador.
+// Nenhum segredo embutido: a chave abaixo e a configuracao publica do projeto
+// (a mesma que ja vai no HTML), e pode ser sobrescrita por variavel de ambiente.
+//
+// A interface exportada e identica a anterior, entao nenhum endpoint precisou mudar:
+//   getDatabase, saveUserToDatabase, getMessagesDatabase, saveMessageToDatabase, updateMessageInDatabase
 
-const GITHUB_TOKEN = process.env.GH_TOKEN || ['g','h','p','_','JU1p9NhrbrVC7PjFKSjrZIqWLxaaYE0BrX5t'].join('');
-const REPO = 'olirumtecapp-debug/catecismo-catolico';
+import crypto from 'crypto';
 
-const fileCache = {};
+const API_KEY = process.env.FIREBASE_API_KEY || 'AIzaSyBUHGXoUMg0bV3EdmfpfmVAEYMLQceqkQc';
+const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'expedicao-brasil';
 
-export async function getJsonFile(filePath, defaultData = {}) {
-  const now = Date.now();
-  const cached = fileCache[filePath];
-  if (cached && (now - cached.time < 5000)) {
-    return cached.data;
-  }
+const COL_USERS = 'catecismo_cloud_users';
+const COL_MESSAGES = 'catecismo_contact_messages';
 
-  return new Promise((resolve) => {
-    const req = https.request({
-      hostname: 'api.github.com',
-      path: `/repos/${REPO}/contents/${filePath}`,
-      method: 'GET',
-      headers: {
-        'Authorization': `token ${GITHUB_TOKEN}`,
-        'User-Agent': 'CatecismoApp/1.0',
-        'Accept': 'application/vnd.github.v3+json'
-      }
-    }, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        if (res.statusCode === 200) {
-          try {
-            const json = JSON.parse(data);
-            const content = JSON.parse(Buffer.from(json.content, 'base64').toString('utf8'));
-            fileCache[filePath] = {
-              data: content,
-              sha: json.sha,
-              time: Date.now()
-            };
-            return resolve(content);
-          } catch(e) {}
-        }
-        resolve(cached?.data || defaultData);
-      });
-    });
-    req.on('error', () => resolve(cached?.data || defaultData));
-    req.end();
-  });
+const CACHE_MS = 5000;
+const TIMEOUT_MS = 8000;
+
+const cache = new Map();
+
+function basePath(col) {
+    return '/v1/projects/' + PROJECT_ID + '/databases/(default)/documents/' + col;
 }
 
-export async function saveJsonFile(filePath, data, commitMsg = 'update data') {
-  try {
-    let sha = fileCache[filePath]?.sha;
-    if (!sha) {
-      await getJsonFile(filePath, {});
-      sha = fileCache[filePath]?.sha;
+function docId(value) {
+    return crypto.createHash('sha256').update(String(value)).digest('hex').slice(0, 32);
+}
+
+// ---------- conversao de tipos (mantem objetos e numeros intactos) ----------
+
+function toValue(v) {
+    if (v === null || v === undefined) return { nullValue: null };
+    if (typeof v === 'number') return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+    if (typeof v === 'boolean') return { booleanValue: v };
+    if (typeof v === 'string') return { stringValue: v };
+    if (Array.isArray(v)) return { arrayValue: { values: v.map(toValue) } };
+    if (typeof v === 'object') {
+        const fields = {};
+        for (const [k, x] of Object.entries(v)) fields[k] = toValue(x);
+        return { mapValue: { fields } };
     }
+    return { stringValue: String(v) };
+}
 
-    const newB64 = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
-    const payload = JSON.stringify({
-      message: commitMsg,
-      content: newB64,
-      sha: sha
-    });
+function fromValue(v) {
+    if (!v) return null;
+    if ('nullValue' in v) return null;
+    if ('integerValue' in v) return Number(v.integerValue);
+    if ('doubleValue' in v) return Number(v.doubleValue);
+    if ('booleanValue' in v) return v.booleanValue;
+    if ('stringValue' in v) return v.stringValue;
+    if ('timestampValue' in v) return v.timestampValue;
+    if ('arrayValue' in v) return (v.arrayValue.values || []).map(fromValue);
+    if ('mapValue' in v) {
+        const o = {};
+        for (const [k, x] of Object.entries(v.mapValue.fields || {})) o[k] = fromValue(x);
+        return o;
+    }
+    return null;
+}
 
-    return new Promise((resolve) => {
-      const putReq = https.request({
-        hostname: 'api.github.com',
-        path: `/repos/${REPO}/contents/${filePath}`,
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${GITHUB_TOKEN}`,
-          'User-Agent': 'CatecismoApp/1.0',
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json',
-          'Content-Length': Buffer.byteLength(payload)
-        }
-      }, (res) => {
-        let resData = '';
-        res.on('data', chunk => resData += chunk);
-        res.on('end', () => {
-          if (res.statusCode === 200 || res.statusCode === 201) {
-            try {
-              const resJson = JSON.parse(resData);
-              if (resJson.content?.sha) {
-                fileCache[filePath] = {
-                  data: data,
-                  sha: resJson.content.sha,
-                  time: Date.now()
-                };
-              }
-            } catch(e) {}
-            return resolve(true);
-          }
-          resolve(false);
+function toFields(obj) {
+    const fields = {};
+    for (const [k, v] of Object.entries(obj || {})) fields[k] = toValue(v);
+    return fields;
+}
+
+function docToObject(doc) {
+    const o = {};
+    for (const [k, v] of Object.entries(doc.fields || {})) o[k] = fromValue(v);
+    return o;
+}
+
+// ---------- acesso ao Firestore via REST ----------
+
+async function fsRequest(path, options = {}) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    try {
+        const res = await fetch('https://firestore.googleapis.com' + path + (path.includes('?') ? '&' : '?') + 'key=' + API_KEY, {
+            ...options,
+            signal: controller.signal,
+            headers: { 'Content-Type': 'application/json', ...(options.headers || {}) }
         });
-      });
-      putReq.on('error', () => resolve(false));
-      putReq.write(payload);
-      putReq.end();
+        const text = await res.text();
+        let json = null;
+        try { json = text ? JSON.parse(text) : null; } catch (e) { json = null; }
+        return { ok: res.ok, status: res.status, body: json, raw: text };
+    } catch (err) {
+        return { ok: false, status: 0, body: null, raw: String(err && err.message) };
+    } finally {
+        clearTimeout(timer);
+    }
+}
+
+async function listDocs(col, pageSize = 300) {
+    const res = await fsRequest(basePath(col) + '?pageSize=' + pageSize);
+    if (!res.ok || !res.body) return [];
+    return (res.body.documents || []).map(docToObject);
+}
+
+async function upsertDoc(col, id, obj) {
+    const res = await fsRequest(basePath(col) + '/' + id, {
+        method: 'PATCH',
+        body: JSON.stringify({ fields: toFields(obj) })
     });
-  } catch(e) {
-    return false;
-  }
+    return res.ok;
+}
+
+// ---------- cache curto (mesmo comportamento de antes) ----------
+
+function cacheGet(key) {
+    const hit = cache.get(key);
+    if (hit && (Date.now() - hit.time) < CACHE_MS) return hit.data;
+    return null;
+}
+
+function cacheSet(key, data) {
+    cache.set(key, { data, time: Date.now() });
+}
+
+function cacheClear() {
+    cache.clear();
 }
 
 // ================= USERS DB =================
+
 export async function getDatabase() {
-  return await getJsonFile('data/cloud_users.json', { _meta: {}, users: {} });
+    const cached = cacheGet('users');
+    if (cached) return cached;
+
+    const docs = await listDocs(COL_USERS);
+    const db = { _meta: { source: 'firestore', updatedAt: new Date().toISOString() }, users: {} };
+
+    for (const u of docs) {
+        if (!u || !u.email) continue;
+        const email = String(u.email).trim().toLowerCase();
+        const record = { ...u };
+        delete record.email;
+        db.users[email] = record;
+    }
+
+    // se o Firestore falhar, devolve a ultima leitura boa em vez de vazio
+    if (docs.length === 0) {
+        const anterior = cacheGet('users:last');
+        if (anterior) return anterior;
+    } else {
+        cacheSet('users:last', db);
+    }
+
+    cacheSet('users', db);
+    return db;
 }
 
 export async function saveUserToDatabase(email, userRecord) {
-  const db = await getDatabase();
-  if (!db.users) db.users = {};
-  db.users[email] = userRecord;
-  return await saveJsonFile('data/cloud_users.json', db, `chore(sync): sync user ${email}`);
+    if (!email) return false;
+    const key = String(email).trim().toLowerCase();
+    const id = docId(key);
+
+    try {
+        // preserva createdAt original quando ja existe
+        const atual = await fsRequest(basePath(COL_USERS) + '/' + id);
+        if (atual.ok && atual.body && atual.body.fields) {
+            const existente = docToObject(atual.body);
+            if (existente.createdAt && !userRecord.createdAt) userRecord.createdAt = existente.createdAt;
+            if (existente.createdAt && userRecord.createdAt && existente.createdAt < userRecord.createdAt) {
+                // mantem o mais antigo
+                userRecord.createdAt = existente.createdAt;
+            }
+        }
+
+        const ok = await upsertDoc(COL_USERS, id, { email: key, ...userRecord });
+        cacheClear();
+        return ok;
+    } catch (err) {
+        console.error('[db] falha ao gravar usuario:', err && err.message);
+        return false;
+    }
 }
 
 // ================= MESSAGES / CAIXA POSTAL DB =================
+
 export async function getMessagesDatabase() {
-  return await getJsonFile('data/contact_messages.json', { _meta: {}, messages: [] });
+    const cached = cacheGet('messages');
+    if (cached) return cached;
+
+    const docs = await listDocs(COL_MESSAGES);
+    const messages = docs
+        .filter(m => m && m.id)
+        .sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || '')));
+
+    const db = { _meta: { source: 'firestore', updatedAt: new Date().toISOString() }, messages };
+    cacheSet('messages', db);
+    return db;
 }
 
 export async function saveMessageToDatabase(msg) {
-  const db = await getMessagesDatabase();
-  if (!Array.isArray(db.messages)) db.messages = [];
-  db.messages.unshift(msg);
-  return await saveJsonFile('data/contact_messages.json', db, `feat(contact): nova mensagem de ${msg.email || 'anonimo'}`);
+    if (!msg || !msg.id) return false;
+
+    try {
+        const ok = await upsertDoc(COL_MESSAGES, docId(msg.id), msg);
+        cacheClear();
+        return ok;
+    } catch (err) {
+        console.error('[db] falha ao gravar mensagem:', err && err.message);
+        return false;
+    }
 }
 
 export async function updateMessageInDatabase(messageId, updates) {
-  const db = await getMessagesDatabase();
-  if (!Array.isArray(db.messages)) return false;
-  const idx = db.messages.findIndex(m => m.id === messageId);
-  if (idx !== -1) {
-    db.messages[idx] = { ...db.messages[idx], ...updates, updatedAt: new Date().toISOString() };
-    return await saveJsonFile('data/contact_messages.json', db, `feat(contact): update status mensagem ${messageId}`);
-  }
-  return false;
+    if (!messageId) return false;
+
+    try {
+        const docs = await listDocs(COL_MESSAGES, 500);
+        const alvo = docs.find(m => m && m.id === messageId);
+        if (!alvo) return false;
+
+        const atualizado = { ...alvo, ...(updates || {}), updatedAt: new Date().toISOString() };
+        const ok = await upsertDoc(COL_MESSAGES, docId(messageId), atualizado);
+        cacheClear();
+        return ok;
+    } catch (err) {
+        console.error('[db] falha ao atualizar mensagem:', err && err.message);
+        return false;
+    }
 }
