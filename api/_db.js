@@ -229,6 +229,19 @@ export async function updateMessageInDatabase(messageId, updates) {
     }
 }
 
+// remove a mensagem definitivamente (usado pelo "Excluir" do painel)
+export async function deleteMessageInDatabase(messageId) {
+    if (!messageId) return false;
+    try {
+        const res = await fsRequest(basePath(COL_MESSAGES) + '/' + docId(messageId), { method: 'DELETE' });
+        cacheClear();
+        return res.ok;
+    } catch (err) {
+        console.error('[db] falha ao excluir mensagem:', err && err.message);
+        return false;
+    }
+}
+
 // ================= AUTENTICACAO DO PAINEL ADMIN =================
 // A senha do painel NAO fica no HTML: fica aqui como HMAC-SHA256, usando um segredo que
 // so existe no servidor (variavel de ambiente ADMIN_AUTH_SECRET na Vercel).

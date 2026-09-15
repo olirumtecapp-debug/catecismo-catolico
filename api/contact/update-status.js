@@ -1,20 +1,43 @@
-import { updateMessageInDatabase } from '../_db.js';
+// /api/contact/update-status — ciclo de vida da mensagem na caixa postal do Catecismo
+//
+// Aceita tanto o formato antigo ({ id, status, reply }) quanto as acoes novas:
+//   action: read | archive | unarchive | delete
+// Mantem uma unica funcao para nao estourar o limite de 12 funcoes do plano gratuito.
+import { updateMessageInDatabase, deleteMessageInDatabase } from '../_db.js';
+
+const ACOES = ['read', 'archive', 'unarchive', 'delete'];
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Cache-Control', 'no-store');
 
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).json({ success: false, error: 'Method not allowed' });
 
   try {
-    const payload = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+    const payload = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
     const { id, status, reply } = payload;
+    const acao = String(payload.action || '').trim();
 
     if (!id) return res.status(400).json({ success: false, error: 'ID da mensagem é obrigatório.' });
+    if (acao && !ACOES.includes(acao)) {
+      return res.status(400).json({ success: false, error: 'Ação inválida: ' + acao });
+    }
+
+    // exclusao definitiva
+    if (acao === 'delete') {
+      const apagou = await deleteMessageInDatabase(id);
+      if (!apagou) return res.status(404).json({ success: false, error: 'Mensagem não encontrada.' });
+      return res.status(200).json({ success: true, deleted: true, message: 'Mensagem excluída.' });
+    }
 
     const updates = {};
+    if (acao === 'read') { updates.status = 'lido'; updates.readAt = new Date().toISOString(); }
+    if (acao === 'archive') { updates.status = 'arquivado'; updates.archivedAt = new Date().toISOString(); }
+    if (acao === 'unarchive') updates.status = 'novo';
+
     if (status) updates.status = status;
     if (reply) {
       updates.reply = reply;
@@ -26,7 +49,7 @@ export default async function handler(req, res) {
     if (!updated) return res.status(404).json({ success: false, error: 'Mensagem não encontrada.' });
 
     return res.status(200).json({ success: true, message: 'Mensagem atualizada com sucesso!' });
-  } catch(err) {
+  } catch (err) {
     return res.status(500).json({ success: false, error: 'Erro ao atualizar: ' + err.message });
   }
 }

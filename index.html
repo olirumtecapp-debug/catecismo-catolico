@@ -7585,12 +7585,22 @@
                 if (res.ok) {
                     const data = await res.json();
                     const messages = data.messages || [];
+                    window.adminMsgCache = messages;
+                    const filtroAtual = window.adminMsgFilter || 'ativas';
+                    const visiveis = messages.filter(m => {
+                        const st = m.status || 'novo';
+                        if (filtroAtual === 'todas') return true;
+                        if (filtroAtual === 'arquivadas') return st === 'arquivado';
+                        if (filtroAtual === 'novas') return st === 'novo';
+                        if (filtroAtual === 'respondidas') return st === 'respondido';
+                        return st !== 'arquivado';
+                    });
 
                     if (badge) {
                         badge.innerText = (data.unreadCount || 0) + ' novas';
                     }
 
-                    if (messages.length > 0) {
+                    if (visiveis.length > 0) {
                         const typeColors = {
                             'Oração': 'bg-amber-100 text-amber-900 border-amber-300 dark:bg-amber-950 dark:text-amber-200',
                             'Dúvida': 'bg-blue-100 text-blue-900 border-blue-300 dark:bg-blue-950 dark:text-blue-200',
@@ -7600,6 +7610,11 @@
                         };
 
                         container.innerHTML = `
+                            <div class="flex flex-wrap gap-1.5 mb-3">
+                                ${[['ativas', 'Ativas'], ['novas', 'Novas'], ['respondidas', 'Respondidas'], ['arquivadas', 'Arquivadas'], ['todas', 'Todas']].map(par => `
+                                    <button onclick="setAdminMsgFilter('${par[0]}')" class="px-2.5 py-1 rounded-lg text-[10px] font-bold border transition ${filtroAtual === par[0] ? 'bg-amber-600 text-white border-amber-600' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700'}">${par[1]}</button>
+                                `).join('')}
+                            </div>
                             <table class="w-full text-left text-xs">
                                 <thead>
                                     <tr class="border-b border-slate-200 dark:border-slate-800 text-slate-400 uppercase tracking-wider text-[10px]">
@@ -7612,7 +7627,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
-                                    ${messages.map(m => `
+                                    ${visiveis.map(m => `
                                         <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                                             <td class="py-2.5 px-3 text-slate-400 text-[11px] whitespace-nowrap">
                                                 ${new Date(m.createdAt).toLocaleDateString('pt-BR')} ${new Date(m.createdAt).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}
@@ -7631,9 +7646,7 @@
                                                 <p class="text-slate-600 dark:text-slate-400 text-[11px] line-clamp-2 mt-0.5">${m.message}</p>
                                             </td>
                                             <td class="py-2.5 px-3 whitespace-nowrap">
-                                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${m.status === 'novo' ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'}">
-                                                    ${m.status === 'novo' ? '🟡 Novo' : '🟢 Respondido'}
-                                                </span>
+                                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${m.status === 'arquivado' ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-200' : (m.status === 'respondido' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300' : (m.status === 'lido' ? 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300' : 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'))}">${m.status === 'arquivado' ? 'Arquivada' : (m.status === 'respondido' ? 'Respondido' : (m.status === 'lido' ? 'Lido' : 'Novo'))}</span>
                                             </td>
                                             <td class="py-2.5 px-3 text-right whitespace-nowrap">
                                                 <div class="flex items-center justify-end gap-1.5">
@@ -7642,6 +7655,13 @@
                                                     </a>
                                                     <button onclick="markAdminMessageStatus('${m.id}', '${m.status === 'novo' ? 'respondido' : 'novo'}')" class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-[10px] font-bold text-slate-600 dark:text-slate-300 transition">
                                                         ${m.status === 'novo' ? '✓ Concluir' : 'Reabrir'}
+                                                    </button>
+
+                                                    <button onclick="markAdminMessageAcao('${m.id}', '${m.status === 'arquivado' ? 'unarchive' : 'archive'}')" class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-[10px] font-bold text-slate-600 dark:text-slate-300 transition">
+                                                        ${m.status === 'arquivado' ? 'Desarquivar' : 'Arquivar'}
+                                                    </button>
+                                                    <button onclick="markAdminMessageAcao('${m.id}', 'delete')" class="px-2.5 py-1 rounded-lg border border-rose-200 dark:border-rose-800 hover:bg-rose-50 dark:hover:bg-rose-950/40 text-[10px] font-bold text-rose-600 dark:text-rose-300 transition">
+                                                        Excluir
                                                     </button>
                                                 </div>
                                             </td>
@@ -7661,6 +7681,31 @@
             }
         }
         window.loadAdminMessagesTable = loadAdminMessagesTable;
+        window.setAdminMsgFilter = function (f) {
+            window.adminMsgFilter = f;
+            loadAdminMessagesTable();
+        };
+
+        async function markAdminMessageAcao(id, action) {
+            if (action === 'delete' && !confirm('Excluir esta mensagem definitivamente?')) return;
+            try {
+                const res = await fetch(CloudSyncManager.getApiUrl('/api/contact/update-status'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id, action })
+                });
+                const data = await res.json().catch(() => ({}));
+                if (data.success) {
+                    showToast(data.message || 'Mensagem atualizada.', 'info');
+                } else {
+                    showToast(data.error || 'Nao foi possivel atualizar.', 'error');
+                }
+                loadAdminMessagesTable();
+            } catch (e) {
+                showToast('Erro de conexao ao atualizar: ' + e.message, 'error');
+            }
+        }
+        window.markAdminMessageAcao = markAdminMessageAcao;
 
         async function markAdminMessageStatus(id, status) {
             try {
