@@ -60,14 +60,14 @@
     },
     "patriciamedino1@gmail.com": {
       "email": "patriciamedino1@gmail.com",
-      "updatedAt": "2026-09-15T12:52:06.910Z",
-      "createdAt": "2026-09-15T12:52:06.910Z",
-      "xp": 180,
+      "updatedAt": "2026-09-15T12:52:42.536Z",
+      "createdAt": "2026-09-15T12:52:42.536Z",
+      "xp": 195,
       "streak": 4,
       "level": "Peregrino",
       "reflectionsCount": 0,
       "appState": {
-        "xp": 180,
+        "xp": 195,
         "streak": 4,
         "lastPrayerDate": null,
         "completedLessons": [],
@@ -76,11 +76,14 @@
         "unlockedAchievements": [
           "prayer_streak"
         ],
-        "liturgicalRead": {},
+        "liturgicalRead": {
+          "2026-09-15": true
+        },
         "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "patriciamedino1@gmail.com"
+        "cloudSyncEmail": "patriciamedino1@gmail.com",
+        "lastCloudSync": "2026-09-15T12:52:06.039Z"
       }
     }
   }
