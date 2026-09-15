@@ -6,31 +6,27 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-15T13:15:35.934Z",
-      "createdAt": "2026-09-15T13:15:35.934Z",
-      "xp": 165,
+      "updatedAt": "2026-09-15T13:18:25.353Z",
+      "createdAt": "2026-09-15T13:18:25.353Z",
+      "xp": 180,
       "streak": 4,
       "level": "Peregrino",
       "reflectionsCount": 0,
       "appState": {
-        "xp": 165,
+        "xp": 180,
         "streak": 4,
         "lastPrayerDate": null,
         "completedLessons": [],
         "completedQuizzes": [],
         "favorites": [],
         "unlockedAchievements": [
-          "prayer_streak",
-          "first_liturgy"
+          "prayer_streak"
         ],
-        "liturgicalRead": {
-          "2026-09-12": true
-        },
+        "liturgicalRead": {},
         "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-15T13:13:18.084Z"
+        "cloudSyncEmail": "olirumdev1@gmail.com"
       }
     },
     "oliveiramodenaroseli@gmail.com": {
