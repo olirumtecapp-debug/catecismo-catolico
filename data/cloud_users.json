@@ -6,8 +6,8 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-15T13:43:14.492Z",
-      "createdAt": "2026-09-15T13:43:14.492Z",
+      "updatedAt": "2026-09-15T13:43:15.624Z",
+      "createdAt": "2026-09-15T13:43:15.624Z",
       "xp": 730,
       "streak": 4,
       "level": "Guardião da Fé",
@@ -54,7 +54,7 @@
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-15T13:12:53.665Z",
+        "lastCloudSync": "2026-09-15T13:43:15.631Z",
         "readBibleChapters": {
           "MAT_18": true
         },
