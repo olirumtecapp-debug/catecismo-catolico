@@ -6,22 +6,27 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-14T09:12:44.794Z",
-      "createdAt": "2026-09-14T09:12:44.794Z",
-      "xp": 400,
+      "updatedAt": "2026-09-15T09:20:03.633Z",
+      "createdAt": "2026-09-15T09:20:03.633Z",
+      "xp": 730,
       "streak": 4,
-      "level": "Discípulo",
+      "level": "Guardião da Fé",
       "reflectionsCount": 2,
       "appState": {
-        "xp": 400,
+        "xp": 730,
         "streak": 4,
         "lastPrayerDate": "2026-09-13",
         "completedLessons": [
           "creio_1",
           "creio_2",
-          "creio_3"
+          "creio_3",
+          "creio_4",
+          "creio_5",
+          "celebro_1"
         ],
-        "completedQuizzes": [],
+        "completedQuizzes": [
+          1789403008353
+        ],
         "favorites": [],
         "unlockedAchievements": [
           "first_liturgy",
@@ -29,12 +34,17 @@
           "first_study",
           "first_lectio",
           "first_rosary",
-          "three_liturgies"
+          "three_liturgies",
+          "five_lessons",
+          "pillar_master",
+          "xp_master",
+          "first_quiz"
         ],
         "liturgicalRead": {
           "2026-09-11": true,
           "2026-09-13": true,
-          "2026-09-14": true
+          "2026-09-14": true,
+          "2026-09-15": true
         },
         "lectioNotes": {
           "2026-09-13": "Perdoar sem medidas",
@@ -43,7 +53,7 @@
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-14T09:08:22.409Z",
+        "lastCloudSync": "2026-09-14T09:12:45.547Z",
         "readBibleChapters": {
           "MAT_18": true
         },
