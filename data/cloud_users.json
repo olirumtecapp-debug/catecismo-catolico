@@ -6,31 +6,65 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-15T09:48:06.274Z",
-      "createdAt": "2026-09-15T09:48:06.274Z",
-      "xp": 165,
+      "updatedAt": "2026-09-15T13:12:52.475Z",
+      "createdAt": "2026-09-15T13:12:52.475Z",
+      "xp": 730,
       "streak": 4,
-      "level": "Peregrino",
-      "reflectionsCount": 0,
+      "level": "Guardião da Fé",
+      "reflectionsCount": 3,
       "appState": {
-        "xp": 165,
+        "xp": 730,
         "streak": 4,
-        "lastPrayerDate": null,
-        "completedLessons": [],
-        "completedQuizzes": [],
+        "lastPrayerDate": "2026-09-13",
+        "completedLessons": [
+          "creio_1",
+          "creio_2",
+          "creio_3",
+          "creio_4",
+          "creio_5",
+          "celebro_1"
+        ],
+        "completedQuizzes": [
+          1789403008353
+        ],
         "favorites": [],
         "unlockedAchievements": [
+          "first_liturgy",
           "prayer_streak",
-          "first_liturgy"
+          "first_study",
+          "first_lectio",
+          "first_rosary",
+          "three_liturgies",
+          "five_lessons",
+          "pillar_master",
+          "xp_master",
+          "first_quiz"
         ],
         "liturgicalRead": {
-          "2026-09-12": true
+          "2026-09-11": true,
+          "2026-09-13": true,
+          "2026-09-14": true,
+          "2026-09-15": true
         },
-        "lectioNotes": {},
+        "lectioNotes": {
+          "2026-09-13": "Perdoar sem medidas",
+          "2026-09-14": "Ele veio foi humilde e voltou ensinando o melhor, Jesus Seja Louvado.",
+          "2026-09-15": "Jesus e seus prodígios e ainda assim nós o condenamos. Misericórdia de nós senhor."
+        },
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-15T09:47:31.270Z"
+        "lastCloudSync": "2026-09-15T09:23:01.861Z",
+        "readBibleChapters": {
+          "MAT_18": true
+        },
+        "completedRosaries": [
+          {
+            "mystery": "gloriosos",
+            "date": "2026-09-13",
+            "timestamp": 1789301969248
+          }
+        ]
       }
     },
     "oliveiramodenaroseli@gmail.com": {
