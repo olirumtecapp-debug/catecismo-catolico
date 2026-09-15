@@ -6,12 +6,12 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-15T09:20:03.633Z",
-      "createdAt": "2026-09-15T09:20:03.633Z",
+      "updatedAt": "2026-09-15T09:23:00.855Z",
+      "createdAt": "2026-09-15T09:23:00.855Z",
       "xp": 730,
       "streak": 4,
       "level": "Guardião da Fé",
-      "reflectionsCount": 2,
+      "reflectionsCount": 3,
       "appState": {
         "xp": 730,
         "streak": 4,
@@ -48,12 +48,13 @@
         },
         "lectioNotes": {
           "2026-09-13": "Perdoar sem medidas",
-          "2026-09-14": "Ele veio foi humilde e voltou ensinando o melhor, Jesus Seja Louvado."
+          "2026-09-14": "Ele veio foi humilde e voltou ensinando o melhor, Jesus Seja Louvado.",
+          "2026-09-15": "Jesus e seus prodígios e ainda assim nós o condenamos. Misericórdia de nós senhor."
         },
         "activeStudyPlan": null,
         "planProgress": {},
         "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-14T09:12:45.547Z",
+        "lastCloudSync": "2026-09-15T09:20:05.022Z",
         "readBibleChapters": {
           "MAT_18": true
         },
