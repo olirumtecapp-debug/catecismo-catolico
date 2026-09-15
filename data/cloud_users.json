@@ -6,8 +6,8 @@
   "users": {
     "olirumdev1@gmail.com": {
       "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-15T13:45:39.934Z",
-      "createdAt": "2026-09-15T13:45:39.934Z",
+      "updatedAt": "2026-09-15T13:46:20.200Z",
+      "createdAt": "2026-09-15T13:46:20.200Z",
       "xp": 180,
       "streak": 4,
       "level": "Peregrino",
@@ -26,7 +26,8 @@
         "lectioNotes": {},
         "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "olirumdev1@gmail.com"
+        "cloudSyncEmail": "olirumdev1@gmail.com",
+        "lastCloudSync": "2026-09-15T13:45:41.039Z"
       }
     },
     "oliveiramodenaroseli@gmail.com": {
