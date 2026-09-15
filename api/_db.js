@@ -140,9 +140,8 @@ export async function getDatabase() {
     for (const u of docs) {
         if (!u || !u.email) continue;
         const email = String(u.email).trim().toLowerCase();
-        const record = { ...u };
-        delete record.email;
-        db.users[email] = record;
+        // o registro precisa manter o campo email: o painel admin e o CSV usam ele
+        db.users[email] = { ...u, email };
     }
 
     // se o Firestore falhar, devolve a ultima leitura boa em vez de vazio
