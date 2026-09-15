@@ -85,6 +85,31 @@
         "cloudSyncEmail": "patriciamedino1@gmail.com",
         "lastCloudSync": "2026-09-15T12:52:06.039Z"
       }
+    },
+    "rodrigoalmeidadeoliveira@gmail.com": {
+      "email": "rodrigoalmeidadeoliveira@gmail.com",
+      "updatedAt": "2026-09-15T13:04:54.653Z",
+      "createdAt": "2026-09-15T13:04:54.653Z",
+      "xp": 180,
+      "streak": 4,
+      "level": "Peregrino",
+      "reflectionsCount": 0,
+      "appState": {
+        "xp": 180,
+        "streak": 4,
+        "lastPrayerDate": null,
+        "completedLessons": [],
+        "completedQuizzes": [],
+        "favorites": [],
+        "unlockedAchievements": [
+          "prayer_streak"
+        ],
+        "liturgicalRead": {},
+        "lectioNotes": {},
+        "activeStudyPlan": null,
+        "planProgress": {},
+        "cloudSyncEmail": "rodrigoalmeidadeoliveira@gmail.com"
+      }
     }
   }
 }
