@@ -7317,7 +7317,9 @@
                 const modal = document.getElementById('modal-container');
                 if (!modal) return;
 
-                const sent = this.getSentMessages();
+                const todasEnviadas = this.getSentMessages();
+            const mostrarArquivadas = window.mostrarArquivadasCatecismo === true;
+            const sent = mostrarArquivadas ? todasEnviadas : todasEnviadas.filter(m => m.status !== 'arquivado');
                 const defaultEmail = AppState.cloudSyncEmail || '';
 
                 modal.innerHTML = `
@@ -7347,6 +7349,7 @@
                                 <span>📬 Minhas Mensagens</span>
                                 <span class="bg-indigo-100 dark:bg-indigo-950 text-indigo-800 dark:text-indigo-300 text-[10px] px-1.5 py-0.5 rounded-full font-mono">${sent.length}</span>
                             </button>
+                        <button type="button" onclick="event.stopPropagation(); window.toggleArquivadasCatecismo()" class="ml-2 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-300">Arquivadas</button>
                         </div>
 
                         <!-- Conteúdo da Aba -->
@@ -7422,7 +7425,15 @@
                                                             <span>⏳</span> <span>Aguardando leitura e orações da pastoral</span>
                                                         </div>
                                                     `}
-                                                </div>
+                                                                                <div class="flex items-center justify-between mt-1">
+                                    <span class="text-[10px] font-bold ${m.status === 'arquivado' ? 'text-slate-500' : (m.status === 'respondido' ? 'text-emerald-700 dark:text-emerald-300' : (m.status === 'lido' ? 'text-blue-700 dark:text-blue-300' : 'text-amber-700 dark:text-amber-300'))}">
+                                        ${m.status === 'arquivado' ? 'Arquivada' : (m.status === 'respondido' ? 'Respondida' : (m.status === 'lido' ? 'Lida pela equipe' : 'Enviada'))}
+                                    </span>
+                                    <button onclick="arquivarMensagemCatecismo('${m.id}', ${m.status === 'arquivado'})" class="text-[10px] font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 underline">
+                                        ${m.status === 'arquivado' ? 'Desarquivar' : 'Arquivar'}
+                                    </button>
+                                </div>
+</div>
                                             `).join('')}
                                         </div>
                                     `}
@@ -7706,6 +7717,41 @@
             }
         }
         window.markAdminMessageAcao = markAdminMessageAcao;
+
+        window.toggleArquivadasCatecismo = function () {
+            window.mostrarArquivadasCatecismo = !(window.mostrarArquivadasCatecismo === true);
+            ContactManager.openMailboxModal('minhas');
+        };
+
+        async function arquivarMensagemCatecismo(id, estaArquivada) {
+            try {
+                const res = await fetch(CloudSyncManager.getApiUrl('/api/contact/update-status'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id, action: estaArquivada ? 'unarchive' : 'archive' })
+                });
+                const data = await res.json().catch(() => ({}));
+                if (data.success) {
+                    // atualiza a copia local para o aluno ver o novo estado
+                    try {
+                        const locais = JSON.parse(localStorage.getItem('catecismo_sent_messages') || '[]');
+                        const alvo = locais.find(m => m.id === id);
+                        if (alvo) {
+                            alvo.status = estaArquivada ? 'novo' : 'arquivado';
+                            localStorage.setItem('catecismo_sent_messages', JSON.stringify(locais));
+                        }
+                    } catch (e) {}
+                    showToast(estaArquivada ? 'Conversa devolvida para a caixa.' : 'Conversa arquivada.', 'info');
+                } else {
+                    showToast(data.error || 'Nao foi possivel arquivar.', 'error');
+                }
+            } catch (e) {
+                showToast('Erro de conexao ao arquivar.', 'error');
+            }
+            ContactManager.openMailboxModal('minhas');
+        }
+        window.arquivarMensagemCatecismo = arquivarMensagemCatecismo;
+
 
         async function markAdminMessageStatus(id, status) {
             try {
