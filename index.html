@@ -7114,7 +7114,7 @@
         const pinNovo = (prompt('Opcional: crie um PIN de 4 a 6 digitos para proteger seu progresso (deixe vazio para nao usar):') || '').trim();
         if (pinNovo) {
             if (!/^\d{4,6}$/.test(pinNovo)) { showToast('PIN invalido: use de 4 a 6 digitos.', 'error'); return; }
-            AppState.cloudSyncPin = pinNovo;
+            window.__pinNuvem = pinNovo;
         }
         AppState.cloudSyncEmail = email;
                 saveState();
@@ -7136,7 +7136,7 @@
                         body: JSON.stringify({
                             email: AppState.cloudSyncEmail,
                             appState: AppState,
-                            pin: AppState.cloudSyncPin || ''
+                            pin: window.__pinNuvem || ''
                         })
                     });
 
@@ -7241,6 +7241,7 @@
                 if (!data.success) { showToast(data.error || "Nao foi possivel recuperar.", "error"); return; }
                 if (data.appState) {
                     AppState = data.appState;
+                    if (AppState && AppState.cloudSyncPin !== undefined) { delete AppState.cloudSyncPin; saveState(); }
                     AppState.cloudSyncEmail = email;
                     window.AppState = AppState;
                     saveState();
@@ -7312,13 +7313,13 @@
                 const url = this.getApiUrl('/api/cloud-sync/load?email=' + encodeURIComponent(email));
 
                 try {
-                    let pin = AppState.cloudSyncPin || '';
+                    let pin = window.__pinNuvem || '';
                     let res = await fetch(url + (pin ? '&pin=' + encodeURIComponent(pin) : ''));
                     let data = await res.json();
                     if (data && data.precisaPin) {
                     pin = (prompt('Esta conta esta protegida por PIN. Digite seu PIN:') || '').trim();
                     if (!pin) return;
-                    AppState.cloudSyncPin = pin;
+                    window.__pinNuvem = pin;
                     saveState();
                     res = await fetch(url + '&pin=' + encodeURIComponent(pin));
                     data = await res.json();

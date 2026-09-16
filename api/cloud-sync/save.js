@@ -120,6 +120,10 @@ export default async function handler(req, res) {
 
         // ---- gravacao normal ----
         const appState = payload.appState || {};
+        // protecao: o PIN nunca deve ser gravado dentro do estado do aluno
+        if (appState && typeof appState === 'object' && appState.cloudSyncPin !== undefined) {
+            delete appState.cloudSyncPin;
+        }
         const pinInformado = String(payload.pin || '').trim();
         if (pinInformado && !/^\d{4,6}$/.test(pinInformado)) {
             return res.status(200).json({ success: false, error: 'O PIN deve ter de 4 a 6 dÃ­gitos.' });
