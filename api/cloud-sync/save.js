@@ -80,12 +80,14 @@ export default async function handler(req, res) {
             if (!emailConfigurado()) {
                 return res.status(200).json({ success: false, naoConfigurado: true, error: 'O envio de e-mail ainda não está ligado. Use a opção de falar com a coordenação.' });
             }
+            console.log('[enviar-codigo] pedido recebido | email=' + email + ' | origem=' + (req.headers && req.headers.referer ? req.headers.referer : '-'));
             const seg = segredo();
             if (!seg) return res.status(200).json({ success: false, error: 'Servidor sem segredo configurado.' });
 
             // resposta igual exista ou nao a conta (nao revela quem esta cadastrado)
             if (!existente) {
-                return res.status(200).json({ success: true, message: 'Se este e-mail estiver cadastrado, o código chegará em instantes.' });
+                console.log('[enviar-codigo] SEM MATRICULA para ' + email);
+                return res.status(200).json({ success: false, semMatricula: true, error: 'Não encontrei matrícula com este e-mail. Confira o endereço ou use a opção de falar com a coordenação.' });
             }
 
             const cod = gerarCodigo();
