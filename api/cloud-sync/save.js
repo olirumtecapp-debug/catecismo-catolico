@@ -6,6 +6,7 @@
 //   - action: 'recover': valida o codigo e devolve o progresso (permite trocar o PIN)
 import crypto from 'crypto';
 import { saveUserToDatabase, getDatabase } from '../_db.js';
+import { enviarEmail, emailConfigurado, modeloCodigo } from '../_email.js';
 
 function segredo() {
     return process.env.ADMIN_AUTH_SECRET || '';
@@ -72,6 +73,49 @@ export default async function handler(req, res) {
                 appState: atualizado.appState || null,
                 temPin: !!atualizado.pinHash
             });
+        }
+
+        // ---- enviar um codigo novo por e-mail (o aluno recupera sozinho) ----
+        if (payload.action === 'enviar-codigo') {
+            if (!emailConfigurado()) {
+                return res.status(200).json({ success: false, naoConfigurado: true, error: 'O envio de e-mail ainda não está ligado. Use a opção de falar com a coordenação.' });
+            }
+            const seg = segredo();
+            if (!seg) return res.status(200).json({ success: false, error: 'Servidor sem segredo configurado.' });
+
+            // resposta igual exista ou nao a conta (nao revela quem esta cadastrado)
+            if (!existente) {
+                return res.status(200).json({ success: true, message: 'Se este e-mail estiver cadastrado, o código chegará em instantes.' });
+            }
+
+            const cod = gerarCodigo();
+            const atual = { ...existente, recoveryHash: hash(cod, seg), recoveryCreatedAt: new Date().toISOString() };
+            const g = await saveUserToDatabase(email, atual);
+            if (!g) return res.status(200).json({ success: false, error: 'Falha ao gerar o código.' });
+
+            const modelo = modeloCodigo({ nome: existente.email ? '' : '', codigo: cod, plataforma: 'Catecismo Católico' });
+            const envio = await enviarEmail({ para: email, assunto: modelo.titulo + ' — Catecismo Católico', texto: modelo.texto, html: modelo.html });
+            if (!envio.ok) return res.status(200).json({ success: false, error: envio.error || 'Não foi possível enviar o e-mail agora.' });
+
+            return res.status(200).json({ success: true, message: 'Código enviado para ' + email + '. Confira a caixa de entrada (e o spam).' });
+        }
+
+        // ---- a coordenacao redefine o acesso do fiel (tira o PIN e gera codigo novo) ----
+        if (payload.action === 'admin-resetar') {
+            const seg = segredo();
+            if (!seg) return res.status(200).json({ success: false, error: 'Servidor sem segredo configurado.' });
+            if (!existente) return res.status(404).json({ success: false, error: 'Aluno não encontrado.' });
+
+            const cod = gerarCodigo();
+            const atual = { ...existente, updatedAt: new Date().toISOString() };
+            delete atual.pinHash;
+            atual.recoveryHash = hash(cod, seg);
+            atual.recoveryCreatedAt = new Date().toISOString();
+            atual.acessoRedefinidoEm = new Date().toISOString();
+            const g = await saveUserToDatabase(email, atual);
+            if (!g) return res.status(500).json({ success: false, error: 'Falha ao redefinir o acesso.' });
+
+            return res.status(200).json({ success: true, email, recoveryCode: cod, message: 'Acesso redefinido. O aluno entra só com o e-mail. Entregue o novo código a ele.' });
         }
 
         // ---- gravacao normal ----
