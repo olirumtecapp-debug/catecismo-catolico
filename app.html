@@ -7105,7 +7105,18 @@
                     return;
                 }
 
-                AppState.cloudSyncEmail = email;
+                // Aviso: aparelho com outro e-mail ja conectado
+        const anterior = AppState.cloudSyncEmail ? String(AppState.cloudSyncEmail).toLowerCase() : "";
+        if (anterior && anterior !== email) {
+            const manter = confirm('Neste aparelho ja existe progresso conectado ao e-mail ' + anterior + '.\n\nOK = continuar com o e-mail que ja tem progresso\nCancelar = conectar ' + email);
+            if (manter) { if (inp) inp.value = anterior; return; }
+        }
+        const pinNovo = (prompt('Opcional: crie um PIN de 4 a 6 digitos para proteger seu progresso (deixe vazio para nao usar):') || '').trim();
+        if (pinNovo) {
+            if (!/^\d{4,6}$/.test(pinNovo)) { showToast('PIN invalido: use de 4 a 6 digitos.', 'error'); return; }
+            AppState.cloudSyncPin = pinNovo;
+        }
+        AppState.cloudSyncEmail = email;
                 saveState();
                 this.updateIndicator();
                 closeModal();
@@ -7124,13 +7135,17 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             email: AppState.cloudSyncEmail,
-                            appState: AppState
+                            appState: AppState,
+                            pin: AppState.cloudSyncPin || ''
                         })
                     });
 
                     if (res.ok) {
                         const data = await res.json();
-                        AppState.lastCloudSync = new Date().toISOString();
+                        if (data && data.recoveryCode) {
+                        alert('GUARDE ESTE CODIGO DE RECUPERACAO: ' + data.recoveryCode + '\n\nCom ele voce recupera seu progresso em outro aparelho, mesmo se esquecer o e-mail. Ele aparece so uma vez.');
+                    }
+                    AppState.lastCloudSync = new Date().toISOString();
                         saveState();
                         this.updateIndicator();
                         if (showToastFeedback) {
@@ -7184,6 +7199,10 @@
                                 <span>🔄</span> <span>Carregar Meus Dados Agora</span>
                             </button>
 
+                    <button type="button" onclick="CloudSyncManager.recuperarProgressoPorCodigo()" class="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-500 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+                        Esqueci o e-mail / recuperar por cÃ³digo
+                    </button>
+
                             <p class="text-[11px] text-center text-slate-400">
                                 Seus dados serão sincronizados instantaneamente neste novo dispositivo.
                             </p>
@@ -7198,7 +7217,37 @@
                 }, 100);
             },
 
-            async handleRestoreFromInput() {
+    
+        async recuperarProgressoPorCodigo() {
+            const email = (document.getElementById('restore-email-input') ? document.getElementById('restore-email-input').value.trim().toLowerCase() : (prompt('Qual o e-mail da sua conta?') || '').trim().toLowerCase());
+            if (!email || !email.includes('@')) { showToast('Informe o e-mail da conta.', 'error'); return; }
+            const code = (prompt('Digite o seu CODIGO DE RECUPERACAO (ex: ABC123):') || '').trim();
+            if (!code) return;
+            try {
+                const res = await fetch(this.getApiUrl('/api/cloud-sync/save'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, action: 'recover', code: code })
+                });
+                const data = await res.json();
+                if (!data.success) { showToast(data.error || "Nao foi possivel recuperar.", "error"); return; }
+                if (data.appState) {
+                    AppState = data.appState;
+                    AppState.cloudSyncEmail = email;
+                    window.AppState = AppState;
+                    saveState();
+                    this.updateIndicator();
+                    closeModal();
+                    showToast("Progresso recuperado com sucesso!", "success");
+                } else {
+                    showToast("Progresso recuperado, mas sem dados de estudo salvos.", "info");
+                }
+            } catch (e) {
+                showToast("Erro de conexao ao recuperar.", "error");
+            }
+        },
+
+        async handleRestoreFromInput() {
                 const inp = document.getElementById('restore-email-input');
                 const email = inp ? inp.value.trim().toLowerCase() : '';
 
@@ -7212,10 +7261,23 @@
                 const url = this.getApiUrl('/api/cloud-sync/load?email=' + encodeURIComponent(email));
 
                 try {
-                    const res = await fetch(url);
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data.appState) {
+                    let pin = AppState.cloudSyncPin || '';
+                    let res = await fetch(url + (pin ? '&pin=' + encodeURIComponent(pin) : ''));
+                    let data = await res.json();
+                    if (data && data.precisaPin) {
+                    pin = (prompt('Esta conta esta protegida por PIN. Digite seu PIN:') || '').trim();
+                    if (!pin) return;
+                    AppState.cloudSyncPin = pin;
+                    saveState();
+                    res = await fetch(url + '&pin=' + encodeURIComponent(pin));
+                    data = await res.json();
+                }
+                if (data && data.pinInvalido) {
+                    showToast('PIN incorreto para este e-mail.', 'error');
+                    return;
+                }
+                if (res.ok) {
+                    if (data.appState) {
                             AppState = data.appState;
                             AppState.cloudSyncEmail = email;
                             window.AppState = AppState;
