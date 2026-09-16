@@ -5,7 +5,7 @@
 // Mantem uma unica funcao para nao estourar o limite de 12 funcoes do plano gratuito.
 import { updateMessageInDatabase, deleteMessageInDatabase } from '../_db.js';
 
-const ACOES = ['read', 'archive', 'unarchive', 'delete'];
+const ACOES = ['read', 'archive', 'unarchive', 'delete', 'hide-student', 'unhide-student'];
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -37,6 +37,10 @@ export default async function handler(req, res) {
     if (acao === 'read') { updates.status = 'lido'; updates.readAt = new Date().toISOString(); }
     if (acao === 'archive') { updates.status = 'arquivado'; updates.archivedAt = new Date().toISOString(); }
     if (acao === 'unarchive') updates.status = 'novo';
+
+    // some da lista do fiel, mas continua no painel da coordenacao
+    if (acao === 'hide-student') { updates.ocultadaParaAluno = true; updates.hiddenAt = new Date().toISOString(); }
+    if (acao === 'unhide-student') updates.ocultadaParaAluno = false;
 
     if (status) updates.status = status;
     if (reply) {

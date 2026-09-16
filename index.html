@@ -7546,6 +7546,7 @@
                                     <button onclick="arquivarMensagemCatecismo('${m.id}', ${m.status === 'arquivado'})" class="text-[10px] font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 underline">
                                         ${m.status === 'arquivado' ? 'Desarquivar' : 'Arquivar'}
                                     </button>
+                                    <button onclick="excluirMensagemCatecismo('${m.id}')" class="text-[10px] font-bold text-rose-500 hover:text-rose-700 underline ml-2">Excluir</button>
                                 </div>
 </div>
                                             `).join('')}
@@ -7836,6 +7837,26 @@
             window.mostrarArquivadasCatecismo = !(window.mostrarArquivadasCatecismo === true);
             ContactManager.openMailboxModal('minhas');
         };
+
+        async function excluirMensagemCatecismo(id) {
+            if (!confirm('Excluir esta conversa da sua caixa?\n\nEla sai da sua lista; a coordenacao mantem o registro.')) return;
+            try {
+                await fetch(CloudSyncManager.getApiUrl('/api/contact/update-status'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: id, action: 'hide-student' })
+                });
+                try {
+                    const locais = JSON.parse(localStorage.getItem('catecismo_sent_messages') || '[]').filter(m => m.id !== id);
+                    localStorage.setItem('catecismo_sent_messages', JSON.stringify(locais));
+                } catch (e) {}
+                showToast('Conversa excluída da sua caixa.', 'info');
+            } catch (e) {
+                showToast('Erro de conexão ao excluir.', 'error');
+            }
+            ContactManager.openMailboxModal('minhas');
+        }
+        window.excluirMensagemCatecismo = excluirMensagemCatecismo;
 
         async function arquivarMensagemCatecismo(id, estaArquivada) {
             try {
