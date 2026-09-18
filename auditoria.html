@@ -29,6 +29,15 @@
 </head>
 <body class="min-h-full bg-slate-950 flex flex-col font-sans">
 
+    <!-- Banner de aviso quando acessado no Vercel (Online) -->
+    <div id="onlineNoticeBanner" class="hidden bg-gradient-to-r from-amber-950 via-amber-900 to-amber-950 border-b border-amber-600/60 px-4 py-2.5 text-center text-xs text-amber-200 flex items-center justify-center gap-2 shadow-lg z-50">
+        <span class="text-sm">⚠️</span>
+        <span>
+            <strong>Modo de Visualização Online:</strong> Para colar imagens (<strong>📋 Colar</strong>) e salvar os arquivos direto no seu computador, abra pelo seu PC em:
+            <a href="http://localhost:3000/auditoria.html" target="_blank" class="underline font-bold text-amber-300 hover:text-white ml-1">http://localhost:3000/auditoria.html</a>
+        </span>
+    </div>
+
     <!-- Topbar -->
     <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
@@ -340,6 +349,12 @@
         }
 
         async function publishToVercel() {
+            const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (!isLocalHost) {
+                showToast('⚠️ A publicação para a Vercel é feita a partir do ambiente local (http://localhost:3000/auditoria.html).', 'error');
+                return;
+            }
+
             const btn = document.getElementById('btnPublishVercel');
             const icon = document.getElementById('publishIcon');
             const text = document.getElementById('publishText');
@@ -353,6 +368,7 @@
 
             try {
                 const res = await fetch('/api/admin/publish-to-vercel', { method: 'POST' });
+                if (!res.ok) throw new Error(`Status ${res.status}: ambiente sem suporte a comandos locais.`);
                 const data = await res.json();
                 if (data.success) {
                     showToast('✅ ' + data.message, 'success');
@@ -370,6 +386,12 @@
         }
 
         async function pullFromVercel() {
+            const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (!isLocalHost) {
+                showToast('⚠️ O backup para o disco é feito a partir do ambiente local (http://localhost:3000/auditoria.html).', 'error');
+                return;
+            }
+
             const btn = document.getElementById('btnPullVercel');
             const icon = document.getElementById('pullIcon');
             const text = document.getElementById('pullText');
@@ -382,6 +404,7 @@
 
             try {
                 const res = await fetch('/api/admin/pull-from-vercel', { method: 'POST' });
+                if (!res.ok) throw new Error(`Status ${res.status}: ambiente sem suporte a comandos locais.`);
                 const data = await res.json();
                 if (data.success) {
                     showToast('✅ ' + data.message, 'success');
@@ -833,6 +856,12 @@ Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 
             const saint = filteredSaints[index];
             if (!saint) return;
 
+            const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (!isLocalHost) {
+                showToast('⚠️ Para colar e salvar fotos no seu computador, abra no seu PC: http://localhost:3000/auditoria.html', 'error');
+                return;
+            }
+
             showToast(`Salvando imagem para ${saint.name}...`, 'info');
 
             // Gerar nome de arquivo padronizado
@@ -853,6 +882,11 @@ Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 
                             filename: safeFilename
                         })
                     });
+
+                    if (!res.ok) {
+                        const errorText = await res.text();
+                        throw new Error(`Status ${res.status}: ${errorText.substring(0, 100)}`);
+                    }
 
                     const result = await res.json();
                     if (result.success) {
@@ -898,6 +932,11 @@ Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 
         });
 
         // Inicializar
+        const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        if (!isLocalHost) {
+            const banner = document.getElementById('onlineNoticeBanner');
+            if (banner) banner.classList.remove('hidden');
+        }
         initDaySelect();
         fetchSaints();
     </script>
