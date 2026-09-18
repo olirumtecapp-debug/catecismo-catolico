@@ -6238,7 +6238,7 @@
         function shareCatecismo(source) {
             const title = 'Catecismo Católico Digital';
             const message = '🙏 Recomendo o Catecismo Católico Digital: doutrina, liturgia diária, orações e santos do dia com busca inteligente para fortalecer a fé. Acesse gratuitamente:';
-            const shareUrl = 'https://catecismo.creativeam.com.br';
+            const shareUrl = 'https://catolicismo.creativeam.com.br';
 
             if (navigator.share) {
                 navigator.share({
@@ -6258,7 +6258,7 @@
         window.shareCatecismo = shareCatecismo;
 
         function openCatecismoShareModal(customMsg, targetUrl) {
-            const shareUrl = targetUrl || 'https://catecismo.creativeam.com.br';
+            const shareUrl = targetUrl || 'https://catolicismo.creativeam.com.br';
             const textMsg = customMsg || '🙏 Recomendo o Catecismo Católico Digital: doutrina, liturgia diária, orações e santos do dia com busca inteligente para fortalecer a fé. Acesse gratuitamente:';
             const encodedUrl = encodeURIComponent(shareUrl);
             const encodedFullText = encodeURIComponent(textMsg + ' ' + shareUrl);
@@ -6323,7 +6323,7 @@
         window.openCatecismoShareModal = openCatecismoShareModal;
 
         function copyCatecismoShareText(text, url) {
-            const fullText = (text ? text + ' ' : '') + (url || 'https://catecismo.creativeam.com.br');
+            const fullText = (text ? text + ' ' : '') + (url || 'https://catolicismo.creativeam.com.br');
             navigator.clipboard.writeText(fullText).then(function() {
                 const btn = document.getElementById('btn-copy-catecismo-share');
                 if (btn) {
