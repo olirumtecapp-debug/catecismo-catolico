@@ -277,9 +277,14 @@
         }
 
         async function onMonthSelectChange() {
-            if (currentDayShortcut !== 'all') {
-                setDayShortcut('all', false);
-            }
+            currentDayShortcut = 'all';
+            ['today', 'tomorrow', 'week'].forEach(t => {
+                const btn = document.getElementById('btn-day-' + t);
+                if (btn) btn.className = 'px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition';
+            });
+            const btnAll = document.getElementById('btn-day-all');
+            if (btnAll) btnAll.className = 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950 font-bold';
+            
             await fetchSaints();
         }
 
@@ -292,7 +297,7 @@
             });
             if (val === 'all') {
                 const btnAll = document.getElementById('btn-day-all');
-                if (btnAll) btnAll.className = 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950';
+                if (btnAll) btnAll.className = 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950 font-bold';
                 currentDayShortcut = 'all';
             } else {
                 currentDayShortcut = 'custom';
@@ -309,7 +314,7 @@
                 const btn = document.getElementById('btn-day-' + t);
                 if (btn) {
                     btn.className = (t === type)
-                        ? 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950'
+                        ? 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950 font-bold'
                         : 'px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition';
                 }
             });
@@ -320,27 +325,33 @@
             if (type === 'today') {
                 const currentMonth = pad(now.getMonth() + 1);
                 const currentDay = pad(now.getDate());
+                dSel.value = currentDay;
                 if (mSel.value !== currentMonth && mSel.value !== 'all') {
                     mSel.value = currentMonth;
                     await fetchSaints();
+                } else if (allSaints.length === 0) {
+                    await fetchSaints();
                 }
-                dSel.value = currentDay;
             } else if (type === 'tomorrow') {
                 const tomorrow = new Date(now);
                 tomorrow.setDate(now.getDate() + 1);
                 const m = pad(tomorrow.getMonth() + 1);
                 const d = pad(tomorrow.getDate());
+                dSel.value = d;
                 if (mSel.value !== m && mSel.value !== 'all') {
                     mSel.value = m;
                     await fetchSaints();
+                } else if (allSaints.length === 0) {
+                    await fetchSaints();
                 }
-                dSel.value = d;
             } else if (type === 'week') {
+                dSel.value = 'all';
                 if (mSel.value !== 'all') {
                     mSel.value = 'all';
                     await fetchSaints();
+                } else if (allSaints.length === 0) {
+                    await fetchSaints();
                 }
-                dSel.value = 'all';
             } else {
                 dSel.value = 'all';
             }
@@ -503,11 +514,17 @@
         }
 
         function applyFilters() {
+            const mSel = document.getElementById('mSel');
+            const selectedMonth = mSel ? mSel.value : 'all';
             const dSel = document.getElementById('dSel');
             const selectedDay = dSel ? dSel.value : 'all';
             const now = new Date();
             const pad = n => String(n).padStart(2, '0');
             const todayMMDD = `${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            const tomorrowMMDD = `${pad(tomorrow.getMonth() + 1)}-${pad(tomorrow.getDate())}`;
 
             const in7 = new Date(now);
             in7.setDate(now.getDate() + 7);
@@ -515,12 +532,18 @@
 
             filteredSaints = allSaints.filter(s => {
                 const sMMDD = s.date.substring(5);
+                const sMonth = s.date.substring(5, 7);
 
                 // Filtro de atalhos e dias
-                if (currentDayShortcut === 'week') {
+                if (currentDayShortcut === 'today') {
+                    if (sMMDD !== todayMMDD) return false;
+                } else if (currentDayShortcut === 'tomorrow') {
+                    if (sMMDD !== tomorrowMMDD) return false;
+                } else if (currentDayShortcut === 'week') {
                     if (sMMDD < todayMMDD || sMMDD > in7MMDD) return false;
-                } else if (selectedDay !== 'all') {
-                    if (!s.date.endsWith('-' + selectedDay)) return false;
+                } else {
+                    if (selectedMonth !== 'all' && sMonth !== selectedMonth) return false;
+                    if (selectedDay !== 'all' && !s.date.endsWith('-' + selectedDay)) return false;
                 }
 
                 // Filtro de status
@@ -542,8 +565,8 @@
         }
 
         function updateStats() {
-            const total = allSaints.length;
-            const missing = allSaints.filter(s => s.isImageMissing).length;
+            const total = filteredSaints.length;
+            const missing = filteredSaints.filter(s => s.isImageMissing).length;
             const ok = total - missing;
             const pct = total > 0 ? Math.round((ok / total) * 100) : 0;
 
