@@ -4025,6 +4025,16 @@
                             </div>
                         </div>
 
+                        <!-- BLOCO: FORMAÇÃO RÁPIDA & LUZ ESPIRITUAL (RESPONSIVO DESKTOP/MOBILE) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div id="home-daily-challenge" class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
+                                ${DailyChallengeManager.renderCard()}
+                            </div>
+                            <div id="home-spiritual-light" class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
+                                ${SpiritualLightManager.renderCard()}
+                            </div>
+                        </div>
+
                         <div id="home-crosslinks" class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-5">
                             <div>
                                 <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">Jornada de hoje</span>
@@ -4192,7 +4202,15 @@
                         ${reading.title ? `<p class="text-[11px] uppercase tracking-wide font-bold text-slate-400">${esc(reading.title)}</p>` : ''}
                         ${reading.refrain ? `<div class="p-3 rounded-xl bg-amber-50 border border-amber-100"><p class="text-xs font-bold text-amber-900">${esc(reading.refrain)}</p></div>` : ''}
                         <p class="text-sm text-slate-700 liturgical-reading-text">${esc(formatLiturgicalText(reading.text))}</p>
-                        ${reading.reference ? `<div class="pt-2 border-t border-slate-100 flex justify-end"><button onclick="openScriptureReferenceFromText('${encodeURIComponent(reading.reference)}')" class="text-[11px] font-bold text-mariana hover:text-dourado">📖 Abrir referência na Bíblia</button></div>` : ''}
+                        <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+                            ${title === 'Santo Evangelho' ? `
+                                <button onclick="compartilharEvangelhoWhatsApp('${dateToFetch}')" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.54 1.874.82 2.796.821 3.183 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.767-5.769-5.767zm0 10.428c-.854 0-1.687-.229-2.408-.663l-.173-.102-1.789.469.477-1.744-.113-.179c-.477-.758-.729-1.639-.728-2.543.001-2.573 2.094-4.666 4.669-4.666 2.574 0 4.668 2.093 4.668 4.666 0 2.574-2.094 4.667-4.667 4.667zm6.757-12.825c-1.802-1.802-4.198-2.795-6.754-2.795-5.263 0-9.545 4.282-9.547 9.547 0 1.682.439 3.324 1.272 4.767l-1.35 4.934 5.048-1.324c1.393.76 2.96 1.16 4.567 1.161h.004c5.263 0 9.546-4.282 9.548-9.547 0-2.553-.994-4.949-2.796-6.751z"/></svg>
+                                    <span>Compartilhar Evangelho</span>
+                                </button>
+                            ` : '<div></div>'}
+                            ${reading.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(reading.reference)}')" class="text-[11px] font-bold text-mariana hover:text-dourado">📖 Abrir referência na Bíblia</button>` : ''}
+                        </div>
                     </div>` : '';
 
                 const extras = (lit.extras || []).map(extra => `
@@ -7012,9 +7030,75 @@
 
             init() {
                 this.updateIndicator();
-                // Se já possui e-mail cadastrado, faz auto-sync silencioso na inicialização
+                // Sincronização inteligente bidirecional (Smart Sync): puxa os dados mais recentes ou envia o progresso local
                 if (AppState.cloudSyncEmail) {
-                    this.syncToCloud(false);
+                    this.smartSync(false);
+                }
+            },
+
+            async smartSync(showToastFeedback = false) {
+                if (!AppState.cloudSyncEmail) return;
+
+                const email = String(AppState.cloudSyncEmail).trim().toLowerCase();
+                const pin = window.__pinNuvem || '';
+                const url = this.getApiUrl('/api/cloud-sync/load?email=' + encodeURIComponent(email) + (pin ? '&pin=' + encodeURIComponent(pin) : ''));
+
+                try {
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && data.success && data.user) {
+                            const cloudXp = Number(data.user.xp) || 0;
+                            const localXp = Number(AppState.xp) || 0;
+                            const cloudStreak = Number(data.user.streak) || 0;
+                            const localStreak = Number(AppState.streak) || 0;
+                            const cloudUpdated = data.user.updatedAt ? new Date(data.user.updatedAt).getTime() : 0;
+                            const localUpdated = AppState.lastCloudSync ? new Date(AppState.lastCloudSync).getTime() : 0;
+
+                            // Se a nuvem tem mais XP ou atualização mais recente:
+                            if (cloudXp > localXp || cloudUpdated > localUpdated) {
+                                AppState.xp = Math.max(localXp, cloudXp);
+                                AppState.streak = Math.max(localStreak, cloudStreak);
+                                
+                                if (data.appState) {
+                                    if (data.appState.lectioNotes) {
+                                        AppState.lectioNotes = Object.assign({}, data.appState.lectioNotes, AppState.lectioNotes || {});
+                                    }
+                                    if (Array.isArray(data.appState.completedLessons)) {
+                                        const setL = new Set([...(AppState.completedLessons || []), ...data.appState.completedLessons]);
+                                        AppState.completedLessons = Array.from(setL);
+                                    }
+                                    if (Array.isArray(data.appState.unlockedAchievements)) {
+                                        const setA = new Set([...(AppState.unlockedAchievements || []), ...data.appState.unlockedAchievements]);
+                                        AppState.unlockedAchievements = Array.from(setA);
+                                    }
+                                    if (data.appState.liturgicalRead) {
+                                        AppState.liturgicalRead = Object.assign({}, data.appState.liturgicalRead, AppState.liturgicalRead || {});
+                                    }
+                                    if (data.appState.dailyChallenges) {
+                                        AppState.dailyChallenges = Object.assign({}, data.appState.dailyChallenges, AppState.dailyChallenges || {});
+                                    }
+                                }
+                                AppState.lastCloudSync = data.user.updatedAt || new Date().toISOString();
+                                saveState();
+                                this.updateIndicator();
+                                if (typeof updateHeaderBadges === 'function') updateHeaderBadges();
+                                if (showToastFeedback) {
+                                    showToast('Sincronizado com a nuvem! (' + AppState.xp + ' XP, ' + AppState.streak + ' dias)', 'success');
+                                }
+                                return;
+                            } else if (localXp > cloudXp) {
+                                await this.syncToCloud(showToastFeedback);
+                                return;
+                            }
+                        }
+                    }
+                    await this.syncToCloud(showToastFeedback);
+                } catch (e) {
+                    console.warn('[SmartSync] Falha na sincronização:', e.message);
+                    if (showToastFeedback) {
+                        showToast('Progresso mantido localmente.', 'info');
+                    }
                 }
             },
 
@@ -7378,7 +7462,7 @@
                             </div>
 
                             <div class="flex gap-2">
-                                <button onclick="CloudSyncManager.syncToCloud(true)" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition shadow-xs">
+                                <button onclick="CloudSyncManager.smartSync(true)" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition shadow-xs">
                                     🔄 Sincronizar Agora
                                 </button>
                                 <button onclick="if(confirm('Deseja desconectar este e-mail? Seus dados continuarão salvos localmente.')){ AppState.cloudSyncEmail = null; saveState(); CloudSyncManager.updateIndicator(); closeModal(); showToast('E-mail desconectado.', 'info'); }" class="py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 text-xs font-bold hover:bg-slate-100 transition">

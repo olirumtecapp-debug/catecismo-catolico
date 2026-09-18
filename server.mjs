@@ -8,6 +8,8 @@ import contactSendHandler from './api/contact/send.js';
 import contactUpdateStatusHandler from './api/contact/update-status.js';
 import adminBroadcastsHandler from './api/admin/broadcasts.js';
 import adminAuthHandler from './api/admin/auth.js';
+import cloudSyncSaveHandler from './api/cloud-sync/save.js';
+import cloudSyncLoadHandler from './api/cloud-sync/load.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +30,10 @@ async function handleServerlessFunction(handlerFn, req, res) {
             res.end(JSON.stringify(data));
             return res;
         };
+    }
+    if (!req.query) {
+        const u = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+        req.query = Object.fromEntries(u.searchParams.entries());
     }
     if (req.method === 'POST' || req.method === 'PUT' || req.method === 'PATCH') {
         let body = '';
@@ -137,103 +143,15 @@ const server = http.createServer(async (req, res) => {
     // ==========================================
     // 1. API: SALVAR SINCRONIZAÇÃO EM NUVEM
     // ==========================================
-    if (pathname === '/api/cloud-sync/save' && req.method === 'POST') {
-        let body = '';
-        req.on('data', chunk => body += chunk);
-        req.on('end', () => {
-            try {
-                const payload = JSON.parse(body);
-                const email = (payload.email || '').trim().toLowerCase();
-
-                if (!email || !email.includes('@') || !email.includes('.')) {
-                    res.writeHead(400, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ success: false, error: 'E-mail inválido fornecido.' }));
-                    return;
-                }
-
-                const appState = payload.appState || {};
-                const db = getDatabase();
-
-                const nowIso = new Date().toISOString();
-                const reflectionsCount = appState.lectioNotes ? Object.keys(appState.lectioNotes).length : 0;
-                const xp = appState.xp || 0;
-                const streak = appState.streak || 0;
-
-                const levelNames = ["Iniciante", "Peregrino", "Discípulo", "Servo Fiel", "Guardião da Fé", "Apóstolo de Cristo"];
-                const levelIdx = Math.min(Math.floor(xp / 150), levelNames.length - 1);
-                const levelName = levelNames[levelIdx];
-
-                db.users[email] = {
-                    email,
-                    updatedAt: nowIso,
-                    createdAt: db.users[email]?.createdAt || nowIso,
-                    xp,
-                    streak,
-                    level: levelName,
-                    reflectionsCount,
-                    appState
-                };
-
-                saveDatabase(db);
-
-                console.log(`[CloudSync] Usuário '${email}' sincronizado com sucesso (${xp} XP, ${reflectionsCount} reflexões).`);
-                res.writeHead(200, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({
-                    success: true,
-                    message: 'Sincronizado na nuvem com sucesso!',
-                    user: {
-                        email,
-                        xp,
-                        streak,
-                        level: levelName,
-                        reflectionsCount,
-                        updatedAt: nowIso
-                    }
-                }));
-            } catch (err) {
-                res.writeHead(500, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ success: false, error: 'Erro ao processar dados: ' + err.message }));
-            }
-        });
-        return;
+    if (pathname === '/api/cloud-sync/save') {
+        return handleServerlessFunction(cloudSyncSaveHandler, req, res);
     }
 
     // ==========================================
     // 2. API: CARREGAR DADOS DO USUÁRIO NA NUVEM
     // ==========================================
-    if (pathname === '/api/cloud-sync/load' && req.method === 'GET') {
-        const email = (reqUrl.searchParams.get('email') || '').trim().toLowerCase();
-
-        if (!email) {
-            res.writeHead(400, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: false, error: 'Parâmetro de e-mail não informado.' }));
-            return;
-        }
-
-        const db = getDatabase();
-        const user = db.users[email];
-
-        if (!user) {
-            res.writeHead(404, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: false, error: 'Nenhum progresso encontrado para este e-mail.' }));
-            return;
-        }
-
-        console.log(`[CloudSync] Progresso restaurado para o usuário '${email}'.`);
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({
-            success: true,
-            user: {
-                email: user.email,
-                xp: user.xp,
-                streak: user.streak,
-                level: user.level,
-                reflectionsCount: user.reflectionsCount,
-                updatedAt: user.updatedAt
-            },
-            appState: user.appState
-        }));
-        return;
+    if (pathname === '/api/cloud-sync/load') {
+        return handleServerlessFunction(cloudSyncLoadHandler, req, res);
     }
 
     // ==========================================
