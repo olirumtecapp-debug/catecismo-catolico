@@ -3291,10 +3291,17 @@
         window.loadState = loadState;
 
         function updateHeaderBadges() {
+            const streakVal = AppState.streak || 0;
             const streakEls = document.querySelectorAll('#header-streak, #sidebar-streak');
-            streakEls.forEach(el => el.innerText = AppState.streak);
+            streakEls.forEach(el => el.innerText = streakVal);
+
+            const sidebarStreakBadge = document.getElementById('sidebar-streak-badge');
+            if (sidebarStreakBadge) {
+                sidebarStreakBadge.innerText = `🔥 ${streakVal} ${streakVal === 1 ? 'dia' : 'dias'}`;
+            }
+
             const xpEls = document.querySelectorAll('#header-xp');
-            xpEls.forEach(el => el.innerText = AppState.xp);
+            xpEls.forEach(el => el.innerText = AppState.xp || 0);
 
             const levelNames = ["Iniciante", "Discípulo", "Peregrino", "Estudioso", "Servo Fiel", "Mestre da Fé"];
             const currentLevelIdx = Math.min(Math.floor(AppState.xp / 150), levelNames.length - 1);
