@@ -716,10 +716,20 @@
         // --- COMPONENTE: CABEÇALHO COM NAVEGAÇÃO COMPLETA (DESKTOP E MOBILE) ---
         const Header = ({ onNavigate }) => {
             const [mobileOpen, setMobileOpen] = React.useState(false);
+            const isEmbedded = typeof window !== 'undefined' && window.self !== window.top;
 
             const handleItemClick = (e) => {
                 setMobileOpen(false);
                 if (onNavigate) onNavigate(e);
+            };
+
+            const handleCloseOrBack = () => {
+                if (window.parent && window.parent.PreceitosModal) {
+                    window.parent.PreceitosModal.close();
+                } else {
+                    window.parent.postMessage({ type: 'CLOSE_PRECEITOS' }, '*');
+                    window.location.href = '/';
+                }
             };
 
             return (
@@ -760,9 +770,19 @@
                             </nav>
 
                             <div className="flex items-center gap-2">
-                                <a href="https://catecismo.creativeam.com.br" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-stone-100 text-stone-700 hover:bg-catholic-gold hover:text-white transition-all shadow-sm">
-                                    <i className="ph ph-book-bookmark"></i> Catecismo
+                                <a href="https://escoladafe.creativeam.com.br" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-200/80 hover:bg-amber-100 transition-all shadow-xs">
+                                    <i className="ph ph-graduation-cap"></i> Escola da Fé
                                 </a>
+
+                                {isEmbedded ? (
+                                    <button onClick={handleCloseOrBack} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-catholic-wine text-white hover:bg-catholic-wineHover transition-all shadow-sm cursor-pointer">
+                                        <i className="ph-bold ph-arrow-left"></i> Voltar
+                                    </button>
+                                ) : (
+                                    <a href="/" className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-catholic-wine text-white hover:bg-catholic-wineHover transition-all shadow-sm">
+                                        <i className="ph-bold ph-arrow-left"></i> Catecismo
+                                    </a>
+                                )}
 
                                 {/* Botão Hambúrguer Mobile */}
                                 <button 
@@ -796,9 +816,18 @@
                                 <a href="#guia-sexta" onClick={handleItemClick} className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-sm font-medium text-stone-700 hover:bg-catholic-goldLight hover:text-catholic-wine">
                                     <i className="ph-fill ph-cross text-catholic-gold text-lg"></i> Sextas-Feiras Penitenciais
                                 </a>
-                                <div className="pt-2 px-2">
-                                    <a href="https://catecismo.creativeam.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-xs font-bold bg-stone-900 text-white hover:bg-catholic-wine transition-all">
-                                        <i className="ph ph-book-bookmark text-base"></i> Abrir Catecismo Oficial
+                                <div className="pt-2 px-2 space-y-2">
+                                    {isEmbedded ? (
+                                        <button onClick={handleCloseOrBack} className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-xs font-bold bg-catholic-wine text-white hover:bg-catholic-wineHover transition-all shadow-sm">
+                                            <i className="ph-bold ph-arrow-left text-base"></i> Voltar ao Catecismo
+                                        </button>
+                                    ) : (
+                                        <a href="/" className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-xs font-bold bg-catholic-wine text-white hover:bg-catholic-wineHover transition-all shadow-sm">
+                                            <i className="ph-bold ph-arrow-left text-base"></i> Ir para o Catecismo
+                                        </a>
+                                    )}
+                                    <a href="https://escoladafe.creativeam.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-xl text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100 transition-all">
+                                        <i className="ph ph-graduation-cap text-base"></i> Abrir Escola da Fé
                                     </a>
                                 </div>
                             </div>

@@ -412,6 +412,11 @@
                     <button onclick="router.navigate('missa')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="missa" data-menu-key="missa">
                         <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 10h12c0 4-2.5 7-6 7s-6-3-6-7zM12 17v4m-4 0h8"/></svg> <span>A Santa Missa</span>
                     </button>
+                    <button onclick="PreceitosModal.open()" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-menu-key="preceitos">
+                        <svg class="w-4 h-4 shrink-0 text-amber-600 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M11 7h2m-1-1v2"/></svg>
+                        <span>Preceitos &amp; Calendário</span>
+                        <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-amber-700 bg-amber-50 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">2026-2030</span>
+                    </button>
                 </div>
 
                 <!-- SEÇÃO 2: DOUTRINA & SAGRADA ESCRITURA -->
@@ -636,6 +641,7 @@
                         <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">☩ Santo do Dia</button>
                         <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🙏 Oração & Lectio</button>
                         <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
+                        <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📜 Preceitos &amp; Calendário <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-amber-700 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">2026-2030</span></button>
                         <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🧠 Quizzes</button>
                         <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🎯 Planos de Estudo</button>
                         <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⭐ Favoritos</button>
@@ -3841,7 +3847,9 @@
                 const subtitleEl = document.getElementById('page-subtitle');
 
                 switch(route) {
-                    
+                    case 'preceitos':
+                        PreceitosModal.open();
+                        break;
                     case 'livros':
                         titleEl.innerText = "Livraria Católica";
                         subtitleEl.innerText = "Bíblias, Catecismos e Clássicos de Espiritualidade dos Santos";
@@ -9511,8 +9519,61 @@
         }
 
         document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') closeSaintModal();
+            if (e.key === 'Escape') {
+                if (typeof PreceitosModal !== 'undefined' && PreceitosModal.isOpen) PreceitosModal.close();
+                closeSaintModal();
+            }
         });
+
+        /* ========================================================
+           CONTROLLER MODAL INTEGRADO DE PRECEITOS & CALENDÁRIO
+           ======================================================== */
+        const PreceitosModal = {
+            isOpen: false,
+            open() {
+                const modal = document.getElementById('preceitos-modal');
+                const iframe = document.getElementById('preceitos-iframe');
+                if (!modal || !iframe) return;
+                if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.includes('preceitos')) {
+                    iframe.src = '/preceitos.html';
+                }
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                requestAnimationFrame(() => {
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modal.classList.add('opacity-100');
+                });
+                document.body.style.overflow = 'hidden';
+                this.isOpen = true;
+                if (window.MetricsTracker) {
+                    MetricsTracker.trackPageView('preceitos-modal');
+                }
+            },
+            close() {
+                const modal = document.getElementById('preceitos-modal');
+                if (!modal) return;
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    modal.classList.remove('flex');
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 220);
+                this.isOpen = false;
+            }
+        };
+
+        window.addEventListener('message', (e) => {
+            if (e.data && e.data.type === 'CLOSE_PRECEITOS') {
+                PreceitosModal.close();
+            }
+        });
+
+        if (window.location.hash === '#preceitos') {
+            window.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => PreceitosModal.open(), 350);
+            });
+        }
 
 </script>
 
@@ -9546,6 +9607,39 @@
             <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
                 <button onclick="closeSaintModal()" class="px-6 py-2.5 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold shadow transition">Fechar</button>
             </div>
+        </div>
+    </div>
+
+    <!-- MODAL INTEGRADO DE PRECEITOS & CALENDÁRIO LITÚRGICO (ESTILO INCRÍVEIS JOGOS) -->
+    <div id="preceitos-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex-col transition-opacity duration-300 opacity-0 pointer-events-none">
+        <!-- Barra de Topo Integrada -->
+        <header class="h-14 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-3 sm:px-5 flex items-center justify-between shrink-0 shadow-sm z-10">
+            <div class="flex items-center gap-3">
+                <button onclick="PreceitosModal.close()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-mariana hover:text-white dark:hover:bg-amber-600 dark:hover:text-white text-slate-700 dark:text-slate-200 font-bold text-xs transition cursor-pointer shadow-2xs">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Voltar ao Catecismo</span>
+                </button>
+                <div class="h-4 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+                <div class="flex items-center gap-2">
+                    <span class="text-base">📜</span>
+                    <span class="font-serif font-bold text-mariana dark:text-amber-400 text-sm sm:text-base hidden sm:inline">Preceitos &amp; Calendário Litúrgico</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 font-semibold text-xs hover:bg-amber-100 transition shadow-2xs">
+                    <span>📖</span> <span>Escola da Fé</span>
+                </a>
+                <a href="/preceitos.html" target="_blank" class="p-2 text-slate-400 hover:text-slate-700 dark:hover:text-white transition rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" title="Abrir em Nova Aba">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <button onclick="PreceitosModal.close()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer" title="Fechar">
+                    ✕
+                </button>
+            </div>
+        </header>
+        <!-- Iframe com App de Preceitos -->
+        <div class="flex-1 w-full bg-slate-100 dark:bg-slate-950 relative">
+            <iframe id="preceitos-iframe" src="about:blank" class="w-full h-full border-0" allow="fullscreen" loading="lazy"></iframe>
         </div>
     </div>
 </body>
