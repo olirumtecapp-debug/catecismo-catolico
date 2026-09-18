@@ -380,13 +380,13 @@
 
         <!-- Sidebar / Desktop Navigation -->
         <aside id="desktop-sidebar" class="hidden lg:flex flex-col w-72 bg-white border-r border-slate-200 z-30 shadow-sm">
-            <div class="p-6 border-b border-slate-100 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-xl shadow-md border border-dourado/40" title="Símbolo Oficial da Tradição Católica (Alt+Shift+M para ADM)" data-admin-trigger="true">
+            <div class="px-4 py-3.5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-lg shadow-sm border border-dourado/40" title="Símbolo Oficial da Tradição Católica (Alt+Shift+M para ADM)" data-admin-trigger="true">
                     ✝
                 </div>
                 <div>
-                    <h1 class="font-serif text-2xl font-bold text-mariana tracking-wide leading-none">CATECISMO</h1>
-                    <span class="text-[10px] tracking-widest uppercase text-dourado font-semibold">Plataforma Católica</span>
+                    <h1 class="font-serif text-xl font-bold text-mariana tracking-wide leading-none">CATECISMO</h1>
+                    <span class="text-[9px] tracking-widest uppercase text-dourado font-semibold">Plataforma Católica</span>
                 </div>
             </div>
 
@@ -485,46 +485,48 @@
                 </div>
             </nav>
 
-            <div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/50 space-y-3 shrink-0">
-                <!-- Card Nobre de Jornada Espiritual & Nível (Substitui o Discípulo confuso) -->
-                <div onclick="router.navigate('progresso')" title="Clique para ver seu Progresso Espiritual detalhado" class="p-3 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/90 dark:border-slate-700 hover:border-dourado/60 transition cursor-pointer shadow-sm group">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-base shadow-sm border border-dourado/40 shrink-0 group-hover:scale-105 transition">
+            <div class="p-3 border-t border-slate-100 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/50 space-y-2 shrink-0">
+                <!-- Card Nobre de Jornada Espiritual & Nível (Compacto e Elegante) -->
+                <div onclick="router.navigate('progresso')" title="Clique para ver seu Progresso Espiritual detalhado" class="p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/90 dark:border-slate-700 hover:border-dourado/60 transition cursor-pointer shadow-2xs group">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-lg mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-sm shadow-2xs border border-dourado/40 shrink-0 group-hover:scale-105 transition">
                             ✝
                         </div>
                         <div class="min-w-0 flex-1">
                             <div class="flex items-center justify-between gap-1">
                                 <span class="text-[9px] uppercase font-bold tracking-wider text-dourado">Jornada da Fé</span>
-                                <span id="sidebar-streak-badge" class="text-[10px] font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800/60 shrink-0">🔥 0 dias</span>
+                                <span id="sidebar-streak-badge" class="text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800/60 shrink-0">🔥 0 dias</span>
                             </div>
                             <div class="flex items-center justify-between gap-1 mt-0.5">
-                                <p class="text-xs font-bold text-mariana dark:text-slate-100 truncate" id="sidebar-level-title">Iniciante</p>
-                                <span id="sidebar-total-xp" class="text-[10px] font-bold text-amber-700 dark:text-amber-400 shrink-0">0 XP total</span>
+                                <p class="text-[11px] font-bold text-mariana dark:text-slate-100 truncate" id="sidebar-level-title">Iniciante</p>
+                                <span id="sidebar-total-xp" class="text-[9px] font-bold text-amber-700 dark:text-amber-400 shrink-0">0 XP total</span>
                             </div>
                         </div>
                     </div>
                     <!-- Barra de progresso para o próximo grau espiritual -->
-                    <div class="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-700/60">
-                        <div class="flex items-center justify-between text-[9px] text-slate-500 dark:text-slate-400 mb-1">
-                            <span id="sidebar-next-level-label">Próximo nível</span>
-                            <span id="sidebar-xp-progress" class="font-semibold text-slate-700 dark:text-slate-300">0 / 150 XP</span>
+                    <div class="mt-1.5 pt-1.5 border-t border-slate-100 dark:border-slate-700/60">
+                        <div class="flex items-center justify-between text-[9px] text-slate-500 dark:text-slate-400 mb-0.5">
+                            <span id="sidebar-next-level-label" class="truncate">Próximo nível</span>
+                            <span id="sidebar-xp-progress" class="font-semibold text-slate-700 dark:text-slate-300 shrink-0">0 / 150 XP</span>
                         </div>
-                        <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="w-full h-1 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
                             <div id="sidebar-xp-bar" class="h-full gold-gradient transition-all duration-500 rounded-full" style="width: 10%;"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Ações do Rodapé: Apoio & Desenvolvedor -->
-                <div class="space-y-1.5 pt-1">
-                    <button onclick="shareCatecismo('sidebar')" class="w-full py-2 px-3 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 border border-blue-200 dark:border-blue-900 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-xs transition flex items-center justify-center gap-2 cursor-pointer">
-                        <span class="text-sm">📤</span> <span>Compartilhar Plataforma</span>
-                    </button>
-                    <button onclick="openApoioModal()" class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs shadow-sm hover:shadow transition flex items-center justify-center gap-2 cursor-pointer">
-                        <span>☕</span> <span>Apoiar o Projeto</span>
-                    </button>
-                    <button onclick="openDeveloperModal()" class="w-full py-1.5 px-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-mariana dark:hover:text-amber-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-[11px] font-medium transition flex items-center justify-center gap-1.5">
-                        <span>👨‍💻</span> <span>Desenvolvedor: <strong>Murilo Silva</strong></span>
+                <!-- Ações do Rodapé: Compartilhar & Apoiar Lado a Lado + Desenvolvedor -->
+                <div class="space-y-1">
+                    <div class="grid grid-cols-2 gap-1.5">
+                        <button onclick="shareCatecismo('sidebar')" class="py-1.5 px-2 rounded-lg bg-blue-50/90 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 border border-blue-200/90 dark:border-blue-900 text-blue-900 dark:text-blue-200 font-bold text-[11px] shadow-2xs transition flex items-center justify-center gap-1.5 cursor-pointer" title="Compartilhar Plataforma">
+                            <span>📤</span> <span>Compartilhar</span>
+                        </button>
+                        <button onclick="openApoioModal()" class="py-1.5 px-2 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-[11px] shadow-2xs hover:shadow transition flex items-center justify-center gap-1.5 cursor-pointer" title="Apoiar o Projeto">
+                            <span>☕</span> <span>Apoiar</span>
+                        </button>
+                    </div>
+                    <button onclick="openDeveloperModal()" class="w-full py-0.5 px-2 rounded-lg text-slate-400 hover:text-mariana dark:hover:text-amber-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 text-[10px] font-medium transition flex items-center justify-center gap-1 cursor-pointer">
+                        <span>👨‍💻</span> <span>Dev: <strong>Murilo Silva</strong></span>
                     </button>
                 </div>
             </div>
