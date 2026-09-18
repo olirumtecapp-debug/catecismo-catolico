@@ -408,8 +408,85 @@ const server = http.createServer(async (req, res) => {
         return;
     }
 
+    // ==========================================
+    // API: PUBLICAR NO VERCEL (GIT COMMIT & PUSH)
+    // ==========================================
+    if (pathname === '/api/admin/publish-to-vercel' && req.method === 'POST') {
+        const GIT_BIN = fs.existsSync('C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe')
+            ? 'C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe'
+            : 'git';
+
+        const runGit = (args) => new Promise((resolve, reject) => {
+            const child = spawn(GIT_BIN, args, { cwd: __dirname });
+            let stdout = '', stderr = '';
+            child.stdout.on('data', d => stdout += d);
+            child.stderr.on('data', d => stderr += d);
+            child.on('close', code => {
+                if (code === 0) resolve(stdout);
+                else reject(new Error(stderr || stdout || `Código de saída ${code}`));
+            });
+            child.on('error', reject);
+        });
+
+        (async () => {
+            try {
+                await runGit(['add', 'data/santos', 'assets/img/santos']);
+                try {
+                    await runGit(['commit', '-m', `feat(santos): atualizar imagens e curadoria de santos [${new Date().toLocaleDateString('pt-BR')}]`]);
+                } catch(commitErr) {
+                    if (!commitErr.message.includes('nothing to commit')) throw commitErr;
+                }
+                const pushOut = await runGit(['push', 'origin', 'main']);
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ 
+                    success: true, 
+                    message: 'Atualizações enviadas com sucesso para a Vercel! O site estará atualizado em instantes.',
+                    output: pushOut
+                }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        })();
+        return;
+    }
 
     // ==========================================
+    // API: PUXAR DA NUVEM (GIT PULL / BACKUP)
+    // ==========================================
+    if (pathname === '/api/admin/pull-from-vercel' && req.method === 'POST') {
+        const GIT_BIN = fs.existsSync('C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe')
+            ? 'C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe'
+            : 'git';
+
+        const runGit = (args) => new Promise((resolve, reject) => {
+            const child = spawn(GIT_BIN, args, { cwd: __dirname });
+            let stdout = '', stderr = '';
+            child.stdout.on('data', d => stdout += d);
+            child.stderr.on('data', d => stderr += d);
+            child.on('close', code => {
+                if (code === 0) resolve(stdout);
+                else reject(new Error(stderr || stdout || `Código de saída ${code}`));
+            });
+            child.on('error', reject);
+        });
+
+        (async () => {
+            try {
+                const pullOut = await runGit(['pull', 'origin', 'main']);
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ 
+                    success: true, 
+                    message: 'Backup e sincronização concluídos com sucesso!',
+                    output: pullOut
+                }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        })();
+        return;
+    }
     // 5. SERVIDOR DE ARQUIVOS ESTÁTICOS
     // ==========================================
     let filePath = path.join(__dirname, pathname === '/' ? 'index.html' : pathname);

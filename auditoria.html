@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full bg-slate-950 text-slate-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoria & Curadoria de Imagens dos Santos — Catecismo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(15,23,42,.6); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(51,65,85,.8); border-radius: 9999px; }
+        .card-img-container:hover .card-overlay { opacity: 1; }
+    </style>
+</head>
+<body class="min-h-full bg-slate-950 flex flex-col font-sans">
+
+    <!-- Topbar -->
+    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-xl shadow-lg shadow-amber-500/20">
+                    🕊️
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-extrabold text-white flex items-center gap-2">
+                        Auditoria de Santos & Imagens Sacras
+                        <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded-full font-mono">2026</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Verifique, gere prompts para IA e atualize imagens em tempo real</p>
+                </div>
+            </div>
+
+            <!-- Badges & Stats -->
+            <div class="flex items-center gap-2 text-xs font-mono">
+                <div class="bg-slate-800/80 border border-slate-700/80 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+                    <span class="text-slate-400">Total:</span>
+                    <strong id="stat-total" class="text-white">0</strong>
+                </div>
+                <div class="bg-emerald-950/50 border border-emerald-800/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-emerald-300">
+                    <span>✅ Com Imagem:</span>
+                    <strong id="stat-ok">0</strong>
+                </div>
+                <div class="bg-rose-950/50 border border-rose-800/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-rose-300">
+                    <span>⚠️ Pendentes/Erro:</span>
+                    <strong id="stat-missing">0</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="bg-slate-900 border-t border-slate-800/60 px-4 py-2.5">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center gap-2.5 flex-1 min-w-[280px]">
+                    <!-- Mês -->
+                    <select id="mSel" onchange="onMonthSelectChange()" class="bg-slate-950 border border-slate-700 text-xs text-slate-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        <option value="all">📅 Ano Inteiro (12 meses)</option>
+                        <option value="01">01 - Janeiro</option>
+                        <option value="02">02 - Fevereiro</option>
+                        <option value="03">03 - Março</option>
+                        <option value="04">04 - Abril</option>
+                        <option value="05">05 - Maio</option>
+                        <option value="06">06 - Junho</option>
+                        <option value="07">07 - Julho</option>
+                        <option value="08">08 - Agosto</option>
+                        <option value="09">09 - Setembro</option>
+                        <option value="10">10 - Outubro</option>
+                        <option value="11">11 - Novembro</option>
+                        <option value="12">12 - Dezembro</option>
+                    </select>
+
+                    <!-- Dia do Mês -->
+                    <select id="dSel" onchange="onDaySelectChange()" class="bg-slate-950 border border-slate-700 text-xs text-slate-200 rounded-lg px-2.5 py-2 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        <option value="all">🗓️ Todos os Dias</option>
+                    </select>
+
+                    <!-- Atalhos Rápidos de Dias -->
+                    <div class="inline-flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
+                        <button onclick="setDayShortcut('all')" id="btn-day-all" class="px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950">Todos</button>
+                        <button onclick="setDayShortcut('today')" id="btn-day-today" class="px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition" title="Ir para a data de hoje">☀️ Hoje</button>
+                        <button onclick="setDayShortcut('tomorrow')" id="btn-day-tomorrow" class="px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition" title="Ir para o dia de amanhã">🌅 Amanhã</button>
+                        <button onclick="setDayShortcut('week')" id="btn-day-week" class="px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition" title="Ver os próximos 7 dias">🗓️ 7 Dias</button>
+                    </div>
+
+                    <!-- Filtro Status -->
+                    <div class="inline-flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
+                        <button onclick="setStatusFilter('all')" id="btn-filter-all" class="px-3 py-1 rounded-md font-medium transition bg-amber-500 text-slate-950">Todos</button>
+                        <button onclick="setStatusFilter('missing')" id="btn-filter-missing" class="px-3 py-1 rounded-md font-medium text-slate-400 hover:text-white transition">⚠️ Só Pendentes</button>
+                        <button onclick="setStatusFilter('ok')" id="btn-filter-ok" class="px-3 py-1 rounded-md font-medium text-slate-400 hover:text-white transition">✅ Só com Imagem</button>
+                    </div>
+
+                    <!-- Busca Textual -->
+                    <div class="relative flex-1 min-w-[160px] max-w-xs">
+                        <input id="searchInput" type="text" placeholder="Buscar por nome ou data..." oninput="handleSearch()" class="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        <span class="absolute left-2.5 top-2 text-slate-500 text-xs">🔍</span>
+                    </div>
+
+                    <!-- Tamanho do Card / Densidade -->
+                    <div class="inline-flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs items-center gap-1">
+                        <span class="text-[10px] text-slate-400 px-1">Tamanho:</span>
+                        <button onclick="setDensity('compact')" id="btn-density-compact" class="px-2 py-0.5 rounded text-[11px] font-medium bg-amber-500 text-slate-950 transition" title="Compacto: cabem até 8 por linha">Pequeno</button>
+                        <button onclick="setDensity('medium')" id="btn-density-medium" class="px-2 py-0.5 rounded text-[11px] font-medium text-slate-400 hover:text-white transition" title="Médio: 4 a 6 por linha">Médio</button>
+                    </div>
+
+                    <!-- Quantidade por Página -->
+                    <select id="pageSizeSel" onchange="changePageSize()" class="bg-slate-950 border border-slate-700 text-xs text-slate-300 rounded-lg px-2.5 py-1.5 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        <option value="48" selected>48 por pág</option>
+                        <option value="96">96 por pág</option>
+                        <option value="192">192 por pág</option>
+                        <option value="all">Ver Todos</option>
+                    </select>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button id="btnPublishVercel" onclick="publishToVercel()" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg border border-emerald-500/40 shadow-md shadow-emerald-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Salva e envia todas as alterações locais para a Vercel de uma vez">
+                        <span id="publishIcon">🚀</span> <span id="publishText">Publicar no Vercel</span>
+                    </button>
+                    <button id="btnPullVercel" onclick="pullFromVercel()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium px-2.5 py-1.5 rounded-lg border border-slate-700 flex items-center gap-1.5 transition cursor-pointer" title="Puxar atualizações da nuvem para seu backup local">
+                        <span id="pullIcon">📥</span> <span id="pullText">Puxar Nuvem</span>
+                    </button>
+                    <button onclick="fetchSaints()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 flex items-center gap-1.5 transition cursor-pointer">
+                        <span>🔄</span> Recarregar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-[1600px] mx-auto px-4 py-4 flex-1 w-full space-y-4">
+        <!-- Barra de Progresso visual -->
+        <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-3 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3 flex-1">
+                <span class="text-xs font-medium text-slate-300 whitespace-nowrap">Cobertura de Imagens:</span>
+                <div class="flex-1 bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800 max-w-md">
+                    <div id="stat-bar" class="bg-gradient-to-r from-amber-500 to-emerald-500 h-full w-0 transition-all duration-500"></div>
+                </div>
+                <span id="stat-percent" class="font-mono font-bold text-amber-400 text-xs whitespace-nowrap">0%</span>
+            </div>
+            <div class="text-[11px] text-slate-400 flex items-center gap-2">
+                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700/80">📐 Padrão: 1:1 Quadrado (1024x1024)</span>
+                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700/80">🎨 Estilo: Óleo Barroco/Renascentista</span>
+            </div>
+        </div>
+
+        <!-- Grid de Santos (Dinâmico) -->
+        <div id="grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+            <div class="col-span-full py-16 text-center text-slate-500">
+                <div class="inline-block animate-spin text-3xl mb-2">⏳</div>
+                <p class="text-sm">Carregando dados dos santos...</p>
+            </div>
+        </div>
+
+        <!-- Paginação -->
+        <div id="pag" class="flex items-center justify-center gap-2 py-4 border-t border-slate-800/80 text-xs font-mono"></div>
+    </main>
+
+    <!-- Modal do Prompt de Imagem -->
+    <div id="promptModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <div class="flex items-start justify-between border-b border-slate-800 pb-3 gap-2">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">✨</span>
+                        <h3 class="font-bold text-white text-base" id="modalSaintTitle">Prompt Sacro com Referência Real</h3>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono">
+                        <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-md font-semibold">📐 1:1 Quadrado (1024x1024)</span>
+                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-md font-semibold">🔍 Busca Histórica Ativa</span>
+                        <span class="bg-sky-500/20 text-sky-300 border border-sky-500/40 px-2 py-0.5 rounded-md font-semibold">🚫 Anti-Rosto Genérico</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a id="btnGoogleRef" href="#" target="_blank" class="bg-indigo-600/80 hover:bg-indigo-500 text-white text-[11px] font-bold py-1.5 px-3 rounded-xl transition flex items-center gap-1.5 border border-indigo-400/40 shadow-sm" title="Ver quadros, afrescos e pinturas clássicas consagradas no Google">
+                        <span>🖼️</span> Ver Pinturas Reais
+                    </a>
+                    <button onclick="closePromptModal()" class="text-slate-400 hover:text-white text-lg px-2">✕</button>
+                </div>
+            </div>
+
+            <!-- OPÇÃO 1: COM PESQUISA ATIVA NA WEB (CHATGPT / GEMINI / COPILOT) -->
+            <div class="bg-slate-950/80 border border-emerald-900/40 rounded-xl p-3.5 space-y-2">
+                <div class="flex items-center justify-between">
+                    <label class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                        <span>🌐</span> Opção 1: Prompt com Pesquisa na Web (ChatGPT / Gemini / Copilot)
+                    </label>
+                    <span class="text-[10px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded font-mono">Pesquisa + Gera</span>
+                </div>
+                <p class="text-[11px] text-slate-400 leading-tight">
+                    Cole este prompt no <strong>ChatGPT, Copilot ou Gemini</strong>. Ele manda a IA pesquisar as pinturas sacras reais e a hagiografia oficial na internet antes de desenhar, evitando personagens repetidos.
+                </p>
+                <div class="relative">
+                    <textarea id="promptWeb" rows="4" readonly class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                    <button onclick="copyToClipboard('promptWeb', this)" class="absolute right-2.5 bottom-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                        📋 Copiar Prompt de Pesquisa
+                    </button>
+                </div>
+            </div>
+
+            <!-- OPÇÃO 2: PROMPT TÉCNICO DIRETO EM INGLÊS (MIDJOURNEY / FLUX / DALL-E) -->
+            <div class="space-y-1.5">
+                <div class="flex items-center justify-between">
+                    <label class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                        <span>🎨</span> Opção 2: Prompt Direto em Inglês (Midjourney / Flux / Leonardo / DALL-E)
+                    </label>
+                    <span class="text-[10px] text-slate-400 bg-slate-950 px-2 py-0.5 rounded font-mono">--ar 1:1 --v 6.1</span>
+                </div>
+                <div class="relative">
+                    <textarea id="promptEn" rows="4" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                    <button onclick="copyToClipboard('promptEn', this)" class="absolute right-2.5 bottom-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                        📋 Copiar EN
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contexto Histórico e Dicas -->
+            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3 text-xs text-slate-400 space-y-1">
+                <p><strong class="text-amber-400">💡 Dica de Ouro para Fidelidade Total:</strong> Se o ChatGPT ou Midjourney ainda insistir em um rosto genérico, clique no botão <strong>"🖼️ Ver Pinturas Reais"</strong> no topo, salve a pintura clássica do santo no seu PC e envie ela junto com o prompt dizendo: <em>"Use as feições faciais e vestes desta pintura histórica como referência exata para gerar o retrato 1:1"</em>.</p>
+                <p id="modalSaintBio" class="text-slate-400 italic text-[11px] pt-1 border-t border-slate-900"></p>
+            </div>
+
+            <div class="flex justify-end gap-2 pt-1">
+                <button onclick="closePromptModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-5 py-2 rounded-xl transition">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-5 right-5 bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-2xl z-50 flex items-center gap-2"></div>
+
+    <script>
+        let allSaints = [];
+        let filteredSaints = [];
+        let currentPage = 1;
+        let pageSize = 48;
+        let currentDensity = 'compact'; // 'compact', 'medium'
+        let statusFilter = 'all'; // 'all', 'missing', 'ok'
+        let currentSearch = '';
+        let currentDayShortcut = 'all'; // 'all', 'today', 'tomorrow', 'week', 'custom'
+
+        function initDaySelect() {
+            const dSel = document.getElementById('dSel');
+            if (!dSel) return;
+            dSel.innerHTML = '<option value="all">🗓️ Todos os Dias</option>';
+            for (let i = 1; i <= 31; i++) {
+                const val = String(i).padStart(2, '0');
+                const opt = document.createElement('option');
+                opt.value = val;
+                opt.innerText = `Dia ${val}`;
+                dSel.appendChild(opt);
+            }
+        }
+
+        async function onMonthSelectChange() {
+            if (currentDayShortcut !== 'all') {
+                setDayShortcut('all', false);
+            }
+            await fetchSaints();
+        }
+
+        function onDaySelectChange() {
+            const dSel = document.getElementById('dSel');
+            const val = dSel.value;
+            ['all', 'today', 'tomorrow', 'week'].forEach(t => {
+                const btn = document.getElementById('btn-day-' + t);
+                if (btn) btn.className = 'px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition';
+            });
+            if (val === 'all') {
+                const btnAll = document.getElementById('btn-day-all');
+                if (btnAll) btnAll.className = 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950';
+                currentDayShortcut = 'all';
+            } else {
+                currentDayShortcut = 'custom';
+            }
+            applyFilters();
+        }
+
+        async function setDayShortcut(type, shouldApply = true) {
+            currentDayShortcut = type;
+            const now = new Date();
+            const pad = n => String(n).padStart(2, '0');
+
+            ['all', 'today', 'tomorrow', 'week'].forEach(t => {
+                const btn = document.getElementById('btn-day-' + t);
+                if (btn) {
+                    btn.className = (t === type)
+                        ? 'px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950'
+                        : 'px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition';
+                }
+            });
+
+            const mSel = document.getElementById('mSel');
+            const dSel = document.getElementById('dSel');
+
+            if (type === 'today') {
+                const currentMonth = pad(now.getMonth() + 1);
+                const currentDay = pad(now.getDate());
+                if (mSel.value !== currentMonth && mSel.value !== 'all') {
+                    mSel.value = currentMonth;
+                    await fetchSaints();
+                }
+                dSel.value = currentDay;
+            } else if (type === 'tomorrow') {
+                const tomorrow = new Date(now);
+                tomorrow.setDate(now.getDate() + 1);
+                const m = pad(tomorrow.getMonth() + 1);
+                const d = pad(tomorrow.getDate());
+                if (mSel.value !== m && mSel.value !== 'all') {
+                    mSel.value = m;
+                    await fetchSaints();
+                }
+                dSel.value = d;
+            } else if (type === 'week') {
+                if (mSel.value !== 'all') {
+                    mSel.value = 'all';
+                    await fetchSaints();
+                }
+                dSel.value = 'all';
+            } else {
+                dSel.value = 'all';
+            }
+
+            if (shouldApply) applyFilters();
+        }
+
+        async function publishToVercel() {
+            const btn = document.getElementById('btnPublishVercel');
+            const icon = document.getElementById('publishIcon');
+            const text = document.getElementById('publishText');
+            if (!confirm('Deseja salvar e enviar todas as atualizações de imagens para a Vercel agora?')) return;
+
+            btn.disabled = true;
+            btn.classList.add('opacity-70', 'cursor-wait');
+            icon.innerText = '⏳';
+            text.innerText = 'Publicando...';
+            showToast('Enviando atualizações para o GitHub e Vercel...', 'info');
+
+            try {
+                const res = await fetch('/api/admin/publish-to-vercel', { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    showToast('✅ ' + data.message, 'success');
+                } else {
+                    showToast('Erro ao publicar: ' + (data.error || 'Falha no servidor'), 'error');
+                }
+            } catch(err) {
+                showToast('Erro na requisição: ' + err.message, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.classList.remove('opacity-70', 'cursor-wait');
+                icon.innerText = '🚀';
+                text.innerText = 'Publicar no Vercel';
+            }
+        }
+
+        async function pullFromVercel() {
+            const btn = document.getElementById('btnPullVercel');
+            const icon = document.getElementById('pullIcon');
+            const text = document.getElementById('pullText');
+
+            btn.disabled = true;
+            btn.classList.add('opacity-70', 'cursor-wait');
+            icon.innerText = '⏳';
+            text.innerText = 'Puxando...';
+            showToast('Puxando atualizações do repositório remoto...', 'info');
+
+            try {
+                const res = await fetch('/api/admin/pull-from-vercel', { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    showToast('✅ ' + data.message, 'success');
+                    await fetchSaints();
+                } else {
+                    showToast('Erro ao puxar: ' + (data.error || 'Falha no servidor'), 'error');
+                }
+            } catch(err) {
+                showToast('Erro na requisição: ' + err.message, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.classList.remove('opacity-70', 'cursor-wait');
+                icon.innerText = '📥';
+                text.innerText = 'Puxar Nuvem';
+            }
+        }
+
+        function setDensity(density) {
+            currentDensity = density;
+            const btnCompact = document.getElementById('btn-density-compact');
+            const btnMedium = document.getElementById('btn-density-medium');
+            const grid = document.getElementById('grid');
+
+            if (density === 'compact') {
+                btnCompact.className = 'px-2 py-0.5 rounded text-[11px] font-medium bg-amber-500 text-slate-950 transition';
+                btnMedium.className = 'px-2 py-0.5 rounded text-[11px] font-medium text-slate-400 hover:text-white transition';
+                grid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3';
+            } else {
+                btnMedium.className = 'px-2 py-0.5 rounded text-[11px] font-medium bg-amber-500 text-slate-950 transition';
+                btnCompact.className = 'px-2 py-0.5 rounded text-[11px] font-medium text-slate-400 hover:text-white transition';
+                grid.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4';
+            }
+            renderPage(currentPage);
+        }
+
+        function changePageSize() {
+            const val = document.getElementById('pageSizeSel').value;
+            pageSize = val === 'all' ? 9999 : parseInt(val, 10);
+            renderPage(1);
+        }
+
+        // Carregar santos
+        async function fetchSaints() {
+            const m = document.getElementById('mSel').value;
+            const grid = document.getElementById('grid');
+            grid.innerHTML = '<div class="col-span-full py-16 text-center text-slate-500"><div class="inline-block animate-spin text-3xl mb-2">⏳</div><p class="text-sm">Carregando santos dos arquivos JSON...</p></div>';
+
+            allSaints = [];
+            const months = m === 'all' ? ['01','02','03','04','05','06','07','08','09','10','11','12'] : [m];
+            
+            for (const month of months) {
+                const requests = [];
+                for (let d = 1; d <= 31; d++) {
+                    const ds = d.toString().padStart(2, '0');
+                    requests.push(
+                        fetch(`./data/santos/2026/2026-${month}-${ds}.json`)
+                            .then(r => r.ok ? r.json() : null)
+                            .catch(() => null)
+                    );
+                }
+                const responses = await Promise.all(requests);
+                responses.forEach(data => {
+                    if (data && Array.isArray(data.saints)) {
+                        data.saints.forEach(s => {
+                            allSaints.push({
+                                ...s,
+                                date: data.date,
+                                fullDate: data.date,
+                                displayMonth: month,
+                                isImageMissing: !s.imageUrl || s.imageUrl.includes('placeholder') || s.imageUrl.trim() === ''
+                            });
+                        });
+                    }
+                });
+            }
+
+            applyFilters();
+        }
+
+        function setStatusFilter(status) {
+            statusFilter = status;
+            ['all', 'missing', 'ok'].forEach(st => {
+                const btn = document.getElementById('btn-filter-' + st);
+                if (st === status) {
+                    btn.className = 'px-3 py-1 rounded-md font-medium transition bg-amber-500 text-slate-950';
+                } else {
+                    btn.className = 'px-3 py-1 rounded-md font-medium text-slate-400 hover:text-white transition';
+                }
+            });
+            applyFilters();
+        }
+
+        function handleSearch() {
+            currentSearch = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const dSel = document.getElementById('dSel');
+            const selectedDay = dSel ? dSel.value : 'all';
+            const now = new Date();
+            const pad = n => String(n).padStart(2, '0');
+            const todayMMDD = `${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+
+            const in7 = new Date(now);
+            in7.setDate(now.getDate() + 7);
+            const in7MMDD = `${pad(in7.getMonth() + 1)}-${pad(in7.getDate())}`;
+
+            filteredSaints = allSaints.filter(s => {
+                const sMMDD = s.date.substring(5);
+
+                // Filtro de atalhos e dias
+                if (currentDayShortcut === 'week') {
+                    if (sMMDD < todayMMDD || sMMDD > in7MMDD) return false;
+                } else if (selectedDay !== 'all') {
+                    if (!s.date.endsWith('-' + selectedDay)) return false;
+                }
+
+                // Filtro de status
+                if (statusFilter === 'missing' && !s.isImageMissing) return false;
+                if (statusFilter === 'ok' && s.isImageMissing) return false;
+
+                // Filtro de busca
+                if (currentSearch) {
+                    const matchName = (s.name || '').toLowerCase().includes(currentSearch);
+                    const matchDate = (s.date || '').toLowerCase().includes(currentSearch);
+                    const matchBio = (s.sourceText || '').toLowerCase().includes(currentSearch);
+                    if (!matchName && !matchDate && !matchBio) return false;
+                }
+                return true;
+            });
+
+            updateStats();
+            renderPage(1);
+        }
+
+        function updateStats() {
+            const total = allSaints.length;
+            const missing = allSaints.filter(s => s.isImageMissing).length;
+            const ok = total - missing;
+            const pct = total > 0 ? Math.round((ok / total) * 100) : 0;
+
+            document.getElementById('stat-total').innerText = total;
+            document.getElementById('stat-ok').innerText = ok;
+            document.getElementById('stat-missing').innerText = missing;
+            document.getElementById('stat-percent').innerText = `${pct}% (${ok}/${total})`;
+            document.getElementById('stat-bar').style.width = `${pct}%`;
+        }
+
+        function markImageError(index) {
+            const saint = filteredSaints[index];
+            if (saint) {
+                saint.isImageMissing = true;
+                const badge = document.getElementById(`badge-${index}`);
+                if (badge) {
+                    badge.innerHTML = '<span class="bg-rose-500/20 text-rose-300 border border-rose-500/40 text-[9px] px-1.5 py-0.5 rounded-full font-mono font-medium">Sem Foto</span>';
+                }
+                const img = document.getElementById(`img-${index}`);
+                if (img) {
+                    img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="%2364748b" stroke-width="1.5"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>';
+                    img.classList.add('p-6', 'opacity-30');
+                }
+            }
+        }
+
+        function renderPage(page) {
+            currentPage = page;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const grid = document.getElementById('grid');
+            const pag = document.getElementById('pag');
+            grid.innerHTML = '';
+
+            if (filteredSaints.length === 0) {
+                grid.innerHTML = '<div class="col-span-full py-16 text-center text-slate-500"><p class="text-base font-semibold">Nenhum santo encontrado para este filtro.</p><p class="text-xs mt-1">Tente mudar o mês ou limpar a busca.</p></div>';
+                pag.innerHTML = '';
+                return;
+            }
+
+            const startIdx = (currentPage - 1) * pageSize;
+            const pageSlice = filteredSaints.slice(startIdx, startIdx + pageSize);
+            const isCompact = currentDensity === 'compact';
+
+            pageSlice.forEach((s, idx) => {
+                const globalIdx = startIdx + idx;
+                const cleanImgUrl = (s.imageUrl || '').replace(/^\.?\//, '');
+                const hasImg = !s.isImageMissing;
+                const imgHeightClass = isCompact ? 'h-28' : 'h-40';
+
+                const card = document.createElement('div');
+                card.className = 'bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-md flex flex-col justify-between hover:border-slate-700 transition duration-150 group';
+                card.innerHTML = `
+                    <div>
+                        <!-- Image Container with Drag & Drop -->
+                        <div class="relative ${imgHeightClass} bg-slate-950 overflow-hidden card-img-container cursor-pointer flex items-center justify-center border-b border-slate-800/80"
+                             id="dropzone-${globalIdx}"
+                             ondragover="handleDragOver(event, this)"
+                             ondragleave="handleDragLeave(event, this)"
+                             ondrop="handleDrop(event, ${globalIdx})"
+                             onclick="triggerFileInput(${globalIdx})"
+                             title="Clique ou arraste uma imagem (1024x1024)">
+                            
+                            <img id="img-${globalIdx}" 
+                                 src="${cleanImgUrl}" 
+                                 alt="${s.name}" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-200"
+                                 onerror="markImageError(${globalIdx})">
+
+                            <!-- Top Badges -->
+                            <div class="absolute top-1.5 left-1.5 flex items-center gap-1 z-10">
+                                <span class="bg-slate-950/85 backdrop-blur-sm text-amber-400 border border-slate-800 text-[9px] font-mono px-1.5 py-0.5 rounded font-bold">
+                                    ${s.date.substring(5)}
+                                </span>
+                            </div>
+
+                            <div class="absolute top-1.5 right-1.5 z-10" id="badge-${globalIdx}">
+                                ${hasImg ? 
+                                    '<span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[9px] px-1.5 py-0.5 rounded-full font-mono font-medium">OK</span>' : 
+                                    '<span class="bg-rose-500/20 text-rose-300 border border-rose-500/40 text-[9px] px-1.5 py-0.5 rounded-full font-mono font-medium">Sem Foto</span>'
+                                }
+                            </div>
+
+                            <!-- Overlay Hover -->
+                            <div class="card-overlay absolute inset-0 bg-slate-950/70 opacity-0 transition-opacity flex flex-col items-center justify-center text-[10px] text-white gap-0.5 z-20">
+                                <span>📷</span>
+                                <span class="font-bold">Arraste ou clique</span>
+                                <span class="text-[8px] text-slate-400">1:1 Quadrado</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Info -->
+                        <div class="p-2.5 space-y-1">
+                            <h3 class="text-xs font-bold text-white truncate leading-tight" title="${s.name}">
+                                ${s.name}
+                            </h3>
+                            
+                            ${s.sourceText ? `
+                                <p class="text-[10px] text-slate-400 line-clamp-2 leading-relaxed" title="${s.sourceText.replace(/"/g, '&quot;')}">
+                                    ${s.sourceText}
+                                </p>
+                            ` : '<p class="text-[10px] text-slate-600 italic">Sem biografia.</p>'}
+                        </div>
+                    </div>
+
+                    <!-- Card Actions -->
+                    <div class="p-2 pt-0 space-y-1.5 border-t border-slate-800/40 mt-1">
+                        <!-- Botão Gerar Prompt IA Padronizado -->
+                        <button onclick="openPromptModal(${globalIdx})" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-1 px-2 rounded-lg text-[10px] shadow-sm transition flex items-center justify-center gap-1" title="Gerar prompt com proporção 1:1 e padrão iconográfico">
+                            <span>✨</span> Prompt 1:1 IA
+                        </button>
+
+                        <!-- Upload Manual & Paste -->
+                        <div class="flex items-center gap-1.5">
+                            <input type="file" id="file-${globalIdx}" accept="image/*" class="hidden" onchange="handleFileSelect(event, ${globalIdx})">
+                            
+                            <button onclick="triggerFileInput(${globalIdx})" class="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-[9px] font-semibold py-1 px-1 rounded transition text-center truncate">
+                                📁 Upload
+                            </button>
+
+                            <button onclick="pasteFromClipboard(${globalIdx})" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-[9px] font-semibold py-1 px-2 rounded transition" title="Colar imagem copiada (Ctrl+V)">
+                                📋 Colar
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+
+            // Renderizar Paginação
+            const totalPages = Math.ceil(filteredSaints.length / pageSize);
+            let pagHtml = `
+                <button ${currentPage === 1 ? 'disabled class="opacity-40 cursor-not-allowed"' : 'class="hover:text-white"'} onclick="renderPage(${currentPage - 1})" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">
+                    ◀ Ant
+                </button>
+                <span class="px-2 py-1 text-slate-400 text-xs">
+                    Pág <strong class="text-white">${currentPage}</strong> de ${totalPages} (${filteredSaints.length} santos)
+                </span>
+                <button ${currentPage === totalPages ? 'disabled class="opacity-40 cursor-not-allowed"' : 'class="hover:text-white"'} onclick="renderPage(${currentPage + 1})" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">
+                    Próx ▶
+                </button>
+            `;
+            pag.innerHTML = pagHtml;
+        }
+
+        // ==========================================
+        // SISTEMA DE GERAÇÃO DE PROMPT IA COM REFERÊNCIA REAL
+        // ==========================================
+        function generateSacredPrompt(saint) {
+            const name = saint.name || '';
+            const bio = saint.sourceText || '';
+
+            // Detectar gênero feminino
+            const isFemale = /^santa\b/i.test(name) || /\b(virgem|freira|religiosa|matrona|viúva|madre|rainha|imperatriz|abadessa)\b/i.test(name) || /\bSanta\s/i.test(bio);
+
+            // Detectar títulos e ordens religiosas
+            let vestments = isFemale ? 'vestimentas devocionais femininas de sua época com véu tradicional' : 'vestes canônicas históricas masculinas';
+            let vestmentsEn = isFemale ? 'period-accurate devotional female Catholic attire with traditional veil' : 'authentic historical Catholic vestments';
+            
+            if (/papa/i.test(name)) {
+                vestments = 'vestes papais históricas solenes (batina branca papal, solidéu ou tiara papal)';
+                vestmentsEn = 'papal vestments (white papal cassock, zucchetto or historical papal tiara)';
+            } else if (/bispo/i.test(name) || /arcebispo/i.test(name)) {
+                vestments = 'paramentos episcopais (mitra episcopal, báculo e solidéu)';
+                vestmentsEn = 'episcopal vestments (bishop mitre, pectoral cross and pastoral staff)';
+            } else if (/franciscan/i.test(name) || /francisco/i.test(bio)) {
+                vestments = isFemale ? 'hábito franciscano feminino (clarissa) com véu e cordão de nós' : 'hábito franciscano marrom com capuz e cordão de três nós na cintura';
+                vestmentsEn = isFemale ? 'Franciscan Poor Clare nun habit with veil and knotted cincture' : 'brown Franciscan habit with hood and knotted rope cincture';
+            } else if (/dominican/i.test(name) || /dominic/i.test(bio)) {
+                vestments = isFemale ? 'hábito dominicano feminino branco com véu e manto escuro' : 'hábito dominicano branco com escapulário e capa preta';
+                vestmentsEn = isFemale ? 'white Dominican nun habit with veil and black mantle' : 'white Dominican habit with black cloak and scapular';
+            } else if (/beneditin/i.test(name) || /abade/i.test(name)) {
+                vestments = isFemale ? 'hábito beneditino monástico feminino com véu preto' : 'hábito beneditino preto com capuz monástico';
+                vestmentsEn = isFemale ? 'Benedictine nun habit with veil' : 'black Benedictine monastic habit with cowl';
+            } else if (/carmelit/i.test(name)) {
+                vestments = isFemale ? 'hábito carmelita feminino marrom com véu escuro e manto branco' : 'hábito carmelita marrom com manto branco característico';
+                vestmentsEn = isFemale ? 'brown Carmelite nun habit with veil and white mantle' : 'brown Carmelite habit with white mantle';
+            } else if (/jesu[íi]ta/i.test(name)) {
+                vestments = 'batina jesuíta preta sóbria com colarinho clerical';
+                vestmentsEn = 'traditional black Jesuit cassock';
+            } else if (/mártir/i.test(name)) {
+                vestments = (isFemale ? 'vestes femininas históricas nobres de sua época com a palma do martírio' : 'vestes históricas de sua época com a palma do martírio');
+                vestmentsEn = (isFemale ? 'period-accurate historical female attire holding the martyr palm' : 'period-accurate historical clothing holding the martyr palm');
+            } else if (/virgem/i.test(name) || /freira|religiosa/i.test(name)) {
+                vestments = 'hábito religioso feminino tradicional com véu e terço';
+                vestmentsEn = 'traditional nun religious habit with veil';
+            }
+
+            // Extrair anos ou século da biografia se existir
+            const dateMatch = bio.match(/\((\d{3,4}[^\)]*)\)/);
+            const eraHint = dateMatch ? ` (Período histórico documentado: ${dateMatch[1]})` : '';
+            const eraHintEn = dateMatch ? ` (Historical era: ${dateMatch[1]})` : '';
+
+            // 1. PROMPT COM PESQUISA ATIVA (Para ChatGPT, Copilot, Gemini)
+            const promptWeb = `Pesquise na internet as pinturas históricas consagradas, afrescos e a iconografia oficial da Igreja Católica para "${name}"${eraHint}. 
+
+IMPORTANTE: NÃO gere um personagem genérico repetido. Baseie-se rigorosamente na fisionomia real documentada na história da arte sacra católica, na etnia de sua terra natal e na idade em que viveu.
+
+Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 'esta santa' : 'este santo'}:
+- Composição: Retrato em busto / meio-corpo centralizado, formato quadrado 1:1 (resolução 1024x1024).
+- Vestimenta: ${vestments}.
+- Estilo Artístico: Pintura clássica a óleo sobre tela de grandes mestres renascentistas e barrocos (como Murillo, Fra Angelico ou Caravaggio).
+- Iluminação e Detalhes: Olhar sereno e devocional, auréola dourada fina e translúcida sobre a cabeça, iluminação quente de velas com suave chiaroscuro e fundo discreto de capela ou claustro.`;
+
+            // 2. PROMPT TÉCNICO DIRETO EM INGLÊS (Midjourney / Flux / DALL-E 3)
+            const promptEn = `Authentic historical Catholic devotional portrait of ${isFemale ? 'the female saint ' + name : name}${eraHintEn}. Based on real canonical church paintings, historic frescoes and documented relics. IMPORTANT: Distinct, authentic historical facial features of this specific saint (strictly avoid generic face syndrome), accurate ethnic background, authentic age. Centered half-body bust composition, square framing 1:1 aspect ratio, 1024x1024 resolution. Authentic Catholic vestments: ${vestmentsEn}. Warm liturgical chiaroscuro illumination, subtle luminous translucent golden halo above head, shallow depth of field with solemn church chapel background, classical Renaissance and Baroque oil painting on canvas masterwork, ultra-detailed texture --ar 1:1 --v 6.1 --style raw`;
+
+            return { promptWeb, promptEn };
+        }
+
+        function openPromptModal(index) {
+            const saint = filteredSaints[index];
+            if (!saint) return;
+
+            const { promptWeb, promptEn } = generateSacredPrompt(saint);
+
+            document.getElementById('modalSaintTitle').innerText = saint.name;
+            document.getElementById('promptWeb').value = promptWeb;
+            document.getElementById('promptEn').value = promptEn;
+            document.getElementById('modalSaintBio').innerText = saint.sourceText ? 'Contexto Biográfico: ' + saint.sourceText : '';
+
+            // Link dinâmico para o Google Imagens
+            const searchTerms = encodeURIComponent(`${saint.name} pintura sacra catolica iconografia`);
+            document.getElementById('btnGoogleRef').href = `https://www.google.com/search?tbm=isch&q=${searchTerms}`;
+
+            document.getElementById('promptModal').classList.remove('hidden');
+        }
+
+        function closePromptModal() {
+            document.getElementById('promptModal').classList.add('hidden');
+        }
+
+        function copyToClipboard(elementId, btn) {
+            const el = document.getElementById(elementId);
+            el.select();
+            navigator.clipboard.writeText(el.value).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = '✅ Copiado!';
+                btn.classList.add('bg-emerald-600', 'text-white');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-emerald-600', 'text-white');
+                }, 2000);
+            });
+        }
+
+        // ==========================================
+        // UPLOAD & VINCULAÇÃO DE IMAGEM
+        // ==========================================
+        function triggerFileInput(index) {
+            const input = document.getElementById(`file-${index}`);
+            if (input) input.click();
+        }
+
+        function handleFileSelect(event, index) {
+            const file = event.target.files[0];
+            if (file) processUpload(file, index);
+        }
+
+        function handleDragOver(e, element) {
+            e.preventDefault();
+            e.stopPropagation();
+            element.classList.add('border-amber-500', 'ring-2', 'ring-amber-500/50');
+        }
+
+        function handleDragLeave(e, element) {
+            e.preventDefault();
+            e.stopPropagation();
+            element.classList.remove('border-amber-500', 'ring-2', 'ring-amber-500/50');
+        }
+
+        function handleDrop(e, index) {
+            e.preventDefault();
+            e.stopPropagation();
+            const element = document.getElementById(`dropzone-${index}`);
+            if (element) element.classList.remove('border-amber-500', 'ring-2', 'ring-amber-500/50');
+
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                processUpload(e.dataTransfer.files[0], index);
+            }
+        }
+
+        async function pasteFromClipboard(index) {
+            try {
+                const clipboardItems = await navigator.clipboard.read();
+                for (const item of clipboardItems) {
+                    const imageType = item.types.find(type => type.startsWith('image/'));
+                    if (imageType) {
+                        const blob = await item.getType(imageType);
+                        const file = new File([blob], 'clipboard-saint.png', { type: imageType });
+                        processUpload(file, index);
+                        return;
+                    }
+                }
+                showToast('Nenhuma imagem encontrada na área de transferência (Ctrl+C antes).', 'error');
+            } catch (err) {
+                showToast('Erro ao colar: ' + err.message + '. Use o botão Escolher Arquivo.', 'error');
+            }
+        }
+
+        function slugify(text) {
+            return text.toString().toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        async function processUpload(file, index) {
+            const saint = filteredSaints[index];
+            if (!saint) return;
+
+            showToast(`Salvando imagem para ${saint.name}...`, 'info');
+
+            // Gerar nome de arquivo padronizado
+            const ext = file.name.split('.').pop() || 'jpg';
+            const cleanDate = saint.date.substring(5); // mm-dd
+            const safeFilename = `${cleanDate}-${slugify(saint.name)}.${ext}`;
+
+            const reader = new FileReader();
+            reader.onload = async (e) => {
+                try {
+                    const res = await fetch('/api/admin/upload-saint-image', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            date: saint.date,
+                            saintName: saint.name,
+                            base64Data: e.target.result,
+                            filename: safeFilename
+                        })
+                    });
+
+                    const result = await res.json();
+                    if (result.success) {
+                        showToast('✅ Imagem salva e vinculada com sucesso!', 'success');
+                        saint.imageUrl = `./assets/img/santos/${safeFilename}`;
+                        saint.isImageMissing = false;
+
+                        // Atualiza o card localmente
+                        const img = document.getElementById(`img-${index}`);
+                        if (img) {
+                            img.src = `assets/img/santos/${safeFilename}?t=${Date.now()}`;
+                            img.classList.remove('p-8', 'opacity-40');
+                        }
+                        const badge = document.getElementById(`badge-${index}`);
+                        if (badge) {
+                            badge.innerHTML = '<span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] px-2 py-0.5 rounded-full font-mono font-medium">✅ Imagem OK</span>';
+                        }
+                        updateStats();
+                    } else {
+                        showToast('Erro ao salvar: ' + (result.error || 'Falha no servidor'), 'error');
+                    }
+                } catch (err) {
+                    showToast('Erro na requisição: ' + err.message, 'error');
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function showToast(msg, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.className = `fixed bottom-5 right-5 px-4 py-2.5 rounded-xl text-xs font-bold shadow-2xl z-50 flex items-center gap-2 ${
+                type === 'success' ? 'bg-emerald-600 text-white' : 
+                type === 'error' ? 'bg-rose-600 text-white' : 'bg-amber-600 text-slate-950'
+            }`;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 4000);
+        }
+
+        // Fechar modal ao teclar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePromptModal();
+        });
+
+        // Inicializar
+        initDaySelect();
+        fetchSaints();
+    </script>
+</body>
+</html>
