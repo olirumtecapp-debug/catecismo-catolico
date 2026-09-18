@@ -6,7 +6,11 @@
       "destination": "/auditoria.html"
     },
     {
-      "source": "/((?!assets/|data/|api/|auditoria|.*\\..*).*)",
+      "source": "/preceitos",
+      "destination": "/preceitos.html"
+    },
+    {
+      "source": "/((?!assets/|data/|api/|auditoria|preceitos|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]
