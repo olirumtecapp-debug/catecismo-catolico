@@ -497,13 +497,16 @@
                                 <span class="text-[9px] uppercase font-bold tracking-wider text-dourado">Jornada da Fé</span>
                                 <span id="sidebar-streak-badge" class="text-[10px] font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800/60 shrink-0">🔥 0 dias</span>
                             </div>
-                            <p class="text-xs font-bold text-mariana dark:text-slate-100 truncate mt-0.5" id="sidebar-level-title">Iniciante</p>
+                            <div class="flex items-center justify-between gap-1 mt-0.5">
+                                <p class="text-xs font-bold text-mariana dark:text-slate-100 truncate" id="sidebar-level-title">Iniciante</p>
+                                <span id="sidebar-total-xp" class="text-[10px] font-bold text-amber-700 dark:text-amber-400 shrink-0">0 XP total</span>
+                            </div>
                         </div>
                     </div>
                     <!-- Barra de progresso para o próximo grau espiritual -->
                     <div class="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-700/60">
                         <div class="flex items-center justify-between text-[9px] text-slate-500 dark:text-slate-400 mb-1">
-                            <span>Próximo nível</span>
+                            <span id="sidebar-next-level-label">Próximo nível</span>
                             <span id="sidebar-xp-progress" class="font-semibold text-slate-700 dark:text-slate-300">0 / 150 XP</span>
                         </div>
                         <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
@@ -3308,15 +3311,26 @@
             const levelEl = document.getElementById('sidebar-level-title');
             if (levelEl) levelEl.innerText = levelNames[currentLevelIdx];
 
+            const totalXpEl = document.getElementById('sidebar-total-xp');
+            if (totalXpEl) {
+                totalXpEl.innerText = `${AppState.xp || 0} XP total`;
+            }
+
+            const isMaxLevel = currentLevelIdx >= levelNames.length - 1;
+            const nextLevelEl = document.getElementById('sidebar-next-level-label');
+            if (nextLevelEl) {
+                nextLevelEl.innerText = isMaxLevel ? 'Grau Máximo' : `Rumo a ${levelNames[currentLevelIdx + 1]}`;
+            }
+
             const xpBar = document.getElementById('sidebar-xp-bar');
+            const currentXpInLevel = isMaxLevel ? 150 : (AppState.xp % 150);
             if (xpBar) {
-                const currentXpInLevel = AppState.xp % 150;
                 const pct = Math.min(100, Math.round((currentXpInLevel / 150) * 100));
                 xpBar.style.width = pct + '%';
             }
             const xpProgress = document.getElementById('sidebar-xp-progress');
             if (xpProgress) {
-                xpProgress.innerText = (AppState.xp % 150) + '/150 XP';
+                xpProgress.innerText = `${currentXpInLevel} / 150 XP`;
             }
         }
         window.updateHeaderBadges = updateHeaderBadges;
