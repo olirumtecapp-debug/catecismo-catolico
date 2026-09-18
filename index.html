@@ -3914,6 +3914,318 @@
             document.getElementById('mobile-drawer').classList.toggle('hidden');
         }
 
+        /* ========================================================
+           DESAFIO RÁPIDO DO DIA & UMA LUZ PARA O SEU DIA
+           ======================================================== */
+        const DailyChallengeManager = {
+            getTodayChallenge() {
+                const todayStr = getLocalDateString();
+                let seed = 0;
+                for (let i = 0; i < todayStr.length; i++) seed = (seed * 31 + todayStr.charCodeAt(i)) % 100000;
+                const modules = (typeof CatecismContentProvider !== 'undefined' && CatecismContentProvider.modules) ? CatecismContentProvider.modules : [];
+                if (!modules.length) {
+                    return {
+                        date: todayStr,
+                        moduleTitle: "A Fé Católica",
+                        ccc: "CCC § 1",
+                        explanation: "Deus, infinitamente perfeito e bem-aventurado em Si mesmo, criou livremente o homem para o fazer participante da sua vida bem-aventurada.",
+                        question: "Para que fomos criados por Deus?",
+                        options: ["Para conhecer, amar e servir a Deus", "Para acumular riquezas", "Por mero acaso"],
+                        correct: 0
+                    };
+                }
+                const mod = modules[seed % modules.length];
+                const qIdx = seed % (mod.quizQuestions ? mod.quizQuestions.length : 1);
+                const quiz = (mod.quizQuestions && mod.quizQuestions[qIdx]) || {
+                    q: (mod.questions && mod.questions[0] ? mod.questions[0].q : "Qual o sentido da fé?"),
+                    options: [(mod.questions && mod.questions[0] ? mod.questions[0].a : "Conhecer e amar a Deus"), "Outra alternativa", "Nenhuma das anteriores"],
+                    correct: 0
+                };
+                return {
+                    date: todayStr,
+                    moduleId: mod.id,
+                    moduleTitle: mod.title,
+                    ccc: mod.ccc,
+                    explanation: mod.explanation,
+                    question: quiz.q,
+                    options: quiz.options,
+                    correct: quiz.correct
+                };
+            },
+
+            renderCard() {
+                const challenge = this.getTodayChallenge();
+                const todayStr = getLocalDateString();
+                AppState.dailyChallenges = AppState.dailyChallenges || {};
+                const isDone = !!AppState.dailyChallenges[todayStr];
+
+                if (isDone) {
+                    return `
+                        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+                            <div class="flex items-center gap-2.5">
+                                <span class="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center text-sm font-bold">✓</span>
+                                <div>
+                                    <h3 class="font-serif text-base font-bold text-mariana dark:text-slate-100">Desafio Rápido de Hoje</h3>
+                                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">${challenge.ccc} • ${challenge.moduleTitle}</span>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">Concluído (+15 XP)</span>
+                        </div>
+                        <div class="bg-emerald-50/70 dark:bg-emerald-950/30 p-4 rounded-2xl border border-emerald-200/60 dark:border-emerald-900/40 text-xs text-emerald-950 dark:text-emerald-200 space-y-1.5">
+                            <p class="font-bold">Parabéns pela dedicação ao estudo da fé!</p>
+                            <p class="text-[11px] opacity-90 leading-relaxed">${challenge.explanation}</p>
+                        </div>
+                        <div class="flex justify-between items-center pt-1 text-xs">
+                            <span class="text-slate-500 dark:text-slate-400 text-[11px]">Volte amanhã para um novo desafio.</span>
+                            <button onclick="router.navigate('quiz')" class="font-bold text-mariana dark:text-blue-400 hover:underline text-[11px]">Fazer mais quizzes →</button>
+                        </div>
+                    `;
+                }
+
+                return `
+                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 flex items-center justify-center text-sm font-bold">🧠</span>
+                            <div>
+                                <h3 class="font-serif text-base font-bold text-mariana dark:text-slate-100">Desafio Rápido do Dia</h3>
+                                <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">${challenge.ccc} • ${challenge.moduleTitle}</span>
+                            </div>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-200 dark:border-amber-800">+15 XP</span>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug">
+                            ${challenge.question}
+                        </p>
+                        <div class="space-y-2" id="daily-challenge-options">
+                            ${challenge.options.map((opt, idx) => `
+                                <button onclick="DailyChallengeManager.answer(${idx})" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-600 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/30 text-xs text-slate-700 dark:text-slate-200 font-medium transition cursor-pointer flex items-center gap-2.5">
+                                    <span class="w-5 h-5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-500 dark:text-slate-400 shrink-0">${String.fromCharCode(65 + idx)}</span>
+                                    <span>${opt}</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                        <div id="daily-challenge-feedback" class="hidden"></div>
+                    </div>
+                `;
+            },
+
+            answer(chosenIdx) {
+                const challenge = this.getTodayChallenge();
+                const todayStr = getLocalDateString();
+                const isCorrect = chosenIdx === challenge.correct;
+                const fbEl = document.getElementById('daily-challenge-feedback');
+                const optContainer = document.getElementById('daily-challenge-options');
+
+                if (!fbEl || !optContainer) return;
+
+                const btns = optContainer.querySelectorAll('button');
+                btns.forEach((btn, idx) => {
+                    btn.disabled = true;
+                    btn.classList.remove('hover:border-indigo-400', 'cursor-pointer');
+                    if (idx === challenge.correct) {
+                        btn.className = 'w-full text-left p-3 rounded-xl border border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 text-xs text-emerald-950 dark:text-emerald-100 font-bold transition flex items-center gap-2.5';
+                    } else if (idx === chosenIdx) {
+                        btn.className = 'w-full text-left p-3 rounded-xl border border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-xs text-rose-950 dark:text-rose-100 font-medium transition flex items-center gap-2.5';
+                    } else {
+                        btn.classList.add('opacity-50');
+                    }
+                });
+
+                if (isCorrect) {
+                    if (window.QuizAudio && QuizAudio.playCorrect) QuizAudio.playCorrect();
+                    AppState.xp = (AppState.xp || 0) + 15;
+                    AppState.dailyChallenges = AppState.dailyChallenges || {};
+                    AppState.dailyChallenges[todayStr] = true;
+                    saveState();
+                    if (typeof updateHeaderBadges === 'function') updateHeaderBadges();
+                    if (window.CloudSyncManager && CloudSyncManager.checkPromptOnAction) {
+                        CloudSyncManager.checkPromptOnAction('Concluir Desafio Diário');
+                    }
+
+                    fbEl.className = 'p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs text-emerald-900 dark:text-emerald-200 space-y-1 mt-2';
+                    fbEl.innerHTML = `
+                        <p class="font-bold flex items-center gap-1.5"><span>🎉</span> Resposta correta! +15 XP</p>
+                        <p class="text-[11px] opacity-90">${challenge.explanation}</p>
+                    `;
+                    fbEl.classList.remove('hidden');
+                } else {
+                    if (window.QuizAudio && QuizAudio.playIncorrect) QuizAudio.playIncorrect();
+                    fbEl.className = 'p-3 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 space-y-1 mt-2';
+                    fbEl.innerHTML = `
+                        <p class="font-bold">Quase lá!</p>
+                        <p class="text-[11px] opacity-90">A resposta certa é: <strong>${challenge.options[challenge.correct]}</strong>. ${challenge.explanation}</p>
+                    `;
+                    fbEl.classList.remove('hidden');
+                }
+            }
+        };
+        window.DailyChallengeManager = DailyChallengeManager;
+
+        const SpiritualLightManager = {
+            gems: [
+                {
+                    tema: "Ansiedade e Confiança",
+                    versiculo: "“Não vos inquieteis com o dia de amanhã, pois o dia de amanhã cuidará de si mesmo.” (Mt 6, 34)",
+                    catecismo: "A criação tem a sua bondade própria e a sua perfeição, mas não saiu completamente acabada das mãos do Criador. Deus cuida de nós pela Sua Divina Providência. (CCC § 302)",
+                    prece: "Senhor, entrego nas Vossas mãos o meu amanhã. Dai-me a graça de viver o dia de hoje na Vossa paz. Amém."
+                },
+                {
+                    tema: "Cansaço e Alívio",
+                    versiculo: "“Vinde a mim todos vós que estais cansados e sobrecarregados, e eu vos aliviarei.” (Mt 11, 28)",
+                    catecismo: "A oração é a elevação da alma a Deus e o encontro do nosso coração cansado com o amor que nunca falha. (CCC § 2559)",
+                    prece: "Jesus manso e humilde de coração, fazei o meu coração semelhante ao Vosso e sede o meu refúgio. Amém."
+                },
+                {
+                    tema: "Paciência e Esperança",
+                    versiculo: "“Tudo posso naquele que me fortalece.” (Fl 4, 13)",
+                    catecismo: "A virtude da fortaleza assegura a firmeza nas dificuldades e a constância na procura do bem, vencendo o medo e as provações. (CCC § 1808)",
+                    prece: "Espírito Santo consolador, dai-me fortaleza para suportar as provações com amor e paciência. Amém."
+                },
+                {
+                    tema: "Perdão e Misericórdia",
+                    versiculo: "“Perdoai-nos as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido.” (Mt 6, 12)",
+                    catecismo: "O perdão dá testemunho de que, no nosso mundo, o amor é mais forte do que o pecado. (CCC § 2844)",
+                    prece: "Senhor Jesus, curai as feridas do meu coração e ensinai-me a perdoar com a Vossa misericórdia. Amém."
+                },
+                {
+                    tema: "Paz no Coração",
+                    versiculo: "“Deixo-vos a paz, a minha paz vos dou; não vo-la dou como o mundo a dá.” (Jo 14, 27)",
+                    catecismo: "A paz é a tranquilidade da ordem. É o fruto da justiça e o efeito da caridade de Cristo no íntimo da alma. (CCC § 2304)",
+                    prece: "Cordeiro de Deus que tirais o pecado do mundo, dai-nos a paz. Amém."
+                },
+                {
+                    tema: "Proteção Divina",
+                    versiculo: "“O Senhor é meu pastor, nada me faltará.” (Sl 22, 1)",
+                    catecismo: "Deus não nos abandona no vale de lágrimas; como Bom Pastor, guia os Seus fiéis através da Sua Igreja e dos Sacramentos. (CCC § 754)",
+                    prece: "Sagrado Coração de Jesus, eu confio e espero em Vós. Amém."
+                },
+                {
+                    tema: "Sabedoria nas Decisões",
+                    versiculo: "“Se algum de vós tem falta de sabedoria, peça-a a Deus, que a todos dá generosamente.” (Tg 1, 5)",
+                    catecismo: "A prudência é a virtude que dispõe a razão prática a discernir em qualquer circunstância o nosso verdadeiro bem. (CCC § 1806)",
+                    prece: "Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Amém."
+                }
+            ],
+
+            getTodayGem(indexOffset = 0) {
+                const todayStr = getLocalDateString();
+                let seed = indexOffset;
+                for (let i = 0; i < todayStr.length; i++) seed = (seed * 37 + todayStr.charCodeAt(i)) % 10000;
+                return this.gems[Math.abs(seed) % this.gems.length];
+            },
+
+            renderCard() {
+                const gem = this.getTodayGem(window.__spiritualGemOffset || 0);
+                return `
+                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 flex items-center justify-center text-sm font-bold">🕊️</span>
+                            <div>
+                                <h3 class="font-serif text-base font-bold text-mariana dark:text-slate-100">Uma Luz para o Seu Dia</h3>
+                                <span class="text-[10px] text-amber-700 dark:text-amber-400 font-bold uppercase tracking-wider">${gem.tema}</span>
+                            </div>
+                        </div>
+                        <button onclick="SpiritualLightManager.nextGem()" class="text-[11px] text-slate-400 hover:text-mariana dark:hover:text-amber-300 font-bold flex items-center gap-1 transition cursor-pointer" title="Sortear outro ensinamento">
+                            <span>🔄</span> <span>Outra</span>
+                        </button>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="p-3.5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 text-xs space-y-2">
+                            <p class="font-serif italic text-amber-950 dark:text-amber-100 font-medium leading-relaxed">
+                                ${gem.versiculo}
+                            </p>
+                            <p class="text-[11px] text-slate-600 dark:text-slate-300 border-t border-amber-200/50 dark:border-amber-900/40 pt-1.5 leading-relaxed">
+                                <strong class="text-amber-900 dark:text-amber-300">Doutrina:</strong> ${gem.catecismo}
+                            </p>
+                            <p class="text-[11px] text-slate-700 dark:text-slate-200 font-semibold bg-white/70 dark:bg-slate-800/80 p-2 rounded-xl border border-amber-100 dark:border-slate-700">
+                                🙏 <em>"${gem.prece}"</em>
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center pt-1">
+                            <button onclick="SpiritualLightManager.compartilharWhatsApp()" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold transition flex items-center gap-1.5 shadow-2xs cursor-pointer">
+                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.54 1.874.82 2.796.821 3.183 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.767-5.769-5.767zm0 10.428c-.854 0-1.687-.229-2.408-.663l-.173-.102-1.789.469.477-1.744-.113-.179c-.477-.758-.729-1.639-.728-2.543.001-2.573 2.094-4.666 4.669-4.666 2.574 0 4.668 2.093 4.668 4.666 0 2.574-2.094 4.667-4.667 4.667zm6.757-12.825c-1.802-1.802-4.198-2.795-6.754-2.795-5.263 0-9.545 4.282-9.547 9.547 0 1.682.439 3.324 1.272 4.767l-1.35 4.934 5.048-1.324c1.393.76 2.96 1.16 4.567 1.161h.004c5.263 0 9.546-4.282 9.548-9.547 0-2.553-.994-4.949-2.796-6.751z"/></svg>
+                                <span>Enviar no WhatsApp</span>
+                            </button>
+                            <span class="text-[10px] text-slate-400">Pílula espiritual</span>
+                        </div>
+                    </div>
+                `;
+            },
+
+            nextGem() {
+                window.__spiritualGemOffset = (window.__spiritualGemOffset || 0) + 1;
+                const container = document.getElementById('home-spiritual-light');
+                if (container) container.innerHTML = this.renderCard();
+            },
+
+            async compartilharWhatsApp() {
+                const gem = this.getTodayGem(window.__spiritualGemOffset || 0);
+                const msg = `🕊️ *Uma Luz para o Seu Dia — ${gem.tema}*\n\n${gem.versiculo}\n\n*Catecismo:* ${gem.catecismo}\n\n🙏 *Oração:* _"${gem.prece}"_\n\n✨ _Encontre mais reflexões e orações no Catecismo:_\nhttps://catecismo-catolico.vercel.app`;
+
+                if (navigator.share) {
+                    try {
+                        await navigator.share({ title: 'Uma Luz para o Seu Dia', text: msg });
+                        return;
+                    } catch(e) {
+                        if (e.name === 'AbortError') return;
+                    }
+                }
+                window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
+            }
+        };
+        window.SpiritualLightManager = SpiritualLightManager;
+
+        async function compartilharEvangelhoWhatsApp(dateStr) {
+            try {
+                const date = dateStr || getLocalDateString();
+                const lit = await LiturgicalContentProvider.getLiturgicalDayAsync(date);
+                if (!lit || !lit.gospel || !lit.gospel.text) {
+                    showToast('Evangelho não disponível para compartilhamento.', 'error');
+                    return;
+                }
+                const g = lit.gospel;
+
+                let cabecalho = '📖 *Proclamação do Evangelho de Jesus Cristo';
+                if (g.title && /segundo/i.test(g.title)) {
+                    const seg = g.title.replace(/.*segundo/i, 'segundo').trim();
+                    cabecalho += ' ' + seg;
+                } else if (g.reference) {
+                    cabecalho += ' segundo as Escrituras (' + g.reference + ')';
+                } else {
+                    cabecalho += '*';
+                }
+                if (g.reference && !cabecalho.includes(g.reference)) {
+                    cabecalho += ' (' + g.reference + ')*';
+                } else if (!cabecalho.endsWith('*')) {
+                    cabecalho += '*';
+                }
+
+                const textoLimpo = (g.text || '').replace(/<[^>]*>/g, '').trim();
+
+                const mensagem = `${cabecalho}\n\n${textoLimpo}\n\n— *Palavra da Salvação.*\n— *Glória a Vós, Senhor.*\n\n🕊️ _Reze a Liturgia Diária e estude o Catecismo completo em:_\nhttps://catecismo-catolico.vercel.app`;
+
+                if (navigator.share) {
+                    try {
+                        await navigator.share({
+                            title: 'Santo Evangelho do Dia',
+                            text: mensagem
+                        });
+                        return;
+                    } catch(e) {
+                        if (e.name === 'AbortError') return;
+                    }
+                }
+
+                const urlWa = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
+                window.open(urlWa, '_blank');
+            } catch(err) {
+                console.error('[CompartilharEvangelho]', err);
+                showToast('Não foi possível compartilhar no momento.', 'error');
+            }
+        }
+        window.compartilharEvangelhoWhatsApp = compartilharEvangelhoWhatsApp;
+
         /* ==========================================
            4. RENDERIZADORES DE VIEW (TELAS)
            ========================================== */

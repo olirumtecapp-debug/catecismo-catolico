@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-01-23",
-      "name": "São Emerenciana, mártir romana",
+      "name": "Santa Emerenciana, mártir romana",
       "normalizedName": "sao emerenciana, martir romana",
-      "imageUrl": "./assets/img/santos/01-23-sao-emerenciana-martir-romana.jpg",
+      "imageUrl": "./assets/img/santos/01-23-sao-emerenciana-martir-romana.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
@@ -30,7 +30,7 @@
       "date": "2026-01-23",
       "name": "São Ildefonso, bispo de Toledo",
       "normalizedName": "sao ildefonso, bispo de toledo",
-      "imageUrl": "./assets/img/santos/01-23-sao-ildefonso-bispo-de-toledo.jpg",
+      "imageUrl": "./assets/img/santos/01-23-sao-ildefonso-bispo-de-toledo.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
