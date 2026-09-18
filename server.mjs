@@ -490,6 +490,7 @@ const server = http.createServer(async (req, res) => {
     // 5. SERVIDOR DE ARQUIVOS ESTÁTICOS
     // ==========================================
     let filePath = path.join(__dirname, pathname === '/' ? 'index.html' : pathname);
+    if (pathname === '/auditoria') filePath = path.join(__dirname, 'auditoria.html');
 
     // Security check to avoid path traversal
     if (!filePath.startsWith(__dirname)) {
