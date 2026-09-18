@@ -8,6 +8,6 @@ echo =======================================================
 echo =======================================================
 echo Iniciando Servidor Catecismo & Auditoria...
 echo =======================================================
-start http://localhost:3000/test_santos_dinamico.html
+start http://localhost:3000/auditoria.html
 node server.mjs
 pause
