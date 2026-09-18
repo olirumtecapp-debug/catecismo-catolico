@@ -17,6 +17,7 @@ const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'expedicao-brasil';
 
 const COL_USERS = 'catecismo_cloud_users';
 const COL_MESSAGES = 'catecismo_contact_messages';
+const COL_BROADCASTS = 'catecismo_broadcasts';
 
 const CACHE_MS = 5000;
 const TIMEOUT_MS = 8000;
@@ -238,6 +239,46 @@ export async function deleteMessageInDatabase(messageId) {
         return res.ok;
     } catch (err) {
         console.error('[db] falha ao excluir mensagem:', err && err.message);
+        return false;
+    }
+}
+
+// ================= BROADCASTS / COMUNICADOS DB =================
+
+export async function getBroadcastsDatabase() {
+    const cached = cacheGet('broadcasts');
+    if (cached) return cached;
+
+    const docs = await listDocs(COL_BROADCASTS);
+    const broadcasts = docs
+        .filter(b => b && b.id)
+        .sort((a, b) => String(b.date || b.createdAt || '').localeCompare(String(a.date || a.createdAt || '')));
+
+    const db = { _meta: { source: 'firestore', updatedAt: new Date().toISOString() }, broadcasts };
+    cacheSet('broadcasts', db);
+    return db;
+}
+
+export async function saveBroadcastToDatabase(broadcast) {
+    if (!broadcast || !broadcast.id) return false;
+    try {
+        const ok = await upsertDoc(COL_BROADCASTS, docId(broadcast.id), broadcast);
+        cacheClear();
+        return ok;
+    } catch (err) {
+        console.error('[db] falha ao gravar comunicado:', err && err.message);
+        return false;
+    }
+}
+
+export async function deleteBroadcastInDatabase(broadcastId) {
+    if (!broadcastId) return false;
+    try {
+        const res = await fsRequest(basePath(COL_BROADCASTS) + '/' + docId(broadcastId), { method: 'DELETE' });
+        cacheClear();
+        return res.ok;
+    } catch (err) {
+        console.error('[db] falha ao excluir comunicado:', err && err.message);
         return false;
     }
 }

@@ -3,5 +3,6 @@ backups
 .vercel
 *.zip
 *.log
+*.bak_*
 .DS_Store
 Thumbs.db

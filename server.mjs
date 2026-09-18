@@ -3,9 +3,55 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
+import contactListHandler from './api/contact/list.js';
+import contactSendHandler from './api/contact/send.js';
+import contactUpdateStatusHandler from './api/contact/update-status.js';
+import adminBroadcastsHandler from './api/admin/broadcasts.js';
+import adminAuthHandler from './api/admin/auth.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+async function handleServerlessFunction(handlerFn, req, res) {
+    if (!res.status) {
+        res.status = function(code) {
+            res.statusCode = code;
+            return res;
+        };
+    }
+    if (!res.json) {
+        res.json = function(data) {
+            if (!res.headersSent) {
+                res.setHeader('Content-Type', 'application/json; charset=utf-8');
+                res.writeHead(res.statusCode || 200);
+            }
+            res.end(JSON.stringify(data));
+            return res;
+        };
+    }
+    if (req.method === 'POST' || req.method === 'PUT' || req.method === 'PATCH') {
+        let body = '';
+        await new Promise((resolve) => {
+            req.on('data', chunk => body += chunk);
+            req.on('end', () => {
+                try {
+                    req.body = body ? JSON.parse(body) : {};
+                } catch(e) {
+                    req.body = body;
+                }
+                resolve();
+            });
+        });
+    }
+    try {
+        await handlerFn(req, res);
+    } catch (err) {
+        if (!res.headersSent) {
+            res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+    }
+}
 
 const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.join(__dirname, 'data');
@@ -68,6 +114,25 @@ const server = http.createServer(async (req, res) => {
 
     const reqUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
     const pathname = reqUrl.pathname;
+
+    // ==========================================
+    // ROTAS DE CAIXA POSTAL & COMUNICADOS
+    // ==========================================
+    if (pathname === '/api/contact/list') {
+        return handleServerlessFunction(contactListHandler, req, res);
+    }
+    if (pathname === '/api/contact/send') {
+        return handleServerlessFunction(contactSendHandler, req, res);
+    }
+    if (pathname === '/api/contact/update-status') {
+        return handleServerlessFunction(contactUpdateStatusHandler, req, res);
+    }
+    if (pathname === '/api/admin/broadcasts') {
+        return handleServerlessFunction(adminBroadcastsHandler, req, res);
+    }
+    if (pathname === '/api/admin/auth') {
+        return handleServerlessFunction(adminAuthHandler, req, res);
+    }
 
     // ==========================================
     // 1. API: SALVAR SINCRONIZAÇÃO EM NUVEM
@@ -346,6 +411,85 @@ const server = http.createServer(async (req, res) => {
         });
         return;
     }
+
+    // ==========================================
+    // API: UPLOAD E ATUALIZAR IMAGEM
+    // ==========================================
+    if (pathname === '/api/admin/upload-saint-image' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const { date, saintName, base64Data, filename } = JSON.parse(body);
+                const buffer = Buffer.from(base64Data.split(',')[1], 'base64');
+                const savePath = path.join(__dirname, 'assets', 'img', 'santos', filename);
+                
+                fs.writeFileSync(savePath, buffer);
+
+                // Atualiza o JSON
+                const filePath = path.join(DATA_DIR, 'santos', '2026', `${date}.json`);
+                const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                data.saints = data.saints.map(s => {
+                    if (s.name === saintName) return { ...s, imageUrl: `./assets/img/santos/${filename}` };
+                    return s;
+                });
+                fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+                
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: true }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
+    // API: ATUALIZAR IMAGEM DO SANTO
+    // ==========================================
+    if (pathname === '/api/admin/update-saint-image' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const { date, saintName, newImageUrl } = JSON.parse(body);
+                if (!date || !saintName || !newImageUrl) {
+                    res.writeHead(400, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Dados incompletos.' }));
+                    return;
+                }
+                const filePath = path.join(DATA_DIR, 'santos', '2026', `${date}.json`);
+                if (!fs.existsSync(filePath)) {
+                    res.writeHead(404, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Arquivo não encontrado.' }));
+                    return;
+                }
+                const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                let found = false;
+                data.saints = (data.saints || []).map(s => {
+                    if (s.name === saintName) {
+                        found = true;
+                        return { ...s, imageUrl: newImageUrl };
+                    }
+                    return s;
+                });
+                if (!found) {
+                    res.writeHead(404, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Santo não encontrado.' }));
+                    return;
+                }
+                fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: true }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
 
     // ==========================================
     // 5. SERVIDOR DE ARQUIVOS ESTÁTICOS

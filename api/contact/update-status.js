@@ -5,7 +5,7 @@
 // Mantem uma unica funcao para nao estourar o limite de 12 funcoes do plano gratuito.
 import { updateMessageInDatabase, deleteMessageInDatabase } from '../_db.js';
 
-const ACOES = ['read', 'archive', 'unarchive', 'delete', 'hide-student', 'unhide-student'];
+const ACOES = ['read', 'archive', 'unarchive', 'delete', 'hide-student', 'unhide-student', 'reply'];
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -42,8 +42,15 @@ export default async function handler(req, res) {
     if (acao === 'hide-student') { updates.ocultadaParaAluno = true; updates.hiddenAt = new Date().toISOString(); }
     if (acao === 'unhide-student') updates.ocultadaParaAluno = false;
 
+    if (acao === 'reply') {
+      if (!reply || !String(reply).trim()) return res.status(400).json({ success: false, error: 'Escreva a resposta antes de enviar.' });
+      updates.reply = String(reply).trim();
+      updates.repliedAt = new Date().toISOString();
+      updates.status = 'respondido';
+    }
+
     if (status) updates.status = status;
-    if (reply) {
+    if (reply && !updates.reply) {
       updates.reply = reply;
       updates.repliedAt = new Date().toISOString();
       updates.status = 'respondido';
