@@ -6,15 +6,7 @@
       "destination": "/auditoria.html"
     },
     {
-      "source": "/auditoria.html",
-      "destination": "/auditoria.html"
-    },
-    {
-      "source": "/test_santos_dinamico.html",
-      "destination": "/test_santos_dinamico.html"
-    },
-    {
-      "source": "/((?!api/|auditoria|test_santos).*)",
+      "source": "/((?!assets/|data/|api/|auditoria|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]

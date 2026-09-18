@@ -430,17 +430,23 @@ const server = http.createServer(async (req, res) => {
 
         (async () => {
             try {
-                await runGit(['add', 'data/santos', 'assets/img/santos']);
+                await runGit(['add', '-A']);
+                let committed = false;
                 try {
                     await runGit(['commit', '-m', `feat(santos): atualizar imagens e curadoria de santos [${new Date().toLocaleDateString('pt-BR')}]`]);
+                    committed = true;
                 } catch(commitErr) {
-                    if (!commitErr.message.includes('nothing to commit')) throw commitErr;
+                    const msg = (commitErr.message || '').toLowerCase();
+                    const isNothing = msg.includes('nothing') || msg.includes('no changes') || msg.includes('nada') || msg.includes('limp') || msg.includes('clean');
+                    if (!isNothing) {
+                        throw commitErr;
+                    }
                 }
                 const pushOut = await runGit(['push', 'origin', 'main']);
                 res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
                 res.end(JSON.stringify({ 
                     success: true, 
-                    message: 'Atualizações enviadas com sucesso para a Vercel! O site estará atualizado em instantes.',
+                    message: committed ? 'Atualizações enviadas com sucesso para a Vercel! O site estará atualizado em instantes.' : 'Tudo já estava atualizado na nuvem!',
                     output: pushOut
                 }));
             } catch (err) {

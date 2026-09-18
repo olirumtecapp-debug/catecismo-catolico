@@ -379,7 +379,6 @@
 
             try {
                 const res = await fetch('/api/admin/publish-to-vercel', { method: 'POST' });
-                if (!res.ok) throw new Error(`Status ${res.status}: ambiente sem suporte a comandos locais.`);
                 const data = await res.json();
                 if (data.success) {
                     showToast('✅ ' + data.message, 'success');
@@ -415,7 +414,6 @@
 
             try {
                 const res = await fetch('/api/admin/pull-from-vercel', { method: 'POST' });
-                if (!res.ok) throw new Error(`Status ${res.status}: ambiente sem suporte a comandos locais.`);
                 const data = await res.json();
                 if (data.success) {
                     showToast('✅ ' + data.message, 'success');

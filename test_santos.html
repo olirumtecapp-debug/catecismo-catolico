@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Santos - Catecismo</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .saint-card { border: 1px solid #ccc; padding: 10px; margin: 10px; width: 200px; display: inline-block; vertical-align: top; }
+        img { max-width: 100%; height: auto; }
+        .pagination { margin: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Santos</h1>
+    <div id="content"></div>
+    <div class="pagination" id="pagination"></div>
+
+    <script>
+        const saintsData = []; // This will be populated (simulated for now or fetched)
+        // Since I cannot easily "fetch" all files from client-side without a server listing, 
+        // I will write a simple script that assumes a pre-built list or just a few test files.
+        // I'll create a script that lists the saints found in the first few days.
+        
+        async function loadSaints() {
+            // In a real production app, you might have an index or a fetch to a backend.
+            // For this test page, I will hardcode the first 5 days.
+            const days = ['2026-01-01', '2026-01-02', '2026-01-03', '2026-01-04', '2026-01-05'];
+            for (const day of days) {
+                const response = await fetch(`./data/santos/2026/${day}.json`);
+                const data = await response.json();
+                data.saints.forEach(s => saintsData.push({...s, date: day}));
+            }
+            render(1);
+        }
+
+        function render(page) {
+            const content = document.getElementById('content');
+            content.innerHTML = '';
+            saintsData.slice((page-1)*10, page*10).forEach((s, idx) => {
+                content.innerHTML += `
+                    <div class="saint-card">
+                        <p>${idx + 1 + (page-1)*10}. <strong>${s.name}</strong> (${s.date})</p>
+                        <img src="${s.imageUrl.replace('./', '')}" alt="${s.name}" onerror="this.src='https://via.placeholder.com/150';">
+                    </div>
+                `;
+            });
+        }
+        loadSaints();
+    </script>
+</body>
+</html>
