@@ -5830,8 +5830,9 @@
                     gospelText = 'O Senhor esteja convosco. Proclamação do Evangelho de Jesus Cristo. Glória a vós, Senhor. Naquele tempo, Jesus dizia aos seus discípulos as palavras da vida eterna. Palavra da Salvação. Glória a vós, Senhor.';
                 }
 
-                // Tratamento e limpeza do texto
-                let cleanText = gospelText.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+                // Tratamento e limpeza litúrgica primorosa do texto
+                let cleanText = this.cleanGospelText(gospelText);
+                let formattedRef = this.formatGospelRef(gospelRef);
 
                 // Formatação da data
                 let formattedDate = date;
@@ -5943,8 +5944,8 @@
                     maxWords = 130;
                 } else if (format === 'quadrado') {
                     topOffset = -55;
-                    boxY = 240;
-                    boxH = 580;
+                    boxY = 235;
+                    boxH = 590;
                     maxLines = 10;
                     fontSize = 23;
                     lineSpacing = 34;
@@ -5975,35 +5976,44 @@
                 ctx.fillStyle = '#F3E5AB';
                 ctx.fillText(formattedDate.toUpperCase(), 540, 220 + topOffset);
 
-                // Referência Bíblica
+                // Referência Bíblica Formatada
                 ctx.font = 'bold 28px Georgia, serif';
                 ctx.fillStyle = '#FFFFFF';
-                ctx.fillText(`« ${gospelRef} »`, 540, 270 + topOffset);
+                ctx.fillText(`« ${formattedRef} »`, 540, 270 + topOffset);
 
                 // 6. Quadro interno translúcido do Evangelho
-                ctx.fillStyle = 'rgba(15, 34, 62, 0.82)';
+                ctx.fillStyle = 'rgba(15, 34, 62, 0.84)';
                 ctx.fillRect(85, boxY, 910, boxH);
-                ctx.strokeStyle = 'rgba(212, 175, 55, 0.35)';
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.38)';
                 ctx.lineWidth = 1;
                 ctx.strokeRect(85, boxY, 910, boxH);
 
-                // Aspas
-                ctx.font = 'italic bold 60px Georgia, serif';
+                // Rótulo Sacro de Abertura
                 ctx.fillStyle = '#D4AF37';
-                ctx.fillText('“', 135, boxY + 65);
+                ctx.font = 'bold 15px Georgia, serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('☩  PALAVRA DO SENHOR  ☩', 540, boxY + 42);
 
-                // Texto do Evangelho
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.3)';
+                ctx.beginPath();
+                ctx.moveTo(380, boxY + 54);
+                ctx.lineTo(700, boxY + 54);
+                ctx.stroke();
+
+                // Texto do Evangelho truncado por frases completas
+                let textToRender = this.truncateToSentence(cleanText, maxWords);
+                const openQ = (textToRender.match(/“/g) || []).length;
+                const closeQ = (textToRender.match(/”/g) || []).length;
+                if (openQ > closeQ) {
+                    textToRender += '”';
+                }
+
                 ctx.font = `${fontSize}px Georgia, serif`;
                 ctx.fillStyle = '#F8FAFC';
                 ctx.textAlign = 'left';
 
-                let words = cleanText.split(' ');
-                if (words.length > maxWords) {
-                    words = words.slice(0, maxWords);
-                    words.push('[...]');
-                }
-                const lines = wrapText(words.join(' '), 810);
-                let curY = boxY + 90;
+                const lines = wrapText(textToRender, 810);
+                let curY = boxY + (format === 'story' ? 115 : 95);
                 const maxL = Math.min(lines.length, maxLines);
                 for (let i = 0; i < maxL; i++) {
                     ctx.fillText(lines[i], 135, curY);
@@ -6014,7 +6024,7 @@
                 ctx.textAlign = 'center';
                 ctx.font = 'italic bold 21px Georgia, serif';
                 ctx.fillStyle = '#F3E5AB';
-                ctx.fillText('— Palavra da Salvação. Glória a Vós, Senhor. —', 540, boxY + boxH - 30);
+                ctx.fillText('— Palavra da Salvação. Glória a Vós, Senhor. —', 540, boxY + boxH - 26);
 
                 // 7. Meditação Breve
                 let med = (lit && lit.reflection) ? lit.reflection : '« Quem tem ouvidos para ouvir, ouça! Que a Palavra de Cristo habite ricamente em vossos corações. »';
@@ -6025,15 +6035,19 @@
                     medWords.push('...');
                 }
 
-                const medY = format === 'story' ? boxY + boxH + 75 : (format === 'quadrado' ? boxY + boxH + 50 : 1090);
-                ctx.font = 'italic 20px Georgia, serif';
-                ctx.fillStyle = '#CBD5E1';
-                ctx.fillText(`“${medWords.join(' ')}”`, 540, medY);
+                const medY = format === 'story' ? boxY + boxH + 85 : (format === 'quadrado' ? boxY + boxH + 48 : 1095);
+                ctx.font = 'bold 13px system-ui, -apple-system, sans-serif';
+                ctx.fillStyle = '#D4AF37';
+                ctx.fillText('🕊️ MEDITAÇÃO LITÚRGICA', 540, medY - 24);
+
+                ctx.font = 'italic 19px Georgia, serif';
+                ctx.fillStyle = '#E2E8F0';
+                ctx.fillText(`“${medWords.join(' ')}”`, 540, medY + 2);
 
                 // 8. Rodapé Oficial
-                const footerLineY = format === 'story' ? 1730 : (format === 'quadrado' ? 950 : 1170);
-                const footerText1Y = footerLineY + 38;
-                const footerText2Y = footerText1Y + 30;
+                const footerLineY = format === 'story' ? 1740 : (format === 'quadrado' ? 960 : 1175);
+                const footerText1Y = footerLineY + 36;
+                const footerText2Y = footerText1Y + 28;
 
                 ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
                 ctx.beginPath();
@@ -6059,10 +6073,52 @@
                     width: W,
                     height: H,
                     formattedDate,
-                    gospelRef,
+                    gospelRef: formattedRef,
                     cleanText,
                     medClean
                 };
+            },
+
+            cleanGospelText(text) {
+                if (!text) return '';
+                let t = text.replace(/<[^>]*>/g, ' ');
+                // Remove rubricas iniciais
+                t = t.replace(/^(\+?\s*proclama[cç][aã]o\s+do\s+evangelho[^\n.:]*[\n.:]+)/i, '');
+                // Remove números colados a palavras ou aspas (ex: " 4Reuniu-se", " 5'O", " 10Jesus", " 14Aquilo")
+                t = t.replace(/(^|\s)\d+(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, '$1$2$3');
+                // Remove números isolados entre espaços
+                t = t.replace(/\s+\d+\s+/g, ' ');
+                // Ajusta início "Naquele tempo: 4Reuniu" -> "Naquele tempo, reuniu"
+                t = t.replace(/^naquele tempo\s*:\s*([A-ZÀ-Ý])/i, (m, l) => 'Naquele tempo, ' + l.toLowerCase());
+                t = t.replace(/^naquele tempo\s*:\s*/i, 'Naquele tempo, ');
+                // Normaliza aspas para tipografia nobre
+                t = t.replace(/:\s*['’]/g, ': “');
+                t = t.replace(/['’]\s*\./g, '”.');
+                t = t.replace(/['’]\s*,/g, '”,');
+                t = t.replace(/['']/g, '”');
+                // Remove espaços redundantes
+                t = t.replace(/\s+/g, ' ').trim();
+                return t;
+            },
+
+            truncateToSentence(text, maxWords) {
+                const words = text.split(' ');
+                if (words.length <= maxWords) return text;
+                const subWords = words.slice(0, maxWords);
+                const subText = subWords.join(' ');
+                const lastPunct = Math.max(subText.lastIndexOf('.'), subText.lastIndexOf('!'), subText.lastIndexOf('?'));
+                if (lastPunct > subText.length * 0.6) {
+                    return subText.slice(0, lastPunct + 1);
+                }
+                return subWords.join(' ') + '...';
+            },
+
+            formatGospelRef(ref) {
+                if (!ref) return 'Evangelho de Jesus Cristo';
+                let r = ref.trim();
+                r = r.replace(/^proclama[cç][aã]o\s+do\s+evangelho\s+de\s+jesus\s+cristo\s+segundo\s+/i, 'Evangelho segundo ');
+                r = r.replace(/^evangelho\s+de\s+jesus\s+cristo\s+segundo\s+/i, 'Evangelho segundo ');
+                return r;
             },
 
             downloadCard(dataUrl, date, format = 'feed') {
