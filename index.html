@@ -411,15 +411,19 @@
                     <button onclick="router.navigate('oracao')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="oracao" data-menu-key="oracao">
                         <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-1.8 2.2-3.5 5-3.5 8a3.5 3.5 0 007 0c0-3-1.7-5.8-3.5-8zM8 15c0 3.5 2 6 4 7 2-1 4-3.5 4-7"/></svg> <span>Oração &amp; Lectio</span>
                     </button>
+                    <button onclick="router.navigate('reflexoes')" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="reflexoes" data-menu-key="reflexoes">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <svg class="w-4 h-4 shrink-0 text-amber-700 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            <span class="truncate">Diário Espiritual</span>
+                        </div>
+                        <span id="sidebar-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
+                    </button>
                     <button onclick="router.navigate('missa')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="missa" data-menu-key="missa">
                         <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 10h12c0 4-2.5 7-6 7s-6-3-6-7zM12 17v4m-4 0h8"/></svg> <span>A Santa Missa</span>
                     </button>
-                    <button onclick="PreceitosModal.open()" class="nav-item group w-full flex items-center justify-between gap-2 px-3 py-2 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-xs sm:text-sm text-left" data-menu-key="preceitos">
-                        <div class="flex items-center gap-2.5 min-w-0">
-                            <svg class="w-4 h-4 shrink-0 text-amber-600 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M11 7h2m-1-1v2"/></svg>
-                            <span class="truncate">Preceitos &amp; Calendário</span>
-                        </div>
-                        <span class="shrink-0 text-[9px] font-bold text-amber-700 bg-amber-50 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800 whitespace-nowrap">2026/30</span>
+                    <button onclick="PreceitosModal.open()" class="nav-item group w-full flex items-center gap-2.5 px-3 py-2 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-xs sm:text-sm text-left" data-menu-key="preceitos">
+                        <svg class="w-4 h-4 shrink-0 text-amber-600 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M11 7h2m-1-1v2"/></svg>
+                        <span class="truncate">Preceitos &amp; Calendário</span>
                     </button>
                 </div>
 
@@ -644,13 +648,16 @@
                         <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-mariana bg-blue-50/70 border border-blue-100 hover:bg-blue-100 hover:border-blue-200 transition text-sm shadow-sm">📖 Bíblia Sagrada <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-blue-700">Essencial</span></button>
                         <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">☩ Santo do Dia</button>
                         <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🙏 Oração & Lectio</button>
-                        <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
-                        <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <span class="flex items-center gap-2.5">
-                                <span>📜</span>
-                                <span>Preceitos &amp; Calendário</span>
+                        <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <span class="flex items-center gap-3">
+                                <span>📖</span>
+                                <span>Diário Espiritual &amp; Reflexões</span>
                             </span>
-                            <span class="shrink-0 text-[9px] font-bold text-amber-700 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800 whitespace-nowrap">2026/30</span>
+                            <span id="mobile-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
+                        </button>
+                        <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
+                        <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <span>📜 Preceitos &amp; Calendário</span>
                         </button>
                         <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🧠 Quizzes</button>
                         <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🎯 Planos de Estudo</button>
@@ -3920,6 +3927,11 @@
                         subtitleEl.innerText = "Roteiros guiados para sua jornada espiritual";
                         mainView.innerHTML = Views.renderPlanos();
                         break;
+                    case 'reflexoes':
+                        titleEl.innerText = "Diário Espiritual & Reflexões";
+                        subtitleEl.innerText = "Suas meditações e orações registradas na Lectio Divina";
+                        mainView.innerHTML = Views.renderReflexoes();
+                        break;
                     case 'favoritos':
                         titleEl.innerText = "Meus Favoritos";
                         subtitleEl.innerText = "Conteúdos salvos para consulta rápida";
@@ -4420,6 +4432,7 @@
                     }
                     const gospel = lit.gospel;
                     const savedNotes = (AppState.lectioNotes && AppState.lectioNotes[date]) || '';
+                    const savedNotesCount = Object.keys(AppState.lectioNotes || {}).filter(k => (AppState.lectioNotes[k] || '').trim().length > 0).length;
                     container.innerHTML = `
                         <div class="space-y-4">
                             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/80 pb-3">
@@ -4435,17 +4448,21 @@
                             <div class="bg-white p-5 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed max-h-72 overflow-y-auto custom-scrollbar font-serif">
                                 ${gospel.text.replace(/\n/g, '<br>')}
                             </div>
-                            <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200/60 space-y-2">
+                            <div class="bg-amber-50/60 dark:bg-amber-950/30 p-4 rounded-2xl border border-amber-200/70 dark:border-amber-800/50 space-y-2.5">
                                 <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold text-mariana flex items-center gap-1.5">
+                                    <span class="text-xs font-bold text-mariana dark:text-slate-100 flex items-center gap-1.5">
                                         <span>✍️</span> Seu Diário Espiritual (Lectio / Meditatio)
                                     </span>
-                                    <span id="lectio-saved-indicator" class="text-[10px] text-emerald-700 font-bold hidden">✓ Salvo localmente</span>
+                                    <span id="lectio-saved-indicator" class="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold hidden">✓ Salvo no Diário</span>
                                 </div>
-                                <textarea id="lectio-user-notes" placeholder="O que este Evangelho diz ao meu coração hoje? Escreva aqui sua oração ou propósito..." class="w-full p-3 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-mariana focus:border-mariana transition resize-y min-h-[70px] bg-white">${savedNotes}</textarea>
-                                <div class="flex justify-end">
-                                    <button onclick="saveLectioNotes('${date}')" class="px-3.5 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold transition shadow-sm">
-                                        Gravar Reflexão
+                                <textarea id="lectio-user-notes" placeholder="O que este Evangelho diz ao meu coração hoje? Escreva aqui sua oração ou propósito..." class="w-full p-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-100 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition resize-y min-h-[75px] bg-white dark:bg-slate-900 leading-relaxed font-serif">${savedNotes}</textarea>
+                                <div class="flex items-center justify-between pt-1">
+                                    <button type="button" onclick="ReflectionsManager.openModal()" class="text-xs font-bold text-amber-800 dark:text-amber-300 hover:text-amber-950 dark:hover:text-amber-100 flex items-center gap-1.5 cursor-pointer hover:underline transition">
+                                        <span>📖</span> <span>Minhas Reflexões</span>
+                                        <span class="bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 px-1.5 py-0.2 rounded-full text-[10px] font-mono font-bold">${savedNotesCount}</span>
+                                    </button>
+                                    <button onclick="saveLectioNotes('${date}')" class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer flex items-center gap-1.5">
+                                        <span>💾</span> <span>Gravar Reflexão</span>
                                     </button>
                                 </div>
                             </div>
@@ -5579,8 +5596,421 @@
                         </div>
                     </div>
                 `;
+            renderReflexoes() {
+                const list = ReflectionsManager.getReflections();
+                return `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-6 text-left">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100 dark:border-slate-700">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-2xl shadow-2xs shrink-0">
+                                        📖
+                                    </div>
+                                    <div>
+                                        <h2 class="font-serif text-2xl font-bold text-mariana dark:text-slate-100">Meu Diário Espiritual &amp; Reflexões</h2>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Suas meditações e orações pessoais registradas na Lectio Divina diária</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/60 text-xs font-bold text-amber-900 dark:text-amber-200 font-mono">
+                                        ${list.length} reflexão${list.length === 1 ? '' : 'ões'}
+                                    </span>
+                                    <button onclick="router.navigate('oracao')" class="px-3.5 py-1.5 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+                                        <span>✍️</span> <span>Escrever na Lectio de Hoje</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="reflections-view-container">
+                                ${ReflectionsManager.getReflectionsHtml()}
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
         };
+
+        /* ========================================================
+           GERENCIADOR DO DIÁRIO ESPIRITUAL & MINHAS REFLEXÕES
+           ======================================================== */
+        const ReflectionsManager = {
+            getReflections() {
+                const notes = AppState.lectioNotes || {};
+                const entries = [];
+                for (const [date, text] of Object.entries(notes)) {
+                    if (text && typeof text === 'string' && text.trim().length > 0) {
+                        entries.push({ date, text: text.trim() });
+                    }
+                }
+                // Ordenação cronológica decrescente (mais recente primeiro)
+                entries.sort((a, b) => b.date.localeCompare(a.date));
+                return entries;
+            },
+
+            updateBadges() {
+                const count = this.getReflections().length;
+                const badges = document.querySelectorAll('#sidebar-reflections-badge, #mobile-reflections-badge');
+                badges.forEach(b => {
+                    b.innerText = count;
+                });
+            },
+
+            deleteReflection(date) {
+                if (!confirm('Deseja realmente excluir esta reflexão do seu Diário Espiritual?')) return;
+                if (AppState.lectioNotes && AppState.lectioNotes[date]) {
+                    delete AppState.lectioNotes[date];
+                    saveState();
+                    if (window.CloudSyncManager) {
+                        CloudSyncManager.syncToCloud(false);
+                    }
+                    this.updateBadges();
+                    showToast('Reflexão excluída do seu diário.', 'info');
+                    const modalList = document.getElementById('reflections-modal-list');
+                    if (modalList) modalList.innerHTML = this.getReflectionsHtml();
+                    const viewList = document.getElementById('reflections-view-container');
+                    if (viewList) viewList.innerHTML = this.getReflectionsHtml();
+                }
+            },
+
+            openModal() {
+                const modal = document.getElementById('modal-container');
+                if (!modal) return;
+                modal.innerHTML = `
+                    <div class="bg-white dark:bg-slate-800 w-full max-w-2xl rounded-3xl p-5 md:p-7 text-left shadow-2xl border border-slate-200 dark:border-slate-700 relative max-h-[88vh] flex flex-col overflow-hidden">
+                        <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-lg transition cursor-pointer">✕</button>
+
+                        <div class="flex items-center gap-3.5 pb-4 border-b border-slate-100 dark:border-slate-700 shrink-0">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-2xl shadow-2xs shrink-0">
+                                📖
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100 leading-tight">
+                                    Meu Diário Espiritual &amp; Reflexões
+                                </h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                                    Suas meditações e orações pessoais salvas na Lectio Divina
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="reflections-modal-list" class="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-1 pt-3">
+                            ${this.getReflectionsHtml()}
+                        </div>
+                    </div>
+                `;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    const el = document.getElementById('reflections-modal-list');
+                    if (el) el.scrollTop = 0;
+                }, 10);
+            },
+
+            getReflectionsHtml() {
+                const list = this.getReflections();
+                if (list.length === 0) {
+                    return `
+                        <div class="p-8 text-center bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700/80 space-y-3">
+                            <span class="text-4xl block">✍️</span>
+                            <h4 class="font-serif font-bold text-base text-mariana dark:text-slate-200">Nenhuma reflexão gravada ainda</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto leading-relaxed">
+                                Ao realizar a sua Lectio Divina diária, registre o que o Evangelho falou ao seu coração e clique em "Gravar Reflexão". Suas anotações aparecerão organizadas aqui.
+                            </p>
+                            <button onclick="closeModal(); router.navigate('oracao');" class="mt-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer">
+                                Rezar a Lectio Divina de Hoje
+                            </button>
+                        </div>
+                    `;
+                }
+
+                const todayStr = getLocalDateString();
+
+                return `
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between px-1 text-xs text-slate-500 dark:text-slate-400 pb-1">
+                            <span class="font-bold uppercase tracking-wider text-[10px]">Total gravado: <span class="text-mariana dark:text-amber-400 font-mono text-xs">${list.length}</span></span>
+                            <span class="text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-medium">
+                                <span>☁️</span> <span>Sincronizado na Nuvem</span>
+                            </span>
+                        </div>
+                        ${list.map(r => {
+                            const isToday = r.date === todayStr;
+                            let formattedDate = r.date;
+                            try {
+                                const [y, m, d] = r.date.split('-');
+                                const dObj = new Date(parseInt(y), parseInt(m)-1, parseInt(d));
+                                formattedDate = dObj.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+                            } catch(e) {}
+
+                            const safeTextEscaped = escapeHtml(r.text);
+                            const textForClipboard = encodeURIComponent(r.text);
+
+                            return `
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/80 border ${isToday ? 'border-amber-400 dark:border-amber-600 bg-amber-50/20' : 'border-slate-200 dark:border-slate-700'} shadow-2xs space-y-2.5 hover:border-amber-300 transition">
+                                    <div class="flex items-center justify-between gap-2">
+                                        <div class="flex items-center gap-2">
+                                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold capitalize bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                                📅 ${formattedDate}
+                                            </span>
+                                            ${isToday ? `<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-500 text-white uppercase">Hoje</span>` : ''}
+                                        </div>
+                                        <span class="font-mono text-[10px] text-slate-400">${r.date}</span>
+                                    </div>
+
+                                    <div class="p-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-100 dark:border-slate-700/60 font-serif text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">
+                                        "${safeTextEscaped}"
+                                    </div>
+
+                                    <div class="flex items-center justify-between pt-1.5 border-t border-slate-100 dark:border-slate-800 text-xs">
+                                        <button type="button" onclick="closeModal(); router.navigate('oracao', '${r.date}');" class="text-mariana dark:text-blue-400 hover:underline font-bold text-[11px] flex items-center gap-1 cursor-pointer">
+                                            <span>📖</span> <span>Ver Evangelho / Lectio deste dia →</span>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" onclick="navigator.clipboard.writeText(decodeURIComponent('${textForClipboard}')); showToast('Reflexão copiada com sucesso!', 'success');" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-[10px] font-bold px-1.5 py-1 transition cursor-pointer" title="Copiar reflexão">
+                                                <span>📋 Copiar</span>
+                                            </button>
+                                            <button type="button" onclick="ReflectionsManager.deleteReflection('${r.date}')" class="text-slate-400 hover:text-rose-600 text-[10px] font-bold px-1.5 py-1 transition cursor-pointer" title="Excluir do Diário">
+                                                <span>🗑️ Excluir</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            }
+        };
+        window.ReflectionsManager = ReflectionsManager;
+
+        /* ========================================================
+           GERADOR DE CARDS SACROS DO EVANGELHO (100% GRATUITO - CANVAS)
+           ======================================================== */
+        const EvangelhoCardGenerator = {
+            async generateCard(targetDate) {
+                const date = targetDate || getLocalDateString();
+                let lit = null;
+                try {
+                    lit = await LiturgicalContentProvider.getLiturgicalDayAsync(date);
+                } catch(e) {}
+
+                let gospelRef = 'Evangelho de Jesus Cristo';
+                let gospelText = '';
+                if (lit && lit.gospel) {
+                    gospelRef = lit.gospel.reference || 'Evangelho de Jesus Cristo';
+                    gospelText = lit.gospel.text || '';
+                } else if (lit && lit.readings) {
+                    const g = lit.readings.find(r => (r.type || '').toLowerCase() === 'evangelho' || (r.title || '').toLowerCase().includes('evangelho'));
+                    if (g) {
+                        gospelRef = g.reference || g.title || 'Evangelho';
+                        gospelText = g.text || '';
+                    }
+                }
+
+                if (!gospelText) {
+                    gospelText = 'O Senhor esteja convosco. Proclamação do Evangelho de Jesus Cristo. Glória a vós, Senhor. Naquele tempo, Jesus dizia aos seus discípulos as palavras da vida eterna. Palavra da Salvação. Glória a vós, Senhor.';
+                }
+
+                // Tratamento e limpeza do texto
+                let cleanText = gospelText.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+
+                // Formatação da data
+                let formattedDate = date;
+                try {
+                    const [y, m, d] = date.split('-');
+                    const dObj = new Date(parseInt(y), parseInt(m) - 1, parseInt(d));
+                    formattedDate = dObj.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+                } catch(e) {}
+
+                // Canvas Instagram Post / WhatsApp HD (1080x1350)
+                const canvas = document.createElement('canvas');
+                canvas.width = 1080;
+                canvas.height = 1350;
+                const ctx = canvas.getContext('2d');
+
+                // 1. Fundo Gradiente Nobre Mariano
+                const bgGrad = ctx.createLinearGradient(0, 0, 0, 1350);
+                bgGrad.addColorStop(0, '#0B192C');
+                bgGrad.addColorStop(0.4, '#102A43');
+                bgGrad.addColorStop(1, '#07111D');
+                ctx.fillStyle = bgGrad;
+                ctx.fillRect(0, 0, 1080, 1350);
+
+                // 2. Halo Espiritual de Luz Dourada
+                const radGrad = ctx.createRadialGradient(540, 360, 40, 540, 450, 550);
+                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.16)');
+                radGrad.addColorStop(1, 'rgba(11, 25, 44, 0)');
+                ctx.fillStyle = radGrad;
+                ctx.fillRect(0, 0, 1080, 1350);
+
+                // 3. Moldura Dupla Dourada Sacra
+                ctx.strokeStyle = '#D4AF37';
+                ctx.lineWidth = 4;
+                ctx.strokeRect(40, 40, 1000, 1270);
+
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
+                ctx.lineWidth = 1.5;
+                ctx.strokeRect(52, 52, 976, 1246);
+
+                // Cantos ornamentados
+                function drawCorner(x, y, flipX, flipY) {
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.scale(flipX ? -1 : 1, flipY ? -1 : 1);
+                    ctx.strokeStyle = '#D4AF37';
+                    ctx.lineWidth = 2.5;
+                    ctx.beginPath();
+                    ctx.moveTo(0, 30);
+                    ctx.lineTo(0, 0);
+                    ctx.lineTo(30, 0);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+                drawCorner(60, 60, false, false);
+                drawCorner(1020, 60, true, false);
+                drawCorner(60, 1290, false, true);
+                drawCorner(1020, 1290, true, true);
+
+                // 4. Cruz Latina Dourada
+                ctx.fillStyle = '#D4AF37';
+                ctx.font = 'bold 40px serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('✝', 540, 120);
+
+                // 5. Título
+                ctx.font = 'bold 22px system-ui, -apple-system, sans-serif';
+                ctx.fillStyle = '#E2E8F0';
+                ctx.fillText('SANTO EVANGELHO DO DIA', 540, 160);
+
+                // Linha divisória
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.6)';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(340, 185);
+                ctx.lineTo(740, 185);
+                ctx.stroke();
+
+                // Data por extenso
+                ctx.font = 'italic 21px Georgia, serif';
+                ctx.fillStyle = '#F3E5AB';
+                ctx.fillText(formattedDate.toUpperCase(), 540, 220);
+
+                // Referência Bíblica
+                ctx.font = 'bold 28px Georgia, serif';
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fillText(`« ${gospelRef} »`, 540, 272);
+
+                // 6. Quadro interno translúcido do Evangelho
+                ctx.fillStyle = 'rgba(15, 34, 62, 0.78)';
+                ctx.fillRect(85, 315, 910, 715);
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.35)';
+                ctx.lineWidth = 1;
+                ctx.strokeRect(85, 315, 910, 715);
+
+                // Aspas
+                ctx.font = 'italic bold 64px Georgia, serif';
+                ctx.fillStyle = '#D4AF37';
+                ctx.fillText('“', 135, 380);
+
+                // Word wrap
+                function wrapText(text, maxWidth) {
+                    const words = text.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    for (let n = 0; n < words.length; n++) {
+                        const testLine = currentLine + (currentLine ? ' ' : '') + words[n];
+                        const metrics = ctx.measureText(testLine);
+                        if (metrics.width > maxWidth && n > 0) {
+                            lines.push(currentLine);
+                            currentLine = words[n];
+                        } else {
+                            currentLine = testLine;
+                        }
+                    }
+                    if (currentLine) lines.push(currentLine);
+                    return lines;
+                }
+
+                ctx.font = '26px Georgia, serif';
+                ctx.fillStyle = '#F8FAFC';
+                ctx.textAlign = 'left';
+
+                let words = cleanText.split(' ');
+                if (words.length > 90) {
+                    words = words.slice(0, 90);
+                    words.push('[...]');
+                }
+                const lines = wrapText(words.join(' '), 810);
+                let curY = 405;
+                const maxL = Math.min(lines.length, 13);
+                for (let i = 0; i < maxL; i++) {
+                    ctx.fillText(lines[i], 135, curY);
+                    curY += 38;
+                }
+
+                // Resposta litúrgica
+                ctx.textAlign = 'center';
+                ctx.font = 'italic bold 21px Georgia, serif';
+                ctx.fillStyle = '#F3E5AB';
+                ctx.fillText('— Palavra da Salvação. Glória a Vós, Senhor. —', 540, 990);
+
+                // 7. Meditação Breve
+                let med = (lit && lit.reflection) ? lit.reflection : '« Quem tem ouvidos para ouvir, ouça! Que a Palavra de Cristo habite ricamente em vossos corações. »';
+                let medClean = med.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+                let medWords = medClean.split(' ');
+                if (medWords.length > 24) {
+                    medWords = medWords.slice(0, 24);
+                    medWords.push('...');
+                }
+
+                ctx.font = 'italic 20px Georgia, serif';
+                ctx.fillStyle = '#CBD5E1';
+                ctx.fillText(`“${medWords.join(' ')}”`, 540, 1090);
+
+                // 8. Rodapé Oficial
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
+                ctx.beginPath();
+                ctx.moveTo(250, 1170);
+                ctx.lineTo(830, 1170);
+                ctx.stroke();
+
+                ctx.font = 'bold 20px system-ui, -apple-system, sans-serif';
+                ctx.fillStyle = '#D4AF37';
+                ctx.fillText('CATECISMO DA IGREJA CATÓLICA', 540, 1210);
+
+                ctx.font = '15px system-ui, -apple-system, sans-serif';
+                ctx.fillStyle = '#94A3B8';
+                ctx.fillText('catecismo.creativeam.com.br • Formação e Vida de Oração', 540, 1240);
+
+                const dataUrl = canvas.toDataURL('image/png');
+                return {
+                    canvas,
+                    dataUrl,
+                    date,
+                    formattedDate,
+                    gospelRef,
+                    cleanText,
+                    medClean
+                };
+            },
+
+            downloadCard(dataUrl, date) {
+                const a = document.createElement('a');
+                a.href = dataUrl;
+                a.download = `evangelho-catecismo-${date}.png`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                showToast('Card do Evangelho baixado em alta resolução!', 'success');
+            },
+
+            shareWhatsApp(gospelRef, cleanText, medClean, date) {
+                const text = `🕊️ *Santo Evangelho do Dia — Catecismo Católico*\n📅 _${date}_\n📖 *${gospelRef}*\n\n"${cleanText.slice(0, 300)}..."\n\n🙏 *Meditação:* _"${medClean.slice(0, 180)}..."_\n\n📲 *Leia a Liturgia Completa no Catecismo:*\nhttps://catecismo.creativeam.com.br`;
+                const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+                window.open(url, '_blank');
+            }
+        };
+        window.EvangelhoCardGenerator = EvangelhoCardGenerator;
 
         /* ==========================================
            5. FUNÇÕES AUXILIARES E INTERAÇÕES
@@ -5634,6 +6064,9 @@
                 MetricsTracker.trackReflectionSaved();
             }
             saveState();
+            if (window.ReflectionsManager) {
+                ReflectionsManager.updateBadges();
+            }
             const ind = document.getElementById('lectio-saved-indicator');
             if (ind) {
                 ind.classList.remove('hidden');
@@ -6014,10 +6447,12 @@
                 liturgia: { label: 'Liturgia Diária', enabled: true, icon: '📅', section: 'Vida Diária' },
                 santo: { label: 'Santo do Dia', enabled: true, icon: '🕊️', section: 'Vida Diária' },
                 oracao: { label: 'Oração & Santo Terço', enabled: true, icon: '📿', section: 'Vida Diária' },
+                reflexoes: { label: 'Diário Espiritual (Minhas Reflexões)', enabled: true, icon: '📖', section: 'Vida Diária' },
                 biblia: { label: 'Bíblia Sagrada', enabled: true, icon: '📖', section: 'Palavra & Magistério' },
                 catecismo: { label: 'Catecismo da Igreja', enabled: true, icon: '🏛️', section: 'Palavra & Magistério' },
                 'catecismo-completo': { label: 'Biblioteca do Catecismo', enabled: true, icon: '📚', section: 'Palavra & Magistério' },
                 livros: { label: 'Livraria Católica (Venda de Livros)', enabled: false, icon: '📖', section: 'Livraria & Recursos' }, // DESABILITADO POR PADRÃO!
+                evangelho_card: { label: 'Card do Evangelho (Instagram / WhatsApp)', enabled: false, icon: '📸', section: 'Mídia & Redes' }, // DESABILITADO NO MENU PÚBLICO INICIALMENTE!
                 missa: { label: 'A Santa Missa', enabled: true, icon: '⛪', section: 'Liturgia' },
                 quiz: { label: 'Quizzes da Fé', enabled: true, icon: '🧠', section: 'Formação' },
                 planos: { label: 'Planos de Estudo', enabled: true, icon: '🎯', section: 'Formação' },
@@ -9430,6 +9865,43 @@
                         <div id="admin-liturgia-feedback" class="text-xs text-slate-500 italic hidden"></div>
                     </div>
 
+                    <!-- GERADOR DE CARDS SACROS DO EVANGELHO (100% GRATUITO - INSTAGRAM & WHATSAPP) -->
+                    <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/10 via-amber-600/5 to-transparent border border-amber-300 dark:border-amber-800/60 space-y-4 text-left shadow-xs">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-amber-200/80 dark:border-amber-800/80 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-2xl bg-amber-500/20 text-amber-700 dark:text-amber-300 flex items-center justify-center text-xl shrink-0">
+                                    📸
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                                        Gerador de Cards Sacros do Evangelho
+                                        <span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200">100% Gratuito (Opção B)</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">Gera instantaneamente um card gráfico 1080x1350 em alta resolução para Instagram e WhatsApp com a pintura sacra clássica, Evangelho de hoje e meditação.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="generateAdminGospelCardPreview()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white text-xs font-bold shadow transition flex items-center gap-2 cursor-pointer">
+                                    <span>✨</span> <span>Gerar Card de Hoje</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Container de Preview do Card -->
+                        <div id="admin-card-generator-container" class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-amber-200 dark:border-slate-700 space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-500">
+                                <span>Preview do Card do Evangelho (1080x1350):</span>
+                                <span class="italic text-[11px] text-amber-700 dark:text-amber-300 font-medium">⚠️ O botão público no menu lateral está desabilitado para você poder testar aqui primeiro!</span>
+                            </div>
+                            <div id="admin-card-preview-box" class="flex flex-col md:flex-row items-center justify-center gap-6 p-6 rounded-xl bg-slate-100 dark:bg-slate-900/60 border border-dashed border-slate-300 dark:border-slate-700">
+                                <div class="text-center py-6 text-slate-500 dark:text-slate-400 text-xs w-full space-y-2">
+                                    <span class="text-3xl block">🖼️</span>
+                                    <p>Clique no botão <strong>"Gerar Card de Hoje"</strong> acima para criar o card em alta resolução pronto para redes sociais.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- GESTÃO DINÂMICA DE MENUS & MÓDULOS (FEATURE FLAGS) -->
                     <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 space-y-4 text-left">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-700/80 pb-4">
@@ -9532,6 +10004,63 @@
         window.promptAdminAccess = promptAdminAccess;
         window.verifyAdminPin = verifyAdminPin;
         window.renderAdminDashboardModal = renderAdminDashboardModal;
+
+        // ==========================================
+        // GERADOR DE CARDS SACROS (PREVIEW NO ADMIN)
+        // ==========================================
+        async function generateAdminGospelCardPreview(targetDate) {
+            const box = document.getElementById('admin-card-preview-box');
+            if (!box) return;
+            box.innerHTML = `
+                <div class="text-center py-8 text-slate-500 dark:text-slate-400 w-full flex flex-col items-center gap-3">
+                    <span class="animate-spin text-3xl">⏳</span>
+                    <span class="text-xs font-semibold">Renderizando pintura sacra e tipografia litúrgica em alta resolução (1080x1350)...</span>
+                </div>
+            `;
+            try {
+                const todayStr = targetDate || new Date().toISOString().split('T')[0];
+                const res = await EvangelhoCardGenerator.renderCard(todayStr);
+                window._lastGospelCard = res;
+                box.innerHTML = `
+                    <div class="w-full flex flex-col md:flex-row items-center gap-6 text-left">
+                        <div class="w-full max-w-[280px] sm:max-w-[320px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-500/40 bg-slate-950 shrink-0">
+                            <img src="${res.dataUrl}" alt="Card do Evangelho" class="w-full h-auto block rounded-xl">
+                        </div>
+                        <div class="flex-1 space-y-4">
+                            <div class="space-y-1">
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">✓ Card em Alta Resolução (1080x1350)</span>
+                                <h4 class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100">${res.gospelRef}</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Data Litúrgica: <strong>${res.formattedDate}</strong></p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
+                                <p class="font-bold text-slate-800 dark:text-slate-200">📱 Pronto para Redes Sociais & Mensagens:</p>
+                                <ul class="list-disc pl-4 space-y-1 text-[11px]">
+                                    <li><strong>Instagram (Feed & Stories):</strong> Formato vertical 4:5 nítido com arte sacra clássica.</li>
+                                    <li><strong>WhatsApp:</strong> Texto formatado com citações e link para aprofundamento.</li>
+                                    <li><strong>100% Gratuito:</strong> Gerado via Canvas nativo, sem custos e sem limite de uso.</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <button onclick="window.EvangelhoCardGenerator.downloadCard(window._lastGospelCard.dataUrl, window._lastGospelCard.date)" class="px-4 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow transition flex items-center gap-2 cursor-pointer">
+                                    <span>📥</span> <span>Baixar Imagem PNG</span>
+                                </button>
+                                <button onclick="window.EvangelhoCardGenerator.shareWhatsApp(window._lastGospelCard.gospelRef, window._lastGospelCard.cleanText, window._lastGospelCard.medClean, window._lastGospelCard.formattedDate)" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow transition flex items-center gap-2 cursor-pointer">
+                                    <span>💬</span> <span>Compartilhar no WhatsApp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } catch(e) {
+                console.error('Erro ao gerar card do Evangelho:', e);
+                box.innerHTML = `
+                    <div class="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-center text-xs text-rose-600 w-full">
+                        ⚠️ Não foi possível carregar a liturgia do dia para gerar o card: ${e.message}
+                    </div>
+                `;
+            }
+        }
+        window.generateAdminGospelCardPreview = generateAdminGospelCardPreview;
 
         // ==========================================
         // LITURGIA ADMIN: Status + Trigger (funções do painel)
@@ -10146,6 +10675,9 @@
             CloudSyncManager.init();
             MenuConfigManager.init();
             loadState();
+            if (window.ReflectionsManager) {
+                ReflectionsManager.updateBadges();
+            }
             router.navigate('home');
             ContactManager.init();
         };
