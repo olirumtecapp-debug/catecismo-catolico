@@ -5799,13 +5799,14 @@
 
         /* ========================================================
            GERADOR DE CARDS SACROS DO EVANGELHO (100% GRATUITO - CANVAS)
+           Suporta: Feed Instagram/Facebook (4:5), Stories/Status (9:16), Quadrado (1:1)
            ======================================================== */
         const EvangelhoCardGenerator = {
-            async renderCard(targetDate) {
-                return this.generateCard(targetDate);
+            async renderCard(targetDate, format = 'feed') {
+                return this.generateCard(targetDate, format);
             },
 
-            async generateCard(targetDate) {
+            async generateCard(targetDate, format = 'feed') {
                 const date = targetDate || getLocalDateString();
                 let lit = null;
                 try {
@@ -5840,35 +5841,51 @@
                     formattedDate = dObj.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
                 } catch(e) {}
 
-                // Canvas Instagram Post / WhatsApp HD (1080x1350)
+                // Formatos suportados:
+                // 'feed': 1080 x 1350 (4:5 - Feed Instagram & Facebook)
+                // 'story': 1080 x 1920 (9:16 - Stories Instagram, Facebook & Status WhatsApp)
+                // 'quadrado': 1080 x 1080 (1:1 - Post Quadrado Facebook & Instagram)
+                const W = 1080;
+                let H = 1350;
+                let formatLabel = 'Feed Instagram & Facebook (4:5)';
+                if (format === 'story') {
+                    H = 1920;
+                    formatLabel = 'Stories & Status WhatsApp (9:16)';
+                } else if (format === 'quadrado') {
+                    H = 1080;
+                    formatLabel = 'Post Quadrado Facebook & Instagram (1:1)';
+                }
+
                 const canvas = document.createElement('canvas');
-                canvas.width = 1080;
-                canvas.height = 1350;
+                canvas.width = W;
+                canvas.height = H;
                 const ctx = canvas.getContext('2d');
 
                 // 1. Fundo Gradiente Nobre Mariano
-                const bgGrad = ctx.createLinearGradient(0, 0, 0, 1350);
+                const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
                 bgGrad.addColorStop(0, '#0B192C');
                 bgGrad.addColorStop(0.4, '#102A43');
                 bgGrad.addColorStop(1, '#07111D');
                 ctx.fillStyle = bgGrad;
-                ctx.fillRect(0, 0, 1080, 1350);
+                ctx.fillRect(0, 0, W, H);
 
                 // 2. Halo Espiritual de Luz Dourada
-                const radGrad = ctx.createRadialGradient(540, 360, 40, 540, 450, 550);
-                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.16)');
+                const haloY = format === 'story' ? 460 : (format === 'quadrado' ? 300 : 360);
+                const radGrad = ctx.createRadialGradient(540, haloY, 40, 540, haloY + 80, 550);
+                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.18)');
                 radGrad.addColorStop(1, 'rgba(11, 25, 44, 0)');
                 ctx.fillStyle = radGrad;
-                ctx.fillRect(0, 0, 1080, 1350);
+                ctx.fillRect(0, 0, W, H);
 
                 // 3. Moldura Dupla Dourada Sacra
+                const pad = format === 'story' ? 50 : (format === 'quadrado' ? 35 : 40);
                 ctx.strokeStyle = '#D4AF37';
                 ctx.lineWidth = 4;
-                ctx.strokeRect(40, 40, 1000, 1270);
+                ctx.strokeRect(pad, pad, W - pad * 2, H - pad * 2);
 
                 ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
                 ctx.lineWidth = 1.5;
-                ctx.strokeRect(52, 52, 976, 1246);
+                ctx.strokeRect(pad + 12, pad + 12, W - (pad + 12) * 2, H - (pad + 12) * 2);
 
                 // Cantos ornamentados
                 function drawCorner(x, y, flipX, flipY) {
@@ -5884,93 +5901,120 @@
                     ctx.stroke();
                     ctx.restore();
                 }
-                drawCorner(60, 60, false, false);
-                drawCorner(1020, 60, true, false);
-                drawCorner(60, 1290, false, true);
-                drawCorner(1020, 1290, true, true);
+                drawCorner(pad + 20, pad + 20, false, false);
+                drawCorner(W - pad - 20, pad + 20, true, false);
+                drawCorner(pad + 20, H - pad - 20, false, true);
+                drawCorner(W - pad - 20, H - pad - 20, true, true);
+
+                // Word wrap helper
+                function wrapText(text, maxWidth) {
+                    const wordsArr = text.split(' ');
+                    const linesArr = [];
+                    let curLine = '';
+                    for (let n = 0; n < wordsArr.length; n++) {
+                        const testLine = curLine + (curLine ? ' ' : '') + wordsArr[n];
+                        const metrics = ctx.measureText(testLine);
+                        if (metrics.width > maxWidth && n > 0) {
+                            linesArr.push(curLine);
+                            curLine = wordsArr[n];
+                        } else {
+                            curLine = testLine;
+                        }
+                    }
+                    if (curLine) linesArr.push(curLine);
+                    return linesArr;
+                }
+
+                let topOffset = 0;
+                let boxY = 315;
+                let boxH = 715;
+                let maxLines = 13;
+                let fontSize = 26;
+                let lineSpacing = 38;
+                let maxWords = 90;
+
+                if (format === 'story') {
+                    topOffset = 100;
+                    boxY = 460;
+                    boxH = 1010;
+                    maxLines = 18;
+                    fontSize = 27;
+                    lineSpacing = 42;
+                    maxWords = 130;
+                } else if (format === 'quadrado') {
+                    topOffset = -55;
+                    boxY = 240;
+                    boxH = 580;
+                    maxLines = 10;
+                    fontSize = 23;
+                    lineSpacing = 34;
+                    maxWords = 65;
+                }
 
                 // 4. Cruz Latina Dourada
                 ctx.fillStyle = '#D4AF37';
-                ctx.font = 'bold 40px serif';
+                ctx.font = 'bold 38px serif';
                 ctx.textAlign = 'center';
-                ctx.fillText('✝', 540, 120);
+                ctx.fillText('✝', 540, 120 + topOffset);
 
                 // 5. Título
                 ctx.font = 'bold 22px system-ui, -apple-system, sans-serif';
                 ctx.fillStyle = '#E2E8F0';
-                ctx.fillText('SANTO EVANGELHO DO DIA', 540, 160);
+                ctx.fillText('SANTO EVANGELHO DO DIA', 540, 160 + topOffset);
 
                 // Linha divisória
                 ctx.strokeStyle = 'rgba(212, 175, 55, 0.6)';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
-                ctx.moveTo(340, 185);
-                ctx.lineTo(740, 185);
+                ctx.moveTo(340, 185 + topOffset);
+                ctx.lineTo(740, 185 + topOffset);
                 ctx.stroke();
 
                 // Data por extenso
                 ctx.font = 'italic 21px Georgia, serif';
                 ctx.fillStyle = '#F3E5AB';
-                ctx.fillText(formattedDate.toUpperCase(), 540, 220);
+                ctx.fillText(formattedDate.toUpperCase(), 540, 220 + topOffset);
 
                 // Referência Bíblica
                 ctx.font = 'bold 28px Georgia, serif';
                 ctx.fillStyle = '#FFFFFF';
-                ctx.fillText(`« ${gospelRef} »`, 540, 272);
+                ctx.fillText(`« ${gospelRef} »`, 540, 270 + topOffset);
 
                 // 6. Quadro interno translúcido do Evangelho
-                ctx.fillStyle = 'rgba(15, 34, 62, 0.78)';
-                ctx.fillRect(85, 315, 910, 715);
+                ctx.fillStyle = 'rgba(15, 34, 62, 0.82)';
+                ctx.fillRect(85, boxY, 910, boxH);
                 ctx.strokeStyle = 'rgba(212, 175, 55, 0.35)';
                 ctx.lineWidth = 1;
-                ctx.strokeRect(85, 315, 910, 715);
+                ctx.strokeRect(85, boxY, 910, boxH);
 
                 // Aspas
-                ctx.font = 'italic bold 64px Georgia, serif';
+                ctx.font = 'italic bold 60px Georgia, serif';
                 ctx.fillStyle = '#D4AF37';
-                ctx.fillText('“', 135, 380);
+                ctx.fillText('“', 135, boxY + 65);
 
-                // Word wrap
-                function wrapText(text, maxWidth) {
-                    const words = text.split(' ');
-                    const lines = [];
-                    let currentLine = '';
-                    for (let n = 0; n < words.length; n++) {
-                        const testLine = currentLine + (currentLine ? ' ' : '') + words[n];
-                        const metrics = ctx.measureText(testLine);
-                        if (metrics.width > maxWidth && n > 0) {
-                            lines.push(currentLine);
-                            currentLine = words[n];
-                        } else {
-                            currentLine = testLine;
-                        }
-                    }
-                    if (currentLine) lines.push(currentLine);
-                    return lines;
-                }
-
-                ctx.font = '26px Georgia, serif';
+                // Texto do Evangelho
+                ctx.font = `${fontSize}px Georgia, serif`;
                 ctx.fillStyle = '#F8FAFC';
                 ctx.textAlign = 'left';
 
                 let words = cleanText.split(' ');
-                if (words.length > 90) {
-                    words = words.slice(0, 90);
+                if (words.length > maxWords) {
+                    words = words.slice(0, maxWords);
                     words.push('[...]');
                 }
                 const lines = wrapText(words.join(' '), 810);
-                let curY = 405;
-                const maxL = Math.min(lines.length, 13);
+                let curY = boxY + 90;
+                const maxL = Math.min(lines.length, maxLines);
                 for (let i = 0; i < maxL; i++) {
                     ctx.fillText(lines[i], 135, curY);
-                    curY += 38;
+                    curY += lineSpacing;
                 }
 
                 // Resposta litúrgica
                 ctx.textAlign = 'center';
                 ctx.font = 'italic bold 21px Georgia, serif';
                 ctx.fillStyle = '#F3E5AB';
-                ctx.fillText('— Palavra da Salvação. Glória a Vós, Senhor. —', 540, 990);
+                ctx.fillText('— Palavra da Salvação. Glória a Vós, Senhor. —', 540, boxY + boxH - 30);
 
                 // 7. Meditação Breve
                 let med = (lit && lit.reflection) ? lit.reflection : '« Quem tem ouvidos para ouvir, ouça! Que a Palavra de Cristo habite ricamente em vossos corações. »';
@@ -5981,30 +6025,39 @@
                     medWords.push('...');
                 }
 
+                const medY = format === 'story' ? boxY + boxH + 75 : (format === 'quadrado' ? boxY + boxH + 50 : 1090);
                 ctx.font = 'italic 20px Georgia, serif';
                 ctx.fillStyle = '#CBD5E1';
-                ctx.fillText(`“${medWords.join(' ')}”`, 540, 1090);
+                ctx.fillText(`“${medWords.join(' ')}”`, 540, medY);
 
                 // 8. Rodapé Oficial
+                const footerLineY = format === 'story' ? 1730 : (format === 'quadrado' ? 950 : 1170);
+                const footerText1Y = footerLineY + 38;
+                const footerText2Y = footerText1Y + 30;
+
                 ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
                 ctx.beginPath();
-                ctx.moveTo(250, 1170);
-                ctx.lineTo(830, 1170);
+                ctx.moveTo(250, footerLineY);
+                ctx.lineTo(830, footerLineY);
                 ctx.stroke();
 
                 ctx.font = 'bold 20px system-ui, -apple-system, sans-serif';
                 ctx.fillStyle = '#D4AF37';
-                ctx.fillText('CATECISMO DA IGREJA CATÓLICA', 540, 1210);
+                ctx.fillText('CATECISMO DA IGREJA CATÓLICA', 540, footerText1Y);
 
                 ctx.font = '15px system-ui, -apple-system, sans-serif';
                 ctx.fillStyle = '#94A3B8';
-                ctx.fillText('catecismo.creativeam.com.br • Formação e Vida de Oração', 540, 1240);
+                ctx.fillText('catecismo.creativeam.com.br • Formação e Vida de Oração', 540, footerText2Y);
 
                 const dataUrl = canvas.toDataURL('image/png');
                 return {
                     canvas,
                     dataUrl,
                     date,
+                    format,
+                    formatLabel,
+                    width: W,
+                    height: H,
                     formattedDate,
                     gospelRef,
                     cleanText,
@@ -6012,20 +6065,46 @@
                 };
             },
 
-            downloadCard(dataUrl, date) {
+            downloadCard(dataUrl, date, format = 'feed') {
                 const a = document.createElement('a');
                 a.href = dataUrl;
-                a.download = `evangelho-catecismo-${date}.png`;
+                a.download = `evangelho-catecismo-${date}-${format}.png`;
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
-                showToast('Card do Evangelho baixado em alta resolução!', 'success');
+                showToast(`Card (${format.toUpperCase()}) baixado em alta resolução!`, 'success');
             },
 
             shareWhatsApp(gospelRef, cleanText, medClean, date) {
                 const text = `🕊️ *Santo Evangelho do Dia — Catecismo Católico*\n📅 _${date}_\n📖 *${gospelRef}*\n\n"${cleanText.slice(0, 300)}..."\n\n🙏 *Meditação:* _"${medClean.slice(0, 180)}..."_\n\n📲 *Leia a Liturgia Completa no Catecismo:*\nhttps://catecismo.creativeam.com.br`;
                 const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
                 window.open(url, '_blank');
+            },
+
+            getAIPrompt(gospelRef, cleanText, formattedDate) {
+                return `Pode gerar uma imagem com o evangelho a seguir em um formato para postar no Instagram e Facebook:
+Gerar uma imagem sacra clássica condizente com o texto litúrgico católico, por favor. Fazer uma breve reflexão e uma meditação curta sobre.
+
+Proclamação do Evangelho de Jesus Cristo segundo ${gospelRef}:
+"${cleanText}"
+Palavra da Salvação. Glória a Vós, Senhor.`;
+            },
+
+            getSocialCaption(gospelRef, cleanText, medClean, formattedDate) {
+                return `🕊️ Santo Evangelho do Dia — ${formattedDate}
+📖 ${gospelRef}
+
+"${cleanText}"
+
+— Palavra da Salvação. Glória a Vós, Senhor.
+
+🙏 Meditação:
+"${medClean}"
+
+📲 Acompanhe a Liturgia Diária completa, reflexões e orações no aplicativo Catecismo Católico:
+https://catecismo.creativeam.com.br
+
+#EvangelhoDoDia #LiturgiaDiaria #PalavraDeDeus #IgrejaCatolica #Catecismo #Oracao #FeCatolica #JesusCristo`;
             }
         };
         window.EvangelhoCardGenerator = EvangelhoCardGenerator;
@@ -9883,7 +9962,7 @@
                         <div id="admin-liturgia-feedback" class="text-xs text-slate-500 italic hidden"></div>
                     </div>
 
-                    <!-- GERADOR DE CARDS SACROS DO EVANGELHO (100% GRATUITO - INSTAGRAM & WHATSAPP) -->
+                    <!-- GERADOR DE CARDS SACROS DO EVANGELHO (100% GRATUITO - INSTAGRAM, FACEBOOK & WHATSAPP) -->
                     <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/10 via-amber-600/5 to-transparent border border-amber-300 dark:border-amber-800/60 space-y-4 text-left shadow-xs">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-amber-200/80 dark:border-amber-800/80 pb-4">
                             <div class="flex items-center gap-3">
@@ -9892,29 +9971,41 @@
                                 </div>
                                 <div>
                                     <h4 class="font-serif text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
-                                        Gerador de Cards Sacros do Evangelho
+                                        Gerador de Cards Sacros (Instagram, Facebook & WhatsApp)
                                         <span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200">100% Gratuito (Opção B)</span>
                                     </h4>
-                                    <p class="text-xs text-slate-600 dark:text-slate-400">Gera instantaneamente um card gráfico 1080x1350 em alta resolução para Instagram e WhatsApp com a pintura sacra clássica, Evangelho de hoje e meditação.</p>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">Gera imagens prontas nos formatos de postagem do Instagram, Facebook e WhatsApp, além de fornecer a legenda pronta e o prompt para ChatGPT.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <button onclick="generateAdminGospelCardPreview()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white text-xs font-bold shadow transition flex items-center gap-2 cursor-pointer">
-                                    <span>✨</span> <span>Gerar Card de Hoje</span>
-                                </button>
-                            </div>
+                        </div>
+
+                        <!-- Seletor de Formato das Redes Sociais -->
+                        <div class="flex flex-wrap items-center gap-2 pt-1">
+                            <span class="text-xs font-bold text-slate-700 dark:text-slate-300 mr-1">Formato:</span>
+                            <button type="button" onclick="setAdminCardFormat('feed')" id="btn-fmt-feed" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-mariana text-white shadow-xs cursor-pointer">
+                                <span>📱</span> <span>Feed Instagram / Facebook (4:5)</span>
+                            </button>
+                            <button type="button" onclick="setAdminCardFormat('story')" id="btn-fmt-story" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-amber-400 cursor-pointer">
+                                <span>📲</span> <span>Stories & Status (9:16)</span>
+                            </button>
+                            <button type="button" onclick="setAdminCardFormat('quadrado')" id="btn-fmt-quadrado" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-amber-400 cursor-pointer">
+                                <span>🟦</span> <span>Post Quadrado Facebook (1:1)</span>
+                            </button>
+                            <button type="button" onclick="generateAdminGospelCardPreview()" class="ml-auto px-4 py-1.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white text-xs font-bold shadow transition flex items-center gap-1.5 cursor-pointer">
+                                <span>✨</span> <span>Gerar / Atualizar Card</span>
+                            </button>
                         </div>
 
                         <!-- Container de Preview do Card -->
                         <div id="admin-card-generator-container" class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-amber-200 dark:border-slate-700 space-y-3">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-500">
-                                <span>Preview do Card do Evangelho (1080x1350):</span>
-                                <span class="italic text-[11px] text-amber-700 dark:text-amber-300 font-medium">⚠️ O botão público no menu lateral está desabilitado para você poder testar aqui primeiro!</span>
+                                <span id="admin-card-format-title">Preview do Card do Evangelho (Feed 1080x1350):</span>
+                                <span class="italic text-[11px] text-amber-700 dark:text-amber-300 font-medium">⚠️ O botão público no menu lateral está desabilitado para você testar aqui!</span>
                             </div>
                             <div id="admin-card-preview-box" class="flex flex-col md:flex-row items-center justify-center gap-6 p-6 rounded-xl bg-slate-100 dark:bg-slate-900/60 border border-dashed border-slate-300 dark:border-slate-700">
                                 <div class="text-center py-6 text-slate-500 dark:text-slate-400 text-xs w-full space-y-2">
                                     <span class="text-3xl block">🖼️</span>
-                                    <p>Clique no botão <strong>"Gerar Card de Hoje"</strong> acima para criar o card em alta resolução pronto para redes sociais.</p>
+                                    <p>Clique em <strong>"Gerar / Atualizar Card"</strong> acima para criar o card em alta resolução pronto para redes sociais.</p>
                                 </div>
                             </div>
                         </div>
@@ -10026,44 +10117,89 @@
         // ==========================================
         // GERADOR DE CARDS SACROS (PREVIEW NO ADMIN)
         // ==========================================
+        let currentAdminCardFormat = 'feed';
+
+        function setAdminCardFormat(fmt) {
+            currentAdminCardFormat = fmt;
+            ['feed', 'story', 'quadrado'].forEach(f => {
+                const btn = document.getElementById(`btn-fmt-${f}`);
+                if (btn) {
+                    if (f === fmt) {
+                        btn.className = "px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-mariana text-white shadow-xs cursor-pointer";
+                    } else {
+                        btn.className = "px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-amber-400 cursor-pointer";
+                    }
+                }
+            });
+            const titleEl = document.getElementById('admin-card-format-title');
+            if (titleEl) {
+                const labels = {
+                    feed: 'Feed Instagram & Facebook (4:5 • 1080x1350)',
+                    story: 'Stories & Status WhatsApp (9:16 • 1080x1920)',
+                    quadrado: 'Post Quadrado Facebook & Instagram (1:1 • 1080x1080)'
+                };
+                titleEl.textContent = `Preview do Card do Evangelho (${labels[fmt] || fmt}):`;
+            }
+            generateAdminGospelCardPreview();
+        }
+        window.setAdminCardFormat = setAdminCardFormat;
+
         async function generateAdminGospelCardPreview(targetDate) {
             const box = document.getElementById('admin-card-preview-box');
             if (!box) return;
+            const format = currentAdminCardFormat || 'feed';
             box.innerHTML = `
                 <div class="text-center py-8 text-slate-500 dark:text-slate-400 w-full flex flex-col items-center gap-3">
                     <span class="animate-spin text-3xl">⏳</span>
-                    <span class="text-xs font-semibold">Renderizando pintura sacra e tipografia litúrgica em alta resolução (1080x1350)...</span>
+                    <span class="text-xs font-semibold">Renderizando arte sacra em alta resolução (${format.toUpperCase()})...</span>
                 </div>
             `;
             try {
                 const todayStr = targetDate || new Date().toISOString().split('T')[0];
-                const res = await (typeof EvangelhoCardGenerator.renderCard === 'function' ? EvangelhoCardGenerator.renderCard(todayStr) : EvangelhoCardGenerator.generateCard(todayStr));
+                const res = await EvangelhoCardGenerator.renderCard(todayStr, format);
                 window._lastGospelCard = res;
+
+                const aiPrompt = EvangelhoCardGenerator.getAIPrompt(res.gospelRef, res.cleanText, res.formattedDate);
+                const socialCaption = EvangelhoCardGenerator.getSocialCaption(res.gospelRef, res.cleanText, res.medClean, res.formattedDate);
+                window._lastAIPrompt = aiPrompt;
+                window._lastSocialCaption = socialCaption;
+
                 box.innerHTML = `
-                    <div class="w-full flex flex-col md:flex-row items-center gap-6 text-left">
-                        <div class="w-full max-w-[280px] sm:max-w-[320px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-500/40 bg-slate-950 shrink-0">
+                    <div class="w-full flex flex-col lg:flex-row items-center gap-6 text-left">
+                        <div class="w-full max-w-[260px] sm:max-w-[300px] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-500/40 bg-slate-950 shrink-0">
                             <img src="${res.dataUrl}" alt="Card do Evangelho" class="w-full h-auto block rounded-xl">
                         </div>
-                        <div class="flex-1 space-y-4">
+                        <div class="flex-1 space-y-3.5 w-full">
                             <div class="space-y-1">
-                                <span class="px-2.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">✓ Card em Alta Resolução (1080x1350)</span>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">✓ ${res.formatLabel}</span>
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">${res.width}x${res.height}px</span>
+                                </div>
                                 <h4 class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100">${res.gospelRef}</h4>
                                 <p class="text-xs text-slate-500 dark:text-slate-400">Data Litúrgica: <strong>${res.formattedDate}</strong></p>
                             </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
-                                <p class="font-bold text-slate-800 dark:text-slate-200">📱 Pronto para Redes Sociais & Mensagens:</p>
-                                <ul class="list-disc pl-4 space-y-1 text-[11px]">
-                                    <li><strong>Instagram (Feed & Stories):</strong> Formato vertical 4:5 nítido com arte sacra clássica.</li>
-                                    <li><strong>WhatsApp:</strong> Texto formatado com citações e link para aprofundamento.</li>
-                                    <li><strong>100% Gratuito:</strong> Gerado via Canvas nativo, sem custos e sem limite de uso.</li>
+
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 space-y-1">
+                                <p class="font-bold text-slate-800 dark:text-slate-200">📱 Formatos Disponíveis para Publicação:</p>
+                                <ul class="list-disc pl-4 space-y-0.5 text-[11px]">
+                                    <li><strong>Instagram & Facebook Feed (4:5):</strong> Não corta na rolagem do celular.</li>
+                                    <li><strong>Stories & Status WhatsApp (9:16):</strong> Tela cheia vertical nobre.</li>
+                                    <li><strong>Post Quadrado Facebook (1:1):</strong> Clássico para linha do tempo e carrossel.</li>
                                 </ul>
                             </div>
+
                             <div class="flex flex-wrap gap-2 pt-1">
-                                <button onclick="window.EvangelhoCardGenerator.downloadCard(window._lastGospelCard.dataUrl, window._lastGospelCard.date)" class="px-4 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow transition flex items-center gap-2 cursor-pointer">
+                                <button onclick="window.EvangelhoCardGenerator.downloadCard(window._lastGospelCard.dataUrl, window._lastGospelCard.date, window._lastGospelCard.format)" class="px-3.5 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold shadow transition flex items-center gap-1.5 cursor-pointer">
                                     <span>📥</span> <span>Baixar Imagem PNG</span>
                                 </button>
-                                <button onclick="window.EvangelhoCardGenerator.shareWhatsApp(window._lastGospelCard.gospelRef, window._lastGospelCard.cleanText, window._lastGospelCard.medClean, window._lastGospelCard.formattedDate)" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow transition flex items-center gap-2 cursor-pointer">
-                                    <span>💬</span> <span>Compartilhar no WhatsApp</span>
+                                <button onclick="window.EvangelhoCardGenerator.shareWhatsApp(window._lastGospelCard.gospelRef, window._lastGospelCard.cleanText, window._lastGospelCard.medClean, window._lastGospelCard.formattedDate)" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>💬</span> <span>WhatsApp</span>
+                                </button>
+                                <button onclick="navigator.clipboard.writeText(window._lastSocialCaption); showToast('Legenda completa com hashtags copiada!', 'success');" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow transition flex items-center gap-1.5 cursor-pointer" title="Copia o texto do post formatado para colar na legenda">
+                                    <span>📋</span> <span>Copiar Legenda (Insta/Face)</span>
+                                </button>
+                                <button onclick="navigator.clipboard.writeText(window._lastAIPrompt); showToast('Prompt com o Evangelho copiado para o ChatGPT!', 'info');" class="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold shadow transition flex items-center gap-1.5 cursor-pointer" title="Copia a instrução para o ChatGPT gerar imagem por IA">
+                                    <span>🤖</span> <span>Copiar Prompt p/ ChatGPT</span>
                                 </button>
                             </div>
                         </div>
