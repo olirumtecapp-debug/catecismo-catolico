@@ -52,6 +52,8 @@
         .custom-scrollbar::-webkit-scrollbar-track { background: #F9F8F6; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+        .no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .modal-backdrop { background: rgba(15, 34, 62, 0.6); backdrop-filter: blur(4px); }
     
         .overflow-wrap-anywhere{overflow-wrap:anywhere;word-break:break-word;}
@@ -8029,43 +8031,47 @@
                 const unreadBroadcasts = this.getUnreadBroadcasts();
 
                 modal.innerHTML = `
-                    <div class="bg-white dark:bg-slate-800 w-full max-w-xl rounded-3xl p-6 md:p-8 space-y-5 text-left shadow-2xl border border-slate-200 dark:border-slate-700 relative max-h-[90vh] flex flex-col">
+                    <div class="bg-white dark:bg-slate-800 w-full max-w-xl rounded-3xl p-5 md:p-7 text-left shadow-2xl border border-slate-200 dark:border-slate-700 relative max-h-[88vh] flex flex-col overflow-hidden">
                         <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-lg transition cursor-pointer">✕</button>
 
-                        <div class="flex items-center gap-3.5 pb-3 border-b border-slate-100 dark:border-slate-700">
-                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 flex items-center justify-center text-2xl shadow-2xs">
+                        <div class="flex items-center gap-3.5 pb-3 border-b border-slate-100 dark:border-slate-700 shrink-0">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 flex items-center justify-center text-2xl shadow-2xs shrink-0">
                                 📬
                             </div>
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100">
+                                <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100 leading-tight">
                                     Caixa Postal & Fale Conosco
                                 </h3>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                                     Comunicados da coordenação, dúvidas de fé, pedidos de oração e contato direto
                                 </p>
                             </div>
                         </div>
 
                         <!-- Abas de Navegação -->
-                        <div class="flex border-b border-slate-100 dark:border-slate-700 text-xs font-bold gap-2 overflow-x-auto custom-scrollbar pb-1">
-                            <button onclick="ContactManager.openMailboxModal('comunicados')" class="pb-2 px-3 border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${activeTab === 'comunicados' ? 'border-amber-600 text-amber-600 dark:text-amber-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
-                                <span>📢 Mural de Comunicados</span>
+                        <div class="flex items-center border-b border-slate-100 dark:border-slate-700 text-xs font-bold gap-1.5 overflow-x-auto no-scrollbar pt-3 pb-2 shrink-0">
+                            <button onclick="ContactManager.openMailboxModal('comunicados')" class="pb-1 px-3 border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer shrink-0 ${activeTab === 'comunicados' ? 'border-amber-600 text-amber-600 dark:text-amber-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
+                                <span>📢 Comunicados</span>
                                 ${activeBroadcasts.length > 0 ? `<span class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">${unreadBroadcasts.length > 0 ? unreadBroadcasts.length : activeBroadcasts.length}</span>` : ''}
                             </button>
-                            <button onclick="ContactManager.openMailboxModal('nova')" class="pb-2 px-3 border-b-2 transition whitespace-nowrap cursor-pointer ${activeTab === 'nova' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
-                                <span>✍️ Enviar Mensagem / Oração</span>
+                            <button onclick="ContactManager.openMailboxModal('nova')" class="pb-1 px-3 border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer shrink-0 ${activeTab === 'nova' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
+                                <span>✍️ Nova Mensagem / Oração</span>
                             </button>
-                            <button onclick="ContactManager.openMailboxModal('minhas')" class="pb-2 px-3 border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${activeTab === 'minhas' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
+                            <button onclick="ContactManager.openMailboxModal('minhas')" class="pb-1 px-3 border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer shrink-0 ${activeTab === 'minhas' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
                                 <span>📬 Minhas Mensagens</span>
                                 <span class="bg-indigo-100 dark:bg-indigo-950 text-indigo-800 dark:text-indigo-300 text-[10px] px-1.5 py-0.5 rounded-full font-mono">${sent.length}</span>
                             </button>
-                            <button type="button" onclick="event.stopPropagation(); window.toggleArquivadasCatecismo()" class="ml-auto text-[9px] font-bold px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition cursor-pointer">Arquivadas</button>
+                            ${activeTab === 'minhas' ? `
+                                <button type="button" onclick="event.stopPropagation(); window.toggleArquivadasCatecismo()" class="ml-auto text-[10px] font-bold px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition cursor-pointer shrink-0">
+                                    ${mostrarArquivadas ? 'Ocultar Arquivadas' : 'Ver Arquivadas'}
+                                </button>
+                            ` : ''}
                         </div>
 
                         <!-- Conteúdo da Aba -->
-                        <div class="flex-1 overflow-y-auto custom-scrollbar pr-1">
+                        <div id="mailbox-scroll-area" class="flex-1 min-h-0 overflow-y-auto custom-scrollbar pr-1 pt-3">
                             ${activeTab === 'comunicados' ? `
-                                <div class="space-y-3 pt-1">
+                                <div class="space-y-3">
                                     <div class="flex items-center justify-between px-1 pb-1">
                                         <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Avisos da Coordenação</span>
                                         ${unreadBroadcasts.length > 0 ? `
@@ -8089,7 +8095,7 @@
                                             ${activeBroadcasts.map(b => {
                                                 const isRead = readBroadcastIds.includes(b.id);
                                                 return `
-                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border ${isRead ? 'border-slate-200 dark:border-slate-700' : 'border-amber-400/80 dark:border-amber-600 bg-amber-50/20 shadow-xs'} hover:border-amber-400/60 transition space-y-2">
+                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border ${isRead ? 'border-slate-200 dark:border-slate-700' : 'border-amber-400/80 dark:border-amber-600 bg-amber-50/20 shadow-xs'} hover:border-amber-400/60 transition space-y-2.5">
                                                     <div class="flex items-center justify-between gap-2">
                                                         <div class="flex items-center gap-2">
                                                             <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-300 dark:border-amber-700">${b.tag || 'Comunicado'}</span>
@@ -8097,7 +8103,7 @@
                                                         </div>
                                                         <span class="text-[10px] text-slate-400 font-mono">${b.date || ''}</span>
                                                     </div>
-                                                    <h4 class="font-serif font-bold text-sm text-mariana dark:text-slate-100">${b.title}</h4>
+                                                    <h4 class="font-serif font-bold text-base text-mariana dark:text-slate-100 leading-snug">${b.title}</h4>
                                                     <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line">${b.content}</p>
                                                     <div class="flex items-center justify-between pt-2 border-t border-slate-200/70 dark:border-slate-800 text-[10px]">
                                                         <span class="text-amber-800 dark:text-amber-300 font-semibold italic">
@@ -8125,7 +8131,7 @@
                                     `}
                                 </div>
                             ` : (activeTab === 'nova' ? `
-                                <form onsubmit="ContactManager.handleFormSubmit(event)" class="space-y-4 pt-1">
+                                <form onsubmit="ContactManager.handleFormSubmit(event)" class="space-y-4">
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                         <div>
                                             <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Seu Nome:</label>
@@ -8150,61 +8156,62 @@
                                         </div>
                                         <div>
                                             <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Assunto Breve:</label>
-                                            <input type="text" id="contact-subject" placeholder="Ex.: Intenção pela saúde da minha família" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500">
+                                            <input type="text" id="contact-subject" placeholder="Ex.: Intenção pela família" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500">
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Sua Mensagem ou Pedido <span class="text-rose-500">*</span>:</label>
-                                        <textarea id="contact-message" rows="4" required placeholder="Escreva aqui sua mensagem, intenção ou reflexão..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+                                        <label class="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">Sua Mensagem / Oração <span class="text-rose-500">*</span>:</label>
+                                        <textarea id="contact-message" required rows="4" placeholder="Escreva sua mensagem com serenidade e fé..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-xs text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 resize-none leading-relaxed"></textarea>
                                     </div>
 
-                                    <div id="contact-form-feedback" class="hidden text-xs font-bold p-3 rounded-xl"></div>
-                                    <button type="submit" id="contact-submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
-                                        <span>🕊️</span> <span>Enviar para a Caixa Postal</span>
-                                    </button>
+                                    <div id="contact-form-feedback" class="hidden"></div>
+
+                                    <div class="flex items-center justify-between pt-1">
+                                        <span class="text-[11px] text-slate-400">Resposta pastoral via e-mail</span>
+                                        <button type="submit" id="contact-submit-btn" class="px-5 py-2.5 rounded-xl bg-mariana hover:bg-mariana/90 text-white font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer">
+                                            <span>🕊️</span> <span>Enviar Mensagem</span>
+                                        </button>
+                                    </div>
                                 </form>
                             ` : `
-                                <div class="space-y-3 pt-1">
+                                <div class="space-y-3">
                                     ${sent.length === 0 ? `
-                                        <div class="p-8 text-center bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-100 dark:border-slate-700/80 space-y-2">
+                                        <div class="p-8 text-center bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700/80 space-y-2">
                                             <span class="text-3xl block">📭</span>
-                                            <h4 class="font-bold text-xs text-slate-700 dark:text-slate-300">Sua Caixa Postal está vazia</h4>
-                                            <p class="text-[11px] text-slate-400">Você ainda não enviou mensagens ou pedidos de oração por este aparelho.</p>
-                                            <button onclick="ContactManager.openMailboxModal('nova')" class="mt-2 px-4 py-2 bg-indigo-600 text-white rounded-xl text-xs font-bold shadow-xs">Escrever Mensagem</button>
+                                            <h4 class="font-bold text-xs text-slate-700 dark:text-slate-300">Nenhuma mensagem enviada ainda</h4>
+                                            <p class="text-[11px] text-slate-400">Suas mensagens e orações enviadas aparecerão aqui.</p>
                                         </div>
                                     ` : `
                                         <div class="space-y-3">
                                             ${sent.map(m => `
-                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 space-y-2">
-                                                    <div class="flex items-center justify-between">
-                                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-900 dark:text-indigo-200 uppercase tracking-wider">${m.type}</span>
-                                                        <span class="text-[10px] text-slate-400">${new Date(m.createdAt).toLocaleDateString('pt-BR')} ${new Date(m.createdAt).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})}</span>
+                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border ${m.reply ? 'border-emerald-300 dark:border-emerald-700/80' : 'border-slate-200 dark:border-slate-700'} space-y-2">
+                                                    <div class="flex items-center justify-between text-[10px]">
+                                                        <span class="px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold">${m.type || 'Contato'}</span>
+                                                        <span class="text-slate-400 font-mono">${m.date ? new Date(m.date).toLocaleDateString('pt-BR') : ''}</span>
                                                     </div>
-                                                    <h5 class="text-xs font-bold text-slate-900 dark:text-slate-100">${m.subject}</h5>
-                                                    <p class="text-xs text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 p-2.5 rounded-xl border border-slate-100 dark:border-slate-700 whitespace-pre-line">${m.message}</p>
+                                                    <h4 class="font-bold text-xs text-slate-800 dark:text-slate-200">${m.subject || 'Sem assunto'}</h4>
+                                                    <p class="text-xs text-slate-600 dark:text-slate-400 whitespace-pre-line">${m.message}</p>
                                                     ${m.reply ? `
-                                                        <div class="bg-emerald-50 dark:bg-emerald-950/40 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800/80 space-y-1">
-                                                            <div class="text-[10px] font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1">
-                                                                <span>✝ Resposta da Equipe:</span>
+                                                        <div class="p-3 bg-emerald-50 dark:bg-emerald-950/50 rounded-xl border border-emerald-200 dark:border-emerald-800 text-xs text-emerald-900 dark:text-emerald-200 space-y-1">
+                                                            <div class="font-bold flex items-center gap-1.5 text-[11px] text-emerald-800 dark:text-emerald-300">
+                                                                <span>✉️ Resposta da Coordenação:</span>
                                                             </div>
-                                                            <p class="text-xs text-emerald-900 dark:text-emerald-100 whitespace-pre-line">${m.reply}</p>
+                                                            <p class="whitespace-pre-line leading-relaxed">${m.reply}</p>
                                                         </div>
-                                                    ` : `
-                                                        <div class="flex items-center gap-1.5 text-[10px] text-slate-400">
-                                                            <span>⏳</span> <span>Aguardando leitura e orações da pastoral</span>
+                                                    ` : ''}
+                                                    <div class="flex items-center justify-between pt-1 border-t border-slate-200/60 dark:border-slate-800 text-[10px]">
+                                                        <span class="text-slate-400 font-medium">
+                                                            ${m.status === 'arquivado' ? 'Arquivada' : (m.status === 'respondido' ? 'Respondida' : (m.status === 'lido' ? 'Lida pela equipe' : 'Enviada'))}
+                                                        </span>
+                                                        <div>
+                                                            <button onclick="arquivarMensagemCatecismo('${m.id}', ${m.status === 'arquivado'})" class="text-[10px] font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 underline">
+                                                                ${m.status === 'arquivado' ? 'Desarquivar' : 'Arquivar'}
+                                                            </button>
+                                                            <button onclick="excluirMensagemCatecismo('${m.id}')" class="text-[10px] font-bold text-rose-500 hover:text-rose-700 underline ml-2">Excluir</button>
                                                         </div>
-                                                    `}
-                                                                                <div class="flex items-center justify-between mt-1">
-                                    <span class="text-[10px] font-bold ${m.status === 'arquivado' ? 'text-slate-500' : (m.status === 'respondido' ? 'text-emerald-700 dark:text-emerald-300' : (m.status === 'lido' ? 'text-blue-700 dark:text-blue-300' : 'text-amber-700 dark:text-amber-300'))}">
-                                        ${m.status === 'arquivado' ? 'Arquivada' : (m.status === 'respondido' ? 'Respondida' : (m.status === 'lido' ? 'Lida pela equipe' : 'Enviada'))}
-                                    </span>
-                                    <button onclick="arquivarMensagemCatecismo('${m.id}', ${m.status === 'arquivado'})" class="text-[10px] font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 underline">
-                                        ${m.status === 'arquivado' ? 'Desarquivar' : 'Arquivar'}
-                                    </button>
-                                    <button onclick="excluirMensagemCatecismo('${m.id}')" class="text-[10px] font-bold text-rose-500 hover:text-rose-700 underline ml-2">Excluir</button>
-                                </div>
-</div>
+                                                    </div>
+                                                </div>
                                             `).join('')}
                                         </div>
                                     `}
@@ -8216,6 +8223,10 @@
 
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
+                setTimeout(() => {
+                    const scrollArea = document.getElementById('mailbox-scroll-area');
+                    if (scrollArea) scrollArea.scrollTop = 0;
+                }, 10);
             },
 
             async handleFormSubmit(event) {
