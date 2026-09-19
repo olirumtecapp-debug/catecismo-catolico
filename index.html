@@ -5919,16 +5919,17 @@
                     }
                     ctx.drawImage(bgImage, sX, sY, sW, sH, 0, 0, W, H);
 
-                    // Camada de vinheta e filtro sacro para garantir leitura orante cristalina do texto
+                    // Vinheta elegante translúcida: preserva as cores a óleo da pintura bem visíveis
                     const overlayGrad = ctx.createLinearGradient(0, 0, 0, H);
-                    overlayGrad.addColorStop(0, 'rgba(7, 17, 29, 0.84)');
-                    overlayGrad.addColorStop(0.35, 'rgba(11, 25, 44, 0.76)');
-                    overlayGrad.addColorStop(0.7, 'rgba(7, 17, 29, 0.82)');
-                    overlayGrad.addColorStop(1, 'rgba(4, 10, 18, 0.94)');
+                    overlayGrad.addColorStop(0, 'rgba(3, 7, 15, 0.65)');
+                    overlayGrad.addColorStop(0.18, 'rgba(5, 10, 20, 0.28)');
+                    overlayGrad.addColorStop(0.65, 'rgba(5, 10, 20, 0.28)');
+                    overlayGrad.addColorStop(0.85, 'rgba(3, 7, 15, 0.60)');
+                    overlayGrad.addColorStop(1, 'rgba(2, 4, 10, 0.85)');
                     ctx.fillStyle = overlayGrad;
                     ctx.fillRect(0, 0, W, H);
                 } else {
-                    // Fundo Gradiente Nobre Mariano (Fallback)
+                    // Fundo Gradiente Nobre Mariano (Fallback quando offline total)
                     const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
                     bgGrad.addColorStop(0, '#0B192C');
                     bgGrad.addColorStop(0.4, '#102A43');
@@ -5940,8 +5941,8 @@
                 // 2. Halo Espiritual de Luz Dourada
                 const haloY = format === 'story' ? 460 : (format === 'quadrado' ? 300 : 360);
                 const radGrad = ctx.createRadialGradient(540, haloY, 40, 540, haloY + 80, 550);
-                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.20)');
-                radGrad.addColorStop(1, 'rgba(11, 25, 44, 0)');
+                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.15)');
+                radGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
                 ctx.fillStyle = radGrad;
                 ctx.fillRect(0, 0, W, H);
 
@@ -6048,11 +6049,11 @@
                 ctx.fillStyle = '#FFFFFF';
                 ctx.fillText(`« ${formattedRef} »`, 540, 270 + topOffset);
 
-                // 6. Quadro interno translúcido do Evangelho
-                ctx.fillStyle = 'rgba(15, 34, 62, 0.84)';
+                // 6. Quadro interno translúcido do Evangelho (estilo pergaminho sacro acetinado)
+                ctx.fillStyle = 'rgba(5, 10, 22, 0.58)';
                 ctx.fillRect(85, boxY, 910, boxH);
-                ctx.strokeStyle = 'rgba(212, 175, 55, 0.38)';
-                ctx.lineWidth = 1;
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.50)';
+                ctx.lineWidth = 1.5;
                 ctx.strokeRect(85, boxY, 910, boxH);
 
                 // Rótulo Sacro de Abertura
@@ -6061,13 +6062,13 @@
                 ctx.textAlign = 'center';
                 ctx.fillText('☩  PALAVRA DO SENHOR  ☩', 540, boxY + 42);
 
-                ctx.strokeStyle = 'rgba(212, 175, 55, 0.3)';
+                ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
                 ctx.beginPath();
                 ctx.moveTo(380, boxY + 54);
                 ctx.lineTo(700, boxY + 54);
                 ctx.stroke();
 
-                // Texto do Evangelho truncado por frases completas
+                // Texto do Evangelho truncado por frases completas com sombra de leitura
                 let textToRender = this.truncateToSentence(cleanText, maxWords);
                 const openQ = (textToRender.match(/“/g) || []).length;
                 const closeQ = (textToRender.match(/”/g) || []).length;
@@ -6078,6 +6079,10 @@
                 ctx.font = `${fontSize}px Georgia, serif`;
                 ctx.fillStyle = '#F8FAFC';
                 ctx.textAlign = 'left';
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.95)';
+                ctx.shadowBlur = 4;
+                ctx.shadowOffsetX = 1;
+                ctx.shadowOffsetY = 1;
 
                 const lines = wrapText(textToRender, 810);
                 let curY = boxY + (format === 'story' ? 115 : 95);
@@ -6092,6 +6097,10 @@
                 ctx.font = 'italic bold 21px Georgia, serif';
                 ctx.fillStyle = '#F3E5AB';
                 ctx.fillText('— Palavra da Salvação. Glória a Vós, Senhor. —', 540, boxY + boxH - 26);
+                ctx.shadowColor = 'transparent';
+                ctx.shadowBlur = 0;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
 
                 // 7. Meditação Breve
                 let med = (lit && lit.reflection) ? lit.reflection : '« Quem tem ouvidos para ouvir, ouça! Que a Palavra de Cristo habite ricamente em vossos corações. »';
@@ -6156,12 +6165,13 @@
 
             getSacredArtworkForGospel(gospelText, gospelRef) {
                 const textLower = (String(gospelText || '') + ' ' + String(gospelRef || '')).toLowerCase();
+                const rawBase = 'https://raw.githubusercontent.com/olirumtecapp-debug/catecismo-catolico/main/assets/img/liturgia/';
 
-                // 1. Semeador / Campo / Sementes (Ex: Parábola de hoje!)
+                // 1. Semeador / Campo / Sementes (Ex: Parábola de São Lucas de hoje!)
                 if (/semea|semente|seára|gr[aã]o|trigo|campo|terra boa|espinho/i.test(textLower)) {
                     return {
                         path: './assets/img/liturgia/semeador.jpg',
-                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP-42549-001.jpg',
+                        fallbackUrl: rawBase + 'semeador.jpg',
                         title: 'Campo de Trigo (A Parábola do Semeador)',
                         artist: 'Vincent van Gogh (1889)'
                     };
@@ -6171,7 +6181,7 @@
                 if (/pastor|ovelha|rebanho|aprisco/i.test(textLower)) {
                     return {
                         path: './assets/img/liturgia/pastor_mestre.jpg',
-                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DT1347.jpg',
+                        fallbackUrl: rawBase + 'pastor_mestre.jpg',
                         title: 'Cristo com o Cajado (O Bom Pastor)',
                         artist: 'Rembrandt van Rijn (1661)'
                     };
@@ -6181,7 +6191,7 @@
                 if (/p[aã]o|c[aá]lice|ceia|corpo e sangue|eucaristia|banquete|vinho/i.test(textLower)) {
                     return {
                         path: './assets/img/liturgia/ultima_ceia.jpg',
-                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/rl/web-large/DP-14401-001.jpg',
+                        fallbackUrl: rawBase + 'ultima_ceia.jpg',
                         title: 'A Última Ceia (O Pão da Vida)',
                         artist: 'Bernard van Orley (c. 1530)'
                     };
@@ -6191,7 +6201,7 @@
                 if (/maria|m[aã]e|jos[eé]|isabel|anuncia|magnificat|virgem/i.test(textLower)) {
                     return {
                         path: './assets/img/liturgia/virgem_menino.jpg',
-                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-010.jpg',
+                        fallbackUrl: rawBase + 'virgem_menino.jpg',
                         title: 'A Virgem e o Menino Jesus',
                         artist: 'Bartolomé Esteban Murillo (c. 1670)'
                     };
@@ -6201,7 +6211,7 @@
                 if (/bel[eé]m|manjedoura|nascimento|pastores|natal|estrelas|magos/i.test(textLower)) {
                     return {
                         path: './assets/img/liturgia/adoracao_pastores.jpg',
-                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP123919.jpg',
+                        fallbackUrl: rawBase + 'adoracao_pastores.jpg',
                         title: 'A Adoração dos Pastores',
                         artist: 'El Greco (c. 1605)'
                     };
@@ -6210,7 +6220,7 @@
                 // 6. Cristo Mestre / Benção / Palavra de Vida (Padrão e Fallback Nobre)
                 return {
                     path: './assets/img/liturgia/cristo_bencao.jpg',
-                    fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP218061.jpg',
+                    fallbackUrl: rawBase + 'cristo_bencao.jpg',
                     title: 'Cristo Abençoando (Salvator Mundi)',
                     artist: 'Gerard David (c. 1500)'
                 };
@@ -6218,37 +6228,89 @@
 
             loadImageAsync(localPath, fallbackUrl) {
                 return new Promise((resolve) => {
-                    const tryLoad = (src, isFallback = false) => {
+                    const sources = [];
+                    if (localPath) {
+                        sources.push(localPath);
+                        if (localPath.startsWith('./')) {
+                            sources.push(localPath.replace(/^\.\//, ''));
+                            sources.push('/' + localPath.replace(/^\.\//, ''));
+                        }
+                    }
+                    if (fallbackUrl) {
+                        sources.push(fallbackUrl);
+                    }
+
+                    let currentIdx = 0;
+
+                    const tryNextSource = () => {
+                        if (currentIdx >= sources.length) {
+                            console.warn('[CardGenerator] Nenhuma fonte de pintura sacra pôde ser carregada.');
+                            resolve(null);
+                            return;
+                        }
+
+                        const src = sources[currentIdx++];
+                        const isExternal = src.startsWith('http://') || src.startsWith('https://');
+
+                        // Se for local e o navegador suportar fetch, tenta primeiro via fetch blob
+                        if (!isExternal && typeof fetch === 'function') {
+                            fetch(src)
+                                .then(r => {
+                                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                                    return r.blob();
+                                })
+                                .then(blob => {
+                                    const objectUrl = URL.createObjectURL(blob);
+                                    const img = new Image();
+                                    img.onload = () => {
+                                        resolve(img);
+                                    };
+                                    img.onerror = () => {
+                                        URL.revokeObjectURL(objectUrl);
+                                        tryNextSource();
+                                    };
+                                    img.src = objectUrl;
+                                })
+                                .catch(() => {
+                                    loadViaImageTag(src, isExternal);
+                                });
+                            return;
+                        }
+
+                        loadViaImageTag(src, isExternal);
+                    };
+
+                    const loadViaImageTag = (src, isExternal) => {
                         const img = new Image();
-                        img.crossOrigin = 'anonymous';
-                        let resolved = false;
+                        if (isExternal) {
+                            img.crossOrigin = 'anonymous';
+                        }
+                        let settled = false;
                         const timer = setTimeout(() => {
-                            if (!resolved) {
-                                resolved = true;
-                                if (!isFallback && fallbackUrl) tryLoad(fallbackUrl, true);
-                                else resolve(null);
+                            if (!settled) {
+                                settled = true;
+                                tryNextSource();
                             }
-                        }, 2200);
+                        }, 5000);
 
                         img.onload = () => {
-                            if (!resolved) {
-                                resolved = true;
+                            if (!settled) {
+                                settled = true;
                                 clearTimeout(timer);
                                 resolve(img);
                             }
                         };
                         img.onerror = () => {
-                            if (!resolved) {
-                                resolved = true;
+                            if (!settled) {
+                                settled = true;
                                 clearTimeout(timer);
-                                if (!isFallback && fallbackUrl) tryLoad(fallbackUrl, true);
-                                else resolve(null);
+                                tryNextSource();
                             }
                         };
                         img.src = src;
                     };
 
-                    tryLoad(localPath);
+                    tryNextSource();
                 });
             },
 
