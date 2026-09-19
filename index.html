@@ -425,6 +425,10 @@
                         <svg class="w-4 h-4 shrink-0 text-amber-600 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M11 7h2m-1-1v2"/></svg>
                         <span class="truncate">Preceitos &amp; Calendário</span>
                     </button>
+                    <button onclick="router.navigate('liturgia')" class="nav-item group w-full flex items-center gap-2.5 px-3 py-2 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-xs sm:text-sm text-left" data-menu-key="evangelho_card" style="display: none;">
+                        <svg class="w-4 h-4 shrink-0 text-amber-600 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <span class="truncate">Card do Evangelho</span>
+                    </button>
                 </div>
 
                 <!-- SEÇÃO 2: DOUTRINA & SAGRADA ESCRITURA -->
@@ -658,6 +662,9 @@
                         <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
                         <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
                             <span>📜 Preceitos &amp; Calendário</span>
+                        </button>
+                        <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="evangelho_card" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" style="display: none;">
+                            <span>📸 Card do Evangelho</span>
                         </button>
                         <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🧠 Quizzes</button>
                         <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🎯 Planos de Estudo</button>
@@ -6822,7 +6829,7 @@ https://catecismo.creativeam.com.br
                 catecismo: { label: 'Catecismo da Igreja', enabled: true, icon: '🏛️', section: 'Palavra & Magistério' },
                 'catecismo-completo': { label: 'Biblioteca do Catecismo', enabled: true, icon: '📚', section: 'Palavra & Magistério' },
                 livros: { label: 'Livraria Católica (Venda de Livros)', enabled: false, icon: '📖', section: 'Livraria & Recursos' }, // DESABILITADO POR PADRÃO!
-                evangelho_card: { label: 'Card do Evangelho (Instagram / WhatsApp)', enabled: false, icon: '📸', section: 'Mídia & Redes' }, // DESABILITADO NO MENU PÚBLICO INICIALMENTE!
+                evangelho_card: { label: 'Card do Evangelho', enabled: false, icon: '📸', section: 'Mídia & Redes' }, // DESABILITADO NO MENU PÚBLICO INICIALMENTE!
                 missa: { label: 'A Santa Missa', enabled: true, icon: '⛪', section: 'Liturgia' },
                 quiz: { label: 'Quizzes da Fé', enabled: true, icon: '🧠', section: 'Formação' },
                 planos: { label: 'Planos de Estudo', enabled: true, icon: '🎯', section: 'Formação' },
@@ -6842,7 +6849,11 @@ https://catecismo.creativeam.com.br
                     const saved = localStorage.getItem(this.storageKey);
                     if (saved) {
                         const parsed = JSON.parse(saved);
-                        return { ...this.defaultConfig, ...parsed };
+                        const merged = { ...this.defaultConfig, ...parsed };
+                        if (merged.evangelho_card) {
+                            merged.evangelho_card.label = 'Card do Evangelho';
+                        }
+                        return merged;
                     }
                 } catch(e) {}
                 return { ...this.defaultConfig };
