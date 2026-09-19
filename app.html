@@ -862,13 +862,24 @@
         };
 
         function formatLiturgicalText(value) {
-            let text = String(value ?? '');
-            // Algumas fontes entregam os números dos versículos colados ao texto: "3Mas", "4Quanto".
-            // Normalizamos apenas padrões típicos de início de versículo, sem reescrever o conteúdo.
-            text = text
-                .replace(/(^|\s)(\d{1,3})[oº]\s+/gm, '$1\n$2 ')
-                .replace(/(^|\s)(\d{1,3})(?=[A-ZÁÉÍÓÚÂÊÔÃÕÀÇ])/gm, '$1\n$2 ');
-            return text.replace(/\n{3,}/g, '\n\n').trim();
+            if (!value) return '';
+            let text = String(value).replace(/<[^>]*>/g, ' ');
+            // Remove rubricas litúrgicas iniciais redundantes (ex: "+ Proclamação do Evangelho...")
+            text = text.replace(/^(\+?\s*proclama[cç][aã]o\s+do\s+evangelho[^\n.:]*[\n.:]+)/i, '');
+            // Remove números colados a palavras ou aspas (ex: "4Reuniu-se", "5'O", "10Jesus", "35Alguém", "14Aquilo")
+            text = text.replace(/(^|\s)\d+(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, '$1$2$3');
+            // Remove números de versículos isolados entre espaços
+            text = text.replace(/\s+\d+\s+/g, ' ');
+            // Ajusta fórmulas de início litúrgico para leitura contínua e nobre
+            text = text.replace(/^naquele tempo\s*:\s*([A-ZÀ-Ý])/i, (m, l) => 'Naquele tempo, ' + l.toLowerCase());
+            text = text.replace(/^naquele tempo\s*:\s*/i, 'Naquele tempo, ');
+            // Normaliza aspas para tipografia sacra elegante
+            text = text.replace(/:\s*['’]/g, ': “');
+            text = text.replace(/['’]\s*\./g, '”.');
+            text = text.replace(/['’]\s*,/g, '”,');
+            text = text.replace(/['']/g, '”');
+            text = text.replace(/\s+/g, ' ').trim();
+            return text;
         }
 
         const BibleProvider = {
