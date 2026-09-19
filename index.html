@@ -7843,29 +7843,92 @@
                 this.loadBroadcasts();
             },
 
+            getReadBroadcastIds() {
+                try { return JSON.parse(localStorage.getItem('catecismo_read_broadcasts') || '[]'); } catch(e) { return []; }
+            },
+            getHiddenBroadcastIds() {
+                try { return JSON.parse(localStorage.getItem('catecismo_hidden_broadcasts') || '[]'); } catch(e) { return []; }
+            },
+            getActiveBroadcasts() {
+                const hidden = this.getHiddenBroadcastIds();
+                return (this.cachedBroadcasts || []).filter(b => !hidden.includes(b.id));
+            },
+            getUnreadBroadcasts() {
+                const read = this.getReadBroadcastIds();
+                return this.getActiveBroadcasts().filter(b => !read.includes(b.id));
+            },
+            calculateUnreadCount() {
+                this.unreadBroadcastCount = this.getUnreadBroadcasts().length;
+                return this.unreadBroadcastCount;
+            },
+
+            markBroadcastAsRead(id) {
+                const read = this.getReadBroadcastIds();
+                if (!read.includes(id)) {
+                    read.push(id);
+                    try { localStorage.setItem('catecismo_read_broadcasts', JSON.stringify(read)); } catch(e) {}
+                }
+                this.calculateUnreadCount();
+                this.updateBadges();
+                this.refreshBanner();
+                const modal = document.getElementById('modal-container');
+                if (modal && !modal.classList.contains('hidden') && modal.innerHTML.includes('Mural de Comunicados')) {
+                    this.openMailboxModal('comunicados');
+                }
+            },
+
+            markAllBroadcastsAsRead() {
+                const allIds = (this.cachedBroadcasts || []).map(b => b.id);
+                try { localStorage.setItem('catecismo_read_broadcasts', JSON.stringify(allIds)); } catch(e) {}
+                this.calculateUnreadCount();
+                this.updateBadges();
+                this.refreshBanner();
+                const modal = document.getElementById('modal-container');
+                if (modal && !modal.classList.contains('hidden')) {
+                    this.openMailboxModal('comunicados');
+                }
+            },
+
+            hideBroadcast(id) {
+                const hidden = this.getHiddenBroadcastIds();
+                if (!hidden.includes(id)) {
+                    hidden.push(id);
+                    try { localStorage.setItem('catecismo_hidden_broadcasts', JSON.stringify(hidden)); } catch(e) {}
+                }
+                this.markBroadcastAsRead(id);
+                const modal = document.getElementById('modal-container');
+                if (modal && !modal.classList.contains('hidden')) {
+                    this.openMailboxModal('comunicados');
+                }
+            },
+
+            dismissHomeBroadcast(id) {
+                this.markBroadcastAsRead(id);
+                const alertEl = document.getElementById('home-broadcast-alert');
+                if (alertEl) {
+                    alertEl.style.transition = 'all 0.3s ease';
+                    alertEl.style.opacity = '0';
+                    alertEl.style.transform = 'translateY(-10px)';
+                    setTimeout(() => alertEl.remove(), 300);
+                }
+            },
+
+            refreshBanner() {
+                const bannerCont = document.getElementById('home-broadcast-alert-container');
+                if (bannerCont) {
+                    bannerCont.innerHTML = this.renderHomeBroadcastBanner();
+                }
+            },
+
             async loadBroadcasts() {
                 try {
                     const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/broadcasts'));
                     if (res.ok) {
                         const data = await res.json();
                         this.cachedBroadcasts = (data && data.broadcasts) ? data.broadcasts : [];
-                        
-                        const lastSeenId = localStorage.getItem('catecismo_last_seen_broadcast');
-                        if (!lastSeenId && this.cachedBroadcasts.length > 0) {
-                            this.unreadBroadcastCount = this.cachedBroadcasts.length;
-                        } else if (lastSeenId) {
-                            const idx = this.cachedBroadcasts.findIndex(b => b.id === lastSeenId);
-                            this.unreadBroadcastCount = idx === -1 ? this.cachedBroadcasts.length : idx;
-                        } else {
-                            this.unreadBroadcastCount = 0;
-                        }
-
+                        this.calculateUnreadCount();
                         this.updateBadges();
-
-                        const bannerCont = document.getElementById('home-broadcast-alert-container');
-                        if (bannerCont) {
-                            bannerCont.innerHTML = this.renderHomeBroadcastBanner();
-                        }
+                        this.refreshBanner();
                     }
                 } catch (err) {
                     console.warn('[ContactManager] Erro ao carregar comunicados:', err);
@@ -7873,13 +7936,14 @@
             },
 
             renderHomeBroadcastBanner() {
-                if (!this.cachedBroadcasts || this.cachedBroadcasts.length === 0) return '';
-                if (this.unreadBroadcastCount <= 0) return '';
+                const unread = this.getUnreadBroadcasts();
+                if (!unread || unread.length === 0) return '';
 
-                const b = this.cachedBroadcasts[0];
+                const b = unread[0];
                 return `
-                    <div id="home-broadcast-alert" class="p-4 rounded-3xl bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-lg border border-amber-300/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in fade-in duration-300">
-                        <div class="flex items-center gap-3.5 min-w-0">
+                    <div id="home-broadcast-alert" class="p-4 rounded-3xl bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-lg border border-amber-300/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in fade-in duration-300 relative group">
+                        <button type="button" onclick="ContactManager.dismissHomeBroadcast('${b.id}')" class="absolute top-3 right-3 sm:hidden text-amber-200 hover:text-white p-1 rounded-full text-xs font-bold cursor-pointer" title="Dispensar aviso">✕</button>
+                        <div class="flex items-center gap-3.5 min-w-0 pr-6 sm:pr-0">
                             <div class="w-11 h-11 rounded-2xl bg-white/20 text-white flex items-center justify-center text-2xl shrink-0 shadow-inner">
                                 📢
                             </div>
@@ -7894,8 +7958,11 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-2 shrink-0">
-                            <button onclick="ContactManager.openMailboxModal('comunicados')" class="px-4 py-2.5 rounded-xl bg-white hover:bg-amber-50 text-amber-900 font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
-                                <span>Ler Comunicado</span> <span>→</span>
+                            <button type="button" onclick="ContactManager.dismissHomeBroadcast('${b.id}')" class="px-3 py-2 rounded-xl bg-amber-900/40 hover:bg-amber-900/80 text-amber-100 hover:text-white font-bold text-xs transition flex items-center gap-1.5 cursor-pointer border border-amber-300/30" title="Marcar como lido e dispensar caixinha">
+                                <span>✓</span> <span>Marcar como lido</span>
+                            </button>
+                            <button type="button" onclick="ContactManager.openMailboxModal('comunicados')" class="px-4 py-2 rounded-xl bg-white hover:bg-amber-50 text-amber-900 font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
+                                <span>Ler</span> <span>→</span>
                             </button>
                         </div>
                     </div>
@@ -7938,14 +8005,6 @@
                     activeTab = (this.unreadBroadcastCount > 0 || (this.cachedBroadcasts.length > 0 && this.getSentMessages().length === 0)) ? 'comunicados' : 'nova';
                 }
 
-                if (activeTab === 'comunicados' && this.cachedBroadcasts.length > 0) {
-                    localStorage.setItem('catecismo_last_seen_broadcast', this.cachedBroadcasts[0].id);
-                    this.unreadBroadcastCount = 0;
-                    this.updateBadges();
-                    const banner = document.getElementById('home-broadcast-alert');
-                    if (banner) banner.classList.add('hidden');
-                }
-
                 if (activeTab === 'minhas') {
                     const msgs = this.getSentMessages();
                     let updated = false;
@@ -7965,6 +8024,9 @@
                 const mostrarArquivadas = window.mostrarArquivadasCatecismo === true;
                 const sent = mostrarArquivadas ? todasEnviadas : todasEnviadas.filter(m => m.status !== 'arquivado');
                 const defaultEmail = AppState.cloudSyncEmail || '';
+                const activeBroadcasts = this.getActiveBroadcasts();
+                const readBroadcastIds = this.getReadBroadcastIds();
+                const unreadBroadcasts = this.getUnreadBroadcasts();
 
                 modal.innerHTML = `
                     <div class="bg-white dark:bg-slate-800 w-full max-w-xl rounded-3xl p-6 md:p-8 space-y-5 text-left shadow-2xl border border-slate-200 dark:border-slate-700 relative max-h-[90vh] flex flex-col">
@@ -7988,7 +8050,7 @@
                         <div class="flex border-b border-slate-100 dark:border-slate-700 text-xs font-bold gap-2 overflow-x-auto custom-scrollbar pb-1">
                             <button onclick="ContactManager.openMailboxModal('comunicados')" class="pb-2 px-3 border-b-2 transition flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${activeTab === 'comunicados' ? 'border-amber-600 text-amber-600 dark:text-amber-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
                                 <span>📢 Mural de Comunicados</span>
-                                ${this.cachedBroadcasts.length > 0 ? `<span class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">${this.cachedBroadcasts.length}</span>` : ''}
+                                ${activeBroadcasts.length > 0 ? `<span class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">${unreadBroadcasts.length > 0 ? unreadBroadcasts.length : activeBroadcasts.length}</span>` : ''}
                             </button>
                             <button onclick="ContactManager.openMailboxModal('nova')" class="pb-2 px-3 border-b-2 transition whitespace-nowrap cursor-pointer ${activeTab === 'nova' ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' : 'border-transparent text-slate-400 hover:text-slate-600'}">
                                 <span>✍️ Enviar Mensagem / Oração</span>
@@ -8004,27 +8066,61 @@
                         <div class="flex-1 overflow-y-auto custom-scrollbar pr-1">
                             ${activeTab === 'comunicados' ? `
                                 <div class="space-y-3 pt-1">
-                                    ${this.cachedBroadcasts.length === 0 ? `
+                                    <div class="flex items-center justify-between px-1 pb-1">
+                                        <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Avisos da Coordenação</span>
+                                        ${unreadBroadcasts.length > 0 ? `
+                                            <button type="button" onclick="ContactManager.markAllBroadcastsAsRead()" class="text-xs font-bold text-amber-600 hover:text-amber-700 dark:text-amber-400 flex items-center gap-1 cursor-pointer hover:underline">
+                                                <span>✓</span> <span>Marcar todos como lidos</span>
+                                            </button>
+                                        ` : `
+                                            <span class="text-[11px] font-medium text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                                                <span>✓</span> <span>Todos lidos</span>
+                                            </span>
+                                        `}
+                                    </div>
+                                    ${activeBroadcasts.length === 0 ? `
                                         <div class="p-8 text-center bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700/80 space-y-2">
                                             <span class="text-3xl block">🕊️</span>
                                             <h4 class="font-bold text-xs text-slate-700 dark:text-slate-300">Nenhum comunicado no mural no momento</h4>
-                                            <p class="text-[11px] text-slate-400">Quando a coordenação publicar novidades ou avisos pastorais, eles aparecerão aqui para todos os fiéis.</p>
+                                            <p class="text-[11px] text-slate-400">Você leu ou dispensou todos os avisos pastorais.</p>
                                         </div>
                                     ` : `
                                         <div class="space-y-3">
-                                            ${this.cachedBroadcasts.map(b => `
-                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 hover:border-amber-400/60 transition space-y-2">
+                                            ${activeBroadcasts.map(b => {
+                                                const isRead = readBroadcastIds.includes(b.id);
+                                                return `
+                                                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/70 border ${isRead ? 'border-slate-200 dark:border-slate-700' : 'border-amber-400/80 dark:border-amber-600 bg-amber-50/20 shadow-xs'} hover:border-amber-400/60 transition space-y-2">
                                                     <div class="flex items-center justify-between gap-2">
-                                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-300 dark:border-amber-700">${b.tag || 'Comunicado'}</span>
+                                                        <div class="flex items-center gap-2">
+                                                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-300 dark:border-amber-700">${b.tag || 'Comunicado'}</span>
+                                                            ${!isRead ? `<span class="px-1.5 py-0.2 rounded-full text-[9px] font-bold bg-rose-500 text-white uppercase">Novo</span>` : ''}
+                                                        </div>
                                                         <span class="text-[10px] text-slate-400 font-mono">${b.date || ''}</span>
                                                     </div>
                                                     <h4 class="font-serif font-bold text-sm text-mariana dark:text-slate-100">${b.title}</h4>
                                                     <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line">${b.content}</p>
-                                                    <div class="pt-1.5 border-t border-slate-200/70 dark:border-slate-800 text-[10px] text-amber-800 dark:text-amber-300 font-semibold italic">
-                                                        — ${b.sender || 'Coordenação Geral — Catecismo Católico'}
+                                                    <div class="flex items-center justify-between pt-2 border-t border-slate-200/70 dark:border-slate-800 text-[10px]">
+                                                        <span class="text-amber-800 dark:text-amber-300 font-semibold italic">
+                                                            — ${b.sender || 'Coordenação Geral — Catecismo Católico'}
+                                                        </span>
+                                                        <div class="flex items-center gap-2">
+                                                            ${!isRead ? `
+                                                                <button type="button" onclick="ContactManager.markBroadcastAsRead('${b.id}')" class="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[10px] font-bold transition flex items-center gap-1 cursor-pointer shadow-2xs">
+                                                                    <span>✓</span> <span>Marcar como lido</span>
+                                                                </button>
+                                                            ` : `
+                                                                <span class="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                                                                    <span>✓</span> <span>Lido</span>
+                                                                </span>
+                                                            `}
+                                                            <button type="button" onclick="ContactManager.hideBroadcast('${b.id}')" class="text-slate-400 hover:text-rose-600 font-bold px-1.5 py-1 text-[10px] transition cursor-pointer" title="Excluir aviso do mural">
+                                                                <span>🗑️ Excluir</span>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            `).join('')}
+                                                `;
+                                            }).join('')}
                                         </div>
                                     `}
                                 </div>
