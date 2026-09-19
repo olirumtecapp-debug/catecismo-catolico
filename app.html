@@ -864,20 +864,39 @@
         function formatLiturgicalText(value) {
             if (!value) return '';
             let text = String(value).replace(/<[^>]*>/g, ' ');
+            // Converte dígitos normais para sobrescritos litúrgicos (0-9 -> ⁰-¹-²-³-⁴-⁵-⁶-⁷-⁸-⁹)
+            const toSuperscript = numStr => {
+                const map = { '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹' };
+                return String(numStr).split('').map(c => map[c] || c).join('');
+            };
+
             // Remove rubricas litúrgicas iniciais redundantes (ex: "+ Proclamação do Evangelho...")
             text = text.replace(/^(\+?\s*proclama[cç][aã]o\s+do\s+evangelho[^\n.:]*[\n.:]+)/i, '');
-            // Remove números colados a palavras ou aspas (ex: "4Reuniu-se", "5'O", "10Jesus", "35Alguém", "14Aquilo")
-            text = text.replace(/(^|\s)\d+(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, '$1$2$3');
-            // Remove números de versículos isolados entre espaços
-            text = text.replace(/\s+\d+\s+/g, ' ');
-            // Ajusta fórmulas de início litúrgico para leitura contínua e nobre
-            text = text.replace(/^naquele tempo\s*:\s*([A-ZÀ-Ý])/i, (m, l) => 'Naquele tempo, ' + l.toLowerCase());
-            text = text.replace(/^naquele tempo\s*:\s*/i, 'Naquele tempo, ');
+
+            // Normaliza versículo inicial antes de "Naquele tempo" (ex: "4Naquele tempo" -> "Naquele tempo: ⁴ ")
+            text = text.replace(/^(\d+)\s*naquele tempo\s*:\s*/i, (m, num) => `Naquele tempo: ${toSuperscript(num)} `);
+            text = text.replace(/^naquele tempo\s*:\s*(\d+)/i, (m, num) => `Naquele tempo: ${toSuperscript(num)} `);
+            text = text.replace(/^naquele tempo\s*:\s*/i, 'Naquele tempo: ');
+
+            // Converte números colados a palavras ou aspas mantendo o versículo bíblico (ex: " 4Reuniu-se" -> " ⁴ Reuniu-se", " 5'O" -> " ⁵ “O", " 10Jesus" -> " ¹⁰ Jesus")
+            text = text.replace(/(^|[\s:;.,])(\d+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, quote, letter) => {
+                if (num.length >= 4) return match; // Não altera anos ou referências de 4 dígitos
+                const q = quote ? '“' : '';
+                return `${prefix}${toSuperscript(num)} ${q}${letter}`;
+            });
+
+            // Converte números de versículos isolados entre espaços mantendo o versículo
+            text = text.replace(/(^|[\s:;.,])(\d+)(\s+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, space, quote, letter) => {
+                if (num.length >= 4) return match;
+                const q = quote ? '“' : '';
+                return `${prefix}${toSuperscript(num)} ${q}${letter}`;
+            });
+
             // Normaliza aspas para tipografia sacra elegante
-            text = text.replace(/:\s*['’]/g, ': “');
+            text = text.replace(/:\s*['’"“]/g, ': “');
             text = text.replace(/['’]\s*\./g, '”.');
             text = text.replace(/['’]\s*,/g, '”,');
-            text = text.replace(/['']/g, '”');
+            text = text.replace(/['’"]/g, '”');
             text = text.replace(/\s+/g, ' ').trim();
             return text;
         }
