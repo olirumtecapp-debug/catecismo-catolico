@@ -5801,6 +5801,10 @@
            GERADOR DE CARDS SACROS DO EVANGELHO (100% GRATUITO - CANVAS)
            ======================================================== */
         const EvangelhoCardGenerator = {
+            async renderCard(targetDate) {
+                return this.generateCard(targetDate);
+            },
+
             async generateCard(targetDate) {
                 const date = targetDate || getLocalDateString();
                 let lit = null;
@@ -10033,7 +10037,7 @@
             `;
             try {
                 const todayStr = targetDate || new Date().toISOString().split('T')[0];
-                const res = await EvangelhoCardGenerator.renderCard(todayStr);
+                const res = await (typeof EvangelhoCardGenerator.renderCard === 'function' ? EvangelhoCardGenerator.renderCard(todayStr) : EvangelhoCardGenerator.generateCard(todayStr));
                 window._lastGospelCard = res;
                 box.innerHTML = `
                     <div class="w-full flex flex-col md:flex-row items-center gap-6 text-left">
