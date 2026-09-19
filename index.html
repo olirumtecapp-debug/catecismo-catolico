@@ -5892,18 +5892,51 @@
                 canvas.height = H;
                 const ctx = canvas.getContext('2d');
 
-                // 1. Fundo Gradiente Nobre Mariano
-                const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
-                bgGrad.addColorStop(0, '#0B192C');
-                bgGrad.addColorStop(0.4, '#102A43');
-                bgGrad.addColorStop(1, '#07111D');
-                ctx.fillStyle = bgGrad;
-                ctx.fillRect(0, 0, W, H);
+                // Seleciona e carrega a pintura sacra clássica condizente com a passagem litúrgica
+                const artwork = this.getSacredArtworkForGospel(gospelText, gospelRef);
+                const bgImage = await this.loadImageAsync(artwork.path, artwork.fallbackUrl);
+
+                // 1. Desenha Fundo: Pintura Sacra Clássica com Sobreposição Nobre ou Gradiente Mariano
+                if (bgImage) {
+                    // Desenha imagem proporcional (object-fit: cover)
+                    const imgRatio = bgImage.width / bgImage.height;
+                    const canvasRatio = W / H;
+                    let sW, sH, sX, sY;
+                    if (imgRatio > canvasRatio) {
+                        sH = bgImage.height;
+                        sW = bgImage.height * canvasRatio;
+                        sX = (bgImage.width - sW) / 2;
+                        sY = 0;
+                    } else {
+                        sW = bgImage.width;
+                        sH = bgImage.width / canvasRatio;
+                        sX = 0;
+                        sY = (bgImage.height - sH) / 2;
+                    }
+                    ctx.drawImage(bgImage, sX, sY, sW, sH, 0, 0, W, H);
+
+                    // Camada de vinheta e filtro sacro para garantir leitura orante cristalina do texto
+                    const overlayGrad = ctx.createLinearGradient(0, 0, 0, H);
+                    overlayGrad.addColorStop(0, 'rgba(7, 17, 29, 0.84)');
+                    overlayGrad.addColorStop(0.35, 'rgba(11, 25, 44, 0.76)');
+                    overlayGrad.addColorStop(0.7, 'rgba(7, 17, 29, 0.82)');
+                    overlayGrad.addColorStop(1, 'rgba(4, 10, 18, 0.94)');
+                    ctx.fillStyle = overlayGrad;
+                    ctx.fillRect(0, 0, W, H);
+                } else {
+                    // Fundo Gradiente Nobre Mariano (Fallback)
+                    const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+                    bgGrad.addColorStop(0, '#0B192C');
+                    bgGrad.addColorStop(0.4, '#102A43');
+                    bgGrad.addColorStop(1, '#07111D');
+                    ctx.fillStyle = bgGrad;
+                    ctx.fillRect(0, 0, W, H);
+                }
 
                 // 2. Halo Espiritual de Luz Dourada
                 const haloY = format === 'story' ? 460 : (format === 'quadrado' ? 300 : 360);
                 const radGrad = ctx.createRadialGradient(540, haloY, 40, 540, haloY + 80, 550);
-                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.18)');
+                radGrad.addColorStop(0, 'rgba(212, 175, 55, 0.20)');
                 radGrad.addColorStop(1, 'rgba(11, 25, 44, 0)');
                 ctx.fillStyle = radGrad;
                 ctx.fillRect(0, 0, W, H);
@@ -6079,6 +6112,13 @@
                 const footerText1Y = footerLineY + 36;
                 const footerText2Y = footerText1Y + 28;
 
+                // Crédito sutil da Arte Sacra clássica no rodapé
+                if (artwork && artwork.title) {
+                    ctx.font = 'italic 12px Georgia, serif';
+                    ctx.fillStyle = 'rgba(212, 175, 55, 0.75)';
+                    ctx.fillText(`Fundo Sacro: "${artwork.title}" • ${artwork.artist}`, 540, footerLineY - 14);
+                }
+
                 ctx.strokeStyle = 'rgba(212, 175, 55, 0.4)';
                 ctx.beginPath();
                 ctx.moveTo(250, footerLineY);
@@ -6105,8 +6145,107 @@
                     formattedDate,
                     gospelRef: formattedRef,
                     cleanText,
-                    medClean
+                    medClean,
+                    artwork
                 };
+            },
+
+            getSacredArtworkForGospel(gospelText, gospelRef) {
+                const textLower = (String(gospelText || '') + ' ' + String(gospelRef || '')).toLowerCase();
+
+                // 1. Semeador / Campo / Sementes (Ex: Parábola de hoje!)
+                if (/semea|semente|seára|gr[aã]o|trigo|campo|terra boa|espinho/i.test(textLower)) {
+                    return {
+                        path: './assets/img/liturgia/semeador.jpg',
+                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP-42549-001.jpg',
+                        title: 'Campo de Trigo (A Parábola do Semeador)',
+                        artist: 'Vincent van Gogh (1889)'
+                    };
+                }
+
+                // 2. Bom Pastor / Ovelha Perdida / Vocação Pastoral
+                if (/pastor|ovelha|rebanho|aprisco/i.test(textLower)) {
+                    return {
+                        path: './assets/img/liturgia/pastor_mestre.jpg',
+                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DT1347.jpg',
+                        title: 'Cristo com o Cajado (O Bom Pastor)',
+                        artist: 'Rembrandt van Rijn (1661)'
+                    };
+                }
+
+                // 3. Pão da Vida / Eucaristia / A Última Ceia / Cálice
+                if (/p[aã]o|c[aá]lice|ceia|corpo e sangue|eucaristia|banquete|vinho/i.test(textLower)) {
+                    return {
+                        path: './assets/img/liturgia/ultima_ceia.jpg',
+                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/rl/web-large/DP-14401-001.jpg',
+                        title: 'A Última Ceia (O Pão da Vida)',
+                        artist: 'Bernard van Orley (c. 1530)'
+                    };
+                }
+
+                // 4. Virgem Maria / Nossa Senhora / Menino Jesus
+                if (/maria|m[aã]e|jos[eé]|isabel|anuncia|magnificat|virgem/i.test(textLower)) {
+                    return {
+                        path: './assets/img/liturgia/virgem_menino.jpg',
+                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-010.jpg',
+                        title: 'A Virgem e o Menino Jesus',
+                        artist: 'Bartolomé Esteban Murillo (c. 1670)'
+                    };
+                }
+
+                // 5. Adoração dos Pastores / Natividade / Nascimento de Jesus
+                if (/bel[eé]m|manjedoura|nascimento|pastores|natal|estrelas|magos/i.test(textLower)) {
+                    return {
+                        path: './assets/img/liturgia/adoracao_pastores.jpg',
+                        fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP123919.jpg',
+                        title: 'A Adoração dos Pastores',
+                        artist: 'El Greco (c. 1605)'
+                    };
+                }
+
+                // 6. Cristo Mestre / Benção / Palavra de Vida (Padrão e Fallback Nobre)
+                return {
+                    path: './assets/img/liturgia/cristo_bencao.jpg',
+                    fallbackUrl: 'https://images.metmuseum.org/CRDImages/ep/web-large/DP218061.jpg',
+                    title: 'Cristo Abençoando (Salvator Mundi)',
+                    artist: 'Gerard David (c. 1500)'
+                };
+            },
+
+            loadImageAsync(localPath, fallbackUrl) {
+                return new Promise((resolve) => {
+                    const tryLoad = (src, isFallback = false) => {
+                        const img = new Image();
+                        img.crossOrigin = 'anonymous';
+                        let resolved = false;
+                        const timer = setTimeout(() => {
+                            if (!resolved) {
+                                resolved = true;
+                                if (!isFallback && fallbackUrl) tryLoad(fallbackUrl, true);
+                                else resolve(null);
+                            }
+                        }, 2200);
+
+                        img.onload = () => {
+                            if (!resolved) {
+                                resolved = true;
+                                clearTimeout(timer);
+                                resolve(img);
+                            }
+                        };
+                        img.onerror = () => {
+                            if (!resolved) {
+                                resolved = true;
+                                clearTimeout(timer);
+                                if (!isFallback && fallbackUrl) tryLoad(fallbackUrl, true);
+                                else resolve(null);
+                            }
+                        };
+                        img.src = src;
+                    };
+
+                    tryLoad(localPath);
+                });
             },
 
             cleanGospelText(text) {
@@ -10245,6 +10384,15 @@ https://catecismo.creativeam.com.br
                                 </div>
                                 <h4 class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100">${res.gospelRef}</h4>
                                 <p class="text-xs text-slate-500 dark:text-slate-400">Data Litúrgica: <strong>${res.formattedDate}</strong></p>
+                                ${res.artwork ? `
+                                    <div class="p-2.5 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60 text-xs text-amber-950 dark:text-amber-200 flex items-center gap-2 mt-1.5">
+                                        <span class="text-base shrink-0">🎨</span>
+                                        <div class="min-w-0">
+                                            <p class="font-bold text-[11px] leading-tight">Fundo: Pintura Sacra Clássica (The Met)</p>
+                                            <p class="text-[10px] text-amber-800 dark:text-amber-300 truncate mt-0.5">"${res.artwork.title}" • ${res.artwork.artist}</p>
+                                        </div>
+                                    </div>
+                                ` : ''}
                             </div>
 
                             <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 space-y-1">
