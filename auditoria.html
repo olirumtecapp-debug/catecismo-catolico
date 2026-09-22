@@ -420,25 +420,41 @@
             </div>
 
             <!-- Escopo da Busca -->
-            <div class="bg-slate-950/70 border border-slate-800 p-3.5 rounded-xl space-y-2.5">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <label class="text-xs font-semibold text-slate-200">Selecione o escopo da verificação:</label>
-                    <div class="flex items-center gap-2 text-xs">
-                        <select id="vaticanScopeSelect" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                            <option value="month">📅 Mês selecionado no filtro principal</option>
-                            <option value="day">🗓️ Dia selecionado no filtro principal</option>
+            <div class="bg-slate-950/70 border border-slate-800 p-4 rounded-xl space-y-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Mês a consultar no Vaticano:</label>
+                        <select id="vaticanMonthSel" onchange="onVaticanMonthChange()" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="01">01 - Janeiro</option>
+                            <option value="02">02 - Fevereiro</option>
+                            <option value="03">03 - Março</option>
+                            <option value="04">04 - Abril</option>
+                            <option value="05">05 - Maio</option>
+                            <option value="06">06 - Junho</option>
+                            <option value="07">07 - Julho</option>
+                            <option value="08">08 - Agosto</option>
+                            <option value="09">09 - Setembro</option>
+                            <option value="10" selected>10 - Outubro</option>
+                            <option value="11">11 - Novembro</option>
+                            <option value="12">12 - Dezembro</option>
                         </select>
-                        <button id="btnRunVaticanCheck" onclick="runVaticanCheck()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow cursor-pointer">
-                            <span>🔍</span> <span id="vaticanCheckBtnText">Consultar Vaticano</span>
-                        </button>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Dia do mês:</label>
+                        <select id="vaticanDaySel" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="all">🗓️ O Mês Inteiro (Todos os dias)</option>
+                        </select>
                     </div>
                 </div>
-                <div class="text-[11px] text-slate-400 flex items-start gap-1.5 bg-blue-950/30 border border-blue-900/50 p-2.5 rounded-lg">
-                    <span class="text-emerald-400 font-bold text-sm">🔒</span>
-                    <div>
-                        <span class="text-emerald-300 font-medium">Garantia Absoluta de Segurança:</span>
-                        <span> Seus santos existentes e suas fotos locais salvas <b>NUNCA</b> são apagados nem alterados. Antes de qualquer inclusão, uma cópia de segurança (backup) é gerada automaticamente.</span>
+
+                <div class="flex items-center justify-between pt-1 gap-2 flex-wrap">
+                    <div class="text-[11px] text-slate-400 flex items-center gap-1.5">
+                        <span class="text-emerald-400 font-bold">🔒 Backup Automático:</span>
+                        <span>Seus santos e fotos locais salvas nunca são alterados.</span>
                     </div>
+                    <button id="btnRunVaticanCheck" onclick="runVaticanCheck()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs px-4 py-2 rounded-lg transition flex items-center gap-1.5 shadow cursor-pointer">
+                        <span>🔍</span> <span id="vaticanCheckBtnText">Consultar Vaticano</span>
+                    </button>
                 </div>
             </div>
 
@@ -1258,19 +1274,53 @@ DIRETRIZES DE EXECUÇÃO:
         // ==========================================
         let vaticanDiscoveredSaints = [];
 
+        function populateVaticanDays() {
+            const mSel = document.getElementById('vaticanMonthSel');
+            const dSel = document.getElementById('vaticanDaySel');
+            if (!mSel || !dSel) return;
+
+            const m = parseInt(mSel.value, 10);
+            const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m] || 31;
+
+            const curVal = dSel.value;
+            dSel.innerHTML = '<option value="all">🗓️ O Mês Inteiro (Todos os dias)</option>';
+            for (let i = 1; i <= daysInMonth; i++) {
+                const val = String(i).padStart(2, '0');
+                const opt = document.createElement('option');
+                opt.value = val;
+                opt.innerText = `Dia ${val}`;
+                if (curVal === val) opt.selected = true;
+                dSel.appendChild(opt);
+            }
+        }
+
+        function onVaticanMonthChange() {
+            populateVaticanDays();
+        }
+
         function openVaticanSyncModal() {
             const modal = document.getElementById('vaticanSyncModal');
             if (!modal) return;
 
-            // Ajusta o texto da opção baseado nos filtros ativos
+            // Sincroniza com os seletores ativos na barra superior
             const m = document.getElementById('mSel').value;
             const d = document.getElementById('dSel').value;
-            const scopeSelect = document.getElementById('vaticanScopeSelect');
-            if (scopeSelect) {
-                const monthName = m === 'all' ? 'Todos os meses' : `Mês ${m}`;
-                const dayName = d === 'all' ? 'Todos os dias' : `Dia ${d}/${m}`;
-                scopeSelect.options[0].text = `📅 Mês ativo (${monthName})`;
-                scopeSelect.options[1].text = `🗓️ Dia ativo (${dayName})`;
+            
+            const vM = document.getElementById('vaticanMonthSel');
+            if (vM) {
+                if (m && m !== 'all') {
+                    vM.value = m;
+                } else {
+                    // Mês padrão: Outubro (10) ou atual
+                    const curMonth = String(new Date().getMonth() + 1).padStart(2, '0');
+                    vM.value = curMonth;
+                }
+            }
+            populateVaticanDays();
+
+            const vD = document.getElementById('vaticanDaySel');
+            if (vD && d && d !== 'all') {
+                vD.value = d;
             }
 
             // Reseta visualização
@@ -1290,24 +1340,14 @@ DIRETRIZES DE EXECUÇÃO:
         }
 
         async function runVaticanCheck() {
-            const scope = document.getElementById('vaticanScopeSelect').value;
-            const m = document.getElementById('mSel').value;
-            const d = document.getElementById('dSel').value;
+            const m = document.getElementById('vaticanMonthSel').value;
+            const d = document.getElementById('vaticanDaySel').value;
 
             let payload = {};
-            if (scope === 'day') {
-                if (d === 'all') {
-                    showToast('Selecione um dia específico no filtro do topo para verificar um dia único.', 'error');
-                    return;
-                }
-                const monthVal = m === 'all' ? '10' : m;
-                payload = { date: `2026-${monthVal}-${d}` };
-            } else {
-                if (m === 'all') {
-                    showToast('Selecione um mês específico (ex: 10 - Outubro) para verificação rápida.', 'error');
-                    return;
-                }
+            if (d === 'all') {
                 payload = { month: m };
+            } else {
+                payload = { date: `2026-${m}-${d}` };
             }
 
             const loadingEl = document.getElementById('vaticanLoadingState');
