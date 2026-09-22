@@ -495,7 +495,43 @@
             }
         };
 
-        // 5. Banco de Novenas Litúrgicas Oficiais (Início, Fim e Festa)
+        // 5. Helpers para Vínculo Inteligente com as Novenas no Catecismo
+        const findCanonicalNovenaId = (name) => {
+            if (!name) return null;
+            const norm = name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            if (norm.includes('teresinha') || norm.includes('terezinha') || norm.includes('rosas')) return 'santa-teresinha';
+            if (norm.includes('pio') || norm.includes('pietrelcina')) return 'padre-pio';
+            if (norm.includes('geraldo') || norm.includes('magela')) return 'sao-geraldo-magela';
+            if (norm.includes('edwiges') || norm.includes('hedwig')) return 'santa-edwiges';
+            if (norm.includes('luzia') || norm.includes('lucia')) return 'santa-luzia';
+            if (norm.includes('aparecida')) return 'nossa-senhora-aparecida';
+            if (norm.includes('judas') || norm.includes('tadeu')) return 'sao-judas-tadeu';
+            if (norm.includes('desatadora') || norm.includes('dos nos')) return 'nossa-senhora-desatadora-dos-nos';
+            if (norm.includes('misericordia') || norm.includes('faustina')) return 'divina-misericordia';
+            if (norm.includes('pentecostes') || norm.includes('espirito santo')) return 'pentecostes';
+            if (norm.includes('bento')) return 'sao-bento';
+            if (norm.includes('antonio')) return 'santo-antonio';
+            if (norm.includes('jose')) return 'sao-jose';
+            if (norm.includes('miguel') || norm.includes('arcanjo')) return 'sao-miguel-arcanjo';
+            if (norm.includes('natal') || norm.includes('menino jesus')) return 'novena-de-natal';
+            return null;
+        };
+
+        const handleOpenNovena = (novenaId = null, day = 1) => {
+            if (window.parent && window.parent !== window) {
+                try {
+                    window.parent.postMessage({ type: 'OPEN_NOVENA', novenaId: novenaId || null, day: day || 1 }, '*');
+                    return;
+                } catch (e) {}
+            }
+            if (novenaId) {
+                window.location.href = `/#novenas-${novenaId}`;
+            } else {
+                window.location.href = `/#novenas`;
+            }
+        };
+
+        // 6. Banco de Novenas Litúrgicas Oficiais (Início, Fim e Festa)
         const NOVENAS_DATA = [
             // Janeiro
             { month: 0, startDay: 8, endDay: 16, feastDay: 17, name: 'Novena de Santo Antão Abade', target: 'Pai dos monges no deserto, modelo de oração e combate espiritual contra as tentações.' },
@@ -507,13 +543,13 @@
             { month: 1, startDay: 2, endDay: 10, feastDay: 11, name: 'Novena de Nossa Senhora de Lourdes', target: 'Dia Mundial dos Enfermos, oração pela cura dos doentes e conversão dos pecadores.' },
 
             // Março
-            { month: 2, startDay: 10, endDay: 18, feastDay: 19, name: 'Novena de São José, Patrono Universal', target: 'Protetor das famílias, terror dos demônios, amparo dos trabalhadores e da boa morte.' },
+            { month: 2, startDay: 10, endDay: 18, feastDay: 19, name: 'Novena de São José, Patrono Universal', novenaId: 'sao-jose', target: 'Protetor das famílias, terror dos demônios, amparo dos trabalhadores e da boa morte.' },
             { month: 2, startDay: 16, endDay: 24, feastDay: 25, name: 'Novena da Anunciação do Senhor', target: 'Celebração do Fiat de Maria e do Mistério da Encarnação do Verbo no seio da Virgem.' },
 
             // Abril
             { month: 3, startDay: 19, endDay: 27, feastDay: 28, name: 'Novena de Santa Gianna Beretta Molla', target: 'Mãe de família e médica heroica que deu a vida pelo seu bebê, padroeira das famílias e gestantes.' },
             { month: 3, startDay: 20, endDay: 28, feastDay: 29, name: 'Novena de Santa Catarina de Siena', target: 'Doutora da Igreja, conselheira papal e mística apaixonada pela salvação das almas.' },
-            { month: 3, startDay: 22, endDay: 30, feastDay: 1, name: 'Novena de São José Operário', target: 'Dignificação do trabalho humano, bênção profissional e intercessão pelos desempregados.' },
+            { month: 3, startDay: 22, endDay: 30, feastDay: 1, name: 'Novena de São José Operário', novenaId: 'sao-jose', target: 'Dignificação do trabalho humano, bênção profissional e intercessão pelos desempregados.' },
 
             // Maio
             { month: 4, startDay: 4, endDay: 12, feastDay: 13, name: 'Novena de Nossa Senhora de Fátima', target: 'Chamado à oração diária do Rosário pela paz no mundo e consagração ao Imaculado Coração.' },
@@ -521,14 +557,14 @@
             { month: 4, startDay: 17, endDay: 25, feastDay: 26, name: 'Novena de São Filipe Néri', target: 'O santo da alegria de Roma, fundador do Oratório e apóstolo incansável da juventude.' },
 
             // Junho
-            { month: 5, startDay: 31, endDay: 12, feastDay: 13, name: 'Trezena de Santo Antônio de Pádua', target: 'Doutor Evangélico, grande taumaturgo e amigo dos pobres, padroeiro das famílias.' },
+            { month: 5, startDay: 31, endDay: 12, feastDay: 13, name: 'Trezena de Santo Antônio de Pádua', novenaId: 'santo-antonio', target: 'Doutor Evangélico, grande taumaturgo e amigo dos pobres, padroeiro das famílias.' },
             { month: 5, startDay: 12, endDay: 20, feastDay: 21, name: 'Novena de São Luís Gonzaga', target: 'Padroeiro da juventude católica, modelo excelso de pureza e amor heroico aos doentes.' },
             { month: 5, startDay: 15, endDay: 23, feastDay: 24, name: 'Novena da Natividade de São João Batista', target: 'O precursor que preparou os caminhos do Senhor nascido de Santa Isabel.' },
             { month: 5, startDay: 18, endDay: 26, feastDay: 27, name: 'Novena de Nossa Senhora do Perpétuo Socorro', target: 'Socorro materno infalível nas aflições corporais e espirituais da vida.' },
             { month: 5, startDay: 20, endDay: 28, feastDay: 29, name: 'Novena de São Pedro e São Paulo', target: 'Colunas apostólicas da Santa Igreja e fiéis guardiões da Sé de Pedro.' },
 
             // Julho
-            { month: 6, startDay: 2, endDay: 10, feastDay: 11, name: 'Novena de São Bento Abade', target: 'Patrono do Ocidente e potente protetor contra as ciladas e tentações do inimigo.' },
+            { month: 6, startDay: 2, endDay: 10, feastDay: 11, name: 'Novena de São Bento Abade', novenaId: 'sao-bento', target: 'Patrono do Ocidente e potente protetor contra as ciladas e tentações do inimigo.' },
             { month: 6, startDay: 7, endDay: 15, feastDay: 16, name: 'Novena de Nossa Senhora do Carmo', target: 'Graça do Santo Escapulário e proteção maternal nas horas de perigo e aflição.' },
             { month: 6, startDay: 17, endDay: 25, feastDay: 26, name: 'Novena de São Joaquim e Sant’Ana', target: 'Avós de Nosso Senhor Jesus Cristo e padroeiros dos avós e dos lares cristãos.' },
             { month: 6, startDay: 22, endDay: 30, feastDay: 31, name: 'Novena de Santo Inácio de Loyola', target: 'Mestre dos Exercícios Espirituais e do discernimento para tudo fazer para a Maior Glória de Deus.' },
@@ -536,24 +572,27 @@
             // Agosto
             { month: 7, startDay: 2, endDay: 10, feastDay: 11, name: 'Novena de Santa Clara de Assis', target: 'Fundadora das Clarissas, mística da pobreza evangélica e apaixonada pela Sagrada Eucaristia.' },
             { month: 7, startDay: 5, endDay: 13, feastDay: 14, name: 'Novena de São Maximiliano Maria Kolbe', target: 'Mártir da caridade em Auschwitz e apóstolo intrépido da Imaculada Conceição.' },
+            { month: 7, startDay: 6, endDay: 14, feastDay: 15, name: 'Novena de Nossa Senhora Desatadora dos Nós', novenaId: 'nossa-senhora-desatadora-dos-nos', target: 'Mãe bendita que desata os nós dos conflitos familiares, dores e impossíveis.' },
             { month: 7, startDay: 6, endDay: 14, feastDay: 15, name: 'Novena da Assunção de Nossa Senhora', target: 'Triunfo glorioso de Maria elevada aos céus em corpo e alma, rainha de todo o universo.' },
             { month: 7, startDay: 19, endDay: 27, feastDay: 28, name: 'Novena de Santo Agostinho', target: 'Bispo de Hipona e Doutor da Graça, modelo de conversão radical e ardor pelo Deus vivo.' },
 
             // Setembro
             { month: 8, startDay: 5, endDay: 13, feastDay: 14, name: 'Novena da Exaltação da Santa Cruz', target: 'Honra e veneração ao madeiro sagrado no qual o Redentor venceu a morte e o pecado.' },
             { month: 8, startDay: 8, endDay: 14, feastDay: 15, name: 'Setenário de Nossa Senhora das Dores', target: 'Sete dores da Mãe de Deus ao pé da Cruz e consolo aos corações aflitos e sofredores.' },
-            { month: 8, startDay: 14, endDay: 22, feastDay: 23, name: 'Novena de São Pio de Pietrelcina', target: 'Místico estigmatizado, conselheiro de almas e apóstolo fervoroso da oração e confissão.' },
-            { month: 8, startDay: 20, endDay: 28, feastDay: 29, name: 'Novena dos Santos Arcanjos Miguel, Gabriel e Rafael', target: 'Defesa e combate espiritual, anúncio das graças de Deus e cura dos doentes.' },
-            { month: 8, startDay: 22, endDay: 30, feastDay: 1, name: 'Novena das Rosas de Santa Teresinha', target: 'A Pequena Via de infância espiritual e promessa de chuvas de bênçãos sobre a terra.' },
+            { month: 8, startDay: 14, endDay: 22, feastDay: 23, name: 'Novena de São Pio de Pietrelcina', novenaId: 'padre-pio', target: 'Místico estigmatizado, conselheiro de almas e apóstolo fervoroso da oração e confissão.' },
+            { month: 8, startDay: 20, endDay: 28, feastDay: 29, name: 'Novena dos Santos Arcanjos Miguel, Gabriel e Rafael', novenaId: 'sao-miguel-arcanjo', target: 'Defesa e combate espiritual, anúncio das graças de Deus e cura dos doentes.' },
+            { month: 8, startDay: 22, endDay: 30, feastDay: 1, name: 'Novena das Rosas de Santa Teresinha', novenaId: 'santa-teresinha', target: 'A Pequena Via de infância espiritual e promessa de chuvas de bênçãos sobre a terra.' },
 
             // Outubro
+            { month: 9, startDay: 3, endDay: 11, feastDay: 12, name: 'Novena de Nossa Senhora Aparecida & São Carlo Acutis', novenaId: 'nossa-senhora-aparecida', target: 'Padroeira do Brasil e o jovem patrono da internet que fez da Eucaristia sua estrada para o céu.' },
+            { month: 9, startDay: 7, endDay: 15, feastDay: 16, name: 'Novena de Santa Edwiges', novenaId: 'santa-edwiges', target: 'Protetora dos endividados, desvalidos e famílias em dificuldades financeiras.' },
+            { month: 9, startDay: 7, endDay: 15, feastDay: 16, name: 'Novena de São Geraldo Magela', novenaId: 'sao-geraldo-magela', target: 'Padroeiro das mães, das gestantes e do parto seguro.' },
             { month: 9, startDay: 23, endDay: 1, feastDay: 2, name: 'Novena dos Santos Anjos da Guarda', target: 'Nossos custódios celestes e guias espirituais que nos defendem a cada instante.' },
             { month: 9, startDay: 25, endDay: 3, feastDay: 4, name: 'Novena de São Francisco de Assis', target: 'O Pai Seráfico, espelho perfeito de Cristo Crucificado, paz e desapego evangélico.' },
-            { month: 9, startDay: 26, endDay: 4, feastDay: 5, name: 'Novena de Santa Faustina Kowalska', target: 'Secretária da Divina Misericórdia e confidente do Coração compassivo de Jesus.' },
-            { month: 9, startDay: 3, endDay: 11, feastDay: 12, name: 'Novena de Nossa Senhora Aparecida & São Carlo Acutis', target: 'Padroeira do Brasil e o jovem patrono da internet que fez da Eucaristia sua estrada para o céu.' },
+            { month: 9, startDay: 26, endDay: 4, feastDay: 5, name: 'Novena de Santa Faustina Kowalska', novenaId: 'divina-misericordia', target: 'Secretária da Divina Misericórdia e confidente do Coração compassivo de Jesus.' },
             { month: 9, startDay: 6, endDay: 14, feastDay: 15, name: 'Novena de Santa Teresa de Jesus (D’Ávila)', target: 'Mestra de oração e doutora mística, que ensinou que nada nos perturbe, pois só Deus basta.' },
             { month: 9, startDay: 13, endDay: 21, feastDay: 22, name: 'Novena de São João Paulo II', target: 'Testemunha da esperança, apóstolo da juventude e pai das famílias católicas.' },
-            { month: 9, startDay: 19, endDay: 27, feastDay: 28, name: 'Novena de São Judas Tadeu', target: 'Apóstolo leal e patrono das causas desesperadas e dos momentos de angústia.' },
+            { month: 9, startDay: 19, endDay: 27, feastDay: 28, name: 'Novena de São Judas Tadeu', novenaId: 'sao-judas-tadeu', target: 'Apóstolo leal e patrono das causas desesperadas e dos momentos de angústia.' },
 
             // Novembro
             { month: 10, startDay: 23, endDay: 31, feastDay: 1, name: 'Novena de Todos os Santos', target: 'Festa da Igreja Triunfante e da comunhão dos santos que intercedem por nós junto a Deus.' },
@@ -562,12 +601,12 @@
             // Dezembro
             { month: 11, startDay: 29, endDay: 7, feastDay: 8, name: 'Novena da Imaculada Conceição de Maria', target: 'Dogma da toda pura e sem mancha, a Mulher vestida de sol concebida sem pecado original.' },
             { month: 11, startDay: 3, endDay: 11, feastDay: 12, name: 'Novena de Nossa Senhora de Guadalupe', target: 'Mãe celestial de todos os povos das Américas e defensora santa dos nascituros.' },
-            { month: 11, startDay: 4, endDay: 12, feastDay: 13, name: 'Novena de Santa Luzia', target: 'Virgem e mártir cristã, protetora da visão dos olhos e da luz da fé nas provações.' },
+            { month: 11, startDay: 4, endDay: 12, feastDay: 13, name: 'Novena de Santa Luzia', novenaId: 'santa-luzia', target: 'Virgem e mártir cristã, protetora da visão dos olhos e da luz da fé nas provações.' },
             { month: 11, startDay: 5, endDay: 13, feastDay: 14, name: 'Novena de São João da Cruz', target: 'Místico do Carmelo e doutor da contemplação e da subida do Monte Carmelo.' },
-            { month: 11, startDay: 16, endDay: 24, feastDay: 25, name: 'Novena de Natal do Menino Jesus', target: 'Preparação do presépio do coração para o Santo Nascimento do Salvador.' }
+            { month: 11, startDay: 16, endDay: 24, feastDay: 25, name: 'Novena de Natal do Menino Jesus', novenaId: 'novena-de-natal', target: 'Preparação do presépio do coração para o Santo Nascimento do Salvador.' }
         ];
 
-        // 6. Retorna as Novenas ativas ou que começam em um determinado mês
+        // 7. Retorna as Novenas ativas ou que começam em um determinado mês
         const getNovenasForMonth = (month) => {
             return NOVENAS_DATA.filter(n => n.month === month);
         };
@@ -686,10 +725,13 @@
             const novenasStartingToday = NOVENAS_DATA.filter(n => n.month === month && n.startDay === day);
             if (novenasStartingToday.length > 0) {
                 novenasStartingToday.forEach(nov => {
+                    const canonicalNovenaId = nov.novenaId || findCanonicalNovenaId(nov.name);
                     events.push({
                         date: dateStr,
                         name: `📿 Início da ${nov.name}`,
                         type: 'novena_start',
+                        novenaId: canonicalNovenaId,
+                        novenaName: nov.name,
                         desc: `Hoje tem início a ${nov.name} (de ${nov.startDay} a ${nov.endDay} de ${MONTHS[month]}), preparando o coração para a festa litúrgica.`,
                         spiritualData: {
                             badge: 'Início de Novena',
@@ -724,12 +766,19 @@
             };
 
             const handleCloseOrBack = () => {
-                if (window.parent && window.parent.PreceitosModal) {
-                    window.parent.PreceitosModal.close();
-                } else {
-                    window.parent.postMessage({ type: 'CLOSE_PRECEITOS' }, '*');
-                    window.location.href = '/';
+                // Se estiver dentro de iframe, SEMPRE comunica o parent e NUNCA redireciona a página interna para '/'
+                if (window.parent && window.parent !== window) {
+                    try {
+                        window.parent.postMessage({ type: 'CLOSE_PRECEITOS' }, '*');
+                    } catch (e) {}
+                    try {
+                        if (window.parent.PreceitosModal && typeof window.parent.PreceitosModal.close === 'function') {
+                            window.parent.PreceitosModal.close();
+                        }
+                    } catch (e) {}
+                    return;
                 }
+                window.location.href = '/';
             };
 
             return (
@@ -999,6 +1048,7 @@
             const primaryEvent = eventData[0];
             const spiritual = primaryEvent.spiritualData || LITURGICAL_SPIRITUAL_DATA[primaryEvent.spiritualKey] || LITURGICAL_SPIRITUAL_DATA['domingo'];
             const category = CATEGORIES[primaryEvent.type] || CATEGORIES['preceito'];
+            const targetNovenaId = primaryEvent.novenaId || findCanonicalNovenaId(primaryEvent.name) || (primaryEvent.type === 'novena_start' ? 'santa-teresinha' : null);
 
             const handleCopyOracao = () => {
                 if (spiritual && spiritual.oracao) {
@@ -1050,6 +1100,35 @@
                                 {formattedDate}
                             </p>
                         </div>
+
+                        {/* Banner de Destaque Inteligente para Rezar a Novena no Catecismo */}
+                        {(primaryEvent.type === 'novena_start' || targetNovenaId) && (
+                            <div className="bg-gradient-to-r from-rose-50 via-amber-50 to-orange-50 border-b border-rose-200/90 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 flex-shrink-0">
+                                <div className="flex items-center gap-3.5">
+                                    <div className="w-10 h-10 rounded-xl bg-white border border-rose-200 flex items-center justify-center text-xl shadow-2xs shrink-0">
+                                        🌹
+                                    </div>
+                                    <div>
+                                        <div className="text-xs font-bold text-catholic-wine uppercase tracking-wider flex items-center gap-1.5">
+                                            <span>Novena no Catecismo</span>
+                                            <span className="text-[10px] px-2 py-0.2 rounded-full bg-rose-100 text-rose-800 font-semibold border border-rose-200">Disponível</span>
+                                        </div>
+                                        <p className="text-xs text-stone-700 leading-snug mt-0.5">
+                                            {targetNovenaId
+                                                ? 'Reze o itinerário dos 9 dias com intenções diárias, orações completas e acompanhamento de progresso.'
+                                                : 'Acesse o portal de Novenas Católicas com orações diárias e acompanhamento.'}
+                                        </p>
+                                    </div>
+                                </div>
+                                <button
+                                    onClick={() => handleOpenNovena(targetNovenaId, 1)}
+                                    className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-catholic-wine hover:bg-catholic-wineHover text-white text-xs font-bold shadow-sm transition flex items-center justify-center gap-2 cursor-pointer shrink-0"
+                                >
+                                    <span>{targetNovenaId ? 'Rezar no Catecismo' : 'Abrir Novenas'}</span>
+                                    <i className="ph-bold ph-arrow-right"></i>
+                                </button>
+                            </div>
+                        )}
 
                         {/* Abas de Navegação */}
                         <div className="flex border-b border-stone-200 bg-stone-50 px-4 sm:px-6 overflow-x-auto flex-shrink-0">
@@ -1244,26 +1323,43 @@
                             </div>
 
                             <div className="space-y-3">
-                                {novenas.map((nov, idx) => (
-                                    <div key={idx} className="bg-stone-50 hover:bg-catholic-cream/40 border border-stone-200/80 rounded-2xl p-4 sm:p-5 transition-all">
-                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                                            <span className="text-xs font-bold text-catholic-wine font-cinzel flex items-center gap-1.5">
-                                                <i className="ph-fill ph-calendar-plus text-catholic-gold"></i>
-                                                Rezar de {nov.startDay} a {nov.endDay} de {MONTHS[nov.month]}
-                                            </span>
-                                            <span className="text-[11px] font-semibold text-catholic-goldDark bg-catholic-goldLight px-2.5 py-0.5 rounded-full border border-catholic-gold/30">
-                                                Festa: {nov.feastDay} de {MONTHS[nov.month]}
-                                            </span>
-                                        </div>
+                                {novenas.map((nov, idx) => {
+                                    const canonicalId = nov.novenaId || findCanonicalNovenaId(nov.name);
+                                    return (
+                                        <div key={idx} className="bg-stone-50 hover:bg-catholic-cream/40 border border-stone-200/80 rounded-2xl p-4 sm:p-5 transition-all">
+                                            <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                                <span className="text-xs font-bold text-catholic-wine font-cinzel flex items-center gap-1.5">
+                                                    <i className="ph-fill ph-calendar-plus text-catholic-gold"></i>
+                                                    Rezar de {nov.startDay} a {nov.endDay} de {MONTHS[nov.month]}
+                                                </span>
+                                                <span className="text-[11px] font-semibold text-catholic-goldDark bg-catholic-goldLight px-2.5 py-0.5 rounded-full border border-catholic-gold/30">
+                                                    Festa: {nov.feastDay} de {MONTHS[nov.month]}
+                                                </span>
+                                            </div>
 
-                                        <h4 className="font-serif font-bold text-base text-stone-900 mb-1">
-                                            {nov.name}
-                                        </h4>
-                                        <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                                            {nov.target}
-                                        </p>
-                                    </div>
-                                ))}
+                                            <h4 className="font-serif font-bold text-base text-stone-900 mb-1">
+                                                {nov.name}
+                                            </h4>
+                                            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed mb-3">
+                                                {nov.target}
+                                            </p>
+
+                                            <div className="pt-2.5 border-t border-stone-200/60 flex items-center justify-between">
+                                                <span className="text-[11px] text-stone-500 font-medium">9 dias de oração</span>
+                                                <button
+                                                    onClick={() => {
+                                                        onClose();
+                                                        handleOpenNovena(canonicalId, 1);
+                                                    }}
+                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-catholic-wine text-white hover:bg-catholic-wineHover transition shadow-2xs cursor-pointer"
+                                                >
+                                                    <span>{canonicalId ? '🌹 Rezar esta Novena no Catecismo' : '📿 Ver Novenas no Catecismo'}</span>
+                                                    <i className="ph-bold ph-arrow-right text-xs"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 
@@ -1501,10 +1597,23 @@
 
                                     {/* Botão de Ação */}
                                     <div className="flex items-center gap-2 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-stone-100 flex-shrink-0">
-                                        <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-stone-100 group-hover:bg-catholic-wine group-hover:text-white text-stone-800 text-xs font-semibold transition-all shadow-xs">
-                                            <span>Roteiro Espiritual & Oração</span>
-                                            <i className="ph-bold ph-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                                        </span>
+                                        {primaryEv.type === 'novena_start' ? (
+                                            <button 
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleOpenNovena(primaryEv.novenaId || findCanonicalNovenaId(primaryEv.name), 1);
+                                                }}
+                                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-catholic-wine hover:bg-catholic-wineHover text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+                                            >
+                                                <span>🌹 Rezar Novena</span>
+                                                <i className="ph-bold ph-arrow-right text-xs"></i>
+                                            </button>
+                                        ) : (
+                                            <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-stone-100 group-hover:bg-catholic-wine group-hover:text-white text-stone-800 text-xs font-semibold transition-all shadow-xs">
+                                                <span>Roteiro Espiritual &amp; Oração</span>
+                                                <i className="ph-bold ph-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                             );

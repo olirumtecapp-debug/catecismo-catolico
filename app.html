@@ -9572,7 +9572,7 @@
                 const modal = document.getElementById('preceitos-modal');
                 const iframe = document.getElementById('preceitos-iframe');
                 if (!modal || !iframe) return;
-                if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.includes('preceitos')) {
+                if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.endsWith('/preceitos.html')) {
                     iframe.src = '/preceitos.html';
                 }
                 modal.classList.remove('hidden');
@@ -9598,6 +9598,9 @@
                     document.body.style.overflow = '';
                 }, 220);
                 this.isOpen = false;
+                if (window.location.hash === '#preceitos') {
+                    history.replaceState(null, null, window.location.pathname + window.location.search);
+                }
             }
         };
 
