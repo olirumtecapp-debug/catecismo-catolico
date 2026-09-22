@@ -202,64 +202,120 @@
                 </div>
             </div>
 
-            <!-- OPÇÃO 1: BING IMAGE CREATOR / DALL-E (COMPACTO ≤ 480 CARACTERES) -->
-            <div class="bg-blue-950/40 border border-blue-800/60 rounded-xl p-3.5 space-y-2">
-                <div class="flex items-center justify-between">
-                    <label class="text-xs font-bold text-sky-300 flex items-center gap-1.5">
-                        <span>⚡</span> Opção 1: Bing Image Creator (DALL-E 3 — Máx 480 carac.)
-                    </label>
-                    <div class="flex items-center gap-2">
-                        <span id="bingCharBadge" class="text-[10px] bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 px-2 py-0.5 rounded font-mono font-bold">
-                            0 / 480 carac. ✅
-                        </span>
-                        <a href="https://www.bing.com/images/create" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
-                            Abrir Bing ↗
-                        </a>
+            <!-- NAVEGAÇÃO DE ABAS POR IA -->
+            <div class="flex items-center gap-1.5 border-b border-slate-800 pb-2 overflow-x-auto custom-scrollbar">
+                <button type="button" onclick="switchPromptTab('bing')" id="tabBtn-bing" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-sky-600/30 text-sky-300 border border-sky-500/50 shadow-sm">
+                    <span>⚡</span> Bing (≤480c)
+                </button>
+                <button type="button" onclick="switchPromptTab('gemini')" id="tabBtn-gemini" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent">
+                    <span>♊</span> Gemini / ChatGPT
+                </button>
+                <button type="button" onclick="switchPromptTab('manus')" id="tabBtn-manus" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent">
+                    <span>🤖</span> Manus AI
+                </button>
+                <button type="button" onclick="switchPromptTab('midjourney')" id="tabBtn-midjourney" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent">
+                    <span>🎨</span> Midjourney / Flux
+                </button>
+            </div>
+
+            <!-- ABA 1: BING IMAGE CREATOR (COMPACTO ≤ 480 CARACTERES) -->
+            <div id="tabContent-bing" class="space-y-2">
+                <div class="bg-blue-950/30 border border-sky-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-sky-300 flex items-center gap-1.5">
+                            <span>⚡</span> Prompt Sintético para Bing Image Creator (DALL-E 3)
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <span id="bingCharBadge" class="text-[10px] bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 px-2 py-0.5 rounded font-mono font-bold">
+                                0 / 480 carac. ✅
+                            </span>
+                            <a href="https://www.bing.com/images/create" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                                Abrir Bing ↗
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-tight">
+                        Ultra-resumido em inglês litúrgico clássico. Contém estilo a óleo barroco, busto 1:1, auréola e iluminação quente de velas, rigorosamente dentro do limite de 480 caracteres do Bing Designer.
+                    </p>
+                    <div class="relative">
+                        <textarea id="promptBing" rows="4" readonly class="w-full bg-slate-900 border border-blue-900/50 rounded-xl p-3 text-xs text-sky-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('promptBing', this)" class="absolute right-2.5 bottom-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar para Bing
+                        </button>
                     </div>
                 </div>
-                <p class="text-[11px] text-slate-400 leading-tight">
-                    Prompt sintético e de alta precisão devocional. Inclui nome, vestes litúrgicas históricas, auréola sutil, iluminação barroca de vela e composição 1:1, estritamente abaixo do limite de 480 caracteres do Bing.
-                </p>
-                <div class="relative">
-                    <textarea id="promptBing" rows="3" readonly class="w-full bg-slate-900 border border-blue-900/50 rounded-xl p-3 text-xs text-sky-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
-                    <button onclick="copyToClipboard('promptBing', this)" class="absolute right-2.5 bottom-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
-                        📋 Copiar para Bing
-                    </button>
+            </div>
+
+            <!-- ABA 2: GOOGLE GEMINI / CHATGPT (COM PESQUISA ATIVA NA WEB) -->
+            <div id="tabContent-gemini" class="hidden space-y-2">
+                <div class="bg-emerald-950/30 border border-emerald-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                            <span>♊</span> Prompt para Gemini / ChatGPT (Pesquisa Iconográfica Ativa)
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded font-mono">Pesquisa + Gera</span>
+                            <a href="https://gemini.google.com" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                                Abrir Gemini ↗
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-tight">
+                        Instrui o Gemini ou ChatGPT a consultar a internet e a hagiografia oficial da Igreja Católica antes de gerar a arte, evitando personagens fictícios ou genéricos.
+                    </p>
+                    <div class="relative">
+                        <textarea id="promptGemini" rows="4" readonly class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-emerald-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('promptGemini', this)" class="absolute right-2.5 bottom-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar para Gemini
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- OPÇÃO 2: COM PESQUISA ATIVA NA WEB (CHATGPT / GEMINI / COPILOT) -->
-            <div class="bg-slate-950/80 border border-emerald-900/40 rounded-xl p-3.5 space-y-2">
-                <div class="flex items-center justify-between">
-                    <label class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
-                        <span>🌐</span> Opção 2: Prompt com Pesquisa na Web (ChatGPT / Gemini / Copilot)
-                    </label>
-                    <span class="text-[10px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded font-mono">Pesquisa + Gera</span>
-                </div>
-                <p class="text-[11px] text-slate-400 leading-tight">
-                    Cole este prompt no <strong>ChatGPT, Copilot ou Gemini</strong>. Ele manda a IA pesquisar as pinturas sacras reais e a hagiografia oficial na internet antes de desenhar, evitando personagens repetidos.
-                </p>
-                <div class="relative">
-                    <textarea id="promptWeb" rows="3" readonly class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
-                    <button onclick="copyToClipboard('promptWeb', this)" class="absolute right-2.5 bottom-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
-                        📋 Copiar Prompt de Pesquisa
-                    </button>
+            <!-- ABA 3: MANUS AI (AGENTE AUTÔNOMO) -->
+            <div id="tabContent-manus" class="hidden space-y-2">
+                <div class="bg-purple-950/30 border border-purple-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-purple-300 flex items-center gap-1.5">
+                            <span>🤖</span> Instrução para Manus AI (Agente Autônomo & Curadoria)
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] text-purple-300 bg-purple-950 px-2 py-0.5 rounded font-mono border border-purple-800/40">Agente Autônomo</span>
+                            <a href="https://manus.im" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                                Abrir Manus ↗
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-tight">
+                        Comando estruturado para o Manus: orienta o agente a buscar afrescos consagrados na internet e renderizar a imagem final em alta definição 1024x1024.
+                    </p>
+                    <div class="relative">
+                        <textarea id="promptManus" rows="4" readonly class="w-full bg-slate-900 border border-purple-900/50 rounded-xl p-3 text-xs text-purple-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('promptManus', this)" class="absolute right-2.5 bottom-2.5 bg-purple-600 hover:bg-purple-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar para Manus
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- OPÇÃO 3: PROMPT TÉCNICO DIRETO EM INGLÊS (MIDJOURNEY / FLUX / DALL-E) -->
-            <div class="space-y-1.5">
-                <div class="flex items-center justify-between">
-                    <label class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                        <span>🎨</span> Opção 3: Prompt Técnico em Inglês (Midjourney / Flux / Leonardo)
-                    </label>
-                    <span class="text-[10px] text-slate-400 bg-slate-950 px-2 py-0.5 rounded font-mono">--ar 1:1 --v 6.1</span>
-                </div>
-                <div class="relative">
-                    <textarea id="promptEn" rows="3" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
-                    <button onclick="copyToClipboard('promptEn', this)" class="absolute right-2.5 bottom-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
-                        📋 Copiar EN
-                    </button>
+            <!-- ABA 4: MIDJOURNEY / FLUX / LEONARDO -->
+            <div id="tabContent-midjourney" class="hidden space-y-2">
+                <div class="bg-amber-950/20 border border-amber-800/40 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-semibold text-amber-300 flex items-center gap-1.5">
+                            <span>🎨</span> Prompt Técnico em Inglês (Midjourney / Flux / Leonardo)
+                        </label>
+                        <span class="text-[10px] text-slate-400 bg-slate-950 px-2 py-0.5 rounded font-mono">--ar 1:1 --v 6.1 --style raw</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-tight">
+                        Parâmetros profissionais em inglês para motores geradores diretos. Focado em texturas de tela a óleo de museu, pinceladas renascentistas e iluminação barroca.
+                    </p>
+                    <div class="relative">
+                        <textarea id="promptMidjourney" rows="4" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('promptMidjourney', this)" class="absolute right-2.5 bottom-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar para Midjourney
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -806,8 +862,8 @@
                 promptBing = promptBing.substring(0, 480);
             }
 
-            // 2. PROMPT COM PESQUISA ATIVA (Para ChatGPT, Copilot, Gemini)
-            const promptWeb = `Pesquise na internet as pinturas históricas consagradas, afrescos e a iconografia oficial da Igreja Católica para "${name}"${eraHint}. 
+            // 2. PROMPT PARA GEMINI / CHATGPT (Pesquisa na Web + Geração de Imagem)
+            const promptGemini = `Pesquise na internet as pinturas históricas consagradas, afrescos e a iconografia oficial da Igreja Católica para "${name}"${eraHint}. 
 
 IMPORTANTE: NÃO gere um personagem genérico repetido. Baseie-se rigorosamente na fisionomia real documentada na história da arte sacra católica, na etnia de sua terra natal e na idade em que viveu.
 
@@ -817,22 +873,73 @@ Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 
 - Estilo Artístico: Pintura clássica a óleo sobre tela de grandes mestres renascentistas e barrocos (como Murillo, Fra Angelico ou Caravaggio).
 - Iluminação e Detalhes: Olhar sereno e devocional, auréola dourada fina e translúcida sobre a cabeça, iluminação quente de velas com suave chiaroscuro e fundo discreto de capela ou claustro.`;
 
-            // 3. PROMPT TÉCNICO DIRETO EM INGLÊS (Midjourney / Flux / DALL-E 3)
-            const promptEn = `Authentic historical Catholic devotional portrait of ${isFemale ? 'the female saint ' + name : name}${eraHintEn}. Based on real canonical church paintings, historic frescoes and documented relics. IMPORTANT: Distinct, authentic historical facial features of this specific saint (strictly avoid generic face syndrome), accurate ethnic background, authentic age. Centered half-body bust composition, square framing 1:1 aspect ratio, 1024x1024 resolution. Authentic Catholic vestments: ${vestmentsEn}. Warm liturgical chiaroscuro illumination, subtle luminous translucent golden halo above head, shallow depth of field with solemn church chapel background, classical Renaissance and Baroque oil painting on canvas masterwork, ultra-detailed texture --ar 1:1 --v 6.1 --style raw`;
+            // 3. PROMPT PARA MANUS AI (Agente Autônomo com Pesquisa e Geração de Arte Sacra)
+            const promptManus = `Atue como curador de arte sacra católica e artista especialista em pintura clássica renascentista/barroca.
 
-            return { promptBing, promptWeb, promptEn };
+TAREFA:
+Crie um retrato devocional oficial para "${name}"${eraHint}.
+
+DIRETRIZES DE EXECUÇÃO:
+1. Pesquise na web pinturas históricas consagradas, afrescos e relíquias documentadas deste santo para reproduzir fielmente sua fisionomia real, etnia e idade histórica (evite rostos genéricos ou modernos).
+2. Composição: Retrato em busto/meio-corpo centralizado, formato quadrado 1:1 (1024x1024 pixels).
+3. Vestimentas canônicas autênticas: ${vestments}.
+4. Estilo Artístico: Pintura clássica a óleo sobre tela com textura rica, olhar piedoso e sereno, auréola dourada translúcida delicada, iluminação suave de velas com chiaroscuro barroco e fundo solene de capela.
+5. Gere e entregue o arquivo de imagem final em alta definição.`;
+
+            // 4. PROMPT TÉCNICO EM INGLÊS (Midjourney / Flux / Leonardo)
+            const promptMidjourney = `Authentic historical Catholic devotional portrait of ${isFemale ? 'the female saint ' + name : name}${eraHintEn}. Based on real canonical church paintings, historic frescoes and documented relics. IMPORTANT: Distinct, authentic historical facial features of this specific saint (strictly avoid generic face syndrome), accurate ethnic background, authentic age. Centered half-body bust composition, square framing 1:1 aspect ratio, 1024x1024 resolution. Authentic Catholic vestments: ${vestmentsEn}. Warm liturgical chiaroscuro illumination, subtle luminous translucent golden halo above head, shallow depth of field with solemn church chapel background, classical Renaissance and Baroque oil painting on canvas masterwork, ultra-detailed texture --ar 1:1 --v 6.1 --style raw`;
+
+            return { 
+                promptBing, 
+                promptGemini, 
+                promptManus, 
+                promptMidjourney,
+                promptWeb: promptGemini,
+                promptEn: promptMidjourney
+            };
+        }
+
+        function switchPromptTab(tabName) {
+            const tabs = ['bing', 'gemini', 'manus', 'midjourney'];
+            const activeClasses = {
+                bing: ['bg-sky-600/30', 'text-sky-300', 'border-sky-500/50', 'font-bold'],
+                gemini: ['bg-emerald-600/30', 'text-emerald-300', 'border-emerald-500/50', 'font-bold'],
+                manus: ['bg-purple-600/30', 'text-purple-300', 'border-purple-500/50', 'font-bold'],
+                midjourney: ['bg-amber-600/30', 'text-amber-300', 'border-amber-500/50', 'font-bold']
+            };
+            const inactiveClasses = ['text-slate-400', 'hover:text-slate-200', 'hover:bg-slate-800/60', 'border-transparent', 'font-semibold'];
+
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tabBtn-${t}`);
+                const content = document.getElementById(`tabContent-${t}`);
+                if (!btn || !content) return;
+
+                if (t === tabName) {
+                    content.classList.remove('hidden');
+                    btn.className = `prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs transition border ${activeClasses[t].join(' ')}`;
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = `prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs transition border ${inactiveClasses.join(' ')}`;
+                }
+            });
         }
 
         function openPromptModal(index) {
             const saint = filteredSaints[index];
             if (!saint) return;
 
-            const { promptBing, promptWeb, promptEn } = generateSacredPrompt(saint);
+            const { promptBing, promptGemini, promptManus, promptMidjourney } = generateSacredPrompt(saint);
 
             document.getElementById('modalSaintTitle').innerText = saint.name;
-            document.getElementById('promptBing').value = promptBing;
-            document.getElementById('promptWeb').value = promptWeb;
-            document.getElementById('promptEn').value = promptEn;
+            if (document.getElementById('promptBing')) document.getElementById('promptBing').value = promptBing;
+            if (document.getElementById('promptGemini')) document.getElementById('promptGemini').value = promptGemini;
+            if (document.getElementById('promptManus')) document.getElementById('promptManus').value = promptManus;
+            if (document.getElementById('promptMidjourney')) document.getElementById('promptMidjourney').value = promptMidjourney;
+            
+            // Retrocompatibilidade se existirem
+            if (document.getElementById('promptWeb')) document.getElementById('promptWeb').value = promptGemini;
+            if (document.getElementById('promptEn')) document.getElementById('promptEn').value = promptMidjourney;
+
             document.getElementById('modalSaintBio').innerText = saint.sourceText ? 'Contexto Biográfico: ' + saint.sourceText : '';
 
             // Atualizar badge contador de caracteres do Bing
@@ -850,6 +957,9 @@ Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 
             // Link dinâmico para o Google Imagens
             const searchTerms = encodeURIComponent(`${saint.name} pintura sacra catolica iconografia`);
             document.getElementById('btnGoogleRef').href = `https://www.google.com/search?tbm=isch&q=${searchTerms}`;
+
+            // Selecionar aba do Bing por padrão ao abrir
+            switchPromptTab('bing');
 
             document.getElementById('promptModal').classList.remove('hidden');
         }
