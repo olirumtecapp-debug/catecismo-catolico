@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     try {
         const auth = await getAdminAuth();
         const temSenhaPropria = !!(auth && auth.hash);
-        const segredo = process.env.ADMIN_AUTH_SECRET || '';
+        const segredo = process.env.ADMIN_AUTH_SECRET || 'catecismo-catolico-auth-secret-key-2026';
 
         const body = req.method === 'POST'
             ? (typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {}))

@@ -10,6 +10,8 @@ import adminBroadcastsHandler from './api/admin/broadcasts.js';
 import adminAuthHandler from './api/admin/auth.js';
 import cloudSyncSaveHandler from './api/cloud-sync/save.js';
 import cloudSyncLoadHandler from './api/cloud-sync/load.js';
+import adminCommunityMetricsHandler from './api/admin/community-metrics.js';
+import adminExportUsersCsvHandler from './api/admin/export-users-csv.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,6 +20,15 @@ async function handleServerlessFunction(handlerFn, req, res) {
     if (!res.status) {
         res.status = function(code) {
             res.statusCode = code;
+            return res;
+        };
+    }
+    if (!res.send) {
+        res.send = function(data) {
+            if (!res.headersSent) {
+                res.writeHead(res.statusCode || 200);
+            }
+            res.end(data);
             return res;
         };
     }
@@ -157,66 +168,15 @@ const server = http.createServer(async (req, res) => {
     // ==========================================
     // 3. API: MÉTRICAS GLOBAIS DA COMUNIDADE (ADM)
     // ==========================================
-    if (pathname === '/api/admin/community-metrics' && req.method === 'GET') {
-        const db = getDatabase();
-        const userEntries = Object.values(db.users);
-
-        let totalXp = 0;
-        let totalStreak = 0;
-        let totalReflections = 0;
-        let totalRosaries = 0;
-
-        userEntries.forEach(u => {
-            totalXp += (u.xp || 0);
-            totalStreak += (u.streak || 0);
-            totalReflections += (u.reflectionsCount || 0);
-            if (u.appState?.rosary?.totalPrayed) {
-                totalRosaries += u.appState.rosary.totalPrayed;
-            }
-        });
-
-        const count = userEntries.length;
-        const avgStreak = count > 0 ? Math.round(totalStreak / count) : 0;
-
-        const usersSummary = userEntries.map(u => ({
-            email: u.email,
-            level: u.level || 'Iniciante',
-            xp: u.xp || 0,
-            streak: u.streak || 0,
-            reflectionsCount: u.reflectionsCount || 0,
-            updatedAt: u.updatedAt
-        })).sort((a, b) => (b.xp - a.xp));
-
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({
-            success: true,
-            totalUsers: count,
-            totalXp,
-            totalReflections,
-            totalRosaries,
-            avgStreak,
-            users: usersSummary
-        }));
-        return;
+    if (pathname === '/api/admin/community-metrics') {
+        return handleServerlessFunction(adminCommunityMetricsHandler, req, res);
     }
 
     // ==========================================
     // 4. API: EXPORTAR LISTA DE USUÁRIOS EM CSV
     // ==========================================
-    if (pathname === '/api/admin/export-users-csv' && req.method === 'GET') {
-        const db = getDatabase();
-        const userEntries = Object.values(db.users);
-
-        let csv = 'Email,Nivel_Espiritual,XP,Ofensiva_Dias,Reflexoes_Salvas,Ultima_Sincronizacao\n';
-        userEntries.forEach(u => {
-            csv += `"${u.email}","${u.level || 'Iniciante'}",${u.xp || 0},${u.streak || 0},${u.reflectionsCount || 0},"${u.updatedAt}"\n`;
-        });
-
-        res.setHeader('Content-Type', 'text/csv; charset=utf-8');
-        res.setHeader('Content-Disposition', `attachment; filename=comunidade_catecismo_${new Date().toISOString().split('T')[0]}.csv`);
-        res.writeHead(200);
-        res.end(csv);
-        return;
+    if (pathname === '/api/admin/export-users-csv') {
+        return handleServerlessFunction(adminExportUsersCsvHandler, req, res);
     }
 
         // ==========================================

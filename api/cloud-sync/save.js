@@ -1,4 +1,4 @@
-﻿// POST /api/cloud-sync/save â€” grava o progresso do aluno do Catecismo na nuvem
+// POST /api/cloud-sync/save â€” grava o progresso do aluno do Catecismo na nuvem
 //
 // Inclui o padrao de acesso seguro:
 //   - PIN opcional: quando existe, o progresso so e entregue com o PIN (ver load.js)
@@ -9,7 +9,7 @@ import { saveUserToDatabase, getDatabase } from '../_db.js';
 import { enviarEmail, emailConfigurado, modeloCodigo } from '../_email.js';
 
 function segredo() {
-    return process.env.ADMIN_AUTH_SECRET || '';
+    return process.env.ADMIN_AUTH_SECRET || 'catecismo-catolico-auth-secret-key-2026';
 }
 
 function hash(valor) {

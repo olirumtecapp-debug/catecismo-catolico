@@ -1,120 +1,218 @@
 {
   "_meta": {
     "created": "2026-09-11T16:17:55.685Z",
-    "description": "Banco de Dados Real de Usuários e Sincronização em Nuvem - CATECISMO"
+    "updated": "2026-09-22T00:25:53.347Z",
+    "description": "Backup Local de Usuários e Sincronização em Nuvem - CATECISMO (Espelho do Firestore)",
+    "totalUsers": 5
   },
   "users": {
-    "olirumdev1@gmail.com": {
-      "email": "olirumdev1@gmail.com",
-      "updatedAt": "2026-09-15T13:46:20.200Z",
-      "createdAt": "2026-09-15T13:46:20.200Z",
-      "xp": 180,
-      "streak": 4,
-      "level": "Peregrino",
-      "reflectionsCount": 0,
-      "appState": {
-        "xp": 180,
-        "streak": 4,
-        "lastPrayerDate": null,
-        "completedLessons": [],
-        "completedQuizzes": [],
-        "favorites": [],
-        "unlockedAchievements": [
-          "prayer_streak"
-        ],
-        "liturgicalRead": {},
-        "lectioNotes": {},
-        "activeStudyPlan": null,
-        "planProgress": {},
-        "cloudSyncEmail": "olirumdev1@gmail.com",
-        "lastCloudSync": "2026-09-15T13:45:41.039Z"
-      }
-    },
-    "oliveiramodenaroseli@gmail.com": {
-      "email": "oliveiramodenaroseli@gmail.com",
-      "updatedAt": "2026-09-14T10:38:19.272Z",
-      "createdAt": "2026-09-14T10:38:19.272Z",
-      "xp": 180,
-      "streak": 4,
-      "level": "Peregrino",
-      "reflectionsCount": 0,
-      "appState": {
-        "xp": 180,
-        "streak": 4,
-        "lastPrayerDate": null,
-        "completedLessons": [],
-        "completedQuizzes": [],
-        "favorites": [],
-        "unlockedAchievements": [
-          "prayer_streak"
-        ],
-        "liturgicalRead": {},
-        "lectioNotes": {},
-        "activeStudyPlan": null,
-        "planProgress": {},
-        "cloudSyncEmail": "oliveiramodenaroseli@gmail.com"
-      }
-    },
     "patriciamedino1@gmail.com": {
-      "email": "patriciamedino1@gmail.com",
-      "updatedAt": "2026-09-15T12:52:42.536Z",
-      "createdAt": "2026-09-15T12:52:42.536Z",
       "xp": 195,
+      "createdAt": "2026-09-15T12:52:42.536Z",
       "streak": 4,
       "level": "Peregrino",
       "reflectionsCount": 0,
+      "email": "patriciamedino1@gmail.com",
       "appState": {
-        "xp": 195,
+        "liturgicalRead": {
+          "2026-09-15": true
+        },
         "streak": 4,
+        "lectioNotes": {},
+        "unlockedAchievements": [
+          "prayer_streak"
+        ],
         "lastPrayerDate": null,
-        "completedLessons": [],
-        "completedQuizzes": [],
+        "planProgress": {},
         "favorites": [],
+        "completedQuizzes": [],
+        "cloudSyncEmail": "patriciamedino1@gmail.com",
+        "completedLessons": [],
+        "xp": 195,
+        "lastCloudSync": "2026-09-15T12:52:06.039Z",
+        "activeStudyPlan": null
+      },
+      "updatedAt": "2026-09-15T12:52:42.536Z"
+    },
+    "rodrigoalmeidadeoliveira@gmail.com": {
+      "reflectionsCount": 0,
+      "createdAt": "2026-09-15T13:16:11.764Z",
+      "appState": {
+        "lastCloudSync": "2026-09-16T10:34:21.198Z",
+        "cloudSyncEmail": "rodrigoalmeidadeoliveira@gmail.com",
+        "lectioNotes": {},
+        "xp": 195,
+        "completedLessons": [],
+        "streak": 4,
+        "completedQuizzes": [],
         "unlockedAchievements": [
           "prayer_streak"
         ],
         "liturgicalRead": {
-          "2026-09-15": true
+          "2026-09-16": true
         },
-        "lectioNotes": {},
-        "activeStudyPlan": null,
         "planProgress": {},
-        "cloudSyncEmail": "patriciamedino1@gmail.com",
-        "lastCloudSync": "2026-09-15T12:52:06.039Z"
-      }
-    },
-    "rodrigoalmeidadeoliveira@gmail.com": {
+        "activeStudyPlan": null,
+        "favorites": [],
+        "lastPrayerDate": null
+      },
+      "recoveryCreatedAt": "2026-09-16T10:34:13.333Z",
       "email": "rodrigoalmeidadeoliveira@gmail.com",
-      "updatedAt": "2026-09-15T13:16:11.764Z",
-      "createdAt": "2026-09-15T13:16:11.764Z",
-      "xp": 205,
+      "xp": 195,
       "streak": 4,
       "level": "Peregrino",
+      "updatedAt": "2026-09-16T10:36:17.270Z"
+    },
+    "ozzymusabarto@gmail.com": {
+      "recoveryHash": "10246b425dd86c674e7b1c3420e4e7117ca13fbf617205d55847761aed658acb",
+      "updatedAt": "2026-09-19T16:00:34.599Z",
+      "xp": 225,
+      "reflectionsCount": 1,
+      "email": "ozzymusabarto@gmail.com",
+      "appState": {
+        "favorites": [],
+        "cloudSyncEmail": "ozzymusabarto@gmail.com",
+        "xp": 225,
+        "planProgress": {},
+        "lectioNotes": {
+          "2026-09-11": "Teste"
+        },
+        "readBibleChapters": {
+          "LUK_8": true
+        },
+        "dailyChallenges": {
+          "2026-09-18": true
+        },
+        "activeStudyPlan": null,
+        "liturgicalRead": {},
+        "lastCloudSync": "2026-09-18T13:45:51.782Z",
+        "streak": 4,
+        "lastPrayerDate": null,
+        "unlockedAchievements": [
+          "first_study",
+          "prayer_streak",
+          "first_lectio"
+        ],
+        "completedQuizzes": [],
+        "completedLessons": [
+          "creio_1"
+        ]
+      },
+      "recoveryCreatedAt": "2026-09-18T13:44:38.468Z",
+      "streak": 4,
+      "level": "Peregrino",
+      "createdAt": "2026-09-18T13:44:38.468Z"
+    },
+    "olirumdev1@gmail.com": {
+      "xp": 945,
+      "updatedAt": "2026-09-22T00:18:19.547Z",
+      "recoveryHash": "0bceec1b216004ec29f72a7c66954e7f874bed3f6639bc7bb40ffae751cc16cc",
+      "pinHash": "edf04ab3f1b5aba3c160ed4faafe8da4a700d6be826706ce86051e3112c26eee",
+      "level": "ApÃ³stolo de Cristo",
+      "appState": {
+        "unlockedAchievements": [
+          "first_liturgy",
+          "prayer_streak",
+          "first_study",
+          "first_lectio",
+          "first_rosary",
+          "three_liturgies",
+          "five_lessons",
+          "pillar_master",
+          "xp_master",
+          "first_quiz",
+          "seven_liturgies"
+        ],
+        "xp": 945,
+        "dailyChallenges": {
+          "2026-09-21": true,
+          "2026-09-18": true
+        },
+        "streak": 5,
+        "lectioNotes": {
+          "2026-09-14": "Ele veio foi humilde e voltou ensinando o melhor, Jesus Seja Louvado.",
+          "2026-09-19": "Escutar diferente de ouvir... quero muito ser a semente boa.",
+          "2026-09-15": "Jesus e seus prodígios e ainda assim nós o condenamos. Misericórdia de nós senhor.",
+          "2026-09-13": "Perdoar sem medidas"
+        },
+        "activeStudyPlan": "plan_creio",
+        "lastCloudSync": "2026-09-21T20:40:51.557Z",
+        "favorites": [],
+        "cloudSyncEmail": "olirumdev1@gmail.com",
+        "completedQuizzes": [
+          1789403008353
+        ],
+        "planProgress": {
+          "plan_creio": []
+        },
+        "readBibleChapters": {
+          "MAT_18": true
+        },
+        "completedLessons": [
+          "creio_1",
+          "creio_2",
+          "creio_3",
+          "creio_4",
+          "creio_5",
+          "celebro_1",
+          "celebro_2",
+          "celebro_3"
+        ],
+        "lastPrayerDate": "2026-09-19",
+        "completedRosaries": [
+          {
+            "date": "2026-09-13",
+            "timestamp": 1789301969248,
+            "mystery": "gloriosos"
+          },
+          {
+            "date": "2026-09-19",
+            "mystery": "gozosos",
+            "timestamp": 1789810899053
+          }
+        ],
+        "liturgicalRead": {
+          "2026-09-18": true,
+          "2026-09-21": true,
+          "2026-09-17": true,
+          "2026-09-16": true,
+          "2026-09-13": true,
+          "2026-09-19": true,
+          "2026-09-14": true,
+          "2026-09-11": true,
+          "2026-09-15": true
+        }
+      },
+      "email": "olirumdev1@gmail.com",
+      "reflectionsCount": 4,
+      "createdAt": "2026-09-15T13:46:20.200Z",
+      "recoveryCreatedAt": "2026-09-16T01:04:28.606Z",
+      "streak": 5
+    },
+    "oliveiramodenaroseli@gmail.com": {
+      "email": "oliveiramodenaroseli@gmail.com",
+      "streak": 4,
+      "xp": 180,
+      "updatedAt": "2026-09-14T10:38:19.272Z",
       "reflectionsCount": 0,
       "appState": {
-        "xp": 205,
-        "streak": 4,
-        "lastPrayerDate": "2026-09-15",
-        "completedLessons": [],
-        "completedQuizzes": [],
-        "favorites": [],
         "unlockedAchievements": [
           "prayer_streak"
         ],
-        "liturgicalRead": {},
         "lectioNotes": {},
-        "activeStudyPlan": null,
+        "favorites": [],
+        "xp": 180,
+        "lastPrayerDate": null,
+        "liturgicalRead": {},
         "planProgress": {},
-        "cloudSyncEmail": "rodrigoalmeidadeoliveira@gmail.com",
-        "lastCloudSync": "2026-09-15T13:04:56.726Z",
-        "completedRosaries": [
-          {
-            "mystery": "dolorosos",
-            "date": "2026-09-15",
-            "timestamp": 1789478172586
-          }
-        ]
-      }
+        "cloudSyncEmail": "oliveiramodenaroseli@gmail.com",
+        "activeStudyPlan": null,
+        "completedQuizzes": [],
+        "completedLessons": [],
+        "streak": 4
+      },
+      "createdAt": "2026-09-14T10:38:19.272Z",
+      "level": "Peregrino"
     }
   }
 }
