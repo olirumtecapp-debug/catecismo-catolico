@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <script src="assets/vendor/tailwind.js" onerror="var s=document.createElement('script');s.src='https://cdn.tailwindcss.com';document.head.appendChild(s);"></script>
+    <script src="assets/data/santos_images_index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -559,14 +560,19 @@
 
             const modalImg = document.getElementById('modal-novena-img');
             const modalIcon = document.getElementById('modal-novena-icon');
-            if (modalImg && novena.imagem) {
-                modalImg.src = novena.imagem;
+            const resolvedImg = novena.imagem || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(novena.titulo)) || '';
+            if (modalImg && resolvedImg) {
+                modalImg.src = resolvedImg;
                 modalImg.alt = novena.titulo;
                 modalImg.classList.remove('hidden');
                 modalIcon.classList.add('hidden');
                 modalImg.onerror = () => {
-                    modalImg.classList.add('hidden');
-                    modalIcon.classList.remove('hidden');
+                    if (window.handleSaintImageError && !modalImg.dataset.hasTriedLocalFallback) {
+                        window.handleSaintImageError(modalImg, novena.titulo);
+                    } else {
+                        modalImg.classList.add('hidden');
+                        modalIcon.classList.remove('hidden');
+                    }
                 };
             } else if (modalIcon) {
                 if (modalImg) modalImg.classList.add('hidden');
@@ -755,7 +761,7 @@
             renderModalDay(currentDayIndex);
             renderCards();
 
-            // Notifica janela pai (Home do Catecismo) para atualizar o card e alertas em tempo real
+            // Notifica janela pai (Home do Catecismo) para atualizar o card e disparar CloudSync em tempo real
             if (window.parent && window.parent !== window) {
                 try {
                     window.parent.postMessage({
@@ -764,7 +770,8 @@
                         novenaTitle: currentNovena.titulo,
                         day: currentDayIndex,
                         isCompleted: isCompletedNow,
-                        completedDays: completed
+                        completedDays: completed,
+                        meta: meta
                     }, '*');
                 } catch (e) {
                     console.warn('Erro ao notificar parent:', e);
@@ -836,8 +843,48 @@
         document.getElementById('novena-search')?.addEventListener('input', handleSearchInput);
         document.getElementById('novena-search-bar')?.addEventListener('input', handleSearchInput);
 
+        // Ouvir sincronizações enviadas pela janela pai (vindas do CloudSync da Nuvem)
+        window.addEventListener('message', (e) => {
+            if (e.data && e.data.type === 'NOVENAS_DATA_SYNC' && e.data.novenas) {
+                const { progress, meta } = e.data.novenas;
+                let changed = false;
+                if (progress && typeof progress === 'object') {
+                    Object.keys(progress).forEach(id => {
+                        const local = getNovenaCompletedDays(id);
+                        const cloud = progress[id] || [];
+                        const merged = Array.from(new Set([...local, ...cloud])).sort((a,b)=>a-b);
+                        if (merged.length !== local.length) {
+                            localStorage.setItem(`thesaurus_progress_${id}`, JSON.stringify(merged));
+                            changed = true;
+                        }
+                    });
+                }
+                if (meta && typeof meta === 'object') {
+                    Object.keys(meta).forEach(id => {
+                        const localMeta = JSON.parse(localStorage.getItem(`thesaurus_meta_${id}`) || '{}');
+                        const cloudMeta = meta[id] || {};
+                        const mergedMeta = Object.assign({}, localMeta, cloudMeta);
+                        localStorage.setItem(`thesaurus_meta_${id}`, JSON.stringify(mergedMeta));
+                    });
+                }
+                if (changed) {
+                    renderCards();
+                    if (currentNovena) {
+                        renderModalDaysNav();
+                        renderModalDay(currentDayIndex);
+                    }
+                }
+            }
+        });
+
+        // Ao abrir incorporado, requisita dados mais recentes de novenas do pai
+        if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'REQUEST_NOVENAS_SYNC' }, '*');
+        }
+
         // Iniciar aplicação
         loadNovenas();
     </script>
 </body>
 </html>
+
