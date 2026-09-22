@@ -1258,6 +1258,9 @@
             }
         };
 
+        const esc = v => String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+        window.esc = esc;
+
         const SaintContextProvider = {
             requestId: 0,
             normalize(value) {
