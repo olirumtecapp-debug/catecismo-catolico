@@ -135,6 +135,9 @@
                 </div>
 
                 <div class="flex items-center gap-2">
+                    <button onclick="openVaticanSyncModal()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-500/40 shadow-md shadow-blue-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Verificar atualizações no Vatican News com backup de segurança">
+                        <span>🌐</span> <span>Verificar Vaticano</span>
+                    </button>
                     <button onclick="openAddSaintModal()" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-500/40 shadow-md shadow-amber-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Cadastrar um novo santo ou beato em uma data específica">
                         <span>➕</span> <span>Novo Santo</span>
                     </button>
@@ -401,7 +404,121 @@
         </div>
     </div>
 
-    <!-- Toast Notification -->
+    <!-- Modal: Sincronização Inteligente com Vatican News -->
+    <div id="vaticanSyncModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🌐</span>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Sincronização Inteligente com Vatican News</h3>
+                        <p class="text-[11px] text-slate-400">Verifique santos oficiais no Vaticano com prévia e cópia de segurança automática</p>
+                    </div>
+                </div>
+                <button onclick="closeVaticanSyncModal()" class="text-slate-400 hover:text-white text-lg px-2">✕</button>
+            </div>
+
+            <!-- Escopo da Busca -->
+            <div class="bg-slate-950/70 border border-slate-800 p-3.5 rounded-xl space-y-2.5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <label class="text-xs font-semibold text-slate-200">Selecione o escopo da verificação:</label>
+                    <div class="flex items-center gap-2 text-xs">
+                        <select id="vaticanScopeSelect" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            <option value="month">📅 Mês selecionado no filtro principal</option>
+                            <option value="day">🗓️ Dia selecionado no filtro principal</option>
+                        </select>
+                        <button id="btnRunVaticanCheck" onclick="runVaticanCheck()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg transition flex items-center gap-1.5 shadow cursor-pointer">
+                            <span>🔍</span> <span id="vaticanCheckBtnText">Consultar Vaticano</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-[11px] text-slate-400 flex items-start gap-1.5 bg-blue-950/30 border border-blue-900/50 p-2.5 rounded-lg">
+                    <span class="text-emerald-400 font-bold text-sm">🔒</span>
+                    <div>
+                        <span class="text-emerald-300 font-medium">Garantia Absoluta de Segurança:</span>
+                        <span> Seus santos existentes e suas fotos locais salvas <b>NUNCA</b> são apagados nem alterados. Antes de qualquer inclusão, uma cópia de segurança (backup) é gerada automaticamente.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="vaticanLoadingState" class="hidden py-8 flex flex-col items-center justify-center space-y-3">
+                <div class="w-10 h-10 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
+                <div class="text-center">
+                    <p class="text-xs font-bold text-slate-200" id="vaticanLoadingText">Consultando Vatican News dia a dia...</p>
+                    <p class="text-[11px] text-slate-500">Comparando com seu catálogo local de 2026</p>
+                </div>
+            </div>
+
+            <!-- Results View -->
+            <div id="vaticanResultsArea" class="hidden space-y-3">
+                <!-- Stat Banner -->
+                <div id="vaticanResultsBanner" class="p-3 rounded-xl border text-xs"></div>
+
+                <!-- Lista de Novos Santos Encontrados -->
+                <div id="vaticanNewSaintsContainer" class="space-y-2 max-h-72 overflow-y-auto custom-scrollbar pr-1"></div>
+
+                <!-- Ações de Aplicação -->
+                <div id="vaticanActionsRow" class="hidden flex items-center justify-between pt-2 border-t border-slate-800">
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="selectAllVaticanSaints(true)" class="text-xs text-blue-400 hover:underline">
+                            Marcar Todos
+                        </button>
+                        <span class="text-slate-600">|</span>
+                        <button type="button" onclick="selectAllVaticanSaints(false)" class="text-xs text-slate-400 hover:underline">
+                            Desmarcar
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="closeVaticanSyncModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-4 py-2 rounded-xl transition">
+                            Fechar
+                        </button>
+                        <button id="btnApplyVatican" onclick="applySelectedVaticanSaints()" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow cursor-pointer">
+                            <span>➕</span> Importar Selecionados (<span id="vaticanSelectedCount">0</span>)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Restauração / Backups de Segurança -->
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                    <span>🛡️</span>
+                    <span>Deseja desfazer alguma alteração recente?</span>
+                </div>
+                <button onclick="openSaintBackupsModal()" class="text-amber-400 hover:text-amber-300 text-xs font-bold underline flex items-center gap-1 cursor-pointer">
+                    <span>⏪</span> Ver e Restaurar Backups Anteriores
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Central de Backups e Restauração -->
+    <div id="saintBackupsModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">⏪</span>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Restaurar Cópias de Segurança (Backup)</h3>
+                        <p class="text-[11px] text-slate-400">Restaure arquivos do catálogo para a versão anterior a qualquer alteração</p>
+                    </div>
+                </div>
+                <button onclick="closeSaintBackupsModal()" class="text-slate-400 hover:text-white text-lg px-2">✕</button>
+            </div>
+
+            <div id="backupsListContainer" class="space-y-2 max-h-80 overflow-y-auto custom-scrollbar">
+                <div class="text-center py-6 text-xs text-slate-500">Carregando histórico de backups...</div>
+            </div>
+
+            <div class="flex justify-end pt-2 border-t border-slate-800">
+                <button onclick="closeSaintBackupsModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-4 py-2 rounded-xl transition">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
     <div id="toast" class="hidden fixed bottom-5 right-5 bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-2xl z-50 flex items-center gap-2"></div>
 
     <script>
@@ -1133,6 +1250,311 @@ DIRETRIZES DE EXECUÇÃO:
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = '<span>💾</span> Salvar Santo';
+            }
+        }
+
+        // ==========================================
+        // SINCRONIZAÇÃO INTELIGENTE COM VATICAN NEWS
+        // ==========================================
+        let vaticanDiscoveredSaints = [];
+
+        function openVaticanSyncModal() {
+            const modal = document.getElementById('vaticanSyncModal');
+            if (!modal) return;
+
+            // Ajusta o texto da opção baseado nos filtros ativos
+            const m = document.getElementById('mSel').value;
+            const d = document.getElementById('dSel').value;
+            const scopeSelect = document.getElementById('vaticanScopeSelect');
+            if (scopeSelect) {
+                const monthName = m === 'all' ? 'Todos os meses' : `Mês ${m}`;
+                const dayName = d === 'all' ? 'Todos os dias' : `Dia ${d}/${m}`;
+                scopeSelect.options[0].text = `📅 Mês ativo (${monthName})`;
+                scopeSelect.options[1].text = `🗓️ Dia ativo (${dayName})`;
+            }
+
+            // Reseta visualização
+            document.getElementById('vaticanLoadingState').classList.add('hidden');
+            document.getElementById('vaticanResultsArea').classList.add('hidden');
+            document.getElementById('vaticanActionsRow').classList.add('hidden');
+            document.getElementById('btnRunVaticanCheck').disabled = false;
+            document.getElementById('vaticanCheckBtnText').innerText = 'Consultar Vaticano';
+            vaticanDiscoveredSaints = [];
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeVaticanSyncModal() {
+            const modal = document.getElementById('vaticanSyncModal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        async function runVaticanCheck() {
+            const scope = document.getElementById('vaticanScopeSelect').value;
+            const m = document.getElementById('mSel').value;
+            const d = document.getElementById('dSel').value;
+
+            let payload = {};
+            if (scope === 'day') {
+                if (d === 'all') {
+                    showToast('Selecione um dia específico no filtro do topo para verificar um dia único.', 'error');
+                    return;
+                }
+                const monthVal = m === 'all' ? '10' : m;
+                payload = { date: `2026-${monthVal}-${d}` };
+            } else {
+                if (m === 'all') {
+                    showToast('Selecione um mês específico (ex: 10 - Outubro) para verificação rápida.', 'error');
+                    return;
+                }
+                payload = { month: m };
+            }
+
+            const loadingEl = document.getElementById('vaticanLoadingState');
+            const resultsArea = document.getElementById('vaticanResultsArea');
+            const actionsRow = document.getElementById('vaticanActionsRow');
+            const btnRun = document.getElementById('btnRunVaticanCheck');
+            const btnRunText = document.getElementById('vaticanCheckBtnText');
+
+            loadingEl.classList.remove('hidden');
+            resultsArea.classList.add('hidden');
+            actionsRow.classList.add('hidden');
+            btnRun.disabled = true;
+            btnRunText.innerText = 'Verificando...';
+
+            try {
+                const res = await fetch('/api/admin/check-vatican-updates', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+
+                loadingEl.classList.add('hidden');
+                btnRun.disabled = false;
+                btnRunText.innerText = 'Consultar Novamente';
+
+                if (!data.success) {
+                    showToast('Falha na consulta: ' + (data.error || 'Erro desconhecido'), 'error');
+                    return;
+                }
+
+                vaticanDiscoveredSaints = data.newSaints || [];
+                renderVaticanResults(data);
+            } catch (err) {
+                loadingEl.classList.add('hidden');
+                btnRun.disabled = false;
+                btnRunText.innerText = 'Consultar Novamente';
+                showToast('Erro ao consultar Vatican News: ' + err.message, 'error');
+            }
+        }
+
+        function renderVaticanResults(data) {
+            const resultsArea = document.getElementById('vaticanResultsArea');
+            const banner = document.getElementById('vaticanResultsBanner');
+            const container = document.getElementById('vaticanNewSaintsContainer');
+            const actionsRow = document.getElementById('vaticanActionsRow');
+
+            resultsArea.classList.remove('hidden');
+            container.innerHTML = '';
+
+            if (!vaticanDiscoveredSaints.length) {
+                banner.className = 'p-3 rounded-xl border text-xs bg-emerald-950/40 border-emerald-800/60 text-emerald-300 flex items-center gap-2';
+                banner.innerHTML = `
+                    <span class="text-xl">🎉</span>
+                    <div>
+                        <div class="font-bold">Tudo 100% atualizado!</div>
+                        <div class="text-[11px] text-emerald-400/80">Foram verificados ${data.checkedDays} dia(s) e nenhum novo santo ausente foi encontrado no Vatican News.</div>
+                    </div>
+                `;
+                actionsRow.classList.add('hidden');
+                return;
+            }
+
+            banner.className = 'p-3 rounded-xl border text-xs bg-blue-950/40 border-blue-800/60 text-blue-200 flex items-center justify-between gap-2';
+            banner.innerHTML = `
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">✨</span>
+                    <div>
+                        <div class="font-bold">Encontrado(s) ${vaticanDiscoveredSaints.length} santo(s) novo(s) no Vatican News!</div>
+                        <div class="text-[11px] text-slate-400">Dias verificados: ${data.checkedDays} dia(s). Selecione quais deseja importar para seu catálogo:</div>
+                    </div>
+                </div>
+            `;
+
+            vaticanDiscoveredSaints.forEach((s, idx) => {
+                const card = document.createElement('div');
+                card.className = 'p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition flex items-start gap-3';
+                
+                const parts = s.date.split('-');
+                const displayDate = `${parts[2]}/${parts[1]}`;
+
+                card.innerHTML = `
+                    <input type="checkbox" id="vatican-check-${idx}" checked onchange="updateVaticanSelectedCount()" class="mt-1 rounded bg-slate-900 border-slate-700 text-blue-600 focus:ring-blue-500 cursor-pointer">
+                    <div class="flex-1 space-y-1">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] px-2 py-0.5 rounded font-mono font-bold">
+                                📅 ${displayDate}
+                            </span>
+                            <span class="font-bold text-slate-100 text-xs">${s.name}</span>
+                            <span class="text-[10px] bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded font-mono">Vatican News</span>
+                        </div>
+                        ${s.sourceText ? `<p class="text-[11px] text-slate-400 line-clamp-2">${s.sourceText}</p>` : ''}
+                        ${s.profileUrl ? `<a href="${s.profileUrl}" target="_blank" rel="noopener" class="text-[10px] text-blue-400 hover:underline inline-flex items-center gap-1">🔗 Ver no Vatican News</a>` : ''}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            actionsRow.classList.remove('hidden');
+            updateVaticanSelectedCount();
+        }
+
+        function selectAllVaticanSaints(check) {
+            vaticanDiscoveredSaints.forEach((_, idx) => {
+                const el = document.getElementById(`vatican-check-${idx}`);
+                if (el) el.checked = check;
+            });
+            updateVaticanSelectedCount();
+        }
+
+        function updateVaticanSelectedCount() {
+            let count = 0;
+            vaticanDiscoveredSaints.forEach((_, idx) => {
+                const el = document.getElementById(`vatican-check-${idx}`);
+                if (el && el.checked) count++;
+            });
+            const badge = document.getElementById('vaticanSelectedCount');
+            if (badge) badge.innerText = count;
+            const btnApply = document.getElementById('btnApplyVatican');
+            if (btnApply) btnApply.disabled = (count === 0);
+        }
+
+        async function applySelectedVaticanSaints() {
+            const selected = [];
+            vaticanDiscoveredSaints.forEach((s, idx) => {
+                const el = document.getElementById(`vatican-check-${idx}`);
+                if (el && el.checked) selected.push(s);
+            });
+
+            if (!selected.length) {
+                showToast('Selecione pelo menos um santo para importar.', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('btnApplyVatican');
+            btn.disabled = true;
+            btn.innerText = 'Importando...';
+
+            try {
+                const res = await fetch('/api/admin/apply-vatican-update', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ saints: selected })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    showToast(`✅ ${data.appliedCount} santo(s) adicionado(s) com backup gerado!`, 'success');
+                    closeVaticanSyncModal();
+                    await fetchSaints();
+                } else {
+                    showToast('Erro ao importar: ' + (data.error || 'Falha no servidor'), 'error');
+                }
+            } catch (err) {
+                showToast('Erro na requisição: ' + err.message, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>➕</span> Importar Selecionados (<span id="vaticanSelectedCount">0</span>)';
+            }
+        }
+
+        // ==========================================
+        // CENTRAL DE BACKUPS E RESTAURAÇÃO
+        // ==========================================
+        async function openSaintBackupsModal() {
+            const modal = document.getElementById('saintBackupsModal');
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            await fetchSaintBackups();
+        }
+
+        function closeSaintBackupsModal() {
+            const modal = document.getElementById('saintBackupsModal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        async function fetchSaintBackups() {
+            const container = document.getElementById('backupsListContainer');
+            if (!container) return;
+            container.innerHTML = '<div class="text-center py-6 text-xs text-slate-500">Carregando histórico de backups...</div>';
+
+            try {
+                const res = await fetch('/api/admin/list-saint-backups');
+                const data = await res.json();
+
+                if (!data.success || !data.backups || data.backups.length === 0) {
+                    container.innerHTML = `
+                        <div class="text-center py-8 text-xs text-slate-500 space-y-1">
+                            <span class="text-2xl block">📂</span>
+                            <span>Nenhum backup encontrado ainda.</span>
+                            <p class="text-[11px] text-slate-600">Backups são gerados automaticamente sempre que novas alterações ou santos são gravados.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = '';
+                data.backups.forEach(b => {
+                    const card = document.createElement('div');
+                    card.className = 'p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition flex items-center justify-between gap-3';
+                    
+                    const mDate = b.mtime ? new Date(b.mtime).toLocaleString('pt-BR') : b.rawTime;
+                    const sizeKB = (b.size / 1024).toFixed(1);
+
+                    card.innerHTML = `
+                        <div class="space-y-0.5">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] px-2 py-0.5 rounded font-mono font-bold">
+                                    📅 Dia ${b.date}
+                                </span>
+                                <span class="text-xs text-slate-300 font-medium">${mDate}</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500 font-mono">
+                                Arquivo: ${b.file} (${sizeKB} KB)
+                            </div>
+                        </div>
+                        <button onclick="restoreSaintBackupFile('${b.file}', '${b.date}')" class="bg-rose-950/70 hover:bg-rose-900 border border-rose-800/80 text-rose-200 text-xs font-bold px-3 py-1.5 rounded-lg transition flex items-center gap-1 shadow cursor-pointer" title="Restaura o dia com o conteúdo deste arquivo de backup">
+                            <span>⏪</span> Restaurar
+                        </button>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (err) {
+                container.innerHTML = `<div class="text-center py-6 text-xs text-rose-400">Falha ao carregar backups: ${err.message}</div>`;
+            }
+        }
+
+        async function restoreSaintBackupFile(filename, date) {
+            const confirmMsg = `Deseja realmente restaurar o dia ${date} a partir da cópia de segurança "${filename}"?\\n\\nO arquivo atual do dia ${date} será substituído pelo conteúdo deste backup.`;
+            if (!confirm(confirmMsg)) return;
+
+            try {
+                showToast(`Restaurando backup de ${date}...`, 'info');
+                const res = await fetch('/api/admin/restore-saint-backup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ backupFile: filename, date })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    showToast(`✅ ${data.message}`, 'success');
+                    closeSaintBackupsModal();
+                    await fetchSaints();
+                } else {
+                    showToast('Erro ao restaurar: ' + (data.error || 'Falha no servidor'), 'error');
+                }
+            } catch (err) {
+                showToast('Erro na requisição: ' + err.message, 'error');
             }
         }
 

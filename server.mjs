@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
+import * as cheerio from 'cheerio';
 import contactListHandler from './api/contact/list.js';
 import contactSendHandler from './api/contact/send.js';
 import contactUpdateStatusHandler from './api/contact/update-status.js';
@@ -99,6 +100,90 @@ function getDatabase() {
 
 function saveDatabase(db) {
     fs.writeFileSync(USERS_FILE, JSON.stringify(db, null, 2), 'utf8');
+}
+
+// ==========================================
+// CONFIGURAÇÕES & HELPERS DE SANTOS E BACKUP
+// ==========================================
+const VATICAN_BASE = 'https://www.vaticannews.va/pt/santo-do-dia';
+const BACKUP_DIR = path.join(DATA_DIR, 'santos', 'backups');
+if (!fs.existsSync(BACKUP_DIR)) {
+    fs.mkdirSync(BACKUP_DIR, { recursive: true });
+}
+
+function cleanText(v = '') {
+    return String(v || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function normalizeSaintName(v = '') {
+    let norm = cleanText(v).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    norm = norm
+        .replace(/\b(s|sao|santo|santa|sta|sto|st)\b/gi, 'sao')
+        .replace(/\b(beato|beata|bto|bta)\b/gi, 'beato')
+        .replace(/[,;:.!?]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    return norm;
+}
+
+function backupSaintDayFile(filePath) {
+    if (fs.existsSync(filePath)) {
+        const filename = path.basename(filePath);
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        const backupPath = path.join(BACKUP_DIR, `${filename.replace('.json', '')}_${timestamp}.json`);
+        fs.copyFileSync(filePath, backupPath);
+        return backupPath;
+    }
+    return null;
+}
+
+function parseVaticanPage(html, date) {
+    const $ = cheerio.load(html);
+    const saints = [];
+    $('.section.section--evidence.section--isStatic').each((_, section) => {
+        const $s = $(section);
+        let name = cleanText($s.find('.section__head h2').first().text());
+        if (!name) return;
+        if (/^S\.\s+Edviges\b/i.test(name)) name = name.replace(/^S\.\s+/i, 'Santa ');
+        else if (/^S\.\s+(Margarida Maria Alacoque)\b/i.test(name)) name = name.replace(/^S\.\s+/i, 'Santa ');
+        else if (/^S\.\s+(Geraldo Majella)\b/i.test(name)) name = name.replace(/^S\.\s+/i, 'São ');
+        else if (/^S\.\s+/.test(name)) name = name.replace(/^S\.\s+/, /\b(virgem|religiosa|freira|duquesa|rainha|abadessa|madre)\b/i.test(name) ? 'Santa ' : 'São ');
+        
+        let profileHref = $s.find('a.saintReadMore[href]').first().attr('href') || null;
+        if (profileHref && !profileHref.startsWith('http')) profileHref = `https://www.vaticannews.va${profileHref}`;
+        
+        const sourceText = cleanText($s.find('.section__content p').first().text()) || null;
+        saints.push({
+            date,
+            name,
+            normalizedName: normalizeSaintName(name),
+            profileUrl: profileHref,
+            source: 'Vatican News',
+            sourceUrl: profileHref,
+            sourceText
+        });
+    });
+    return saints;
+}
+
+async function fetchVaticanSaintsForDate(date) {
+    const parts = date.split('-');
+    const m = parts[1];
+    const d = parts[2];
+    const url = `${VATICAN_BASE}/${m}/${d}.html`;
+    try {
+        const res = await fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            },
+            signal: AbortSignal.timeout(7000)
+        });
+        if (!res.ok) return [];
+        const html = await res.text();
+        return parseVaticanPage(html, date);
+    } catch(e) {
+        return [];
+    }
 }
 
 const MIME_TYPES = {
@@ -435,6 +520,254 @@ const server = http.createServer(async (req, res) => {
                 res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
                 res.end(JSON.stringify({ success: true, saint: newSaint, message: `Santo "${name}" adicionado com sucesso ao dia ${date}!` }));
             } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
+    // API: VERIFICAR ATUALIZAÇÕES NO VATICANO (SOMENTE LEITURA / INSPEÇÃO)
+    // ==========================================
+    if (pathname === '/api/admin/check-vatican-updates' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', async () => {
+            try {
+                const { month, date } = JSON.parse(body || '{}');
+                let targetDates = [];
+                if (date && date !== 'all') {
+                    targetDates = [date];
+                } else if (month && month !== 'all') {
+                    const m = String(month).padStart(2, '0');
+                    const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][parseInt(m, 10)] || 31;
+                    for (let d = 1; d <= daysInMonth; d++) {
+                        targetDates.push(`2026-${m}-${String(d).padStart(2, '0')}`);
+                    }
+                } else {
+                    res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+                    res.end(JSON.stringify({ success: false, error: 'Selecione um mês ou um dia específico para verificar.' }));
+                    return;
+                }
+
+                const newSaintsFound = [];
+                let checkedDays = 0;
+
+                for (const dt of targetDates) {
+                    checkedDays++;
+                    const remoteSaints = await fetchVaticanSaintsForDate(dt);
+                    if (!remoteSaints.length) continue;
+
+                    const filePath = path.join(DATA_DIR, 'santos', '2026', `${dt}.json`);
+                    let localSaints = [];
+                    if (fs.existsSync(filePath)) {
+                        try {
+                            const ld = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                            localSaints = ld.saints || [];
+                        } catch(e) {}
+                    }
+
+                    for (const rs of remoteSaints) {
+                        const localMatch = localSaints.find(ls => {
+                            const normR = normalizeSaintName(rs.name);
+                            const normL = normalizeSaintName(ls.name);
+                            return normR === normL || normR.includes(normL) || normL.includes(normR);
+                        });
+
+                        if (!localMatch) {
+                            newSaintsFound.push({
+                                type: 'new_saint',
+                                date: dt,
+                                name: rs.name,
+                                sourceText: rs.sourceText,
+                                profileUrl: rs.profileUrl,
+                                source: 'Vatican News'
+                            });
+                        }
+                    }
+                }
+
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({
+                    success: true,
+                    checkedDays,
+                    foundCount: newSaintsFound.length,
+                    newSaints: newSaintsFound,
+                    message: newSaintsFound.length 
+                        ? `Varredura concluída: ${newSaintsFound.length} novidade(s) encontrada(s) no Vatican News!`
+                        : `Tudo 100% atualizado! Nenhum santo novo encontrado no Vatican News para os ${checkedDays} dia(s) verificado(s).`
+                }));
+            } catch(err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
+    // API: APLICAR ATUALIZAÇÃO DO VATICANO (COM BACKUP AUTOMÁTICO)
+    // ==========================================
+    if (pathname === '/api/admin/apply-vatican-update' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const { saints } = JSON.parse(body || '{}');
+                if (!Array.isArray(saints) || saints.length === 0) {
+                    res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+                    res.end(JSON.stringify({ success: false, error: 'Nenhum santo informado para inclusão.' }));
+                    return;
+                }
+
+                let applied = 0;
+                for (const s of saints) {
+                    const { date, name, sourceText, source } = s;
+                    if (!date || !name) continue;
+
+                    const filePath = path.join(DATA_DIR, 'santos', '2026', `${date}.json`);
+                    
+                    // Backup automático antes de mexer
+                    backupSaintDayFile(filePath);
+
+                    let dayData = {
+                        date,
+                        year: 2026,
+                        month: parseInt(date.split('-')[1], 10),
+                        day: parseInt(date.split('-')[2], 10),
+                        source: 'Vatican News',
+                        saints: []
+                    };
+
+                    if (fs.existsSync(filePath)) {
+                        try {
+                            dayData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                            if (!Array.isArray(dayData.saints)) dayData.saints = [];
+                        } catch(e) {}
+                    }
+
+                    // Verifica se já existe para não duplicar
+                    const normNew = normalizeSaintName(name);
+                    const exists = dayData.saints.some(ex => normalizeSaintName(ex.name) === normNew);
+                    if (!exists) {
+                        dayData.saints.push({
+                            date,
+                            name: name.trim(),
+                            normalizedName: normNew,
+                            imageUrl: '',
+                            profileUrl: s.profileUrl || null,
+                            source: source || 'Vatican News',
+                            sourceUrl: s.profileUrl || null,
+                            sourceText: sourceText ? sourceText.trim() : null
+                        });
+                        fs.writeFileSync(filePath, JSON.stringify(dayData, null, 2), 'utf8');
+                        applied++;
+                    }
+                }
+
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ 
+                    success: true, 
+                    appliedCount: applied,
+                    message: `${applied} santo(s) adicionado(s) com sucesso com backup de segurança gerado!`
+                }));
+            } catch(err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
+    // API: LISTAR BACKUPS DE SANTOS
+    // ==========================================
+    if (pathname === '/api/admin/list-saint-backups' && req.method === 'GET') {
+        try {
+            if (!fs.existsSync(BACKUP_DIR)) {
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: true, backups: [] }));
+                return;
+            }
+            const dateParam = reqUrl.searchParams.get('date');
+            let files = fs.readdirSync(BACKUP_DIR).filter(f => f.endsWith('.json'));
+            if (dateParam && dateParam !== 'all') {
+                files = files.filter(f => f.startsWith(`${dateParam}_`));
+            }
+            files.sort().reverse();
+            const backups = files.slice(0, 30).map(file => {
+                const stat = fs.statSync(path.join(BACKUP_DIR, file));
+                const parts = file.replace('.json', '').split('_');
+                const date = parts[0];
+                const rawTime = parts.slice(1).join('_');
+                return {
+                    file,
+                    date,
+                    rawTime,
+                    size: stat.size,
+                    mtime: stat.mtime
+                };
+            });
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: true, backups }));
+        } catch(err) {
+            res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+    }
+
+    // ==========================================
+    // API: RESTAURAR BACKUP DE SANTOS
+    // ==========================================
+    if (pathname === '/api/admin/restore-saint-backup' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const { date, backupFile } = JSON.parse(body || '{}');
+                if (!date && !backupFile) {
+                    res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+                    res.end(JSON.stringify({ success: false, error: 'Data ou arquivo de backup não informado.' }));
+                    return;
+                }
+
+                let targetBackupPath = null;
+                let targetDate = date;
+
+                if (backupFile) {
+                    targetBackupPath = path.join(BACKUP_DIR, backupFile);
+                    if (!fs.existsSync(targetBackupPath)) {
+                        res.writeHead(404, { 'Content-Type': 'application/json; charset=utf-8' });
+                        res.end(JSON.stringify({ success: false, error: `Arquivo de backup ${backupFile} não encontrado.` }));
+                        return;
+                    }
+                    targetDate = backupFile.split('_')[0];
+                } else {
+                    const prefix = `${date}_`;
+                    const files = fs.readdirSync(BACKUP_DIR)
+                        .filter(f => f.startsWith(prefix) && f.endsWith('.json'))
+                        .sort()
+                        .reverse(); // mais recente primeiro
+
+                    if (!files.length) {
+                        res.writeHead(404, { 'Content-Type': 'application/json; charset=utf-8' });
+                        res.end(JSON.stringify({ success: false, error: `Nenhum backup encontrado para a data ${date}.` }));
+                        return;
+                    }
+                    targetBackupPath = path.join(BACKUP_DIR, files[0]);
+                }
+
+                const targetFile = path.join(DATA_DIR, 'santos', '2026', `${targetDate}.json`);
+                fs.copyFileSync(targetBackupPath, targetFile);
+
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ 
+                    success: true, 
+                    message: `Backup restaurado com sucesso para ${targetDate} a partir de ${path.basename(targetBackupPath)}!` 
+                }));
+            } catch(err) {
                 res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
                 res.end(JSON.stringify({ success: false, error: err.message }));
             }
