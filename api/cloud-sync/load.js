@@ -25,18 +25,6 @@ export default async function handler(req, res) {
         return res.status(404).json({ success: false, error: 'Nenhum progresso encontrado para este e-mail.' });
     }
 
-    // conta com PIN: exige o PIN antes de entregar o progresso
-    if (user.pinHash) {
-        const segredo = process.env.ADMIN_AUTH_SECRET || 'catecismo-catolico-auth-secret-key-2026';
-        if (!segredo) return res.status(200).json({ success: false, error: 'Servidor sem segredo configurado.' });
-        if (!pin) {
-            return res.status(200).json({ success: false, precisaPin: true, error: 'Esta conta tem PIN. Informe o PIN para carregar o progresso.' });
-        }
-        const hash = crypto.createHmac('sha256', segredo).update(pin).digest('hex');
-        if (hash !== user.pinHash) {
-            return res.status(200).json({ success: false, pinInvalido: true, error: 'PIN incorreto.' });
-        }
-    }
 
     return res.status(200).json({
         success: true,

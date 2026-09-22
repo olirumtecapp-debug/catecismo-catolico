@@ -4399,6 +4399,20 @@
                         subtitleEl.innerText = "Momentos de recolhimento e leitura orante";
                         mainView.innerHTML = Views.renderOracao();
                         Views.loadLectioContextAsync(mainView);
+                        if (params) {
+                            setTimeout(() => {
+                                const targetSec = document.getElementById('secao-oracoes-intencoes');
+                                if (targetSec) {
+                                    targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                                if (params !== 'intencoes') {
+                                    const chip = document.querySelector(`.intention-chip[data-slug="${params}"]`);
+                                    if (chip && typeof filterIntentionsByChip === 'function') {
+                                        filterIntentionsByChip(params, chip);
+                                    }
+                                }
+                            }, 120);
+                        }
                         break;
                     case 'missa':
                         titleEl.innerText = "A Santa Missa Explicada";
@@ -9648,24 +9662,19 @@ https://catecismo.creativeam.com.br
                     return;
                 }
 
-                // Aviso: aparelho com outro e-mail ja conectado
-        const anterior = AppState.cloudSyncEmail ? String(AppState.cloudSyncEmail).toLowerCase() : "";
-        if (anterior && anterior !== email) {
-            const manter = confirm('Neste aparelho ja existe progresso conectado ao e-mail ' + anterior + '.\n\nOK = continuar com o e-mail que ja tem progresso\nCancelar = conectar ' + email);
-            if (manter) { if (inp) inp.value = anterior; return; }
-        }
-        const pinNovo = (prompt('Opcional: crie um PIN de 4 a 6 digitos para proteger seu progresso (deixe vazio para nao usar):') || '').trim();
-        if (pinNovo) {
-            if (!/^\d{4,6}$/.test(pinNovo)) { showToast('PIN invalido: use de 4 a 6 digitos.', 'error'); return; }
-            window.__pinNuvem = pinNovo;
-        }
-        AppState.cloudSyncEmail = email;
+                const anterior = AppState.cloudSyncEmail ? String(AppState.cloudSyncEmail).toLowerCase() : "";
+                if (anterior && anterior !== email) {
+                    const trocar = confirm('Deseja conectar a conta ' + email + ' substituindo ' + anterior + '?');
+                    if (!trocar) { if (inp) inp.value = anterior; return; }
+                }
+
+                AppState.cloudSyncEmail = email;
                 saveState();
                 this.updateIndicator();
                 closeModal();
 
-                showToast('Conectando e salvando na nuvem...', 'info');
-                await this.syncToCloud(true);
+                showToast('Conectando e sincronizando com a nuvem...', 'info');
+                await this.smartSync(true);
             },
 
             async syncToCloud(showToastFeedback = false) {
@@ -12458,9 +12467,9 @@ https://catecismo.creativeam.com.br
         window.onload = function() {
             ThemeManager.init();
             FontScaleManager.init();
+            loadState();
             CloudSyncManager.init();
             MenuConfigManager.init();
-            loadState();
             if (window.ReflectionsManager) {
                 ReflectionsManager.updateBadges();
             }

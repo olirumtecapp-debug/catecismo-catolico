@@ -1,10 +1,10 @@
 [
   {
     "id": "santa-teresinha",
-    "titulo": "Novena Milagrosa das Rosas de Santa Teresinha",
+    "titulo": "Novena Milagrosa de Santa Terezinha do Menino Jesus (A Novena das Rosas)",
     "subtitulo": "Doutora da Igreja e Padroeira das Missões",
     "tipo": "fixa",
-    "padroeiro_de": "Missões Universais, Missionários, Vocações e Causas de Conversão",
+    "padroeiro_de": "Missões Universais, Missionários, Vocações, Sacerdotes e Causas de Conversão",
     "festa_liturgica": {
       "dia": 1,
       "mes": 10,
@@ -13,73 +13,73 @@
     "simbolo": "🌹",
     "cor": "rose",
     "imagem": "assets/img/santos/ns_santa-teresinha-do-menino-jesus.png",
-    "instrucoes": "Esta novena comemora os 24 anos de Santa Teresinha na Terra. Reza-se tradicionalmente uma Oração Inicial, a Oração e Intenção do Dia, a oração milagrosa do Pe. Putigan e 24 Glórias ao Pai em agradecimento à Santíssima Trindade por todos os dons concedidos à santinha de Lisieux.",
-    "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Santa Teresinha do Menino Jesus, que na vossa curta existência fostes um espelho de angélica pureza, de amor forte e de tão generosa entrega a Deus, volvei vosso olhar de benevolência para mim que em vós confio. Vós que prometestes passar o vosso Céu fazendo o bem na terra, derramai sobre mim e sobre minhas dores uma chuva de rosas de bênçãos celestiais.",
-    "oracao_padrao_dia": "Santíssima Trindade, Pai, Filho e Espírito Santo, eu Vos agradeço todos os favores e todas as graças com que enriquecestes a alma de Vossa serva Santa Teresinha do Menino Jesus durante os vinte e quatro anos que passou na terra. E, pelos méritos de tão querida Santinha, concedei-me a graça que ardentemente Vos peço (faça o seu pedido)... se for conforme a Vossa santíssima vontade e para salvação de minha alma.",
-    "oracao_final": "Santa Teresinha do Menino Jesus, modelo de humildade, de confiança e de amor, do alto dos Céus deitai sobre nós uma chuva de rosas, para que possamos perseverar no amor de Deus e alcançar a eterna bem-aventurança. Glória ao Pai, ao Filho e ao Espírito Santo, como era no princípio, agora e sempre. Amém.",
+    "instrucoes": "A Novena das Rosas comemora os 24 anos de Santa Terezinha na terra. Em cada um dos 9 dias reza-se a Intenção do Dia, a Oração da Novena à Santíssima Trindade pedindo a graça e o sinal de uma rosa, 24 vezes o Glória ao Pai com a invocação a Santa Terezinha por cada ano de sua vida terrena, e finaliza-se com 1 Ave-Maria e 1 Pai-Nosso.",
+    "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Santa Terezinha do Menino Jesus e da Sagrada Face, modelo de pureza, de humildade e de abandono filial aos braços do Pai: colocamo-nos sob a vossa proteção e vos pedimos que sejais nossa intercessora no Céu.",
+    "oracao_padrao_dia": "Santíssima Trindade: Pai, Filho e Espírito Santo: eu vos agradeço por todas as graças com que enriqueceste a vida de vossa serva, Santa Terezinha do Menino Jesus e da Sagrada Face, nestes 24 anos que passou na terra. E pelos méritos de tão querida santinha, concedei-me a graça que ardentemente vos peço … (faça aqui o pedido), se for conforme a Vossa Santíssima Vontade e para a salvação de minha alma (ou da pessoa por quem está rezando).\n\nAjudai minha fé e minha esperança, Santa Terezinha, cumprindo mais uma vez vossa promessa de que ficareis no Céu a fazer o bem na terra, permitindo que eu ganhe um rosa em sinal de que alcançarei a graça pedida.",
+    "oracao_final": "Em seguida rezar 24 vezes, por cada ano de Santa Terezinha na terra:\n“Glória ao Pai, ao Filho e ao Espírito Santo como era no princípio, agora e sempre. Amém.”\nSanta Terezinha do Menino Jesus e da Sagrada Face, rogai por mim (ou o nome da pessoa por quem está intercedendo).\n\nPara finalizar rezar:\n1 Ave-Maria e 1 Pai-Nosso.\n\n\"Do céu eu farei cair sobre a Terra uma chuva de Rosas.\"",
     "dias": [
       {
         "dia": 1,
-        "tema": "A Pequena Via e a Confiança Filial",
-        "intencao": "Pela graça da total confiança na misericórdia e no amor do Pai Celeste.",
-        "reflexao": "Santa Teresinha descobriu que para ser santa não precisava de obras grandiosas aos olhos humanos, mas de fazer as menores coisas por amor imenso a Deus. É a 'Pequena Via': o abandono de uma criancinha nos braços de seu Pai.",
-        "oracao": "Ó Santa Teresinha, ensinai-me a simplicidade do coração. Afastai da minha vida o medo, o desespero e a vaidade, e ajudai-me a descansar nas mãos providentes de Deus, com a serenidade de uma criança que sabe que é profundamente amada."
+        "tema": "Santa Terezinha doutora e amante da Igreja",
+        "intencao": "Neste dia rezemos pelos que exercem o ministério sacerdotal, pela santificação do Clero e pelas intenções do coração do Santo Padre.",
+        "reflexao": "1º dia – Pelo Clero\n\nSanta Terezinha compreendeu a grandeza inestimável do sacerdócio e consagrou sua vida no Carmelo para sustentar os sacerdotes em sua santidade e fidelidade ministerial.",
+        "oracao": "Senhor Jesus Cristo, Sumo e Eterno Sacerdote, pelo amor filial que Santa Terezinha devotou à Vossa Igreja, santificai os Vossos sacerdotes, fortalecei os bispos e iluminai as intenções do coração do Santo Padre."
       },
       {
         "dia": 2,
-        "tema": "A Vocação para o Amor no Coração da Igreja",
-        "intencao": "Pela Santa Igreja Católica e pela renovação de nosso ardor pastoral.",
-        "reflexao": "'Minha vocação é o amor! No coração da Igreja, minha Mãe, serei o amor.' Teresinha compreendeu que a caridade é o coração pulsante do Corpo Místico de Cristo.",
-        "oracao": "Amada Santa Teresinha, concedei-me um coração ardente pela Igreja. Que em cada oração, sacrifício e palavra, eu manifeste a doçura e a verdade de Cristo, servindo ao próximo com sincera dedicação cristã."
+        "tema": "Santa Terezinha padroeira das missões",
+        "intencao": "Neste dia rezemos pelos missionários espalhados no mundo inteiro e suas necessidades espirituais e materiais.",
+        "reflexao": "2º dia – Pelos Missionários\n\nSem jamais cruzar as portas do claustro de Lisieux, Santa Terezinha abraçou todos os confins da terra em suas orações e sacrifícios, sendo proclamada Padroeira Universal das Missões.",
+        "oracao": "Ó Deus de amor, sustentai com a força do Espírito Santo todos os missionários e missionárias do Evangelho no mundo inteiro. Providenciai o sustento de suas necessidades e frutificai seu trabalho para a salvação dos povos."
       },
       {
         "dia": 3,
-        "tema": "O Sorriso em Meio à Provação e Sofrimento",
-        "intencao": "Pela cura das dores físicas, emocionais e espirituais dos atribulados.",
-        "reflexao": "A tuberculose e a noite escura da fé nunca roubaram a paz interior de Teresinha. Ela aprendeu a acolher a cruz com gratidão, unindo seus padecimentos ao Santo Calvário de Jesus.",
-        "oracao": "Ó Santinha das Rosas, consolai os que choram e dai alívio aos enfermos. Diante das minhas próprias cruzes cotidianas, não permitais que eu me revolte, mas dai-me a virtude da paciência e o consolo do Espírito Santo."
+        "tema": "Santa Terezinha que teve uma vida de sacrifícios pelas almas",
+        "intencao": "Neste dia rezemos pelos Cristãos que são perseguidos e martirizados por sua fidelidade e amor a Cristo.",
+        "reflexao": "3º dia – Pelos Cristãos perseguidos e martirizados\n\nTeresinha descobriu que o sofrimento aceito com paciência e amor é redenção oculta que fecunda a Igreja nas provações.",
+        "oracao": "Senhor Jesus, concedei a graça da fortaleza, a consolação celeste e a firmeza da fé a todos os Vossos fiéis que sofrem ameaças, prisões, torturas e martírio em defesa do Vosso Santo Nome."
       },
       {
         "dia": 4,
-        "tema": "A Fidelidade nas Pequenas Coisas",
-        "intencao": "Pela perseverança e dignidade no trabalho e nas tarefas diárias.",
-        "reflexao": "Apanhar um alfinete do chão por amor a Deus tem mais valor eterno do que conquistar reinos sem caridade. É na rotina modesta que santificamos a nossa vocação.",
-        "oracao": "Santa Teresinha, livrai-me da preguiça e da negligência. Ajudai-me a cumprir com retidão e zelo todos os meus deveres familiares, profissionais e espirituais, oferecendo tudo a Deus com amor puro."
+        "tema": "Santa Terezinha que viveu em uma família santa",
+        "intencao": "Neste dia rezemos pela união e santificação das famílias.",
+        "reflexao": "4º dia – Pelas Famílias\n\nEducada no santuário doméstico dos santos pais Luís e Zélia Martin, Teresinha nos ensina a beleza da ternura, da oração em família e do testemunho cristão no lar.",
+        "oracao": "Jesus, Maria e José, Sagrada Família de Nazaré, santificai os nossos lares. Restabelecei a união onde há discórdia, a fidelidade onde há incerteza e a fé viva em todas as famílias cristãs."
       },
       {
         "dia": 5,
-        "tema": "O Zelo Apostólico e as Missões",
-        "intencao": "Por todos os missionários, sacerdotes e consagrados do mundo inteiro.",
-        "reflexao": "Sem nunca ter saído da clausura do Carmelo de Lisieux, Teresinha foi proclamada Padroeira Universal das Missões pela força de sua oração e de sua ardente intercessão pela salvação das almas.",
-        "oracao": "Ó celestial Padroeira das Missões, protegei os sacerdotes e catequistas da nossa Igreja. Que eles sejam santos, fiéis ao Evangelho e revestidos de coragem para anunciar Cristo a todas as nações."
+        "tema": "Santa Terezinha padroeira dos jovens",
+        "intencao": "Neste dia rezemos pelos jovens do Projeto Juventude para Jesus e pela juventude do mundo inteiro.",
+        "reflexao": "5º dia – Pelos Jovens\n\nEntrando no Carmelo ainda adolescente e partindo para o Céu aos 24 anos, Teresinha demonstra que a juventude é o tempo propício para doar a vida com radicalidade a Deus.",
+        "oracao": "Pai de bondade, guardai o coração de todos os jovens. Despertai neles o ardor vocacional, a pureza dos sentimentos e a alegria de construir uma civilização do amor alicerçada no Evangelho."
       },
       {
         "dia": 6,
-        "tema": "A Santa Comunhão e a Adoração Eucarística",
-        "intencao": "Pela reverência à Santíssima Eucaristia e frequência piedosa aos Sacramentos.",
-        "reflexao": "'Não é para ficar numa custódia de ouro que Ele desce todos os dias do Céu, mas para encontrar um outro céu: o céu de nossas almas.' Teresinha ansiava ardentemente pelo Pão da Vida.",
-        "oracao": "Concedei-me, Senhora e Doutora da Igreja, uma sede insaciável da Sagrada Eucaristia. Que eu jamais comungue indignamente e que meu coração se torne um tabernáculo puro e acolhedor para o Senhor Jesus."
+        "tema": "Santa Terezinha que foi curada pelo sorriso de Maria",
+        "intencao": "Neste dia rezemos pelos que sofrem de depressão, pelos que vivem oprimidos e sem sentido de vida.",
+        "reflexao": "6º dia – Pelos que sofrem de depressão\n\nNa infância, quando uma grave e obscura enfermidade roubava suas forças, Santa Terezinha foi milagrosamente curada pelo afetuoso sorriso da Virgem Maria.",
+        "oracao": "Ó Virgem Maria do Sorriso, estendei o Vosso manto de amor e esperança sobre todos os que padecem de depressão, angústia, solidão e crises emocionais, restituindo-lhes a alegria do viver e a paz de espírito."
       },
       {
         "dia": 7,
-        "tema": "A Devoção Terna à Virgem Santíssima",
-        "intencao": "Pela consagração de nossas famílias ao Imaculado Coração de Maria.",
-        "reflexao": "Teresinha dizia com simplicidade: 'A Santíssima Virgem é mais Mãe do que Rainha.' Em sua infância, foi curada milagrosamente pelo maternal sorriso da Virgem Maria.",
-        "oracao": "Ó Teresinha, conduzi-me pelas mãos até os braços de Nossa Senhora. Ensinai-me a rezar o Santo Rosário com devoção sincera e a encontrar em Maria o refúgio seguro em todas as tempestades."
+        "tema": "Santa Terezinha apaixonada por Jesus",
+        "intencao": "Neste dia rezemos para que todos tenham um coração inflamado de amor a Cristo.",
+        "reflexao": "7º dia – Para que todos amem a Cristo\n\n'Minha vocação é o Amor! No coração da Igreja serei o Amor!' Teresinha viveu consumida no propósito de consolar Jesus e atrair almas para o Seu Sagrado Coração.",
+        "oracao": "Espírito Santo consolador, abrasai nosso coração com a mesma chama viva de amor que consumiu Santa Terezinha, para que amemos a Cristo com total pureza e dedicação em cada ato do nosso dia."
       },
       {
         "dia": 8,
-        "tema": "A Promessa da Chuva de Rosas",
-        "intencao": "Pelas causas aparentemente sem saída e pelo alívio dos desesperados.",
-        "reflexao": "'Passarei o meu Céu a fazer bem sobre a terra. Uma chuva de rosas farei cair sobre o mundo até ao fim dos séculos.' Esta promessa é conforto perene para quem reza com fé.",
-        "oracao": "Santa Teresinha, olhai com piedade para as minhas angústias e necessidades prementes. Derramai a prometida chuva de graças e rosas em meu lar e na minha vida, obtendo de Deus a solução e a paz que tanto anseio."
+        "tema": "Santa Terezinha próxima dos prisioneiros",
+        "intencao": "Neste dia rezemos por todos os encarcerados e pelos que se encontram presos em si mesmo, pelo pecado.",
+        "reflexao": "8º dia – Pelos prisioneiros\n\nComovida com a alma do prisioneiro Pranzini, ofereceu preces ardentes até vê-lo beijar o crucifixo no cadafalso, confiando cegamente no perdão divino.",
+        "oracao": "Deus de infinita compaixão, libertai os cativos de todas as prisões espirituais, materiais e dos vícios. Concedei-lhes a graça do arrependimento sincero e o reencontro com a Vossa misericórdia paterna."
       },
       {
         "dia": 9,
-        "tema": "A Entrega Final: 'Meu Deus, eu Vos Amo!'",
-        "intencao": "Pela graça da santa perseverança até o último suspiro de vida.",
-        "reflexao": "As últimas palavras de Teresinha nesta terra selaram a sua existência terrena: 'Oh!... eu O amo!... Meu Deus... eu... Vos amo!'. Toda a sua vida foi um cântico ininterrupto de entrega filial.",
-        "oracao": "Gloriosa Santa Teresinha, neste nono dia em que concluo minha oração fervorosa, consagro-vos a minha vida e meus afetos. Alcançai-me a graça pedida nesta novena, mas sobretudo a graça soberana de amar a Deus até o meu último alento e cantar com os anjos Suas eternas misericórdias. Amém."
+        "tema": "Santa Terezinha solidária aos incrédulos",
+        "intencao": "Neste último dia da Novena de Santa Terezinha, rezemos pelos que não creem, não esperam e não confiam em Deus.",
+        "reflexao": "9º dia – Pelos incrédulos\n\nNos últimos meses de vida na terra, suportou a noite escura da fé em comunhão de sacrifício pelos ateus e incrédulos, para que a luz de Deus os iluminasse.\n\n\"Do céu eu farei cair sobre a Terra uma chuva de Rosas.\"",
+        "oracao": "Senhor Deus, Luz indefectível, iluminai as mentes e tocai os corações dos que vivem distantes da fé e da esperança cristã. E dignai-Vos atender a graça que com fé viva vos suplicamos nesta novena por intercessão de Santa Terezinha. Amém."
       }
     ]
   },

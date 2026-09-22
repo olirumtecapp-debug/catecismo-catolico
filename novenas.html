@@ -730,6 +730,25 @@
                     <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 whitespace-pre-line leading-relaxed font-serif text-lg">
                         ${currentNovena.oracao_final}
                     </div>
+
+                    ${currentNovena.id === 'santa-teresinha' ? `
+                        <div class="p-5 rounded-2xl bg-rose-50/80 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-xs font-bold text-rose-950 dark:text-rose-200">
+                                <span>🌹 Contador dos 24 Glórias ao Pai (1 por cada ano de vida):</span>
+                                <span id="glorias-counter-badge" class="px-2.5 py-1 rounded-full bg-rose-200/70 dark:bg-rose-900/60 text-rose-900 dark:text-rose-100 text-[11px] self-start sm:self-auto">Toque para marcar (0 de 24)</span>
+                            </div>
+                            <p class="text-[11px] text-rose-800 dark:text-rose-300">
+                                Reze: <em>"Glória ao Pai, ao Filho e ao Espírito Santo como era no princípio, agora e sempre. Amém. Santa Terezinha do Menino Jesus e da Sagrada Face, rogai por mim."</em>
+                            </p>
+                            <div class="grid grid-cols-6 sm:grid-cols-12 gap-1.5 pt-1" id="gloria-beads-container">
+                                ${Array.from({length: 24}).map((_, i) => `
+                                    <button type="button" onclick="toggleGloriaStep(${i + 1})" id="gloria-step-${i + 1}" class="w-8 h-8 rounded-full text-xs font-bold border border-rose-300 dark:border-rose-700 bg-white dark:bg-slate-900 text-rose-700 dark:text-rose-300 hover:scale-105 transition shadow-2xs cursor-pointer flex items-center justify-center">
+                                        ${i + 1}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
                 </div>
             `;
         }
@@ -776,6 +795,26 @@
                 } catch (e) {
                     console.warn('Erro ao notificar parent:', e);
                 }
+            }
+        };
+
+        window.toggleGloriaStep = function(num) {
+            const btn = document.getElementById(`gloria-step-${num}`);
+            if (!btn) return;
+            const isDone = btn.classList.contains('bg-rose-600');
+            if (isDone) {
+                btn.classList.remove('bg-rose-600', 'text-white', 'border-rose-700');
+                btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-rose-700', 'dark:text-rose-300');
+                btn.innerText = num;
+            } else {
+                btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-rose-700', 'dark:text-rose-300');
+                btn.classList.add('bg-rose-600', 'text-white', 'border-rose-700');
+                btn.innerText = '🌹';
+            }
+            const activeCount = document.querySelectorAll('#gloria-beads-container .bg-rose-600').length;
+            const badge = document.getElementById('glorias-counter-badge');
+            if (badge) {
+                badge.innerText = activeCount === 24 ? '🎉 24 Glórias Concluídos!' : `${activeCount} de 24 rezados`;
             }
         };
 
