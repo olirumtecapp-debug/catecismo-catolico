@@ -188,8 +188,9 @@
                         <h3 class="font-bold text-white text-base" id="modalSaintTitle">Prompt Sacro com Referência Real</h3>
                     </div>
                     <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono">
-                        <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-md font-semibold">📐 1:1 Quadrado (1024x1024)</span>
-                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-md font-semibold">🔍 Busca Histórica Ativa</span>
+                        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 px-2 py-0.5 rounded-md font-semibold">⚡ Bing Image (≤480c)</span>
+                        <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-md font-semibold">📐 1:1 Quadrado</span>
+                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-md font-semibold">🔍 Busca Histórica</span>
                         <span class="bg-sky-500/20 text-sky-300 border border-sky-500/40 px-2 py-0.5 rounded-md font-semibold">🚫 Anti-Rosto Genérico</span>
                     </div>
                 </div>
@@ -201,11 +202,37 @@
                 </div>
             </div>
 
-            <!-- OPÇÃO 1: COM PESQUISA ATIVA NA WEB (CHATGPT / GEMINI / COPILOT) -->
+            <!-- OPÇÃO 1: BING IMAGE CREATOR / DALL-E (COMPACTO ≤ 480 CARACTERES) -->
+            <div class="bg-blue-950/40 border border-blue-800/60 rounded-xl p-3.5 space-y-2">
+                <div class="flex items-center justify-between">
+                    <label class="text-xs font-bold text-sky-300 flex items-center gap-1.5">
+                        <span>⚡</span> Opção 1: Bing Image Creator (DALL-E 3 — Máx 480 carac.)
+                    </label>
+                    <div class="flex items-center gap-2">
+                        <span id="bingCharBadge" class="text-[10px] bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 px-2 py-0.5 rounded font-mono font-bold">
+                            0 / 480 carac. ✅
+                        </span>
+                        <a href="https://www.bing.com/images/create" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                            Abrir Bing ↗
+                        </a>
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-400 leading-tight">
+                    Prompt sintético e de alta precisão devocional. Inclui nome, vestes litúrgicas históricas, auréola sutil, iluminação barroca de vela e composição 1:1, estritamente abaixo do limite de 480 caracteres do Bing.
+                </p>
+                <div class="relative">
+                    <textarea id="promptBing" rows="3" readonly class="w-full bg-slate-900 border border-blue-900/50 rounded-xl p-3 text-xs text-sky-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                    <button onclick="copyToClipboard('promptBing', this)" class="absolute right-2.5 bottom-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                        📋 Copiar para Bing
+                    </button>
+                </div>
+            </div>
+
+            <!-- OPÇÃO 2: COM PESQUISA ATIVA NA WEB (CHATGPT / GEMINI / COPILOT) -->
             <div class="bg-slate-950/80 border border-emerald-900/40 rounded-xl p-3.5 space-y-2">
                 <div class="flex items-center justify-between">
                     <label class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
-                        <span>🌐</span> Opção 1: Prompt com Pesquisa na Web (ChatGPT / Gemini / Copilot)
+                        <span>🌐</span> Opção 2: Prompt com Pesquisa na Web (ChatGPT / Gemini / Copilot)
                     </label>
                     <span class="text-[10px] text-slate-400 bg-slate-900 px-2 py-0.5 rounded font-mono">Pesquisa + Gera</span>
                 </div>
@@ -213,23 +240,23 @@
                     Cole este prompt no <strong>ChatGPT, Copilot ou Gemini</strong>. Ele manda a IA pesquisar as pinturas sacras reais e a hagiografia oficial na internet antes de desenhar, evitando personagens repetidos.
                 </p>
                 <div class="relative">
-                    <textarea id="promptWeb" rows="4" readonly class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                    <textarea id="promptWeb" rows="3" readonly class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
                     <button onclick="copyToClipboard('promptWeb', this)" class="absolute right-2.5 bottom-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
                         📋 Copiar Prompt de Pesquisa
                     </button>
                 </div>
             </div>
 
-            <!-- OPÇÃO 2: PROMPT TÉCNICO DIRETO EM INGLÊS (MIDJOURNEY / FLUX / DALL-E) -->
+            <!-- OPÇÃO 3: PROMPT TÉCNICO DIRETO EM INGLÊS (MIDJOURNEY / FLUX / DALL-E) -->
             <div class="space-y-1.5">
                 <div class="flex items-center justify-between">
                     <label class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                        <span>🎨</span> Opção 2: Prompt Direto em Inglês (Midjourney / Flux / Leonardo / DALL-E)
+                        <span>🎨</span> Opção 3: Prompt Técnico em Inglês (Midjourney / Flux / Leonardo)
                     </label>
                     <span class="text-[10px] text-slate-400 bg-slate-950 px-2 py-0.5 rounded font-mono">--ar 1:1 --v 6.1</span>
                 </div>
                 <div class="relative">
-                    <textarea id="promptEn" rows="4" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                    <textarea id="promptEn" rows="3" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
                     <button onclick="copyToClipboard('promptEn', this)" class="absolute right-2.5 bottom-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
                         📋 Copiar EN
                     </button>
@@ -724,42 +751,62 @@
             // Detectar títulos e ordens religiosas
             let vestments = isFemale ? 'vestimentas devocionais femininas de sua época com véu tradicional' : 'vestes canônicas históricas masculinas';
             let vestmentsEn = isFemale ? 'period-accurate devotional female Catholic attire with traditional veil' : 'authentic historical Catholic vestments';
+            let vestmentsBing = isFemale ? 'period female Catholic attire with veil' : 'historical Catholic vestments';
             
             if (/papa/i.test(name)) {
                 vestments = 'vestes papais históricas solenes (batina branca papal, solidéu ou tiara papal)';
                 vestmentsEn = 'papal vestments (white papal cassock, zucchetto or historical papal tiara)';
+                vestmentsBing = 'white papal cassock and zucchetto';
             } else if (/bispo/i.test(name) || /arcebispo/i.test(name)) {
                 vestments = 'paramentos episcopais (mitra episcopal, báculo e solidéu)';
                 vestmentsEn = 'episcopal vestments (bishop mitre, pectoral cross and pastoral staff)';
-            } else if (/franciscan/i.test(name) || /francisco/i.test(bio)) {
+                vestmentsBing = 'episcopal vestments, bishop mitre and pectoral cross';
+            } else if (/franciscan|francisco|clara/i.test(name) || /franciscan|francisco/i.test(bio)) {
                 vestments = isFemale ? 'hábito franciscano feminino (clarissa) com véu e cordão de nós' : 'hábito franciscano marrom com capuz e cordão de três nós na cintura';
                 vestmentsEn = isFemale ? 'Franciscan Poor Clare nun habit with veil and knotted cincture' : 'brown Franciscan habit with hood and knotted rope cincture';
-            } else if (/dominican/i.test(name) || /dominic/i.test(bio)) {
+                vestmentsBing = isFemale ? 'Franciscan Poor Clare nun habit with veil' : 'brown Franciscan habit with hood and knotted rope';
+            } else if (/dominic|tom[áa]s de aquino/i.test(name) || /dominic/i.test(bio)) {
                 vestments = isFemale ? 'hábito dominicano feminino branco com véu e manto escuro' : 'hábito dominicano branco com escapulário e capa preta';
                 vestmentsEn = isFemale ? 'white Dominican nun habit with veil and black mantle' : 'white Dominican habit with black cloak and scapular';
-            } else if (/beneditin/i.test(name) || /abade/i.test(name)) {
+                vestmentsBing = isFemale ? 'white Dominican nun habit with veil' : 'white Dominican habit with black cloak and scapular';
+            } else if (/benedit|bento|escol[áa]stica|abade/i.test(name) || /benedit/i.test(bio)) {
                 vestments = isFemale ? 'hábito beneditino monástico feminino com véu preto' : 'hábito beneditino preto com capuz monástico';
                 vestmentsEn = isFemale ? 'Benedictine nun habit with veil' : 'black Benedictine monastic habit with cowl';
-            } else if (/carmelit/i.test(name)) {
+                vestmentsBing = isFemale ? 'black Benedictine nun habit with veil' : 'black Benedictine monastic habit with cowl';
+            } else if (/carmelit|carmelo|teresa|jo[ãa]o da cruz/i.test(name) || /carmel/i.test(bio)) {
                 vestments = isFemale ? 'hábito carmelita feminino marrom com véu escuro e manto branco' : 'hábito carmelita marrom com manto branco característico';
                 vestmentsEn = isFemale ? 'brown Carmelite nun habit with veil and white mantle' : 'brown Carmelite habit with white mantle';
-            } else if (/jesu[íi]ta/i.test(name)) {
+                vestmentsBing = isFemale ? 'brown Carmelite nun habit with white mantle' : 'brown Carmelite habit with white mantle';
+            } else if (/jesu[íi]ta|loyola|xavier/i.test(name) || /jesu[íi]ta/i.test(bio)) {
                 vestments = 'batina jesuíta preta sóbria com colarinho clerical';
                 vestmentsEn = 'traditional black Jesuit cassock';
-            } else if (/mártir/i.test(name)) {
+                vestmentsBing = 'traditional black Jesuit cassock';
+            } else if (/mártir/i.test(name) || /mártir/i.test(bio)) {
                 vestments = (isFemale ? 'vestes femininas históricas nobres de sua época com a palma do martírio' : 'vestes históricas de sua época com a palma do martírio');
                 vestmentsEn = (isFemale ? 'period-accurate historical female attire holding the martyr palm' : 'period-accurate historical clothing holding the martyr palm');
+                vestmentsBing = isFemale ? 'period dress holding martyr palm' : 'period clothes holding martyr palm';
             } else if (/virgem/i.test(name) || /freira|religiosa/i.test(name)) {
                 vestments = 'hábito religioso feminino tradicional com véu e terço';
                 vestmentsEn = 'traditional nun religious habit with veil';
+                vestmentsBing = 'traditional nun habit with veil';
             }
 
             // Extrair anos ou século da biografia se existir
             const dateMatch = bio.match(/\((\d{3,4}[^\)]*)\)/);
             const eraHint = dateMatch ? ` (Período histórico documentado: ${dateMatch[1]})` : '';
             const eraHintEn = dateMatch ? ` (Historical era: ${dateMatch[1]})` : '';
+            const eraBing = dateMatch ? ` (${dateMatch[1]})` : '';
 
-            // 1. PROMPT COM PESQUISA ATIVA (Para ChatGPT, Copilot, Gemini)
+            // 1. PROMPT COMPACTO OTIMIZADO PARA BING IMAGE CREATOR / DALL-E (Limite rígido: ≤ 480 caracteres)
+            let promptBing = `Catholic devotional portrait of ${name}${eraBing}. Classical Renaissance Baroque oil painting masterwork. Centered half-body bust 1:1, serene devotional gaze, fine translucent golden halo. Vestments: ${vestmentsBing}. Warm candle chiaroscuro lighting, solemn dark chapel background.`;
+            if (promptBing.length > 475) {
+                promptBing = `Catholic portrait of ${name}. Renaissance Baroque oil painting masterwork. Centered half-body bust 1:1, serene gaze, fine golden halo. Vestments: ${vestmentsBing}. Warm chiaroscuro lighting, solemn chapel background.`;
+            }
+            if (promptBing.length > 480) {
+                promptBing = promptBing.substring(0, 480);
+            }
+
+            // 2. PROMPT COM PESQUISA ATIVA (Para ChatGPT, Copilot, Gemini)
             const promptWeb = `Pesquise na internet as pinturas históricas consagradas, afrescos e a iconografia oficial da Igreja Católica para "${name}"${eraHint}. 
 
 IMPORTANTE: NÃO gere um personagem genérico repetido. Baseie-se rigorosamente na fisionomia real documentada na história da arte sacra católica, na etnia de sua terra natal e na idade em que viveu.
@@ -770,22 +817,35 @@ Com base na sua pesquisa, crie uma imagem que represente fielmente ${isFemale ? 
 - Estilo Artístico: Pintura clássica a óleo sobre tela de grandes mestres renascentistas e barrocos (como Murillo, Fra Angelico ou Caravaggio).
 - Iluminação e Detalhes: Olhar sereno e devocional, auréola dourada fina e translúcida sobre a cabeça, iluminação quente de velas com suave chiaroscuro e fundo discreto de capela ou claustro.`;
 
-            // 2. PROMPT TÉCNICO DIRETO EM INGLÊS (Midjourney / Flux / DALL-E 3)
+            // 3. PROMPT TÉCNICO DIRETO EM INGLÊS (Midjourney / Flux / DALL-E 3)
             const promptEn = `Authentic historical Catholic devotional portrait of ${isFemale ? 'the female saint ' + name : name}${eraHintEn}. Based on real canonical church paintings, historic frescoes and documented relics. IMPORTANT: Distinct, authentic historical facial features of this specific saint (strictly avoid generic face syndrome), accurate ethnic background, authentic age. Centered half-body bust composition, square framing 1:1 aspect ratio, 1024x1024 resolution. Authentic Catholic vestments: ${vestmentsEn}. Warm liturgical chiaroscuro illumination, subtle luminous translucent golden halo above head, shallow depth of field with solemn church chapel background, classical Renaissance and Baroque oil painting on canvas masterwork, ultra-detailed texture --ar 1:1 --v 6.1 --style raw`;
 
-            return { promptWeb, promptEn };
+            return { promptBing, promptWeb, promptEn };
         }
 
         function openPromptModal(index) {
             const saint = filteredSaints[index];
             if (!saint) return;
 
-            const { promptWeb, promptEn } = generateSacredPrompt(saint);
+            const { promptBing, promptWeb, promptEn } = generateSacredPrompt(saint);
 
             document.getElementById('modalSaintTitle').innerText = saint.name;
+            document.getElementById('promptBing').value = promptBing;
             document.getElementById('promptWeb').value = promptWeb;
             document.getElementById('promptEn').value = promptEn;
             document.getElementById('modalSaintBio').innerText = saint.sourceText ? 'Contexto Biográfico: ' + saint.sourceText : '';
+
+            // Atualizar badge contador de caracteres do Bing
+            const bingLen = promptBing.length;
+            const badge = document.getElementById('bingCharBadge');
+            if (badge) {
+                badge.innerText = `${bingLen} / 480 carac. ${bingLen <= 480 ? '✅' : '⚠️'}`;
+                if (bingLen <= 480) {
+                    badge.className = "text-[10px] bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 px-2 py-0.5 rounded font-mono font-bold";
+                } else {
+                    badge.className = "text-[10px] bg-rose-950/80 text-rose-300 border border-rose-700/60 px-2 py-0.5 rounded font-mono font-bold";
+                }
+            }
 
             // Link dinâmico para o Google Imagens
             const searchTerms = encodeURIComponent(`${saint.name} pintura sacra catolica iconografia`);
