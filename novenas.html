@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesaurus Novenarum — Portal Oficial de Novenas Católicas | CATECISMO</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <script src="assets/vendor/tailwind.js" onerror="var s=document.createElement('script');s.src='https://cdn.tailwindcss.com';document.head.appendChild(s);"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mariana: '#1B365D',
+                        'mariana-dark': '#0F223E',
+                        dourado: '#D4AF37',
+                        'dourado-light': '#F3E5AB',
+                        vinho: '#6A1B29',
+                        'vinho-dark': '#48111B',
+                        marfim: '#F9F8F6',
+                        'marfim-card': '#FFFFFF',
+                        cinza: '#64748B'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F9F8F6; color: #1e293b; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .gold-border { border-color: #D4AF37; }
+        .gold-gradient { background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%); }
+        .mariana-gradient { background: linear-gradient(135deg, #1B365D 0%, #0F223E 100%); }
+        .vinho-gradient { background: linear-gradient(135deg, #6A1B29 0%, #48111B 100%); }
+        .card-shadow { box-shadow: 0 4px 20px -2px rgba(27, 54, 93, 0.08); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+        
+        :root { --prayer-scale: 1; }
+        .prayer-text {
+            font-size: calc(1.05rem * var(--prayer-scale, 1));
+            line-height: calc(1.75 + 0.1 * (var(--prayer-scale, 1) - 1));
+        }
+
+        html.dark body { background-color: #0F172A; color: #E2E8F0; }
+        html.dark .bg-white { background-color: #131D31 !important; border-color: #1E293B !important; }
+        html.dark .border-slate-200 { border-color: #1E293B !important; }
+        html.dark .border-slate-100 { border-color: #1E293B !important; }
+        html.dark .bg-slate-50 { background-color: #18243C !important; }
+        html.dark .bg-marfim { background-color: #0F172A !important; }
+        html.dark .text-slate-800 { color: #F1F5F9 !important; }
+        html.dark .text-slate-700 { color: #E2E8F0 !important; }
+        html.dark .text-slate-600 { color: #94A3B8 !important; }
+        html.dark .text-mariana { color: #93C5FD !important; }
+
+        /* Oculta cabeçalho interno redundante se incorporado no modal do portal principal */
+        html.is-embedded #site-header {
+            display: none !important;
+        }
+    </style>
+    <script>
+        if (typeof window !== 'undefined' && window.self !== window.top) {
+            document.documentElement.classList.add('is-embedded');
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-dourado/30">
+
+    <!-- Top Navigation Bar -->
+    <header id="site-header" class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors shadow-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <button onclick="handleCloseOrBack()" class="group flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-mariana hover:text-white dark:hover:bg-amber-600 dark:hover:text-white transition text-xs font-bold text-slate-700 dark:text-slate-200 cursor-pointer shadow-2xs" title="Voltar ao Portal Catecismo">
+                    <span class="group-hover:-translate-x-0.5 transition-transform font-bold">←</span>
+                    <span>Voltar ao Catecismo</span>
+                </button>
+                <div class="h-5 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg mariana-gradient flex items-center justify-center text-dourado text-sm font-serif font-bold shadow-xs border border-dourado/40">
+                        ✝
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-bold text-mariana dark:text-dourado leading-none block">Thesaurus Novenarum</span>
+                        <span class="text-[9px] uppercase tracking-wider text-slate-400 font-bold block">Portal Canônico de Novenas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls (Search, Font, Dark Mode) -->
+            <div class="flex items-center gap-2">
+                <!-- Search Input -->
+                <div class="relative hidden md:block w-48 lg:w-64">
+                    <input type="text" id="novena-search" placeholder="Buscar novena ou santo..." class="w-full pl-8 pr-3 py-1.5 text-xs rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-mariana dark:focus:border-dourado text-slate-800 dark:text-slate-100 placeholder-slate-400">
+                    <span class="absolute left-2.5 top-1.5 text-xs text-slate-400">🔍</span>
+                </div>
+
+                <!-- Font size scaling -->
+                <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl p-1 border border-slate-200 dark:border-slate-700 text-xs">
+                    <button onclick="adjustScale(-0.1)" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold" title="Diminuir texto">A-</button>
+                    <button onclick="adjustScale(0.1)" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold" title="Aumentar texto">A+</button>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" class="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-amber-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="Alternar Modo Escuro">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-8">
+
+        <!-- Spotlight: Novenas Ativas Hoje -->
+        <section id="spotlight-container" class="space-y-4">
+            <!-- Dynamic Active Banner inserted via JS -->
+            <div id="spotlight-active" class="hidden"></div>
+        </section>
+
+        <!-- Hero Header -->
+        <section class="mariana-gradient text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-xl border border-dourado/30">
+            <div class="absolute right-0 top-0 translate-x-8 -translate-y-8 text-[180px] opacity-10 font-serif select-none pointer-events-none">🌹</div>
+            <div class="relative z-10 max-w-2xl space-y-3">
+                <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-[11px] font-bold tracking-wider uppercase border border-dourado/40">
+                        🕊️ Devoção Católica dos Nove Dias
+                    </span>
+                    <span id="current-liturgical-date-badge" class="text-xs text-slate-300"></span>
+                </div>
+                <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+                    Novenas Católicas Canônicas
+                </h1>
+                <p class="text-slate-200 text-sm sm:text-base font-light leading-relaxed">
+                    Navegue pelas orações originais e autorizadas da Tradição Católica. Acompanhe o início litúrgico exato de cada novena com cálculo astronômico para o ano civil, meditações do 1º ao 9º dia e controle devocional diário.
+                </p>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs / Filters -->
+        <section class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div class="flex flex-wrap items-center gap-2 text-xs font-semibold" id="filter-tabs">
+                <button onclick="setFilter('all')" data-filter="all" class="filter-tab px-4 py-2 rounded-xl bg-mariana text-white shadow-xs">
+                    Todas as Novenas (<span id="count-all">0</span>)
+                </button>
+                <button onclick="setFilter('em_andamento')" data-filter="em_andamento" class="filter-tab px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                    🌹 Em Andamento Hoje (<span id="count-active">0</span>)
+                </button>
+                <button onclick="setFilter('em_breve')" data-filter="em_breve" class="filter-tab px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                    ⏳ Em Breve (<span id="count-upcoming">0</span>)
+                </button>
+                <button onclick="setFilter('atemporal')" data-filter="atemporal" class="filter-tab px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                    🎀 Atemporais (<span id="count-atemporal">0</span>)
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <div class="relative flex-1 md:w-64">
+                    <input type="text" id="novena-search-bar" placeholder="Buscar novena ou santo..." class="w-full pl-8 pr-3 py-2 text-xs rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-mariana dark:focus:border-dourado text-slate-800 dark:text-slate-100 placeholder-slate-400">
+                    <span class="absolute left-2.5 top-2.5 text-xs text-slate-400">🔍</span>
+                </div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 shrink-0 hidden sm:block">
+                    <span>Ano: <strong id="current-year-display" class="text-mariana dark:text-dourado"></strong></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Novenas Grid -->
+        <section>
+            <div id="novenas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cards renderizados via JavaScript -->
+                <div class="col-span-full py-12 text-center text-slate-400">
+                    <div class="inline-block animate-spin text-2xl mb-2">⏳</div>
+                    <p>Carregando novenas e sincronizando cálculos litúrgicos...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Devotional Prayer Reader Modal -->
+    <div id="prayer-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col max-h-[92vh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+            
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-11 h-11 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center shadow-xs">
+                        <img id="modal-novena-img" src="" alt="" class="w-full h-full object-cover hidden">
+                        <span id="modal-novena-icon" class="text-2xl">🌹</span>
+                    </div>
+                    <div class="min-w-0">
+                        <h3 id="modal-novena-title" class="font-serif text-xl font-bold text-mariana dark:text-dourado truncate"></h3>
+                        <p id="modal-novena-sub" class="text-xs text-slate-500 dark:text-slate-400 truncate"></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                    <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl p-0.5 border border-slate-200 dark:border-slate-700 text-xs">
+                        <button onclick="adjustScale(-0.1)" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold" title="Diminuir texto">A-</button>
+                        <button onclick="adjustScale(0.1)" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold" title="Aumentar texto">A+</button>
+                    </div>
+                    <button onclick="shareCurrentPrayer()" class="p-2 rounded-xl text-slate-500 hover:text-mariana dark:hover:text-dourado hover:bg-slate-100 dark:hover:bg-slate-800 transition text-sm" title="Compartilhar esta oração">
+                        📤
+                    </button>
+                    <button onclick="closePrayerModal()" class="w-8 h-8 flex items-center justify-center rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-lg cursor-pointer">
+                        ✕
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day Selector (1 to 9) -->
+            <div class="px-6 py-3 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2 overflow-x-auto custom-scrollbar" id="modal-days-nav">
+                <!-- Buttons 1 to 9 generated dynamically -->
+            </div>
+
+            <!-- Prayer Content (Scrollable) -->
+            <div class="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6 custom-scrollbar prayer-text text-slate-800 dark:text-slate-200" id="modal-prayer-body">
+                <!-- Filled via renderModalDay -->
+            </div>
+
+            <!-- Modal Footer / Action Bar -->
+            <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                    <button id="modal-mark-done-btn" onclick="toggleCurrentDayCompleted()" class="px-4 py-2.5 rounded-xl border border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 font-bold text-xs flex items-center gap-2 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition cursor-pointer">
+                        <span id="mark-done-icon">✓</span>
+                        <span id="mark-done-text">Rezei este Dia</span>
+                    </button>
+                    <span id="modal-progress-label" class="text-xs text-slate-500 dark:text-slate-400 font-medium"></span>
+                </div>
+
+                <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                    <button id="modal-prev-day-btn" onclick="switchDayRelative(-1)" class="px-3.5 py-2 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                        ← Dia Anterior
+                    </button>
+                    <button id="modal-next-day-btn" onclick="switchDayRelative(1)" class="px-3.5 py-2 rounded-xl bg-mariana dark:bg-dourado text-white dark:text-slate-900 text-xs font-bold hover:opacity-90 transition">
+                        Próximo Dia →
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400 space-y-2 mt-auto">
+        <p><strong>CATECISMO</strong> — Thesaurus Novenarum (Portal Canônico de Novenas Católicas)</p>
+        <p class="text-[11px] text-slate-400">Todas as orações são transcrições canônicas de devoções aprovadas pela Santa Sé e santuários oficiais.</p>
+    </footer>
+
+    <!-- Scripts: Liturgical Engine + App Controller -->
+    <script type="module">
+        import LiturgicalEngine from './services/liturgicalEngine.js';
+
+        let novenasList = [];
+        let currentFilter = 'all';
+        let currentNovena = null;
+        let currentDayIndex = 1;
+        let todayDate = new Date(); // Pode ser sobreposta para testes
+
+        // Estado da escala da fonte
+        let fontScale = parseFloat(localStorage.getItem('thesaurus_font_scale') || '1.0');
+        document.documentElement.style.setProperty('--prayer-scale', fontScale);
+
+        // Tema escuro
+        function initTheme() {
+            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('theme-icon').innerText = '☀️';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('theme-icon').innerText = '🌙';
+            }
+        }
+        initTheme();
+
+        window.toggleDarkMode = function() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.getElementById('theme-icon').innerText = isDark ? '☀️' : '🌙';
+        };
+
+        window.adjustScale = function(delta) {
+            fontScale = Math.min(1.5, Math.max(0.85, fontScale + delta));
+            localStorage.setItem('thesaurus_font_scale', fontScale.toFixed(2));
+            document.documentElement.style.setProperty('--prayer-scale', fontScale);
+        };
+
+        // Carregar JSON de Novenas
+        async function loadNovenas() {
+            try {
+                const res = await fetch('/data/novenas.json');
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                novenasList = await res.json();
+                
+                // Atualizar ano civil no header
+                document.getElementById('current-year-display').innerText = todayDate.getFullYear();
+                document.getElementById('current-liturgical-date-badge').innerText = LiturgicalEngine.formatLiturgicalDate(todayDate);
+
+                renderSpotlight();
+                renderCards();
+                updateCounts();
+
+                // Suporte a abertura direta via URL hash, ex: #santa-teresinha
+                checkUrlHash();
+            } catch (err) {
+                console.error('Erro ao carregar novenas:', err);
+                document.getElementById('novenas-grid').innerHTML = `
+                    <div class="col-span-full p-6 rounded-2xl bg-red-50 text-red-700 text-center">
+                        <p class="font-bold">Não foi possível carregar as novenas católicas.</p>
+                        <p class="text-xs mt-1">${err.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Renderiza o destaque (Spotlight) das novenas ativas no dia
+        function renderSpotlight() {
+            const activeList = LiturgicalEngine.getActiveNovenas(novenasList, todayDate);
+            const container = document.getElementById('spotlight-active');
+
+            if (!activeList.length) {
+                // Se nenhuma estiver no meio dos 9 dias, busca a próxima iminente
+                const upcoming = LiturgicalEngine.getUpcomingNovenas(novenasList, todayDate, 1);
+                if (upcoming.length) {
+                    const up = upcoming[0];
+                    const fullNovena = novenasList.find(n => n.id === up.id);
+                    container.classList.remove('hidden');
+                    container.innerHTML = `
+                        <div class="p-5 rounded-3xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-14 h-14 rounded-2xl overflow-hidden bg-amber-100 dark:bg-amber-900/60 border border-amber-300 dark:border-amber-700 shadow-xs shrink-0 flex items-center justify-center">
+                                    ${fullNovena.imagem ? `
+                                        <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="hidden w-full h-full items-center justify-center text-3xl">${fullNovena.simbolo || '⏳'}</div>
+                                    ` : `<span class="text-3xl">${fullNovena.simbolo || '⏳'}</span>`}
+                                </div>
+                                <div>
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-200 dark:bg-amber-900 text-amber-900 dark:text-amber-200">
+                                        Próxima Novena
+                                    </span>
+                                    <h4 class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100 mt-1">
+                                        ${fullNovena.titulo}
+                                    </h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400">
+                                        ${up.statusLabel} • Festa litúrgica em ${LiturgicalEngine.formatLiturgicalDate(up.feastISO)}
+                                    </p>
+                                </div>
+                            </div>
+                            <button onclick="openNovenaModal('${fullNovena.id}')" class="px-5 py-2.5 rounded-xl bg-mariana dark:bg-dourado text-white dark:text-slate-900 font-bold text-xs shadow-sm hover:opacity-90 transition shrink-0 cursor-pointer">
+                                Conhecer Novena →
+                            </button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            // Há novenas ativas HOJE (ex: Santa Teresinha Dia 1!)
+            container.classList.remove('hidden');
+            const primaryActive = activeList[0];
+            const fullNovena = novenasList.find(n => n.id === primaryActive.id);
+
+            container.innerHTML = `
+                <div class="p-6 rounded-3xl bg-gradient-to-r from-rose-50 via-amber-50 to-emerald-50 dark:from-rose-950/30 dark:via-slate-900 dark:to-emerald-950/30 border border-rose-200 dark:border-rose-900 shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden bg-rose-500 text-white shadow-lg shrink-0 flex items-center justify-center border-2 border-white dark:border-slate-800">
+                                ${fullNovena.imagem ? `
+                                    <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="hidden w-full h-full items-center justify-center text-3xl">${fullNovena.simbolo || '🌹'}</div>
+                                ` : `<span class="text-3xl">${fullNovena.simbolo || '🌹'}</span>`}
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200 animate-pulse">
+                                        🔥 Novena Ativa Hoje!
+                                    </span>
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
+                                        ${primaryActive.statusBadge}
+                                    </span>
+                                </div>
+                                <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-white mt-1">
+                                    ${fullNovena.titulo}
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl">
+                                    Hoje a Igreja e os devotos rezam o <strong>Dia ${primaryActive.currentDay} de 9</strong>: <em>${fullNovena.dias[primaryActive.currentDay - 1]?.tema || ''}</em>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 shrink-0">
+                            <button onclick="openNovenaModal('${fullNovena.id}', ${primaryActive.currentDay})" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm shadow-md transition transform hover:scale-[1.02] cursor-pointer flex items-center justify-center gap-2">
+                                <span>Rezar Dia ${primaryActive.currentDay}</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Renderiza os Cards de Novenas
+        function renderCards() {
+            const grid = document.getElementById('novenas-grid');
+            const search = (document.getElementById('novena-search-bar')?.value || document.getElementById('novena-search')?.value || '').toLowerCase().trim();
+
+            const filtered = novenasList.filter(novena => {
+                const status = LiturgicalEngine.evaluateNovenaStatus(novena, todayDate);
+                
+                // Filtro por Tab
+                if (currentFilter === 'em_andamento' && status.status !== 'em_andamento' && status.status !== 'festa_hoje') return false;
+                if (currentFilter === 'em_breve' && status.status !== 'em_breve' && status.status !== 'futura') return false;
+                if (currentFilter === 'atemporal' && status.tipo !== 'atemporal') return false;
+
+                // Filtro por Busca de Texto
+                if (search) {
+                    const haystack = `${novena.titulo} ${novena.subtitulo} ${novena.padroeiro_de} ${novena.descricao || ''}`.toLowerCase();
+                    if (!haystack.includes(search)) return false;
+                }
+
+                return true;
+            });
+
+            if (!filtered.length) {
+                grid.innerHTML = `
+                    <div class="col-span-full p-8 text-center text-slate-400 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700">
+                        <p class="text-base font-medium">Nenhuma novena encontrada com os filtros selecionados.</p>
+                        <button onclick="setFilter('all')" class="mt-3 px-4 py-2 text-xs font-bold text-mariana dark:text-dourado hover:underline">Limpar filtros</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(novena => {
+                const status = LiturgicalEngine.evaluateNovenaStatus(novena, todayDate);
+                const userProgress = getNovenaCompletedDays(novena.id);
+                const completedCount = userProgress.length;
+                const progressPct = Math.round((completedCount / 9) * 100);
+
+                let badgeHtml = '';
+                if (status.status === 'em_andamento') {
+                    badgeHtml = `<span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-200 border border-rose-300 dark:border-rose-800">🌹 Ativa: Dia ${status.currentDay}/9</span>`;
+                } else if (status.status === 'festa_hoje') {
+                    badgeHtml = `<span class="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-300">✨ Festa Hoje</span>`;
+                } else if (status.status === 'em_breve') {
+                    badgeHtml = `<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-50 text-amber-800 dark:bg-amber-950/80 dark:text-amber-300 border border-amber-200 dark:border-amber-800">${status.statusBadge} (${status.schedule?.startDate ? (status.schedule.startDate.getUTCDate() + '/' + (status.schedule.startDate.getUTCMonth()+1)) : ''})</span>`;
+                } else if (status.tipo === 'atemporal') {
+                    badgeHtml = `<span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-blue-50 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800">Atemporal</span>`;
+                } else {
+                    badgeHtml = `<span class="px-2.5 py-1 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">${status.statusBadge}</span>`;
+                }
+
+                return `
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 card-shadow hover:shadow-lg transition flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <!-- Top Card Bar -->
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
+                                    ${novena.imagem ? `
+                                        <img src="${novena.imagem}" alt="${novena.titulo}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="hidden w-full h-full items-center justify-center text-2xl">${novena.simbolo || '🙏'}</div>
+                                    ` : `<span class="text-2xl">${novena.simbolo || '🙏'}</span>`}
+                                </div>
+                                <div>
+                                    ${badgeHtml}
+                                </div>
+                            </div>
+
+                            <!-- Title & Subtitle -->
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-mariana dark:text-dourado group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug">
+                                    ${novena.titulo}
+                                </h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">
+                                    ${novena.subtitulo || ''}
+                                </p>
+                            </div>
+
+                            <!-- Patronage & Feast Info -->
+                            <div class="text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/60 p-3 rounded-2xl border border-slate-100 dark:border-slate-800 space-y-1">
+                                <p class="line-clamp-2">
+                                    <span class="font-bold text-slate-700 dark:text-slate-200">Padroeiro(a) de:</span> ${novena.padroeiro_de}
+                                </p>
+                                ${novena.festa_liturgica?.nome ? `
+                                    <p class="text-[11px] text-slate-500 dark:text-slate-400 pt-0.5">
+                                        📅 <strong>Festa:</strong> ${novena.festa_liturgica.nome}
+                                    </p>
+                                ` : ''}
+                            </div>
+
+                            <!-- User Progress Tracker -->
+                            <div class="space-y-1.5 pt-1">
+                                <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
+                                    <span>Seu Progresso</span>
+                                    <span>${completedCount}/9 dias (${progressPct}%)</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-amber-400 to-emerald-500 h-full rounded-full transition-all duration-300" style="width: ${progressPct}%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div class="pt-5 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
+                            <button onclick="openNovenaModal('${novena.id}', ${status.currentDay || 1})" class="w-full py-2.5 px-4 rounded-xl bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:hover:bg-amber-400 text-white dark:text-slate-900 font-bold text-xs shadow-sm transition text-center cursor-pointer flex items-center justify-center gap-1.5">
+                                <span>Rezar Novena</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateCounts() {
+            let active = 0, upcoming = 0, atemporal = 0;
+            novenasList.forEach(n => {
+                const s = LiturgicalEngine.evaluateNovenaStatus(n, todayDate);
+                if (s.status === 'em_andamento' || s.status === 'festa_hoje') active++;
+                if (s.status === 'em_breve' || s.status === 'futura') upcoming++;
+                if (n.tipo === 'atemporal') atemporal++;
+            });
+            document.getElementById('count-all').innerText = novenasList.length;
+            document.getElementById('count-active').innerText = active;
+            document.getElementById('count-upcoming').innerText = upcoming;
+            document.getElementById('count-atemporal').innerText = atemporal;
+        }
+
+        window.setFilter = function(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                if (tab.getAttribute('data-filter') === filter) {
+                    tab.classList.add('bg-mariana', 'text-white', 'shadow-xs');
+                    tab.classList.remove('bg-slate-100', 'text-slate-600', 'dark:bg-slate-800', 'dark:text-slate-300');
+                } else {
+                    tab.classList.remove('bg-mariana', 'text-white', 'shadow-xs');
+                    tab.classList.add('bg-slate-100', 'text-slate-600', 'dark:bg-slate-800', 'dark:text-slate-300');
+                }
+            });
+            renderCards();
+        };
+
+        // Modal Devocional
+        window.openNovenaModal = function(id, targetDay = 1) {
+            const novena = novenasList.find(n => n.id === id);
+            if (!novena) return;
+
+            currentNovena = novena;
+            currentDayIndex = Math.min(9, Math.max(1, targetDay));
+
+            const modalImg = document.getElementById('modal-novena-img');
+            const modalIcon = document.getElementById('modal-novena-icon');
+            if (modalImg && novena.imagem) {
+                modalImg.src = novena.imagem;
+                modalImg.alt = novena.titulo;
+                modalImg.classList.remove('hidden');
+                modalIcon.classList.add('hidden');
+                modalImg.onerror = () => {
+                    modalImg.classList.add('hidden');
+                    modalIcon.classList.remove('hidden');
+                };
+            } else if (modalIcon) {
+                if (modalImg) modalImg.classList.add('hidden');
+                modalIcon.textContent = novena.simbolo || '🌹';
+                modalIcon.classList.remove('hidden');
+            }
+
+            document.getElementById('modal-novena-title').innerText = novena.titulo;
+            document.getElementById('modal-novena-sub').innerText = novena.subtitulo || novena.padroeiro_de;
+
+            renderModalDaysNav();
+            renderModalDay(currentDayIndex);
+
+            document.getElementById('prayer-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            window.location.hash = novena.id;
+        };
+
+        window.closePrayerModal = function() {
+            document.getElementById('prayer-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+            history.replaceState(null, null, ' ');
+            renderCards(); // atualiza barra de progresso
+        };
+
+        function renderModalDaysNav() {
+            const nav = document.getElementById('modal-days-nav');
+            const completed = getNovenaCompletedDays(currentNovena.id);
+
+            nav.innerHTML = [1,2,3,4,5,6,7,8,9].map(d => {
+                const isDone = completed.includes(d);
+                const isActive = d === currentDayIndex;
+                let cls = 'px-3 py-1.5 rounded-xl text-xs font-bold transition whitespace-nowrap flex items-center gap-1.5 cursor-pointer ';
+                
+                if (isActive) {
+                    cls += 'bg-mariana dark:bg-dourado text-white dark:text-slate-900 shadow-sm ';
+                } else if (isDone) {
+                    cls += 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 ';
+                } else {
+                    cls += 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 ';
+                }
+
+                return `
+                    <button onclick="switchDay(${d})" class="${cls}">
+                        ${isDone ? '<span>✓</span>' : ''}
+                        <span>Dia ${d}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        window.switchDay = function(d) {
+            currentDayIndex = d;
+            renderModalDaysNav();
+            renderModalDay(d);
+            document.getElementById('modal-prayer-body').scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        window.switchDayRelative = function(delta) {
+            const target = currentDayIndex + delta;
+            if (target >= 1 && target <= 9) {
+                switchDay(target);
+            }
+        };
+
+        function renderModalDay(dayNum) {
+            const body = document.getElementById('modal-prayer-body');
+            const dayData = currentNovena.dias[dayNum - 1];
+            const isCompleted = getNovenaCompletedDays(currentNovena.id).includes(dayNum);
+
+            // Botão Concluir
+            const markBtn = document.getElementById('modal-mark-done-btn');
+            const markText = document.getElementById('mark-done-text');
+            const markIcon = document.getElementById('mark-done-icon');
+            
+            if (isCompleted) {
+                markBtn.className = "px-4 py-2.5 rounded-xl border border-emerald-500 bg-emerald-600 text-white font-bold text-xs flex items-center gap-2 shadow-sm transition cursor-pointer";
+                markText.innerText = "Dia Rezado!";
+                markIcon.innerText = "✓";
+            } else {
+                markBtn.className = "px-4 py-2.5 rounded-xl border border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 font-bold text-xs flex items-center gap-2 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition cursor-pointer";
+                markText.innerText = "Rezar este Dia";
+                markIcon.innerText = "○";
+            }
+
+            const completedList = getNovenaCompletedDays(currentNovena.id);
+            document.getElementById('modal-progress-label').innerText = `${completedList.length} de 9 dias rezados`;
+
+            // Navegação prev / next
+            document.getElementById('modal-prev-day-btn').disabled = dayNum === 1;
+            document.getElementById('modal-prev-day-btn').style.opacity = dayNum === 1 ? '0.4' : '1';
+            document.getElementById('modal-next-day-btn').disabled = dayNum === 9;
+            document.getElementById('modal-next-day-btn').style.opacity = dayNum === 9 ? '0.4' : '1';
+
+            body.innerHTML = `
+                <!-- Instruções / Contexto -->
+                <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                    <strong>🕯️ Rito Devocional:</strong> Inicie com o Sinal da Cruz, reze a Oração Inicial, faça a meditação e oração do dia e conclua com a oração final.
+                </div>
+
+                <!-- 1. Oração Inicial -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-mariana/10 dark:bg-dourado/20 text-mariana dark:text-dourado flex items-center justify-center font-bold text-xs">1</span>
+                        <h4 class="font-serif text-xl font-bold text-mariana dark:text-dourado">Oração Inicial</h4>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 whitespace-pre-line leading-relaxed font-serif text-lg">
+                        ${currentNovena.oracao_inicial}
+                    </div>
+                </div>
+
+                <!-- 2. Tema, Intenção e Meditação do Dia -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-mariana/10 dark:bg-dourado/20 text-mariana dark:text-dourado flex items-center justify-center font-bold text-xs">2</span>
+                        <h4 class="font-serif text-xl font-bold text-mariana dark:text-dourado">Dia ${dayNum}: ${dayData.tema}</h4>
+                    </div>
+                    
+                    <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900 text-sm text-rose-950 dark:text-rose-200">
+                        <strong>🎯 Intenção do Dia:</strong> ${dayData.intencao}
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 leading-relaxed text-slate-700 dark:text-slate-300">
+                        <h5 class="text-xs uppercase tracking-wider font-extrabold text-slate-400 mb-2">Meditação Espiritual</h5>
+                        <p class="font-serif text-lg italic text-slate-800 dark:text-slate-100">
+                            "${dayData.reflexao}"
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 whitespace-pre-line leading-relaxed font-serif text-lg">
+                        <h5 class="text-xs uppercase tracking-wider font-extrabold text-slate-400 mb-2 font-sans">Oração do ${dayNum}º Dia</h5>
+                        ${dayData.oracao}
+                    </div>
+                </div>
+
+                <!-- 3. Oração Específica / Invocação Central -->
+                ${currentNovena.oracao_padrao_dia ? `
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-mariana/10 dark:bg-dourado/20 text-mariana dark:text-dourado flex items-center justify-center font-bold text-xs">3</span>
+                            <h4 class="font-serif text-xl font-bold text-mariana dark:text-dourado">Súplica de Intercessão</h4>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/60 whitespace-pre-line leading-relaxed font-serif text-lg text-slate-900 dark:text-slate-100">
+                            ${currentNovena.oracao_padrao_dia}
+                        </div>
+                    </div>
+                ` : ''}
+
+                <!-- 4. Oração Final & Encerramento -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-mariana/10 dark:bg-dourado/20 text-mariana dark:text-dourado flex items-center justify-center font-bold text-xs">${currentNovena.oracao_padrao_dia ? '4' : '3'}</span>
+                        <h4 class="font-serif text-xl font-bold text-mariana dark:text-dourado">Oração Final &amp; Bênção</h4>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 whitespace-pre-line leading-relaxed font-serif text-lg">
+                        ${currentNovena.oracao_final}
+                    </div>
+                </div>
+            `;
+        }
+
+        window.toggleCurrentDayCompleted = function() {
+            if (!currentNovena) return;
+            const completed = getNovenaCompletedDays(currentNovena.id);
+            const idx = completed.indexOf(currentDayIndex);
+            const isCompletedNow = idx < 0;
+
+            if (idx >= 0) {
+                completed.splice(idx, 1);
+            } else {
+                completed.push(currentDayIndex);
+            }
+
+            localStorage.setItem(`thesaurus_progress_${currentNovena.id}`, JSON.stringify(completed));
+            
+            // Meta com data do último dia rezado
+            const meta = {
+                novenaId: currentNovena.id,
+                lastDay: currentDayIndex,
+                date: (new Date()).toISOString().slice(0, 10),
+                total: completed.length
+            };
+            localStorage.setItem(`thesaurus_meta_${currentNovena.id}`, JSON.stringify(meta));
+
+            renderModalDaysNav();
+            renderModalDay(currentDayIndex);
+            renderCards();
+
+            // Notifica janela pai (Home do Catecismo) para atualizar o card e alertas em tempo real
+            if (window.parent && window.parent !== window) {
+                try {
+                    window.parent.postMessage({
+                        type: 'NOVENA_DAY_TOGGLED',
+                        novenaId: currentNovena.id,
+                        novenaTitle: currentNovena.titulo,
+                        day: currentDayIndex,
+                        isCompleted: isCompletedNow,
+                        completedDays: completed
+                    }, '*');
+                } catch (e) {
+                    console.warn('Erro ao notificar parent:', e);
+                }
+            }
+        };
+
+        function getNovenaCompletedDays(novenaId) {
+            try {
+                return JSON.parse(localStorage.getItem(`thesaurus_progress_${novenaId}`) || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        window.shareCurrentPrayer = function() {
+            if (!currentNovena) return;
+            const text = `🌹 Rezei hoje o Dia ${currentDayIndex} da ${currentNovena.titulo} no CATECISMO:\n"${currentNovena.dias[currentDayIndex-1]?.tema}"\n\nAcompanhe as novenas católicas em: ${window.location.origin}/novenas.html#${currentNovena.id}`;
+            if (navigator.share) {
+                navigator.share({ title: currentNovena.titulo, text: text, url: window.location.href }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(text);
+                alert('Oração copiada para a área de transferência!');
+            }
+        };
+
+        window.handleCloseOrBack = function() {
+            try {
+                if (window.parent && window.parent.NovenasModal) {
+                    window.parent.NovenasModal.close();
+                    return;
+                }
+                if (window.parent && window.parent !== window) {
+                    window.parent.postMessage({ type: 'CLOSE_NOVENAS' }, '*');
+                    return;
+                }
+            } catch (e) {
+                console.warn('Fallback navigation:', e);
+            }
+            window.location.href = '/';
+        };
+
+        function checkUrlHash() {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                let targetId = hash;
+                let targetDay = null;
+                if (hash.includes('-day-')) {
+                    const parts = hash.split('-day-');
+                    targetId = parts[0];
+                    targetDay = parseInt(parts[1], 10);
+                }
+                const n = novenasList.find(item => item.id === targetId);
+                if (n) {
+                    const st = LiturgicalEngine.evaluateNovenaStatus(n, todayDate);
+                    openNovenaModal(n.id, targetDay || st.currentDay || 1);
+                }
+            }
+        }
+        window.addEventListener('hashchange', checkUrlHash);
+
+        // Search live listener (funciona no header e na barra de filtros da página)
+        const handleSearchInput = (e) => {
+            const val = e.target.value;
+            const other = e.target.id === 'novena-search' ? document.getElementById('novena-search-bar') : document.getElementById('novena-search');
+            if (other && other.value !== val) other.value = val;
+            renderCards();
+        };
+        document.getElementById('novena-search')?.addEventListener('input', handleSearchInput);
+        document.getElementById('novena-search-bar')?.addEventListener('input', handleSearchInput);
+
+        // Iniciar aplicação
+        loadNovenas();
+    </script>
+</body>
+</html>
