@@ -418,7 +418,7 @@
                             <span class="text-base shrink-0">🌹</span>
                             <span class="truncate">Novenas Católicas</span>
                         </div>
-                        <span id="sidebar-novenas-badge" class="shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
+                        <span id="sidebar-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
                     </button>
                     <button onclick="router.navigate('oracao')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="oracao" data-menu-key="oracao">
                         <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-1.8 2.2-3.5 5-3.5 8a3.5 3.5 0 007 0c0-3-1.7-5.8-3.5-8zM8 15c0 3.5 2 6 4 7 2-1 4-3.5 4-7"/></svg> <span>Oração &amp; Lectio</span>
@@ -664,18 +664,18 @@
                         <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-mariana bg-blue-50/70 border border-blue-100 hover:bg-blue-100 hover:border-blue-200 transition text-sm shadow-sm">📖 Bíblia Sagrada <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-blue-700">Essencial</span></button>
                         <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">☩ Santo do Dia</button>
                         <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <span class="flex items-center gap-3">
-                                <span>🌹</span>
-                                <span>Novenas Católicas</span>
-                            </span>
-                            <span class="text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="text-base shrink-0">🌹</span>
+                                <span class="truncate">Novenas Católicas</span>
+                            </div>
+                            <span id="mobile-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
                         </button>
                         <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🙏 Oração & Lectio</button>
                         <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <span class="flex items-center gap-3">
-                                <span>📖</span>
-                                <span>Diário Espiritual &amp; Reflexões</span>
-                            </span>
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="text-base shrink-0">📖</span>
+                                <span class="truncate">Diário Espiritual</span>
+                            </div>
                             <span id="mobile-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
                         </button>
                         <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
@@ -4466,7 +4466,14 @@
         };
 
         function toggleMobileMenu() {
-            document.getElementById('mobile-drawer').classList.toggle('hidden');
+            const drawer = document.getElementById('mobile-drawer');
+            if (drawer) {
+                drawer.classList.toggle('hidden');
+                if (!drawer.classList.contains('hidden')) {
+                    if (window.ReflectionsManager) ReflectionsManager.updateBadges();
+                    if (window.NovenasManager) NovenasManager.updateHomeCard();
+                }
+            }
         }
 
         /* ========================================================
@@ -4824,7 +4831,7 @@
 
                 const today = new Date();
                 const active = engine.getActiveNovenas(novenas, today);
-                const sidebarBadge = document.getElementById('sidebar-novenas-badge');
+                const novenaBadges = document.querySelectorAll('#sidebar-novenas-badge, #mobile-novenas-badge, .menu-novenas-badge');
 
                 if (active.length > 0) {
                     const primary = active.find(n => n.id === 'santa-teresinha') || active[0];
@@ -4966,11 +4973,13 @@
                         }
                         cta.onclick = () => NovenasModal.open(full.id, currentDay);
                     }
-                    if (sidebarBadge) {
-                        sidebarBadge.textContent = isTodayPrayed ? `Dia ${currentDay} ✓` : "Ativa";
-                        sidebarBadge.className = isTodayPrayed
-                            ? "shrink-0 text-[9px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-700"
-                            : "shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/80 px-1.5 py-0.5 rounded border border-rose-300 dark:border-rose-700 animate-pulse";
+                    if (novenaBadges && novenaBadges.length) {
+                        novenaBadges.forEach(b => {
+                            b.textContent = isTodayPrayed ? `Dia ${currentDay} ✓` : "Ativa";
+                            b.className = isTodayPrayed
+                                ? "menu-novenas-badge shrink-0 text-[9px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-700"
+                                : "menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/80 px-1.5 py-0.5 rounded border border-rose-300 dark:border-rose-700 animate-pulse";
+                        });
                     }
                 } else {
                     if (bannerContainer) bannerContainer.innerHTML = '';
@@ -5021,8 +5030,11 @@
                             cta.onclick = () => NovenasModal.open(full.id);
                         }
                     }
-                    if (sidebarBadge) {
-                        sidebarBadge.textContent = "9 Dias";
+                    if (novenaBadges && novenaBadges.length) {
+                        novenaBadges.forEach(b => {
+                            b.textContent = "9 Dias";
+                            b.className = "menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800";
+                        });
                     }
                 }
             },
@@ -12472,6 +12484,9 @@ https://catecismo.creativeam.com.br
             MenuConfigManager.init();
             if (window.ReflectionsManager) {
                 ReflectionsManager.updateBadges();
+            }
+            if (window.NovenasManager) {
+                NovenasManager.updateHomeCard();
             }
             router.navigate('home');
             ContactManager.init();
