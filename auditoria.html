@@ -135,6 +135,9 @@
                 </div>
 
                 <div class="flex items-center gap-2">
+                    <button onclick="openAddSaintModal()" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-500/40 shadow-md shadow-amber-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Cadastrar um novo santo ou beato em uma data específica">
+                        <span>➕</span> <span>Novo Santo</span>
+                    </button>
                     <button id="btnPublishVercel" onclick="publishToVercel()" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg border border-emerald-500/40 shadow-md shadow-emerald-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Salva e envia todas as alterações locais para a Vercel de uma vez">
                         <span id="publishIcon">🚀</span> <span id="publishText">Publicar no Vercel</span>
                     </button>
@@ -330,6 +333,71 @@
                     Fechar
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal: Adicionar Novo Santo -->
+    <div id="addSaintModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🕊️</span>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Adicionar Novo Santo / Beato</h3>
+                        <p class="text-[11px] text-slate-400">Inclua novos santos ou memórias ao catálogo oficial de 2026</p>
+                    </div>
+                </div>
+                <button onclick="closeAddSaintModal()" class="text-slate-400 hover:text-white text-lg px-2">✕</button>
+            </div>
+
+            <form id="addSaintForm" onsubmit="submitNewSaint(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Data da Celebração / Memória:</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <select id="newSaintMonth" onchange="updateNewSaintDays()" required class="bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                            <option value="01">01 - Janeiro</option>
+                            <option value="02">02 - Fevereiro</option>
+                            <option value="03">03 - Março</option>
+                            <option value="04">04 - Abril</option>
+                            <option value="05">05 - Maio</option>
+                            <option value="06">06 - Junho</option>
+                            <option value="07">07 - Julho</option>
+                            <option value="08">08 - Agosto</option>
+                            <option value="09">09 - Setembro</option>
+                            <option value="10">10 - Outubro</option>
+                            <option value="11">11 - Novembro</option>
+                            <option value="12">12 - Dezembro</option>
+                        </select>
+                        <select id="newSaintDay" required class="bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                            <!-- Preenchido via script -->
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome Completo do Santo ou Beato: *</label>
+                    <input id="newSaintName" type="text" required placeholder="Ex: Beato Carlo Acutis, jovem apóstolo da Eucaristia" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none placeholder-slate-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Biografia / Resumo Histórico:</label>
+                    <textarea id="newSaintBio" rows="3" placeholder="Ex: (1991 - 2006) Jovem leigo italiano que usou a internet para documentar milagres eucarísticos e evangelizar..." class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none placeholder-slate-500 custom-scrollbar"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Fonte / Referência:</label>
+                    <input id="newSaintSource" type="text" placeholder="Ex: Vatican News / Martirológio Romano / CNBB" value="Vatican News" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none placeholder-slate-500">
+                </div>
+
+                <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-800">
+                    <button type="button" onclick="closeAddSaintModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-4 py-2 rounded-xl transition">
+                        Cancelar
+                    </button>
+                    <button type="submit" id="btnSubmitNewSaint" class="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                        <span>💾</span> Salvar Santo
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -966,6 +1034,106 @@ DIRETRIZES DE EXECUÇÃO:
 
         function closePromptModal() {
             document.getElementById('promptModal').classList.add('hidden');
+        }
+
+        // ==========================================
+        // CADASTRO DE NOVO SANTO
+        // ==========================================
+        function populateNewSaintDayOptions() {
+            const daySel = document.getElementById('newSaintDay');
+            if (!daySel) return;
+            daySel.innerHTML = '';
+            for (let i = 1; i <= 31; i++) {
+                const val = String(i).padStart(2, '0');
+                const opt = document.createElement('option');
+                opt.value = val;
+                opt.innerText = `Dia ${val}`;
+                daySel.appendChild(opt);
+            }
+        }
+
+        function updateNewSaintDays() {
+            const m = parseInt(document.getElementById('newSaintMonth').value, 10);
+            const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m] || 31;
+            const daySel = document.getElementById('newSaintDay');
+            const currentVal = daySel.value;
+            daySel.innerHTML = '';
+            for (let i = 1; i <= daysInMonth; i++) {
+                const val = String(i).padStart(2, '0');
+                const opt = document.createElement('option');
+                opt.value = val;
+                opt.innerText = `Dia ${val}`;
+                daySel.appendChild(opt);
+            }
+            if (parseInt(currentVal, 10) <= daysInMonth) {
+                daySel.value = currentVal;
+            }
+        }
+
+        function openAddSaintModal() {
+            populateNewSaintDayOptions();
+            const mSel = document.getElementById('mSel');
+            const dSel = document.getElementById('dSel');
+            if (mSel && mSel.value !== 'all') {
+                document.getElementById('newSaintMonth').value = mSel.value;
+                updateNewSaintDays();
+            }
+            if (dSel && dSel.value !== 'all') {
+                document.getElementById('newSaintDay').value = dSel.value;
+            }
+            document.getElementById('newSaintName').value = '';
+            document.getElementById('newSaintBio').value = '';
+            document.getElementById('addSaintModal').classList.remove('hidden');
+        }
+
+        function closeAddSaintModal() {
+            document.getElementById('addSaintModal').classList.add('hidden');
+        }
+
+        async function submitNewSaint(e) {
+            e.preventDefault();
+            const m = document.getElementById('newSaintMonth').value;
+            const d = document.getElementById('newSaintDay').value;
+            const date = `2026-${m}-${d}`;
+            const name = document.getElementById('newSaintName').value.trim();
+            const sourceText = document.getElementById('newSaintBio').value.trim();
+            const source = document.getElementById('newSaintSource').value.trim() || 'Curadoria Manual';
+
+            if (!name) {
+                showToast('Informe o nome do santo.', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('btnSubmitNewSaint');
+            btn.disabled = true;
+            btn.innerText = 'Salvando...';
+
+            try {
+                const res = await fetch('/api/admin/add-saint', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ date, name, sourceText, source })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    showToast(`✅ Santo "${name}" cadastrado no dia ${d}/${m}!`, 'success');
+                    closeAddSaintModal();
+                    
+                    // Ajustar filtro para exibir o dia adicionado
+                    document.getElementById('mSel').value = m;
+                    document.getElementById('dSel').value = d;
+                    currentDayShortcut = 'custom';
+                    
+                    await fetchSaints();
+                } else {
+                    showToast('Erro: ' + (data.error || 'Falha ao cadastrar santo'), 'error');
+                }
+            } catch (err) {
+                showToast('Erro na requisição: ' + err.message, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>💾</span> Salvar Santo';
+            }
         }
 
         function copyToClipboard(elementId, btn) {

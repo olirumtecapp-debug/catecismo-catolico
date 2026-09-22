@@ -369,6 +369,80 @@ const server = http.createServer(async (req, res) => {
     }
 
     // ==========================================
+    // API: ADICIONAR NOVO SANTO AO CATÁLOGO
+    // ==========================================
+    if (pathname === '/api/admin/add-saint' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', () => {
+            try {
+                const { date, name, sourceText, source } = JSON.parse(body);
+                if (!date || !name) {
+                    res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+                    res.end(JSON.stringify({ success: false, error: 'Data e Nome do santo são obrigatórios.' }));
+                    return;
+                }
+                const parts = date.split('-');
+                if (parts.length !== 3) {
+                    res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+                    res.end(JSON.stringify({ success: false, error: 'Formato de data inválido. Use AAAA-MM-DD.' }));
+                    return;
+                }
+                const [year, month, day] = parts.map(Number);
+                const dirPath = path.join(DATA_DIR, 'santos', String(year));
+                if (!fs.existsSync(dirPath)) {
+                    fs.mkdirSync(dirPath, { recursive: true });
+                }
+                const filePath = path.join(dirPath, `${date}.json`);
+                let dayData = {
+                    date,
+                    year,
+                    month,
+                    day,
+                    source: source || 'Vatican News',
+                    calendarUrl: `https://www.vaticannews.va/pt/santo-do-dia/${String(month).padStart(2,'0')}/${String(day).padStart(2,'0')}.html`,
+                    liturgicalCelebration: null,
+                    saints: []
+                };
+
+                if (fs.existsSync(filePath)) {
+                    dayData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                    if (!Array.isArray(dayData.saints)) dayData.saints = [];
+                }
+
+                // Verificar se já existe santo com o mesmo nome nessa data
+                const exists = dayData.saints.some(s => s.name && s.name.trim().toLowerCase() === name.trim().toLowerCase());
+                if (exists) {
+                    res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+                    res.end(JSON.stringify({ success: false, error: 'Este santo já está cadastrado nesta data!' }));
+                    return;
+                }
+
+                const newSaint = {
+                    date,
+                    name: name.trim(),
+                    normalizedName: name.trim().toLowerCase(),
+                    imageUrl: '',
+                    profileUrl: null,
+                    source: source || 'Curadoria Manual',
+                    sourceUrl: null,
+                    sourceText: sourceText ? sourceText.trim() : null
+                };
+
+                dayData.saints.push(newSaint);
+                fs.writeFileSync(filePath, JSON.stringify(dayData, null, 2), 'utf8');
+
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: true, saint: newSaint, message: `Santo "${name}" adicionado com sucesso ao dia ${date}!` }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
     // API: PUBLICAR NO VERCEL (GIT COMMIT & PUSH)
     // ==========================================
     if (pathname === '/api/admin/publish-to-vercel' && req.method === 'POST') {
