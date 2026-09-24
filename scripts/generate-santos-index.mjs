@@ -8,7 +8,23 @@ const ROOT = path.resolve(__dirname, '..');
 const saintsDir = path.join(ROOT, 'assets', 'img', 'santos');
 const targetFile = path.join(ROOT, 'assets', 'data', 'santos_images_index.js');
 
-const files = fs.readdirSync(saintsDir).filter(f => /\.(png|jpe?g|webp)$/i.test(f));
+// Remove duplicatas mantendo SEMPRE a imagem em alta resolução .png quando existir
+const rawFiles = fs.readdirSync(saintsDir).filter(f => /\.(png|jpe?g|webp)$/i.test(f));
+const byBase = new Map();
+for (const f of rawFiles) {
+    const ext = path.extname(f).toLowerCase();
+    const base = f.slice(0, -ext.length);
+    if (!byBase.has(base)) {
+        byBase.set(base, f);
+    } else {
+        const existing = byBase.get(base);
+        const existingExt = path.extname(existing).toLowerCase();
+        if (ext === '.png' && (existingExt === '.jpg' || existingExt === '.jpeg')) {
+            byBase.set(base, f);
+        }
+    }
+}
+const files = Array.from(byBase.values()).sort();
 
 const jsContent = `/* =========================================================================
    ÍNDICE CANÔNICO DE IMAGENS LOCAIS DE SANTOS (${files.length} ARQUIVOS)
@@ -33,6 +49,8 @@ const jsContent = `/* ==========================================================
             if (saintName) {
                 const sNorm = norm(saintName).replace(/^sao|^santa|^santo|^beato|^beata|^ss/, '');
                 const dateMatches = index.filter(it => it.file.startsWith(mmdd));
+                // Prioriza sempre .png sobre .jpg
+                dateMatches.sort((a, b) => (b.file.endsWith('.png') ? 1 : 0) - (a.file.endsWith('.png') ? 1 : 0));
                 for (const dm of dateMatches) {
                     if (sNorm && dm.norm.includes(sNorm)) {
                         return 'assets/img/santos/' + dm.file;

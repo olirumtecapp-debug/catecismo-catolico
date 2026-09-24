@@ -5609,7 +5609,7 @@
                                 <p class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold truncate">${esc(ctx.lit.celebration || 'Celebração do dia')}</p>
                                 <div class="space-y-2">
                                     ${saintNames.length ? `<div class="space-y-2 max-h-40 overflow-y-auto custom-scrollbar pr-1">${saintNames.map(s => {
-                                        const sImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(s.name, date)) || s.imageUrl || s.localSaintRecord?.imageUrl || '';
+                                        const sImg = s.imageUrl || s.localSaintRecord?.imageUrl || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(s.name, date)) || '';
                                         return `<div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-700/80 flex items-center gap-3">
                                             ${sImg ? `<img src="${esc(sImg)}" alt="${esc(s.name)}" onerror="handleSaintImageError(this, '${esc(s.name)}', '${date}')" class="w-11 h-11 rounded-lg object-cover border border-amber-200/80 shadow-2xs shrink-0" loading="lazy">` : `<div class="w-11 h-11 rounded-lg mariana-gradient flex items-center justify-center text-dourado text-sm font-serif font-bold border border-dourado/40 shrink-0">☩</div>`}
                                             <div class="min-w-0 flex-1">
