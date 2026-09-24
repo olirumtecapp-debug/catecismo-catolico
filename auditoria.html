@@ -135,6 +135,9 @@
                 </div>
 
                 <div class="flex items-center gap-2">
+                    <button id="btnSyncRegen" onclick="syncAndRegenerate()" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 text-xs font-extrabold px-3 py-1.5 rounded-lg border border-amber-400/60 shadow-md shadow-amber-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Regenera o índice de imagens dos santos e sincroniza tudo com 1 clique">
+                        <span id="syncIcon">⚡</span> <span id="syncText">Sincronizar Tudo</span>
+                    </button>
                     <button onclick="openVaticanSyncModal()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-500/40 shadow-md shadow-blue-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Verificar atualizações no Vatican News com backup de segurança">
                         <span>🌐</span> <span>Verificar Vaticano</span>
                     </button>
@@ -641,6 +644,42 @@
             }
 
             if (shouldApply) applyFilters();
+        }
+
+        async function syncAndRegenerate() {
+            const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            if (!isLocalHost) {
+                showToast('⚠️ A sincronização e regeneração é executada no ambiente local (http://localhost:3000/auditoria.html).', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('btnSyncRegen');
+            const icon = document.getElementById('syncIcon');
+            const text = document.getElementById('syncText');
+
+            btn.disabled = true;
+            btn.classList.add('opacity-70', 'cursor-wait');
+            icon.innerText = '⏳';
+            text.innerText = 'Sincronizando...';
+            showToast('Regenerando índice de imagens e auditando 2026...', 'info');
+
+            try {
+                const res = await fetch('/api/admin/sync-and-regenerate', { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    showToast('✅ ' + data.message, 'success');
+                    await fetchSaints();
+                } else {
+                    showToast('Erro ao sincronizar: ' + (data.error || 'Falha no servidor'), 'error');
+                }
+            } catch (err) {
+                showToast('Erro na requisição: ' + err.message, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.classList.remove('opacity-70', 'cursor-wait');
+                icon.innerText = '⚡';
+                text.innerText = 'Sincronizar Tudo';
+            }
         }
 
         async function publishToVercel() {

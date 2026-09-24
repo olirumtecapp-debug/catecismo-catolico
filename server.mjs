@@ -137,6 +137,30 @@ function backupSaintDayFile(filePath) {
     return null;
 }
 
+function getGitBin() {
+    const candidates = [
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop\\app-3.6.4\\resources\\app\\git\\cmd\\git.exe',
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop\\app-3.6.3\\resources\\app\\git\\cmd\\git.exe',
+        'C:\\Program Files\\Git\\cmd\\git.exe',
+        'C:\\Program Files (x86)\\Git\\cmd\\git.exe',
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\Programs\\Git\\cmd\\git.exe'
+    ];
+    for (const cand of candidates) {
+        if (fs.existsSync(cand)) return cand;
+    }
+    const ghBase = 'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop';
+    if (fs.existsSync(ghBase)) {
+        try {
+            const sub = fs.readdirSync(ghBase).filter(d => d.startsWith('app-')).sort().reverse();
+            for (const s of sub) {
+                const p = path.join(ghBase, s, 'resources', 'app', 'git', 'cmd', 'git.exe');
+                if (fs.existsSync(p)) return p;
+            }
+        } catch(e) {}
+    }
+    return 'git';
+}
+
 function parseVaticanPage(html, date) {
     const $ = cheerio.load(html);
     const saints = [];
@@ -381,7 +405,7 @@ const server = http.createServer(async (req, res) => {
     if (pathname === '/api/admin/upload-saint-image' && req.method === 'POST') {
         let body = '';
         req.on('data', chunk => body += chunk);
-        req.on('end', () => {
+        req.on('end', async () => {
             try {
                 const { date, saintName, base64Data, filename } = JSON.parse(body);
                 const buffer = Buffer.from(base64Data.split(',')[1], 'base64');
@@ -397,6 +421,13 @@ const server = http.createServer(async (req, res) => {
                     return s;
                 });
                 fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+
+                // Regenerar índice de imagens automaticamente
+                await new Promise((resolve) => {
+                    const genProc = spawn(process.execPath, [path.join(__dirname, 'scripts', 'generate-santos-index.mjs')], { cwd: __dirname });
+                    genProc.on('close', () => resolve());
+                    genProc.on('error', () => resolve());
+                });
                 
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ success: true }));
@@ -405,6 +436,56 @@ const server = http.createServer(async (req, res) => {
                 res.end(JSON.stringify({ success: false, error: err.message }));
             }
         });
+        return;
+    }
+
+    // ==========================================
+    // API: SINCRONIZAR E REGENERAR ÍNDICES DOS SANTOS (1 CLIQUE)
+    // ==========================================
+    if (pathname === '/api/admin/sync-and-regenerate' && req.method === 'POST') {
+        try {
+            await new Promise((resolve, reject) => {
+                const genProc = spawn(process.execPath, [path.join(__dirname, 'scripts', 'generate-santos-index.mjs')], { cwd: __dirname });
+                let errBuf = '';
+                genProc.stderr.on('data', d => errBuf += d);
+                genProc.on('close', code => {
+                    if (code === 0) resolve();
+                    else reject(new Error(`Falha ao gerar índice: código ${code}. ${errBuf}`));
+                });
+                genProc.on('error', reject);
+            });
+
+            // Contabilizar status atual em 2026
+            const dir2026 = path.join(DATA_DIR, 'santos', '2026');
+            let totalSaints = 0;
+            let missingImages = 0;
+            if (fs.existsSync(dir2026)) {
+                const files = fs.readdirSync(dir2026).filter(f => f.endsWith('.json'));
+                for (const file of files) {
+                    try {
+                        const d = JSON.parse(fs.readFileSync(path.join(dir2026, file), 'utf8'));
+                        for (const s of (d.saints || [])) {
+                            totalSaints++;
+                            if (!s.imageUrl || s.imageUrl.trim() === '' || s.imageUrl.includes('placeholder')) {
+                                missingImages++;
+                            }
+                        }
+                    } catch(e) {}
+                }
+            }
+
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({
+                success: true,
+                totalSaints,
+                withImages: totalSaints - missingImages,
+                missingImages,
+                message: `Índice de imagens sincronizado com êxito! (${totalSaints - missingImages}/${totalSaints} com imagem)`
+            }));
+        } catch (err) {
+            res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: false, error: err.message }));
+        }
         return;
     }
 
@@ -779,9 +860,7 @@ const server = http.createServer(async (req, res) => {
     // API: PUBLICAR NO VERCEL (GIT COMMIT & PUSH)
     // ==========================================
     if (pathname === '/api/admin/publish-to-vercel' && req.method === 'POST') {
-        const GIT_BIN = fs.existsSync('C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe')
-            ? 'C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe'
-            : 'git';
+        const GIT_BIN = getGitBin();
 
         const runGit = (args) => new Promise((resolve, reject) => {
             const child = spawn(GIT_BIN, args, { cwd: __dirname });
@@ -797,6 +876,13 @@ const server = http.createServer(async (req, res) => {
 
         (async () => {
             try {
+                // 1. Sempre regenerar o índice de imagens antes de publicar
+                await new Promise((resolve) => {
+                    const genProc = spawn(process.execPath, [path.join(__dirname, 'scripts', 'generate-santos-index.mjs')], { cwd: __dirname });
+                    genProc.on('close', () => resolve());
+                    genProc.on('error', () => resolve());
+                });
+
                 await runGit(['add', '-A']);
                 let committed = false;
                 try {
@@ -828,9 +914,7 @@ const server = http.createServer(async (req, res) => {
     // API: PUXAR DA NUVEM (GIT PULL / BACKUP)
     // ==========================================
     if (pathname === '/api/admin/pull-from-vercel' && req.method === 'POST') {
-        const GIT_BIN = fs.existsSync('C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe')
-            ? 'C:\\Program Files\\Verdent\\resources\\app.asar.unpacked\\node_modules\\dugite\\git\\cmd\\git.exe'
-            : 'git';
+        const GIT_BIN = getGitBin();
 
         const runGit = (args) => new Promise((resolve, reject) => {
             const child = spawn(GIT_BIN, args, { cwd: __dirname });
