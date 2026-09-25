@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Romanos 11,1-2.11-12.25-29",
+      "intro": "Leitura da carta de São Paulo aos Romanos:",
       "text": "Irmãos: 1Eu pergunto: Será que Deus rejeitou o seu povo? - De modo algum. Pois também eu sou israelita, da descendência de Abraão, da tribo de Benjamim... 2aDeus não rejeitou o seu povo, que ele desde sempre considerou. 11Eu pergunto: Acaso eles tropeçaram para cair? - Não, de modo algum. De fato, o passo em falso que eles deram serviu para a salvação dos pagãos, e a salvação dos pagãos, por sua vez, deve servir para despertar ciúme neles. 12Ora, se o passo em falso deles foi riqueza para o mundo e o pequeno número de crentes dentre eles foi riqueza para os pagãos, que riqueza não será a adesão de todos eles ao Evangelho! 25Irmãos, para não serdes presunçosos por causa da vossa sabedoria, é importante que conheçais o mistério, a saber: o endurecimento de uma parte de Israel é para durar até que a totalidade dos pagãos tenha entrado na salvação. 26E então todo o Israel será salvo, como está escrito: 'De Sião virá o libertador; ele tirará as impiedades do meio de Jacó. 27Essa será a realização da minha aliança com eles, quando eu tirar os seus pecados'. 28De fato, com relação ao Evangelho, eles são inimigos, para benefício vosso, mas com relação à escolha divina, eles são amados, por causa dos patriarcas. 29Pois os dons e a vocação de Deus são irrevogáveis."
     },
     "psalm": {
       "reference": "Salmo 93 (94)",
+      "refrain": "O Senhor não rejeita o seu povo!",
       "text": "- É feliz, ó Senhor, quem formais e educais nos caminhos da Lei, para dar-lhe um alívio na angústia\n\n- O Senhor não rejeita o seu povo e não pode esquecer sua herança: voltarão a juízo as sentenças; quem é reto andará na justiça.\n\n- Se o Senhor não me desse uma ajuda, no silêncio da morte estaria! Quando eu penso: 'Estou quase caindo!' Vosso amor me sustenta, Senhor!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 14, 1.7-11",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Tomai meu jugo sobre vós e aprendei de mim, que sou de coração humilde e manso! (Mt 11, 29)"
+      },
       "text": "Aconteceu que, num dia de sábado, Jesus foi comer na casa de um dos chefes dos fariseus. E eles o observavam. 7Jesus notou como os convidados escolhiam os primeiros lugares. Então contou-lhes uma parábola: 8'Quando tu fores convidado para uma festa de casamento, não ocupes o primeiro lugar. Pode ser que tenha sido convidado alguém mais importante do que tu, 9e o dono da casa, que convidou os dois, venha te dizer: 'Dá o lugar a ele'. Então tu ficarás envergonhado e irás ocupar o último lugar. 10Mas, quando tu fores convidado, vai sentar-te no último lugar. Assim, quando chegar quem te convidou, te dirá: 'Amigo, vem mais para cima'. E isto vai ser uma honra para ti diante de todos os convidados. 11Porque quem se eleva, será humilhado e quem se humilha, será elevado.'"
     }
   },

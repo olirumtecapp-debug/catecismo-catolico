@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Sabedoria 13,1-9",
+      "intro": "Leitura do Livro da Sabedoria:",
       "text": "1São insensatos por natureza todos os homens que ignoram a Deus, os que, partindo dos bens visíveis, não foram capazes de conhecer aquele que é; nem tampouco, pela consideração das obras, chegaram a reconhecer o Artífice. 2Tomaram por deuses, por governadores do mundo, o fogo e o vento, o ar fugidio, o giro das estrelas, a água impetuosa, os luzeiros do dia. 3Se, encantados por sua beleza, tomaram estas criaturas por deuses, reconheçam quanto o seu Senhor está acima delas: pois foi o autor da beleza quem as criou. 4Se ficaram maravilhados com o seu poder e a sua atividade, concluam daí quanto mais poderoso é aquele que as formou: 5de fato, partindo da grandeza e da beleza das criaturas, pode-se chegar a ver, por analogia, aquele que as criou. 6Contudo, estes merecem menor repreensão: talvez se tenham extraviado procurando a Deus e querendo encontrá-lo. 7Com efeito, vivendo entre as obras dele, põem-se a procurá-lo, mas deixam-se seduzir pela aparência, pois é belo aquilo que se vê! 8Mesmo assim, nem a estes se pode perdoar: 9porque, se chegaram a tão vasta ciência, a ponto de investigarem o universo, como é que não encontraram mais facilmente o seu Senhor?"
     },
     "psalm": {
       "reference": "Salmo 18 (19)",
+      "refrain": "Os céus proclamam a glória do Senhor!",
       "text": "- Os céus proclamam a glória do Senhor, e o firmamento, a obra de suas mãos; 3o dia ao dia transmite esta mensagem, a noite à noite publica esta notícia.\n\n- Não são discursos nem frases ou palavras, nem são vozes que possam ser ouvidas; seu som ressoa e se espalha em toda a terra, chega aos confins do universo a sua voz."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 26-37",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Levantai vossa cabeça e olhai, pois a vossa redenção se aproxima! (Lc 21, 28)"
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 26Como aconteceu nos dias de Noé, assim também acontecerá nos dias do Filho do Homem. 27Eles comiam, bebiam, casavam-se e se davam em casamento, até ao dia em que Noé entrou na arca. Então chegou o dilúvio e fez morrer todos eles. 28Acontecerá como nos dias de Ló: comiam e bebiam, compravam e vendiam, plantavam e construíam. 29Mas no dia em que Ló saiu de Sodoma, Deus fez chover fogo e enxofre do céu e fez morrer todos. 30O mesmo acontecerá no dia em que o Filho do Homem for revelado. 31Nesse dia, quem estiver no terraço, não desça para apanhar os bens que estão em sua casa. E quem estiver nos campos não volte para trás. 32Lembrai-vos da mulher de Ló. 33Quem procura ganhar a sua vida, vai perdê-la; e quem a perde, vai conservá-la. 34Eu vos digo: nessa noite, dois estarão numa cama; um será tomado e o outro será deixado. 35Duas mulheres estarão moendo juntas; uma será tomada e a outra será deixada. 36Dois homens estarão no campo; um será levado e o outro será deixado.' 37Os discípulos perguntaram: 'Senhor, onde acontecerá isso?' Jesus respondeu: 'Onde estiver o cadáver, aí se reunirão os abutres.'"
     }
   },

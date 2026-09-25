@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 6,5-17",
+      "intro": "Leitura do Livro do Eclesiástico:",
       "text": "5Uma palavra amena multiplica os amigos e acalma os inimigos; uma língua afável multiplica as saudações. 6Sejam numerosos os que te saúdam, mas teus conselheiros, um entre mil. 7Se queres adquirir um amigo, adquire-o na provação; e não te apresses em confiar nele. 8Porque há amigo de ocasião, que não persevera no dia da aflição. 9Há amigo que passa para a inimizade, e que revela as desavenças para te envergonhar. 10Há amigo que é companheiro de mesa e que não persevera no dia da necessidade. 11Quando fores bem sucedido, ele será como teu igual e, sem cerimônia, dará ordens a teus criados. 12Mas, se fores humilhado, ele estará contra ti e se esconderá da tua presença. 13Afasta-te dos teus inimigos e toma cuidado com os amigos. 14Um amigo fiel é poderosa proteção: quem o encontrou, encontrou um tesouro. 15Ao amigo fiel não há nada que se compare, é um bem inestimável. 16Um amigo fiel é um bálsamo de vida; os que temem o Senhor vão encontrá-lo. 17Quem teme o Senhor, conduz bem a sua amizade: como ele é, tal será o seu amigo."
     },
     "psalm": {
       "reference": "Salmo 118 (119)",
+      "refrain": "Guiai-me pela estrada do vosso ensinamento!",
       "text": "- Ó Senhor, vós sois bendito para sempre; os vossos mandamentos ensinai-me!\n\n- Minha alegria é fazer vossa vontade; eu não posso esquecer vossa palavra.\n\n- Abri meus olhos, e então contemplarei as maravilhas que encerra a vossa lei!\n\n- Fazei-me conhecer vossos caminhos, e então meditarei vossos prodígios!\n\n- Dai-me o saber, e cumprirei a vossa lei, e de todo o coração a guardarei.\n\n- Guiai meus passos no caminho que traçastes, pois só nele encontrarei felicidade."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 10, 1-12",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Vossa Palavra é a verdade; santificai-nos na verdade! (Jo 17,17)."
+      },
       "text": "Naquele tempo: 1Jesus foi para o território da Judéia, do outro lado do rio Jordão. As multidões se reuniram de novo, em torno de Jesus. E ele, como de costume, as ensinava. 2Alguns fariseus se aproximaram de Jesus. Para pô-lo à prova, perguntaram se era permitido ao homem divorciar-se de sua mulher. 3Jesus perguntou: 'O que Moisés vos ordenou?' 4Os fariseus responderam: 'Moisés permitiu escrever uma certidão de divórcio e despedi-la'. 5Jesus então disse: 'Foi por causa da dureza do vosso coração que Moisés vos escreveu este mandamento. 6No entanto, desde o começo da criação, Deus os fez homem e mulher. 7Por isso, o homem deixará seu pai e sua mãe e os dois serão uma só carne. 8Assim, já não são dois, mas uma só carne. 9Portanto, o que Deus uniu, o homem não separe!' 10Em casa, os discípulos fizeram, novamente, perguntas sobre o mesmo assunto. 11Jesus respondeu: 'Quem se divorciar de sua mulher e casar com outra, cometerá adultério contra a primeira. 12E se a mulher se divorciar de seu marido e casar com outro, cometerá adultério.'"
     }
   },

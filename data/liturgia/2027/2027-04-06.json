@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 4,32-37",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "32A multidão dos fiéis era um só coração e uma só alma. Ninguém considerava como próprias as coisas que possuía, mas tudo entre eles era posto em comum. 33Com grandes sinais de poder, os apóstolos davam testemunho da ressurreição do Senhor Jesus. E os fiéis eram estimados por todos. 34Entre eles ninguém passava necessidade, pois aqueles que possuíam terras ou casas vendiam-nas, levavam o dinheiro 35e o colocavam aos pés dos apóstolos. Depois, era distribuído conforme a necessidade de cada um. 36José, chamado pelos apóstolos de Barnabé, que significa filho da consolação, levita e natural de Chipre, 37possuía um campo. Vendeu e foi depositar o dinheiro aos pés dos apóstolos."
     },
     "psalm": {
       "reference": "Salmo 92 (93)",
+      "refrain": "Reina o Senhor, revestiu-se de esplendor.",
       "text": "- Deus é rei e se vestiu de majestade, revestiu-se de poder e de esplendor!\n\n- Vós firmastes o universo inabalável, vós firmastes vosso trono desde a origem, desde sempre, ó Senhor, vós existis!\n\n- Verdadeiros são os vossos testemunhos, refulge a santidade em vossa casa pelos séculos dos séculos, Senhor!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 3, 7-15",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "O Filho do homem há de ser levantado, para que quem nele crer possua a vida eterna (Jo 3,14s)."
+      },
       "text": "Naquele tempo, disse Jesus a Nicodemos: 7\"Vós deveis nascer do alto. 8O vento sopra onde quer, e tu podes ouvir o seu ruído, mas não sabes de onde vem nem para onde vai. Assim acontece a todo aquele que nasceu do Espírito\". 9Nicodemos perguntou: \"Como é que isso pode acontecer?\" 10Respondeu-lhe Jesus: \"Tu és mestre em Israel, mas não sabes estas coisas? 11Em verdade, em verdade te digo, nós falamos daquilo que sabemos e damos testemunho daquilo que temos visto, mas vós não aceitais o nosso testemunho. 12Se não acreditais quando vos falo das coisas da terra, como acreditareis se vos falar das coisas do céu? 13E ninguém subiu ao céu, a não ser aquele que desceu do céu, o Filho do homem. 14Do mesmo modo como Moisés levantou a serpente no deserto, assim é necessário que o Filho do homem seja levantado, 15para que todos os que nele crerem tenham a vida eterna\"."
     }
   },

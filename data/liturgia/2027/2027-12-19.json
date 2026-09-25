@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Miquéias 5,1-4",
+      "intro": "Leitura da Profecia de Miquéias:",
       "text": "Assim diz o Senhor: 1Tu, Belém de Éfrata, pequenina entre os mil povoados de Judá, de ti há de sair aquele que dominará em Israel; sua origem vem de tempos remotos, desde os dias da eternidade. 2Deus deixará seu povo ao abandono, até ao tempo em que uma mãe der à luz; e o resto de seus irmãos se voltará para os filhos de Israel. 3Ele não recuará, apascentará com a força do Senhor e com a majestade do nome do Senhor seu Deus; os homens viverão em paz, pois ele agora estenderá o poder até aos confins da terra, 4e ele mesmo será a Paz."
     },
     "psalm": {
       "reference": "Salmo 79 (80)",
+      "refrain": "Iluminai a vossa face sobre nós, convertei-nos para que sejamos salvos!",
       "text": "- Ó Pastor de Israel, prestai ouvidos. Vós que sobre os querubins vos assentais, aparecei cheio de glória e esplendor! Despertai vosso poder, ó nosso Deus e vinde logo nos trazer a salvação!\n\n- Voltai-vos para nós, Deus do universo! Olhai dos altos céus e observai. Visitai a vossa vinha e protegei-a! Foi a vossa mão direita que a plantou; protegei-a, e ao rebento que firmastes!\n\n- Pousai a mão por sobre o vosso Protegido, o filho do homem que escolhestes para vós! E nunca mais vos deixaremos, Senhor Deus! Dai-nos vida, e louvaremos vosso nome!"
     },
     "secondReading": {
       "reference": "Hebreus 10,5-10",
+      "intro": "Leitura da Carta aos Hebreus:",
       "text": "Irmãos: 5Ao entrar no mundo, Cristo afirma: 'Tu não quiseste vítima nem oferenda, mas formaste-me um corpo. 6Não foram do teu agrado holocaustos nem sacrifícios pelo pecado. 7Por isso eu disse: Eis que eu venho. No livro está escrito a meu respeito: Eu vim, ó Deus, para fazer a tua vontade.' 8Depois de dizer: 'Tu não quiseste nem te agradaram vítimas, oferendas, holocaustos, sacrifícios pelo pecado' - coisas oferecidas segundo a Lei - 9ele acrescenta: 'Eu vim para fazer a tua vontade'. Com isso, suprime o primeiro sacrifício, para estabelecer o segundo. 10É graças a esta vontade que somos santificados pela oferenda do corpo de Jesus Cristo, realizada uma vez por todas."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 39-45",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eis a serva do Senhor; cumpra-se em mim a tua palavra! (Lc 1,38)."
+      },
       "text": "39Naqueles dias, Maria partiu para a região montanhosa, dirigindo-se, apressadamente, a uma cidade da Judéia. 40Entrou na casa de Zacarias e cumprimentou Isabel. 41Quando Isabel ouviu a saudação de Maria, a criança pulou no seu ventre e Isabel ficou cheia do Espírito Santo. 42Com um grande grito, exclamou: 'Bendita és tu entre as mulheres e bendito é o fruto do teu ventre!' 43Como posso merecer que a mãe do meu Senhor me venha visitar? 44Logo que a tua saudação chegou aos meus ouvidos, a criança pulou de alegria no meu ventre. 45Bem-aventurada aquela que acreditou, porque será cumprido, o que o Senhor lhe prometeu.'"
     }
   },

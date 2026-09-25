@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Colossenses 3,12-17",
+      "intro": "Leitura da carta de São Paulo aos Colossenses",
       "text": "Irmãos: 12Vós sois amados por Deus, sois os seus santos eleitos. Por isso, revesti-vos de sincera misericórdia, bondade, humildade, mansidão e paciência, 13suportando-vos uns aos outros e perdoando-vos mutuamente, se um tiver queixa contra o outro. Como o Senhor vos perdoou, assim perdoai vós também. 14Mas, sobretudo, amai-vos uns aos outros, pois o amor é o vínculo da perfeição. 15Que a paz de Cristo reine em vossos corações, à qual fostes chamados como membros de um só corpo. E sede agradecidos. 16Que a palavra de Cristo, com toda a sua riqueza, habite em vós. Ensinai e admoestai-vos uns aos outros com toda a sabedoria. Do fundo dos vossos corações, cantai a Deus salmos, hinos e cânticos espirituais, em ação de graças. 17Tudo o que fizerdes, em palavras ou obras, seja feito em nome do Senhor Jesus Cristo. Por meio dele dai graças a Deus, o Pai."
     },
     "psalm": {
       "reference": "Salmo 150",
+      "refrain": "Louve o Senhor tudo o que vive e que respira.",
       "text": "- Louvai o Senhor Deus no santuário, louvai-o no alto céu de seu poder! Louvai-o por seus feitos grandiosos, louvai-o em sua grandeza majestosa!\n\n- Louvai-o com o toque da trombeta, louvai-o com a harpa e com a cítara! Louvai-o com a dança e o tambor, louvai-o com as cordas e as flautas!\n\n- Louvai-o com os címbalos sonoros, louvai-o com os címbalos de júbilo! Louve a Deus tudo o que vive e que respira, tudo cante os louvores do Senhor!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 27-38",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia! Aleluia! Aleluia!",
+        "verse": "Se nós nos amarmos, irmãos, Deus vive unido conosco e, em nós, seu amor fica pleno! (1Jo 4, 12)"
+      },
       "text": "Naquele tempo, disse Jesus a seus discípulos: 27A vós que me escutais, eu digo: Amai os vossos inimigos e fazei o bem aos que vos odeiam, 28bendizei os que vos amaldiçoam, e rezai por aqueles que vos caluniam. 29Se alguém te der uma bofetada numa face, oferece também a outra. Se alguém te tomar o manto, deixa-o levar também a túnica. 30Dá a quem te pedir e, se alguém tirar o que é teu, não peças que o devolva. 31O que vós desejais que os outros vos façam, fazei-o também vós a eles. 32Se amais somente aqueles que vos amam, que recompensa tereis? Até os pecadores amam aqueles que os amam. 33E se fazeis o bem somente aos que vos fazem o bem, que recompensa tereis? Até os pecadores fazem assim. 34E se emprestais somente àqueles de quem esperais receber, que recompensa tereis? Até os pecadores emprestam aos pecadores, para receber de volta a mesma quantia. 35Ao contrário, amai os vossos inimigos, fazei o bem e emprestai sem esperar coisa alguma em troca. Então, a vossa recompensa será grande, e sereis filhos do Altíssimo, porque Deus é bondoso também para com os ingratos e os maus. 36Sede misericordiosos, como também o vosso Pai é misericordioso. 37Não julgueis e não sereis julgados; não condeneis e não sereis condenados; perdoai, e sereis perdoados. 38Dai e vos será dado. Uma boa medida, calcada, sacudida, transbordante será colocada no vosso colo; porque com a mesma medida com que medirdes os outros, vós também sereis medidos.'"
     }
   },

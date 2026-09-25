@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 3,13-15.17-19",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, Pedro se dirigiu ao povo, dizendo: 13O Deus de Abraão, de Isaac, de Jacó, o Deus de nossos antepassados glorificou o seu servo Jesus. Vós o entregastes e o rejeitastes diante de Pilatos, que estava decidido a soltá-lo. 14Vós rejeitastes o Santo e o Justo, e pedistes a libertação para um assassino. 15Vós matastes o autor da vida, mas Deus o ressuscitou dos mortos, e disso nós somos testemunhas. 17E agora, meus irmãos, eu sei que vós agistes por ignorância, assim como vossos chefes. 18Deus, porém, cumpriu desse modo o que havia anunciado pela boca de todos os profetas: que o seu Cristo haveria de sofrer. 19Arrependei-vos, portanto, e convertei-vos, para que vossos pecados sejam perdoados."
     },
     "psalm": {
       "reference": "Salmo 4",
+      "refrain": "Sobre nós fazei brilhar o esplendor de vossa face!",
       "text": "- Quando eu chamo, respondei-me ó meu Deus, minha justiça! Vós que soubestes aliviar-me nos momentos de aflição, atendei-me por piedade e escutai minha oração!\n\n- Compreendei que nosso Deus faz maravilhas por seu servo, e que o Senhor me ouvirá quando lhe faço a minha prece!\n\n- Muitos há que se perguntam: 'Quem nos dá felicidade?' Sobre nós fazei brilhar o esplendor de vossa face!\n\n- Eu tranquilo vou deitar-me e na paz logo adormeço, pois só vós, ó Senhor Deus, dais segurança à minha vida!"
     },
     "secondReading": {
       "reference": "São João 2,1-5",
+      "intro": "Leitura da Primeira Carta de São João:",
       "text": "1Meus filhinhos, escrevo isto para que não pequeis. No entanto, se alguém pecar, temos junto do Pai um Defensor: Jesus Cristo, o Justo. 2Ele é a vítima de expiação pelos nossos pecados, e não só pelos nossos, mas também pelos pecados do mundo inteiro. 3Para saber que o conhecemos, vejamos se guardamos os seus mandamentos. 4Quem diz: 'Eu conheço a Deus', mas não guarda os seus mandamentos, é mentiroso, e a verdade não está nele. 5aNaquele, porém, que guarda a sua palavra, o amor de Deus é plenamente realizado."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 24, 35-48",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, aleluia, aleluia.",
+        "verse": "Senhor Jesus, revelai-nos o sentido da Escritura, fazei o nosso coração arder quando nos falardes (Lc 24,32)."
+      },
       "text": "Naquele tempo: 35Os dois discípulos contaram o que tinha acontecido no caminho, e como tinham reconhecido Jesus ao partir o pão. 36Ainda estavam falando, quando o próprio Jesus apareceu no meio deles e lhes disse: 'A paz esteja convosco!' 37Eles ficaram assustados e cheios de medo, pensando que estavam vendo um fantasma. 38Mas Jesus disse: 'Por que estais preocupados, e porque tendes dúvidas no coração? 39Vede minhas mãos e meus pés: sou eu mesmo! Tocai em mim e vede! Um fantasma não tem carne, nem ossos, como estais vendo que eu tenho'. 40E dizendo isso, Jesus mostrou-lhes as mãos e os pés. 41Mas eles ainda não podiam acreditar, porque estavam muito alegres e surpresos. Então Jesus disse: 'Tendes aqui alguma coisa para comer?' 42Deram-lhe um pedaço de peixe assado. 43Ele o tomou e comeu diante deles. 44Depois disse-lhes: 'São estas as coisas que vos falei quando ainda estava convosco: era preciso que se cumprisse tudo o que está escrito sobre mim na Lei de Moisés, nos Profetas e nos Salmos'. 45Então Jesus abriu a inteligência dos discípulos para entenderem as Escrituras, 46e lhes disse: 'Assim está escrito: O Cristo sofrerá e ressuscitará dos mortos ao terceiro dia 47e no seu nome, serão anunciados a conversão e o perdão dos pecados a todas as nações, começando por Jerusalém. 48Vós sereis testemunhas de tudo isso'."
     }
   },

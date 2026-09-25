@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Hebreus 3,7-14",
+      "intro": "Leitura da Carta aos Hebreus:",
       "text": "Irmãos: 7Escutai o que declara o Espírito Santo: 'Hoje, se ouvirdes a sua voz, 8não endureçais os vossos corações, como aconteceu na provacação, no dia da tentação, no deserto, 9onde vossos pais me tentaram, colocando-me à prova, 10embora vissem as minhas obras, durante quarenta anos. Por isso me irritei com essa geração e afirmei: sempre se enganam no coração e desconhecem os meus caminhos. 11Assim jurei em minha ira: não entrarão no meu repouso'. 12Cuidai, irmãos, que não se ache em algum de vós um coração transviado pela incredulidade, levando-o a afastar-se do Deus vivo. 13Antes, animai-vos uns aos outros, dia após dia, enquanto ainda se disser 'hoje', para que nenhum de vós se endureça pela sedução do pecado 14- pois tornamo-nos companheiros de Cristo, contanto que mantenhamos firme até ao fim a nossa confiança inicial."
     },
     "psalm": {
       "reference": "Salmo 94 (95)",
+      "refrain": "Oxalá ouvísseis hoje a sua voz: Não fecheis os vossos corações.",
       "text": "- Vinde adoremos e prostremo-nos por terra, e ajoelhemos ante o Deus que nos criou! Porque ele é o nosso Deus, nosso Pastor, e nós somos o seu povo e seu rebanho, as ovelhas que conduz com sua mão.\n\n- Oxalá ouvísseis hoje a sua voz: 'Não fecheis os corações como em Meriba, como em Massa, no deserto, aquele dia, em que outrora vossos pais me provocaram, apesar de terem visto as minhas obras'.\n\n- Quarenta anos desgostou-me aquela raça e eu disse: 'Eis um povo transviado, seu coração não conheceu os meus caminhos!' E por isso lhes jurei na minha ira: 'Não entrarão no meu repouso prometido!'"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 1,40-45",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Jesus pregava a boa-nova, o reino anunciando, e curava toda espécie de doenças entre o povo (Mt 4,23)."
+      },
       "text": "Naquele tempo: 40Um leproso chegou perto de Jesus, e de joelhos pediu: 'Se queres tens o poder de curar-me'. 41Jesus, cheio de compaixão, estendeu a mão, tocou nele, e disse: 'Eu quero: fica curado!' 42No mesmo instante a lepra desapareceu e ele ficou curado. 43Então Jesus o mandou logo embora, 44falando com firmeza: 'Não contes nada disso a ninguém! Vai, mostra-te ao sacerdote e oferece, pela tua purificação, o que Moisés ordenou, como prova para eles!' 45Ele foi e começou a contar e a divulgar muito o fato. Por isso Jesus não podia mais entrar publicamente numa cidade: ficava fora, em lugares desertos. E de toda parte vinham procurá-lo."
     }
   },

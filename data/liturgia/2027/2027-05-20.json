@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 5,1-10",
+      "intro": "Leitura do Livro do Eclesiástico:",
       "text": "1Não confies nas tuas riquezas e não digas: \"Basta-me viver!\" 2 Não deixes que tua força te leve a seguir as paixões do coração. 3 Não digas: \"Quem terá poder sobre mim?\" ou: \"Quem me fará prestar contas das minhas ações?\", pois o Senhor, com certeza, te castigará. 4 Não digas: \"Pequei, e que de mal me aconteceu?\", pois o Altíssimo é paciente. 5 Não percas o temor por causa do perdão, cometendo pecado sobre pecado. 6 Não digas: \"A misericórdia do Senhor é grande, ele me perdoará a multidão dos meus pecados!\", 7 pois dele procedem misericórdia e cólera, e sua ira se abate sobre os pecadores. 8 Não demores em voltar para o Senhor, e não adies de um dia para outro, 9 pois a sua cólera vem de repente e, no dia do castigo, serás aniquilado. 10 Não te apoies em riquezas injustas, pois elas de nada te valerão no dia da desgraça."
     },
     "psalm": {
       "reference": "Salmo 1",
+      "refrain": "É feliz quem a Deus se confia!",
       "text": "- Feliz é todo aquele que não anda conforme os conselhos dos perversos; que não entra no caminho dos malvados, nem junto aos zombadores vai sentar-se; mas encontra seu prazer na lei de Deus e a medita, dia e noite, sem cessar.\n\n- Eis que ele é semelhante a uma árvore que à beira da torrente está plantada; ela sempre dá seus frutos a seu tempo, e jamais as suas folhas vão murchar. Eis que tudo o que ele faz vai prosperar.\n\n- Mas bem outra é a sorte dos perversos. Ao contrário, são iguais à palha seca espalhada e dispersada pelo vento. Pois Deus vigia o caminho dos eleitos, mas a estrada dos malvados leva à morte."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 9, 41-50",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Acohei a Palavra de Deus não como palavra humana, mas como mensagem de Deus, o que ela é, em verdade! (1Ts 2,13)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 41Quem vos der a beber um copo de água, porque sois de Cristo, não ficará sem receber a sua recompensa. 42E se alguém escandalizar um desses pequeninos que creem, melhor seria que fosse jogado no mar com uma pedra de moinho amarrada ao pescoço. 43Se tua mão te leva a pecar, corta-a! 44É melhor entrar na Vida sem uma das mãos, do que, tendo as duas, ir para o inferno, para o fogo que nunca se apaga. 45Se teu pé te leva a pecar, corta-o! 46É melhor entrar na Vida sem um dos pés, do que, tendo os dois, ser jogado no inferno. 47Se teu olho te leva a pecar, arranca-o! É melhor entrar no Reino de Deus com um olho só, do que, tendo os dois, ser jogado no inferno, 48'onde o verme deles não morre, e o fogo não se apaga'\". 49Pois todos hão de ser salgados pelo fogo. 50Coisa boa é o sal. Mas se o sal se tornar insosso, com que lhe restituireis o tempero? Tende, pois, sal em vós mesmos e vivei em paz uns com os outros."
     }
   },

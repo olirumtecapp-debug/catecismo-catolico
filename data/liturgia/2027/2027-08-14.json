@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Josué 24,14-29",
+      "intro": "Leitura do Livro de Josué:",
       "text": "Naqueles dias, Josué disse a todo o povo: 14Agora, pois, temei ao Senhor e servi-o com um coração íntegro e sincero, e lançai fora os deuses a quem vossos pais serviram na Mesopotâmia e no Egito, e servi ao Senhor. 15Contudo, se vos parece mal servir ao Senhor, escolhei hoje a quem quereis servir: se aos deuses a quem vossos pais serviram na Mesopotâmia, ou aos deuses dos amorreus, em cuja terra habitais. Quanto a mim e à minha família, nós serviremos ao Senhor'. 16E o povo respondeu, dizendo: 'Longe de nós abandonarmos o Senhor, para servir a deuses estranhos. 17Porque o Senhor, nosso Deus, ele mesmo, é quem nos tirou, a nós e a nossos pais, da terra do Egito, da casa da escravidão. Foi ele quem realizou esses grandes prodígios diante de nossos olhos, e nos guardou por todos os caminhos por onde peregrinamos, e no meio de todos os povos pelos quais passamos. 18O Senhor expulsou diante de nós todas as nações, especialmente os amorreus, que habitavam a terra em que entramos. Portanto, nós também serviremos ao Senhor, porque ele é o nosso Deus'. 19Então Josué disse ao povo: 'Não podeis servir ao Senhor, pois ele é um Deus santo, um Deus ciumento, que não suportará vossas transgressões e pecados. 20Se abandonardes o Senhor e servirdes a deuses estranhos, ele se voltará contra vós, e vos tratará mal e vos aniquilará, depois de vos ter tratado bem'. 21O povo, porém, respondeu a Josué: 'Não! É ao Senhor que serviremos'. 22Josué então disse ao povo: 'Sois testemunhas contra vós mesmos de que escolhestes o Senhor para servi-lo'. E eles responderam: 'Sim! Somos testemunhas!' 23'Sendo assim', disse Josué, 'tirai do meio de vós os deuses estranhos e inclinai os vossos corações para o Senhor, Deus de Israel'. 24O povo disse a Josué: 'Serviremos ao Senhor, nosso Deus, e seremos obedientes aos seus preceitos'. 25Naquele dia, Josué estabeleceu uma aliança com o povo, e lhes propôs preceitos e leis em Siquém. 26Josué escreveu estas palavras no Livro da Lei de Deus. A seguir, tomou uma grande pedra e levantou-a ali, debaixo do carvalho que havia no santuário do Senhor. 27Então Josué disse a todo o povo: 'Esta pedra que estás vendo servirá de testemunha contra vós, pois ela ouviu todas as palavras que o Senhor vos disse, para que depois não possais renegar o Senhor, vosso Deus'. 28Em seguida, Josué despediu o povo, para que fosse cada um para suas terras. 29Depois desses acontecimentos, morreu Josué, filho de Nun, servo do Senhor, com a idade de cento e dez anos."
     },
     "psalm": {
       "reference": "Salmo 15 (16)",
+      "refrain": "O Senhor é a porção da minha herança!",
       "text": "- Guardai-me, ó Deus, porque em vós me refugio! Digo ao Senhor: 'Somente vós sois meu Senhor. Ó Senhor, sois minha herança e minha taça, meu destino está seguro em vossas mãos!\n\n- Eu bendigo o Senhor, que me aconselha, e até de noite me adverte o coração. Tenho sempre o Senhor ante meus olhos, pois se o tenho a meu lado não vacilo.\n\n- Vós me ensinais vosso caminho para a vida; junto a vós, felicidade sem limites, delícia eterna e alegria ao vosso lado!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 19, 13-15",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Graças te dou, ó Pai, Senhor do céu e da terra, pois revelaste os mistérios do teu reino aos pequeninos, escondendo-os aos doutores! (Mt 11,25)."
+      },
       "text": "Naquele tempo: 13Levaram crianças a Jesus, para que impusesse as mãos sobre elas e fizesse uma oração. Os discípulos, porém, as repreendiam. 14Então Jesus disse: 'Deixai as crianças, e não as proibais de virem a mim, porque delas é o Reino dos Céus.' 15E depois de impôr as mãos sobre elas, Jesus partiu dali."
     }
   },

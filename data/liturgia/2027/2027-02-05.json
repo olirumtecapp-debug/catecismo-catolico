@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Hebreus 13,1-8",
+      "intro": "Leitura da Carta aos Hebreus:",
       "text": "Irmãos: 1Perseverai no amor fraterno. 2Não esqueçais a hospitalidade; pois, graças a ela, alguns hospedaram anjos, sem o perceber. 3Lembrai-vos dos prisioneiros, como se estivésseis presos com eles, e dos que são maltratados, pois também vós tendes um corpo! 4O matrimônio seja honrado por todos e o leito conjugal, sem mancha; porque Deus julgará os imorais e adúlteros. 5Que o amor ao dinheiro não inspire a vossa conduta. Contentai-vos com o que tendes, porque ele próprio disse: 'Eu nunca te deixarei, jamais te abandonarei'. 6De modo que podemos dizer, com ousadia: 'O Senhor é meu auxílio, jamais temerei; que poderá fazer-me o homem?' 7Lembrai-vos de vossos dirigentes, que vos pregaram a palavra de Deus, e considerando o fim de sua vida, imitai-lhes a fé. 8Jesus Cristo é o mesmo, ontem e hoje e por toda a eternidade."
     },
     "psalm": {
       "reference": "Salmo 26 (27)",
+      "refrain": "O Senhor é minha luz e salvação!",
       "text": "- O Senhor é minha luz e salvação; de quem eu terei medo? O Senhor é a proteção da minha vida; perante quem eu tremerei?\n\n- Se contra mim um exército se armar, não temerá meu coração; se contra mim uma batalha estourar, mesmo assim confiarei.\n\n- Pois um abrigo me dará sob o seu teto nos dias da desgraça; no interior de sua tenda há de esconder-me e proteger-me sobre a rocha.\n\n- Senhor, é vossa face que eu procuro; não me escondais a vossa face! Não afasteis em vossa ira o vosso servo, sois vós o meu auxílio! Não me esqueçais nem me deixeis abandonado."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 6, 14-29",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Felizes os que observam a Palavra do Senhor de reto coração e que produzem muitos frutos, até o fim perseverantes! (Lc 8,15)."
+      },
       "text": "Naquele tempo: 14O rei Herodes ouviu falar de Jesus, cujo nome se tinha tornado muito conhecido. Alguns diziam: 'João Batista ressuscitou dos mortos. Por isso os poderes agem nesse homem.' 15Outros diziam: 'É Elias.' Outros ainda diziam: 'É um profeta como um dos profetas.' 16Ouvindo isto, Herodes disse: 'Ele é João Batista. Eu mandei cortar a cabeça dele, mas ele ressuscitou!' 17Herodes tinha mandado prender João, e colocá-lo acorrentado na prisão. Fez isso por causa de Herodíades, mulher do seu irmão Filipe, com quem se tinha casado. 18João dizia a Herodes: 'Não te é permitido ficar com a mulher do teu irmão.' 19Por isso Herodíades o odiava e queria matá-lo, mas não podia. 20Com efeito, Herodes tinha medo de João, pois sabia que ele era justo e santo, e por isso o protegia. Gostava de ouvi-lo, embora ficasse embaraçado quando o escutava. 21Finalmente, chegou o dia oportuno. Era o aniversário de Herodes, e ele fez um grande banquete para os grandes da corte, os oficiais e os cidadãos importantes da Galiléia. 22A filha de Herodíades entrou e dançou, agradando a Herodes e seus convidados. Então o rei disse à moça: 'Pede-me o que quiseres e eu to darei.' 23E lhe jurou dizendo: 'Eu te darei qualquer coisa que me pedires, ainda que seja a metade do meu reino.' 24Ela saiu e perguntou à mãe: 'O que vou pedir?' A mãe respondeu: 'A cabeça de João Batista.' 25E, voltando depressa para junto do rei, pediu: 'Quero que me dês agora, num prato, a cabeça de João Batista.' 26O rei ficou muito triste, mas não pôde recusar. Ele tinha feito o juramento diante dos convidados. 27Imediatamente, o rei mandou que um soldado fosse buscar a cabeça de João. O soldado saiu, degolou-o na prisão, 28trouxe a cabeça num prato e a deu à moça. Ela a entregou à sua mãe. 29Ao saberem disso, os discípulos de João foram lá, levaram o cadáver e o sepultaram."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 30,19-21.23-26",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "Assim fala o Senhor, o Santo de Israel: 19Povo de Sião, que habitas em Jerusalém, não terás motivo algum para chorar: ele se comoverá à voz do teu clamor; logo que te ouvir, ele atenderá. 20O Senhor de certo dará a todos o pão da angústia e a água da aflição, não se apartará mais de ti o teu mestre; teus olhos poderão vê-lo 21e teus ouvidos poderão ouvir a palavra de aviso atrás de ti: 'O caminho é este para todos, segui por ele', sem desviar-vos à direita ou à esquerda. 23Ele te dará chuva para a semente que tiveres semeado na terra, e o fruto da terra será abundante e rico; nesse dia, o teu rebanho pastará em vastas pastagens, 24teus bois e os animais que lavram a terra comerão forragem salgada, limpa com pá e peneira. 25Haverá em toda montanha alta e em toda colina elevada arroios de água corrente, num dia em que muitos serão mortos com o desabamento de seus torreões. 26A lua brilhará como a luz do sol e o sol brilhará sete vezes mais, como a luz de sete dias, no dia em que o Senhor curar a ferida de seu povo e fizer sarar a lesão de sua chaga."
     },
     "psalm": {
       "reference": "Salmo 146 (147A)",
+      "refrain": "Felizes são aqueles, que esperam no Senhor!",
       "text": "- Louvai o Senhor Deus, porque ele é bom, cantai ao nosso Deus, porque é suave: ele é digno de louvor, ele o merece! O Senhor reconstruiu Jerusalém, e os dispersos de Israel juntou de novo.\n\n- Ele conforta os corações despedaçados, ele enfaixa suas feridas e as cura; fixa o número de todas as estrelas e chama a cada uma por seu nome.\n\n- É grande e onipotente o nosso Deus, seu saber não tem medida nem limites. O Senhor Deus é o amparo dos humildes, mas dobra até o chão os que são ímpios."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 9, 35 - 10, 1.6-8",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "É o Senhor nosso juiz e nosso rei. O Senhor legislador nos salvará (Is 33,22)."
+      },
       "text": "Naquele tempo: 35Jesus percorria todas as cidades e povoados, ensinando em suas sinagogas, pregando o Evangelho do Reino, e curando todo tipo de doença e enfermidade. 36Vendo Jesus as multidões, compadeceu-se delas, porque estavam cansadas e abatidas, como ovelhas que não têm pastor. Então disse a seus discípulos: 37'A Messe é grande, mas os trabalhadores são poucos. 38Pedi pois ao dono da messe que envie trabalhadores para a sua colheita!' 10,1E, chamando os seus doze discípulos deu-lhes poder para expulsarem os espíritos maus e para curarem todo tipo de doença e enfermidade. Enviou-os com as seguintes recomendações: 6Ide, antes, às ovelhas perdidas da casa de Israel! 7Em vosso caminho, anunciai: 'O Reino dos Céus está próximo'. 8Curai os doentes, ressuscitai os mortos, purificai os leprosos, expulsai os demônios. De graça recebestes, de graça deveis dar!"
     }
   },

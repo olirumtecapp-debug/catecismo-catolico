@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Juízes 9,6-15",
+      "intro": "Leitura do livro dos Juízes:",
       "text": "Naquele tempo: 6Todos os habitantes de Siquém e os de Bet-Melo se reuniram junto a um carvalho que havia em Siquém e proclamaram rei a Abimelec. 7Informado disso, Joatão foi postar-se no cume do monte Garizim e se pôs a gritar em alta voz, dizendo: 'Ouvi-me, moradores de Siquém, e que Deus vos ouça. 8Certa vez, as árvores resolveram ungir um rei para reinar sobre elas, e disseram à oliveira: 'Reina sobre nós'. 9Mas ela respondeu: 'Iria eu renunciar ao meu azeite, com que se honram os deuses e os homens, para me balançar acima das árvores?' 10Então as árvores disseram à figueira: 'Vem e reina sobre nós'. 11E ela lhes respondeu: 'Iria eu renunciar à minha doçura e aos saborosos frutos, ' 12As árvores disseram então à videira: 'Vem e reina sobre nós'. 13E ela lhes respondeu: 'Iria eu renunciar ao meu vinho, que alegra os deuses e os homens, para me balançar acima das outras árvores?' 14Por fim, todas as árvores disseram ao espinheiro: 'Vem tu reinar sobre nós'. 15O espinheiro respondeu-lhes: 'Se deveras me constituís vosso rei, vinde e repousai à minha sombra; mas se não o quereis, saia fogo do espinheiro e devore os cedros do Líbano!'."
     },
     "psalm": {
       "reference": "Salmo 20 (21)",
+      "refrain": "Ó Senhor, em vossa força o rei se alegra.",
       "text": "- Ó Senhor, em vossa força o rei se alegra; quanto exulta de alegria em vosso auxílio! O que sonhou seu coração, lhe concedestes; não recusastes os pedidos de seus lábios.\n\n- Com bênção generosa o preparastes; de ouro puro coroastes sua fronte. A vida ele pediu e vós lhe destes, longos dias, vida longa pelos séculos.\n\n- É grande a sua glória em vosso auxílio; de esplendor e majestade o revestistes. Transformastes o seu nome numa bênção, e o cobristes de alegria em vossa face."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 20, 1-16",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "A palavra do Senhor é viva e eficaz: ela julga os pensamentos e as intenções do coração (Hb 4, 12)"
+      },
       "text": "Naquele tempo: Jesus contou esta parábola a seus discípulos: 1'O Reino dos Céus é como a história do patrão que saiu de madrugada para contratar trabalhadores para a sua vinha. 2Combinou com os trabalhadores uma moeda de prata por dia, e os mandou para a vinha. 3Às nove horas da manhã, o patrão saiu de novo, viu outros que estavam na praça, desocupados, 4e lhes disse: 'Ide também vós para a minha vinha! E eu vos pagarei o que for justo'. 5E eles foram. O patrão saiu de novo ao meio-dia e às três horas da tarde, e fez a mesma coisa. 6Saindo outra vez pelas cinco horas da tarde, encontrou outros que estavam na praça, e lhes disse: 'Por que estais aí o dia inteiro desocupados?' 7Eles responderam: 'Porque ninguém nos contratou'. O patrão lhes disse: 'Ide vós também para a minha vinha'. 8Quando chegou a tarde, o patrão disse ao administrador: 'Chama os trabalhadores e paga-lhes uma diária a todos, começando pelos últimos até os primeiros!' 9Vieram os que tinham sido contratados às cinco da tarde e cada um recebeu uma moeda de prata. 10Em seguida vieram os que foram contratados primeiro, e pensavam que iam receber mais. Porém, cada um deles também recebeu uma moeda de prata. 11Ao receberem o pagamento, começaram a resmungar contra o patrão: 12'Estes últimos trabalharam uma hora só, e tu os igualaste a nós, que suportamos o cansaço e o calor o dia inteiro'. 13Então o patrão disse a um deles: 'Amigo, eu não fui injusto contigo. Não combinamos uma moeda de prata? 14Toma o que é teu e volta para casa! Eu quero dar a este que foi contratado por último o mesmo que dei a ti. 15Por acaso não tenho o direito de fazer o que quero com aquilo que me pertence? Ou estás com inveja, porque estou sendo bom?' 16aAssim, os últimos serão os primeiros, e os primeiros serão os últimos.'"
     }
   },

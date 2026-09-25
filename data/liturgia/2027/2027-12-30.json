@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 3,3-7.14-17",
+      "intro": "Leitura do Livro do Eclesiástico:",
       "text": "3Deus honra o pai nos filhos e confirma, sobre eles, a autoridade da mãe. 4Quem honra o seu pai, alcança o perdão dos pecados; evita cometê-los e será ouvido na oração quotidiana. 5Quem respeita a sua mãe é como alguém que ajunta tesouros. 6Quem honra o seu pai, terá alegria com seus próprios filhos; e, no dia em que orar, será atendido. 7Quem respeita o seu pai, terá vida longa, e quem obedece ao pai é o consolo da sua mãe. 14Meu filho, ampara o teu pai na velhice e não lhe causes desgosto enquanto ele vive. 15Mesmo que ele esteja perdendo a lucidez, procura ser compreensivo para com ele; não o humilhes, em nenhum dos dias de sua vida, a caridade feita a teu pai não será esquecida, 16mas servirá para reparar os teus pecados 17ae, na justiça, será para tua edificação."
     },
     "psalm": {
       "reference": "Salmo 127 (128)",
+      "refrain": "Felizes os que temem o Senhor e trilham seus caminhos!",
       "text": "- Feliz és tu se temes o Senhor e trilhas seus caminhos! Do trabalho de tuas mãos hás de viver, serás feliz, tudo irá bem!\n\n- A tua esposa é uma videira bem fecunda no coração da tua casa; os teus filhos são rebentos de oliveira ao redor de tua mesa.\n\n- Será assim abençoado todo homem que teme o Senhor. O Senhor te abençoe de Sião, cada dia de tua vida."
     },
     "secondReading": {
       "reference": "Colossenses 3,12-21",
+      "intro": "Leitura da Carta de São Paulo aos Colossenses:",
       "text": "Irmãos: 12Vós sois amados por Deus, sois os seus santos eleitos. Por isso, revesti-vos de sincera misericórdia, bondade, humildade, mansidão e paciência, 13suportando-vos uns aos outros e perdoando-vos mutuamente, se um tiver queixa contra o outro. Como o Senhor vos perdoou, assim perdoai vós também. 14Mas, sobretudo, amai-vos uns aos outros, pois o amor é o vínculo da perfeição. 15Que a paz de Cristo reine em vossos corações, à qual fostes chamados como membros de um só corpo. E sede agradecidos. 16Que a palavra de Cristo, com toda a sua riqueza, habite em vós. Ensinai e admoestai-vos uns aos outros com toda a sabedoria. Do fundo dos vossos corações, cantai a Deus salmos, hinos e cânticos espirituais, em ação de graças. 17Tudo o que fizerdes, em palavras ou obras, seja feito em nome do Senhor Jesus Cristo. Por meio dele dai graças a Deus, o Pai. 18Esposas, sede solícitas para com vossos maridos, como convém, no Senhor. 19Maridos, amai vossas esposas e não sejais grosseiros com elas. 20Filhos, obedecei em tudo aos vossos pais, pois isso é bom e correto no Senhor. 21Pais, não intimideis os vossos filhos, para que eles não desanimem."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 2, 41-52",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Que a paz de Cristo reine em vossos corações e ricamente habite em vós sua palavra! (Cl 3,15s)."
+      },
       "text": "41Os pais de Jesus iam todos os anos a Jerusalém, para a festa da Páscoa. 42Quando ele completou doze anos, subiram para a festa, como de costume. 43Passados os dias da Páscoa, começaram a viagem de volta, mas o menino Jesus ficou em Jerusalém, sem que seus pais o notassem. 44Pensando que ele estivesse na caravana, caminharam um dia inteiro. Depois começaram a procurá-lo entre os parentes e conhecidos. 45Não o tendo encontrado, voltaram para Jerusalém à sua procura. 46Três dias depois, o encontraram no Templo. Estava sentado no meio dos mestres, escutando e fazendo perguntas. 47Todos os que ouviam o menino estavam maravilhados com sua inteligência e suas respostas. 48Ao vê-lo, seus pais ficaram muito admirados e sua mãe lhe disse: 'Meu filho, por que agiste assim conosco? Olha que teu pai e eu estávamos, angustiados, à tua procura.' 49Jesus respondeu: 'Por que me procuráveis? Não sabeis que devo estar na casa de meu Pai?' 50Eles, porém, não compreenderam as palavras que lhes dissera. 51Jesus desceu então com seus pais para Nazaré, e era-lhes obediente. Sua mãe, porém, conservava no coração todas estas coisas. 52E Jesus crescia em sabedoria, estatura e graça, diante de Deus e diante dos homens."
     }
   },

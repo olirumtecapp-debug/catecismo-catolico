@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 4,1-12",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, depois que o paralítico fora curado, 1Pedro e João ainda estavam falando ao povo quando chegaram os sacerdotes, o chefe da guarda do templo e os saduceus. 2Estavam irritados porque os apóstolos ensinavam o povo e anunciavam a ressurreição dos mortos na pessoa de Jesus. 3Eles prenderam Pedro e João e os colocaram na prisão até o dia seguinte, porque já estava anoitecendo. 4Todavia, muitos daqueles que tinham ouvido a pregação acreditaram. E o número dos homens chegou a uns cinco mil. 5No dia seguinte, reuniram-se em Jerusalém os chefes, os anciãos e os mestres da lei. 6Estavam presentes o sumo sacerdote Anás e também Caifás, João, Alexandre e todos os que pertenciam às famílias dos sumos sacerdotes. 7Fizeram Pedro e João comparecer diante deles e os interrogavam: \"Com que poder ou em nome de quem vós fizestes isso?\" 8Então, Pedro, cheio do Espírito Santo, disse-lhes: \"Chefes do povo e anciãos, 9hoje estamos sendo interrogados por termos feito o bem a um enfermo e pelo modo como foi curado. 10Ficai, pois, sabendo todos vós e todo o povo de Israel: é pelo nome de Jesus Cristo, de Nazaré - aquele que vós crucificastes e que Deus ressuscitou dos mortos -, que este homem está curado diante de vós. 11Jesus é a pedra que vós, os construtores, desprezastes e que se tornou a pedra angular. 12Em nenhum outro há salvação, pois não existe debaixo do céu outro nome dado aos homens pelo qual possamos ser salvos\"."
     },
     "psalm": {
       "reference": "Salmo 117 (118)",
+      "refrain": "A pedra que os pedreiros rejeitaram tornou-se agora a pedra angular.",
       "text": "- Dai graças ao Senhor, porque ele é bom! \"Eterna é a sua misericórdia!\" A casa de Israel agora o diga: \"Eterna é a sua misericórdia!\" Os que temem o Senhor agora o digam: \"Eterna é a sua misericórdia!\"\n\n- \"A pedra que os pedreiros rejeitaram tornou-se agora a pedra angular. Pelo Senhor é que foi feito tudo isso: que maravilhas ele fez a nossos olhos! Este é o dia que o Senhor fez para nós, alegremo-nos e nele exultemos!\n\n- Ó Senhor, dai-nos a vossa salvação; ó Senhor, dai-nos também prosperidade!\" Bendito seja, em nome do Senhor, aquele que em seus átrios vai entrando! Desta casa do Senhor vos bendizemos. Que o Senhor e nosso Deus nos ilumine!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 21, 1-14",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Este é o dia que o Senhor fez para nós, alegremo-nos e nele exultemos! (Sl 117,24)."
+      },
       "text": "Naquele tempo, 1Jesus apareceu de novo aos discípulos, à beira do mar de Tiberíades. A aparição foi assim: 2estavam juntos Simão Pedro, Tomé, chamado Dídimo, Natanael de Caná da Galileia, os filhos de Zebedeu e outros dois discípulos de Jesus. 3Simão Pedro disse a eles: \"Eu vou pescar\". Eles disseram: \"Também vamos contigo\". Saíram e entraram na barca, mas não pescaram nada naquela noite. 4Já tinha amanhecido, e Jesus estava de pé na margem. Mas os discípulos não sabiam que era Jesus. 5Então Jesus disse: \"Moços, tendes alguma coisa para comer?\" Responderam: \"Não\". 6Jesus disse-lhes: \"Lançai a rede à direita da barca e achareis\". Lançaram, pois, a rede e não conseguiam puxá-la para fora, por causa da quantidade de peixes. 7Então, o discípulo a quem Jesus amava disse a Pedro: \"É o Senhor!\" Simão Pedro, ouvindo dizer que era o Senhor, vestiu sua roupa, pois estava nu, e atirou-se ao mar. 8Os outros discípulos vieram com a barca, arrastando a rede com os peixes. Na verdade, não estavam longe da terra, mas somente a cerca de cem metros. 9Logo que pisaram a terra, viram brasas acesas, com peixe em cima, e pão. 10Jesus disse-lhes: \"Trazei alguns dos peixes que apanhastes\". 11Então Simão Pedro subiu ao barco e arrastou a rede para a terra. Estava cheia de cento e cinquenta e três grandes peixes; e, apesar de tantos peixes, a rede não se rompeu. 12Jesus disse-lhes: \"Vinde comer\". Nenhum dos discípulos se atrevia a perguntar quem era ele, pois sabiam que era o Senhor. 13Jesus aproximou-se, tomou o pão e distribuiu-o por eles. E fez a mesma coisa com o peixe. 14Esta foi a terceira vez que Jesus, ressuscitado dos mortos, apareceu aos discípulos."
     }
   },

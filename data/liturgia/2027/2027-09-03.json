@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Colossenses 1,15-20",
+      "intro": "Leitura da carta de São Paulo aos Colossenses:",
       "text": "15Cristo é a imagem do Deus invisível, o primogênito de toda a criação, 16pois por causa dele, foram criadas todas as coisas no céu e na terra, as visíveis e as invisíveis, tronos e dominações, soberanias e poderes. Tudo foi criado por meio dele e para ele. 17Ele existe antes de todas as coisas e todas têm nele a sua consistência. 18Ele é a Cabeça do corpo, isto é, da Igreja. Ele é o Princípio, o Primogênito dentre os mortos; de sorte que em tudo ele tem a primazia, 19porque Deus quis habitar nele com toda a sua plenitude 20e por ele reconciliar consigo todos os seres, os que estão na terra e no céu, realizando a paz pelo sangue da sua cruz."
     },
     "psalm": {
       "reference": "Salmo 99 (100)",
+      "refrain": "Com canto apresentai-vos diante do Senhor!",
       "text": "- Aclamai o Senhor, ó terra inteira, servi ao Senhor com alegria, ide a ele cantando jubilosos!\n\n- Sabei que o Senhor, só ele, é Deus, Ele mesmo nos fez, e somos seus, nós somos seu povo e seu rebanho.\n\n- Entrai por suas portas dando graças, e em seus átrios com hinos de louvor; dai-lhe graças, seu nome bendizei!\n\n- Sim, é bom o Senhor e nosso Deus, sua bondade perdura para sempre, seu amor é fiel eternamente!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 5, 33-39",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Eu sou a luz do mundo; aquele que me segue não caminha entre as trevas, mas terá a luz da vida (Jo 8, 12)"
+      },
       "text": "Naquele tempo: 33Os fariseus e os mestres da Lei disseram a Jesus: 'Os discípulos de João, e também os discípulos dos fariseus, jejuam com freqüência e fazem orações. Mas os teus discípulos comem e bebem.' 34Jesus, porém, lhes disse: 'Os convidados de um casamento podem fazer jejum enquanto o noivo está com eles? 35Mas dias virão em que o noivo será tirado do meio deles. Então, naqueles dias, eles jejuarão.' 36Jesus contou-lhes ainda uma parábola: 'Ninguém tira retalho de roupa nova para fazer remendo em roupa velha; senão vai rasgar a roupa nova, e o retalho novo não combinará com a roupa velha. 37Ninguém coloca vinho novo em odres velhos; porque, senão, o vinho novo arrebenta os odres velhos e se derrama; e os odres se perdem. 38Vinho novo deve ser colocado em odres novos. 39E ninguém, depois de beber vinho velho, deseja vinho novo; porque diz: o velho é melhor.'"
     }
   },

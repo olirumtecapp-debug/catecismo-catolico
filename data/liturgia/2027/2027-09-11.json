@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Timóteo 1,15-17",
+      "intro": "Leitura da primeira carta de São Paulo a Timóteo:",
       "text": "Caríssimo: 15Segura e digna de ser acolhida por todos é esta palavra: Cristo veio ao mundo para salvar os pecadores. E eu sou o primeiro deles! 16Por isso encontrei misericórdia, para que em mim, como primeiro, Cristo Jesus demonstrasse toda a grandeza de seu coração; ele fez de mim um modelo de todos os que crerem nele para alcançar a vida eterna. 17Ao Rei dos séculos, ao único Deus, imortal e invisível, honra e glória pelos séculos dos séculos. Amém!"
     },
     "psalm": {
       "reference": "Salmo 112 (113)",
+      "refrain": "Bendito seja o nome do Senhor, agora e para sempre!",
       "text": "- Louvai, louvai, ó servos do Senhor, louvai, louvai o nome do Senhor! Bendito seja o nome do Senhor, agora e por toda a eternidade!\n\n- Do nascer do sol até o seu ocaso, louvado seja o nome do Senhor! O Senhor está acima das nações, sua glória vai além dos altos céus.\n\n- Quem pode comparar-se ao nosso Deus, que se inclina para olhar o céu e a terra? Levanta da poeira o indigente e do lixo ele retira o pobrezinho."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 43-49",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Quem me ama, realmente, guardará minha palavra e meu Pai o amará, e a ele nós viremos (Jo 14, 23)"
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 43Não existe árvore boa que dê frutos ruins, nem árvore ruim que dê frutos bons. 44Toda árvore é reconhecida pelos seus frutos. Não se colhem figos de espinheiros, nem uvas de plantas espinhosas. 45O homem bom tira coisas boas do bom tesouro do seu coração. Mas o homem mau tira coisas más do seu mau tesouro, pois sua boca fala do que o coração está cheio. 46Por que me chamais: 'Senhor! Senhor!', mas não fazeis o que eu digo? 47Vou mostrar-vos com quem se parece todo aquele que vem a mim, ouve as minhas palavras e as põe em prática. 48É semelhante a um homem que construiu uma casa: cavou fundo e colocou o alicerce sobre a rocha. Veio a enchente, a torrente deu contra a casa, mas não conseguiu derrubá-la, porque estava bem construída.49Aquele, porém, que ouve e não põe em prática, é semelhante a um homem que construiu uma casa no chão, sem alicerce. A torrente deu contra a casa, e ela imediatamente desabou; e foi grande a ruína dessa casa.'"
     }
   },

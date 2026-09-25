@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Timóteo 2,1-8",
+      "intro": "Leitura da primeira Carta de São Paulo a Timóteo:",
       "text": "Caríssimo: 1Antes de tudo, recomendo que se façam preces e orações, súplicas e ações de graças, por todos os homens; 2pelos que governam e por todos que ocupam altos cargos, a fim de que possamos levar uma vida tranqüila e serena, com toda piedade e dignidade. 3Isto é bom e agradável a Deus, nosso Salvador; 4ele quer que todos os homens sejam salvos e cheguem ao conhecimento da verdade. 5Pois há um só Deus, e um só mediador entre Deus e os homens: o homem Cristo Jesus, 6que se entregou em resgate por todos. Este é o testemunho dado no tempo estabelecido por Deus, 7e para este testemunho eu fui designado pregador e apóstolo, e - falo a verdade, não minto - mestre das nações pagós na fé e na verdade. 8Quero, portanto, que em todo lugar os homens façam a oração, erguendo mãos santas, sem ira e sem discussões."
     },
     "psalm": {
       "reference": "Salmo 27 (28)",
+      "refrain": "Bendito seja o Senhor, porque ouviu o clamor da minha súplica!",
       "text": "- Escutai o meu clamor, a minha súplica, quando eu grito para vós; quando eu elevo, ó Senhor, as minhas mãos para o vosso santuário.\n\n- Minha força e escudo é o Senhor; meu coração nele confia. Ele ajudou-me e alegrou meu coração; eu canto em festa o seu louvor.\n\n- O Senhor é a fortaleza do seu povo e a salvação do seu Ungido. Salvai o vosso povo e libertai-o; abençoai a vossa herança! Sede vós o seu pastor e o seu guia pelos séculos eternos!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 7, 1-10",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Deus o mundo tanto amou, que lhe deu seu próprio Filho, para que todo o que nele crer encontre vida eterna (Jo 3,16)."
+      },
       "text": "Naquele tempo: 1Quando acabou de falar ao povo que o escutava, Jesus entrou em Cafarnaum. 2Havia lá um oficial romano que tinha um empregado a quem estimava muito, e que estava doente, à beira da morte. 3O oficial ouviu falar de Jesus e enviou alguns anciãos dos judeus, para pedirem que Jesus viesse salvar seu empregado. 4Chegando onde Jesus estava, pediram-lhe com insistência: 'O oficial merece que lhe faças este favor, 5porque ele estima o nosso povo. Ele até nos construiu uma sinagoga.' 6Então Jesus pôs-se a caminho com eles. Porém, quando já estava perto da casa, o oficial mandou alguns amigos dizerem a Jesus: 'Senhor, não te incomodes, pois não sou digno de que entres em minha casa. 7Nem mesmo me achei digno de ir pessoalmente ao teu encontro. Mas ordena com a tua palavra, e o meu empregado ficará curado. 8Eu também estou debaixo de autoridade, mas tenho soldados que obedecem às minhas ordens. Se ordeno a um : 'Vai!', ele vai; e a outro: 'Vem!', ele vem; e ao meu empregado 'Faze isto!', e ele o faz'.' 9Ouvindo isso, Jesus ficou admirado. Virou-se para a multidão que o seguia, e disse: 'Eu vos declaro que nem mesmo em Israel encontrei tamanha fé.' 10Os mensageiros voltaram para a casa do oficial e encontraram o empregado em perfeita saúde."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Rute 2,1-3.8-11; 4,13-17",
+      "intro": "Leitura do Livro de Rute:",
       "text": "1Noemi tinha um parente por parte do marido, homem poderoso e muito rico, da família de Elimelec, chamado Booz. 2Rute, a moabita, disse à sua sogra: 'Permite que eu vá ao campo apanhar espigas, onde possa encontrar quem se mostre clemente para comigo'. Noemi respondeu: 'Vai, minha filha'. 3Rute foi, pois, colher espigas num campo atrás dos ceifeiros. Aconteceu que aquele era justamente o campo de Booz, parente de Elimelec. 8E Booz disse a Rute: 'Ouve, minha filha, não vás apanhar espigas a outro campo, e não te afastes daqui, mas junta-te às minhas servas. 9Observa onde estão ceifando e vai atrás delas; pois ordenei aos meus servos que ninguém te moleste. Quando tiveres sede, vai aos cântaros e bebe da água de que bebem os meus servos'. 10Então Rute, caindo-lhe aos pés, inclinou-se profundamente e disse: 'como pude encontrar graça a teus olhos, e te dignaste fazer caso de mim, uma mulher estrangeira?' 11Respondeu-lhe Booz: 'Contaram-me tudo o que fizeste por tua sogra, depois da morte de teu marido: como deixaste teus pais e a terra onde nasceste, e vieste para um povo que antes não conhecias'. 4,13Então Booz tomou Rute e recebeu-a como esposa. Uniu-se a ela e o Senhor concedeu-lhe a graça de conceber e dar à luz um filho. 14As mulheres diziam a Noemi: 'Bendito seja o Senhor, que não permitiu que faltasse um sucessor à tua família e quis que o seu nome se conservasse em Israel, 15para que tenhas quem console a tua alma e te sustente na velhice, porque nasceu um menino de tua nora, que te ama e é para ti melhor que sete filhos'. 16E Noemi tomou o menino, colocou-o no colo, e serviu-lhe de ama. 17As vizinhas congratulavam-se com ela, dizendo: 'Nasceu um filho a Noemi!', e deram-lhe o nome de Obed. Ele foi o pai de Jessé, pai de Davi."
     },
     "psalm": {
       "reference": "Salmo 127 (128)",
+      "refrain": "Será assim abençoado todo aquele que respeita o Senhor.",
       "text": "- Feliz és tu se temes o Senhor e trilhas seus caminhos! Do trabalho de tuas mãos hás de viver, serás feliz, tudo irá bem!\n\n- A tua esposa é uma videira bem fecunda no coração da tua casa; os teus filhos são rebentos de oliveira ao redor de tua mesa.\n\n- Será assim abençoado todo homem que teme o Senhor. O Senhor te abençoe de Sião, cada dia de tua vida."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 23, 1-12",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Vós tendes um só Pai, que está no céu, vossa guia é um somente, é o Messias (Mt 23,9s)"
+      },
       "text": "Naquele tempo: 1Jesus falou às multidões e a seus discípulos: 2'Os mestres da Lei e os fariseus têm autoridade para interpretar a Lei de Moisés. 3Por isso, deveis fazer e observar tudo o que eles dizem. Mas não imiteis suas ações! Pois eles falam e não praticam. 4Amarram pesados fardos e os colocam nos ombros dos outros, mas eles mesmos não estão dispostos a movê-los, nem sequer com um dedo. 5Fazem todas as suas ações só para serem vistos pelos outros. Eles usam faixas largas, com trechos da Escritura, na testa e nos braços, e põem na roupa longas franjas. 6Gostam de lugar de honra nos banquetes e dos primeiros lugares nas sinagogas; 7Gostam de ser cumprimentados nas praças públicas e de serem chamados de Mestre. 8Quanto a vós, nunca vos deixeis chamar de Mestre, pois um só é vosso Mestre e todos vós sois irmãos. 9Na terra, não chameis a ninguém de pai, pois um só é vosso Pai, aquele que está nos céus. 10Não deixeis que vos chamem de guias, pois um só é o vosso Guia, Cristo. 11Pelo contrário, o maior dentre vós deve ser aquele que vos serve. 12Quem se exaltar será humilhado, e quem se humilhar será exaltado.'"
     }
   },

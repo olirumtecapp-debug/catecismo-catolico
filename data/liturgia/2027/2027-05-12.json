@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 20,28-38",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, Paulo disse aos anciãos da Igreja de Éfeso: 28Cuidai de vós mesmos e de todo o rebanho, sobre o qual o Espírito Santo vos colocou como guardas, para pastorear a Igreja de Deus, que ele adquiriu com o sangue do seu próprio Filho. 29Eu sei, depois que eu for embora, aparecerão entre vós lobos ferozes, que não pouparão o rebanho. 30Além disso, do vosso próprio meio aparecerão homens com doutrinas perversas que arrastarão discípulos atrás de si. 31Por isso, estai sempre atentos: lembrai-vos que durante três anos, dia e noite, com lágrimas, não parei de exortar a cada um em particular. 32Agora entrego-vos a Deus e à mensagem de sua graça, que tem poder para edificar e dar a herança a todos os que foram santificados. 33Não cobicei prata, ouro ou vestes de ninguém. 34Vós bem sabeis que estas minhas mãos providenciaram o que era necessário para mim e para os que estavam comigo. 35Em tudo vos mostrei que, trabalhando deste modo, se deve ajudar os fracos, recordando as palavras do Senhor Jesus, que disse: 'Há mais alegria em dar do que em receber'.' 36Tendo dito isto, Paulo ajoelhou-se e rezou com todos eles. 37Todos, depois, prorromperam em grande pranto e, lançando-se ao pescoço de Paulo, o beijavam, 38aflitos, sobretudo por lhes haver ele dito que não tornariam a ver-lhe o rosto. E o acompanharam até o navio."
     },
     "psalm": {
       "reference": "Salmo 67 (68)",
+      "refrain": "Reinos da terra cantai ao Senhor.",
       "text": "- Suscitai, ó Senhor Deus, suscitai vosso poder, confirmai este poder que por nós manifestastes, a partir de vosso templo, que está em Jerusalém, para vós venham os reis e vos ofertem seus presentes!\n\n- Reinos da terra, celebrai o nosso Deus, cantai-lhe salmos! Ele viaja no seu carro sobre os céus dos céus eternos. Eis que eleva e faz ouvir a sua voz, voz poderosa.\n\n- Dai glória a Deus e exaltai o seu poder por sobre as nuvens. Sobre Israel, eis sua glória e sua grande majestade! Em seu templo ele é admirável. E a seu povo dá poder. Bendito seja o Senhor Deus."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 17, 11-19",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Vossa palavra é a verdade; santificai-nos na verdade! (Jo 17, 17)"
+      },
       "text": "Naquele tempo: Jesus ergueu os olhos para o céu e rezou, dizendo: 11'Pai santo, guarda-os em teu nome, o nome que me deste, para que eles sejam um assim como nós somos um. 12Quando eu estava com eles, guardava-os em teu nome, o nome que me deste. Eu guardei-os e nenhum deles se perdeu, a não ser o filho da perdição, para se cumprir a Escritura. 13Agora, eu vou para junto de ti, e digo estas coisas, estando ainda no mundo, para que eles tenham em si a minha alegria plenamente realizada. 14Eu lhes dei a tua palavra, mas o mundo os rejeitou, porque não são do mundo, como eu não sou do mundo. 15Não te peço que os tires do mundo, mas que os guardes do Maligno. 16Eles não são do mundo, como eu não sou do mundo. 17Consagra-os na verdade; a tua palavra é verdade. 18Como tu me enviaste ao mundo, assim também eu os enviei ao mundo. 19Eu me consagro por eles, a fim de que eles também sejam consagrados na verdade'."
     }
   },

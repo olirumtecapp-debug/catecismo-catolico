@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 2,1-5",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "2,1 Visão de Isaías, filho de Amós, sobre Judá e Jerusalém. 2 Acontecerá, nos últimos tempos, que o monte da casa do Senhor estará firmemente estabelecido no ponto mais alto das montanhas e dominará as colinas. A ele acorrerão todas as nações, 3 para lá irão numerosos povos e dirão: \"Vamos subir ao monte do Senhor, à casa do Deus de Jacó, para que ele nos mostre seus caminhos e nos ensine a cumprir seus preceitos\"; porque de Sião provém a lei e de Jerusalém, a palavra do Senhor. 4 Ele há de julgar as nações e arguir numerosos povos; estes transformarão suas espadas em arados e suas lanças em foices; não pegarão em armas uns contra os outros e não mais travarão combate. 5 Vinde, todos da casa de Jacó, e deixemo-nos guiar pela luz do Senhor."
     },
     "psalm": {
       "reference": "Salmo 121 (122)",
+      "refrain": "Que alegria, quando me disseram: 'Vamos à casa Senhor!",
       "text": "- Que alegria, quando ouvi que me disseram: 'Vamos à casa do Senhor!' E agora nossos pés já se detêm, Jerusalém, em tuas portas.\n\n- Jerusalém,cidade bem edificada num conjunto harmonioso; apara lá sobem as tribos de Israel, as tribos do Senhor.\n\n- Para louvar, segundo a lei de Israel, o nome do Senhor. A sede da justiça lá está e o trono de Davi.\n\n- Rogai que viva em paz Jerusalém, e em segurança os que te amam! Que a paz habite dentro de teus muros, tranquilidade em teus palácios!\n\n- Por amor a meus irmãos e meus amigos, peço: 'A paz esteja em ti!' Pelo amor que tenho à casa do Senhor, eu te desejo todo bem!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 8, 5-11",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Ó vinde libertar-nos, Senhor e nosso Deus; mostrai a vossa face e nós seremos salvos! (SI 79,4)."
+      },
       "text": "Naquele tempo: 5Quando Jesus entrou em Cafarnaum, um oficial romano aproximou-se dele, suplicando: 6'Senhor, o meu empregado está de cama, lá em casa, sofrendo terrivelmente com uma paralisia.' 7Jesus respondeu: 'Vou curá-lo.' 8O oficial disse: 'Senhor, eu não sou digno de que entres em minha casa. Dize uma só palavra e o meu empregado ficará curado. 9Pois eu também sou subordinado e tenho soldados debaixo de minhas ordens. E digo a um : 'Vai!', e ele vai; e a outro: 'Vem!', e ele vem; e digo ao meu escravo: 'Faze isto!', e ele faz.' 10Quando ouviu isso, Jesus ficou admirado, e disse aos que o seguiam: 'Em verdade, vos digo: nunca encontrei em Israel alguém que tivesse tanta fé. 11Eu vos digo: muitos virão do Oriente e do Ocidente, e se sentarão à mesa no Reino dos Céus, junto com Abraão, Isaac e Jacó."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Juízes 6,11-24",
+      "intro": "Leitura do livro dos Juízes:",
       "text": "Naqueles dias: 11Veio então o anjo do Senhor e sentou-se debaixo de um carvalho que havia em Efra, e pertencia a Joás, da família de Abiezer. Gedeão, seu filho, estava sacudindo e limpando o trigo na eira, para o esconder dos madianitas, 12quando o anjo do Senhor lhe apareceu e disse: 'O Senhor está contigo, valente guerreiro!'. 13Gedeão respondeu: 'Se o Senhor está conosco, peço-te, Senhor, que me digas por que nos aconteceu tudo isto? Onde estão aquelas tuas maravilhas que nossos pais nos contaram, dizendo:' O Senhor nos tirou do Egito'? Mas agora o Senhor nos abandonou e nos entregou nas mãos dos madianitas'. 14Então o Senhor voltou-se para ele e disse: 'vai, e com essa força que tens livra Israel da mão dos madianitas. Sou eu que te envio'. 15Gedeão replicou-lhe; 'Dize-me, te peço, meu senhor, como poderei eu libertar Israel? Minha família é a mais humilde de Manassés, e eu sou o último na casa de meu pai'. 16O Senhor lhe respondeu: 'Eu estarei contigo, e tu derrotarás os madianitas como se fossem um só homem'. 17E Gedeão prosseguiu; 'Se achei graça diante de ti, dá-me um sinal de que és tu que falas comigo. 18Não te afastes daqui, até que eu volte, com uma oferenda para te apresentar'. E o senhor respondeu: 'Ficarei aqui até voltares'. 19Gedeão retirou-se, preparou um cabrito e, com uma medida de farinha, fez pães ázimos. Pôs a carne num cesto e o caldo numa vasilha, levou tudo para debaixo do carvalho e lhe apresentou. 20O anjo do Senhor lhe disse: 'Toma a carne e os pães ázimos, coloca-os sobre esta pedra e derrama por cima o caldo'. E Gedeão assim fez. 21O anjo do Senhor estendeu a ponta da vara que tinha na mão e tocou na carne e nos pães ázimos. Levantou-se então um fogo da pedra e consumiu a carne e os pães. E o anjo do senhor desapareceu da sua vista. 22Percebendo que era o anjo do Senhor, Gedeão exclamou: 'Ai de mim, Senhor Deus, porque vi o anjo do Senhor face a face!'. 23Mas o Senhor lhe disse:'A paz esteja contigo, não tenhas medo: não morrerás!' 24aEntão Gedeão construiu ali mesmo um altar ao Senhor e o chamou: 'O Senhor é paz'."
     },
     "psalm": {
       "reference": "Salmo 84 (85)",
+      "refrain": "O Senhor anunciará a paz para o seu povo.",
       "text": "- Quero ouvir o que o Senhor irá falar: é a paz que ele vai anunciar; a paz para o seu povo e seus amigos, para os que voltam ao Senhor seu coração.\n\n- A verdade e o amor se encontrarão, a justiça e a paz se abraçarão; da terra brotará a fidelidade, e a justiça olhará dos altos céus.\n\n- O Senhor nos dará tudo o que é bom, e a nossa terra nos dará suas colheitas; a justiça andará na sua frente e a salvação há de seguir os passos seus."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 19, 23-30",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Jesus Cristo, Senhor nosso, embora sendo rico, para nós se tornou pobre, a fim de enriquecer-nos mediante sua pobreza (2Cor 8, 9)"
+      },
       "text": "Naquele tempo: 23Jesus disse aos discípulos: 'Em verdade vos digo, dificilmente um rico entrará no Reino dos Céus. 24E digo ainda: é mais fácil um camelo entrar pelo buraco de uma agulha, do que um rico entrar no Reino de Deus.' 25Ouvindo isso, os discípulos ficaram muito espantados, e perguntaram: 'Então, quem pode ser salvo?' 26Jesus olhou para eles e disse: 'Para os homens isso é impossível, mas para Deus tudo é possível.' 27Pedro tomou a palavra e disse a Jesus: 'Vê! Nós deixamos tudo e te seguimos. O que haveremos de receber?' 28Jesus respondeu: 'Em verdade vos digo, quando o mundo for renovado e o Filho do Homem se sentar no trono de sua glória, também vós, que me seguistes, havereis de sentar-vos em doze tronos, para julgar as doze tribos de Israel. 29E todo aquele que tiver deixado casas, irmãos, irmãs, pai, mãe, filhos, campos, por causa do meu nome, receberá cem vezes mais e terá como herança a vida eterna. 30Muitos que agora são os primeiros, serão os últimos. E muitos que agora são os últimos, serão os primeiros."
     }
   },

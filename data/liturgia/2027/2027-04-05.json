@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 4,23-31",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias: 23Logo que foram postos em liberdade, Pedro e João voltaram para junto dos irmãos e contaram tudo o que os sumos sacerdotes e os anciãos haviam dito. 24Ao ouvirem o relato, todos eles elevaram a voz a Deus, dizendo: 'Senhor, tu criaste o céu, a terra, o mar e tudo o que neles existe. 25Por meio do Espírito Santo, disseste através do teu servo Davi, nosso pai: 'Por que se enfureceram as nações, e os povos imaginaram coisas vós? 26Os reis da terra se insurgem e os príncipes conspiram unidos contra o Senhor e contra o seu Messias'. 27Foi assim que aconteceu nesta cidade: Herodes e Pôncio Pilatos uniram-se com os pagãos e os povos de Israel contra Jesus, teu santo servo, a quem ungiste, 28a fim de executarem tudo o que a tua mão e a tua vontade haviam predeterminado que sucedesse. 29Agora, Senhor, olha as ameaças que fazem e concede que os teus servos anunciem corajosamente a tua palavra. 30Estende a mão para que se realizem curas, sinais e prodígios por meio do nome do teu santo servo Jesus.' 31Quando terminaram a oração, tremeu o lugar onde estavam reunidos. Todos, então, ficaram cheios do Espírito Santo e anunciavam corajosamente a palavra de Deus."
     },
     "psalm": {
       "reference": "Salmo 2",
+      "refrain": "Felizes hão de ser todos aqueles que põem sua esperança no Senhor.",
       "text": "- Por que os povos agitados se revoltam? por que tramam as nações projetos vãos? Por que os reis de toda a terra se reúnem, e conspiram os governos todos juntos contra o Deus onipotente e o seu Ungido? 'Vamos quebrar suas correntes', dizem eles, 'e lançar longe de nós o seu domínio!'\n\n- Ri-se deles que mora lá nos céus; zomba deles o Senhor onipotente. Ele, então, em sua ira os ameaça, e em seu furor os faz tremer, quando lhes diz: 'Fui eu mesmo que escolhi este meu Rei, e em Sião, meu monte santo, o consagrei!'\n\n- O decreto do Senhor promulgarei, foi assim que me falou o Senhor Deus: 'Tu és meu Filho, e eu hoje te gerei! Podes pedir-me, e em resposta eu te darei por tua herança os povos todos e as nações, e há de ser a terra inteira o teu domínio. Com cetro férreo haverás de dominá-los, e quebrá-los como um vaso de argila!'"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 3, 1-8",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, aleluia, aleluia.",
+        "verse": "Se com Cristo ressurgistes, procurai o que é do alto, onde Cristo está sentado à direita de Deus Pai (Cl 3,1):"
+      },
       "text": "1Havia um chefe judaico, membro do grupo dos fariseus, chamado Nicodemos, 2que foi ter com Jesus, de noite, e lhe disse: 'Rabi, sabemos que vieste como mestre da parte de Deus. De fato, ninguém pode realizar os sinais que tu fazes, a não ser que Deus esteja com ele'. 3Jesus respondeu: 'Em verdade, em verdade te digo, se alguém não nasce do alto, não pode ver o Reino de Deus'. 4Nicodemos disse: 'Como é que alguém pode nascer, se já é velho? Poderá entrar outra vez no ventre de sua mãe?' 5Jesus respondeu: 'Em verdade, em verdade te digo, se alguém não nasce da água e do Espírito, não pode entrar no Reino de Deus.' 6Quem nasce da carne é carne; quem nasce do Espírito é espirito. 7Não te admires por eu haver dito: Vós deveis nascer do alto. 8O vento sopra onde quer e tu podes ouvir o seu ruído, mas não sabes de onde vem, nem para onde vai. Assim acontece a todo aquele que nasceu do Espírito'."
     }
   },

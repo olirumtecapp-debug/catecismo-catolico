@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Sabedoria 6,1-11",
+      "intro": "Leitura do Livro da Sabedoria:",
       "text": "1Escutai, ó reis, e compreendei. Instrui-vos, governadores dos confins da terra! 2Prestai atenção, vós que dominais as multidões e vos orgulhais do número de vossos súditos. 3Pois o poder vos foi dado pelo Senhor e a soberania, pelo Altíssimo. É ele quem examinará as vossas obras e sondará as vossas intenções; 4apesar de estardes ao serviço do seu reino, não julgastes com retidão, nem observastes a Lei, nem procedestes conforme a vontade de Deus. 5Por isso, ele cairá de repente sobre vós, de modo terrível, porque um julgamento implacável será feito sobre os poderosos. 6O pequeno pode ser perdoado por misericórdia, mas os poderosos serão examinados com poder. 7O Senhor de todos não recuará diante de ninguém nem se deixará impressionar pela grandeza, porque o pequeno e o grande, foi ele quem os fez, e a sua providência é a mesma para com todos; 8mas para os poderosos, o julgamento será severo. 9A vós, pois, governantes, dirigem-se as minhas palavras, para que aprendais a Sabedoria e não venhais a tropeçar. 10Os que observam fielmente as coisas santas serão justificados; e os que as aprenderem vão encontrar sua defesa. 11Portanto, desejai ardentemente minhas palavras, amai-as e sereis instruídos."
     },
     "psalm": {
       "reference": "Salmo 81 (82)",
+      "refrain": "Levantai-vos, ó Senhor, julgai a terra!",
       "text": "- Fazei justiça aos indefesos e aos órfãos, ao pobre e ao humilde absolvei! Libertai o oprimido, o infeliz, da mão dos opressores arrancai-os!'\n\n- Eu disse: 'Ó juízes, vós sois deuses, sois filhos todos vós do Deus Altíssimo! E, contudo, como homens morrereis, caireis como qualquer dos poderosos!'"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 17, 11-19",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Em tudo dai graças, pois esta é a vontade de Deus para convosco, em Critos, o Senhor (1Ts 5,18)."
+      },
       "text": "11Aconteceu que, caminhando para Jerusalém, Jesus passava entre a Samaria e a Galiléia. 12Quando estava para entrar num povoado, dez leprosos vieram ao seu encontro. Pararam à distância, 13e gritaram: 'Jesus, Mestre, tem compaixão de nós!' 14Ao vê-los, Jesus disse: 'Ide apresentar-vos aos sacerdotes.' Enquanto caminhavam, aconteceu que ficaram curados. 15Um deles, ao perceber que estava curado, voltou glorificando a Deus em alta voz; 16atirou-se aos pés de Jesus, com o rosto por terra, e lhe agradeceu. E este era um samaritano. 17Então Jesus lhe perguntou: 'Não foram dez os curados? E os outro nove, onde estão? 18Não houve quem voltasse para dar glória a Deus, a não ser este estrangeiro?' 19E disse-lhe: 'Levanta-te e vai! Tua fé te salvou.'"
     }
   },

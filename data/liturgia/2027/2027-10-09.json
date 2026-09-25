@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Joel 4,12-21",
+      "intro": "Leitura da Profecia de Joel:",
       "text": "Assim fala o Senhor: 12Levantem-se e ponham-se em marcha os povos rumo ao Vale de Josafá; ali me sentarei como juiz para julgar todas as nações em redor. 13Tomai a foice, pois a colheita está madura; vinde calcar, que o lagar está cheio: as tinas transbordam, porque grande é a sua malícia.. 14Povos e mais povos no Vale da Decisão: o dia do Senhor está próximo no Vale da Decisão. 15Escureceram o sol e a lua e as estrelas perderam o brilho. 16Desde Sião rugirá o Senhor, fará ouvir sua voz desde Jerusalém; tremerão céus e terra, mas o Senhor será refúgio para o seu povo, será a fortaleza dos filhos de Israel. 17Sabereis, então, que eu sou o Senhor, vosso Deus, que habito em Sião, meu santo monte; Jerusalém será lugar sagrado, por onde não mais passarão estranhos. 18Acontecerá naquele dia que os montes farão correr vinho, e as colinas manarão leite; aos regatos de Judá não há de faltar água, e da casa do Senhor brotará uma fonte, que irá alimentar a torrente de Setim. 19O Egito será devastado, e a Iduméia, devastada e deserta, por causa de suas atrocidades contra os filhos de Judá, derramando sangue inocente em suas terras. 20Judá será habitada para sempre, e Jerusalém, por todos os séculos. 21Vingarei meu sangue, não o deixarei sem castigo. O Senhor está habitando em Sião."
     },
     "psalm": {
       "reference": "Salmo 96 (97)",
+      "refrain": "Ó justos, alegrai-vos no Senhor!",
       "text": "- Deus é Rei! Exulte a terra de alegria, e as ilhas numerosas rejubilem! Treva e nuvem o rodeiam no seu trono, que se apóia na justiça e no direito.\n\n- As montanhas se derretem como cera ante a face do Senhor de toda a terra; e assim proclama o céu sua justiça, todos os povos podem ver a sua glória.\n\n- Uma luz já se levanta para os justos, e a alegria, para os retos corações. Homens justos, alegrai-vos no Senhor, celebrai e bendizei seu santo nome!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 27-28",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Feliz quem ouve e observa a palavra de Deus! (Lc 11,28)."
+      },
       "text": "Naquele tempo: 27Enquanto Jesus falava, uma mulher levantou a voz no meio da multidão e lhe disse: 'Feliz o ventre que te trouxe e os seios que te amamentaram.' 28Jesus respondeu: 'Muito mais felizes são aqueles que ouvem a palavra de Deus e a põem em prática.'"
     }
   },

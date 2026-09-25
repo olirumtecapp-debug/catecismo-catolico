@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 15,1-6",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, 1chegaram alguns da Judeia e ensinavam aos irmãos de Antioquia, dizendo: \"Vós não podereis salvar-vos se não fordes circuncidados, como ordena a lei de Moisés\". 2Isso provocou muita confusão, e houve uma grande discussão de Paulo e Barnabé com eles. Finalmente, decidiram que Paulo, Barnabé e alguns outros fossem a Jerusalém para tratar dessa questão com os apóstolos e os anciãos. 3Depois de terem sido acompanhados pela comunidade, Paulo e Barnabé atravessaram a Fenícia e a Samaria. Contaram sobre a conversão dos pagãos, causando grande alegria entre todos os irmãos. 4Chegando a Jerusalém, foram recebidos pelos apóstolos e os anciãos e narraram as maravilhas que Deus tinha realizado por meio deles. 5Alguns dos que tinham pertencido ao partido dos fariseus e que haviam abraçado a fé levantaram-se e disseram que era preciso circuncidar os pagãos e obrigá-los a observar a lei de Moisés. 6Então, os apóstolos e os anciãos reuniram-se para tratar desse assunto."
     },
     "psalm": {
       "reference": "Salmo 121 (122)",
+      "refrain": "Que alegria quando ouvi que me disseram: \"Vamos à casa do Senhor!\"",
       "text": "- Que alegria quando ouvi que me disseram: \"Vamos à casa do Senhor!\" E agora nossos pés já se detêm, Jerusalém, em tuas portas.\n\n- Jerusalém, cidade bem edificada num conjunto harmonioso; para lá sobem as tribos de Israel, as tribos do Senhor.\n\n- Para louvar, segundo a lei de Israel, o nome do Senhor. A sede da justiça lá está e o trono de Davi."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 15, 1-8",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Ficai em mim e eu em vós ficarei, diz Jesus; quem em mim permanece há de dar muito fruto (Jo 15,4s)."
+      },
       "text": "Naquele tempo, disse Jesus a seus discípulos: 1\"Eu sou a videira verdadeira, e meu Pai é o agricultor. 2Todo ramo que em mim não dá fruto, ele o corta; e todo ramo que dá fruto, ele o limpa, para que dê mais fruto ainda. 3Vós já estais limpos por causa da palavra que eu vos falei. 4Permanecei em mim, e eu permanecerei em vós. Como o ramo não pode dar fruto por si mesmo se não permanecer na videira, assim também vós não podereis dar fruto se não permanecerdes em mim. 5Eu sou a videira, e vós, os ramos. Aquele que permanece em mim, e eu nele, esse produz muito fruto; porque sem mim nada podeis fazer. 6Quem não permanecer em mim será lançado fora como um ramo e secará. Tais ramos são recolhidos, lançados no fogo e queimados. 7Se permanecerdes em mim e minhas palavras permanecerem em vós, pedi o que quiserdes e vos será dado. 8Nisto meu Pai é glorificado: que deis muito fruto e vos torneis meus discípulos\"."
     }
   },

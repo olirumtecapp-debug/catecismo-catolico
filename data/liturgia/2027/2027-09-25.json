@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Zacarias 2,5-9.14-15",
+      "intro": "Leitura da profecia de Zacarias:",
       "text": "5Levantei os olhos e eis que vi um homem com um cordel de medir na mão. 6Perguntei-lhe: 'Aonde vais?' Respondeu-me: 'Vou medir Jerusalém, para ver qual é a sua largura e o seu comprimento.' 7Eis que apareceu o anjo que falava em mim, enquanto lhe vinha ao encontro um outro anjo, 8que lhe disse: 'Corre a falar com esse moço, dizendo: A população de Jerusalém precisa ficar sem muralha, em vista da multidão de homens e animais que vivem no seu interior. 9Eu serei para ela, diz o Senhor, muralha de fogo ao seu redor, e mostrarei minha glória no meio dela. 14Rejubila, alegra-te, cidade de Sião, eis que venho para habitar no meio de ti, diz o Senhor. 15aMuitas nações se aproximarão do Senhor, naquele dia, e serão o seu povo. Habitarei no meio de ti."
     },
     "psalm": {
       "reference": "Salmo Jr 31",
+      "refrain": "O Senhor nos guardará qual pastor a seu rebanho.",
       "text": "- Ouvi, nações, a palavra do Senhor e anunciai-a nas ilhas mais distantes: 'Quem dispersou Israel, vai congregá-lo, e o guardará qual pastor a seu rebanho!\n\n- Pois, na verdade, o Senhor remiu Jacó e o libertou do poder do prepotente. 12aVoltarão para o monte de Sião, entre brados e cantos de alegria 12bafluirão para as bênçãos do Senhor.\n\n- Então a virgem dançará alegremente, também o jovem e o velho exultarão; mudarei em alegria o seu luto, serei consolo e conforto após a guerra."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 43-45",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Jesus Cristo salvador destruiu o mal e a morte; fez brilhar, pelo evangelho, a luz e a vida imperecíveis (2Tm 1, 10)"
+      },
       "text": "Naquele tempo: 43bTodos estavam admirados com todas as coisas que Jesus fazia. Então Jesus disse a seus discípulos: 44'Prestai bem atenção às palavras que vou dizer: O Filho do Homem vai ser entregue nas mãos dos homens.' 45Mas os discípulos não compreendiam o que Jesus dizia. O sentido lhes ficava escondido, de modo que não podiam entender; e eles tinham medo de fazer perguntas sobre o assunto."
     }
   },

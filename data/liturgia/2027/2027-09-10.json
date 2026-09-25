@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Timóteo 1,1-2.12-14",
+      "intro": "Início da primeira carta de São Paulo a Timóteo:",
       "text": "1Paulo, apóstolo de Cristo Jesus, por ordem de Deus, nosso Salvador, e de Cristo Jesus, nossa esperança, 2a Timóteo, verdadeiro filho na fé: a graça, a misericórdia e a paz de Deus Pai e de Cristo Jesus, Nosso Senhor. 12Agradeço àquele que me deu força, Cristo Jesus, nosso Senhor, pela confiança que teve em mim ao designar-me para o seu serviço, 13a mim, que antes blasfemava, perseguia e insultava. Mas encontrei misericórdia, porque agia com a ignorância de quem não tem fé. 14Transbordou a graça de nosso Senhor com a fé e o amor que há em Cristo Jesus."
     },
     "psalm": {
       "reference": "Salmo 15 (16)",
+      "refrain": "O Senhor é a porção da minha herança!",
       "text": "- Guardai-me, ó Deus, porque em vós me refugio! Digo ao Senhor: 'Somente vós sois meu Senhor. Ó Senhor, sois minha herança e minha taça, meu destino está seguro em vossas mãos!\n\n- Eu bendigo o Senhor, que me aconselha, e até de noite me adverte o coração. Tenho sempre o Senhor ante meus olhos, pois se o tenho a meu lado não vacilo.\n\n- Vós me ensinais vosso caminho para a vida; junto a vós, felicidade sem limites, delícia eterna e alegria ao vosso lado!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 39-42",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Vossa palavra é a verdade; santificai-nos na verdade! (Jo 17, 17)"
+      },
       "text": "Naquele tempo: 39Jesus contou uma parábola aos discípulos: 'Pode um cego guiar outro cego? Não cairão os dois num buraco? 40Um discípulo não é maior do que o mestre; todo discípulo bem formado será como o mestre. 41Por que vês tu o cisco no olho do teu irmão, e não percebes a trave que há no teu próprio olho? 42Como podes dizer a teu irmão: Irmão, deixa-me tirar o cisco do teu olho, quando tu não vês a trave no teu próprio olho? Hipócrita! Tira primeiro a trave do teu olho, e então poderás enxergar bem para tirar o cisco do olho do teu irmão."
     }
   },

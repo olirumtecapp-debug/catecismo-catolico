@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 22,30; 23,6-11",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias: 30Querendo saber com certeza por que Paulo estava sendo acusado pelos judeus, o tribuno soltou-o e mandou reunir os chefes dos sacerdotes e todo o conselho dos anciãos. Depois fez trazer Paulo e colocou-o diante deles. 23,6Sabendo que uma parte dos presentes eram saduceus e a outra parte eram fariseus, Paulo exclamou no conselho dos anciãos: 'Irmãos, eu sou fariseu e filho de fariseus. Estou sendo julgado por causa da nossa esperança na ressurreição dos mortos.' 7Apenas falou isso, armou-se um conflito entre fariseus e saduceus e a assembléia se dividiu. 8Com efeito, os saduceus dizem que não há ressurreição, nem anjo, nem espírito, enquanto os fariseus sustentam uma coisa e outra. 9Houve, então, uma enorme gritaria. Alguns doutores da Lei, do partido dos fariseus, levantaram-se e começaram a protestar, dizendo: 'Não encontramos nenhum mal neste homem. E se um espírito ou anjo tivesse falado com ele?' 10E o conflito crescia cada vez mais. Receando que Paulo fosse despedaçado por eles, o comandante ordenou que os soldados descessem e o tirassem do meio deles, levando-o de novo para o quartel. 11Na noite seguinte, o Senhor aproximou-se de Paulo e lhe disse: 'Tem confiança. Assim como tu deste testemunho de mim em Jerusalém, é preciso que tu sejas também minha testemunha em Roma.'"
     },
     "psalm": {
       "reference": "Salmo 15 (16)",
+      "refrain": "Guardai-me, ó Deus, porque em vós me refugio!",
       "text": "- Guardai-me, ó Deus, porque em vós me refugio! Digo ao Senhor: 'Somente vós sois meu Senhor. Ó Senhor, sois minha herança e minha taça, meu destino está seguro em vossas mãos!\n\n- Eu bendigo o Senhor, que me aconselha, e até de noite me adverte o coração. Tenho sempre o Senhor ante meus olhos, pois se o tenho a meu lado não vacilo.\n\n- Eis por que meu coração está em festa, minha alma rejubila de alegria, e até meu corpo no repouso está tranquilo; pois não haveis de me deixar entregue à morte, nem vosso amigo conhecer a corrupção.\n\n- Vós me ensinais vosso caminho para a vida; junto a vós, felicidade sem limites, delícia eterna e alegria ao vosso lado!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 17, 20-26",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Para que todos sejam um, diz o Senhor, como tu estás em mim e eu em ti, para que o mundo possa crer que me enviaste (Jo 17, 21)"
+      },
       "text": "Naquele tempo, Jesus ergueu os olhos ao céu e rezou, dizendo: Pai Santo, 20eu não te rogo somente por eles, mas também por aqueles que vão crer em mim pela sua palavra, 21para que todos sejam um como tu, Pai, estás em mim e eu em ti, e para que eles estejam em nós, a fim de que o mundo creia que tu me enviaste. 22Eu dei-lhes glória que tu me deste, para que eles sejam um, como nós somos um: 23eu neles e tu em mim, para que assim eles cheguem à unidade perfeita e o mundo reconheça que tu me enviaste e os amaste, como me amaste a mim. 24Pai, aqueles que me deste, quero que estejam comigo onde eu estiver, para que eles contemplem a minha glória, glória que tu me deste porque me amaste antes da fundação do universo. 25Pai justo, o mundo não te conheceu, mas eu te conheci, e estes também conheceram que tu me enviaste. 26Eu lhes fiz conhecer o teu nome, e o tornarei conhecido ainda mais, para que o amor com que me amaste esteja neles, e eu mesmo esteja neles'."
     }
   },

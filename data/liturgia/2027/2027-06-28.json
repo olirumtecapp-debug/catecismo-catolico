@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Gênesis 18,16-33",
+      "intro": "Leitura do livro do Gênesis:",
       "text": "De junto ao carvalho de Mambré, 16os homens levantaram-se e partiram na direção de Sodoma. Abraão acompanhava-os para encaminhá-los. 17E o Senhor disse consigo: \"Acaso poderei ocultar a Abraão o que vou fazer? 18Pois Abraão virá a ser uma nação grande e forte, e nele serão abençoadas todas as nações da terra. 19De fato, eu o escolhi, para que ensine seus filhos e sua família a guardarem os caminhos do Senhor, praticando a justiça e o direito, a fim de que o Senhor cumpra em favor de Abraão tudo o que lhe prometeu\". 20Então, o Senhor disse: \"O clamor contra Sodoma e Gomorra cresceu e agravou-se muito o seu pecado. 21Vou descer para verificar se as suas obras correspondem ou não ao clamor que chegou até mim\". 22Partindo dali, os homens dirigiram-se a Sodoma, enquanto Abraão ficou na presença do Senhor. 23Então, aproximando-se, disse Abraão: \"Vais realmente exterminar o justo com o ímpio? 24Se houvesse cinquenta justos na cidade, acaso irias exterminá-los? Não pouparias o lugar por causa dos cinquenta justos que ali vivem? 25Longe de ti agir assim, fazendo morrer o justo com o ímpio, como se o justo fosse igual ao ímpio. Longe de ti! O juiz de toda a terra não faria justiça?\" 26O Senhor respondeu: \"Se eu encontrasse em Sodoma cinquenta justos, pouparia, por causa deles, a cidade inteira\". 27Abraão prosseguiu, dizendo: \"Estou sendo atrevido em falar a meu Senhor, eu que sou pó e cinza. 28Se dos cinquenta justos faltassem cinco, destruirias, por causa dos cinco, a cidade inteira?\" O Senhor respondeu: \"Não destruiria se achasse ali quarenta e cinco justos\". 29Insistiu ainda Abraão e disse: \"E se houvesse quarenta?\" Ele respondeu: \"Por causa dos quarenta, não o faria\". 30Abraão tornou a insistir: \"Não se irrite o meu Senhor se ainda falo. E se houvesse apenas trinta justos?\" Ele respondeu: \"Também não o faria se encontrasse trinta\". 31Tornou Abraão a insistir: \"Já que me atrevi a falar a meu Senhor, e se houver vinte justos?\" Ele respondeu: \"Não a iria destruir por causa dos vinte\". 32Abraão disse: \"Que o meu Senhor não se irrite se eu falar só mais uma vez: e se houvesse apenas dez?\" Ele respondeu: \"Por causa dos dez, não a destruiria\". 33Tendo acabado de falar, o Senhor retirou-se, e Abraão voltou para a sua tenda."
     },
     "psalm": {
       "reference": "Salmo 102 (103)",
+      "refrain": "O Senhor é indulgente, é favorável.",
       "text": "- Bendize, ó minha alma, ao Senhor, e todo o meu ser, seu santo nome! Bendize, ó minha alma, ao Senhor, não te esqueças de nenhum de seus favores!\n\n- Pois ele te perdoa toda culpa e cura toda a tua enfermidade; da sepultura ele salva a tua vida e te cerca de carinho e compaixão.\n\n- O Senhor é indulgente, é favorável, é paciente, é bondoso e compassivo. Não fica sempre repetindo as suas queixas nem guarda eternamente o seu rancor.\n\n- Não nos trata como exigem nossas faltas nem nos pune em proporção às nossas culpas. Quanto os céus por sobre a terra se elevam, tanto é grande o seu amor aos que o temem."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 8, 18-22",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Oxalá ouvísseis hoje a sua voz: Não fecheis os corações como em Meriba! (Sl 94,8)."
+      },
       "text": "Naquele tempo, 18vendo uma multidão ao seu redor, Jesus mandou passar para a outra margem do lago. 19Então um mestre da lei aproximou-se e disse: \"Mestre, eu te seguirei aonde quer que tu vás\". 20Jesus lhe respondeu: \"As raposas têm suas tocas e as aves dos céus têm seus ninhos; mas o Filho do homem não tem onde reclinar a cabeça\". 21Um outro dos discípulos disse a Jesus: \"Senhor, permite-me que primeiro eu vá sepultar meu pai\". 22Mas Jesus lhe respondeu: \"Segue-me e deixa que os mortos sepultem os seus mortos\"."
     }
   },

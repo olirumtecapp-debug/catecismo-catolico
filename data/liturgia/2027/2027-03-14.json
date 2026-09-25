@@ -11,6 +11,7 @@
     },
     "psalm": {
       "reference": "Sl 50(51),3-4.12-13.14-15 (R. 12a)",
+      "refrain": "Criai em mim um coração que seja puro.",
       "text": "Sl 50(51),3-4.12-13.14-15 (R. 12a) ℟. Criai em mim um coração que seja puro. 3 Tende piedade, ó meu Deus, misericórdia! * Na imensidão de vosso amor, purificai-me! 4 Lavai-me todo inteiro do pecado, * e apagai completamente a minha culpa! 12 Criai em mim um coração que seja puro, * dai-me de novo um espírito decidido. 13 Ó Senhor, não me afasteis de vossa face, * nem retireis de mim o vosso Santo Espírito! 14 Dai-me de novo a alegria de ser salvo * e confirmai-me com espírito generoso! 15 Ensinarei vosso caminho aos pecadores, * e para vós se voltarão os transviados."
     },
     "secondReading": {
@@ -19,6 +20,7 @@
     },
     "gospel": {
       "reference": "Jo 12,20-33",
+      "acclamation": null,
       "text": "Jo 12,26 ℟. Glória a vós, ó Cristo, verbo de Deus. ℣. Se alguém me quer servir, que venha atrás de mim; e onde eu estiver, ali estará meu servo. EVANGELHO Se o grão de trigo cair na terra e morrer, produzirá muito fruto. Proclamação do Evangelho de Jesus Cristo segundo João 12,20-33 Naquele tempo, 20 havia alguns gregos entre os que tinham subido a Jerusalém, para adorar durante a festa. 21 Aproximaram-se de Filipe, que era de Betsaida da Galileia, e disseram: \"Senhor, gostaríamos de ver Jesus\". 22 Filipe combinou com André, e os dois foram falar com Jesus. 23 Jesus respondeu-lhes: \"Chegou a hora em que o Filho do Homem vai ser glorificado. 24 Em verdade, em verdade vos digo: Se o grão de trigo que cai na terra não morre, ele continua só um grão de trigo; mas se morre, então produz muito fruto. 25 Quem se apega à sua vida, perde-a; mas quem faz pouca conta de sua vida neste mundo conservá-la-á para a vida eterna. 26 Se alguém me quer servir, siga-me, e onde eu estou estará também o meu servo. Se alguém me serve, meu Pai o honrará. 27 Agora sinto-me angustiado. E que direi? 'Pai, livra-me desta hora!'? Mas foi precisamente para esta hora que eu vim. 28 Pai, glorifica o teu nome!\" Então, veio uma voz do céu: \"Eu o glorifiquei e o glorificarei de novo!\" 29 A multidão que aí estava e ouviu, dizia que tinha sido um trovão. Outros afirmavam: \"Foi um anjo que falou com ele\". 30 Jesus respondeu e disse: \"Essa voz que ouvistes não foi por causa de mim, mas por causa de vós. 31 É agora o julgamento deste mundo. Agora o chefe deste mundo vai ser expulso, 32 e eu, quando for elevado da terra, atrairei todos a mim\". 33 Jesus falava assim para indicar de que morte iria morrer. ℣."
     }
   },

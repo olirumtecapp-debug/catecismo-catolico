@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 48,1-4.9-11",
+      "intro": "Leitura do Livro do Eclesiástico:",
       "text": "Naqueles dias: 1O profeta Elias surgiu como um fogo, e sua palavra queimava como uma tocha. 2Fez vir a fome sobre eles e, no seu zelo, reduziu-os a pouca gente. 3Pela palavra do Senhor fechou o céu e de lá fez cair fogo por três vezes. 4Ó Elias, como te tornaste glorioso por teus prodígios! Quem poderia gloriar-se de ser semelhante a ti? 9Tu foste arrebatado num turbilhão de fogo, num carro de cavalos também de fogo, 10tu, nas ameaças para os tempos futuros, foste designado para acalmar a ira do Senhor antes do furor, para reconduzir o coração do pai ao filho, e restabelecer as tribos de Jacó. 11Felizes os que te viram, e os que adormeceram na tua amizade!"
     },
     "psalm": {
       "reference": "Salmo 79 (80)",
+      "refrain": "Convertei-nos, ó Senhor, resplandecei a vossa face e nós seremos salvos!",
       "text": "- Ó Pastor de Israel, prestai ouvidos. Vós que sobre os querubins vos assentais. Despertai vosso poder, ó nosso Deus e vinde logo nos trazer a salvação!\n\n- Voltai-vos para nós, Deus do universo! Olhai dos altos céus e observai. Visitai a vossa vinha e protegei-a! Foi a vossa mão direita que a plantou; protegei-a, e ao rebento que firmastes!\n\n- Pousai a mão por sobre o vosso Protegido, o filho do homem que escolhestes para vós! E nunca mais vos deixaremos, Senhor Deus! Dai-nos vida, e louvaremos vosso nome!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 17, 10-13",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Preparai o caminho do Senhor, endireitai suas veredas! Toda carne há de ver a salvação que vem de Deus!"
+      },
       "text": "Ao descerem do monte, 10os discípulos perguntaram a Jesus: 'Por que os mestres da Lei dizem que Elias deve vir primeiro?' 11Jesus respondeu: 'Elias vem e colocará tudo em ordem. 12Ora, eu vos digo: Elias já veio, mas eles não o reconheceram. Ao contrário, fizeram com ele tudo o que quiseram. Assim também o Filho do Homem será maltratado por eles.' 13Então os discípulos compreenderam que Jesus lhes falava de João Batista."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Coríntios 6,1-10",
+      "intro": "Leitura da segunda carta de São Paulo aos Coríntios:",
       "text": "Irmãos, 1como colaboradores de Cristo, nós vos exortamos a não receberdes em vão a graça de Deus, 2pois ele diz: \"No momento favorável, eu te ouvi e, no dia da salvação, eu te socorri\". É agora o momento favorável, é agora o dia da salvação. 3Não damos a ninguém nenhum motivo de escândalo, para que o nosso ministério não seja desacreditado. 4Mas em tudo nos recomendamos como ministros de Deus, com muita paciência, em tribulações, em necessidades, em angústias, 5em açoites, em prisões, em tumultos, em fadigas, em insônias, em jejuns, 6em castidade, em compreensão, em longanimidade, em bondade, no Espírito Santo, em amor sincero, 7em palavras verdadeiras, no poder de Deus, em armas de justiça, ofensivas e defensivas, 8em honra e desonra, em má ou boa fama; considerados sedutores, sendo, porém, verazes; 9como desconhecidos, sendo, porém, bem conhecidos; como moribundos, embora vivamos; como castigados, mas não mortos; 10como aflitos, mas sempre alegres; como pobres, mas enriquecendo muitos; como quem nada possui, mas tendo tudo."
     },
     "psalm": {
       "reference": "Salmo 97 (98)",
+      "refrain": "O Senhor fez conhecer a salvação.",
       "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram a salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 38-42",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Vossa Palavra é uma luz para os meus passos e uma lâmpada luzente em meu caminho (Sl 118,105)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 38\"Ouvistes o que foi dito: 'Olho por olho e dente por dente!' 39Eu, porém, vos digo, não enfrenteis quem é malvado! Pelo contrário, se alguém te dá um tapa na face direita, oferece-lhe também a esquerda! 40Se alguém quiser abrir um processo para tomar a tua túnica, dá-lhe também o manto! 41Se alguém te forçar a andar um quilômetro, caminha dois com ele! 42Dá a quem te pedir e não vires as costas a quem te pede emprestado\"."
     }
   },

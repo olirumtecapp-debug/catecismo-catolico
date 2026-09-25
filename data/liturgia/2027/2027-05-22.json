@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 17,1-13",
+      "intro": "Leitura do Livro do Eclesiástico:",
       "text": "1Da terra Deus criou o homem, e o formou à sua imagem. 2E à terra o faz voltar novamente, embora o tenha revestido de poder, semelhante ao seu. 3Concedeu-lhe dias contados e tempo determinado, deu-lhe autoridade sobre tudo o que está sobre a terra. 4Em todo ser vivo infundiu o temor do homem, fazendo-o dominar sobre as feras e os pássaros. 5Deu aos homens discernimento, língua, olhos, ouvidos, e um coração para pensar; encheu-os de inteligência e de sabedoria. 6Deu-lhes ainda a ciência do espírito, encheu o seu coração de bom senso e mostrou-lhes o bem e o mal. 7Infundiu o seu temor em seus corações, mostrando-lhes as grandezas de suas obras. 8Concedeu-lhes que se gloriassem de suas maravilhas, louvassem o seu Nome santo e proclamassem as grandezas de suas obras. 9Concedeu-lhes ainda a instrução e entregou-lhes por herança a lei da vida. 10Firmou com eles uma aliança eterna e mostrou-lhes sua justiça e seus julgamentos. 11Seus olhos viram as grandezas da sua glória e seus ouvidos ouviram a glória da sua voz. Ele lhes disse: 'Tomai cuidado com tudo o que é injusto!' 12E a cada um deu mandamentos em relação ao seu próximo. 13Os caminhos dos homens estão sempre diante do Senhor e não podem ficar ocultos a seus olhos."
     },
     "psalm": {
       "reference": "Salmo 102 (103)",
+      "refrain": "O amor do Senhor por quem o respeita, é de sempre e para sempre",
       "text": "- Como um pai se compadece de seus filhos, o Senhor tem compaixão dos que o temem. Porque sabe de que barro somos feitos, e se lembra que apenas somos pó.\n\n- Os dias do homem se parecem com a erva, ela floresce como a flor dos verdes campos; mas apenas sopra o vento ela se esvai, já nem sabemos onde era o seu lugar.\n\n- Mas o amor do Senhor Deus por quem o teme é de sempre e perdura para sempre; e também sua justiça se estende por gerações até os filhos de seus filhos, aos que guardam fielmente sua Aliança."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 10, 13-16",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Graças te dou, ó Pai, Senhor do céu e da terra, pois revelaste os mistérios do teu reino aos pequeninos, escondendo-os aos doutores! (Mt 11,25)."
+      },
       "text": "Naquele tempo: 13Traziam crianças para que Jesus as tocasse. Mas os discípulos as repreendiam. 14Vendo isso, Jesus se aborreceu e disse: 'Deixai vir a mim as crianças. Não as proibais, porque o Reino de Deus é dos que são como elas. 15Em verdade vos digo: quem não receber o Reino de Deus como uma criança, não entrará nele.' 16Ele abraçava as crianças e as abençoava, impondo-lhes as mãos."
     }
   },

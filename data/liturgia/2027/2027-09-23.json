@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Ageu 1,1-8",
+      "intro": "Início da Profecia de Ageu:",
       "text": "1No segundo ano do reinado de Dario, no sexto mês, no primeiro dia, foi dirigida a palavra do Senhor, mediante o profeta Ageu, a Zorobabel, filho de Salatiel, governador de Judá, e a Josué, filho de Josedec, sumo sacerdote: 2'Isto diz o Senhor dos exércitos: Este povo diz: Ainda não chegou o momento de edificar a casa do Senhor'. 3A palavra do Senhor foi assim dirigida, por intermédio do profeta Ageu: 4'Acaso para vós é tempo de morardes em casas revestidas de lambris, enquanto esta casa está em ruínas? 5Isto diz, agora, o Senhor dos exércitos: Considerai, com todo o coração, a conjuntura que estais passando: 6tendes semeado muito, e colhido pouco; tendes-vos alimentado, e não vos sentis satisfeitos, bebeis e não vos embriagais; estais vestidos, e não vos aqueceis; quem trabalha por salário, guarda-o em saco roto. 7Isto diz o Senhor dos exércitos: Considerai, com todo o coração, a difícil conjuntura que estais passando: 8mas subi ao monte, trazei madeira e edificai a casa; ela me será aceitável, nela me glorificarei, diz o Senhor."
     },
     "psalm": {
       "reference": "Salmo 149",
+      "refrain": "O Senhor ama seu povo de verdade.",
       "text": "- Cantai ao Senhor Deus um canto novo, e o seu louvor na assembléia dos fiéis! Alegre-se Israel em Quem o fez, e Sião se rejubile no seu Rei!\n\n- Com danças glorifiquem o seu nome, toquem harpa e tambor em sua honra! Porque, de fato, o Senhor ama seu povo e coroa com vitória os seus humildes.\n\n- Exultem os fiéis por sua glória, e cantando se levantem de seus leitos; com louvores do Senhor em sua boca eis a glória para todos os seus santos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 7-9",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Sou o caminho, a verdade e a vida; ninguém vem ao Pai senão por mim (Jo 14,6)."
+      },
       "text": "Naquele tempo: 7O tetrarca Herodes ouviu falar de tudo o que estava acontecendo, e ficou perplexo, porque alguns diziam que João Batista tinha ressuscitado dos mortos. 8Outros diziam que Elias tinha aparecido; outros ainda, que um dos antigos profetas tinha ressuscitado. 9Então Herodes disse: 'Eu mandei degolar João. Quem é esse homem, sobre quem ouço falar essas coisas?' E procurava ver Jesus."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 4,12-22",
+      "intro": "Leitura do livro do Eclesiástico:",
       "text": "12 A sabedoria inspira a vida aos seus filhos, ela toma sob a sua proteção aqueles que a procuram; ela os precede no caminho da justiça. 13 Aquele que a ama, ama a vida; aqueles que velam para encontrá-la sentirão sua doçura. 14 Aqueles que a possuem terão a vida como herança, e Deus abençoará todo o lugar onde ele entrar. 15 Aqueles que a servem serão obedientes ao Santo; aqueles que a amam serão amados por Deus. 16 Aquele que a ouve julgará as nações; aquele que é atento em contemplá-la permanecerá seguro. 17 Quem nela põe sua confiança tê-la-á como herança e sua posteridade a possuirá, 18 pois na provação ela anda com ele, e escolhe-o em primeiro lugar. 19 Ela traz-lhe o temor, o pavor e a aprovação. Ela o atormenta com sua penosa disciplina, até que, tendo-o experimentado nos seus pensamentos, ela possa confiar nele. 20 Então ela o porá firme, voltará a ele em linha reta. Ela o cumula de alegria, 21 desvenda-lhe seus segredos e enriquece-o com tesouros de ciência, de inteligência e de justiça. 22 Porém, se ele se transviar, ela o abandonará, e o entregará às mãos do seu inimigo."
     },
     "psalm": {
       "reference": "Salmo 118(119)",
+      "refrain": "Os que amam vossa lei têm grande paz!",
       "text": "- Os que amam vossa lei têm grande paz, e não há nada que os faça tropeçar.\n\n- Serei fiel à vossa lei, vossa aliança; os meus caminhos estão todos ante vós.\n\n- Que prorrompam os meus lábios em canções, pois me fizestes conhecer vossa vontade!\n\n- Desejo a vossa salvação ardentemente e encontro em vossa lei minhas delícias!\n\n- Possa eu viver e para sempre vos louvar; e que me ajudem, ó Senhor, vossos conselhos!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 9,38-40",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Sou o caminho, a verdade e a vida, ninguém vem ao Pai, senão por mim (Jo 14,6)."
+      },
       "text": "Naquele tempo, 38João disse a Jesus: \"Mestre\", disse João, \"vimos um homem expulsando demônios em teu nome e procuramos impedi-lo, porque ele não era um dos nossos.\" 39 \"Não o impeçam\", disse Jesus. \"Ninguém que faça um milagre em meu nome, pode falar mal de mim logo em seguida, 40 pois quem não é contra nós está a nosso favor."
     }
   },

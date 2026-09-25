@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiástico 51,17-27",
+      "intro": "Leitura do livro do Eclesiástico:",
       "text": "17Quero dar-te graças e louvar-te, e bendirei o nome do Senhor. 18Na minha juventude, antes de andar errante, procurei abertamente a sabedoria em minhas orações; 19diante do santuário eu suplicava por ela, e até ao fim vou procurá-la; ela floresceu, como a uva amadurecida. 20Meu coração nela colocou sua alegria; meu pé andou por um caminho reto, e desde a juventude segui suas pegadas. 21Inclinei um pouco o ouvido e a acolhi, 22e encontrei para mim abundante instrução, e por meio dela fiz grandes progressos: 23por isso glorifico a quem me dá a sabedoria. 24Porque resolvi pô-la em prática, procurei o bem e não serei confundido. 25Minha alma aprendeu com ela a ser valente e na prática da Lei procurei ser cuidadoso. 26Levantei minhas mãos para o alto e me arrependi por tê-la ignorado. 27Para ela orientei a minha alma e na minha purificação a encontrei."
     },
     "psalm": {
       "reference": "Salmo 18 (19B)",
+      "refrain": "Os ensinos do Senhor são sempre retos, alegria ao coração.",
       "text": "- A lei do Senhor Deus é perfeita, conforto para a alma! O testemunho do Senhor é fiel, sabedoria dos humildes.\n\n- Os preceitos do Senhor são precisos, alegria ao coração. O mandamento do Senhor é brilhante, para os olhos é uma luz.\n\n- É puro o temor do Senhor, imutável para sempre. Os julgamentos do Senhor são corretos e justos igualmente.\n\n- Mais desejáveis do que o ouro são eles, do que o ouro refinado. Suas palavras são mais doces que o mel, que o mel que sai dos favos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 11, 27-33",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "A palavra de Cristo ricamente habite em vós, dando graças, por ele, a deus Pai! (Cl 3, 16s)"
+      },
       "text": "Naquele tempo: 27Jesus e os discípulos foram de novo a Jerusalém. Enquanto Jesus estava andando no Templo, os sumos sacerdotes, os mestres da Lei e os anciãos aproximaram-se dele e perguntaram: 28'Com que autoridade fazes essas coisas? Quem te deu autoridade para fazer isso?' 29Jesus respondeu: 'Vou fazer-vos uma só pergunta. Se me responderdes, eu vos direi com que autoridade faço isso. 30O batismo de João vinha do céu ou dos homens? Respondei-me.' 31Eles discutiam entre si: 'Se respondermos que vinha do céu, ele vai dizer: 'Por que não acreditastes em João?' 32Devemos então dizer que vinha dos homens?' Mas eles tinham medo da multidão, porque todos, de fato, tinham João na qualidade de profeta. 33Então eles responderam a Jesus: 'Não sabemos.' E Jesus disse: 'Pois eu também não vos digo com que autoridade faço essas coisas.'"
     }
   },

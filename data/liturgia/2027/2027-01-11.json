@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 42,1-4.6-7",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "Assim fala o Senhor: 1'Eis o meu servo - eu o recebo; eis o meu eleito - nele se compraz minh'alma; pus meu espírito sobre ele, ele promoverá o julgamento das nações. 2Ele não clama nem levanta a voz, nem se faz ouvir pelas ruas. 3Não quebra uma cana rachada nem apaga um pavio que ainda fumega; mas promoverá o julgamento para obter a verdade. 4Não esmorecerá nem se deixará abater, enquanto não estabelecer a justiça na terra; os países distantes esperam seus ensinamentos.' 6'Eu, o Senhor, te chamei para a justiça e te tomei pela mão; eu te formei e te constituí como o centro de aliança do povo, luz das nações, 7para abrires os olhos dos cegos, tirar os cativos da prisão, livrar do cárcere os que vivem nas trevas."
     },
     "psalm": {
       "reference": "Salmo 28 (29)",
+      "refrain": "Que o Senhor abençoe, com a paz, o seu povo!",
       "text": "- Filhos de Deus, tributai ao Senhor, tributai-lhe a glória e o poder! Dai-lhe a glória devida ao seu nome; adorai-o com santo ornamento!\n\n- Eis a voz do Senhor sobre as águas, sua voz sobre as águas imensas! Eis a voz do Senhor com poder! Eis a voz do Senhor majestosa.\n\n- Sua voz no trovão reboando! No seu templo os fiéis bradam: 'Glória!' É o Senhor que domina os dilúvios, o Senhor reinará para sempre!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 7-11",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Abriram-se os céus e fez-se ouvir a voz do Pai: Eis meu Filho muito amado; escutai-o, todos vós! (Mc 9,7)."
+      },
       "text": "Naquele tempo, 7João Batista pregava, dizendo: \"Depois de mim virá alguém mais forte do que eu. Eu nem sou digno de me abaixar para desamarrar suas sandálias. 8Eu vos batizei com água, mas ele vos batizará com o Espírito Santo\". 9Naqueles dias, Jesus veio de Nazaré da Galileia, e foi batizado por João no rio Jordão. 10E logo, ao sair da água, viu o céu se abrindo, e o Espírito, como pomba, descer sobre ele. 11E do céu veio uma voz: \"Tu és o meu Filho amado, em ti ponho meu bem-querer\"."
     }
   },

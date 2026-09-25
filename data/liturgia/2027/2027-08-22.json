@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Josué 24,1-2.15-18",
+      "intro": "Leitura do livro de Josué:",
       "text": "Naqueles dias, 1Josué reuniu em Siquém todas as tribos de Israel e convocou os anciãos, os chefes, os juízes e os magistrados, que se apresentaram diante de Deus. 2Então Josué falou a todo o povo: 15\"Se vos parece mal servir ao Senhor, escolhei hoje a quem quereis servir: se aos deuses a quem vossos pais serviram na Mesopotâmia ou aos deuses dos amorreus, em cuja terra habitais. Quanto a mim e à minha família, nós serviremos ao Senhor\". 16E o povo respondeu, dizendo: \"Longe de nós abandonarmos o Senhor para servir a deuses estranhos. 17Porque o Senhor, nosso Deus, ele mesmo é quem nos tirou, a nós e a nossos pais, da terra do Egito, da casa da escravidão. Foi ele quem realizou esses grandes prodígios diante de nossos olhos e nos guardou por todos os caminhos por onde peregrinamos e no meio de todos os povos pelos quais passamos. 18Portanto, nós também serviremos ao Senhor, porque ele é o nosso Deus\"."
     },
     "psalm": {
       "reference": "Salmo 33 (34)",
+      "refrain": "Provai e vede quão suave é o Senhor!",
       "text": "- Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Minha alma se gloria no Senhor; que ouçam os humildes e se alegrem!\n\n- O Senhor pousa seus olhos sobre os justos, e seu ouvido está atento ao seu chamado; mas ele volta a sua face contra os maus, para da terra apagar sua lembrança.\n\n- Clamam os justos, e o Senhor bondoso escuta e de todas as angústias os liberta. Do coração atribulado ele está perto e conforta os de espírito abatido.\n\n- Muitos males se abatem sobre os justos, mas o Senhor de todos eles os liberta. Mesmo os seus ossos ele os guarda e os protege, e nenhum deles haverá de se quebrar.\n\n- A malícia do iníquo leva à morte, e quem odeia o justo é castigado. Mas o Senhor liberta a vida dos seus servos, e castigado não será quem nele espera."
     },
     "secondReading": {
       "reference": "Efésios 5,21-32",
+      "intro": "Leitura da carta de São Paulo aos Efésios:",
       "text": "Irmãos, 21vós que temeis a Cristo, sede solícitos uns para com os outros. 22As mulheres sejam submissas aos seus maridos como ao Senhor. 23Pois o marido é a cabeça da mulher, do mesmo modo que Cristo é a cabeça da Igreja, ele, o salvador do seu corpo. 24Mas como a Igreja é solícita por Cristo, sejam as mulheres solícitas em tudo pelos seus maridos. 25Maridos, amai as vossas mulheres, como o Cristo amou a Igreja e se entregou por ela. 26Ele quis assim torná-la santa, purificando-a com o banho da água unida à Palavra. 27Ele quis apresentá-la a si mesmo esplêndida, sem mancha nem ruga, nem defeito algum, mas santa e irrepreensível. 28Assim é que o marido deve amar a sua mulher, como ao seu próprio corpo. Aquele que ama a sua mulher ama-se a si mesmo. 29Ninguém jamais odiou a sua própria carne. Ao contrário, alimenta-a e cerca-a de cuidados, como o Cristo faz com a sua Igreja; 30e nós somos membros do seu corpo! 31Por isso o homem deixará seu pai e sua mãe e se unirá à sua mulher, e os dois serão uma só carne. 32Este mistério é grande, e eu o interpreto em relação a Cristo e à Igreja."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 6, 60-69",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Ó Senhor, vossas palavras são espírito e vida; as palavras que dizeis, bem que são de eterna vida (Jo 6,63.68)."
+      },
       "text": "Naquele tempo, 60muitos dos discípulos de Jesus que o escutaram, disseram: \"Esta palavra é dura. Quem consegue escutá-la?\" 61Sabendo que seus discípulos estavam murmurando por causa disso mesmo, Jesus perguntou: \"Isto vos escandaliza? 62E quando virdes o Filho do homem subindo para onde estava antes? 63O Espírito é que dá vida, a carne não adianta nada. As palavras que vos falei são espírito e vida. 64Mas entre vós há alguns que não creem\". Jesus sabia, desde o início, quem eram os que não tinham fé e quem havia de entregá-lo. 65E acrescentou: \"É por isso que vos disse: ninguém pode vir a mim a não ser que lhe seja concedido pelo Pai\". 66A partir daquele momento, muitos discípulos voltaram atrás e não andavam mais com ele. 67Então, Jesus disse aos doze: \"Vós também vos quereis ir embora?\" 68Simão Pedro respondeu: \"A quem iremos, Senhor? Tu tens palavras de vida eterna. 69Nós cremos firmemente e reconhecemos que tu és o santo de Deus\"."
     }
   },

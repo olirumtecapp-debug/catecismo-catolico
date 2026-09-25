@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Ester 5,1-2; 7,2-3",
+      "intro": "Leitura do Livro de Ester:",
       "text": "1bEster revestiu-se com vestes de rainha e foi colocar-se no vestíbulo interno do palácio real, frente à residência do rei. O rei estava sentado no trono real, na sala do trono, frente à entrada. 2Ao ver a rainha Ester parada no vestíbulo, olhou para ela com agrado e estendeu-lhe o cetro de ouro que tinha na mão, e Ester aproximou-se para tocar a ponta do cetro. 7,2bEntão, o rei lhe disse: \"O que me pedes, Ester; o que queres que eu faça? Ainda que me pedisses a metade do meu reino, ela te seria concedida\". 3Ester respondeu-lhe: \"Se ganhei as tuas boas graças, ó rei, e se for de teu agrado, concede-me a vida - eis o meu pedido! - e a vida do meu povo - eis o meu desejo!"
     },
     "psalm": {
       "reference": "Salmo 44 (45)",
+      "refrain": "Escutai, minha filha, olhai, ouvi isto: que o Rei se encante com vossa beleza!",
       "text": "- Escutai, minha filha, olhai, ouvi isto: \"Esquecei vosso povo e a casa paterna! Que o Rei se encante com vossa beleza! Prestai-lhe homenagem: é vosso Senhor!\n\n- O povo de Tiro vos traz seus presentes, os grandes do povo vos pedem favores. Majestosa, a princesa real vem chegando, vestida de ricos brocados de ouro.\n\n- Em vestes vistosas ao Rei se dirige, e as virgens amigas lhe formam cortejo, entre cantos de festa e com grande alegria, ingressam, então, no palácio real\"."
     },
     "secondReading": {
       "reference": "Apocalipse 12,1.5.13.15-16",
+      "intro": "Leitura do Livro do Apocalipse de São João:",
       "text": "1Apareceu no céu um grande sinal: uma mulher vestida do sol, tendo a lua debaixo dos pés e sobre a cabeça uma coroa de doze estrelas. 5E ela deu à luz um filho homem, que veio para governar todas as nações com cetro de ferro. Mas o filho foi levado para junto de Deus e do seu trono. 13aQuando viu que tinha sido expulso para a terra, o dragão começou a perseguir a mulher que tinha dado à luz o menino. 15A serpente, então, vomitou como um rio de água atrás da mulher, a fim de a submergir. 16aA terra, porém, veio em socorro da mulher."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 2, 1-11",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Disse a mãe de Jesus aos serventes: \"Fazei tudo o que ele disser!\" (Jo 2,5)."
+      },
       "text": "Naquele tempo: 1Houve um casamento em Caná da Galiléia. A mãe de Jesus estava presente. 2Também Jesus e seus discípulos tinham sido convidados para o casamento. 3Como o vinho veio a faltar, a mãe de Jesus lhe disse: \"Eles não têm mais vinho\". 4\"Mulher, por que dizes isto a mim? Minha hora ainda não chegou.\" 5Sua mãe disse aos que estavam servindo: \"Fazei o que ele vos disser\". 6Estavam seis talhas de pedra colocadas aí para a purificação que os judeus costumam fazer. Em cada uma delas cabiam mais ou menos cem litros. 7Jesus disse aos que estavam servindo: \"Enchei as talhas de água\". Encheram-nas até a boca. 8Jesus disse: \"Agora tirai e levai ao mestre-sala\". E eles levaram. 9O mestre-sala experimentou a água, que se tinha transformado em vinho. Ele não sabia de onde vinha, mas os que estavam servindo sabiam, pois eram eles que tinham tirado a água. 10O mestre-sala chamou então o noivo e lhe disse: \"Todo mundo serve primeiro o vinho melhor e, quando os convidados já estão embriagados, serve o vinho menos bom. Mas tu guardaste o vinho melhor até agora!\" 11Este foi o início dos sinais de Jesus. Ele o realizou em Caná da Galiléia e manifestou a sua glória, e seus discípulos creram nele."
     }
   },

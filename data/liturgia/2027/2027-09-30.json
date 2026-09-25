@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Neemias 8,1-12",
+      "intro": "Leitura do Livro de Neemias:",
       "text": "Naqueles dias: 1Todo o povo se reuniu como um só homem na praça que fica defronte da porta das Águas, e pediu ao escriba Esdras que trouxesse o livro da Lei de Moisés, que o Senhor havia prescrito a Israel. 2O sacerdote Esdras apresentou a Lei diante da assembléia de homens, de mulheres e de todos os que eram capazes de compreender. Era o primeiro dia do sétimo mês. 3Assim, na praça que fica defronte da porta das Águas, Esdras fez a leitura do livro, desde o amanhecer até ao meio-dia, na presença dos homens, das mulheres e de todos os que eram capazes de compreender. E todo o povo escutava com atenção a leitura do livro da Lei. 4aEsdras, o escriba, estava de pé sobre um estrado de madeira, erguido para esse fim. 5Estando num lugar mais alto, ele abriu o livro à vista de todo o povo. E, quando o abriu, todo o povo ficou de pé. 6Esdras bendisse o Senhor, o grande Deus, e todo o povo respondeu, levantando as mãos: 'Amém! Amém!' Depois inclinaram-se e prostraram-se diante do Senhor, com o rosto em terra. 7bOs levitas explicavam a Lei ao povo, e cada um ficou em seu lugar. 8E leram clara e distintamente o livro da Lei de Deus e explicaram seu sentido, de maneira que se pudesse compreender a leitura. 9O governador Neemias e Esdras, sacerdote e escriba, e os levitas que instruíam o povo, disseram a todos: 'Este é um dia consagrado ao senhor, vosso Deus! Não fiqueis tristes nem choreis', pois todo o povo chorava ao ouvir as palavras da Lei. 10E Neemias disse-lhes: 'Ide para vossas casas e comei carnes gordas, tomai bebidas doces e reparti com aqueles que nada prepararam, pois este dia é santo para o nosso Senhor. Não fiqueis tristes, porque a alegria do Senhor será a vossa força'. 11E os levitas acalmavam todo o povo, dizendo: 'Ficai tranqüilos; hoje é um dia santo. Não vos aflijais!' 12E todo o povo se retirou para comer e beber. Distribuíram também aos outros e expandiram-se em grande alegria, pois haviam entendido as palavras que lhes tinham sido explicadas."
     },
     "psalm": {
       "reference": "Salmo 18 (19)",
+      "refrain": "Os ensinos do Senhor são sempre retos, alegria ao coração.",
       "text": "- A lei do Senhor Deus é perfeita, conforto para a alma! O testemunho do Senhor é fiel, sabedoria dos humildes.\n\n- Os preceitos do Senhor são precisos, alegria ao coração. O mandamento do Senhor é brilhante, para os olhos é uma luz.\n\n- É puro o temor do Senhor, imutável para sempre. Os julgamentos do Senhor são corretos e justos igualmente.\n\n- Mais desejáveis do que o ouro são eles, do que o ouro refinado. Suas palavras são mais doces que o mel, que o mel que sai dos favos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 10, 1-12",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Convertei-vos e crede no evangelho, pois o reino de Deus está chegando! (Mc 1,15)."
+      },
       "text": "Naquele tempo: 1O Senhor escolheu outros setenta e dois discípulos e os enviou dois a dois, na sua frente, a toda cidade e lugar aonde ele próprio devia ir. 2E dizia-lhes: 'A messe é grande, mas os trabalhadores são poucos. Por isso, pedi ao dono da messe que mande trabalhadores para a colheita. 3Eis que vos envio como cordeiros para o meio de lobos. 4Não leveis bolsa, nem sacola, nem sandálias, e não cumprimenteis ninguém pelo caminho! 5Em qualquer casa em que entrardes, dizei primeiro: 'A paz esteja nesta casa!' 6Se ali morar um amigo da paz, a vossa paz repousará sobre ele; se não, ela voltará para vós. 7Permanecei naquela mesma casa, comei e bebei do que tiverem, porque o trabalhador merece o seu salário. Não passeis de casa em casa. 8Quando entrardes numa cidade e fordes bem recebidos, comei do que vos servirem, 9curai os doentes que nela houver e dizei ao povo: 'O Reino de Deus está próximo de vós.' 10Mas, quando entrardes numa cidade e não fordes bem recebidos, saindo pelas ruas, dizei: 11Até a poeira de vossa cidade, que se apegou aos nossos pés, sacudimos contra vós. No entanto, sabei que o Reino de Deus está próximo! 12Eu vos digo que, naquele dia, Sodoma será tratada com menos rigor do que essa cidade."
     }
   },

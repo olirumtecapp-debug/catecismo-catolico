@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Leitura do Livro do Gênesis 28,10-22",
+      "intro": "Leitura do Livro do Gênesis:",
       "text": "Naqueles dias: 10Jacó saiu de Bersabéia e dirigiu-se a Harã. 11Chegando a certo lugar, quis passar ali a noite, pois o sol já se havia posto. Tomou uma das pedras do lugar, fez dela travesseiro e ali mesmo adormeceu. 12E viu em sonho uma escada apoiada no chão, com a outra ponta tocando o céu e os anjos de Deus subindo e descendo por ela. 13No alto da escada estava o Senhor que lhe dizia: 'Eu sou o Senhor, Deus de Abraão, teu pai, e Deus de Isaac; darei a ti e à tua descendência a terra em que dormes. 14A tua descendência será como o pó da terra, e te expandirás para o ocidente e o oriente, para o norte e para o sul. Em ti e em tua descendência serão abençoadas todas as nações da terra. 15Estou contigo e te guardarei onde quer que vás, e te reconduzirei a esta terra. Nunca te abandonarei até cumprir o que te prometi'. 16Ao despertar, Jacó disse: 'Sem dúvida, o Senhor está neste lugar e eu não sabia'. 17Cheio de pavor, disse: 'Como é terrível este lugar! Isto aqui só pode ser a casa de Deus e a porta do céu'. 18Jacó levantou-se bem cedo, tomou a pedra de que tinha feito travesseiro e colocou-a de pé para servir de coluna sagrada, derramando óleo sobre ela. 19E deu ao lugar o nome de 'Betel'. Antes, porém, a cidade chamava-se Luza. 20Jacó fez um voto, dizendo: 'Se Deus estiver comigo e me proteger nesta viagem, dando-me pão para comer e roupa para vestir, 21e se eu voltar são e salvo para a casa de meu pai, então o Senhor será o meu Deus. 22aE esta pedra que ergui como coluna sagrada, será uma 'morada de Deus'."
     },
     "psalm": {
       "reference": "Salmo 90 (91)",
+      "refrain": "Vós sois meu Deus, no qual confio inteiramente.",
       "text": "- Quem habita ao abrigo do Altíssimo e vive à sombra do Senhor onipotente, diz ao Senhor: 'Sois meu refúgio e proteção, sois o meu Deus, no qual confio inteiramente'.\n\n- Do caçador e do seu laço ele te livra. Ele te salva da palavra que destrói. Com suas asas haverá de proteger-te, com seu escudo e suas armas, defender-te.\n\n- 'Porque a mim se confiou, hei de livrá-lo e protegê-lo, pois meu nome ele conhece. Ao invocar-me hei de ouvi-lo e atendê-lo, e a seu lado eu estarei em suas dores."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 9, 18-26",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Jesus Cristo salvador destruiu o mal e a morte; fez brilhar, pelo evangelho, a luz ea vida imperecíveis (2Tm 1,10)."
+      },
       "text": "18Enquanto Jesus estava falando, um chefe aproximou-se, inclinou-se profundamente diante dele, e disse: 'Minha filha acaba de morrer. Mas vem, impõe tua mão sobre ela e ela viverá.' 19Jesus levantou-se e o seguiu, junto com os seus discípulos. 20Nisto, uma mulher que sofria de hemorragia, há doze anos, veio por trás dele e tocou a barra do seu manto. 21Ela pensava consigo: 'Se eu conseguir ao menos tocar no manto dele, ficarei curada.' 22Jesus voltou-se e, ao vê-la, disse: 'Coragem, filha! A tua fé te salvou.' E a mulher ficou curada a partir daquele instante. 23Chegando à casa do chefe, Jesus viu os tocadores de flauta e a multidão alvoroçada, 24e disse: 'Retirai-vos, porque a menina não morreu, mas está dormindo.' E começaram a caçoar dele. 25Quando a multidão foi afastada, Jesus entrou, tomou a menina pela mão, e ela se levantou. 26Essa notícia espalhou-se por toda aquela região."
     }
   },

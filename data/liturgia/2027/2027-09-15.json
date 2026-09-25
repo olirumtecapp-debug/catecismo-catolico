@@ -11,12 +11,14 @@
     },
     "psalm": {
       "reference": "Sl 30(31),2-3a.3bc-4.5-6.15-16.20 (R. 17b)",
+      "refrain": "Salvai-me pela vossa compaixão, ó Senhor Deus!",
       "text": "Sl 30(31),2-3a.3bc-4.5-6.15-16.20 (R. 17b) ℟. Salvai-me pela vossa compaixão, ó Senhor Deus! 2 Senhor, eu ponho em vós minha esperança; * que eu não fique envergonhado eternamente! 3a Porque sois justo, defendei-me e libertai-me * apressai-vos, ó Senhor, em socorrer-me! 3b Sede uma rocha protetora para mim, * 3c um abrigo bem seguro que me salve! 4 Sim, sois vós a minha rocha e fortaleza; * por vossa honra orientai-me e conduzi-me! 5 Retirai-me desta rede traiçoeira, * porque sois o meu refúgio protetor! 6 Em vossas mãos, Senhor, entrego o meu espírito, * porque vós me salvareis, ó Deus fiel! 15 A vós, porém, ó meu Senhor, eu me confio, * e afirmo que só vós sois o meu Deus! 16 Eu entrego em vossas mãos o meu destino; * libertai-me do inimigo e do opressor! 20 Como é grande, ó Senhor, vossa bondade, * que reservastes para aqueles que vos temem! Para aqueles que em vós se refugiam, * mostrando, assim, o vosso amor perante os homens."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Jo 19,25-27 ou Lc 2,33-35",
-      "text": "℟. Aleluia, Aleluia, Aleluia. ℣. Feliz a virgem Maria, que, sem passar pela morte, do martírio ganha a palma, ao pé da cruz do Senhor! EVANGELHO OuMãe entre todas bendita, do Filho único aflita, a imensa dor assistia (Stabat Mater).Quanto a ti, uma espada te traspassará a alma. Proclamação do Evangelho de Jesus Cristo segundo João 19,25-27 Naquele tempo, 25 perto da cruz de Jesus, estavam de pé a sua mãe, a irmã da sua mãe, Maria de Cléofas, e Maria Madalena. 26 Jesus, ao ver sua mãe e, ao lado dela, o discípulo que ele amava, disse à mãe: \"Mulher, este é o teu filho\". 27 Depois disse ao discípulo: \"Esta é a tua mãe\". Daquela hora em diante, o discípulo a acolheu consigo. 33 o pai e a mãe de Jesus estavam admirados com o que diziam a respeito dele. 34 Simeão os abençoou e disse a Maria, a mãe de Jesus: \"Este menino vai ser causa tanto de queda como de reerguimento para muitos em Israel. Ele será um sinal de contradição. 35 Assim serão revelados os pensamentos de muitos corações. Quanto a ti, uma espada te traspassará a alma\". ℣."
+      "acclamation": null,
+      "text": "℟. Aleluia, Aleluia, Aleluia. ℣. Feliz a virgem Maria, que, sem passar pela morte, do martírio ganha a palma, ao pé da cruz do Senhor! EVANGELHO 2 leituras à escolha: Proclamação do Evangelho de Jesus Cristo segundo João 19,25-27 Proclamação do Evangelho de Jesus Cristo segundo Lucas 2,33-35 Mãe entre todas bendita, do Filho único aflita, a imensa dor assistia (Stabat Mater). Proclamação do Evangelho de Jesus Cristo segundo João 19,25-27 Naquele tempo, 25 perto da cruz de Jesus, estavam de pé a sua mãe, a irmã da sua mãe, Maria de Cléofas, e Maria Madalena. 26 Jesus, ao ver sua mãe e, ao lado dela, o discípulo que ele amava, disse à mãe: \"Mulher, este é o teu filho\". 27 Depois disse ao discípulo: \"Esta é a tua mãe\". Daquela hora em diante, o discípulo a acolheu consigo. ℣."
     }
   },
   "extra": []

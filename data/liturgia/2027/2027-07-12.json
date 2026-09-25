@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Êxodo 1,8-14.22",
+      "intro": "Leitura do livro do Êxodo:",
       "text": "Naqueles dias: 8Surgiu um novo rei no Egito, que não tinha conhecido José, 9e disse ao seu povo: 'Olhai como o povo dos filhos de Israel é mais numeroso e mais forte do que nós. 10Vamos agir com prudência em relação a ele, para impedir que continue crescendo e, em caso de guerra, se una aos nossos inimigos, combata contra nós e acabe por sair do país'. 11Estabeleceram inspetores de obras, para que o oprimissem com trabalhos penosos; e foi assim que ele construiu para o Faraó as cidades-entrepostos Pitom e Ramsés. 12Mas, quanto mais o oprimiam, tanto mais se multiplicava e crescia. 13Obcecados pelo medo dos filhos de Israel, os egípcios impuseram-lhes uma dura escravidão. 14E tornaram-lhes a vida amarga pelo pesado trabalho da preparação do barro e dos tijolos, com toda a espécie de trabalhos dos campos e outros serviços que os levavam a fazer à força. 22Então, o Faraó deu esta ordem a todo o seu povo: 'Lançai ao rio Nilo todos os meninos hebreus recém-nascidos, mas poupai a vida das meninas'."
     },
     "psalm": {
       "reference": "Salmo 123 (124)",
+      "refrain": "Nosso auxílio está no nome do Senhor.",
       "text": "- Se o Senhor não estivesse ao nosso lado, que o diga Israel neste momento; se o Senhor não estivesse ao nosso lado, quando os homens investiram contra nós, com certeza nos teriam devorado no furor de sua ira contra nós.\n\n- Então as águas nos teriam submergido, a correnteza nos teria arrastado, e então, por sobre nós teriam passado essas águas sempre mais impetuosas. Bendito seja o Senhor, que não deixou cairmos como presa de seus dentes!\n\n- Nossa alma como um pássaro escapou do laço que lhe armara o caçador; o laço arrebentou-se de repente, e assim nós conseguimos libertar-nos. O nosso auxílio está no nome do Senhor, do Senhor que fez o céu e fez a terra!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 10, 34-11, 1",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Felizes os que são perseguidos por causa da justiça do Senhor, porque o reino dos céus há de ser deles! (Mt 5, 10)"
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 34Não penseis que vim trazer paz à terra; não vim trazer a paz, mas sim a espada. 35De fato, vim separar o filho de seu pai, a filha de sua mãe, a nora de sua sogra. 36E os inimigos do homem serão os seus próprios familiares. 37Quem ama seu pai ou sua mãe mais do que a mim, não é digno de mim. Quem ama seu filho ou sua filha mais do que a mim, não é digno de mim. 38Quem não toma a sua cruz e não me segue, não é digno de mim. 39Quem procura conservar a sua vida vai perdê-la. E quem perde a sua vida por causa de mim, vai encontrá-la. 40Quem vos recebe, a mim recebe; e quem me recebe, recebe aquele que me enviou. 41Quem recebe um profeta, por ser profeta, receberá a recompensa de profeta. E quem recebe um justo, por ser justo, receberá a recompensa de justo. 42Quem der, ainda que seja apenas um copo de água fresca, a um desses pequeninos, por ser meu discípulo, em verdade vos digo: não perderá a sua recompensa.' 11,1Quando Jesus acabou de dar essas instruções aos doze discípulos, partiu daí, a fim de ensinar e pregar nas cidades deles."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Jonas 3,1-10",
+      "intro": "Leitura da Profecia de Jonas:",
       "text": "1A palavra do Senhor foi dirigida a Jonas, pela segunda vez: 2'Levanta-te e põe-te a caminho da grande cidade de Nínive e anuncia-lhe a mensagem que eu te vou confiar'. 3Jonas pôs-se a caminho de Nínive, conforme a ordem do Senhor. Ora, Nínive era uma cidade muito grande; eram necessários três dias para ser atravessada. 4Jonas entrou na cidade, percorrendo o caminho de um dia; pregava ao povo, dizendo: 'Ainda quarenta dias, e Nínive será destruída.' 5Os ninivitas acreditaram em Deus; aceitaram fazer jejum, e vestiram sacos, desde o superior ao inferior. 6A pregação chegara aos ouvidos do rei de Nínive; ele levantou-se do trono e pôs de lado o manto real, vestiu-se de saco e sentou-se em cima de cinza. 7Em seguida, fez proclamar, em Nínive, como decreto do rei e dos príncipes: 'Homens e animais bovinos e ovinos não provarão nada! Não comerão e não beberão água. 8Homens e animais se cobrirão de sacos, e os homens rezarão a Deus com força; cada um deve afastar-se do mau caminho e de suas práticas perversas. 9Deus talvez volte atrás, para perdoar-nos e aplacar sua ira, e assim não venhamos a perecer.' 10Vendo Deus as suas obras de conversão e que os ninivitas se afastavam do mau caminho, compadeceu-se e suspendeu o mal, que tinha ameaçado fazer-lhes, e não o fez."
     },
     "psalm": {
       "reference": "Salmo 129 (130)",
+      "refrain": "Se levardes em conta nossas faltas, quem haverá de subsistir?",
       "text": "-Das profundezas eu clamo a vós, Senhor, escutai a minha voz! Vossos ouvidos estejam bem atentos ao clamor da minha prece!\n\n- Se levardes em conta nossas faltas, quem haverá de subsistir? Mas em vós se encontra o perdão, eu vos temo e em vós espero.\n\n- Espere Israel pelo Senhor mais que o vigia pela aurora! Pois no Senhor se encontra toda graça e copiosa redenção. Ele vem libertar a Israel de toda a sua culpa."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 10, 38-42",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Feliz quem ouve e observa a palavra de Deus! (Lc 11,28)."
+      },
       "text": "Naquele tempo: 38Jesus entrou num povoado, e certa mulher, de nome Marta, recebeu-o em sua casa. 39Sua irmã, chamada Maria, sentou-se aos pés do Senhor, e escutava a sua palavra. 40Marta, porém, estava ocupada com muitos afazeres. Ela aproximou-se e disse: 'Senhor, não te importas que minha irmó me deixe sozinha, com todo o serviço? Manda que ela me venha ajudar!' 41O Senhor, porém, lhe respondeu: 'Marta, Marta! Tu te preocupas e andas agitada por muitas coisas. 42Porém, uma só coisa é necessária. Maria escolheu a melhor parte e esta não lhe será tirada.'"
     }
   },

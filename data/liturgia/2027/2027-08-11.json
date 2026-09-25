@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Deuteronômio 34,1-12",
+      "intro": "Leitura do Livro do Deuteronômio:",
       "text": "Naqueles dias: 1Moisés subiu das estepes de Moab ao monte Nebo, ao cume do Fasga que está defronte de Jericó. E o Senhor mostrou-lhe todo o país, desde Galaad até Dã, 2o território de Neftali, a terra de Efraim e Manassés, toda a terra de Judá até ao mar ocidental, 3o Negueb e a região do vale de Jericó, cidade das palmeiras, até Segor. 4O Senhor lhe disse: 'Eis aí a terra pela qual jurei a Abraão, Isaac e Jacó, dizendo: Eu a darei à tua descendência. Tu a viste com teus olhos, mas nela não entrarás'. 5E Moisés, servo do Senhor, morreu ali, na terra de Moab, conforme a vontade do Senhor. 6E ele o sepultou no vale, na terra de Moab, defronte de Bet-Fegor. E ninguém sabe até hoje onde fica a sua sepultura. 7Ao morrer, Moisés tinha cento e vinte anos. Sua vista não tinha enfraquecido, nem seu vigor se tinha esmorecido. 8Os filhos de Israel choraram Moisés nas estepes de Moab, durante trinta dias, até que terminou o luto por Moisés. 9Josué filho de Nun estava cheio do espírito de sabedoria, porque Moisés lhe tinha imposto as mãos. E os filhos de Israel lhe obedeceram e agiram, como o Senhor tinha ordenado a Moisés. 10Em Israel nunca mais surgiu um profeta como Moisés, a quem o Senhor conhecesse face a face, 11nem quanto aos sinais e prodígios que o Senhor lhe mandou fazer na terra do Egito, contra o Faraó, os seus servidores e todo o seu país, 12nem quanto à mão poderosa e a tantos e tão terríveis prodígios, que Moisés fez à vista de todo Israel."
     },
     "psalm": {
       "reference": "Salmo 65 (66)",
+      "refrain": "Bendito seja o Senhor Deus que me escutou, é ele que dá vida à nossa vida.",
       "text": "- Aclamai o Senhor Deus, ó terra inteira, cantai salmos a seu nome glorioso, dai a Deus a mais sublime louvação! Dizei a Deus: 'Como são grandes vossas obras!\n\n- Vinde ver todas as obras do Senhor: seus prodígios estupendos entre os homens! Todos vós que a Deus temeis, vinde escutar: vou contar-vos todo bem que ele me fez! Quando a ele o meu grito se elevou, já havia gratidão em minha boca!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 18, 15-20",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Em Cristo, Deus reconciliou consigo mesmo a humanidade; e a nós ele entregou esta reconciliação (2Cor 5,19)"
+      },
       "text": "Naquele tempo, Jesus disse a seus discípulos: 15Se o teu irmão pecar contra ti, vai corrigi-lo, mas em particular, à sós contigo! Se ele te ouvir, tu ganhaste o teu irmão. 16Se ele não te ouvir, toma contigo mais uma ou duas pessoas, para que toda a questão seja decidida sob a palavra de duas ou três testemunhas. 17Se ele não vos der ouvido, dize-o à Igreja. Se nem mesmo à Igreja ele ouvir, seja tratado como se fosse um pagão ou um pecador público. 18Em verdade vos digo, tudo o que ligardes na terra será ligado no céu, e tudo o que desligardes na terra será desligado no céu. 19De novo, eu vos digo: se dois de vós estiverem de acordo na terra sobre qualquer coisa que quiserem pedir, isto vos será concedido por meu Pai que está nos céus. 20Pois onde dois ou três estiverem reunidos em meu nome eu estou ali, no meio deles.'"
     }
   },

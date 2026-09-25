@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Êxodo 14,21-15,1",
+      "intro": "Leitura do livro do Êxodo:",
       "text": "Naqueles dias: 21Moisés estendeu a mão sobre o mar, e durante toda a noite o Senhor fez soprar sobre o mar um vento leste muito forte; e as águas se dividiram. 22Então, os filhos de Israel entraram pelo meio do mar a pé enxuto, enquanto as águas formavam como que uma muralha à direita e à esquerda. 23Os egípcios puseram-se a persegui-los, e todos os cavalos do Faraó, carros e cavaleiros os seguiram mar adentro. 24Ora, de madrugada, o Senhor lançou um olhar, desde a coluna de fogo e da nuvem,sobre as tropas egípcias e as pôs em pânico. 25Bloqueou as rodas dos seus carros, de modo que só a muito custo podiam avançar. Disseram, então, os egípcios: 'Fujamos de Israel! Pois o Senhor combate a favor deles, contra nós'. 26O Senhor disse a Moisés: 'Estende a mão sobre o mar, para que as águas se voltem contra os egípcios, seus carros e cavaleiros'. 27Moisés estendeu a mão sobre o mar e, ao romper da manhã, o mar voltou ao seu leito normal, enquanto os egípcios, em fuga, corriam ao encontro das águas, e o Senhor os mergulhou no meio das ondas. 28As águas voltaram e cobriram carros, cavaleiros e todo o exército do Faraó, que tinha entrado no mar em perseguição de Israel. Não escapou um só. 29Os filhos de Israel, ao contrário, tinham passado a pé enxuto pelo meio do mar, cujas águas lhes formavam uma muralha à direita e à esquerda. 30Naquele dia, o Senhor livrou Israel da mão dos egípcios, e Israel viu os egípcios mortos nas praias do mar, 31e a mão poderosa do Senhor agir contra eles. O povo temeu o Senhor, e teve fé no Senhor e em Moisés, seu servo. 15,1Então, Moisés e os filhos de Israel cantaram ao Senhor este cântico."
     },
     "psalm": {
       "reference": "Salmo Ex 15",
+      "refrain": "Ao Senhor quero cantar, pois fez brilhar a sua glória!",
       "text": "- Ao soprar a vossa ira amontoaram-se as águas, levantaram-se as ondas e formaram uma muralha, e imóveis se fizeram, em meio ao mar, as grandes vagas. O inimigo tinha dito: 'Hei de segui-los e alcançá-los! Repartirei os seus despojos e minh'alma saciarei; arrancarei da minha espada e minha mão os matará!'\n\n- Mas soprou o vosso vento, e o mar os recobriu; afundaram como chumbo entre as águas agitadas. Estendestes vossa mão, e a terra os devorou.\n\n- Vós, Senhor, o levareis e o plantareis em vosso Monte, no lugar que preparastes para a vossa habitação, no Santuário construído pelas vossas próprias mãos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 12, 46-50",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Quem me ama, realmente, guardará minha palavra emeu Pai o amará, e a ele, nós viremos (Jo 14, 23)"
+      },
       "text": "Naquele tempo: 46Enquanto Jesus estava falando às multidões, sua mãe e seus irmãos ficaram do lado de fora, procurando falar com ele. 47Alguém disse a Jesus: 'Olha! Tua mãe e teus irmãos estão aí fora, e querem falar contigo.' 48Jesus perguntou àquele que tinha falado: 'Quem é minha mãe, e quem são meus irmãos?' 49E, estendendo a mão para os discípulos, Jesus disse: 'Eis minha mãe e meus irmãos. 50Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe.'"
     }
   },

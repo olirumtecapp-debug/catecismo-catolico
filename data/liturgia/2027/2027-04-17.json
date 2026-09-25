@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 9,31-42",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, 31a Igreja vivia em paz em toda a Judeia, Galileia e Samaria. Ela consolidava-se e progredia no temor do Senhor e crescia em número com a ajuda do Espírito Santo. 32Pedro percorria todos os lugares; e visitou também os fiéis que moravam em Lida. 33Encontrou aí um homem chamado Eneias, que estava paralítico e há oito anos jazia numa cama. 34Pedro disse-lhe: \"Eneias, Jesus Cristo te cura! Levanta-te e arruma a tua cama!\" Imediatamente Eneias se levantou. 35Todos os habitantes de Lida e da região do Saron viram isso e se converteram ao Senhor. 36Em Jope havia uma discípula chamada Tabita, nome que quer dizer Gazela. Eram muitas as boas obras que fazia e as esmolas que dava. 37Naqueles dias ela ficou doente e morreu. Então lavaram seu corpo e o colocaram no andar superior da casa. 38Como Lida ficava perto de Jope, e ouvindo dizer que Pedro estava lá, os discípulos mandaram dois homens com um recado: \"Vem depressa até nós!\" 39Pedro partiu imediatamente com eles. Assim que chegou, levaram-no ao andar superior, onde todas as viúvas foram ao seu encontro. Chorando, elas mostravam a Pedro as túnicas e mantos que Tabita havia feito quando vivia com elas. 40Pedro mandou que todos saíssem. Em seguida, pôs-se de joelhos e rezou. Depois, voltou-se para o corpo e disse: \"Tabita, levanta-te!\" Ela então abriu os olhos, viu Pedro e sentou-se. 41Pedro deu-lhe a mão e ajudou-a a levantar-se. Depois chamou os fiéis e as viúvas e apresentou-lhes Tabita viva. 42O fato ficou conhecido em toda a cidade de Jope, e muitos acreditaram no Senhor."
     },
     "psalm": {
       "reference": "Salmo 115 (116B)",
+      "refrain": "Que poderei retribuir ao Senhor Deus por tudo aquilo que ele fez em meu favor?",
       "text": "- Que poderei retribuir ao Senhor Deus por tudo aquilo que ele fez em meu favor? Elevo o cálice da minha salvação, invocando o nome santo do Senhor.\n\n- Vou cumprir minhas promessas ao Senhor na presença de seu povo reunido. É sentida por demais pelo Senhor a morte de seus santos, seus amigos.\n\n- Eis que sou o vosso servo, ó Senhor, vosso servo que nasceu de vossa serva; mas me quebrastes os grilhões da escravidão! Por isso oferto um sacrifício de louvor, invocando o nome santo do Senhor."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 6, 60-69",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Senhor, tuas palavras são espírito, são vida; só tu tens palavras de vida eterna! (Jo 6,63.68)."
+      },
       "text": "Naquele tempo, 60muitos dos discípulos de Jesus que o escutaram, disseram: \"Esta palavra é dura. Quem consegue escutá-la?\" 61Sabendo que seus discípulos estavam murmurando por causa disso mesmo, Jesus perguntou: \"Isso vos escandaliza? 62E quando virdes o Filho do homem subindo para onde estava antes? 63O Espírito é que dá vida, a carne não adianta nada. As palavras que vos falei são espírito e vida. 64Mas entre vós há alguns que não creem\". Jesus sabia, desde o início, quem eram os que não tinham fé e quem havia de entregá-lo. 65E acrescentou: \"É por isso que vos disse: ninguém pode vir a mim, a não ser que lhe seja concedido pelo Pai\". 66A partir daquele momento, muitos discípulos voltaram atrás e não andavam mais com ele. 67Então, Jesus disse aos doze: \"Vós também quereis ir embora?\" 68Simão Pedro respondeu: \"A quem iremos, Senhor? Tu tens palavras de vida eterna. 69Nós cremos firmemente e reconhecemos que tu és o santo de Deus\"."
     }
   },

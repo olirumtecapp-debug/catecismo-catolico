@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Hebreus 2,14-18",
+      "intro": "Leitura da carta aos Hebreus:",
       "text": "14Visto que os filhos têm em comum a carne e o sangue, também Jesus participou da mesma condição, para assim destruir, com a sua morte, aquele que tinha o poder da morte, isto é, o diabo, 15e libertar os que, por medo da morte, estavam a vida toda sujeitos à escravidão. 16Pois, afinal, não veio ocupar-se com os anjos, mas com a descendência de Abraão. 17Por isso devia fazer-se em tudo semelhante aos irmãos, para se tornar um sumo sacerdote misericordioso e digno de confiança nas coisas referentes a Deus, a fim de expiar os pecados do povo. 18Pois, tendo ele próprio sofrido ao ser tentado, é capaz de socorrer os que agora sofrem a tentação."
     },
     "psalm": {
       "reference": "Salmo 104 (105)",
+      "refrain": "O Senhor se lembra sempre da aliança.",
       "text": "- Dai graças ao Senhor, gritai seu nome, anunciai entre as nações seus grandes feitos! Cantai, entoai salmos para ele, publicai todas as suas maravilhas!\n\n- Gloriai-vos em seu nome que é santo, exulte o coração que busca a Deus! Procurai o Senhor Deus e seu poder, buscai constantemente a sua face!\n\n- Descendentes de Abraão, seu servidor, e filhos de Jacó, seu escolhido, ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra.\n\n- Ele sempre se recorda da aliança, promulgada a incontáveis gerações; da aliança que ele fez com Abraão e do seu santo juramento a Isaac."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 29-39",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Minhas ovelhas escutam minha voz, eu as conheço e elas me seguem (Jo 10,27)."
+      },
       "text": "Naquele tempo, 29Jesus saiu da sinagoga e foi, com Tiago e João, para a casa de Simão e André. 30A sogra de Simão estava de cama, com febre, e eles logo contaram a Jesus. 31E ele se aproximou, segurou sua mão e ajudou-a a levantar-se. Então a febre desapareceu, e ela começou a servi-los. 32À tarde, depois do pôr do sol, levaram a Jesus todos os doentes e os possuídos pelo demônio. 33A cidade inteira se reuniu em frente da casa. 34Jesus curou muitas pessoas de diversas doenças e expulsou muitos demônios. E não deixava que os demônios falassem, pois sabiam quem ele era. 35De madrugada, quando ainda estava escuro, Jesus se levantou e foi rezar num lugar deserto. 36Simão e seus companheiros foram à procura de Jesus. 37Quando o encontraram, disseram: \"Todos estão te procurando\". 38Jesus respondeu: \"Vamos a outros lugares, às aldeias da redondeza! Devo pregar também ali, pois foi para isso que eu vim\". 39E andava por toda a Galileia, pregando em suas sinagogas e expulsando os demônios."
     }
   },

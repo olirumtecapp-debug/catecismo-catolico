@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Gênesis 9,8-15",
+      "intro": "Leitura do livro do Gênesis:",
       "text": "8Disse Deus a Noé e a seus filhos: 9\"Eis que vou estabelecer minha aliança convosco e com vossa descendência,10com todos os seres vivos que estão convosco: aves, animais domésticos e selvagens, enfim, com todos os animais da terra, que saíram convosco da arca. 11Estabeleço convosco a minha aliança: nunca mais nenhuma criatura será exterminada pelas águas do dilúvio, e não haverá mais dilúvio para devastar a terra\". 12E Deus disse: \"Este é o sinal da aliança que coloco entre mim e vós, e todos os seres vivos que estão convosco, por todas as gerações futuras: 13ponho meu arco nas nuvens como sinal de aliança entre mim e a terra. 14Quando eu reunir as nuvens sobre a terra, aparecerá meu arco nas nuvens. 15Então eu me lembrarei de minha aliança convosco e com todas as espécies de seres vivos. E não tornará mais a haver dilúvio que faça perecer nas suas águas toda criatura\"."
     },
     "psalm": {
       "reference": "Salmo 24 (25)",
+      "refrain": "Verdade e amor, são os caminhos do Senhor.",
       "text": "- Mostrai-me, ó Senhor, vossos caminhos, e fazei-me conhecer a vossa estrada! Vossa verdade me oriente e me conduza, porque sois o Deus da minha salvação.\n\n- Recordai, Senhor meu Deus, vossa ternura e a vossa compaixão que são eternas! De mim lembrai-vos, porque sois misericórdia, e sois bondade sem limites, ó Senhor!\n\n- O Senhor é piedade e retidão, e reconduz ao bom caminho os pecadores. Ele dirige os humildes na justiça, e aos pobres ele ensina o seu caminho."
     },
     "secondReading": {
       "reference": "São Pedro 3,18-22",
+      "intro": "Leitura da primeira carta de São Pedro:",
       "text": "Caríssimos: 18Cristo morreu, uma vez por todas, por causa dos pecados, o justo pelos injustos, a fim de nos conduzir a Deus. Sofreu a morte, na sua existência humana, mas recebeu nova vida pelo Espírito. 19No Espírito, ele foi também pregar aos espíritos na prisão, 20a saber, aos que foram desobedientes antigamente, quando Deus usava de longanimidade, nos dias em que Noé construía a arca. Nesta arca, umas poucas pessoas -oito - foram salvas por meio da água. 21À arca corresponde o batismo, que hoje é a vossa salvação. Pois o batismo não serve para limpar o corpo da imundície, mas é um pedido a Deus para obter uma boa consciência, em virtude da ressurreição de Jesus Cristo. 22Ele subiu ao céu e está à direita de Deus, submetendo-se a ele anjos, dominações e potestades."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 12-15",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Louvor e glória a ti, Senhor, Cristo, palavra de Deus.",
+        "verse": "O homem não vive somente de pão, mas de toda palavra da boca de Deus (Mt 4, 4)"
+      },
       "text": "Naquele tempo, 12o Espírito levou Jesus para o deserto. 13E ele ficou no deserto durante quarenta dias, e aí foi tentado por Satanás. Vivia entre animais selvagens, e os anjos o serviam. 14Depois que João Batista foi preso, Jesus foi para a Galileia, pregando o Evangelho de Deus e dizendo: 15\"O tempo já se completou e o Reino de Deus está próximo. Convertei-vos e crede no Evangelho!\""
     }
   },

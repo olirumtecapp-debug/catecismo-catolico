@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 50,5-9",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "5O Senhor abriu-me os ouvidos; não lhe resisti nem voltei atrás. 6Ofereci as costas para me baterem e as faces para me arrancarem a barba: não desviei o rosto de bofetões e cusparadas. 7Mas, o Senhor Deus é meu Auxiliador, por isso não me deixei abater o ânimo, conservei o rosto impassível como pedra, porque sei que não sairei humilhado. 8A meu lado está quem me justifica; alguém me fará objeções? Vejamos. Quem é meu adversário? Aproxime-se. 9aSim, o Senhor Deus é meu Auxiliador; quem é que me vai condenar?"
     },
     "psalm": {
       "reference": "Salmo 114 (115)",
+      "refrain": "Andarei na presença de Deus, junto a ele, na terra dos vivos.",
       "text": "- Eu amo o Senhor, porque ouve o grito da minha oração. Inclinou para mim seu ouvido, no dia em que eu o invoquei.\n\n- Prendiam-me as cordas da morte, apertavam-me os laços do abismo; invadiam-me angústia e tristeza: eu então invoquei o Senhor 'Salvai, ó Senhor, minha vida!'\n\n- O Senhor é justiça e bondade, nosso Deus é amor-compaixão. É o Senhor quem defende os humildes: eu estava oprimido, e salvou-me.\n\n- Libertou minha vida da morte, enxugou de meus olhos o pranto e livrou os meus pés do tropeço. Andarei na presença de Deus, junto a ele na terra dos vivos."
     },
     "secondReading": {
       "reference": "Tiago 2,14-18",
+      "intro": "Leitura da Carta de São Tiago:",
       "text": "14Meus irmãos, que adianta alguém dizer que tem fé, quando não a põe em prática? A fé seria então capaz de salvá-lo? 15Imaginai que um irmão ou uma irmã não têm o que vestir e que lhes falta a comida de cada dia; 16se então alguém de vós lhes disser: 'Ide em paz, aquecei-vos', e: 'Comei à vontade', sem lhes dar o necessário para o corpo, que adiantará isso? 17Assim também a fé: se não se traduz em obras, por si só está morta. 18Em compensação, alguém poderá dizer: 'Tu tens a fé e eu tenho a prática! Tu, mostra-me a tua fé sem as obras, que eu te mostrarei a minha fé pelas obras!"
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 8, 27-35",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eu de nada me glorio, a não ser da cruz de Cristo; vejo o mundo em cruz pregado e para o mundo em cruz me avisto (Gl 6,14)."
+      },
       "text": "Naquele tempo: 27Jesus partiu com seus discípulos para os povoados de Cesaréia de Filipe. No caminho perguntou aos discípulos: 'Quem dizem os homens que eu sou?' 28Eles responderam: 'Alguns dizem que tu és João Batista; outros que és Elias; outros, ainda, que és um dos profetas'. 29Então ele perguntou: 'E vós, quem dizeis que eu sou?' Pedro respondeu: 'Tu és o Messias'. 30Jesus proibiu-lhes severamente de falar a alguém a seu respeito. 31Em seguida, começou a ensiná-los, dizendo que o Filho do Homem devia sofrer muito, ser rejeitado pelos anciãos, pelos sumos sacerdotes e doutores da Lei; devia ser morto, e ressuscitar depois de três dias. 32Ele dizia isso abertamente. Então Pedro tomou Jesus à parte e começou a repreendê-lo. 33Jesus voltou-se, olhou para os discípulos e repreendeu a Pedro, dizendo: 'Vai para longe de mim, Satanás!' Tu não pensas como Deus, e sim como os homens'. 34Então chamou a multidão com seus discípulos e disse: 'Se alguém me quer seguir, renuncie a si mesmo, tome a sua cruz e me siga. 35Pois quem quiser salvar a sua vida, vai perdê-la; mas quem perder a sua vida por causa de mim e do Evangelho, vai salvá-la."
     }
   },

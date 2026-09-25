@@ -11,6 +11,7 @@
     },
     "psalm": {
       "reference": "Sl 88(89),2-3.4-5.27 e 29 (R. 2a)",
+      "refrain": "Ó Senhor, eu cantarei eternamente o vosso amor!",
       "text": "Sl 88(89),2-3.4-5.27 e 29 (R. 2a) ℟. Ó Senhor, eu cantarei eternamente o vosso amor! 2 Ó Senhor, eu cantarei eternamente o vosso amor, * de geração em geração eu cantarei vossa verdade! 3 Porque dissestes: \"O amor é garantido para sempre!\" * E a vossa lealdade é tão firme como os céus. ℟. 4 \"Eu firmei uma Aliança com meu servo, meu eleito, * e eu fiz um juramento a Davi, meu servidor. 5 Para sempre, no teu trono, firmarei tua linhagem, * de geração em geração garantirei o teu reinado!\" ℟. 27 Ele, então, me invocará: 'Ó Senhor, vós sois meu Pai, * sois meu Deus, sois meu Rochedo onde encontro a salvação!' 29 Guardarei eternamente para ele a minha graça * e com ele firmarei minha Aliança indissolúvel. ℟."
     },
     "secondReading": {
@@ -19,6 +20,7 @@
     },
     "gospel": {
       "reference": "os seus inimigos,",
+      "acclamation": null,
       "text": "℟. Aleluia, Aleluia, Aleluia. ℣. Ó Sol da manhã, ó Sol de justiça, da eterna luz esplendor: oh, vinde brilhar para o povo sentado, na sombra da morte. EVANGELHO O sol que nasce do alto nos visitará. Proclamação do Evangelho de Jesus Cristo segundo Lucas 1,67-79 Naquele tempo, 67 Zacarias, o pai de João, repleto do Espírito Santo, profetizou, dizendo: 68 \"Bendito seja o Senhor, Deus de Israel, porque a seu povo visitou e libertou. 69 Fez aparecer para nós uma força de salvação na casa de seu servo Davi, 70 como tinha prometido desde outrora, pela boca de seus santos profetas, 71 para nos salvar dos nossos inimigos e da mão de todos os que nos odeiam. 72 Ele usou de misericórdia para com nossos pais, recordando-se de sua santa aliança 73 e do juramento que fez a nosso pai Abraão, para conceder-nos, 74 que, sem temor e libertos das mãos dos inimigos, nós o sirvamos, 75 com santidade e justiça, em sua presença, todos os nossos dias. 76 E tu, Menino, serás chamado profeta do Altíssimo, pois irás adiante do Senhor para preparar-lhe os caminhos, 77 anunciando ao seu povo a salvação, pelo perdão dos seus pecados. 78 Graças à misericordiosa compaixão do nosso Deus, o sol que nasce do alto nos visitará, 79 para iluminar os que jazem nas trevas e nas sombras da morte, e dirigir nossos passos no caminho da paz.\""
     }
   },

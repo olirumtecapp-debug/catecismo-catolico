@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Macabeus 4,36-37.52-59",
+      "intro": "Leitura do primeiro livro dos Macabeus:",
       "text": "36Naqueles dias, Judas e seus irmãos disseram: 'Nossos inimigos foram esmagados. Vamos purificar o lugar santo e reconsagrá-lo'. 37Todo o exército então se reuniu e subiu ao monte Sião. 52No vigésimo quinto dia do nono mês, chamado Casleu, do ano cento e quarenta e oito, levantaram-se ao romper da aurora, 53e ofereceram um sacrifício conforme a Lei, sobre o novo altar dos holocaustos que haviam construído. 54O altar foi novamente consagrado ao som de cânticos, acompanhados de cítaras, harpas e címbalos, na mesma época do ano e no mesmo dia em que os pagãos o haviam profanado. 55Todo o povo prostrou-se com o rosto em terra para adorar e louvar a Deus que lhes tinha dado um feliz triunfo. 56Durante oito dias celebraram a dedicação do altar, oferecendo com alegria holocaustos e sacrifícios de comunhão e de louvor. 57Ornaram com coroas de ouro e pequenos escudos a fachada do templo. Reconstruíram as entradas e os alojamentos, nos quais colocaram portas. 58Grande alegria tomou conta do povo, pois fora reparado o ultraje infligido pelos pagãos. 59De comum acordo com os irmãos e toda a assembléia de Israel, Judas determinou que os dias da dedicação do altar fossem celebrados anualmente com alegres festejos, no tempo exato, durante oito dias, a partir do dia vinte e cinco do mês de Casleu."
     },
     "psalm": {
       "reference": "Salmo 1Cr 29",
+      "refrain": "Queremos celebrar o vosso nome glorioso.",
       "text": "- Bendito sejais vós, ó Senhor Deus, Senhor Deus de Israel, o nosso pai. desde sempre e por toda a eternidade!R.\n\n- A Vós pertencem a grandeza e o poder toda a glória, esplendor e majestade, pois tudo é vosso: o que há no céu e sobre a terra!\n\n- A vós, Senhor, também pertence a realeza, pois sobre a terra, como rei, vos elevais! Toda glória e riqueza vêm de vós!\n\n- Sois o Senhor e dominais o universo, em vossa mão se encontra a força e o poder, em vossa mão tudo se afirma e tudo cresce!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 19, 45-48",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Minhas ovelhas escutam minha voz, eu as conheço e elas me seguem (Jo 10, 27)"
+      },
       "text": "Naquele tempo: 45Jesus entrou no Templo e começou a expulsar os vendedores. 46E disse: 'Está escrito: 'Minha casa será casa de oração'. No entanto, vós fizestes dela um antro de ladrões.' 47Jesus ensinava todos os dias no Templo. Os sumos sacerdotes, os mestres da Lei e os notáveis do povo procuravam modo de matá-lo. 48Mas não sabiam o que fazer, porque o povo todo ficava fascinado quando ouvia Jesus falar."
     }
   },

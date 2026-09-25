@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Colossenses 1,24-2,3",
+      "intro": "Leitura da carta de São Paulo aos Colossenses:",
       "text": "Irmãos: 24Alegro-me de tudo o que já sofri por vós e procuro completar na minha própria carne o que falta das tribulações de Cristo, em solidariedade com o seu corpo, isto é, a Igreja. 25A ela eu sirvo, exercendo o cargo que Deus me confiou de vos transmitir a palavra de Deus em sua plenitude: 26o mistério escondido por séculos e gerações, mas agora revelado aos seus santos. 27A este Deus quis manifestar como é rico e glorioso entre as nações este mistério: a presença de Cristo em vós, a esperança da glória. 28Nós o anunciamos, admoestando a todos e ensinando a todos, com toda sabedoria, para a todos tornar perfeitos em sua união com Cristo. 29Para isso eu me esforço com todo o empenho, sustentado pela sua força que em mim opera. 2,1Quero pois que saibais que luta difícil sustento por vós, pelos fiéis de Laodicéia e por tantos outros, que não me conhecem pessoalmente, 2para que sejam consolados e se mantenham unidos na caridade, para que eles cheguem a entender profunda e plenamente o mistério de Deus Pai e de Cristo Jesus, 3no qual estão encerrados todos os tesouros da sabedoria e da ciência."
     },
     "psalm": {
       "reference": "Salmo 61 (62)",
+      "refrain": "A minha glória e salvação estão em Deus.",
       "text": "- Só em Deus a minha alma tem repouso, porque dele é que me vem a salvação! Só ele é meu rochedo e salvação, a fortaleza, onde encontro segurança!\n\n- Povo todo, esperai sempre no Senhor, e abri diante dele o coração: nosso Deus é um refúgio para nós!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 6, 6-11",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Minhas ovelhas escutam minha voz, eu as conheço e elas me seguem (Jo 10, 27)"
+      },
       "text": "Aconteceu num dia de sábado que, 6Jesus entrou na sinagoga, e começou a ensinar. Aí havia um homem cuja mão direita era seca. 7Os mestres da Lei e os fariseus o observavam, para verem se Jesus iria curá-lo em dia de sábado, e assim encontrarem motivo para acusá-lo. 8Jesus, porém, conhecendo seus pensamentos, disse ao homem da mão seca: 'Levanta-te, e fica aqui no meio.' Ele se levantou, e ficou de pé. 9Disse-lhes Jesus: 'Eu vos pergunto: O que é permitido fazer no sábado: o bem ou o mal, salvar uma vida ou deixar que se perca?' 10Então Jesus olhou para todos os que estavam ao seu redor, e disse ao homem: 'Estende a tua mão.' O homem assim o fez e sua mão ficou curada. 11Eles ficaram com muita raiva, e começaram a discutir entre si sobre o que poderiam fazer contra Jesus."
     }
   },

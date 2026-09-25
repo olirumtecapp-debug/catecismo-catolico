@@ -11,6 +11,7 @@
     },
     "psalm": {
       "reference": "Sl 115(116B),12-13.15-16bc.17-18 (R. cf. 1Cor 10,16)",
+      "refrain": "Senhor, eu cantarei eternamente o vosso amor.",
       "text": "Sl 88(89),21-22.25.27(R. cf. 2a) ℟. Senhor, eu cantarei eternamente o vosso amor. 21 Encontrei e escolhi a Davi, meu servidor, * e o ungi, para ser rei, com meu óleo consagrado. 22 Estará sempre com ele minha mão onipotente, * e meu braço poderoso há de ser a sua força. ℟. 25 Minha verdade e meu amor estarão sempre com ele, * sua força e seu poder por meu nome crescerão. 27 Ele, então, me invocará: Ó Senhor, vós sois meu Pai, * sois meu Deus, sois meu Rochedo onde encontro a salvação! ℟."
     },
     "secondReading": {
@@ -19,6 +20,7 @@
     },
     "gospel": {
       "reference": "Jo 13,1-15",
+      "acclamation": null,
       "text": "Is 61,1 (Lc 4,18) ℟. Louvor e honra a vós, Senhor Jesus. ℣. O Espírito do Senhor sobre mim fez a sua unção, enviou-me aos empobrecidos a fazer feliz proclamação! EVANGELHO O Espírito do Senhor está sobre mim. Proclamação do Evangelho de Jesus Cristo segundo Lucas 4,16-21 Naquele tempo, 16 Jesus veio à cidade de Nazaré, onde se tinha criado. Conforme seu costume, entrou na sinagoga no sábado, e levantou-se para fazer a leitura. 17 Deram-lhe o livro do profeta Isaías. Abrindo o livro, Jesus achou a passagem em que está escrito: 18 \"O Espírito do Senhor está sobre mim, porque ele me consagrou com a unção para anunciar a Boa-Nova aos pobres; enviou-me para proclamar a libertação aos cativos e aos cegos a recuperação da vista; para libertar os oprimidos 19 e para proclamar um ano da graça do Senhor\". 20 Depois fechou o livro, entregou-o ao ajudante, e sentou-se. Todos os que estavam na sinagoga tinham os olhos fixos nele. 21 Então começou a dizer-lhes: \"Hoje se cumpriu esta passagem da Escritura que acabastes de ouvir\". ℣."
     }
   },

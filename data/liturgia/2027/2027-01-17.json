@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Samuel 3,3-10.19",
+      "intro": "Leitura do primeiro livro de Samuel:",
       "text": "Naqueles dias, 3Samuel estava dormindo no templo do Senhor, onde se encontrava a arca de Deus. 4Então o Senhor chamou: \"Samuel, Samuel!\" Ele respondeu: \"Estou aqui\". 5E correu para junto de Eli e disse: \"Tu me chamaste, aqui estou\". Eli respondeu: \"Eu não te chamei. Volta a dormir!\" E ele foi deitar-se. 6O Senhor chamou de novo: \"Samuel, Samuel!\" E Samuel levantou-se, foi ter com Eli e disse: \"Tu me chamaste, aqui estou\". Ele respondeu: \"Não te chamei, meu filho. Volta a dormir!\" 7Samuel ainda não conhecia o Senhor, pois, até então, a palavra do Senhor não se lhe tinha manifestado. 8O Senhor chamou pela terceira vez: \"Samuel, Samuel!\" Ele levantou-se, foi para junto de Eli e disse: \"Tu me chamaste, aqui estou\". Eli compreendeu que era o Senhor que estava chamando o menino. 9Então disse a Samuel: \"Volta a deitar-te e, se alguém te chamar, responderás: 'Senhor, fala, que teu servo escuta!'\" E Samuel voltou ao seu lugar para dormir. 10O Senhor veio, pôs-se junto dele e chamou-o como das outras vezes: \"Samuel! Samuel!\" E ele respondeu: \"Fala, que teu servo escuta\". 19Samuel crescia, e o Senhor estava com ele. E não deixava cair por terra nenhuma de suas palavras."
     },
     "psalm": {
       "reference": "Salmo 39(40)",
+      "refrain": "Eu disse: \"Eis que venho, Senhor! Com prazer faço a vossa vontade\".",
       "text": "- Esperando, esperei no Senhor e, inclinando-se, ouviu meu clamor. Canto novo ele pôs em meus lábios, um poema em louvor ao Senhor.\n\n- Sacrifício e oblação não quisestes, mas abristes, Senhor, meus ouvidos; não pedistes ofertas nem vítimas, holocaustos por nossos pecados.\n\n- E então eu vos disse: \"Eis que venho!\" Sobre mim está escrito no livro: \"Com prazer faço a vossa vontade, guardo em meu coração vossa lei!\"\n\n- Boas-novas de vossa justiça anunciei numa grande assembleia; vós sabeis: não fechei os meus lábios!"
     },
     "secondReading": {
       "reference": "Coríntios 6,13-15.17-20",
+      "intro": "Leitura da primeira carta de são Paulo aos Coríntios:",
       "text": "Irmãos, 13o corpo não é para a imoralidade, mas para o Senhor, e o Senhor é para o corpo; 14e Deus, que ressuscitou o Senhor, nos ressuscitará também a nós, pelo seu poder. 15Porventura ignorais que vossos corpos são membros de Cristo? 17Quem adere ao Senhor torna-se com ele um só espírito. 18Fugi da imoralidade. Em geral, qualquer pecado que uma pessoa venha a cometer fica fora do seu corpo. Mas o fornicador peca contra o seu próprio corpo. 19Ou ignorais que o vosso corpo é santuário do Espírito Santo, que mora em vós e que vos é dado por Deus? E, portanto, ignorais também que vós não pertenceis a vós mesmos? 20De fato, fostes comprados, e por preço muito alto. Então, glorificai a Deus com o vosso corpo."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 1, 35-42",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Encontramos o Messias, Jesus Cristo, de graça e verdade ele é pleno; de sua imensa riqueza, graças sem fim recebemos (Jo 1,41.17)."
+      },
       "text": "Naquele tempo, 35João estava de novo com dois de seus discípulos 36e, vendo Jesus passar, disse: \"Eis o Cordeiro de Deus!\" 37Ouvindo essas palavras, os dois discípulos seguiram Jesus. 38Voltando-se para eles e vendo que o estavam seguindo, Jesus perguntou: \"O que estais procurando?\" Eles disseram: \"Rabi (que quer dizer mestre), onde moras?\" 39Jesus respondeu: \"Vinde ver\". Foram, pois, ver onde ele morava e, nesse dia, permaneceram com ele. Era por volta das quatro da tarde. 40André, irmão de Simão Pedro, era um dos dois que ouviram as palavras de João e seguiram Jesus. 41Ele foi encontrar primeiro seu irmão Simão e lhe disse: \"Encontramos o Messias\" (que quer dizer Cristo). 42Então André conduziu Simão a Jesus. Jesus olhou bem para ele e disse: \"Tu és Simão, filho de João; tu serás chamado Cefas\" (que quer dizer pedra)."
     }
   },

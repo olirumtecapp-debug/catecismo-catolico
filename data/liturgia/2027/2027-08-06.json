@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Daniel 7,9-10.13-14",
+      "intro": "Leitura da profecia de Daniel:",
       "text": "9Eu continuava olhando até que foram colocados uns tronos, e um ancião de muitos dias aí tomou lugar. Sua veste era branca como neve e os cabelos da cabeça, como lã pura; seu trono eram chamas de fogo, e as rodas do trono, como fogo em brasa. 10Derramava-se aí um rio de fogo que nascia diante dele; serviam-no milhares de milhares, e milhões de milhões assistiam-no ao trono; foi instalado o tribunal e os livros foram abertos. 13Continuei insistindo na visão noturna, e eis que, entre as nuvens do céu, vinha um como filho de homem, aproximando-se do ancião de muitos dias, e foi conduzido à sua presença. 14Foram-lhe dados poder, glória e realeza, e todos os povos, nações e línguas o serviam: seu poder é um poder eterno que não lhe será tirado, e seu reino, um reino que não se dissolverá."
     },
     "psalm": {
       "reference": "Salmo 96 (97)",
+      "refrain": "Deus é rei, é o Altíssimo, muito acima do universo.",
       "text": "- Deus é rei! Exulte a terra de alegria, e as ilhas numerosas rejubilem! Treva e nuvem o rodeiam no seu trono, que se apoia na justiça e no direito.\n\n- As montanhas se derretem como cera ante a face do Senhor de toda a terra; e assim proclama o céu sua justiça, todos os povos podem ver a sua glória.\n\n- Porque vós sois o Altíssimo, Senhor, muito acima do universo que criastes, e de muito superais todos os deuses."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 9, 2-10",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eis meu Filho muito amado, nele está meu benquerer, escutai-o, todo vós! (Mt 17,5)."
+      },
       "text": "Naquele tempo, ²Jesus tomou consigo Pedro, Tiago e João e os levou sozinhos a um lugar à parte sobre uma alta montanha. E transfigurou-se diante deles. ³Suas roupas ficaram brilhantes e tão brancas como nenhuma lavadeira sobre a terra poderia alvejar. 4Apareceram-lhe Elias e Moisés, e estavam conversando com Jesus. 5Então Pedro tomou a palavra e disse a Jesus: \"Mestre, é bom ficarmos aqui. Vamos fazer três tendas: uma para ti, outra para Moisés e outra para Elias\". 6Pedro não sabia o que dizer, pois estavam todos com muito medo. 7Então desceu uma nuvem e os encobriu com sua sombra. E da nuvem saiu uma voz: \"Este é o meu Filho amado. Escutai o que ele diz!\" 8E, de repente, olhando em volta, não viram mais ninguém, a não ser somente Jesus com eles. 9Ao descerem da montanha, Jesus ordenou que não contassem a ninguém o que tinham visto, até que o Filho do homem tivesse ressuscitado dos mortos. 10Eles observaram essa ordem, mas comentavam entre si o que queria dizer \"ressuscitar dos mortos\"."
     }
   },

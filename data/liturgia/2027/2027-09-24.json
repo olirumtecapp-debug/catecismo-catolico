@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Ageu 1,15-2,9",
+      "intro": "Leitura da profecia de Ageu:",
       "text": "15No segundo ano do reinado de Dario, 2,1no dia vinte e um do sétimo mês, fez-se ouvir a palavra do Senhor, mediante o profeta Ageu: 2'Vai dizer a Zorobabel, filho de Salatiel, governador de Judá, e a Josué, filho de Josedec, sumo sacerdote, e ao resto do povo: 3Há dentre vós algum sobrevivente que tenha visto esta casa em seu primitivo esplendor? E como a vedes agora? Não parece aos vossos olhos uma sombra do que era? 4Mas agora, toma coragem, Zorobabel, diz o Senhor, coragem, Josué, filho de Josedec, sumo sacerdote; coragem, povo todo desta terra, diz o Senhor dos exércitos; ponde mãos à obra, pois eu estou convosco, diz o Senhor dos exércitos. 5Eu assumi um compromisso convosco, quando saístes do Egito, e meu espírito permaneceu no meio de vós: não temais. 6Isto diz o Senhor dos exércitos: Ainda um momento, e eu hei de mover o céu e a terra, o mar e a terra firme. 7Sacudirei todos os povos, e começarão a chegar tesouros de todas as nações, hei de encher de esplendor esta casa, diz o Senhor dos exércitos. 8Pertence-me a prata, pertence-me o ouro, diz o Senhor dos exércitos. 9O esplendor desta nova casa será maior que o da primeira, diz o Senhor dos exércitos; e, neste lugar, estabelecerei a paz, diz o Senhor dos exércitos'."
     },
     "psalm": {
       "reference": "Salmo 42 (43)",
+      "refrain": "Espera em Deus! Louvarei novamente o meu Deus Salvador!",
       "text": "- Fazei justiça, meu Deus, e defendei-me contra a gente impiedosa; do homem perverso e mentiroso libertai-me, ó Senhor!\n\n- Sois vós o meu Deus e meu refúgio: por que me afastais? Por que ando tão triste e abatido pela opressão do inimigo?\n\n- Enviai vossa luz, vossa verdade: elas serão o meu guia; que me levem ao vosso Monte santo, até a vossa morada!\n\n- Então irei aos altares do Senhor, Deus da minha alegria. Vosso louvor cantarei, ao som da harpa, meu Senhor e meu Deus!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 18-22",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Veio o Filho do homem, a fim de servir e dar sua vida em resgate por muitos (Mc 10, 45)"
+      },
       "text": "Aconteceu que, 18Jesus estava rezando num lugar retirado, e os discípulos estavam com ele. Então Jesus perguntou-lhes: 'Quem diz o povo que eu sou?' 19Eles responderam: 'Uns dizem que és João Batista; outros, que és Elias; mas outros acham que és algum dos antigos profetas que ressuscitou.' 20Mas Jesus perguntou: 'E vós, quem dizeis que eu sou?' Pedro respondeu: 'O Cristo de Deus.' 21Mas Jesus proibiu-lhes severamente que contassem isso a alguém. 22E acrescentou: 'O Filho do Homem deve sofrer muito, ser rejeitado pelos anciãos, pelos sumos sacerdotes e doutores da Lei, deve ser morto e ressuscitar no terceiro dia.'"
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Êxodo 3,1-6.9-12",
+      "intro": "Leitura do Livro do Êxodo:",
       "text": "Naqueles dias: 1Moisés apascentava o rebanho de Jetro, seu sogro, sacerdote de Madiã. Levou um dia, o rebanho deserto adentro e chegou ao monte de Deus, o Horeb. 2Apareceu-lhe o anjo do Senhor numa chama de fogo, do meio de uma sarça. Moisés notou que a sarça estava em chamas, mas não se consumia, e disse consigo: 3'Vou aproximar-se desta visão extraordinária, para ver porque a sarça não se consome'. 4O Senhor viu que Moisés se aproximava para observar e chamou-o do meio da sarça, dizendo: 'Moisés! Moisés!' Ele respondeu: 'Aqui estou'. 5E Deus disse: 'Não te aproximes! Tira as sandálias dos pés, porque o lugar onde estás é uma terra santa'. 6E acrescentou: 'Eu sou o Deus de teus pais, o Deus de Abraão, o Deus de Isaac e o Deus de Jacó'. Moisés cobriu o rosto, pois temia olhar para Deus. 9E agora, o clamor dos filhos de Israel chegou até mim, e vi a opressão que os egípcios fazem pesar sobre eles. 10Mas vai, eu te envio ao Faraó, para que faças sair do Egito o meu povo, os filhos de Israel'. 11E Moisés disse a Deus: 'Quem sou eu para ir ao Faraó e fazer sair os filhos de Israel do Egito?' 12Deus lhe disse: 'Eu estarei contigo; e este será o sinal de que fui eu que te enviei: quando tiveres tirado do Egito o povo, vós servireis a Deus sobre esta montanha'."
     },
     "psalm": {
       "reference": "Salmo 102 (103)",
+      "refrain": "O Senhor é indulgente, é favorável",
       "text": "- Bendize, ó minha alma, ao Senhor, e todo o meu ser, seu santo nome! Bendize, ó minha alma, ao Senhor, não te esqueças de nenhum de seus favores!\n\n- Pois ele te perdoa toda culpa, e cura toda a tua enfermidade; da sepultura ele salva a tua vida e te cerca de carinho e compaixão.\n\n- O Senhor realiza obras de justiça e garante o direito aos oprimidos; revelou os seus caminhos a Moisés, e aos filhos de Israel, seus grandes feitos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 11, 25-27",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Graças te dou, ó Pai, Senhor do céu e da terra, pois revelaste os mistérios do teu reino aos pequeninos, escondendo-os aos doutores! (Mt 11,25)."
+      },
       "text": "25Naquele tempo, Jesus pôs-se a dizer: 'Eu te louvo, ó Pai, Senhor do céu e da terra, porque escondeste estas coisas aos sábios e entendidos e as revelaste aos pequeninos. 26Sim, Pai, porque assim foi do teu agrado. 27Tudo me foi entregue por meu Pai, e ninguém conhece o Filho, senão o Pai, e ninguém conhece o Pai, senão o Filho e aquele a quem o Filho o quiser revelar."
     }
   },

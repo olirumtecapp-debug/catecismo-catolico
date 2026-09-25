@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Êxodo 16,2-4.12-15",
+      "intro": "Leitura do livro do Êxodo:",
       "text": "Naqueles dias, 2a comunidade dos filhos de Israel pôs-se a murmurar contra Moisés e Aarão no deserto, dizendo: 3\"Quem dera que tivéssemos morrido pela mão do Senhor no Egito, quando nos sentávamos junto às panelas de carne e comíamos pão com fartura! Por que nos trouxestes a este deserto para matar de fome a toda esta gente?\" 4O Senhor disse a Moisés: \"Eis que farei chover para vós o pão do céu. O povo sairá diariamente e só recolherá a porção de cada dia, a fim de que eu o ponha à prova, para ver se anda ou não na minha lei. 12Eu ouvi as murmurações dos filhos de Israel. Dize-lhes, pois: 'Ao anoitecer, comereis carne e, pela manhã, vos fartareis de pão. Assim sabereis que eu sou o Senhor vosso Deus'\". 13Com efeito, à tarde, veio um bando de codornizes e cobriu o acampamento; e, pela manhã, formou-se uma camada de orvalho ao redor do acampamento. 14Quando se evaporou o orvalho que caíra, apareceu na superfície do deserto uma coisa miúda, em forma de grãos, fina como a geada sobre a terra. 15Vendo aquilo, os filhos de Israel disseram entre si: \"Que é isto?\" Porque não sabiam o que era. Moisés respondeu-lhes: \"Isto é o pão que o Senhor vos deu como alimento\"."
     },
     "psalm": {
       "reference": "Salmo 77 (78)",
+      "refrain": "O Senhor deu a comer o pão do céu.",
       "text": "- Tudo aquilo que ouvimos e aprendemos, e transmitiram para nós os nossos pais, não haveremos de ocultar a nossos filhos, mas à nova geração nós contaremos: as grandezas do Senhor e seu poder.\n\n- Ordenou, então, às nuvens lá dos céus, e as comportas das alturas fez abrir; fez chover-lhes o maná e alimentou-os, e lhes deu para comer o pão do céu.\n\n- O homem se nutriu do pão dos anjos, e mandou-lhes alimento em abundância. Conduziu-os para a terra prometida, para o monte que seu braço conquistou."
     },
     "secondReading": {
       "reference": "Efésios 4,17.20-24",
+      "intro": "Leitura da carta de são Paulo aos Efésios:",
       "text": "Irmãos, 17eis, pois, o que eu digo e atesto no Senhor: não continueis a viver como vivem os pagãos, cuja inteligência os leva para o nada. 20Quanto a vós, não é assim que aprendestes de Cristo, 21se ao menos foi bem ele que ouvistes falar e se é ele que vos foi ensinado, em conformidade com a verdade que está em Jesus. 22Renunciando à vossa existência passada, despojai-vos do homem velho, que se corrompe sob o efeito das paixões enganadoras, 23e renovai o vosso espírito e a vossa mentalidade. 24Revesti o homem novo, criado à imagem de Deus, em verdadeira justiça e santidade."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 6, 24-35",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "O homem não vive somente de pão, mas vive de toda palavra que sai da boca de Deus e não só de pão, amém, aleluia, aleluia! (Mt 4,4)."
+      },
       "text": "Naquele tempo, 24quando a multidão viu que Jesus não estava ali nem os seus discípulos, subiram às barcas e foram à procura de Jesus, em Cafarnaum. 25Quando o encontraram no outro lado do mar, perguntaram-lhe: \"Rabi, quando chegaste aqui?\" 26Jesus respondeu: \"Em verdade, em verdade eu vos digo, estais me procurando não porque vistes sinais, mas porque comestes pão e ficastes satisfeitos. 27Esforçai-vos não pelo alimento que se perde, mas pelo alimento que permanece até a vida eterna e que o Filho do homem vos dará. Pois este é quem o Pai marcou com seu selo\". 28Então perguntaram: \"Que devemos fazer para realizar as obras de Deus?\" 29Jesus respondeu: \"A obra de Deus é que acrediteis naquele que ele enviou\". 30Eles perguntaram: \"Que sinal realizas, para que possamos ver e crer em ti? Que obra fazes? 31Nossos pais comeram o maná no deserto, como está na Escritura: \"Pão do céu deu-lhes a comer\". 32Jesus respondeu: \"Em verdade, em verdade vos digo, não foi Moisés quem vos deu o pão que veio do céu. É meu Pai que vos dá o verdadeiro pão do céu. 33Pois o pão de Deus é aquele que desce do céu e dá vida ao mundo\". 34Então pediram: \"Senhor, dá-nos sempre desse pão\". 35Jesus lhes disse: \"Eu sou o pão da vida. Quem vem a mim não terá mais fome e quem crê em mim nunca mais terá sede\"."
     }
   },

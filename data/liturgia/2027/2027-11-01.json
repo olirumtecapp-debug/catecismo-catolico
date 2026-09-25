@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Romanos 11,29-36",
+      "intro": "Leitura da Carta de São Paulo aos Romanos:",
       "text": "Irmãos: 29Os dons e a vocação de Deus são irrevogáveis. 30Outrora, vós fostes desobedientes a Deus, mas agora alcançastes misericórdia, em conseqüência da desobediência deles. 31Assim são eles agora os desobedientes, para que, em conseqüência da misericórdia usada convosco, alcancem finalmente misericórdia. 32Com efeito, Deus encerrou todos os homens na desobediência, a fim de exercer misericórdia para com todos. 33Ó profundidade da riqueza, da sabedoria e da ciência de Deus! Como são inescrutáveis os seus juízos e impenetráveis os seus caminhos! 34De fato, quem conheceu o pensamento do Senhor? Ou quem foi seu conselheiro? 35Ou quem se antecipou em dar-lhe alguma coisa, de maneira a ter direito a uma retribuição? 36Na verdade, tudo é dele, por ele, e para ele. A ele, a glória para sempre. Amém!"
     },
     "psalm": {
       "reference": "Salmo 68 (69)",
+      "refrain": "Respondei-me, ó Senhor, pelo vosso imenso amor!",
       "text": "- Pobre de mim, sou infeliz e sofredor! Que vosso auxílio me levante, Senhor Deus! Cantando eu louvarei o vosso nome e agradecido exultarei de alegria!\n\n- Humildes, vede isto e alegrai-vos: o vosso coração reviverá, se procurardes o Senhor continuamente! Pois nosso Deus atende à prece dos seus pobres, e não despreza o clamor de seus cativos.\n\n- Sim, Deus virá e salvará Jerusalém, reconstruindo as cidades de Judá, onde os pobres morarão, sendo seus donos. A descendência de seus servos há de herdá-las, e os que amam o santo nome do Senhor dentro delas fixarão sua morada!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 14, 12-14",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Se guardais minha palavra, diz Jesus, realmente vós sereis os meus discípulos (Jo 8,31s)."
+      },
       "text": "Naquele tempo: 12dizia Jesus ao chefe dos fariseus que o tinha convidado: 'Quando tu deres um almoço ou um jantar, não convides teus amigos, nem teus irmãos, nem teus parentes, nem teus vizinhos ricos. Pois estes poderiam também convidar-te e isto já seria a tua recompensa. 13Pelo contrário, quando deres uma festa, convida os pobres, os aleijados, os coxos, os cegos. 14Então tu serás feliz! Porque eles não te podem retribuir. Tu receberás a recompensa na ressurreição dos justos.'"
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 35,1-10",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "1Alegre-se a terra que era deserta e intransitável, exulte a solidão e floresça como um lírio. 2Germine e exulte de alegria e louvores. Foi-lhe dada a glória do Líbano, o esplendor do Carmelo e de Saron; seus habitantes verão a glória do Senhor, a majestade do nosso Deus. 3Fortalecei as mãos enfraquecidas e firmai os joelhos debilitados. 4Dizei às pessoas deprimidas: 'Criai ânimo, não tenhais medo! Vede, é vosso Deus, é a vingança que vem, é a recompensa de Deus; é ele que vem para vos salvar'. 5Então se abrirão os olhos dos cegos e se descerrarão os ouvidos dos surdos. 6O coxo saltará como um cervo e se desatará a língua dos mudos, assim como brotarão águas no deserto e jorrarão torrentes no ermo. 7A terra árida se transformará em lago, e a região sedenta, em fontes d'água; nas cavernas onde viviam dragões crescerá o caniço e o junco. 8Ali haverá uma vereda e um caminho; o caminho se chamará estrada santa: por ela não passará o impuro; mas será uma estrada reta em que até os débeis não se perderão. 9Ali não existem leões, não andam por ela animais de predadores, nem mesmo aparecem lá; os que forem libertados, poderão percorrê-la, 10os que o Senhor salvou, voltarão para casa. Eles virão a Sião cantando louvores, com infinita alegria brilhando em seus rostos: cheios de gozo e contentamento, não mais conhecerão a dor e o pranto."
     },
     "psalm": {
       "reference": "Salmo 84 (85)",
+      "refrain": "Eis que vem o nosso Deus! Ele vem para salvar.",
       "text": "- Quero ouvir o que o Senhor irá falar: é a paz que ele vai anunciar; a paz para o seu povo e seus amigos, para os que voltam ao Senhor seu coração. Está perto a salvação dos que o temem, e a glória habitará em nossa terra.\n\n- A verdade e o amor se encontrarão, a justiça e a paz se abraçarão; da terra brotará a fidelidade, e a justiça olhará dos altos céus.\n\n- O Senhor nos dará tudo o que é bom, e a nossa terra nos dará suas colheitas; a justiça andará na sua frente e a salvação há de seguir os passos seus."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 5, 17-26",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Eis que o rei há de vir, Senhor da terra, ele mesmo de nós afastará o jugo do nosso cativeiro."
+      },
       "text": "17Um dia Jesus estava ensinando. É sua volta estavam sentados fariseus e doutores da Lei, vindos de todas as aldeias da Galiléia, da Judéia e de Jerusalém. E a virtude do Senhor o levava a curar. 18Uns homens traziam um paralítico num leito e procuravam fazê-lo entrar para apresentá-lo. 19Mas, nóo achando por onde introduzi-lo, devido à multidão, subiram ao telhado e por entre as telhas o desceram com o leito no meio da assembléia diante de Jesus. 20Vendo-lhes a fé, ele disse: Homem, teus pecados estão perdoados. 21Os escribas e fariseus começaram a murmurar, dizendo: Quem é este que assim blasfema? Quem pode perdoar os pecados senão Deus? 22Conhecendo-lhes os pensamentos, Jesus respondeu, dizendo: 'Por que murmurais em vossos corações? 23O que é mais fácil dizer: 'teus pecados estão perdoados', ou dizer: 'levanta-te e anda'? 24Pois, para que saibais que o Filho do homem tem na terra poder de perdoar os pecados - disse ao paralítico - eu te digo: levanta-te, pega o leito e vai para casa'. 25Imediatamente, diante deles, ele se levantou, tomou o leito e foi para casa, louvando a Deus. 26Todos ficaram fora de si, glorificavam a Deus e cheios de temor diziam: 'Hoje vimos coisas maravilhosas!'"
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Tessalonicenses 4,1-8",
+      "intro": "Leitura da Primeira Carta de São Paulo aos Tessalonicenses:",
       "text": "1Meus irmãos, eis o que vos pedimos e exortamos no Senhor Jesus: Aprendestes de nós como deveis viver para agradar a Deus, e já estais vivendo assim. Fazei progressos ainda maiores! 2Conheceis, de fato, as instruções que temos dado em nome do Senhor Jesus. 3Esta é a vontade de Deus: vivei na santidade, afastai-vos da impureza; 4cada um saiba tratar o seu parceiro conjugal com santidade e respeito, 5sem se deixar levar pelas paixões, como fazem os pagãos que não conhecem a Deus. 6Que ninguém, nessa matéria, prejudique ou engane seu irmão, porque o Senhor se vinga de tudo, como já vos dissemos e comprovamos. 7Deus não nos chamou à impureza mas à santidade. 8Portanto, desprezar estes preceitos não é desprezar um homem e sim, a Deus, que nos deu o Espírito Santo."
     },
     "psalm": {
       "reference": "Salmo 96 (97)",
+      "refrain": "Ó justos, alegrai-vos no Senhor!",
       "text": "- Deus é Rei! Exulte a terra de alegria, e as ilhas numerosas rejubilem! Treva e nuvem o rodeiam no seu trono, que se apóia na justiça e no direito.\n\n- As montanhas se derretem como cera ante a face do Senhor de toda a terra; e assim proclama o céu sua justiça, todos os povos podem ver a sua glória.\n\n- O Senhor ama os que detestam a maldade, ele protege seus fiéis e suas vidas, e da mão dos pecadores os liberta.\n\n- Uma luz já se levanta para os justos, e a alegria, para os retos corações. Homens justos, alegrai-vos no Senhor, celebrai e bendizei seu santo nome!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 25, 1-13",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Vigiai e orai para ficardes de pé ante o Filho do homem! (Lc 21,36)."
+      },
       "text": "Naquele tempo, disse Jesus, a seus discípulos, esta parábola: 1'O Reino dos Céus é como a história das dez jovens que pegaram suas lâmpadas de óleo e saíram ao encontro do noivo. 2Cinco delas eram imprevidentes, e as outras cinco eram previdentes. 3As imprevidentes pegaram as suas lâmpadas, mas não levaram óleo consigo. 4As previdentes, porém, levaram vasilhas com óleo junto com as lâmpadas. 5O noivo estava demorando e todas elas acabaram cochilando e dormindo. 6No meio da noite, ouviu-se um grito: `O noivo está chegando. Ide ao seu encontro!' 7Então as dez jovens se levantaram e prepararam as lâmpadas. 8As imprevidentes disseram às previdentes: `Dai-nos um pouco de óleo, porque nossas lâmpadas estão se apagando.' 9As previdentes responderam: `De modo nenhum, porque o óleo pode ser insuficiente para nós e para vós. É melhor irdes comprar aos vendedores'. 10Enquanto elas foram comprar óleo, o noivo chegou, e as que estavam preparadas entraram com ele para a festa de casamento. E a porta se fechou. 11Por fim, chegaram também as outras jovens e disseram: `Senhor! Senhor! Abre-nos a porta!' 12Ele, porém, respondeu: `Em verdade eu vos digo: Não vos conheço!' 13Portanto, ficai vigiando, pois não sabeis qual será o dia, nem a hora."
     }
   },

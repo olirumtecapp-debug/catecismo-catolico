@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Levítico 19,1-2.11-18",
+      "intro": "Leitura do Livro do Levítico:",
       "text": "1O Senhor falou a Moisés, dizendo: 2'Fala a toda a comunidade dos filhos de Israel, e dize-lhes: Sede santos, porque eu, o Senhor vosso Deus, sou santo. 11Não furteis, nóo digais mentiras, nem vos enganeis uns aos outros. 12Não jureis falso por meu nome, profanando o nome do Senhor teu Deus. Eu sou o Senhor. 13Não explores o teu próximo nem pratiques extorsão contra ele. Não retenhas contigo a diária do assalariado até o dia seguinte. 14Não amaldições o surdo, nem ponhas tropeço diante do cego, mas temerás o teu Deus. Eu sou o Senhor. 15Não cometas injustiças no exercício da justiça; não favoreças o pobre nem prestigieis o poderoso. Julga teu próximo conforme a justiça. 16Não sejas um maldizente entre o teu povo. Não conspires, caluniando-o, contra a vida do teu próximo. Eu sou o Senhor. 17Nóo tenhas no coração ódio contra teu irmão. Repreende o teu próximo, para não te tornares culpado de pecado por causa dele. 18Não procures vingança, nem guardes rancor aos teus compatriotas. Amarás o teu próximo como a ti mesmo. Eu sou o Senhor."
     },
     "psalm": {
       "reference": "Salmo 18 (19)",
+      "refrain": "Ó Senhor,vossas palavras são espírito e vida!",
       "text": "- A lei do Senhor Deus é perfeita, conforto para a alma! O testemunho do Senhor é fiel, sabedoria dos humildes.\n\n- Os preceitos do Senhor são precisos, alegria ao coração. O mandamento do Senhor é brilhante, para os olhos é uma luz.\n\n- É puro o temor do Senhor, imutável para sempre. Os julgamentos do Senhor são corretos e justos igualmente.\n\n- Que vos agrade o cantar dos meus lábios e a voz da minha alma; que ela chegue até vós, ó Senhor, meu Rochedo e Redentor!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 25, 31-46",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Salve, Cristo, luz da vida, companheiro na partilha!",
+        "verse": "Eis o tempo de conversão; eis o dia da salvação (2Cor 6,2)."
+      },
       "text": "Naquele tempo, disse Jesus a seus discípulos: 31Quando o Filho do Homem vier em sua glória, acompanhado de todos os anjos, então se assentará em seu trono glorioso. 32Todos os povos da terra serão reunidos diante dele, e ele separará uns dos outros, assim como o pastor separa as ovelhas dos cabritos. 33E colocará as ovelhas à sua direita e os cabritos à sua esquerda. 34Então o Rei dirá aos que estiverem à sua direita: `Vinde benditos de meu Pai! Recebei como herança o Reino que meu Pai vos preparou desde a criação do mundo! 35Pois eu estava com fome e me destes de comer; eu estava com sede e me destes de beber; eu era estrangeiro e me recebestes em casa; 36eu estava nu e me vestistes; eu estava doente e cuidastes de mim; eu estava na prisão e fostes me visitar'. 37Então os justos lhe perguntarão: `Senhor, quando foi que te vimos com fome e te demos de comer? com sede e te demos de beber? 38Quando foi que te vimos como estrangeiro e te recebemos em casa, e sem roupa e te vestimos? 39Quando foi que te vimos doente ou preso, e fomos te visitar?' 40Então o Rei lhes responderá: `Em verdade eu vos digo, que todas as vezes que fizestes isso a um dos menores de meus irmãos, foi a mim que o fizestes!' 41Depois o Rei dirá aos que estiverem à sua esquerda: `Afastai-vos de mim, malditos! Ide para o fogo eterno, preparado para o diabo e para os seus anjos. 42Pois eu estava com fome e não me destes de comer; eu estava com sede e não me destes de beber; 43eu era estrangeiro e não me recebestes em casa; eu estava nu e não me vestistes; eu estava doente e na prisão e não fostes me visitar'. 44E responderão também eles: `Senhor, quando foi que te vimos com fome, ou com sede, como estrangeiro, ou nu, doente ou preso, e não te servimos?' 45Então o Rei lhes responderá: `Em verdade eu vos digo, todas as vezes que não fizestes isso a um desses pequeninos, foi a mim que não o fizestes!' 46Portanto, estes irão para o castigo eterno, enquanto os justos irão para a vida eterna'."
     }
   },

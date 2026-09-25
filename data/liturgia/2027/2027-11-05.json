@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Romanos 15,14-21",
+      "intro": "Leitura da carta de São Paulo aos Romanos:",
       "text": "Meus irmãos, 14de minha parte, estou convencido, a vosso respeito, de que tendes bastante bondade e ciência, de tal maneira que podeis admoestar-vos uns aos outros. 15No entanto, em algumas passagens, eu vos escrevo com certa ousadia, como para reavivar a vossa memória, em razão da graça que Deus me deu. 16Por esta graça eu fui feito ministro de Jesus Cristo entre os pagãos e consagrado servidor do Evangelho de Deus, para que os pagãos se tornem uma oferenda bem aceite santificada no Espírito Santo. 17Tenho, pois, esta glória em Jesus Cristo no que se refere ao serviço de Deus: 18Não ouso falar senão daquilo que Cristo realizou por meu intermédio, para trazer os pagãos à obediência da fé, pela palavra e pela ação, 19por sinais e prodígios, no poder do Espírito de Deus. Assim, eu preguei o Evangelho de Cristo, desde Jerusalém e arredores até a Ilíria, 20tendo o cuidado de pregar somente onde Cristo ainda não fora anunciado, para não acontecer de eu construir sobre alicerce alheio. 21Agindo desta maneira, eu estou de acordo com o que está escrito: \"Aqueles aos quais ele nunca fora anunciado, verão; aqueles que não tinham ouvido falar dele, compreenderão\"."
     },
     "psalm": {
       "reference": "Salmo 97 (98)",
+      "refrain": "O Senhor fez conhecer seu poder salvador perante as nações.",
       "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram a salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 16, 1-8",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "O amor de Deus se realiza em todo aquele que guarda sua palavra fielmente (1Jo 2, 5)"
+      },
       "text": "<b>"
     }
   },

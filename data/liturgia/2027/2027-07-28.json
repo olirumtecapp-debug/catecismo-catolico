@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Êxodo 34,29-35",
+      "intro": "Leitura do Livro do Êxodo:",
       "text": "29Quando Moisés desceu da montanha do Sinai, trazendo nas mãos as duas tábuas da aliança, não sabia que a pele do seu rosto resplandecia por ter falado com o Senhor. 30Aarão e os filhos de Israel, vendo o rosto de Moisés resplandecente, tiveram medo de se aproximar. 31Então Moisés os chamou, e tanto Aarão como os chefes da comunidade foram para junto dele. E, depois que lhes falou, 32todos os filhos de Israel também se aproximaram dele, e Moisés transmitiu-lhes todas as ordens que tinha recebido do Senhor no monte Sinai. 33Quando Moisés acabou de lhes falar, cobriu o rosto com um véu. 34Todas as vezes que Moisés se apresentava ao Senhor, para falar com ele, retirava o véu, até a hora de sair; depois saía e dizia aos filhos de Israel tudo o que lhe tinha sido ordenado. 35E eles viam a pele do rosto de Moisés resplandecer; mas ele voltava a cobrir o rosto com o véu, até o momento em que entrava para falar com o Senhor."
     },
     "psalm": {
       "reference": "Salmo 98 (99)",
+      "refrain": "Santo é o Senhor nosso Deus!",
       "text": "- Exaltai o Senhor nosso Deus, e prostrai-vos perante seus pés, pois é santo o Senhor nosso Deus!\n\n- Eis Moisés e Aarão entre os seus sacerdotes. E também Samuel invocava seu nome, e ele mesmo, o Senhor, os ouvia.\n\n- Da coluna de nuvem falava com eles. E guardavam a lei e os preceitos divinos, que o Senhor nosso Deus tinha dado.\n\n- Exaltai o Senhor nosso Deus, e prostrai-vos perante seu monte, pois é santo o Senhor nosso Deus!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 44-46",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Eu vos chamo meus amigos, pois vos dei a conhecer o que o Pai me revelou (Jo 15,15)."
+      },
       "text": "Naquele tempo, disse Jesus à multidão: 44'O Reino dos Céus é como um tesouro escondido no campo. Um homem o encontra e o mantém escondido. Cheio de alegria, ele vai, vende todos os seus bens e compra aquele campo. 45O Reino dos Céus também é como um comprador que procura pérolas preciosas. 46Quando encontra uma pérola de grande valor, ele vai, vende todos os seus bens e compra aquela pérola."
     }
   },

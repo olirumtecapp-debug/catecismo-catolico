@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Coríntios 11,18.21-30",
+      "intro": "Leitura da segunda carta de São Paulo aos Coríntios:",
       "text": "Irmãos: 18Já que muitos se gloriam segundo a carne, eu também me gloriarei. 21bO que outros ousam dizer em vantagem própria, eu também o digo a meu respeito, embora fale como insensato. 22São hebreus? Eu também. - São israelitas? Eu também. - São da descendência de Abraão? Eu também. 23- São servos de Cristo? Como menos sensato digo: Eu ainda mais. De fato, muito mais do que eles: pelos trabalhos, pelas prisões, pelos açoites sem conta. Muitas vezes, vi-me em perigo de morte. 24Cinco vezes, recebi dos judeus quarenta açoites menos um. 25Três vezes, fui batido com varas. Uma vez, fui apedrejado. Três vezes, naufraguei. Passei uma noite e um dia no alto mar. 26Fiz inúmeras viagens, com inúmeros perigos: perigos de rios, perigos de ladrões, perigos da parte de meus compatriotas, perigos da parte dos pagãos, perigos na cidade, perigos em lugares desertos, perigos no mar, perigos por parte de falsos irmãos. 27Trabalhos e fadigas, inúmeras vigílias, fome e sede, freqüentes jejuns, frio e nudez! 28E, sem falar de outras coisas, a minha preocupação de cada dia, a solicitude por todas as igrejas! 29Quem é fraco, que eu também não seja fraco com ele? Quem é escandalizado, que eu não fique ardendo de indignação? 30Se é preciso gloriar-se, é de minhas fraquezas que me gloriarei!"
     },
     "psalm": {
       "reference": "Salmo 33 (34)",
+      "refrain": "O Senhor liberta os justos de todas as angústias!",
       "text": "- Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. Minha alma se gloria no Senhor; que ouçam os humildes e se alegrem!\n\n- Comigo engrandecei ao Senhor Deus, exaltemos todos juntos o seu nome! Todas as vezes que o busquei, ele me ouviu, e de todos os temores me livrou.\n\n- Contemplai a sua face e alegrai-vos, e vosso rosto não se cubra de vergonha! Este infeliz gritou a Deus, e foi ouvido, e o Senhor o libertou de toda angústia."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 6, 19-23",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Felizes os humildes de espírito, porque deles é o reno dos céus (Mt 5, 3)"
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 19Não junteis tesouros aqui na terra, onde a traça e a ferrugem destroem, e os ladrões assaltam e roubam. 20Ao contrário, juntai para vós tesouros no céu, onde nem a traça e a ferrugem destroem, nem os ladrões assaltam e roubam. 21Porque, onde está o teu tesouro, aí estará também o teu coração. 22O olho é a lâmpada do corpo. Se o teu olho é sadio, todo o teu corpo ficará iluminado. 23Se o teu olho está doente, todo o teu corpo ficará na escuridão. Ora, se a luz que existe em ti é escuridão, como será grande a escuridão."
     }
   },

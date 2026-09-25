@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Hebreus 8,6-13",
+      "intro": "Leitura da Carta aos Hebreus:",
       "text": "Irmãos:6Agora, Cristo possui um ministério superior. Pois ele é o mediador de uma aliança bem melhor, baseada em promessas melhores. 7De fato, se a primeira aliança fosse sem defeito, não se procuraria estabelecer uma segunda. 8Com efeito, Deus adverte: 'Dias virão, diz o Senhor, em que concluirei com a casa de Israel e com a casa de Judá uma nova aliança. 9Não como a aliança que eu fiz com os seus pais, no dia em que os conduzi pela mão para fazê-los sair da terra do Egito. Pois eles não permaneceram fiéis à minha aliança; por isso, me desinteressei deles, diz o Senhor. 10Eis a aliança que estabelecerei com o povo de Israel, depois daqueles dias - diz o Senhor: colocarei minhas leis na sua mente e as gravarei no seu coração, e serei o seu Deus, e eles serão o meu povo. 11Ninguém mais ensinará o seu próximo, e nem o seu irmão, dizendo: 'Conhece o Senhor!'. Porque todos me conhecerão, desde o menor até o maior. 12Porque terei misericórdia das suas faltas, e não me lembrarei mais dos seus pecados.' 13Assim, ao falar de nova aliança, declarou velha a primeira. Ora, o que envelhece e se torna antiquado está prestes a desaparecer."
     },
     "psalm": {
       "reference": "Salmo 84 (85)",
+      "refrain": "A verdade e o amor se encontrarão.",
       "text": "- Mostrai-nos, ó Senhor, vossa bondade, concedei-nos também vossa salvação! Está perto a salvação dos que o temem, e a glória habitará em nossa terra.\n\n- A verdade e o amor se encontrarão, a justiça e a paz se abraçarão; da terra brotará a fidelidade, e a justiça olhará dos altos céus.\n\n- O Senhor nos dará tudo o que é bom, e a nossa terra nos dará suas colheitas; a justiça andará na sua frente e a salvação há de seguir os passos seus."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 13-19",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Em Cristo, Deus reconciliou consigo mesmo a humanidade; e a nós ele entregou essa reconciliação (2Cor 5,19)."
+      },
       "text": "Naquele tempo:13Jesus subiu ao monte e chamou os que ele quis. E foram até ele. 14Então Jesus designou Doze, para que ficassem com ele e para enviá-los a pregar, 15com autoridade para expulsar os demônios. 16Designou, pois, os Doze: Simão, a quem deu o nome de Pedro; 17Tiago e João, filhos de Zebedeu, aos quais deu o nome de Boanerges, que quer dizer 'filhos do trovão'; 18André, Filipe, Bartolomeu, Mateus, Tomé, Tiago, filho de Alfeu, Tadeu, Simão, o cananeu, 19e Judas Iscariotes, aquele que depois o traiu."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Hebreus 10,1-10",
+      "intro": "Leitura da Carta aos Hebreus:",
       "text": "Irmãos: 1A Lei possui apenas o esboço dos bens futuros e não o modelo real das coisas. Também, com os seus sacrifícios sempre iguais e sem desistência repetidos cada ano, ela é totalmente incapaz de levar à perfeição aqueles que se aproximam para oferecê-los. 2Se não fosse assim, não se teria deixado de oferecê-los, se os que prestam culto, uma vez purificados, já não tivessem nenhuma consciência dos pecados? 3Mas, ao contrário, é por meio destes sacrifícios que, anualmente, se renova a memória dos pecados, 4pois é impossível eliminar os pecados com o sangue de touros e bodes. 5Por isso, ao entrar no mundo, Cristo afirma: 'Tu não quiseste vítima nem oferenda, mas formaste-me um corpo. 6Não foram do teu agrado holocaustos nem sacrifícios pelo pecado. 7Por isso eu disse: Eis que eu venho. No livro está escrito a meu respeito: Eu vim, ó Deus, para fazer a tua vontade.' 8Depois de dizer: 'Tu não quiseste nem te agradaram vítimas, oferendas, holocaustos, sacrifícios pelo pecado' - coisas oferecidas segundo a Lei - 9ele acrescenta: 'Eu vim para fazer a tua vontade'. Com isso, suprime o primeiro sacrifício, para estabelecer o segundo. 10É graças a esta vontade que somos santificados pela oferenda do corpo de Jesus Cristo, realizada uma vez por todas."
     },
     "psalm": {
       "reference": "Salmo 39 (40)",
+      "refrain": "Eis que venho fazer, com prazer, a vossa vontade, Senhor!",
       "text": "- Esperando, esperei no Senhor, e inclinando-se, ouviu meu clamor. Canto novo ele pôs em meus lábios, um poema em louvor ao Senhor.\n\n- Sacrifício e oblação não quisestes, mas abristes, Senhor, meus ouvidos; não pedistes ofertas nem vítimas, holocaustos por nossos pecados. E então eu vos disse: 'Eis que venho!'\n\n- Boas-novas de vossa justiça anunciei numa grande assembléia; vós sabeis: não fechei os meus lábios!\n\n- Proclamei toda a vossa justiça, sem retê-la no meu coração; vosso auxílio e lealdade narrei. Não calei vossa graça e verdade na presença da grande assembléia."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 31-35",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Graças te dou, ó Pai, Senhor do céu e da terra, pois revelaste os mistérios do teu reino aos pequeninos, escondendo-os aos doutores! (Mt 11, 25)."
+      },
       "text": "Naquele tempo: 31Chegaram a mãe de Jesus e seus irmãos. Eles ficaram do lado de fora e mandaram chamá-lo. 32Havia uma multidão sentada ao redor dele. Então lhe disseram: 'Tua mãe e teus irmãos estão lá fora à tua procura.' 33Ele respondeu: 'Quem é minha mãe, e quem são meus irmãos?' 34E olhando para os que estavam sentados ao seu redor, disse: 'Aqui estão minha mãe e meus irmãos. 35Quem faz a vontade de Deus, esse é meu irmão, minha irmã e minha mãe.'"
     }
   },

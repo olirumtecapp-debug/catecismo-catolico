@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Baruc 5,1-9",
+      "intro": "Leitura do Livro do Profeta Baruc:",
       "text": "1Despe ó Jerusalém, a veste de luto e de aflição, e reveste, para sempre, os adornos da glória vinda de Deus. 2Cobre-te com o manto da justiça que vem de Deus e põe na cabeça o diadema da glória do Eterno. 3Deus mostrará teu esplendor, ó Jerusalém, a todos os que estão debaixo do céu. 4Receberás de Deus este nome para sempre: 'Paz-da-justiça e glória-da-piedade'. 5Levanta-te, Jerusalém, põe-te no alto e olha para o Oriente! Vê teus filhos reunidos pela voz do Santo, desde o poente até o levante, jubilosos por Deus ter-se lembrado deles. 6Saíram de ti, caminhando a pé, levados pelos inimigos. Deus os devolve a ti, conduzidos com honras, como príncipes reais. 7Deus ordenou que se abaixassem todos os altos montes e as colinas eternas, e se enchessem os vales, para aplainar a terra, a fim de que Israel caminhe com segurança, sob a glória de Deus. 8As florestas e todas as árvores odoríferas, darão sombra a Israel, por ordem de Deus. 9Sim, Deus guiará Israel, com alegria, à luz de sua glória, manifestando a misericórdia e a justiça que dele procedem."
     },
     "psalm": {
       "reference": "Salmo 125 (126)",
+      "refrain": "Maravilhas fez conosco o Senhor, exultemos de alegria!",
       "text": "- Quando o Senhor reconduziu nossos cativos, parecíamos sonhar; encheu-se de sorriso nossa boca, nossos lábios, de canções.\n\n- Entre os gentios se dizia: 'Maravilhas fez com eles o Senhor!' Sim, maravilhas fez conosco o Senhor, exultemos de alegria!\n\n- Mudai a nossa sorte, ó Senhor, como torrentes no deserto. Os que lançam as sementes entre lágrimas, ceifarão com alegria.\n\n- Chorando de tristeza sairão, espalhando suas sementes; cantando de alegria voltarão, carregando os seus feixes!"
     },
     "secondReading": {
       "reference": "Filipenses 1,4-6.8-11",
+      "intro": "Leitura da Carta de São Paulo aos Filipenses:",
       "text": "Irmãos: 4Sempre em todas as minhas orações rezo por vós, com alegria, 5por causa da vossa comunhão conosco na divulgação do Evangelho, desde o primeiro dia até agora. 6Tenho a certeza de que aquele que começou em vós uma boa obra, há de levá-la à perfeição até ao dia de Cristo Jesus. 8Deus é testemunha de que tenho saudade de todos vós, com a ternura de Cristo Jesus. 9E isto eu peço a Deus: que o vosso amor cresça sempre mais, em todo o conhecimento e experiência, 10para discernirdes o que é o melhor. E assim ficareis puros e sem defeito para o dia de Cristo, 11cheios do fruto da justiça que nos vem por Jesus Cristo, para a glória e o louvor de Deus."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 3, 1-6",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Preparai o caminho do Senhor, endireitai suas veredas. Toda a carne há de ver a salvação do nosso Deus (Lc 3,4.6)."
+      },
       "text": "1No décimo quinto ano do império de Tibério César, quando Pôncio Pilatos era governador da Judéia, Herodes administrava a Galiléia, seu irmão Filipe, as regiões da Ituréia e Traconítide, e Lisânias a Abilene; 2quando Anás e Caifás eram sumos sacerdotes, foi então que a palavra de Deus foi dirigida a João, o filho de Zacarias, no deserto. 3E ele percorreu toda a região do Jordão, pregando um batismo de conversão para o perdão dos pecados, 4como está escrito no Livro das palavras do profeta Isaías: 'Esta é a voz daquele que grita no deserto: 'preparai o caminho do Senhor, endireitai suas veredas. 5Todo vale será aterrado, toda montanha e colina serão rebaixadas; as passagens tortuosas ficarão retas e os caminhos acidentados serão aplainados. 6E todas as pessoas verão a salvação de Deus''."
     }
   },

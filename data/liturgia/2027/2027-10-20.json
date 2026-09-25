@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Romanos 6,12-18",
+      "intro": "Leitura da carta de São Paulo aos Romanos:",
       "text": "Irmãos: 12Que o pecado não reine mais em vosso corpo mortal, levando-vos a obedecer às suas paixões. 13Não ofereçais mais vossos membros ao pecado como armas de iniquidade. Pelo contrário, oferecei-vos a Deus como pessoas vivas, isto é, como pessoas que passaram da morte à vida, e ponde vossos membros ao serviço de Deus como armas de justiça. 14De fato, o pecado não vos dominará, visto que não estais sob o regime da Lei, mas sob o regime da graça. 15Então, iremos pecar, porque não estamos sob o regime da Lei, mas sob o regime da graça? De modo algum! 16Acaso não sabeis que, oferecendo-vos a alguém como escravos, sois realmente escravos daquele a quem obedeceis, seja escravos do pecado para a morte, seja escravos da obediência para a justiça? 17Graças a Deus que vós, depois de terdes sido escravos do pecado, passastes a obedecer, de coração, aos ensinamentos, aos quais fostes entregues."
     },
     "psalm": {
       "reference": "Salmo 123 (124)",
+      "refrain": "Nosso auxílio está no nome do Senhor.",
       "text": "- Se o Senhor não estivesse ao nosso lado, que o diga Israel neste momento; se o Senhor não estivesse ao nosso lado, quando os homens investiram contra nós, com certeza nos teriam devorado no furor de sua ira contra nós.\n\n- Então as águas nos teriam submergido, a correnteza nos teria arrastado, e então, por sobre nós teriam passado essas águas sempre mais impetuosas. Bendito seja o Senhor, que não deixou cairmos como presa de seus dentes!\n\n- Nossa alma como um pássaro escapou do laço que lhe armara o caçador; o laço arrebentou-se de repente, e assim nós conseguimos libertar-nos. O nosso auxílio está no nome do Senhor, do Senhor que fez o céu e fez a terra!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 39-48",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Vigiai, diz Jesus, vigiai, pois, no dia em que não esperais, o vosso Senhor há de vir (Mt 24, 42.44)"
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 39Ficai certos: se o dono da casa soubesse a hora em que o ladrão iria chegar, não deixaria que arrombasse a sua casa. 40Vós também ficai preparados! Porque o Filho do Homem vai chegar na hora em que menos o esperardes'. 41Então Pedro disse: 'Senhor, tu contas esta parábola para nós ou para todos?' 42E o Senhor respondeu: 'Quem é o administrador fiel e prudente que o senhor vai colocar à frente do pessoal de sua casa para dar comida a todos na hora certa? 43Feliz o empregado que o patrão, ao chegar, encontrar agindo assim! 44Em verdade eu vos digo: o senhor lhe confiará a administração de todos os seus bens. 45Porém, se aquele empregado pensar: 'Meu patrão está demorando', e começar a espancar os criados e as criadas, e a comer, a beber e a embriagar-se, 46o senhor daquele empregado chegará num dia inesperado e numa hora imprevista, ele o partirá ao meio e o fará participar do destino dos infiéis. 47Aquele empregado que, conhecendo a vontade do senhor, nada preparou, nem agiu conforme a sua vontade, será chicoteado muitas vezes. 48Porém, o empregado que não conhecia essa vontade e fez coisas que merecem castigo, será chicoteado poucas vezes. A quem muito foi dado, muito será pedido; a quem muito foi confiado, muito mais será exigido!"
     }
   },
