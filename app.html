@@ -385,6 +385,8 @@
             color: #ffffff !important;
             border-color: #6B2D2D !important;
         }
+        .no-scrollbar::-webkit-scrollbar { display: none !important; }
+        .no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
     </style>
 </head>
 <body class="h-full flex flex-col custom-scrollbar overflow-hidden">
@@ -4474,18 +4476,49 @@
                             </div>`;
                     }
                     const box = document.getElementById('home-crosslinks-content');
-                    if (box && ctx.lit) {
-                        const gospel = ctx.lit.gospel;
+                    if (box) {
+                        const gospel = ctx?.lit?.gospel;
                         const gospelRef = gospel?.reference || '';
-                        const firstRef = ctx.lit.firstReading?.reference || '';
+                        const firstRef = ctx?.lit?.firstReading?.reference || '';
+                        const celebrationName = ctx?.lit?.celebration || 'Liturgia de hoje';
+                        const saintName = ctx?.liturgicalName || 'Santo do Dia';
+
                         box.innerHTML = `
-                            <button onclick="router.navigate('liturgia')" class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-left hover:bg-emerald-100 transition"><span class="text-[10px] font-bold text-emerald-700 uppercase">✝️ Liturgia</span><strong class="block text-sm text-emerald-950 mt-1">${esc(ctx.lit.celebration || 'Liturgia de hoje')}</strong><span class="text-[11px] text-emerald-800/80">${esc(firstRef || 'Ver leituras e oração')}</span></button>
-                            ${gospelRef ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(gospelRef)}')" class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-left hover:bg-blue-100 transition"><span class="text-[10px] font-bold text-blue-700 uppercase">📖 Evangelho</span><strong class="block text-sm text-blue-950 mt-1">${esc(gospelRef)}</strong><span class="text-[11px] text-blue-800/80">Abrir na Bíblia</span></button>` : `<button onclick="router.navigate('biblia')" class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-left hover:bg-blue-100 transition"><span class="text-[10px] font-bold text-blue-700 uppercase">📖 Bíblia</span><strong class="block text-sm text-blue-950 mt-1">Bíblia Sagrada</strong><span class="text-[11px] text-blue-800/80">Continuar leitura</span></button>`}
-                            <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-left hover:bg-amber-100 transition"><span class="text-[10px] font-bold text-amber-700 uppercase">☩ Santo</span><strong class="block text-sm text-amber-950 mt-1">${esc(ctx.liturgicalName)}</strong><span class="text-[11px] text-amber-800/80">Ver celebração do dia</span></button>
+                            <button onclick="router.navigate('liturgia')" class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-left hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition cursor-pointer">
+                                <span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase">✝️ Liturgia</span>
+                                <strong class="block text-sm text-emerald-950 dark:text-emerald-100 mt-1 truncate">${esc(celebrationName)}</strong>
+                                <span class="text-[11px] text-emerald-800/80 dark:text-emerald-300/80 block truncate">${esc(firstRef || 'Ver leituras e oração')}</span>
+                            </button>
+                            ${gospelRef ? `
+                                <button onclick="openScriptureReferenceFromText('${encodeURIComponent(gospelRef)}')" class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-left hover:bg-blue-100 dark:hover:bg-blue-900/60 transition cursor-pointer">
+                                    <span class="text-[10px] font-bold text-blue-700 dark:text-blue-400 uppercase">📖 Evangelho</span>
+                                    <strong class="block text-sm text-blue-950 dark:text-blue-100 mt-1 truncate">${esc(gospelRef)}</strong>
+                                    <span class="text-[11px] text-blue-800/80 dark:text-blue-300/80 block">Abrir na Bíblia</span>
+                                </button>
+                            ` : `
+                                <button onclick="router.navigate('biblia')" class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-left hover:bg-blue-100 dark:hover:bg-blue-900/60 transition cursor-pointer">
+                                    <span class="text-[10px] font-bold text-blue-700 dark:text-blue-400 uppercase">📖 Bíblia</span>
+                                    <strong class="block text-sm text-blue-950 dark:text-blue-100 mt-1 truncate">Bíblia Sagrada</strong>
+                                    <span class="text-[11px] text-blue-800/80 dark:text-blue-300/80 block">Continuar leitura</span>
+                                </button>
+                            `}
+                            <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-left hover:bg-amber-100 dark:hover:bg-amber-900/60 transition cursor-pointer">
+                                <span class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase">☩ Santo</span>
+                                <strong class="block text-sm text-amber-950 dark:text-amber-100 mt-1 truncate">${esc(saintName)}</strong>
+                                <span class="text-[11px] text-amber-800/80 dark:text-amber-300/80 block truncate">Ver celebração do dia</span>
+                            </button>
                         `;
                     }
                 } catch (e) {
                     console.warn('Falha ao montar contexto da home:', e);
+                    const box = document.getElementById('home-crosslinks-content');
+                    if (box && !box.querySelector('button')) {
+                        box.innerHTML = `
+                            <button onclick="router.navigate('liturgia')" class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-left hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition cursor-pointer"><span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase">✝️ Liturgia</span><strong class="block text-sm text-emerald-950 dark:text-emerald-100 mt-1">Liturgia Diária</strong><span class="text-[11px] text-emerald-800/80 dark:text-emerald-300/80">Ver leituras de hoje</span></button>
+                            <button onclick="router.navigate('biblia')" class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-left hover:bg-blue-100 dark:hover:bg-blue-900/60 transition cursor-pointer"><span class="text-[10px] font-bold text-blue-700 dark:text-blue-400 uppercase">📖 Evangelho</span><strong class="block text-sm text-blue-950 dark:text-blue-100 mt-1">Evangelho do Dia</strong><span class="text-[11px] text-blue-800/80 dark:text-blue-300/80">Abrir na Bíblia</span></button>
+                            <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-left hover:bg-amber-100 dark:hover:bg-amber-900/60 transition cursor-pointer"><span class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase">☩ Santo</span><strong class="block text-sm text-amber-950 dark:text-amber-100 mt-1">Santo do Dia</strong><span class="text-[11px] text-amber-800/80 dark:text-amber-300/80">Ver celebração</span></button>
+                        `;
+                    }
                 }
             },
 
@@ -4983,24 +5016,24 @@
                 
                 return `
                     <div id="santo-view" data-date="${date}" class="max-w-5xl mx-auto space-y-6 min-w-0">
-                        <!-- NAVEGAÇÃO DE ABAS: HOJE, CATÁLOGO 140 SANTOS E MAPA MUNDIAL -->
-                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-3 border border-slate-200 dark:border-slate-800 card-shadow flex flex-wrap items-center justify-between gap-3">
-                            <div class="flex items-center gap-2 overflow-x-auto custom-scrollbar p-1 w-full sm:w-auto">
-                                <button id="saints-tab-today" onclick="setSaintsViewMode('today')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-2 whitespace-nowrap">
+                        <!-- NAVEGAÇÃO DE ABAS E DATA: HOJE, CATÁLOGO 140 SANTOS E MAPA MUNDIAL -->
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-3 sm:p-4 border border-slate-200 dark:border-slate-800 card-shadow flex flex-col md:flex-row md:items-center justify-between gap-3">
+                            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 w-full md:w-auto flex-nowrap" style="-webkit-overflow-scrolling: touch;">
+                                <button id="saints-tab-today" onclick="setSaintsViewMode('today')" class="px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-1.5 sm:gap-2 whitespace-nowrap shrink-0 flex-shrink-0 cursor-pointer">
                                     <span>📅</span> <span>Santo do Dia</span>
                                 </button>
-                                <button id="saints-tab-catalog" onclick="setSaintsViewMode('catalog')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap">
+                                <button id="saints-tab-catalog" onclick="setSaintsViewMode('catalog')" class="px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap shrink-0 flex-shrink-0 cursor-pointer">
                                     <span>👑</span> <span>140 Grandes Padroeiros</span>
                                 </button>
-                                <button id="saints-tab-map" onclick="setSaintsViewMode('map')" class="px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap">
-                                    <span>🗺️</span> <span>Mapa da Santidade (131 Lugares)</span>
+                                <button id="saints-tab-map" onclick="setSaintsViewMode('map')" class="px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap shrink-0 flex-shrink-0 cursor-pointer">
+                                    <span>🗺️</span> <span>Mapa da Santidade</span>
                                 </button>
                             </div>
 
-                            <div class="flex items-center gap-2 flex-wrap ml-auto pr-2">
-                                <button onclick="navigateSaintDay('${date}',-1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">← Anterior</button>
-                                <input type="date" value="${date}" onchange="router.navigate('santo', this.value)" class="px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">
-                                <button onclick="navigateSaintDay('${date}',1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">Próximo →</button>
+                            <div id="saints-date-nav" class="flex items-center justify-between sm:justify-end gap-2 w-full md:w-auto pt-2 md:pt-0 border-t md:border-t-0 border-slate-100 dark:border-slate-800">
+                                <button onclick="navigateSaintDay('${date}',-1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 shrink-0 cursor-pointer">← Anterior</button>
+                                <input type="date" value="${date}" onchange="router.navigate('santo', this.value)" class="px-2 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 text-center flex-1 sm:flex-initial">
+                                <button onclick="navigateSaintDay('${date}',1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 shrink-0 cursor-pointer">Próximo →</button>
                             </div>
                         </div>
 
@@ -9722,12 +9755,15 @@
                 if (panel) panel.classList.toggle('hidden', m !== mode);
                 if (tab) {
                     if (m === mode) {
-                        tab.className = "px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-2 whitespace-nowrap";
+                        tab.className = "px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-sm flex items-center gap-1.5 sm:gap-2 whitespace-nowrap shrink-0 flex-shrink-0 cursor-pointer";
                     } else {
-                        tab.className = "px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-2 whitespace-nowrap";
+                        tab.className = "px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-600 dark:text-slate-300 hover:text-mariana hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap shrink-0 flex-shrink-0 cursor-pointer";
                     }
                 }
             });
+
+            const dateNav = document.getElementById('saints-date-nav');
+            if (dateNav) dateNav.classList.toggle('hidden', mode !== 'today');
 
             if (mode === 'catalog') {
                 renderCenturyChips();
