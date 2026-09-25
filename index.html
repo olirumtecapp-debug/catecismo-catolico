@@ -261,7 +261,27 @@
             background: rgba(10, 16, 30, 0.8) !important;
         }
 
-    
+        /* Estilos Litúrgicos Nobres (Lecionário / Canção Nova Standard) */
+        .liturgical-verse-num {
+            display: inline-block;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-right: 0.25rem;
+            font-size: 0.9em;
+        }
+        html.dark .liturgical-verse-num {
+            color: #fbbf24 !important;
+        }
+        .liturgical-reading-text {
+            line-height: 1.85;
+            letter-spacing: 0.01em;
+            font-size: 1.025rem;
+        }
+        .liturgical-dialogue {
+            font-size: 0.925rem;
+            line-height: 1.6;
+        }
+
         /* Adaptações Especiais de Modo Escuro para Módulos Específicos */
         html.dark #bible-content {
             color: #e2e8f0 !important;
@@ -813,6 +833,7 @@
                     prayers: null,
                     antiphons: null,
                     extras: Array.isArray(j.extra) ? j.extra.map(x => ({ titulo:'Comentário / texto adicional', texto:this._stripHtml(String(x)) })).filter(x => x.texto) : [],
+                    commentary: typeof formatUnifiedCommentary === 'function' ? formatUnifiedCommentary(j.extra) : null,
                     apiCelebrations: [],
                     fromLocal: true
                 };
@@ -920,38 +941,272 @@
             ]
         };
 
-        function formatLiturgicalText(value) {
+        const bookAbbrMap = {
+            'Gênesis': 'Gn', 'Genesis': 'Gn', 'Êxodo': 'Ex', 'Exodo': 'Ex', 'Levítico': 'Lv', 'Levitico': 'Lv',
+            'Números': 'Nm', 'Numeros': 'Nm', 'Deuteronômio': 'Dt', 'Deuteronomio': 'Dt', 'Josué': 'Js', 'Josue': 'Js',
+            'Juízes': 'Jz', 'Juizes': 'Jz', 'Rute': 'Rt', '1 Samuel': '1Sm', '2 Samuel': '2Sm', '1 Reis': '1Rs', '2 Reis': '2Rs',
+            '1 Crônicas': '1Cr', '2 Crônicas': '2Cr', 'Esdras': 'Esd', 'Neemias': 'Ne', 'Tobias': 'Tb', 'Judite': 'Jdt', 'Ester': 'Est',
+            '1 Macabeus': '1Mc', '2 Macabeus': '2Mc', 'Jó': 'Jó', 'Salmos': 'Sl', 'Salmo': 'Sl', 'Provérbios': 'Pr', 'Proverbios': 'Pr',
+            'Eclesiastes': 'Ecl', 'Qohelet': 'Ecl', 'Cântico dos Cânticos': 'Ct', 'Cantico dos Canticos': 'Ct', 'Sabedoria': 'Sb',
+            'Eclesiástico': 'Eclo', 'Eclesiastico': 'Eclo', 'Sirácida': 'Eclo', 'Isaías': 'Is', 'Isaias': 'Is', 'Jeremias': 'Jr',
+            'Lamentações': 'Lm', 'Lamentacoes': 'Lm', 'Baruc': 'Br', 'Ezequiel': 'Ez', 'Daniel': 'Dn', 'Oseias': 'Os', 'Joel': 'Jl',
+            'Amós': 'Am', 'Amos': 'Am', 'Abdias': 'Ab', 'Jonas': 'Jn', 'Miqueias': 'Mq', 'Naum': 'Na', 'Habacuc': 'Hab', 'Sofonias': 'Sf',
+            'Ageu': 'Ag', 'Zacarias': 'Zc', 'Malaquias': 'Ml', 'Mateus': 'Mt', 'São Mateus': 'Mt', 'Marcos': 'Mc', 'São Marcos': 'Mc',
+            'Lucas': 'Lc', 'São Lucas': 'Lc', 'João': 'Jo', 'São João': 'Jo', 'Atos': 'At', 'Atos dos Apóstolos': 'At', 'Romanos': 'Rm',
+            '1 Coríntios': '1Cor', '2 Coríntios': '2Cor', 'Gálatas': 'Gl', 'Galatas': 'Gl', 'Efésios': 'Ef', 'Efesios': 'Ef',
+            'Filipenses': 'Fl', 'Colossenses': 'Cl', '1 Tessalonicenses': '1Ts', '2 Tessalonicenses': '2Ts',
+            '1 Timóteo': '1Tm', '2 Timóteo': '2Tm', 'Tito': 'Tt', 'Filêmon': 'Fm', 'Filemon': 'Fm', 'Hebreus': 'Hb',
+            'Tiago': 'Tg', '1 Pedro': '1Pd', '2 Pedro': '2Pd', '1 João': '1Jo', '2 João': '2Jo', '3 João': '3Jo', 'Judas': 'Jd', 'Apocalipse': 'Ap'
+        };
+
+        const abbrToName = {
+            'Gn': 'Gênesis', 'Ex': 'Êxodo', 'Lv': 'Levítico', 'Nm': 'Números', 'Dt': 'Deuteronômio',
+            'Js': 'Josué', 'Jz': 'Juízes', 'Rt': 'Rute', '1Sm': '1 Samuel', '2Sm': '2 Samuel',
+            '1Rs': '1 Reis', '2Rs': '2 Reis', '1Cr': '1 Crônicas', '2Cr': '2 Crônicas', 'Esd': 'Esdras',
+            'Ne': 'Neemias', 'Tb': 'Tobias', 'Jdt': 'Judite', 'Est': 'Ester', '1Mc': '1 Macabeus',
+            '2Mc': '2 Macabeus', 'Jó': 'Jó', 'Sl': 'Salmos', 'Pr': 'Provérbios', 'Ecl': 'Eclesiastes',
+            'Ct': 'Cântico dos Cânticos', 'Sb': 'Sabedoria', 'Eclo': 'Eclesiástico', 'Is': 'Isaías',
+            'Jr': 'Jeremias', 'Lm': 'Lamentações', 'Br': 'Baruc', 'Ez': 'Ezequiel', 'Dn': 'Daniel',
+            'Os': 'Oseias', 'Jl': 'Joel', 'Am': 'Amós', 'Ab': 'Abdias', 'Jn': 'Jonas', 'Mq': 'Miqueias',
+            'Na': 'Naum', 'Hab': 'Habacuc', 'Sf': 'Sofonias', 'Ag': 'Ageu', 'Zc': 'Zacarias', 'Ml': 'Malaquias',
+            'Mt': 'Mateus', 'Mc': 'Marcos', 'Lc': 'Lucas', 'Jo': 'João', 'At': 'Atos dos Apóstolos',
+            'Rm': 'Romanos', '1Cor': '1 Coríntios', '2Cor': '2 Coríntios', 'Gl': 'Gálatas', 'Ef': 'Efésios',
+            'Fl': 'Filipenses', 'Cl': 'Colossenses', '1Ts': '1 Tessalonicenses', '2Ts': '2 Tessalonicenses',
+            '1Tm': '1 Timóteo', '2Tm': '2 Timóteo', 'Tt': 'Tito', 'Fm': 'Filêmon', 'Hb': 'Hebreus',
+            'Tg': 'Tiago', '1Pd': '1 Pedro', '2Pd': '2 Pedro', '1Jo': '1 João', '2Jo': '2 João', '3Jo': '3 João',
+            'Jd': 'Judas', 'Ap': 'Apocalipse'
+        };
+
+        function formatLiturgicalReference(rawRef, kind) {
+            if (!rawRef) return '';
+            let ref = String(rawRef).trim();
+            if (kind === 'evangelho') {
+                const match = ref.match(/(Lucas|Mateus|Marcos|João)[\s,]+(\d+)[\s,]+([\d\-–.,\s]+)/i);
+                if (match) {
+                    const book = bookAbbrMap[match[1]] || match[1];
+                    const chap = match[2];
+                    const verses = match[3].replace(/\s+/g, '');
+                    return `${book} ${chap},${verses}`;
+                }
+            }
+            if (kind === 'salmo') {
+                return ref.replace(/^Salmo\s+/i, 'Sl ').replace(/\s+/g, ' ');
+            }
+            const parts = ref.split(/[,:]/);
+            if (parts.length >= 2) {
+                const rawBook = parts[0].trim();
+                const book = bookAbbrMap[rawBook] || rawBook;
+                const rest = parts.slice(1).join(',').replace(/\s+/g, '');
+                return `${book} ${rest}`;
+            }
+            return ref;
+        }
+
+        function getReadingIntro(rawRef) {
+            if (!rawRef) return '';
+            const firstToken = String(rawRef).split(/[,:\s]/)[0].trim();
+            const bookName = abbrToName[firstToken] || Object.keys(bookAbbrMap).find(k => k.toLowerCase() === firstToken.toLowerCase()) || firstToken;
+            
+            if (/^(\d)?\s*Jo[ãa]o/i.test(bookName) && !/^Jo[ãa]o/i.test(bookName)) {
+                const num = bookName.match(/^(\d)/)?.[1] || '1';
+                const ord = num === '1' ? 'Primeira' : (num === '2' ? 'Segunda' : 'Terceira');
+                return `Leitura da ${ord} Carta de São João.`;
+            }
+            if (/^(\d)?\s*Pedro/i.test(bookName)) {
+                const num = bookName.match(/^(\d)/)?.[1] || '1';
+                const ord = num === '1' ? 'Primeira' : 'Segunda';
+                return `Leitura da ${ord} Carta de São Pedro.`;
+            }
+            if (/^(\d)?\s*Cor[ií]ntios/i.test(bookName)) {
+                const num = bookName.match(/^(\d)/)?.[1] || '1';
+                const ord = num === '1' ? 'Primeira' : 'Segunda';
+                return `Leitura da ${ord} Carta de São Paulo aos Coríntios.`;
+            }
+            if (/^(\d)?\s*Tessalonicenses/i.test(bookName)) {
+                const num = bookName.match(/^(\d)/)?.[1] || '1';
+                const ord = num === '1' ? 'Primeira' : 'Segunda';
+                return `Leitura da ${ord} Carta de São Paulo aos Tessalonicenses.`;
+            }
+            if (/^(\d)?\s*Tim[oó]teo/i.test(bookName)) {
+                const num = bookName.match(/^(\d)/)?.[1] || '1';
+                const ord = num === '1' ? 'Primeira' : 'Segunda';
+                return `Leitura da ${ord} Carta de São Paulo a Timóteo.`;
+            }
+            if (/^Tito/i.test(bookName)) return 'Leitura da Carta de São Paulo a Tito.';
+            if (/^Fil[eê]mon/i.test(bookName)) return 'Leitura da Carta de São Paulo a Filêmon.';
+
+            const cartas = ['Romanos', 'Gálatas', 'Efésios', 'Filipenses', 'Colossenses', 'Hebreus', 'Tiago', 'Judas'];
+            const profetas = ['Isaías', 'Jeremias', 'Baruc', 'Ezequiel', 'Daniel', 'Oseias', 'Joel', 'Amós', 'Abdias', 'Jonas', 'Miqueias', 'Naum', 'Habacuc', 'Sofonias', 'Ageu', 'Zacarias', 'Malaquias'];
+
+            if (cartas.some(c => bookName.includes(c))) {
+                if (bookName.includes('Hebreus')) return 'Leitura da Carta aos Hebreus.';
+                if (bookName.includes('Tiago')) return 'Leitura da Carta de São Tiago.';
+                if (bookName.includes('Judas')) return 'Leitura da Carta de São Judas.';
+                return `Leitura da Carta de São Paulo aos ${bookName}.`;
+            }
+            if (profetas.some(p => bookName.includes(p))) {
+                return `Leitura do Livro do Profeta ${bookName}.`;
+            }
+            if (bookName.includes('Atos')) return 'Leitura dos Atos dos Apóstolos.';
+            if (bookName.includes('Apocalipse')) return 'Leitura do Livro do Apocalipse de São João.';
+            return `Leitura do Livro do ${bookName}.`;
+        }
+
+        function extractEvangelist(rawRef) {
+            if (!rawRef) return 'Lucas';
+            const match = String(rawRef).match(/(Mateus|Marcos|Lucas|João)/i);
+            return match ? match[1] : 'Lucas';
+        }
+
+        function formatUnifiedCommentary(extraArray) {
+            if (!Array.isArray(extraArray) || extraArray.length === 0) return null;
+            let raw = extraArray.join('\n');
+
+            let author = '';
+            const authorMatch = raw.match(/<b>\s*([\s\S]*?)\s*<\/b>/i);
+            if (authorMatch) {
+                author = authorMatch[1].replace(/<br\s*\/?>/gi, ' ').replace(/\s+/g, ' ').trim();
+                raw = raw.replace(/<b>[\s\S]*?<\/b>/i, '');
+            }
+
+            raw = raw
+                .replace(/\bPesia\b/g, 'Poesia')
+                .replace(/\batrirei\b/g, 'atrairei')
+                .replace(/\bconnoco\b/g, 'conosco')
+                .replace(/\braíz\b/g, 'raiz');
+
+            const rawLines = raw.split(/<br\s*\/?>|\n/)
+                .map(l => l.replace(/<[^>]*>/g, '').trim())
+                .filter(Boolean);
+
+            if (rawLines.length === 0 && !author) return null;
+
+            const headerLines = [];
+            const bodyLines = [];
+            let pastHeaders = false;
+
+            for (const line of rawLines) {
+                if (!pastHeaders && (line.startsWith('Poesia') || line.startsWith('«') || line.startsWith('Comentário sobre') || line.startsWith('Teólogo') || line.startsWith('O nosso título'))) {
+                    headerLines.push(line);
+                } else {
+                    pastHeaders = true;
+                    bodyLines.push(line);
+                }
+            }
+
+            const isPoem = bodyLines.length > 5 && bodyLines.slice(0, 5).every(l => l.length < 55);
+            let bodyHtml = '';
+            if (isPoem) {
+                let currentStanza = [];
+                const stanzas = [];
+                for (const line of bodyLines) {
+                    currentStanza.push(line);
+                    if (currentStanza.length === 4) {
+                        stanzas.push(currentStanza.join('<br>'));
+                        currentStanza = [];
+                    }
+                }
+                if (currentStanza.length > 0) stanzas.push(currentStanza.join('<br>'));
+                bodyHtml = stanzas.map(s => `<p class="italic pl-4 border-l-2 border-amber-400 dark:border-amber-500/80 my-3 leading-relaxed text-slate-700 dark:text-slate-300">${s}</p>`).join('\n');
+            } else {
+                bodyHtml = (bodyLines.length ? bodyLines : rawLines).map(p => `<p class="leading-relaxed my-2 text-slate-700 dark:text-slate-300">${p}</p>`).join('\n');
+            }
+
+            return { author, headerLines, bodyHtml };
+        }
+
+        function cleanReadingBody(rawText, kind, reference) {
+            if (!rawText) return { intro: '', text: '', acclamation: null, refrain: '' };
+            let text = String(rawText).trim();
+            let intro = '';
+            let acclamation = null;
+            let refrain = '';
+
+            text = text.replace(/^[℣℟\.\s-]+/, '');
+
+            if (kind === 'evangelho') {
+                if (text.includes('Aleluia') || /℟\.?\s*Aleluia/i.test(text)) {
+                    const match = text.match(/(?:([A-Za-z0-9,\s\-]+?)\s*)?[℟R]\.?\s*(Aleluia[^\n℣]+)(?:[℣V]\.?\s*([\s\S]+?(?=EVANGELHO|Proclama[cç][aã]o|\d+\s*[A-ZÀ-ÿ])))?/i);
+                    if (match) {
+                        acclamation = {
+                            title: match[2]?.replace(/[℣℟]/g, '').trim() || 'Aleluia, Aleluia, Aleluia.',
+                            verse: match[3]?.replace(/[℣℟]/g, '').trim() || ''
+                        };
+                        text = text.slice(match.index + match[0].length).trim();
+                    }
+                }
+                if (text.includes('Proclamação') || text.includes('EVANGELHO')) {
+                    const match = text.match(/(?:Proclama[cç][aã]o[^\n]+?[\n.]+\s*)?((?:(?:\d+\s+[A-ZÀ-ÿ])|Naquele tempo)[\s\S]*)/i);
+                    if (match && match[1]) text = match[1];
+                }
+                text = text.replace(/^(?:EVANGELHO[\s.:\-]*)?(?:[^\n.]+?[\n.]+)?(?:Proclama[cç][aã]o[^\n.:]*[\n.:]+)?/i, '').trim();
+            } else if (kind === 'salmo') {
+                const rMatch = text.match(/(?:^|\n)\s*(?:[A-Za-z0-9(),.\s-]+\s*)?(?:℟|R\.)\s*([^\n.]+[\n.]+)/i);
+                if (rMatch) {
+                    refrain = rMatch[1].replace(/[℟R]/g, '').trim();
+                    text = text.slice(rMatch.index + rMatch[0].length).trim();
+                } else {
+                    const match = text.match(/^([^.!\n]+[.!]?)/);
+                    if (match && match[1].length < 130) {
+                        refrain = match[1].replace(/[.!]$/, '').trim() + '!';
+                        text = text.slice(match[0].length).trim();
+                    }
+                }
+            } else {
+                const introMatch = text.match(/^(?:[^\n.]+\.\s*)?(Leitura (?:do Livro|da Carta|dos Atos|do Profeta)[^\n.:]*[\n.:]+)/i);
+                if (introMatch) {
+                    intro = introMatch[1].trim();
+                    text = text.slice(introMatch[0].length).trim();
+                } else {
+                    intro = getReadingIntro(reference);
+                }
+            }
+
+            text = text.replace(/(?:[℣℟—\-]\s*)?Palavra d[oa] (?:Senhor|Salvação)[\s\S]*$/i, '').trim();
+            text = text.replace(/[℣℟]\.?\s*$/g, '').trim();
+
+            return { intro, text, acclamation, refrain };
+        }
+
+        function formatLiturgicalText(value, isHtml = false) {
             if (!value) return '';
             let text = String(value).replace(/<[^>]*>/g, ' ');
-            // Converte dígitos normais para sobrescritos litúrgicos (0-9 -> ⁰-¹-²-³-⁴-⁵-⁶-⁷-⁸-⁹)
             const toSuperscript = numStr => {
                 const map = { '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹' };
                 return String(numStr).split('').map(c => map[c] || c).join('');
             };
 
-            // Remove rubricas litúrgicas iniciais redundantes (ex: "+ Proclamação do Evangelho...")
             text = text.replace(/^(\+?\s*proclama[cç][aã]o\s+do\s+evangelho[^\n.:]*[\n.:]+)/i, '');
 
-            // Normaliza versículo inicial antes de "Naquele tempo" (ex: "4Naquele tempo" -> "Naquele tempo: ⁴ ")
-            text = text.replace(/^(\d+)\s*naquele tempo\s*:\s*/i, (m, num) => `Naquele tempo: ${toSuperscript(num)} `);
-            text = text.replace(/^naquele tempo\s*:\s*(\d+)/i, (m, num) => `Naquele tempo: ${toSuperscript(num)} `);
+            if (isHtml) {
+                text = text.replace(/^(\d+)\s*naquele tempo\s*:\s*/i, (m, num) => `Naquele tempo: <strong class="liturgical-verse-num font-bold text-mariana dark:text-amber-400">${num}</strong> `);
+                text = text.replace(/^naquele tempo\s*:\s*(\d+)/i, (m, num) => `Naquele tempo: <strong class="liturgical-verse-num font-bold text-mariana dark:text-amber-400">${num}</strong> `);
+                text = text.replace(/(^|[\s:;.,])(\d+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, quote, letter) => {
+                    if (num.length >= 4) return match;
+                    const q = quote ? '“' : '';
+                    return `${prefix}<strong class="liturgical-verse-num font-bold text-mariana dark:text-amber-400">${num}</strong> ${q}${letter}`;
+                });
+                text = text.replace(/(^|[\s:;.,])(\d+)(\s+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, space, quote, letter) => {
+                    if (num.length >= 4) return match;
+                    const q = quote ? '“' : '';
+                    return `${prefix}<strong class="liturgical-verse-num font-bold text-mariana dark:text-amber-400">${num}</strong> ${q}${letter}`;
+                });
+            } else {
+                text = text.replace(/^(\d+)\s*naquele tempo\s*:\s*/i, (m, num) => `Naquele tempo: ${toSuperscript(num)} `);
+                text = text.replace(/^naquele tempo\s*:\s*(\d+)/i, (m, num) => `Naquele tempo: ${toSuperscript(num)} `);
+                text = text.replace(/(^|[\s:;.,])(\d+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, quote, letter) => {
+                    if (num.length >= 4) return match;
+                    const q = quote ? '“' : '';
+                    return `${prefix}${toSuperscript(num)} ${q}${letter}`;
+                });
+                text = text.replace(/(^|[\s:;.,])(\d+)(\s+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, space, quote, letter) => {
+                    if (num.length >= 4) return match;
+                    const q = quote ? '“' : '';
+                    return `${prefix}${toSuperscript(num)} ${q}${letter}`;
+                });
+            }
+
             text = text.replace(/^naquele tempo\s*:\s*/i, 'Naquele tempo: ');
-
-            // Converte números colados a palavras ou aspas mantendo o versículo bíblico (ex: " 4Reuniu-se" -> " ⁴ Reuniu-se", " 5'O" -> " ⁵ “O", " 10Jesus" -> " ¹⁰ Jesus")
-            text = text.replace(/(^|[\s:;.,])(\d+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, quote, letter) => {
-                if (num.length >= 4) return match; // Não altera anos ou referências de 4 dígitos
-                const q = quote ? '“' : '';
-                return `${prefix}${toSuperscript(num)} ${q}${letter}`;
-            });
-
-            // Converte números de versículos isolados entre espaços mantendo o versículo
-            text = text.replace(/(^|[\s:;.,])(\d+)(\s+)(['"“‘]?)([a-zA-ZÀ-ÿ])/gu, (match, prefix, num, space, quote, letter) => {
-                if (num.length >= 4) return match;
-                const q = quote ? '“' : '';
-                return `${prefix}${toSuperscript(num)} ${q}${letter}`;
-            });
-
-            // Normaliza aspas para tipografia sacra elegante
             text = text.replace(/:\s*['’"“]/g, ': “');
             text = text.replace(/['’]\s*\./g, '”.');
             text = text.replace(/['’]\s*,/g, '”,');
@@ -4787,7 +5042,7 @@
                 const refStr = g.reference ? ` (${g.reference})` : '';
                 const cabecalho = `🕊️ *SANTO EVANGELHO DO DIA*\n📅 _${formattedDate}_\n📖 *Proclamação do Evangelho de Jesus Cristo ${seg}${refStr}*`;
 
-                const textoLimpo = formatLiturgicalText(g.text);
+                const textoLimpo = formatLiturgicalText(g.text, false);
 
                 const mensagem = `${cabecalho}\n\n${textoLimpo}\n\n— *Palavra da Salvação.*\n— *Glória a Vós, Senhor.*\n\n🕊️ _Reze a Liturgia Diária e aprofunde sua Fé Católica no Catecismo:_\nhttps://catecismo.creativeam.com.br`;
 
@@ -4811,6 +5066,32 @@
             }
         }
         window.compartilharEvangelhoWhatsApp = compartilharEvangelhoWhatsApp;
+
+        window.currentLiturgiaTab = 'todas';
+        window.switchLiturgiaTab = function(tabName) {
+            window.currentLiturgiaTab = tabName;
+            const buttons = document.querySelectorAll('.lit-tab-btn');
+            buttons.forEach(btn => {
+                const isCurrent = btn.getAttribute('data-lit-tab') === tabName;
+                if (isCurrent) {
+                    btn.className = 'lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs';
+                } else {
+                    btn.className = 'lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700';
+                }
+            });
+
+            const cards = document.querySelectorAll('[data-lit-card]');
+            cards.forEach(card => {
+                const cardType = card.getAttribute('data-lit-card');
+                if (tabName === 'todas') {
+                    card.style.display = 'block';
+                } else if (tabName === 'evangelho') {
+                    card.style.display = (cardType === 'evangelho' || cardType === 'comentario') ? 'block' : 'none';
+                } else {
+                    card.style.display = (cardType === tabName) ? 'block' : 'none';
+                }
+            });
+        };
 
         /* ==========================================
            GESTOR DE NOVENAS CATÓLICAS (THESAURUS)
@@ -5665,93 +5946,215 @@
                 const sourceLabel = lit.fromLocal ? 'BANCO LOCAL • LITURGIA VALIDADA' : (lit.fromApi ? (lit.staleCache ? 'CACHE • ÚLTIMA VERSÃO DA DATA' : 'FONTE API • LITURGIA DIÁRIA') : 'FONTE NÃO DISPONÍVEL');
                 const sourceHint = lit.fromLocal ? `Dados carregados do banco local de Liturgia ${dateToFetch.slice(0,4)}, atualizado e validado pelos scripts do projeto.` : (lit.fromApi ? 'Dados carregados da API Liturgia Diária.' : 'Não foi possível carregar o banco local desta data.');
                 const esc = value => String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
-                const readingCard = (title, reading, extraClass = '') => reading ? `
-                    <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-3 ${extraClass}">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 border-b border-slate-100 pb-3">
-                            <h3 class="font-serif text-xl font-bold text-mariana">${esc(title)}</h3>
-                            <span class="text-xs font-bold text-dourado">${esc(reading.reference || '')}</span>
-                        </div>
-                        ${reading.title ? `<p class="text-[11px] uppercase tracking-wide font-bold text-slate-400">${esc(reading.title)}</p>` : ''}
-                        ${reading.refrain ? `<div class="p-3 rounded-xl bg-amber-50 border border-amber-100"><p class="text-xs font-bold text-amber-900">${esc(reading.refrain)}</p></div>` : ''}
-                        <p class="text-sm text-slate-700 liturgical-reading-text">${esc(formatLiturgicalText(reading.text))}</p>
-                        <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
-                            ${title === 'Santo Evangelho' ? `
-                                <div class="flex flex-wrap items-center gap-2">
-                                    <button onclick="compartilharEvangelhoWhatsApp('${dateToFetch}')" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer">
-                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.54 1.874.82 2.796.821 3.183 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.767-5.769-5.767zm0 10.428c-.854 0-1.687-.229-2.408-.663l-.173-.102-1.789.469.477-1.744-.113-.179c-.477-.758-.729-1.639-.728-2.543.001-2.573 2.094-4.666 4.669-4.666 2.574 0 4.668 2.093 4.668 4.666 0 2.574-2.094 4.667-4.667 4.667zm6.757-12.825c-1.802-1.802-4.198-2.795-6.754-2.795-5.263 0-9.545 4.282-9.547 9.547 0 1.682.439 3.324 1.272 4.767l-1.35 4.934 5.048-1.324c1.393.76 2.96 1.16 4.567 1.161h.004c5.263 0 9.546-4.282 9.548-9.547 0-2.553-.994-4.949-2.796-6.751z"/></svg>
-                                        <span>WhatsApp</span>
-                                    </button>
-                                    <button onclick="EvangelhoCardModal.open('${dateToFetch}')" class="px-3.5 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer" title="Gerar card com arte sacra clássica para Feed, Stories e Redes">
-                                        <span>📸</span> <span>Gerar Card para Redes</span>
-                                    </button>
-                                </div>
-                            ` : '<div></div>'}
-                            ${reading.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(reading.reference)}')" class="text-[11px] font-bold text-mariana hover:text-dourado">📖 Abrir referência na Bíblia</button>` : ''}
-                        </div>
-                    </div>` : '';
+                const isLent = /quaresma/i.test(lit.liturgicalSeason || '') || /quaresma/i.test(lit.celebration || '');
 
-                const extras = (lit.extras || []).map(extra => `
-                    <details class="bg-white rounded-2xl border border-slate-200 p-4 card-shadow">
-                        <summary class="cursor-pointer text-sm font-bold text-mariana">${esc(extra.titulo)}</summary>
-                        <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line mt-3">${esc(extra.texto)}</p>
-                    </details>`).join('');
+                const renderReadingCard = (kindKey, displayTitle, reading) => {
+                    if (!reading || !reading.text) return '';
+                    const cleaned = cleanReadingBody(reading.text, kindKey, reading.reference);
+                    const formattedRef = formatLiturgicalReference(reading.reference, kindKey);
+                    const formattedText = formatLiturgicalText(cleaned.text, true);
+
+                    let cardHeader = `${displayTitle} (${formattedRef})`;
+                    if (kindKey === 'salmo') {
+                        cardHeader = `Responsório ${formattedRef}`;
+                    }
+
+                    let introHtml = '';
+                    let bodyHtml = '';
+                    let dialogueEndingHtml = '';
+                    let specialMiddleHtml = '';
+
+                    if (kindKey === 'primeira' || kindKey === 'segunda') {
+                        introHtml = `<p class="italic font-medium text-mariana dark:text-mariana-light text-base mb-3.5 leading-snug">${esc(cleaned.intro)}</p>`;
+                        bodyHtml = `<div class="text-slate-800 dark:text-slate-200 liturgical-reading-text leading-relaxed">${formattedText}</div>`;
+                        dialogueEndingHtml = `
+                            <div class="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-700/60 liturgical-dialogue space-y-1">
+                                <p class="text-slate-600 dark:text-slate-400">— Palavra do Senhor.</p>
+                                <p class="font-bold text-slate-900 dark:text-slate-100">— Graças a Deus.</p>
+                            </div>
+                        `;
+                    } else if (kindKey === 'salmo') {
+                        const refrainText = cleaned.refrain || reading.refrain || 'Bendito seja o Senhor!';
+                        introHtml = `
+                            <div class="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 my-3 space-y-1">
+                                <p class="text-sm sm:text-base font-bold text-amber-900 dark:text-amber-300 leading-snug">— ${esc(refrainText)}</p>
+                                <p class="text-sm sm:text-base font-bold text-amber-900 dark:text-amber-300 leading-snug mt-1">— ${esc(refrainText)}</p>
+                            </div>
+                        `;
+                        const strophes = cleaned.text.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean);
+                        bodyHtml = strophes.map(st => {
+                            let sClean = st.replace(/<[^>]*>/g, '').trim();
+                            if (!sClean.startsWith('—') && !sClean.startsWith('-')) {
+                                sClean = '— ' + sClean;
+                            } else {
+                                sClean = '— ' + sClean.replace(/^[—\-]\s*/, '');
+                            }
+                            return `<p class="text-slate-800 dark:text-slate-200 liturgical-reading-text my-3 leading-relaxed whitespace-pre-line">${esc(sClean)}</p>`;
+                        }).join('');
+                    } else if (kindKey === 'evangelho') {
+                        const evangelist = extractEvangelist(reading.reference);
+                        const acclTitle = cleaned.acclamation?.title || (isLent ? 'Glória a vós, Senhor Jesus, Filho de Deus altíssimo!' : 'Aleluia, Aleluia, Aleluia.');
+                        const acclVerse = cleaned.acclamation?.verse || '';
+
+                        specialMiddleHtml = `
+                            <div class="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 my-3 space-y-1">
+                                <p class="text-sm sm:text-base font-bold text-amber-900 dark:text-amber-300 leading-snug">— ${esc(acclTitle)}</p>
+                                ${acclVerse ? `<p class="text-xs sm:text-sm italic text-slate-700 dark:text-slate-300 mt-1 leading-snug">— ${esc(acclVerse)}</p>` : ''}
+                            </div>
+                            <div class="my-3 space-y-1 liturgical-dialogue">
+                                <p class="italic text-slate-800 dark:text-slate-200 text-sm sm:text-base">— Proclamação do Evangelho de Jesus Cristo segundo ${esc(evangelist)}.</p>
+                                <p class="font-bold text-mariana dark:text-mariana-light text-sm sm:text-base">— Glória a vós, Senhor.</p>
+                            </div>
+                        `;
+                        bodyHtml = `<div class="text-slate-800 dark:text-slate-200 liturgical-reading-text leading-relaxed">${formattedText}</div>`;
+                        dialogueEndingHtml = `
+                            <div class="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-700/60 liturgical-dialogue space-y-1">
+                                <p class="text-slate-600 dark:text-slate-400">— Palavra da Salvação.</p>
+                                <p class="font-bold text-slate-900 dark:text-slate-100">— Glória a vós, Senhor.</p>
+                            </div>
+                        `;
+                    }
+
+                    return `
+                        <div data-lit-card="${kindKey}" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-slate-700 card-shadow space-y-3 transition-all">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 border-b border-slate-100 dark:border-slate-700/80 pb-3">
+                                <h3 class="font-serif text-xl sm:text-2xl font-bold text-mariana dark:text-amber-200">${esc(cardHeader)}</h3>
+                                <span class="text-xs font-bold text-dourado uppercase tracking-wide">${esc(formattedRef)}</span>
+                            </div>
+                            ${reading.title ? `<p class="text-[11px] uppercase tracking-wide font-bold text-slate-400 dark:text-slate-500">${esc(reading.title)}</p>` : ''}
+                            ${introHtml}
+                            ${specialMiddleHtml}
+                            ${bodyHtml}
+                            ${dialogueEndingHtml}
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2">
+                                ${kindKey === 'evangelho' ? `
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <button onclick="compartilharEvangelhoWhatsApp('${dateToFetch}')" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.54 1.874.82 2.796.821 3.183 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.767-5.769-5.767zm0 10.428c-.854 0-1.687-.229-2.408-.663l-.173-.102-1.789.469.477-1.744-.113-.179c-.477-.758-.729-1.639-.728-2.543.001-2.573 2.094-4.666 4.669-4.666 2.574 0 4.668 2.093 4.668 4.666 0 2.574-2.094 4.667-4.667 4.667zm6.757-12.825c-1.802-1.802-4.198-2.795-6.754-2.795-5.263 0-9.545 4.282-9.547 9.547 0 1.682.439 3.324 1.272 4.767l-1.35 4.934 5.048-1.324c1.393.76 2.96 1.16 4.567 1.161h.004c5.263 0 9.546-4.282 9.548-9.547 0-2.553-.994-4.949-2.796-6.751z"/></svg>
+                                            <span>WhatsApp</span>
+                                        </button>
+                                        <button onclick="EvangelhoCardModal.open('${dateToFetch}')" class="px-3.5 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer" title="Gerar card com arte sacra clássica para Feed, Stories e Redes">
+                                            <span>📸</span> <span>Gerar Card para Redes</span>
+                                        </button>
+                                    </div>
+                                ` : '<div></div>'}
+                                ${reading.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(reading.reference)}')" class="text-[11px] font-bold text-mariana dark:text-amber-400 hover:text-dourado">📖 Abrir referência na Bíblia</button>` : ''}
+                            </div>
+                        </div>
+                    `;
+                };
+
+                let commentaryCardHtml = '';
+                const activeCommentary = lit.commentary || (typeof formatUnifiedCommentary === 'function' ? formatUnifiedCommentary(lit.extras?.map(e => e.texto)) : null);
+                if (activeCommentary) {
+                    commentaryCardHtml = `
+                        <div data-lit-card="comentario" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
+                            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-lg">🕊️</span>
+                                    <h3 class="font-serif text-xl font-bold text-mariana dark:text-amber-200">Comentário Espiritual Patrístico</h3>
+                                </div>
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-200 dark:border-amber-800">Doutores da Igreja</span>
+                            </div>
+                            ${activeCommentary.author ? `<p class="font-serif text-base sm:text-lg font-bold text-amber-950 dark:text-amber-300">${esc(activeCommentary.author)}</p>` : ''}
+                            ${activeCommentary.headerLines && activeCommentary.headerLines.length ? `
+                                <div class="space-y-1 border-l-2 border-dourado/60 pl-3 py-1">
+                                    ${activeCommentary.headerLines.map(hl => `<p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">${esc(hl)}</p>`).join('')}
+                                </div>` : ''}
+                            <div class="mt-4 text-sm sm:text-base leading-relaxed text-slate-800 dark:text-slate-200">
+                                ${activeCommentary.bodyHtml}
+                            </div>
+                        </div>
+                    `;
+                } else if (lit.extras && lit.extras.length > 0) {
+                    commentaryCardHtml = `
+                        <div data-lit-card="comentario" class="space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-mariana dark:text-amber-200">Textos e opções adicionais</h3>
+                            ${lit.extras.map(extra => `
+                                <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-5 card-shadow">
+                                    <h4 class="text-sm font-bold text-mariana dark:text-amber-300">${esc(extra.titulo)}</h4>
+                                    <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line mt-2">${esc(extra.texto)}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                }
 
                 return `
                     <div class="max-w-4xl mx-auto space-y-8" data-liturgia-view="${dateToFetch}">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow flex flex-col gap-5">
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-200 dark:border-slate-700 card-shadow flex flex-col gap-5">
                             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                                 <div>
-                                    <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-bold">${sourceLabel}</span>
-                                    <h2 class="font-serif text-3xl font-bold text-mariana mt-2">${esc(lit.celebration)}</h2>
-                                    <p class="text-xs text-slate-500">${esc(lit.apiDate || dateToFetch)} ${lit.liturgicalColor ? `• Cor: <strong>${esc(lit.liturgicalColor)}</strong>` : ''}</p>
-                                    <p class="text-[11px] text-slate-400 mt-2">${esc(sourceHint)}</p>
+                                    <span class="px-3 py-1 bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 rounded-lg text-xs font-bold">${sourceLabel}</span>
+                                    <h2 class="font-serif text-3xl font-bold text-mariana dark:text-amber-200 mt-2">${esc(lit.celebration)}</h2>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">${esc(lit.apiDate || dateToFetch)} ${lit.liturgicalColor ? `• Cor: <strong>${esc(lit.liturgicalColor)}</strong>` : ''}</p>
+                                    <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-2">${esc(sourceHint)}</p>
                                 </div>
                                 <div class="flex flex-wrap items-center gap-2">
-                                    <button onclick="goToPreviousLiturgicalDay('${dateToFetch}')" class="p-2 bg-slate-100 rounded-xl text-xs font-bold shadow-sm">← Anterior</button>
-                                    <button onclick="goToTodayLiturgicalDay()" class="p-2 bg-slate-100 rounded-xl text-xs font-bold shadow-sm">Hoje</button>
-                                    <button onclick="goToNextLiturgicalDay('${dateToFetch}')" class="p-2 bg-slate-100 rounded-xl text-xs font-bold shadow-sm">Próximo →</button>
-                                    <input type="date" value="${dateToFetch}" onchange="router.navigate('liturgia', this.value)" class="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700">
+                                    <button onclick="goToPreviousLiturgicalDay('${dateToFetch}')" class="p-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-bold shadow-sm">← Anterior</button>
+                                    <button onclick="goToTodayLiturgicalDay()" class="p-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-bold shadow-sm">Hoje</button>
+                                    <button onclick="goToNextLiturgicalDay('${dateToFetch}')" class="p-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-xs font-bold shadow-sm">Próximo →</button>
+                                    <input type="date" value="${dateToFetch}" onchange="router.navigate('liturgia', this.value)" class="px-3 py-2 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200">
                                 </div>
                             </div>
                         </div>
 
-                        ${lit.saintOrMemory ? `<div class="bg-amber-50 border border-amber-200 rounded-3xl p-5"><p class="text-xs font-bold text-amber-900 uppercase tracking-wide">Celebração / memória</p><p class="font-serif text-2xl font-bold text-amber-950 mt-1">${esc(lit.saintOrMemory)}</p></div>` : ''}
+                        ${lit.saintOrMemory ? `<div class="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-3xl p-5"><p class="text-xs font-bold text-amber-900 dark:text-amber-300 uppercase tracking-wide">Celebração / memória</p><p class="font-serif text-2xl font-bold text-amber-950 dark:text-amber-200 mt-1">${esc(lit.saintOrMemory)}</p></div>` : ''}
 
-                        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-4">
-                            <div><span class="text-[10px] font-bold text-dourado uppercase tracking-wider">Conexões</span><h3 class="font-serif text-xl font-bold text-mariana mt-1">Leitura, Palavra e vida</h3><p class="text-xs text-slate-500 mt-1">Da liturgia de hoje você pode seguir diretamente para a Bíblia e para o Santo do Dia.</p></div>
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
+                            <div><span class="text-[10px] font-bold text-dourado uppercase tracking-wider">Conexões</span><h3 class="font-serif text-xl font-bold text-mariana dark:text-amber-200 mt-1">Leitura, Palavra e vida</h3><p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Da liturgia de hoje você pode seguir diretamente para a Bíblia e para o Santo do Dia.</p></div>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                ${lit.gospel?.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(lit.gospel.reference)}')" class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-left hover:bg-blue-100 transition"><span class="text-[10px] font-bold text-blue-700 uppercase">📖 Evangelho</span><strong class="block text-sm text-blue-950 mt-1">${esc(lit.gospel.reference)}</strong><span class="text-[10px] text-blue-800/80">Abrir na Bíblia</span></button>` : ''}
-                                <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-left hover:bg-amber-100 transition"><span class="text-[10px] font-bold text-amber-700 uppercase">☩ Santo</span><strong class="block text-sm text-amber-950 mt-1">${esc(lit.saintOrMemory || 'Celebração do dia')}</strong><span class="text-[10px] text-amber-800/80">Ver Santo do Dia</span></button>
-                                <button onclick="router.navigate('catecismo')" class="p-4 rounded-2xl bg-violet-50 border border-violet-200 text-left hover:bg-violet-100 transition"><span class="text-[10px] font-bold text-violet-700 uppercase">📜 Catecismo</span><strong class="block text-sm text-violet-950 mt-1">Relacionar com a fé</strong><span class="text-[10px] text-violet-800/80">Estudar doutrina</span></button>
+                                ${lit.gospel?.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(lit.gospel.reference)}')" class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 text-left hover:bg-blue-100 dark:hover:bg-blue-900/50 transition"><span class="text-[10px] font-bold text-blue-700 dark:text-blue-300 uppercase">📖 Evangelho</span><strong class="block text-sm text-blue-950 dark:text-blue-100 mt-1">${esc(lit.gospel.reference)}</strong><span class="text-[10px] text-blue-800/80 dark:text-blue-300/80">Abrir na Bíblia</span></button>` : ''}
+                                <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-left hover:bg-amber-100 dark:hover:bg-amber-900/50 transition"><span class="text-[10px] font-bold text-amber-700 dark:text-amber-300 uppercase">☩ Santo</span><strong class="block text-sm text-amber-950 dark:text-amber-100 mt-1">${esc(lit.saintOrMemory || 'Celebração do dia')}</strong><span class="text-[10px] text-amber-800/80 dark:text-amber-300/80">Ver Santo do Dia</span></button>
+                                <button onclick="router.navigate('catecismo')" class="p-4 rounded-2xl bg-violet-50 dark:bg-violet-950/40 border border-violet-200 dark:border-violet-800/60 text-left hover:bg-violet-100 dark:hover:bg-violet-900/50 transition"><span class="text-[10px] font-bold text-violet-700 dark:text-violet-300 uppercase">📜 Catecismo</span><strong class="block text-sm text-violet-950 dark:text-violet-100 mt-1">Relacionar com a fé</strong><span class="text-[10px] text-violet-800/80 dark:text-violet-300/80">Estudar doutrina</span></button>
                             </div>
                         </div>
 
                         <div class="flex justify-end">
-                            <button onclick="markLiturgicalRead('${dateToFetch}')" class="px-5 py-2.5 ${isRead ? 'bg-emerald-700 text-white' : 'bg-slate-100 text-slate-700'} rounded-xl text-xs font-bold transition shadow-sm">
+                            <button onclick="markLiturgicalRead('${dateToFetch}')" class="px-5 py-2.5 ${isRead ? 'bg-emerald-700 text-white' : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200'} rounded-xl text-xs font-bold transition shadow-sm">
                                 ${isRead ? '✓ Liturgia Lida (+15 XP)' : '✅ Marcar como lida'}
                             </button>
                         </div>
 
+                        <!-- Canção Nova Standard Liturgical Tabs -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar">
+                            <button onclick="window.switchLiturgiaTab('todas')" data-lit-tab="todas" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs">
+                                Todas
+                            </button>
+                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                                1ª Leitura
+                            </button>
+                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                                Salmo
+                            </button>
+                            ${lit.secondReading ? `
+                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                                2ª Leitura
+                            </button>` : ''}
+                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                                Evangelho
+                            </button>
+                        </div>
+
                         <div class="space-y-6">
-                            ${readingCard('Primeira Leitura', lit.firstReading)}
-                            ${readingCard('Salmo Responsorial', lit.psalm)}
-                            ${readingCard('Segunda Leitura', lit.secondReading)}
-                            ${readingCard('Santo Evangelho', lit.gospel)}
+                            ${renderReadingCard('primeira', 'Primeira Leitura', lit.firstReading)}
+                            ${renderReadingCard('salmo', 'Salmo Responsorial', lit.psalm)}
+                            ${renderReadingCard('segunda', 'Segunda Leitura', lit.secondReading)}
+                            ${renderReadingCard('evangelho', 'Santo Evangelho', lit.gospel)}
+                            ${commentaryCardHtml}
                         </div>
 
                         ${lit.prayers ? `
-                            <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow space-y-4">
-                                <h3 class="font-serif text-xl font-bold text-mariana">Orações da Celebração</h3>
-                                ${lit.prayers.coleta ? `<div><p class="text-[10px] font-bold uppercase tracking-wide text-slate-400">Coleta</p><p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line mt-1">${esc(lit.prayers.coleta)}</p></div>` : ''}
-                                ${lit.prayers.oferendas ? `<div><p class="text-[10px] font-bold uppercase tracking-wide text-slate-400">Sobre as oferendas</p><p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line mt-1">${esc(lit.prayers.oferendas)}</p></div>` : ''}
-                                ${lit.prayers.comunhao ? `<div><p class="text-[10px] font-bold uppercase tracking-wide text-slate-400">Depois da comunhão</p><p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line mt-1">${esc(lit.prayers.comunhao)}</p></div>` : ''}
+                            <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
+                                <h3 class="font-serif text-xl font-bold text-mariana dark:text-amber-200">Orações da Celebração</h3>
+                                ${lit.prayers.coleta ? `<div><p class="text-[10px] font-bold uppercase tracking-wide text-slate-400">Coleta</p><p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line mt-1">${esc(lit.prayers.coleta)}</p></div>` : ''}
+                                ${lit.prayers.oferendas ? `<div><p class="text-[10px] font-bold uppercase tracking-wide text-slate-400">Sobre as oferendas</p><p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line mt-1">${esc(lit.prayers.oferendas)}</p></div>` : ''}
+                                ${lit.prayers.comunhao ? `<div><p class="text-[10px] font-bold uppercase tracking-wide text-slate-400">Depois da comunhão</p><p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line mt-1">${esc(lit.prayers.comunhao)}</p></div>` : ''}
                             </div>` : ''}
 
-                        ${extras ? `<div class="space-y-3"><h3 class="font-serif text-xl font-bold text-mariana">Textos e opções adicionais</h3>${extras}</div>` : ''}
+                        ${lit.antiphons ? `<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-5 border border-slate-200 dark:border-slate-700"><p class="text-[10px] font-bold uppercase text-slate-400">Antífona de entrada</p><p class="text-sm text-slate-700 dark:text-slate-300 mt-2 leading-relaxed">${esc(lit.antiphons.entrada || 'Não disponível')}</p></div><div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-5 border border-slate-200 dark:border-slate-700"><p class="text-[10px] font-bold uppercase text-slate-400">Antífona de comunhão</p><p class="text-sm text-slate-700 dark:text-slate-300 mt-2 leading-relaxed">${esc(lit.antiphons.comunhao || 'Não disponível')}</p></div></div>` : ''}
 
-                        ${lit.antiphons ? `<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-slate-50 rounded-2xl p-5 border border-slate-200"><p class="text-[10px] font-bold uppercase text-slate-400">Antífona de entrada</p><p class="text-sm text-slate-700 mt-2 leading-relaxed">${esc(lit.antiphons.entrada || 'Não disponível')}</p></div><div class="bg-slate-50 rounded-2xl p-5 border border-slate-200"><p class="text-[10px] font-bold uppercase text-slate-400">Antífona de comunhão</p><p class="text-sm text-slate-700 mt-2 leading-relaxed">${esc(lit.antiphons.comunhao || 'Não disponível')}</p></div></div>` : ''}
-
-                        ${lit.reflection || lit.prayer ? `<div class="grid grid-cols-1 md:grid-cols-2 gap-6">${lit.reflection ? `<div class="bg-amber-50/70 rounded-3xl p-6 border border-amber-200"><h3 class="font-serif text-xl font-bold text-amber-950">Reflexão</h3><p class="text-sm text-amber-900 leading-relaxed mt-2">${esc(lit.reflection)}</p></div>` : ''}${lit.prayer ? `<div class="bg-blue-50 rounded-3xl p-6 border border-blue-200"><h3 class="font-serif text-xl font-bold text-blue-950">Oração</h3><p class="text-sm text-blue-900 leading-relaxed mt-2">${esc(lit.prayer)}</p></div>` : ''}</div>` : ''}
+                        ${lit.reflection || lit.prayer ? `<div class="grid grid-cols-1 md:grid-cols-2 gap-6">${lit.reflection ? `<div class="bg-amber-50/70 dark:bg-amber-950/40 rounded-3xl p-6 border border-amber-200 dark:border-amber-800/60"><h3 class="font-serif text-xl font-bold text-amber-950 dark:text-amber-200">Reflexão</h3><p class="text-sm text-amber-900 dark:text-amber-300 leading-relaxed mt-2">${esc(lit.reflection)}</p></div>` : ''}${lit.prayer ? `<div class="bg-blue-50 dark:bg-blue-950/40 rounded-3xl p-6 border border-blue-200 dark:border-blue-800/60"><h3 class="font-serif text-xl font-bold text-blue-950 dark:text-blue-200">Oração</h3><p class="text-sm text-blue-900 dark:text-blue-300 leading-relaxed mt-2">${esc(lit.prayer)}</p></div>` : ''}</div>` : ''}
                     </div>`;
             },
 

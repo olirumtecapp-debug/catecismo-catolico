@@ -38,142 +38,139 @@
         </span>
     </div>
 
-    <!-- Topbar -->
-    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-xl shadow-lg shadow-amber-500/20">
+    <!-- Topbar Compacta (Consolidada em 2 linhas ultra-eficientes) -->
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-md">
+        <!-- Linha 1: Marca + Métricas Compactas + Ações Principais -->
+        <div class="w-full px-3 py-1.5 flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/60">
+            <!-- Esquerda: Título e Status -->
+            <div class="flex items-center gap-2.5">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-sm shadow-md shadow-amber-500/20">
                     🕊️
                 </div>
-                <div>
-                    <h1 class="text-sm md:text-base font-extrabold text-white flex items-center gap-2">
-                        Auditoria de Santos & Imagens Sacras
-                        <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded-full font-mono">2026</span>
-                    </h1>
-                    <p class="text-xs text-slate-400">Verifique, gere prompts para IA e atualize imagens em tempo real</p>
+                <h1 class="text-xs md:text-sm font-extrabold text-white flex items-center gap-1.5 whitespace-nowrap">
+                    Auditoria de Santos
+                    <span class="text-[9px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded-full font-mono">2026</span>
+                </h1>
+
+                <!-- Badges & Stats Compactos em 1 linha -->
+                <div class="flex items-center gap-1 text-[11px] font-mono">
+                    <div class="bg-slate-950/80 border border-slate-800 px-2 py-0.5 rounded flex items-center gap-1" title="Total de santos no período">
+                        <span class="text-slate-400">Total:</span>
+                        <strong id="stat-total" class="text-white">0</strong>
+                    </div>
+                    <div class="bg-emerald-950/40 border border-emerald-800/50 px-2 py-0.5 rounded flex items-center gap-1 text-emerald-300" title="Santos com imagem validada">
+                        <span>✅</span>
+                        <strong id="stat-ok">0</strong>
+                    </div>
+                    <div class="bg-rose-950/40 border border-rose-800/50 px-2 py-0.5 rounded flex items-center gap-1 text-rose-300" title="Santos pendentes ou sem foto">
+                        <span>⚠️</span>
+                        <strong id="stat-missing">0</strong>
+                    </div>
+                    <!-- Barra de progresso inline miniatura -->
+                    <div class="hidden sm:flex items-center gap-1.5 bg-slate-950/80 border border-slate-800 px-2 py-0.5 rounded" title="Cobertura geral de imagens">
+                        <div class="w-16 bg-slate-900 rounded-full h-1.5 overflow-hidden border border-slate-800">
+                            <div id="stat-bar" class="bg-gradient-to-r from-amber-500 to-emerald-500 h-full w-0 transition-all duration-500"></div>
+                        </div>
+                        <span id="stat-percent" class="text-amber-400 font-bold text-[10px]">0%</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Badges & Stats -->
-            <div class="flex items-center gap-2 text-xs font-mono">
-                <div class="bg-slate-800/80 border border-slate-700/80 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
-                    <span class="text-slate-400">Total:</span>
-                    <strong id="stat-total" class="text-white">0</strong>
-                </div>
-                <div class="bg-emerald-950/50 border border-emerald-800/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-emerald-300">
-                    <span>✅ Com Imagem:</span>
-                    <strong id="stat-ok">0</strong>
-                </div>
-                <div class="bg-rose-950/50 border border-rose-800/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-rose-300">
-                    <span>⚠️ Pendentes/Erro:</span>
-                    <strong id="stat-missing">0</strong>
-                </div>
+            <!-- Direita: Botões de Ação Rápidos em Linha Única -->
+            <div class="flex items-center gap-1.5 flex-wrap">
+                <button id="btnSyncRegen" onclick="syncAndRegenerate()" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 text-[11px] font-extrabold px-2.5 py-1 rounded-md border border-amber-400/60 shadow flex items-center gap-1 transition cursor-pointer" title="Regenera o índice de imagens dos santos e sincroniza tudo com 1 clique">
+                    <span id="syncIcon">⚡</span> <span id="syncText">Sincronizar</span>
+                </button>
+                <button onclick="openVaticanSyncModal()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-md border border-blue-500/40 shadow flex items-center gap-1 transition cursor-pointer" title="Verificar atualizações no Vatican News com backup de segurança">
+                    <span>🌐</span> <span>Vaticano</span>
+                </button>
+                <button onclick="openAddSaintModal()" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md border border-amber-500/40 shadow flex items-center gap-1 transition cursor-pointer" title="Cadastrar um novo santo ou beato em uma data específica">
+                    <span>➕</span> <span>Novo Santo</span>
+                </button>
+                <button id="btnPublishVercel" onclick="publishToVercel()" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-md border border-emerald-500/40 shadow flex items-center gap-1 transition cursor-pointer" title="Salva e envia todas as alterações locais para a Vercel de uma vez">
+                    <span id="publishIcon">🚀</span> <span id="publishText">Publicar Vercel</span>
+                </button>
+                <button id="btnPullVercel" onclick="pullFromVercel()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] font-medium px-2 py-1 rounded-md border border-slate-700 flex items-center gap-1 transition cursor-pointer" title="Puxar atualizações da nuvem para seu backup local">
+                    <span id="pullIcon">📥</span> <span id="pullText">Nuvem</span>
+                </button>
+                <button onclick="fetchSaints()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-[11px] font-semibold px-2 py-1 rounded-md border border-slate-700 flex items-center gap-1 transition cursor-pointer" title="Recarregar dados">
+                    <span>🔄</span>
+                </button>
             </div>
         </div>
 
-        <!-- Filter Bar -->
-        <div class="bg-slate-900 border-t border-slate-800/60 px-4 py-2.5">
-            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-                <div class="flex flex-wrap items-center gap-2.5 flex-1 min-w-[280px]">
+        <!-- Linha 2: Barra de Filtros, Período, Busca e Densidade -->
+        <div class="bg-slate-900/90 px-3 py-1">
+            <div class="w-full flex flex-wrap items-center justify-between gap-1.5">
+                <!-- Esquerda: Datas & Status -->
+                <div class="flex items-center gap-1.5 flex-wrap">
                     <!-- Mês -->
-                    <select id="mSel" onchange="onMonthSelectChange()" class="bg-slate-950 border border-slate-700 text-xs text-slate-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                        <option value="all">📅 Ano Inteiro (12 meses)</option>
-                        <option value="01">01 - Janeiro</option>
-                        <option value="02">02 - Fevereiro</option>
-                        <option value="03">03 - Março</option>
-                        <option value="04">04 - Abril</option>
-                        <option value="05">05 - Maio</option>
-                        <option value="06">06 - Junho</option>
-                        <option value="07">07 - Julho</option>
-                        <option value="08">08 - Agosto</option>
-                        <option value="09">09 - Setembro</option>
-                        <option value="10">10 - Outubro</option>
-                        <option value="11">11 - Novembro</option>
-                        <option value="12">12 - Dezembro</option>
+                    <select id="mSel" onchange="onMonthSelectChange()" class="bg-slate-950 border border-slate-700 text-[11px] text-slate-200 rounded-md px-2 py-0.5 focus:ring-1 focus:ring-amber-500 focus:outline-none h-7">
+                        <option value="all">📅 Ano Inteiro</option>
+                        <option value="01">01 - Jan</option>
+                        <option value="02">02 - Fev</option>
+                        <option value="03">03 - Mar</option>
+                        <option value="04">04 - Abr</option>
+                        <option value="05">05 - Mai</option>
+                        <option value="06">06 - Jun</option>
+                        <option value="07">07 - Jul</option>
+                        <option value="08">08 - Ago</option>
+                        <option value="09">09 - Set</option>
+                        <option value="10">10 - Out</option>
+                        <option value="11">11 - Nov</option>
+                        <option value="12">12 - Dez</option>
                     </select>
 
                     <!-- Dia do Mês -->
-                    <select id="dSel" onchange="onDaySelectChange()" class="bg-slate-950 border border-slate-700 text-xs text-slate-200 rounded-lg px-2.5 py-2 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                        <option value="all">🗓️ Todos os Dias</option>
+                    <select id="dSel" onchange="onDaySelectChange()" class="bg-slate-950 border border-slate-700 text-[11px] text-slate-200 rounded-md px-2 py-0.5 focus:ring-1 focus:ring-amber-500 focus:outline-none h-7">
+                        <option value="all">🗓️ Todos Dias</option>
                     </select>
 
                     <!-- Atalhos Rápidos de Dias -->
-                    <div class="inline-flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
-                        <button onclick="setDayShortcut('all')" id="btn-day-all" class="px-2.5 py-1 rounded-md font-medium text-xs transition bg-amber-500 text-slate-950">Todos</button>
-                        <button onclick="setDayShortcut('today')" id="btn-day-today" class="px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition" title="Ir para a data de hoje">☀️ Hoje</button>
-                        <button onclick="setDayShortcut('tomorrow')" id="btn-day-tomorrow" class="px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition" title="Ir para o dia de amanhã">🌅 Amanhã</button>
-                        <button onclick="setDayShortcut('week')" id="btn-day-week" class="px-2.5 py-1 rounded-md font-medium text-xs text-slate-400 hover:text-white transition" title="Ver os próximos 7 dias">🗓️ 7 Dias</button>
+                    <div class="inline-flex bg-slate-950 p-0.5 rounded-md border border-slate-800 text-[11px] h-7 items-center">
+                        <button onclick="setDayShortcut('all')" id="btn-day-all" class="px-2 py-0.5 rounded font-medium transition bg-amber-500 text-slate-950 font-bold">Todos</button>
+                        <button onclick="setDayShortcut('today')" id="btn-day-today" class="px-2 py-0.5 rounded font-medium text-slate-400 hover:text-white transition" title="Ir para a data de hoje">☀️ Hoje</button>
+                        <button onclick="setDayShortcut('tomorrow')" id="btn-day-tomorrow" class="px-2 py-0.5 rounded font-medium text-slate-400 hover:text-white transition" title="Ir para o dia de amanhã">🌅 Amanhã</button>
+                        <button onclick="setDayShortcut('week')" id="btn-day-week" class="px-2 py-0.5 rounded font-medium text-slate-400 hover:text-white transition" title="Ver os próximos 7 dias">🗓️ 7 Dias</button>
                     </div>
 
                     <!-- Filtro Status -->
-                    <div class="inline-flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
-                        <button onclick="setStatusFilter('all')" id="btn-filter-all" class="px-3 py-1 rounded-md font-medium transition bg-amber-500 text-slate-950">Todos</button>
-                        <button onclick="setStatusFilter('missing')" id="btn-filter-missing" class="px-3 py-1 rounded-md font-medium text-slate-400 hover:text-white transition">⚠️ Só Pendentes</button>
-                        <button onclick="setStatusFilter('ok')" id="btn-filter-ok" class="px-3 py-1 rounded-md font-medium text-slate-400 hover:text-white transition">✅ Só com Imagem</button>
+                    <div class="inline-flex bg-slate-950 p-0.5 rounded-md border border-slate-800 text-[11px] h-7 items-center">
+                        <button onclick="setStatusFilter('all')" id="btn-filter-all" class="px-2.5 py-0.5 rounded font-medium transition bg-amber-500 text-slate-950 font-bold">Todos</button>
+                        <button onclick="setStatusFilter('missing')" id="btn-filter-missing" class="px-2.5 py-0.5 rounded font-medium text-slate-400 hover:text-white transition">⚠️ Pendentes</button>
+                        <button onclick="setStatusFilter('ok')" id="btn-filter-ok" class="px-2.5 py-0.5 rounded font-medium text-slate-400 hover:text-white transition">✅ Com Foto</button>
                     </div>
+                </div>
 
+                <!-- Direita: Busca, Tamanho e Paginação -->
+                <div class="flex items-center gap-1.5 flex-wrap">
                     <!-- Busca Textual -->
-                    <div class="relative flex-1 min-w-[160px] max-w-xs">
-                        <input id="searchInput" type="text" placeholder="Buscar por nome ou data..." oninput="handleSearch()" class="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                        <span class="absolute left-2.5 top-2 text-slate-500 text-xs">🔍</span>
+                    <div class="relative w-40 sm:w-52">
+                        <input id="searchInput" type="text" placeholder="Buscar por nome ou data..." oninput="handleSearch()" class="w-full bg-slate-950 border border-slate-700 rounded-md pl-7 pr-2 py-0.5 text-[11px] text-slate-200 placeholder-slate-500 focus:ring-1 focus:ring-amber-500 focus:outline-none h-7">
+                        <span class="absolute left-2 top-1 text-slate-500 text-[10px]">🔍</span>
                     </div>
 
                     <!-- Tamanho do Card / Densidade -->
-                    <div class="inline-flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs items-center gap-1">
-                        <span class="text-[10px] text-slate-400 px-1">Tamanho:</span>
-                        <button onclick="setDensity('compact')" id="btn-density-compact" class="px-2 py-0.5 rounded text-[11px] font-medium bg-amber-500 text-slate-950 transition" title="Compacto: cabem até 8 por linha">Pequeno</button>
-                        <button onclick="setDensity('medium')" id="btn-density-medium" class="px-2 py-0.5 rounded text-[11px] font-medium text-slate-400 hover:text-white transition" title="Médio: 4 a 6 por linha">Médio</button>
+                    <div class="inline-flex bg-slate-950 p-0.5 rounded-md border border-slate-800 text-[11px] items-center h-7">
+                        <span class="text-[9px] text-slate-400 px-1">Tam:</span>
+                        <button onclick="setDensity('compact')" id="btn-density-compact" class="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-500 text-slate-950 transition" title="Compacto: cabem até 8 por linha">Pequeno</button>
+                        <button onclick="setDensity('medium')" id="btn-density-medium" class="px-2 py-0.5 rounded text-[10px] font-medium text-slate-400 hover:text-white transition" title="Médio: 4 a 6 por linha">Médio</button>
                     </div>
 
                     <!-- Quantidade por Página -->
-                    <select id="pageSizeSel" onchange="changePageSize()" class="bg-slate-950 border border-slate-700 text-xs text-slate-300 rounded-lg px-2.5 py-1.5 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                        <option value="48" selected>48 por pág</option>
-                        <option value="96">96 por pág</option>
-                        <option value="192">192 por pág</option>
+                    <select id="pageSizeSel" onchange="changePageSize()" class="bg-slate-950 border border-slate-700 text-[11px] text-slate-300 rounded-md px-2 py-0.5 focus:ring-1 focus:ring-amber-500 focus:outline-none h-7">
+                        <option value="48" selected>48 p/ pág</option>
+                        <option value="96">96 p/ pág</option>
+                        <option value="192">192 p/ pág</option>
                         <option value="all">Ver Todos</option>
                     </select>
-                </div>
-
-                <div class="flex items-center gap-2">
-                    <button id="btnSyncRegen" onclick="syncAndRegenerate()" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 text-xs font-extrabold px-3 py-1.5 rounded-lg border border-amber-400/60 shadow-md shadow-amber-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Regenera o índice de imagens dos santos e sincroniza tudo com 1 clique">
-                        <span id="syncIcon">⚡</span> <span id="syncText">Sincronizar Tudo</span>
-                    </button>
-                    <button onclick="openVaticanSyncModal()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-500/40 shadow-md shadow-blue-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Verificar atualizações no Vatican News com backup de segurança">
-                        <span>🌐</span> <span>Verificar Vaticano</span>
-                    </button>
-                    <button onclick="openAddSaintModal()" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-500/40 shadow-md shadow-amber-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Cadastrar um novo santo ou beato em uma data específica">
-                        <span>➕</span> <span>Novo Santo</span>
-                    </button>
-                    <button id="btnPublishVercel" onclick="publishToVercel()" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg border border-emerald-500/40 shadow-md shadow-emerald-950/40 flex items-center gap-1.5 transition cursor-pointer" title="Salva e envia todas as alterações locais para a Vercel de uma vez">
-                        <span id="publishIcon">🚀</span> <span id="publishText">Publicar no Vercel</span>
-                    </button>
-                    <button id="btnPullVercel" onclick="pullFromVercel()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium px-2.5 py-1.5 rounded-lg border border-slate-700 flex items-center gap-1.5 transition cursor-pointer" title="Puxar atualizações da nuvem para seu backup local">
-                        <span id="pullIcon">📥</span> <span id="pullText">Puxar Nuvem</span>
-                    </button>
-                    <button onclick="fetchSaints()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 flex items-center gap-1.5 transition cursor-pointer">
-                        <span>🔄</span> Recarregar
-                    </button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Main Container -->
-    <main class="max-w-[1600px] mx-auto px-4 py-4 flex-1 w-full space-y-4">
-        <!-- Barra de Progresso visual -->
-        <div class="bg-slate-900 border border-slate-800/80 rounded-xl p-3 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div class="flex items-center gap-3 flex-1">
-                <span class="text-xs font-medium text-slate-300 whitespace-nowrap">Cobertura de Imagens:</span>
-                <div class="flex-1 bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800 max-w-md">
-                    <div id="stat-bar" class="bg-gradient-to-r from-amber-500 to-emerald-500 h-full w-0 transition-all duration-500"></div>
-                </div>
-                <span id="stat-percent" class="font-mono font-bold text-amber-400 text-xs whitespace-nowrap">0%</span>
-            </div>
-            <div class="text-[11px] text-slate-400 flex items-center gap-2">
-                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700/80">📐 Padrão: 1:1 Quadrado (1024x1024)</span>
-                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700/80">🎨 Estilo: Óleo Barroco/Renascentista</span>
-            </div>
-        </div>
+    <main class="max-w-[1700px] mx-auto px-3 py-2 flex-1 w-full space-y-2">
 
         <!-- Grid de Santos (Dinâmico) -->
         <div id="grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
