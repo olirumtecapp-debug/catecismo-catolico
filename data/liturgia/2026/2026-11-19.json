@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Apocalipse 5,1-10",
+      "intro": "Leitura do livro do Apocalipse:",
       "text": "Eu, João, 1vi um livro na mão direita daquele que estava sentado no trono. Era um rolo escrito por dentro e por fora, e estava lacrado com sete selos. 2Vi então um anjo forte, que proclamava em voz alta: \"Quem é digno de romper os selos e abrir o livro?\" 3Ninguém no céu nem na terra nem debaixo da terra era digno de abrir o livro ou de ler o que nele estava escrito. 4Eu chorava muito, porque ninguém foi considerado digno de abrir ou de ler o livro. 5Um dos anciãos me consolou: \"Não chores! Eis que o Leão da tribo de Judá, o Rebento de Davi, saiu vencedor. Ele pode romper os selos e abrir o livro\". 6De fato, vi um Cordeiro. Estava no centro do trono e dos quatro Seres vivos, no meio dos Anciãos. Estava de pé como que imolado. O Cordeiro tinha sete chifres e sete olhos, que são os sete Espíritos de Deus, enviados por toda a terra.7Então, o Cordeiro veio receber o livro da mão direita daquele que está sentado no trono. 8Quando ele recebeu o livro, os quatro Seres vivos e os vinte e quatro Anciãos prostraram-se diante do Cordeiro. Todos tinham harpas e taças de ouro cheias de incenso, que são as orações dos santos.9E entoaram um cântico novo: \"Tu és digno de receber o livro e abrir seus selos, porque foste imolado, e com teu sangue adquiriste para Deus homens de toda a tribo, língua, povo e nação. 10Deles fizeste para o nosso Deus um reino de sacerdotes. E eles reinarão sobre a terra\"."
     },
     "psalm": {
       "reference": "Salmo 149",
+      "refrain": "Fizestes de nós, para Deus, sacerdotes e povo de reis.",
       "text": "- Cantai ao Senhor Deus um canto novo, e o seu louvor na assembleia dos fiéis! Alegre-se Israel em Quem o fez, e Sião se rejubile no seu Rei!\n\n- Com danças glorifiquem o seu nome, toquem harpa e tambor em sua honra! Porque, de fato, o Senhor ama seu povo e coroa com vitória os seus humildes.\n\n- Exultem os fiéis por sua glória, e cantando se levantem de seus leitos, com louvores do Senhor em sua boca. Eis a glória para todos os seus santos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 19, 41-44",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Oxalá ouvísseis hoje a sua voz: Não fecheis os corações como em Meriba! (Sl 94, 8)"
+      },
       "text": "Naquele tempo, 41quando Jesus se aproximou de Jerusalém e viu a cidade, começou a chorar. E disse: 42\"Se tu também compreendesses hoje o que te pode trazer a paz! Agora, porém, isso está escondido aos teus olhos! 43Dias virão em que os inimigos farão trincheiras contra ti e te cercarão de todos os lados. 44Eles esmagarão a ti e a teus filhos. E não deixarão em ti pedra sobre pedra. Porque tu não reconheceste o tempo em que foste visitada\"."
     }
   },

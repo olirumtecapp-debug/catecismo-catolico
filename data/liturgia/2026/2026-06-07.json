@@ -11,6 +11,7 @@
     },
     "psalm": {
       "reference": "Sl 49(50),1.8.12-13.14-15 (R. 23b)",
+      "refrain": "A todo homem que procede retamente, eu mostrarei a salvação que vem de Deus.",
       "text": "Sl 49(50),1.8.12-13.14-15 (R. 23b) ℟. A todo homem que procede retamente, eu mostrarei a salvação que vem de Deus. 1 Falou o Senhor Deus, chamou a terra, * do sol nascente ao sol poente a convocou. 8 Eu não venho censurar teus sacrifícios, * pois sempre estão perante mim teus holocaustos. 12 Não te diria, se com fome eu estivesse, * porque é meu o universo e todo ser. 13 Porventura comerei carne de touros? * Beberei, acaso, o sangue de carneiros? 14 Imola a Deus um sacrifício de louvor * e cumpre os votos que fizeste ao Altíssimo. 15 Invoca-me no dia da angústia, * e então te livrarei e hás de louvar-me\"."
     },
     "secondReading": {
@@ -19,6 +20,7 @@
     },
     "gospel": {
       "reference": "Mt 9,9-13",
+      "acclamation": null,
       "text": "Lc 4,18 ℟. Aleluia, Aleluia, Aleluia. ℣. Foi o Senhor quem me mandou boas notícias anunciar; ao pobre, a quem está no cativeiro, libertação eu vou proclamar. EVANGELHO Não vim para chamar os justos, mas os pecadores. Proclamação do Evangelho de Jesus Cristo segundo Mateus 9,9-13 Naquele tempo: 9 Partindo dali, Jesus viu um homem chamado Mateus, sentado na coletoria de impostos, e disse-lhe: \"Segue-me!\" Ele se levantou e seguiu a Jesus. 10 Enquanto Jesus estava à mesa, em casa de Mateus, vieram muitos cobradores de impostos e pecadores e sentaram-se à mesa com Jesus e seus discípulos. 11 Alguns fariseus viram isso e perguntaram aos discípulos: \"Por que vosso mestre come com os cobradores de impostos e pecadores?\" 12 Jesus ouviu a pergunta e respondeu: \"Aqueles que têm saúde não precisam de médico, mas sim os doentes. 13 Aprendei, pois, o que significa: 'Quero misericórdia e não sacrifício'. De fato, eu não vim para chamar os justos, mas os pecadores\". ℣."
     }
   },

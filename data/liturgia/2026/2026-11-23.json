@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Apocalipse 14,1-5",
+      "intro": "Leitura do livro do Apocalipse de são João:",
       "text": "Eu, João, 1tive esta visão: o Cordeiro estava de pé sobre o monte Sião. Com ele, os cento e quarenta e quatro mil que tinham a fronte marcada com o nome dele e o nome do seu Pai. 2Ouvi uma voz que vinha do céu; parecia o barulho de águas torrenciais e o estrondo de um forte trovão. O ruído que ouvi era como o som de músicos tocando harpa. 3Estavam diante do trono, diante dos quatro seres vivos e dos anciãos, e cantavam um cântico novo. Era um cântico que ninguém podia aprender; só os cento e quarenta e quatro mil marcados, que foram resgatados da terra. 4Eles seguem o Cordeiro aonde quer que vá. Foram resgatados do meio dos homens, como primeira oferta a Deus e ao Cordeiro. 5Na sua boca nunca foi encontrada mentira. São íntegros!"
     },
     "psalm": {
       "reference": "Salmo 23 (24)",
+      "refrain": "É assim a geração dos que buscam vossa face, ó Senhor, Deus de Israel.",
       "text": "- Ao Senhor pertence a terra e o que ela encerra, o mundo inteiro com os seres que o povoam; porque ele a tornou firme sobre os mares e, sobre as águas, a mantém inabalável.\n\n- \"Quem subirá até o monte do Senhor, quem ficará em sua santa habitação?\" \"Quem tem mãos puras e inocente coração, quem não dirige sua mente para o crime.\n\n- Sobre este desce a bênção do Senhor e a recompensa de seu Deus e salvador.\" \"É assim a geração dos que o procuram e do Deus de Israel buscam a face.\""
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 21, 1-4",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Vigiai, diz Jesus, vigiai, pois, no dia em que não esperais, o vosso Senhor há de vir (Mt 24,42.44)."
+      },
       "text": "Naquele tempo, 1Jesus ergueu os olhos e viu pessoas ricas depositando ofertas no tesouro do templo. 2Viu também uma pobre viúva que depositou duas pequenas moedas. 3Diante disso, ele disse: \"Em verdade vos digo que essa pobre viúva ofertou mais do que todos. 4Pois todos eles depositaram, como oferta feita a Deus, aquilo que lhes sobrava. Mas a viúva, na sua pobreza, ofertou tudo quanto tinha para viver\"."
     }
   },

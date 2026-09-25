@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Jeremias 18,1-6",
+      "intro": "Leitura do livro do profeta Jeremias:",
       "text": "1Palavra dirigida a Jeremias, da parte do Senhor: 2\"Levanta-te e vai à casa do oleiro, e ali te farei ouvir minhas palavras\". 3Fui à casa do oleiro, e eis que ele estava trabalhando ao torno; 4quando o vaso que moldava com barro se avariava em suas mãos, ei-lo de novo a fazer com esse material um outro vaso, conforme melhor lhe parecesse aos olhos. 5Fez-se em mim a palavra do Senhor: 6\"Acaso não posso fazer convosco como este oleiro, casa de Israel? - diz o Senhor. Como é o barro na mão do oleiro, assim sois vós em minha mão, casa de Israel\"."
     },
     "psalm": {
       "reference": "Salmo 145 (146)",
+      "refrain": "Feliz quem se apoia no Deus de Jacó!",
       "text": "- Bendize, minha alma, ao Senhor! Bendirei ao Senhor toda a vida, cantarei ao meu Deus sem cessar!\n\n- Não ponhais vossa fé nos que mandam, não há homem que possa salvar. Ao faltar-lhe o respiro, ele volta para a terra de onde saiu; nesse dia seus planos perecem.\n\n- É feliz todo homem que busca seu auxílio no Deus de Jacó e que põe no Senhor a esperança. O Senhor fez o céu e a terra, fez o mar e o que neles existe."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 47-53",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Abre-nos, ó Senhor, o coração, para ouvirmos a palavra de Jesus! (At 16,14)."
+      },
       "text": "Naquele tempo, disse Jesus à multidão: 47\"O reino dos céus é ainda como uma rede lançada ao mar e que apanha peixes de todo tipo. 48Quando está cheia, os pescadores puxam a rede para a praia, sentam-se e recolhem os peixes bons em cestos e jogam fora os que não prestam. 49Assim acontecerá no fim dos tempos: os anjos virão para separar os homens maus dos que são justos 50e lançarão os maus na fornalha de fogo. E aí haverá choro e ranger de dentes. 51Compreendestes tudo isso?\" Eles responderam: \"Sim\". 52Então Jesus acrescentou: \"Assim, pois, todo mestre da lei que se torna discípulo do reino dos céus é como um pai de família que tira do seu tesouro coisas novas e velhas\". 53Quando Jesus terminou de contar essas parábolas, partiu dali."
     }
   },

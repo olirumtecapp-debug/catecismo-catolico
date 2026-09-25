@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos 9,1-20",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias: 1Saulo só respirava ameaças e morte contra os discípulos do Senhor. Ele apresentou-se ao Sumo sacerdote 2e pediu-lhe cartas de recomendação para as sinagogas de Damasco, a fim de levar presos para Jerusalém os homens e mulheres que encontrasse seguindo o Caminho. 3Durante a viagem, quando já estava perto de Damasco, Saulo, de repente, viu-se cercado por uma luz que vinha do céu. 4Caindo por terra, ele ouviu uma voz que lhe dizia: 'Saulo, Saulo, por que me persegues?' 5Saulo perguntou: 'Quem és tu, Senhor?' A voz respondeu: 'Eu sou Jesus, a quem tu estás perseguindo. 6Agora, levanta-te, entra na cidade, e ali te será dito o que deves fazer.' 7Os homens que acompanhavam Saulo ficaram mudos de espanto, porque ouviam a voz, mas não viam ninguém. 8Saulo levantou-se do chão e abriu os olhos, mas não conseguia ver nada. Então pegaram nele pela mão e levaram-no para Damasco. 9Saulo ficou três dias sem poder ver. E não comeu nem bebeu. 10Em Damasco, havia um discípulo chamado Ananias. O Senhor o chamou numa visão: 'Ananias!' E Ananias respondeu: 'Aqui estou, Senhor!' 11O Senhor lhe disse: 'Levanta-te, vai à rua que se chama Direita e procura, na casa de Judas, por um homem de Tarso chamado Saulo. Ele está rezando.' 12E, numa visão, Saulo contemplou um homem chamado Ananias, entrando e impondo-lhe as mãos para que recuperasse a vista. 13Ananias respondeu: 'Senhor, já ouvi muitos falarem desse homem e do mal que fez aos teus fiéis que estão em Jerusalém. 14E aqui em Damasco ele tem plenos poderes, recebidos dos sumos sacerdotes, para prender todos os que invocam o teu nome.' 15Mas o Senhor disse a Ananias: 'Vai, porque esse homem é um instrumento que escolhi para anunciar o meu nome aos pagãos, aos reis e ao povo de Israel. 16Eu vou mostrar-lhe quanto ele deve sofrer por minha causa.' 17Então Ananias saiu, entrou na casa, e impôs as mãos sobre Saulo, dizendo: 'Saulo, meu irmão, o Senhor Jesus, que te apareceu quando vinhas no caminho, ele me mandou aqui para que tu recuperes a vista e fiques cheio do Espírito Santo.' 18Imediatamente caíram dos olhos de Saulo como que escamas e ele recuperou a vista. Em seguida, Saulo levantou-se e foi batizado. 19Tendo tomado alimento, sentiu-se reconfortado. Saulo passou alguns dias com os discípulos de Damasco, 20e logo começou a pregar nas sinagogas, afirmando que Jesus é o Filho de Deus."
     },
     "psalm": {
       "reference": "Salmo 116 (117)",
+      "refrain": "Ide, por todo o mundo, e a todos pregai o Evangelho.",
       "text": "- Cantai louvores ao Senhor, todas as gentes, povos todos, festejai-o!\n\n- Pois comprovado é seu amor para conosco, para sempre ele é fiel!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 6, 52-59",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, aleluia, aleluia.",
+        "verse": "Quem come a minha carne e bebe o meu sangue em mim permanece e eu vou ficar nele (Jo 6,56)."
+      },
       "text": "Naquele tempo: 52Os judeus discutiam entre si, dizendo: 'Como é que ele pode dar a sua carne a comer?' 53Então Jesus disse: 'Em verdade, em verdade vos digo, se não comerdes a carne do Filho do Homem e não beberdes o seu sangue, não tereis a vida em vós. 54Quem come a minha carne e bebe o meu sangue tem a vida eterna, e eu o ressuscitarei no último dia. 55Porque a minha carne é verdadeira comida e o meu sangue, verdadeira bebida. 56Quem come a minha carne e bebe o meu sangue permanece em mim e eu nele. 57Como o Pai, que vive, me enviou, e eu vivo por causa do Pai, assim o que me come viverá por causa de mim. 58Este é o pão que desceu do céu. Não é como aquele que os vossos pais comeram. Eles morreram. Aquele que come este pão viverá para sempre.' 59Assim falou Jesus, ensinando na sinagoga em Cafarnaum."
     }
   },

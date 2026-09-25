@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 16,11-15",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "11Embarcamos em Trôade e navegamos diretamente para a ilha de Samotrácia. No dia seguinte, ancoramos em Neápolis, 12de onde passamos para Filipos, que é uma das principais cidades da Macedônia, e que tem direitos de colônia romana. Passamos alguns dias nessa cidade. 13No sábado, saímos além da porta da cidade para um lugar junto ao rio, onde nos parecia haver oração. Sentados, começamos a falar com as mulheres que estavam aí reunidas. 14Uma delas chamava-se Lídia; era comerciante de púrpura, da cidade de Tiatira. Lídia acreditava em Deus e escutava com atenção. O Senhor abriu o seu coração para que aceitasse as palavras de Paulo. 15Após ter sido batizada, assim como toda a sua família, ela convidou-nos: 'Se vós me considerais uma fiel do Senhor, permanecei em minha casa.' E forçou-nos a aceitar."
     },
     "psalm": {
       "reference": "Salmo 149",
+      "refrain": "O Senhor ama seu povo, de verdade.",
       "text": "- Cantai ao Senhor Deus um canto novo, e o seu louvor na assembléia dos fiéis! Alegre-se Israel em Quem o fez, e Sião se rejubile no seu Rei!\n\n- Com danças glorifiquem o seu nome, toquem harpa e tambor em sua honra! Porque, de fato, o Senhor ama seu povo e coroa com vitória os seus humildes.\n\n- Exultem os fiéis por sua glória, e cantando se levantem de seus leitos, com louvores do Senhor em sua boca Eis a glória para todos os seus santos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 15, 26-16, 4",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, aleluia, aleluia.",
+        "verse": "O Espírito Santo, a verdade, dará testemunho de mim; depois também vós, neste mundo, de mim ireis testemunhar (Jo 15,26s)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 26Quando vier o Defensor que eu vos mandarei da parte do Pai, o Espírito da Verdade, que procede do Pai, ele dará testemunho de mim. 27E vós também dareis testemunho, porque estais comigo desde o começo. 16,1Eu vos disse estas coisas para que a vossa fé não seja abalada. 2Expulsar-vos-ão das sinagogas, e virá a hora em que aquele que vos matar julgará estar prestando culto a Deus. 3Agirão assim, porque não conheceram o Pai, nem a mim. 4aEu vos digo isto, para que vos lembreis de que eu o disse, quando chegar a hora."
     }
   },

@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Jeremias 31,7-9",
+      "intro": "Leitura do Livro do Profeta Jeremias:",
       "text": "7Isto diz o Senhor: Exultai de alegria por Jacó, aclamai a primeira das nações; tocai, cantai e dizei: 'Salva, Senhor, teu povo, o resto de Israel`. 8Eis que eu os trarei do país do Norte e os reunirei desde as extremidades da terra; entre eles há cegos e aleijados, mulheres grávidas e parturientes: são uma grande multidão os que retornam. 9Eles chegarão entre lágrimas e eu os receberei entre preces; eu os conduzirei por torrentes d'água, por um caminho reto onde não tropeçarão, pois tornei-me um pai para Israel, e Efraim é o meu primogênito'."
     },
     "psalm": {
       "reference": "Salmo 125 (126)",
+      "refrain": "Maravilhas fez conosco o Senhor, exultemos de alegria!",
       "text": "- Quando o Senhor reconduziu nossos cativos, parecíamos sonhar; encheu-se de sorriso nossa boca, nossos lábios, de canções.\n\n- Entre os gentios se dizia: 'Maravilhas fez com eles o Senhor!' Sim, maravilhas fez conosco o Senhor, exultemos de alegria!\n\n- Mudai a nossa sorte, ó Senhor, como torrentes no deserto. Os que lançam as sementes entre lágrimas, ceifarão com alegria.\n\n- Chorando de tristeza sairão, espalhando suas sementes; cantando de alegria voltarão, carregando os seus feixes!"
     },
     "secondReading": {
       "reference": "Hebreus 5,1-6",
+      "intro": "Leitura da Carta aos Hebreus:",
       "text": "1Todo sumo sacerdote é tirado do meio dos homens e instituído em favor dos homens nas coisas que se referem a Deus, para oferecer dons e sacrifícios pelos pecados. 2Sabe ter compaixão dos que estão na ignorância e no erro, porque ele mesmo está cercado de fraqueza. 3Por isso, deve oferecer sacrifícios tanto pelos pecados do povo, quanto pelos seus próprios. 4Ninguém deve atribuir-se esta honra, senão o que foi chamado por Deus, como Aarão. 5Deste modo, também Cristo não se atribuiu a si mesmo a honra de ser sumo sacerdote, mas foi aquele que lhe disse: 'Tu és o meu Filho, eu hoje te gerei'. 6Como diz em outra passagem: 'Tu és sacerdote para sempre, na ordem de Melquisedec'."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 10, 46-52",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Jesus Cristo, salvador, destruiu o mal e a morte; fez brilhar, pelo evangelho, a luz e a vida imperecíveis (2Tm 1,10)."
+      },
       "text": "Naquele tempo: 46Jesus saiu de Jericó, junto com seus discípulos e uma grande multidão. O filho de Timeu, Bartimeu, cego e mendigo, estava sentado à beira do caminho. 47Quando ouviu dizer que Jesus, o Nazareno, estava passando, começou a gritar: 'Jesus, filho de Davi, tem piedade de mim!' 48Muitos o repreendiam para que se calasse. Mas ele gritava mais ainda: 'Filho de Davi, tem piedade de mim!' 49Então Jesus parou e disse: 'Chamai-o'. Eles o chamaram e disseram: 'Coragem, levanta-te, Jesus te chama!' 50O cego jogou o manto, deu um pulo e foi até Jesus. 51Então Jesus lhe perguntou: 'O que queres que eu te faça?' O cego respondeu: 'Mestre, que eu veja!' 52Jesus disse: 'Vai, a tua fé te curou'. No mesmo instante, ele recuperou a vista e seguia Jesus pelo caminho."
     }
   },

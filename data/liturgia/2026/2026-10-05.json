@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Gálatas 1,6-12",
+      "intro": "Leitura da Carta de São Paulo aos Gálatas:",
       "text": "Irmãos: 6Admiro-me de terdes abandonado tão depressa aquele que vos chamou, na graça de Cristo, e de terdes passado para um outro evangelho. 7Não que haja outro evangelho, mas algumas pessoas vos estão perturbando e querendo mudar o evangelho de Cristo. 8Pois bem, mesmo que nós ou um anjo vindo do céu vos pregasse um evangelho diferente daquele que vos pregamos, seja excomungado. 9Como já dissemos e agora repito: Se alguém vos pregar um evangelho diferente daquele que recebestes, seja excomungado. 10Será que eu estou buscando a aprovação dos homens ou a aprovação de Deus? Ou estou procurando agradar aos homens? Se eu ainda estivesse preocupado em agradar aos homens, não seria servo de Cristo. 11Irmãos, asseguro-vos que o evangelho pregado por mim não é conforme a critérios humanos. 12Com efeito, não o recebi nem aprendi de homem algum, mas por revelação de Jesus Cristo."
     },
     "psalm": {
       "reference": "Salmo 110 (111)",
+      "refrain": "O Senhor se lembra sempre da Aliança.",
       "text": "- Eu agradeço a Deus de todo o coração junto com todos os seus justos reunidos! Que grandiosas são as obras do Senhor, elas merecem todo o amor e admiração!\n\n- Suas obras são verdade e são justiça, seus preceitos, todos eles, são estáveis, confirmados para sempre e pelos séculos, realizados na verdade e retidão.\n\n- Enviou libertação para o seu povo, confirmou sua Aliança para sempre. Seu nome é santo e é digno de respeito. Permaneça eternamente o seu louvor."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 10, 25-37",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eu vos dou novo preceito: que uns aos outros vos ameis, como eu vos tenho amado (Jo 13,34)."
+      },
       "text": "Naquele tempo: 25Um mestre da Lei se levantou e, querendo pôr Jesus em dificuldade, perguntou: 'Mestre, que devo fazer para receber em herança a vida eterna?' 26Jesus lhe disse: 'O que está escrito na Lei? Como lês?' 27Ele então respondeu: 'Amarás o Senhor, teu Deus, de todo o teu coração e com toda a tua alma, com toda a tua força e com toda a tua inteligência; e ao teu próximo como a ti mesmo!' 28Jesus lhe disse: 'Tu respondeste corretamente. Faze isso e viverás.' 29Ele, porém, querendo justificar-se, disse a Jesus: 'E quem é o meu próximo?' 30Jesus respondeu: 'Certo homem descia de Jerusalém para Jericó e caiu nas mãos de assaltantes. Estes arrancaram-lhe tudo, espancaram-no, e foram-se embora deixando-o quase morto. 31Por acaso, um sacerdote estava descendo por aquele caminho. Quando viu o homem, seguiu adiante, pelo outro lado. 32O mesmo aconteceu com um levita: chegou ao lugar, viu o homem e seguiu adiante, pelo outro lado. 33Mas um samaritano que estava viajando, chegou perto dele, viu e sentiu compaixão. 34Aproximou-se dele e fez curativos, derramando óleo e vinho nas feridas. Depois colocou o homem em seu próprio animal e levou-o a uma pensão, onde cuidou dele. 35No dia seguinte, pegou duas moedas de prata e entregou-as ao dono da pensão, recomendando: 'Toma conta dele! Quando eu voltar, vou pagar o que tiveres gasto a mais.' E Jesus perguntou: 36'Na tua opinião, qual dos três foi o próximo do homem que caiu nas mãos dos assaltantes?' 37Ele respondeu: 'Aquele que usou de misericórdia para com ele.' Então Jesus lhe disse: 'Vai e faze a mesma coisa.'"
     }
   },

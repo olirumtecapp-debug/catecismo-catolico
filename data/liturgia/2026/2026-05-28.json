@@ -11,11 +11,13 @@
     },
     "psalm": {
       "reference": "Sl 99(100),2.3.4.5 (R. 2c)",
+      "refrain": "Com canto apresentai-vos diante do Senhor!",
       "text": "Sl 99(100),2.3.4.5 (R. 2c) ℟. Com canto apresentai-vos diante do Senhor! 2 Aclamai o Senhor, ó terra inteira, † servi ao Senhor com alegria, * ide a ele cantando jubilosos! 3 Sabei que o Senhor, só ele, é Deus, † Ele mesmo nos fez, e somos seus, * nós somos seu povo e seu rebanho. 4 Entrai por suas portas dando graças, † e em seus átrios com hinos de louvor; * dai-lhe graças, seu nome bendizei! 5 Sim, é bom o Senhor e nosso Deus, † sua bondade perdura para sempre, * seu amor é fiel eternamente!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Mc 10,46-52",
+      "acclamation": null,
       "text": "℟. Aleluia, Aleluia, Aleluia. ℣. Eu sou a luz do mundo, aquele que me segue, não caminha entre as trevas, mas terá a luz da vida. EVANGELHO Mestre, que eu veja! Proclamação do Evangelho de Jesus Cristo segundo Marcos 10,46-52 Naquele tempo, 46 Jesus saiu de Jericó, junto com seus discípulos e uma grande multidão. O filho de Timeu, Bartimeu, cego e mendigo, estava sentado à beira do caminho. 47 Quando ouviu dizer que Jesus, o Nazareno, estava passando, começou a gritar: \"Jesus, filho de Davi, tem piedade de mim!\" 48 Muitos o repreendiam para que se calasse. Mas ele gritava mais ainda: \"Filho de Davi, tem piedade de mim!\" 49 Então Jesus parou e disse: \"Chamai-o\". Eles o chamaram e disseram: \"Coragem, levanta-te, Jesus te chama!\" 50 O cego jogou o manto, deu um pulo e foi até Jesus. \"Eis que nós deixamos tudo e te seguimos\". 51 Então Jesus lhe perguntou: \"O que queres que eu te faça?\" O cego respondeu: \"Mestre, que eu veja!\" 52 Jesus disse: \"Vai, a tua fé te curou\". No mesmo instante, ele recuperou a vista ℣."
     }
   },

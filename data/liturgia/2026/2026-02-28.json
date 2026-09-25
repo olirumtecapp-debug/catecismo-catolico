@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Deuteronômio 26,16-19",
+      "intro": "Leitura do livro do Deuteronômio:",
       "text": "Moisés dirigiu a palavra ao povo de Israel e lhe disse: 16\"Hoje, o Senhor teu Deus te manda cumprir esses preceitos e decretos. Guarda-os e observa-os com todo o teu coração e com toda a tua alma. 17Tu escolheste hoje o Senhor para ser o teu Deus, para seguires os seus caminhos e guardares seus preceitos, mandamentos e decretos, e para obedeceres à sua voz. 18E o Senhor te escolheu, hoje, para que sejas para ele um povo particular, como te prometeu, a fim de observares todos os seus mandamentos. 19Assim ele te fará ilustre entre todas as nações que criou e te tornará superior em honra e glória, a fim de que sejas o povo santo do Senhor teu Deus, como ele disse\"."
     },
     "psalm": {
       "reference": "Salmo 118 (119)",
+      "refrain": "Feliz é quem na lei do Senhor Deus vai progredindo!",
       "text": "- Feliz o homem sem pecado em seu caminho, que na lei do Senhor Deus vai progredindo! Feliz o homem que observa seus preceitos e de todo o coração procura a Deus!\n\n- Os vossos mandamentos vós nos destes para serem fielmente observados. Oxalá seja bem firme a minha vida em cumprir vossa vontade e vossa lei!\n\n- Quero louvar-vos com sincero coração, pois aprendi as vossas justas decisões. Quero guardar vossa vontade e vossa lei; Senhor, não me deixeis desamparado!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 43-48",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Salve, ó Cristo, imagem do Pai, a plena verdade nos comunicai!",
+        "verse": "Eis o tempo de conversão, eis o dia da salvação (2Cor 6,2)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 43\"Vós ouvistes o que foi dito: 'Amarás o teu próximo e odiarás o teu inimigo!' 44Eu, porém, vos digo, amai os vossos inimigos e rezai por aqueles que vos perseguem! 45Assim vos tornareis filhos do vosso Pai que está nos céus, porque ele faz nascer o sol sobre maus e bons e faz cair a chuva sobre justos e injustos. 46Porque, se amais somente aqueles que vos amam, que recompensa tereis? Os cobradores de impostos não fazem a mesma coisa? 47E se saudais somente os vossos irmãos, o que fazeis de extraordinário? Os pagãos não fazem a mesma coisa? 48Portanto, sede perfeitos como o vosso Pai celeste é perfeito\"."
     }
   },

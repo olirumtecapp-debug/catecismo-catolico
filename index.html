@@ -793,7 +793,12 @@
                 return {
                     reference: this._stripHtml(reading.reference || ''),
                     title: this._stripHtml(reading.title || ''),
+                    intro: this._stripHtml(reading.intro || ''),
                     refrain: this._stripHtml(reading.refrain || ''),
+                    acclamation: reading.acclamation ? {
+                        title: this._stripHtml(reading.acclamation.title || ''),
+                        verse: this._stripHtml(reading.acclamation.verse || '')
+                    } : null,
                     text: String(reading.text || ''),
                     kind
                 };
@@ -1115,17 +1120,17 @@
             return { author, headerLines, bodyHtml };
         }
 
-        function cleanReadingBody(rawText, kind, reference) {
+        function cleanReadingBody(rawText, kind, reference, readingObj = null) {
             if (!rawText) return { intro: '', text: '', acclamation: null, refrain: '' };
             let text = String(rawText).trim();
-            let intro = '';
-            let acclamation = null;
-            let refrain = '';
+            let intro = readingObj?.intro || '';
+            let acclamation = readingObj?.acclamation || null;
+            let refrain = readingObj?.refrain || '';
 
             text = text.replace(/^[℣℟\.\s-]+/, '');
 
             if (kind === 'evangelho') {
-                if (text.includes('Aleluia') || /℟\.?\s*Aleluia/i.test(text)) {
+                if (!acclamation && (text.includes('Aleluia') || /℟\.?\s*Aleluia/i.test(text))) {
                     const match = text.match(/(?:([A-Za-z0-9,\s\-]+?)\s*)?[℟R]\.?\s*(Aleluia[^\n℣]+)(?:[℣V]\.?\s*([\s\S]+?(?=EVANGELHO|Proclama[cç][aã]o|\d+\s*[A-ZÀ-ÿ])))?/i);
                     if (match) {
                         acclamation = {
@@ -1135,30 +1140,42 @@
                         text = text.slice(match.index + match[0].length).trim();
                     }
                 }
-                if (text.includes('Proclamação') || text.includes('EVANGELHO')) {
-                    const match = text.match(/(?:Proclama[cç][aã]o[^\n]+?[\n.]+\s*)?((?:(?:\d+\s+[A-ZÀ-ÿ])|Naquele tempo)[\s\S]*)/i);
-                    if (match && match[1]) text = match[1];
-                }
-                text = text.replace(/^(?:EVANGELHO[\s.:\-]*)?(?:[^\n.]+?[\n.]+)?(?:Proclama[cç][aã]o[^\n.:]*[\n.:]+)?/i, '').trim();
+                // Strip explicit heading lines if present at the start, without cutting scripture text
+                text = text.replace(/^(?:[—–-]\s*)?EVANGELHO\b[^\n.:]*[\n.:]+\s*/i, '').trim();
+                text = text.replace(/^(?:[—–-]\s*)?Proclama[cç][aã]o[^\n.:]*[\n.:]+\s*/i, '').trim();
             } else if (kind === 'salmo') {
-                const rMatch = text.match(/(?:^|\n)\s*(?:[A-Za-z0-9(),.\s-]+\s*)?(?:℟|R\.)\s*([^\n.]+[\n.]+)/i);
-                if (rMatch) {
-                    refrain = rMatch[1].replace(/[℟R]/g, '').trim();
-                    text = text.slice(rMatch.index + rMatch[0].length).trim();
+                if (refrain) {
+                    // Refrain provided directly by official database. Keep strophes intact!
+                    // Only strip if the refrain literally repeats on the first line:
+                    const safeRef = refrain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    text = text.replace(new RegExp('^(?:[—–-]\\s*)?(?:[℟R]\\.?\\s*)?' + safeRef + '[.!?:\\s-]*\n*', 'i'), '').trim();
                 } else {
-                    const match = text.match(/^([^.!\n]+[.!]?)/);
-                    if (match && match[1].length < 130) {
-                        refrain = match[1].replace(/[.!]$/, '').trim() + '!';
-                        text = text.slice(match[0].length).trim();
+                    const rMatch = text.match(/(?:^|\n)\s*(?:[A-Za-z0-9(),.\s-]+\s*)?(?:℟|R\.)\s*([^\n.]+[\n.]+)/i);
+                    if (rMatch) {
+                        refrain = rMatch[1].replace(/[℟R]/g, '').trim();
+                        text = text.slice(rMatch.index + rMatch[0].length).trim();
+                    } else {
+                        const match = text.match(/^([^.!\n]+[.!]?)/);
+                        if (match && match[1].length < 130) {
+                            refrain = match[1].replace(/[.!]$/, '').trim() + '!';
+                            text = text.slice(match[0].length).trim();
+                        }
                     }
                 }
             } else {
-                const introMatch = text.match(/^(?:[^\n.]+\.\s*)?(Leitura (?:do Livro|da Carta|dos Atos|do Profeta)[^\n.:]*[\n.:]+)/i);
-                if (introMatch) {
-                    intro = introMatch[1].trim();
-                    text = text.slice(introMatch[0].length).trim();
-                } else {
-                    intro = getReadingIntro(reference);
+                if (!intro) {
+                    const introMatch = text.match(/^(?:[^\n.]+\.\s*)?(Leitura (?:do Livro|da Carta|dos Atos|do Profeta|da Profecia)[^\n.:]*[\n.:]+)/i);
+                    if (introMatch) {
+                        intro = introMatch[1].trim();
+                        text = text.slice(introMatch[0].length).trim();
+                    } else {
+                        intro = getReadingIntro(reference);
+                    }
+                }
+                // Strip intro from body if it is at the very beginning
+                if (intro) {
+                    const safeIntro = intro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    text = text.replace(new RegExp('^(?:[—–-]\\s*)?' + safeIntro + '\\s*', 'i'), '').trim();
                 }
             }
 
@@ -5950,13 +5967,15 @@
 
                 const renderReadingCard = (kindKey, displayTitle, reading) => {
                     if (!reading || !reading.text) return '';
-                    const cleaned = cleanReadingBody(reading.text, kindKey, reading.reference);
+                    const cleaned = cleanReadingBody(reading.text, kindKey, reading.reference, reading);
                     const formattedRef = formatLiturgicalReference(reading.reference, kindKey);
                     const formattedText = formatLiturgicalText(cleaned.text, true);
 
                     let cardHeader = `${displayTitle} (${formattedRef})`;
                     if (kindKey === 'salmo') {
                         cardHeader = `Responsório ${formattedRef}`;
+                    } else if (kindKey === 'evangelho') {
+                        cardHeader = `Evangelho (${formattedRef})`;
                     }
 
                     let introHtml = '';
@@ -5974,7 +5993,7 @@
                             </div>
                         `;
                     } else if (kindKey === 'salmo') {
-                        const refrainText = cleaned.refrain || reading.refrain || 'Bendito seja o Senhor!';
+                        const refrainText = (cleaned.refrain || reading.refrain || 'Bendito seja o Senhor!').replace(/^[—–-]\s*/, '').replace(/^(?:℟\.?|R\s*[:.\-])\s*/i, '').trim();
                         introHtml = `
                             <div class="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 my-3 space-y-1">
                                 <p class="text-sm sm:text-base font-bold text-amber-900 dark:text-amber-300 leading-snug">— ${esc(refrainText)}</p>
@@ -5993,8 +6012,8 @@
                         }).join('');
                     } else if (kindKey === 'evangelho') {
                         const evangelist = extractEvangelist(reading.reference);
-                        const acclTitle = cleaned.acclamation?.title || (isLent ? 'Glória a vós, Senhor Jesus, Filho de Deus altíssimo!' : 'Aleluia, Aleluia, Aleluia.');
-                        const acclVerse = cleaned.acclamation?.verse || '';
+                        const acclTitle = (cleaned.acclamation?.title || (isLent ? 'Glória a vós, Senhor Jesus, Filho de Deus altíssimo!' : 'Aleluia, Aleluia, Aleluia.')).replace(/^[—–-]\s*/, '').trim();
+                        const acclVerse = (cleaned.acclamation?.verse || '').replace(/^[—–-]\s*/, '').trim();
 
                         specialMiddleHtml = `
                             <div class="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 my-3 space-y-1">
@@ -6017,11 +6036,9 @@
 
                     return `
                         <div data-lit-card="${kindKey}" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-slate-700 card-shadow space-y-3 transition-all">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 border-b border-slate-100 dark:border-slate-700/80 pb-3">
+                            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/80 pb-3">
                                 <h3 class="font-serif text-xl sm:text-2xl font-bold text-mariana dark:text-amber-200">${esc(cardHeader)}</h3>
-                                <span class="text-xs font-bold text-dourado uppercase tracking-wide">${esc(formattedRef)}</span>
                             </div>
-                            ${reading.title ? `<p class="text-[11px] uppercase tracking-wide font-bold text-slate-400 dark:text-slate-500">${esc(reading.title)}</p>` : ''}
                             ${introHtml}
                             ${specialMiddleHtml}
                             ${bodyHtml}

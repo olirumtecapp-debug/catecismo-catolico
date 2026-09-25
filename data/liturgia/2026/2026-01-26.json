@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Samuel 5,1-7.10",
+      "intro": "Leitura do segundo livro de Samuel:",
       "text": "1 Então todas as tribos de Israel vieram a Davi, em Hebrom, e falaram, dizendo: Eis-nos aqui, somos teus ossos e tua carne. 2 E também outrora, sendo Saul ainda rei sobre nós, eras tu o que saías e entravas com Israel; e também o Senhor te disse: Tu apascentarás o meu povo de Israel, e tu serás príncipe sobre Israel. 3 Assim, pois, todos os anciãos de Israel vieram ao rei, em Hebrom; e o rei Davi fez com eles acordo em Hebrom, perante o Senhor; e ungiram a Davi rei sobre Israel. 4 Da idade de trinta anos era Davi quando começou a reinar; quarenta anos reinou. 5 Em Hebrom reinou sobre Judá sete anos e seis meses, e em Jerusalém reinou trinta e três anos sobre todo o Israel e Judá. 6 E partiu o rei com os seus homens a Jerusalém, contra os jebuseus que habitavam naquela terra; e falaram a Davi, dizendo: Não entrarás aqui, pois os cegos e os coxos te repelirão, querendo dizer: Não entrará Davi aqui. 7 Porém Davi tomou a fortaleza de Sião; esta é a cidade de Davi. 10 Davi ia, cada vez mais, aumentando e crescendo, porque o Senhor Deus dos Exércitos era com ele."
     },
     "psalm": {
       "reference": "Salmo 88 (89)",
+      "refrain": "Minhas verdade e meu amor estarão sempre com ele.",
       "text": "- Outrora vós falastes em visões a vossos santos: \"Coloquei uma coroa na cabeça de um herói e do meio deste povo escolhi o meu eleito.\n\n- Encontrei e escolhi a Davi, meu servidor, e o ungi, para ser rei, com meu óleo consagrado. Estará sempre com ele minha mão onipotente, e meu braço poderoso há de ser a sua força.\n\n- Minhas verdade e meu amor estarão sempre com ele, sua força e seu poder, por meu nome, crescerão. Eu farei que ele estenda sua mão por sobre os mares, e a sua mão direita estenderei por sobre os rios\"."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 22-30",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Jesus Cristo salvador destruiu o mal e a morte; fez brilhar pelo evangelho a luz e a vida imperecíveis (2Tm 1,10)."
+      },
       "text": "Naquele tempo, 22os mestres da Lei, que tinham vindo de Jerusalém, diziam que ele estava possuído por Beelzebul, e que pelo príncipe dos demônios ele expulsava os demônios. 23Então Jesus os chamou e falou-lhes em parábolas: \"Como é que Satanás pode expulsar a Satanás? 24Se um reino se divide contra si mesmo ele não poderá manter-se. 25Se uma família se divide contra si mesma, ela não poderá manter-se. 26Assim, se Satanás se levanta contra si mesmo e se divide, não poderá sobreviver, mas será destruído. 27Ninguém pode entrar na casa de um homem forte para roubar seus bens, sem antes o amarrar. Só depois poderá saquear sua casa. 28Em verdade vos digo: tudo será perdoado aos homens, tanto nos pecados, como qualquer blasfêmia que tiverem dito. 29Mas quem blasfemar contra o Espírito Santo, nunca será perdoado, mas será culpado de um pecado eterno\". 30Jesus falou isso, porque diziam: \"Ele está possuído por um espírito mau\"."
     }
   },

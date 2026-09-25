@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 45,1.4-6",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "1Isto diz o Senhor sobre Ciro, seu Ungido: 'Tomei-o pela mão para submeter os povos ao seu domínio, dobrar o orgulho dos reis, abrir todas as portas à sua marcha, e para não deixar trancar os portões. 4Por causa de meu servo Jacó, e de meu eleito Israel, chamei-te pelo nome; reservei-te, e não me reconheceste. 5Eu sou o Senhor, não existe outro: fora de mim não há deus. Armei-te guerreiro, sem me reconheceres, 6para que todos saibam, do oriente ao ocidente, que fora de mim outro não existe. Eu sou o Senhor, não há outro."
     },
     "psalm": {
       "reference": "Salmo 95 (96)",
+      "refrain": "Ó família das nações, dai ao Senhor poder e glória!",
       "text": "- Cantai ao Senhor Deus um canto novo, cantai ao Senhor Deus, ó terra inteira! manifestai a sua glória entre as nações, e entre os povos do universo seus prodígios!\n\n- Pois Deus é grande e muito digno de louvor, é mais terrível e maior que os outros deuses, porque um nada sóo os deuses dos pagãos. Foi o Senhor e nosso Deus quem fez os céus.\n\n- Ó família das nações, dai ao Senhor, ó nações, dai ao Senhor poder e glória, dai-lhe a glória que é devida ao seu nome! Oferecei um sacrifício nos seus átrios.\n\n- Adorai-o no esplendor da santidade, terra inteira, estremecei diante dele! Publicai entre as nações: 'Reina o Senhor!' pois os povos ele julga com justiça."
     },
     "secondReading": {
       "reference": "Tessalonicenses 1,1-5",
+      "intro": "Leitura da Primeira Carta de São Paulo aos Tessalonicenses:",
       "text": "1Paulo, Silvano e Timóteo, à igreja dos tessalonicenses, reunida em Deus Pai e no Senhor Jesus Cristo: a vós, graça e paz! 2Damos graças a Deus por todos vós, lembrando-vos sempre em nossas orações. 3Diante de Deus, nosso Pai, recordamos sem cessar a atuação da vossa fé, o esforço da vossa caridade e a firmeza da vossa esperança em nosso Senhor Jesus Cristo. 4Sabemos, irmãos amados por Deus, que sois do número dos escolhidos. 5bPorque o nosso evangelho não chegou até vós somente por meio de palavras, mas também mediante a força que é o Espírito Santo; e isso, com toda a abundância."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 22, 15-21",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Como astros no mundo, vós resplandeçais, mensagem de vida ao mundo anunciando; da vida a Palavra, com fé, proclameis, quais astros luzentes no mundo brilheis (Fl 2,15s)."
+      },
       "text": "Naquele tempo: 15Os fariseus fizeram um plano para apanhar Jesus em alguma palavra. 16Então mandaram os seus discípulos, junto com alguns do partido de Herodes, para dizerem a Jesus: 'Mestre, sabemos que és verdadeiro e que, de fato, ensinas o caminho de Deus. Não te deixas influenciar pela opinião dos outros, pois não julgas um homem pelas aparências. 17Dize-nos, pois, o que pensas: É lícito ou não pagar imposto a César?' 18Jesus percebeu a maldade deles e disse: 'Hipócritas! Por que me preparais uma armadilha? 19Mostrai-me a moeda do imposto!' Trouxeram-lhe então a moeda. 20E Jesus disse: 'De quem é a figura e a inscrição desta moeda?' 21Eles responderam: 'De César.' Jesus então lhes disse: 'Dai pois a César o que é de César, e a Deus o que é de Deus.'"
     }
   },

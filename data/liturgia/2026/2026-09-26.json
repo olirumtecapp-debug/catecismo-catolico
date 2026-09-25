@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Eclesiastes 11,9-12,8",
+      "intro": "Leitura do Livro do Eclesiastes:",
       "text": "Alegra-te, jovem, na tua adolescência, e que o teu coração repouse no bem nos dias da tua juventude; segue as aspirações do teu coração e os desejos dos teus olhos; fica sabendo, porém, que de tudo isso Deus te pedirá contas 10Tira a tristeza do teu coração, e afasta a malícia do teu corpo, pois a adolescência e a juventude são vaidade. 12,1Lembra-te do teu Criador nos dias da juventude, antes que venham os dias da desgraça e cheguem os anos dos quais dirás: 'Não sinto prazer neles'; 2- antes que se obscureçam o sol, a luz, a lua e as estrelas, e voltem as nuvens depois da chuva; 3quando os guardas da casa começarem a tremer, e se curvarem os homens robustos; quando as poucas mulheres cessarem de moer, e ficarem turvas as vistas das que olham pelas janelas 4e se fecharem as portas que dão para a rua; quando enfraquecer o ruído do moinho, e os homens se levantarem ao canto dos pássaros, e silenciarem as vozes das canções, 5e houver medo das alturas e sobressaltos no caminho, enquanto a amendoeira floresce, o gafanhoto se arrasta e a alcaparra perde o seu gosto, porque o homem se encaminha para a morada eterna, e os que choram já rondam pelas ruas; 6- antes que se rompa o cordão de prata e se despedace a taça de ouro, a jarra se parta na fonte, a roldana se arrebente no poço, 7- antes que volte o pó à terra, de onde veio, e o sopro de vida volte a Deus que o concedeu. 8Vaidade das vaidades, diz o Eclesiastes, tudo é vaidade."
     },
     "psalm": {
       "reference": "Salmo 89 (90)",
+      "refrain": "Ó Senhor, vós fostes sempre um refúgio para nós.",
       "text": "- Vós fazeis voltar ao pó todo mortal, quando dizeis: 'Voltai ao pó, filhos de Adão!' Pois mil anos para vós são como ontem, qual vigília de uma noite que passou.\n\n- Eles passam como o sono da manhã, são iguais à erva verde pelos campos: De manhã ela floresce vicejante, mas à tarde é cortada e logo seca.\n\n- Ensinai-nos a contar os nossos dias, e dai ao nosso coração sabedoria! Senhor, voltai-vos! Até quando tardareis? Tende piedade e compaixão de vossos servos!\n\n- Saciai-nos de manhã com vosso amor, e exultaremos de alegria todo o dia! Que a bondade do Senhor e nosso Deus repouse sobre nós e nos conduza! Tornai fecundo, ó Senhor, nosso trabalho."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 43-45",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia",
+        "verse": "Jesus Cristo salvador destruiu o mal e a morte; fez brilhar, pelo evangelho, a luz e a vida imperecíveis (2Tm 1,10)."
+      },
       "text": "Naquele tempo: 43Todos estavam admirados com todas as coisas que Jesus fazia. Então Jesus disse a seus discípulos: 44'Prestai bem atenção às palavras que vou dizer: O Filho do Homem vai ser entregue nas mãos dos homens.' 45Mas os discípulos não compreendiam o que Jesus dizia. O sentido lhes ficava escondido, de modo que não podiam entender; e eles tinham medo de fazer perguntas sobre o assunto."
     }
   },

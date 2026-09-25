@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Miqueias 7,14-15.18-20",
+      "intro": "Leitura da profecia de Miqueias:",
       "text": "14Apascenta o teu povo com o cajado da autoridade, o rebanho de tua propriedade, os habitantes dispersos pela mata e pelos campos cultivados; que eles desfrutem a terra de Basã e Galaad, como nos velhos tempos. 15E, como foi nos dias em que nos fizeste sair do Egito, faze-nos ver novos prodígios. 18Qual Deus existe, como tu, que apagas a iniquidade e esqueces o pecado daqueles que são resto de tua propriedade? Ele não guarda rancor para sempre, o que ama é a misericórdia. 19Voltará a compadecer-se de nós, esquecerá nossas iniquidades e lançará ao fundo do mar todos os nossos pecados. 20Tu manterás fidelidade a Jacó e terás compaixão de Abraão, como juraste a nossos pais, desde tempos remotos."
     },
     "psalm": {
       "reference": "Salmo 84 (85)",
+      "refrain": "Mostrai-nos, ó Senhor, vossa bondade.",
       "text": "- Favorecestes, ó Senhor, a vossa terra, libertastes os cativos de Jacó. Perdoastes o pecado ao vosso povo, encobristes toda a falta cometida; retirastes a ameaça que fizestes, acalmastes o furor de vossa ira.\n\n- Renovai-nos, nosso Deus e salvador, esquecei a vossa mágoa contra nós! Ficareis eternamente irritado? Guardareis a vossa ira pelos séculos?\n\n- Não vireis restituir a nossa vida, para que em vós se rejubile o vosso povo? Mostrai-nos, ó Senhor, vossa bondade, concedei-nos também vossa salvação!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 12, 46-50",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Quem me ama, realmente, guardará minha Palavra, e meu Pai o amará, e a ele nós viremos (Jo 14,23)."
+      },
       "text": "Naquele tempo, 46enquanto Jesus estava falando às multidões, sua mãe e seus irmãos ficaram do lado de fora, procurando falar com ele. 47Alguém disse a Jesus: \"Olha! Tua mãe e teus irmãos estão aí fora e querem falar contigo\". 48Jesus perguntou àquele que tinha falado: \"Quem é minha mãe e quem são meus irmãos?\" 49E, estendendo a mão para os discípulos, Jesus disse: \"Eis minha mãe e meus irmãos. 50Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe\"."
     }
   },

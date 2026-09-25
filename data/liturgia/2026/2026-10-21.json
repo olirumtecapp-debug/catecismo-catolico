@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Efésios 3,14-21",
+      "intro": "Leitura da Carta de São Paulo aos Efésios:",
       "text": "Irmãos: 14Eu dobro os joelhos diante do Pai, 15de quem toda e qualquer família recebe seu nome, no céu e sobre a terra. 16Que ele vos conceda, segundo a riqueza da sua glória, serdes robustecidos, por seu Espírito, quanto ao homem interior, 17que ele faça habitar, pela fé, Cristo em vossos corações, que estejais enraizados e fundados no amor. 18Tereis assim a capacidade de compreender, com todos os santos, qual a largura, o comprimento, a altura, a profundidade, 19e de conhecer o amor de Cristo, que ultrapassa todo o conhecimento, a fim de que sejais cumulados até receber toda a plenitude de Deus. 20Aquele que tudo pode realizar superabundantemente, e muito mais do que nós pedimos ou concebemos, e cujo poder atua em nós, 21a ele a glória, na Igreja e em Jesus Cristo, por todas as gerações, para sempre. Amém."
     },
     "psalm": {
       "reference": "Salmo 32 (33)",
+      "refrain": "Transborda em toda a terra a bondade do Senhor!",
       "text": "- Ó justos, alegrai-vos no Senhor! aos retos fica bem glorificá-lo. Dai graças ao Senhor ao som da harpa, na lira de dez cordas celebrai-o!\n\n- Pois reta é a palavra do Senhor, e tudo o que ele faz merece fé. Deus ama o direito e a justiça, transborda em toda a terra a sua graça.\n\n- Mas os desígnios do Senhor são para sempre, e os pensamentos que ele traz no coração, de geração em geração, vão perdurar. Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança!\n\n- Mas o Senhor pousa o olhar sobre os que o temem, e que confiam esperando em seu amor, para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 49-53",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eu tudo considero como perda e como lixo a fim de ganhar Cristo e ser achado nele\" (Fl 3,8s)."
+      },
       "text": "Naquele tempo, disse Jesus a seus discípulos: 49Eu vim para lançar fogo sobre a terra, e como gostaria que já estivesse aceso! 50Devo receber um batismo, e como estou ansioso até que isto se cumpra! 51Vós pensais que eu vim trazer a paz sobre a terra? Pelo contrário, eu vos digo, vim trazer divisão. 52Pois, daqui em diante, numa família de cinco pessoas, três ficarão divididas contra duas e duas contra três; 53ficarão divididos: o pai contra o filho e o filho contra o pai; a mãe contra a filha e a filha contra a mãe; a sogra contra a nora e a nora contra a sogra.'"
     }
   },

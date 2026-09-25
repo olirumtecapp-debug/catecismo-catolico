@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 10,34.37-43",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, 34Pedro tomou a palavra e disse: 37\"Vós sabeis o que aconteceu em toda a Judeia, a começar pela Galileia, depois do batismo pregado por João: 38como Jesus de Nazaré foi ungido por Deus com o Espírito Santo e com poder. Ele andou por toda parte, fazendo o bem e curando a todos os que estavam dominados pelo demônio, porque Deus estava com ele. 39E nós somos testemunhas de tudo o que Jesus fez na terra dos judeus e em Jerusalém. Eles o mataram, pregando-o numa cruz. 40Mas Deus o ressuscitou no terceiro dia, concedendo-lhe manifestar-se 41não a todo o povo, mas às testemunhas que Deus havia escolhido: a nós, que comemos e bebemos com Jesus, depois que ressuscitou dos mortos. 42E Jesus nos mandou pregar ao povo e testemunhar que Deus o constituiu juiz dos vivos e dos mortos. 43Todos os profetas dão testemunho dele: 'Todo aquele que crê em Jesus recebe, em seu nome, o perdão dos pecados'\"."
     },
     "psalm": {
       "reference": "Salmo 117 (118)",
+      "refrain": "Este é o dia que o Senhor fez para nós: alegremo-nos e nele exultemos!",
       "text": "- Dai graças ao Senhor, porque ele é bom! \"Eterna é a sua misericórdia!\" A casa de Israel agora o diga: \"Eterna é a sua misericórdia!\"\n\n- A mão direita do Senhor fez maravilhas, a mão direita do Senhor me levantou. Não morrerei, mas, ao contrário, viverei para cantar as grandes obras do Senhor!\n\n- A pedra que os pedreiros rejeitaram tornou-se agora a pedra angular. Pelo Senhor é que foi feito tudo isso: que maravilhas ele fez a nossos olhos!"
     },
     "secondReading": {
       "reference": "Colossenses 3,1-4",
+      "intro": "Leitura da carta de são Paulo aos Colossenses:",
       "text": "Irmãos, 1se ressuscitastes com Cristo, esforçai-vos por alcançar as coisas do alto, 2onde está Cristo, sentado à direita de Deus; aspirai às coisas celestes e não às coisas terrestres. 3Pois vós morrestes, e a vossa vida está escondida, com Cristo, em Deus. 4Quando Cristo, vossa vida, aparecer em seu triunfo, então vós aparecereis também com ele, revestidos de glória."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 20, 1-9",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "O nosso cordeiro pascal, Jesus Cristo, já foi imolado. Celebremos, assim, esta festa na sinceridade e verdade (1Cor 5,7s)."
+      },
       "text": "1No primeiro dia da semana, Maria Madalena foi ao túmulo de Jesus, bem de madrugada, quando ainda estava escuro, e viu que a pedra tinha sido retirada do túmulo. 2Então ela saiu correndo e foi encontrar Simão Pedro e o outro discípulo, aquele que Jesus amava, e lhes disse: \"Tiraram o Senhor do túmulo e não sabemos onde o colocaram\". 3Saíram, então, Pedro e o outro discípulo e foram ao túmulo. 4Os dois corriam juntos, mas o outro discípulo correu mais depressa que Pedro e chegou primeiro ao túmulo. 5Olhando para dentro, viu as faixas de linho no chão, mas não entrou. 6Chegou também Simão Pedro, que vinha correndo atrás, e entrou no túmulo. Viu as faixas de linho deitadas no chão 7e o pano que tinha estado sobre a cabeça de Jesus, não posto com as faixas, mas enrolado num lugar à parte. 8Então entrou também o outro discípulo, que tinha chegado primeiro ao túmulo. Ele viu e acreditou. 9De fato, eles ainda não tinham compreendido a Escritura, segundo a qual ele devia ressuscitar dos mortos. - Palavra da salvação."
     }
   },

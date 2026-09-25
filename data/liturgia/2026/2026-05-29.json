@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "São Pedro 4,7-13",
+      "intro": "Leitura da Primeira Carta de São Pedro:",
       "text": "Caríssimos: 7O fim de todas as coisas está próximo. Vivei com inteligência e vigiai, dados à oração. 8Sobretudo, cultivai o amor mútuo, com todo o ardor, porque o amor cobre uma multidão de pecados. 9Sede hospitaleiros uns com os outros, sem reclamações. 10Como bons administradores da multiforme graça de Deus, cada um coloque à disposição dos outros o dom que recebeu. 11Se alguém tem o dom de falar, proceda como com palavras de Deus. Se alguém tem o dom do serviço, exerça-o como capacidade proporcionada por Deus, a fim de que, em todas as coisas, Deus seja glorificado, em virtude de Jesus Cristo, a quem pertencem a glória e o poder, pelos séculos dos séculos. Amém. 12Caríssimos, não estranheis o fogo da provação que alastra entre vós, como se alguma coisa de estranho vos estivesse acontecendo. 13Alegrai-vos por participar dos sofrimentos de Cristo, para que possais também exultar de alegria na revelação da sua glória."
     },
     "psalm": {
       "reference": "Salmo 95 (96)",
+      "refrain": "O Senhor vem julgar nossa terra.",
       "text": "- Publicai entre as nações: 'Reina o Senhor!' Ele firmou o universo inabalável, e os povos ele julga com justiça.\n\n- O céu se rejubile e exulte a terra, aplauda o mar com o que vive em suas águas; os campos com seus frutos rejubilem e exultem as florestas e as matas.\n\n- Na presença do Senhor, pois ele vem, porque vem para julgar a terra inteira. Governará o mundo todo com justiça, e os povos julgará com lealdade."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 11, 11-26",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Eu vos escolhi a fim de que deis, no meio do mundo, um fruto que dure (Jo 15,16)."
+      },
       "text": "Tendo sido aclamado pela multidão, 11Jesus entrou, no Templo, em Jerusalém, e observou tudo. Mas, como já era tarde, saiu para Betânia com os doze. 12No dia seguinte, quando saíam de Betânia, Jesus teve fome. 13De longe, ele viu uma figueira coberta de folhas e foi até lá ver se encontrava algum fruto. Quando chegou perto, encontrou somente folhas, pois não era tempo de figos. 14Então Jesus disse à figueira: 'Que ninguém mais coma de teus frutos.' E os discípulos escutaram o que ele disse. 15Chegaram a Jerusalém. Jesus entrou no Templo e começou a expulsar os que vendiam e os que compravam no Templo. Derrubou as mesas dos cambistas e as cadeiras dos vendedores de pombas. 16Ele não deixava ninguém carregar nada através do Templo. 17E ensinava o povo, dizendo: 'Não está escrito: 'Minha casa será chamada casa de oração para todos os povos'? No entanto, vós fizestes dela uma toca de ladrões.' 18Os sumos sacerdotes e os mestres da Lei ouviram isso e começaram a procurar uma maneira de o matar. Mas tinham medo de Jesus, porque a multidão estava maravilhada com o ensinamento dele. 19Ao entardecer, Jesus e os discípulos saíram da cidade. 20Na manhã seguinte, quando passavam, Jesus e os discípulos viram que a figueira tinha secado até a raiz. 21Pedro lembrou-se e disse a Jesus: 'Olha, Mestre: a figueira que amaldiçoaste secou.' 22Jesus lhes disse: 'Tende fé em Deus. 23Em verdade vos digo, se alguém disser a esta montanha: 'Levanta-te e atira-te no mar', e não duvidar no seu coração, mas acreditar que isso vai acontecer, assim acontecerá. 24Por isso vos digo, tudo o que pedirdes na oração, acreditai que já o recebestes, e assim será. 25Quando estiverdes rezando, perdoai tudo o que tiverdes contra alguém, para que vosso Pai que está nos céus também perdoe os vossos pecados.'"
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Samuel 1,24-28",
+      "intro": "Leitura do Primeiro Livro de Samuel:",
       "text": "24 Ana, logo que o desmamou, levou consigo Samuel à casa do Senhor em Silo, e mais um novilho de três anos, três arrobas de farinha e um odre de vinho. O menino, porém, era ainda uma criança. 25 Depois de sacrificarem o novilho, apresentaram o menino a Eli. 26 E Ana disse-lhe: 'Ouve, meu senhor, por tua vida, eu sou a mulher que esteve aqui orando ao Senhor, na tua presença. 27 Eis o menino por quem eu pedi, e o Senhor ouviu a minha súplica. 28 Portanto, eu também o ofereço ao Senhor, a fim de que só a ele sirva em todos os dias da sua vida'. E adoraram o Senhor."
     },
     "psalm": {
       "reference": "Salmo 1Sm 2",
+      "refrain": "Meu coração exultou no meu Senhor, salvador.",
       "text": "- Exulta no Senhor meu coração, e se eleva a minha fronte no meu Deus. Minha boca desafia os meus rivais porque me alegro com a vossa salvação.\n\n- O arco dos fortes foi dobrado, foi quebrado, mas os fracos se vestiram de vigor. Os saciados se empregaram por um pão, mas os pobres e os famintos se fartaram. Muitas vezes deu à luz a que era estéril, mas a mãe de muitos filhos definhou.\n\n- É o Senhor quem dá a morte e dá a vida, faz descer à sepultura e faz voltar; é o Senhor quem faz o pobre e faz o rico, é o Senhor quem nos humilha e nos exalta.\n\n- O Senhor ergue do pó o homem fraco, e do lixo ele retira o indigente, para fazê-los assentar-se com os nobres num lugar de muita honra e distinção."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 46-56",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Ó rei e Senhor das nações e pedra angular da Igreja, vinde salvar a mulher e o homem, que, um dia, formastes do barro."
+      },
       "text": "Naquele tempo: 46 Maria disse: 'A minha alma engrandece o Senhor, 47 e o meu espírito se alegra em Deus, meu Salvador, 48 porque olhou para a humildade de sua serva. Doravante todas as gerações me chamarão bem-aventurada, 49 porque o Todo-poderoso fez grandes coisas em meu favor. O seu nome é santo, 50 e sua misericórdia se estende, de geração em geração, a todos os que o temem. 51 Ele mostrou a força de seu braço: dispersou os soberbos de coração. 52 Derrubou do trono os poderosos e elevou os humildes. 53 Encheu de bens os famintos, e despediu os ricos de mãos vazias. 54 Socorreu Israel, seu servo, lembrando-se de sua misericórdia, 55 conforme prometera aos nossos pais, em favor de Abraão e de sua descendência, para sempre.' 56 Maria ficou três meses com Isabel; depois voltou para casa."
     }
   },

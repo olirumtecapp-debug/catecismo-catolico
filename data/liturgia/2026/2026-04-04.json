@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Gênesis 1,1.26-31-mais breve",
+      "intro": "Leitura do livro do Gênesis:",
       "text": "1No princípio Deus criou o céu e a terra. 26Deus disse: \"Façamos o homem à nossa imagem e segundo a nossa semelhança, para que domine sobre os peixes do mar, sobre as aves do céu, sobre os animais de toda a terra e sobre todos os répteis que rastejam sobre a terra\". 27E Deus criou o homem à sua imagem, à imagem de Deus ele o criou: homem e mulher os criou. 28E Deus os abençoou e lhes disse: \"Sede fecundos e multiplicai-vos, enchei a terra e submetei-a! Dominai sobre os peixes do mar, sobre os pássaros do céu e sobre todos os animais que se movem sobre a terra\". 29E Deus disse: \"Eis que vos entrego todas as plantas que dão semente sobre a terra e todas as árvores que produzem fruto com sua semente, para vos servirem de alimento. 30E a todos os animais da terra, e a todas as aves do céu, e a tudo o que rasteja sobre a terra e que é animado de vida, eu dou todos os vegetais para alimento\". E assim se fez. 31E Deus viu tudo quanto havia feito, e eis que tudo era muito bom. Houve uma tarde e uma manhã: sexto dia."
     },
     "psalm": {
       "reference": "Salmo 103 (104)",
+      "refrain": "Enviai o vosso Espírito, Senhor, e da terra toda a face renovai.",
       "text": "- Bendize, ó minha alma, ao Senhor! Ó meu Deus e meu Senhor, como sois grande! De majestade e esplendor vos revestis e de luz vos envolveis como num manto.\n\n- A terra vós firmastes em suas bases, ficará firme pelos séculos sem fim; os mares a cobriam como um manto, e as águas envolviam as montanhas.\n\n- Fazeis brotar em meio aos vales as nascentes que passam serpeando entre as montanhas; às suas margens vêm morar os passarinhos, entre os ramos eles erguem o seu canto.\n\n- De vossa casa, as montanhas irrigais, com vossos frutos saciais a terra inteira; fazeis crescer os verdes pastos para o gado e as plantas que são úteis para o homem.\n\n- Quão numerosas, ó Senhor, são vossas obras, e que sabedoria em todas elas! Encheu-se a terra com as vossas criaturas! Bendize, ó minha alma, ao Senhor!"
     },
     "secondReading": {
       "reference": "Gênesis 22,1-2.9-13.15-18-mais breve",
+      "intro": "Leitura do livro do Gênesis:",
       "text": "Naqueles dias, 1Deus pôs Abraão à prova. Chamando-o, disse: \"Abraão!\" E ele respondeu: \"Aqui estou\". 2E Deus disse: \"Toma teu filho único, Isaac, a quem tanto amas, dirige-te à terra de Moriá e oferece-o ali em holocausto sobre um monte que eu te indicar\". 9Chegados ao lugar indicado por Deus, Abraão ergueu um altar, colocou a lenha em cima, amarrou o filho e o pôs sobre a lenha em cima do altar. 10Depois, estendeu a mão, empunhando a faca para sacrificar o filho. 11E eis que o anjo do Senhor gritou do céu, dizendo: \"Abraão! Abraão!\" Ele respondeu: \"Aqui estou!\" 12E o anjo lhe disse: \"Não estendas a mão contra teu filho e não lhe faças nenhum mal! Agora sei que temes a Deus, pois não me recusaste teu filho único\". 13Abraão, erguendo os olhos, viu um carneiro preso num espinheiro pelos chifres; foi buscá-lo e ofereceu-o em holocausto no lugar do seu filho. 15O anjo do Senhor chamou Abraão, pela segunda vez, do céu 16e lhe disse: \"Juro por mim mesmo - oráculo do Senhor -, uma vez que agiste desse modo e não me recusaste teu filho único, 17eu te abençoarei e tornarei tão numerosa tua descendência como as estrelas do céu e como as areias da praia do mar. Teus descendentes conquistarão as cidades dos inimigos. 18Por tua descendência serão abençoadas todas as nações da terra, porque me obedeceste\"."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 24, 1-12",
+      "intro": "1No primeiro dia da semana, bem de madrugada, as mulheres foram ao túmulo de Jesus, levando os perfumes que haviam preparado. 2Elas encontraram a pedra do túmulo removida. 3Mas, ao entrar, não encontraram o corpo do Senhor Jesus 4e ficaram sem saber o que estava acontecendo. Nisso, dois homens com roupas brilhantes pararam perto delas. 5Tomadas de medo, elas olhavam para o chão, mas os dois homens disseram: \"Por que estais procurando entre os mortos aquele que está vivo? 6Ele não está aqui. Ressuscitou! Lembrai-vos do que ele vos falou, quando ainda estava na Galileia: 7'O Filho do homem deve ser entregue nas mãos dos pecadores, ser crucificado e ressuscitar ao terceiro dia'\". 8Então as mulheres se lembraram das palavras de Jesus. 9Voltaram do túmulo e anunciaram tudo isso aos onze e a todos os outros. 10Eram Maria Madalena, Joana e Maria, mãe de Tiago. Também as outras mulheres que estavam com elas contaram essas coisas aos apóstolos. 11Mas eles acharam que tudo isso era desvario e não acreditaram. 12Pedro, no entanto, levantou-se e correu ao túmulo. Olhou para dentro e viu apenas os lençóis. Então voltou para casa, admirado com o que havia acontecido.",
+      "acclamation": {
+        "title": "<b>",
+        "verse": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:"
+      },
       "text": "- Glória a Vós, Senhor"
     }
   },

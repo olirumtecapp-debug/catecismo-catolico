@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Profeta Isaías 42,1-4.6-7",
+      "intro": "Leitura do Livro do Profeta Isaías:",
       "text": "Assim fala o Senhor: 1'Eis o meu servo - eu o recebo; eis o meu eleito - nele se compraz minh'alma; pus meu espírito sobre ele,ele promoverá o julgamento das nações. 2Ele não clama nem levanta a voz, nem se faz ouvir pelas ruas. 3Não quebra uma cana rachada nem apaga um pavio que ainda fumega; mas promoverá o julgamento para obter a verdade. 4Não esmorecerá nem se deixará abater, enquanto não estabelecer a justiça na terra; os países distantes esperam seus ensinamentos.' 6'Eu, o Senhor, te chamei para a justiça e te tomei pela mão; eu te formei e te constituí como o centro de aliança do povo, luz das nações, 7para abrires os olhos dos cegos, tirar os cativos da prisão, livrar do cárcere os que vivem nas trevas."
     },
     "psalm": {
       "reference": "Salmo 28 (29)",
+      "refrain": "Que o Senhor abençoe, com a paz, o seu povo!",
       "text": "- Filhos de Deus, tributai ao Senhor, tributai-lhe a glória e o poder! Dai-lhe a glória devida ao seu nome; adorai-o com santo ornamento!\n\n- Eis a voz do Senhor sobre as águas, sua voz sobre as águas imensas! Eis a voz do Senhor com poder! Eis a voz do Senhor majestosa.\n\n- Sua voz no trovão reboando! No seu templo os fiéis bradam: 'Glória!' É o Senhor que domina os dilúvios, o Senhor reinará para sempre!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 3, 13-17",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Abriram-se os céus e fez-se ouvir a voz do Pai: Eis meu Filho muito amado; escutai-o, todos vós! (Mc 9, 7)"
+      },
       "text": "Naquele tempo, 13Jesus veio da Galileia para o rio Jordão, a fim de se encontrar com João e ser batizado por ele. 14Mas João protestou, dizendo: \"Eu preciso ser batizado por ti, e tu vens a mim?\" 15Jesus, porém, respondeu-lhe: \"Por enquanto deixa como está, porque nós devemos cumprir toda a justiça!\" E João concordou. 16Depois de ser batizado, Jesus saiu logo da água. Então o céu se abriu e Jesus viu o Espírito de Deus, descendo como pomba e vindo pousar sobre ele. 17E do céu veio uma voz que dizia: \"Este é o meu Filho amado, no qual eu pus o meu agrado\"."
     }
   },

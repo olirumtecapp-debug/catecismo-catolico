@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Samuel 6,12b-15.17-19",
+      "intro": "Leitura do Segundo Livro de Samuel:",
       "text": "Naqueles dias, 12Davi pôs-se a caminho e transportou festivamente a arca de Deus da casa de Obed-Edom para a cidade de Davi. 13A cada seis passos que davam, os que transportavam a arca do Senhor sacrificavam um boi e um carneiro. 14 Davi, cingido apenas com um efod de linho, dançava com todas as suas forças diante do Senhor. 15Davi e toda a casa de Israel conduziram a arca do Senhor, soltando gritos de júbilo e tocando trombetas. 17Introduziram a arca do Senhor e depuseram-na em seu lugar, no centro da tenda que Davi tinha armado para ela. Em seguida, ele ofereceu holocaustos e sacrifícios pacíficos na presença do Senhor. 18Assim que terminou de oferecer os holocaustos e os sacrifícios pacíficos, Davi abençoou o povo em nome do Senhor todo-poderoso. 19E distribuiu a toda a multidão de Israel, a cada um dos homens e das mulheres, um pão de forno, um bolo de tâmaras e uma torta de uvas. Depois todo o povo foi para casa."
     },
     "psalm": {
       "reference": "Salmo 23 (24)",
+      "refrain": "Dizei-nos: \"Quem é este rei da glória?\" \"É o Senhor, o valoroso, o grandioso!\"",
       "text": "- Ó portas, levantai vossos frontões! Elevai-vos bem mais alto, antigas portas, a fim de que o rei da glória possa entrar!\"\n\n- Dizei-nos: \"Quem é este rei da glória?\" \"É o Senhor, o valoroso, o onipotente, o Senhor, o poderoso nas batalhas\"\n\n- Ó portas, levantai vossos frontões! Elevai-vos bem mais alto, antigas portas, a fim de que o rei da glória possa entrar!\"\n\n- Dizei-nos: \"Quem é este rei da glória?\" \"O rei da glória é o Senhor onipotente, o rei da glória é o Senhor Deus do universo!\""
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 3, 31-35",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Graças te dou, ó Pai, Senhor do céu e da terra, pois revelaste os mistérios do teu reino aos pequeninos, escondendo-os aos doutores! (Mt 11,25)."
+      },
       "text": "Naquele tempo, 31chegaram a mãe de Jesus e seus irmãos. Eles ficaram do lado de fora e mandaram chamá-lo. 32Havia uma multidão sentada ao redor dele. Então lhe disseram: \"Tua mãe e teus irmãos estão lá fora à tua procura\". 33Ele respondeu: \"Quem é minha mãe, e quem são meus irmãos?\" 34E olhando para os que estavam sentados ao seu redor, disse: \"Aqui estão minha mãe e meus irmãos. 35Quem faz a vontade de Deus, esse é meu irmão, minha irmã e minha mãe\"."
     }
   },

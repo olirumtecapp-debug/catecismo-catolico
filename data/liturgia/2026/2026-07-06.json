@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Oséias 2,16-18.21-22",
+      "intro": "Leitura da Profecia de Oséias:",
       "text": "Assim fala o Senhor: 16Eis que eu a vou seduzir, levando-a à solidão, onde lhe falarei ao coração; 17be ela aí responderá ao compromisso, como nos dias de sua juventude, nos dias da sua vinda da terra do Egito. 18Acontecerá nesse dia, diz o Senhor, que ela me chamará 'Meu marido', e não mais chamará 'Meu Baal. 21Eu te desposarei para sempre; eu te desposarei conforme as sanções da justiça e conforme as práticas da misericórdia. 22Eu te desposarei para manter fidelidade e tu conhecerás o Senhor."
     },
     "psalm": {
       "reference": "Salmo 144 (145)",
+      "refrain": "- Jesus Cristo salvador destruiu o mal e a morte; fez brilhar, pelo evangelho, a luz e a vida imperecível (2Tm 1,10).",
       "text": "- Todos os dias haverei de bendizer-vos, hei de louvar o vosso nome para sempre. Grande é o Senhor e muito digno de louvores, e ninguém pode medir sua grandeza.\n\n- Uma idade conta à outra vossas obras e publica os vossos feitos poderosos; proclamam todos o esplendor de vossa glória e divulgam vossas obras portentosas!\n\n- Narram todos vossas obras poderosas, e de vossa imensidade todos falam. Eles recordam vosso amor tão grandioso\n\nR: Misericórdia e piedade é o Senhor.\n\nR: Misericórdia e piedade é o Senhor.\n\nEvangelho de Jesus Cristo segundo São Mateus 9, 18-26\n\n- Aleluia, Aleluia, Aleluia!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "intro": "<b>",
+      "acclamation": {
+        "title": "Enquanto Jesus estava falando, um chefe aproximou-se, inclinou-se profundamente diante dele, e disse: 'Minha filha acaba de morrer. Mas vem, impõe tua mão sobre ela e ela viverá.' 19Jesus levantou-se e o seguiu, junto com os seus discípulos. 20Nisto, uma mulher que sofria de hemorragia, há doze anos, veio por trás dele e tocou a barra do seu manto. 21Ela pensava consigo: 'Se eu conseguir ao menos tocar no manto dele, ficarei curada.' 22Jesus voltou-se e, ao vê-la, disse: 'Coragem, filha! A tua fé te salvou.' E a mulher ficou curada a partir daquele instante. 23Chegando à casa do chefe, Jesus viu os tocadores de flauta e a multidão alvoroçada, 24e disse: 'Retirai-vos, porque a menina não morreu, mas está dormindo.' E começaram a caçoar dele. 25Quando a multidão foi afastada, Jesus entrou, tomou a menina pela mão, e ela se levantou. 26Essa notícia espalhou-se por toda aquela região.",
+        "verse": "Palavra da Salvação"
+      },
       "text": "</b>"
     }
   },

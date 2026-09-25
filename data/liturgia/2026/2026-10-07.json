@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Gálatas 2,1-2.7-14",
+      "intro": "Leitura da Carta de São Paulo aos Gálatas:",
       "text": "Irmãos: 1Quatorze anos mais tarde, subi, de novo, a Jerusalém, com Barnabé, levando também Tito comigo. 2Fui lá, por causa de uma revelação. Expus-lhes o evangelho que tenho pregado entre os pagãos, o que fiz em particular aos líderes da Igreja, para não acontecer estivesse eu correndo em vão ou tivesse corrido em vão. 7Pelo contrário, viram que a evangelização dos pagãos foi confiada a mim, como a Pedro foi confiada a evangelização dos judeus. 8De fato, aquele que preparou Pedro para o apostolado entre os judeus preparou-me também a mim para o apostolado entre os pagãos. 9Reconhecendo a graça que me foi dada, Tiago, Cefas e João, considerados as colunas da Igreja, deram-nos a mão, a mim e a Barnabé, como sinal de nossa comunhão recíproca. Assim ficou confirmado que nós iríamos aos pagãos e eles iriam aos judeus. 10O que nos recomendaram foi somente que nos lembrassemos dos pobres. E isso procurei fazer sempre, com toda a solicitude. 11Mas, quando Cefas chegou a Antioquia, opus-me a ele abertamente, pois ele merecia censura. 12Com efeito, antes que chegassem alguns da comunidade de Tiago, ele tomava refeição com os gentios. Mas, depois que eles chegaram, Cefas começou a esquivar-se e a afastar-se, por medo dos circuncidados. 13E os demais judeus acompanharam-no nessa dissimulação, a ponto de até Barnabé se deixar arrastar pela hipocrisia deles. 14Quando vi que não estavam procedendo direito, de acordo com a verdade do Evangelho, disse a Cefas, diante de todos: 'Se tu, que és judeu, vives como pagão e não como judeu, como podes obrigar os pagãos a viverem como judeus?"
     },
     "psalm": {
       "reference": "Salmo 116 (117)",
+      "refrain": "Ide, por todo o mundo, e a todos pregai o Evangelho.",
       "text": "- Cantai louvores ao Senhor, todas as gentes, povos todos, festejai-o!\n\n- Pois comprovado é seu amor para conosco, para sempre ele é fiel!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 1-4",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Recebestes um espírito de adoção, no qual clamamos Aba! Pai! (Rm 8,15)."
+      },
       "text": "1Um dia, Jesus estava rezando num certo lugar. Quando terminou, um de seus discípulos pediu-lhe: 'Senhor, ensina-nos a rezar, como também João ensinou a seus discípulos.' 2Jesus respondeu: 'Quando rezardes, dizei: 'Pai, santificado seja o teu nome. Venha o teu Reino. 3Dá-nos a cada dia o pão de que precisamos, 4e perdoa-nos os nossos pecados, pois nós também perdoamos a todos os nossos devedores; e não nos deixes cair em tentação'.'"
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Ezequiel 36,23-28",
+      "intro": "Leitura da Profecia de Ezequiel:",
       "text": "Assim fala o Senhor: 23Vou mostrar a santidade do meu grande nome, que profanastes no meio das nações. As nações saberão que eu sou o Senhor. - oráculo do Senhor Deus - quando eu manifestar minha santidade à vista delas por meio de vós. 24Eu vos tirarei do meio das nações, vos reunirei de todos os países, e vos conduzirei para a vossa terra. 25Derramarei sobre vós uma água pura, e sereis purificados. Eu vos purificarei de todas as impurezas e de todos os ídolos. 26Eu vos darei um coração novo e porei um espírito novo dentro de vós. Arrancarei do vosso corpo o coração de pedra e vos darei um coração de carne; 27porei o meu espírito dentro de vós e farei com que sigais a minha lei e cuideis de observar os meus mandamentos. 28Habitareis no país que dei a vossos pais. Sereis o meu povo e eu serei o vosso Deus."
     },
     "psalm": {
       "reference": "Salmo 50 (51)",
+      "refrain": "Eu hei de derramar sobre vós uma água pura, e de vossas imundícies sereis purificados.",
       "text": "- Criai em mim um coração que seja puro, dai-me de novo um espírito decidido. Ó Senhor, não me afasteis de vossa face, nem retireis de mim o vosso Santo Espírito!\n\n- Dai-me de novo a alegria de ser salvo e confirmai-me com espírito generoso! Ensinarei vosso caminho aos pecadores, e para vós se voltarão os transviados.\n\n- Pois não são de vosso agrado os sacrifícios, e, se oferto um holocausto, o rejeitais. Meu sacrifício é minha alma penitente, não desprezeis um coração arrependido!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 22,1-14",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Oxalá ouvísseis hoje a sua voz: Não fecheis os corações como em Meriba! (Sl 94,8)"
+      },
       "text": "Naquele tempo: Jesus voltou a falar em parábolas aos sumos sacerdotes e aos anciãos do povo, 2dizendo: 'O Reino dos Céus é como a história do rei que preparou a festa de casamento do seu filho. 3E mandou os seus empregados para chamar os convidados para a festa, mas estes não quiseram vir. 4O rei mandou outros empregados, dizendo: `Dizei aos convidados: já preparei o banquete, os bois e os animais cevados já foram abatidos e tudo está pronto. Vinde para a festa!' 5Mas os convidados não deram a menor atenção: um foi para o seu campo, outro para os seus negócios, 6outros agarraram os empregados, bateram neles e os mataram. 7O rei ficou indignado e mandou suas tropas para matar aqueles assassinos e incendiar a cidade deles. 8Em seguida, o rei disse aos empregados: `A festa de casamento está pronta, mas os convidados não foram dignos dela. 9Portanto, ide até às encruzilhadas dos caminhos e convidai para a festa todos os que encontrardes.' 10Então os empregados saíram pelos caminhos e reuniram todos os que encontraram, maus e bons. E a sala da festa ficou cheia de convidados. 11Quando o rei entrou para ver os convidados, observou ali um homem que não estava usando traje de festa 12e perguntou-lhe: `Amigo, como entraste aqui sem o traje de festa?' Mas o homem nada respondeu. 13Então o rei disse aos que serviam: `Amarrai os pés e as mãos desse homem e jogai-o fora, na escuridão! Ali haverá choro e ranger de dentes'. 14Por que muitos são chamados, e poucos são escolhidos.'"
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Zacarias 2,14-17",
+      "intro": "Leitura da profecia de Zacarias:",
       "text": "14\"Rejubila, alegra-te, cidade de Sião, eis que venho para habitar no meio de ti, diz o Senhor. 15Muitas nações se aproximarão do Senhor naquele dia e serão o seu povo. Habitarei no meio de ti, e saberás que o Senhor dos exércitos me enviou a ti. 16O Senhor entrará em posse de Judá, como sua porção na terra santa, e escolherá de novo Jerusalém. 17Emudeça todo mortal diante do Senhor, ele acaba de levantar-se de sua santa habitação\"."
     },
     "psalm": {
       "reference": "Salmo (Lc 1)",
+      "refrain": "O Poderoso fez por mim maravilhas e santo é o seu nome.",
       "text": "- A minha alma engrandece ao Senhor, e se alegrou o meu espírito em Deus, meu salvador.\n\n- Pois ele viu a pequenez de sua serva, desde agora as gerações hão de chamar-me de bendita. O Poderoso fez por mim maravilhas e santo é o seu nome!\n\n- Seu amor, de geração em geração, chega a todos os que o respeitam. Demonstrou o poder de seu braço, dispersou os orgulhosos.\n\n- Derrubou os poderosos de seus tronos e os humildes exaltou. De bens saciou os famintos e despediu, sem nada, os ricos.\n\n- Acolheu Israel, seu servidor, fiel ao seu amor, como havia prometido aos nossos pais, em favor de Abraão e de seus filhos para sempre."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 12, 46-50",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Feliz quem ouve e observa a Palavra de Deus! (Lc 11,28)."
+      },
       "text": "Naquele tempo, 46enquanto Jesus estava falando às multidões, sua mãe e seus irmãos ficaram do lado de fora, procurando falar com ele. 47Alguém disse a Jesus: \"Olha! Tua mãe e teus irmãos estão aí fora e querem falar contigo\". 48Jesus perguntou àquele que tinha falado: \"Quem é minha mãe e quem são meus irmãos?\" 49E, estendendo a mão para os discípulos, Jesus disse: \"Eis minha mãe e meus irmãos. 50Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe\"."
     }
   },

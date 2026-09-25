@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Gálatas 1,13-24",
+      "intro": "Leitura da Carta de São Paulo aos Gálatas:",
       "text": "Irmãos: 13Certamente ouvistes falar como foi outrora a minha conduta no judaísmo, com que excessos perseguia e devastava a Igreja de Deus 14e como progredia no judaísmo mais do que muitos judeus de minha idade, mostrando-me extremamente zeloso das tradições paternas. 15Quando, porém, aquele que me separou desde o ventre materno e me chamou por sua graça 16se dignou revelar-me o seu Filho, para que eu o pregasse entre os pagãos, não consultei carne nem sangue 17nem subi, logo, a Jerusalém para estar com os que eram apóstolos antes de mim. Pelo contrário, parti para a Arábia e, depois, voltei ainda a Damasco. 18Três anos mais tarde, fui a Jerusalém para conhecer Cefas e fiquei com ele quinze dias. 19E não estive com nenhum outro apóstolo, a não ser Tiago, o irmão do Senhor. 20Escrevendo estas coisas, afirmo diante de Deus que não estou mentindo. 21Depois, fui para as regiões da Síria e da Cilícia. 22Ainda não era pessoalmente conhecido das igrejas da Judéia que estão em Cristo. 23Apenas tinham ouvido dizer que 'aquele que, antes, nos perseguia, está agora pregando a fé que, antes, procurava destruir'. 24E glorificavam a Deus por minha causa."
     },
     "psalm": {
       "reference": "Salmo 138 (139)",
+      "refrain": "Conduzi-me no caminho para a vida, ó Senhor!",
       "text": "- Senhor, vós me sondais e conheceis, sabeis quando me sento ou me levanto; de longe penetrais meus pensamentos, percebeis quando me deito e quando eu ando, os meus caminhos vos são todos conhecidos.\n\n- Fostes vós que me formastes as entranhas, e no seio de minha mãe vós me tecestes. Eu vos louvo e vos dou graças, ó Senhor, porque de modo admirável me formastes! Que prodígio e maravilha as vossas obras!\n\n- Até o mais íntimo, Senhor me conheceis; nenhuma sequer de minhas fibras ignoráveis; quando eu era modelado ocultamente, era formado nas entranhas subterrâneas."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 10, 38-42",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Feliz quem ouve e observa a Palavra de Deus! (Lc 11,28)."
+      },
       "text": "Naquele tempo: 38Jesus entrou num povoado, e certa mulher, de nome Marta, recebeu-o em sua casa. 39Sua irmã, chamada Maria, sentou-se aos pés do Senhor, e escutava a sua palavra. 40Marta, porém, estava ocupada com muitos afazeres. Ela aproximou-se e disse: 'Senhor, não te importas que minha irmó me deixe sozinha, com todo o serviço? Manda que ela me venha ajudar!' 41O Senhor, porém, lhe respondeu: 'Marta, Marta! Tu te preocupas e andas agitada por muitas coisas. 42Porém, uma só coisa é necessária. Maria escolheu a melhor parte e esta não lhe será tirada.'"
     }
   },

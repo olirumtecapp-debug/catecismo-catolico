@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Reis 11,29-32; 12,19",
+      "intro": "Leitura do primeiro livro dos Reis:",
       "text": "29Aconteceu, naquele tempo, que, tendo Jeroboão saído de Jerusalém, veio ao seu encontro o profeta Aías, de Silo, coberto com um manto novo. Os dois achavam-se sós no campo. 30Aías, tomando o manto novo que vestia, rasgou-o em doze pedaços 31e disse a Jeroboão: \"Toma para ti dez pedaços. Pois assim fala o Senhor, Deus de Israel: Eis que vou arrancar o reino das mãos de Salomão e te darei dez tribos. 32Mas ele ficará com uma tribo, por consideração para com meu servo Davi e para com Jerusalém, cidade que escolhi dentre todas as tribos de Israel\". 12,19Israel rebelou-se contra a casa de Davi até o dia de hoje."
     },
     "psalm": {
       "reference": "Salmo 80 (81)",
+      "refrain": "Ouve, meu povo, porque eu sou o teu Deus!",
       "text": "- Em teu meio não exista um deus estranho, nem adores a um deus desconhecido! Porque eu sou o teu Deus e teu Senhor, que da terra do Egito te arranquei.\n\n- Mas meu povo não ouviu a minha voz, Israel não quis saber de obedecer-me. Deixei, então, que eles seguissem seus caprichos, abandonei-os ao seu duro coração.\n\n- Quem me dera que meu povo me escutasse! Que Israel andasse sempre em meus caminhos! Seus inimigos, sem demora, humilharia e voltaria minha mão contra o opressor."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 7, 31-37",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Abri-nos, ó Senhor, o coração para ouvirmos a palavra de Jesus! (At 16,14)."
+      },
       "text": "Naquele tempo, 31Jesus saiu de novo da região de Tiro, passou por Sidônia e continuou até o mar da Galileia, atravessando a região da Decápole. 32Trouxeram então um homem surdo, que falava com dificuldade, e pediram que Jesus lhe impusesse a mão. 33Jesus afastou-se com o homem para fora da multidão; em seguida, colocou os dedos nos seus ouvidos, cuspiu e, com a saliva, tocou a língua dele. 34Olhando para o céu, suspirou e disse: \"Efatá!\", que quer dizer: \"Abre-te!\" 35Imediatamente seus ouvidos se abriram, sua língua se soltou e ele começou a falar sem dificuldade. 36Jesus recomendou com insistência que não contassem a ninguém. Mas, quanto mais ele recomendava, mais eles divulgavam. 37Muito impressionados, diziam: \"Ele tem feito bem todas as coisas: aos surdos faz ouvir e aos mudos falar\"."
     }
   },

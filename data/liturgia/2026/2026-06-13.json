@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Reis 19,19-21",
+      "intro": "Leitura do primeiro livro dos Reis:",
       "text": "Naqueles dias: 19O profeta Elias partiu dali e encontrou Eliseu, filho de Safat, lavrando a terra com doze juntas de bois; e ele mesmo conduzia a última. Elias, ao passar perto de Eliseu, lançou sobre ele o seu manto. 20Então Eliseu deixou os bois e correu atrás de Elias, dizendo: 'Deixa-me primeiro ir beijar meu pai e minha mãe, depois te seguirei'. Elias respondeu: 'Vai e volta! Pois o que te fiz eu? 21Ele retirou-se, tomou a junta de bois e os imolou. Com a madeira do arado e da canga assou a carne e deu de comer à sua gente. Depois levantou-se, seguiu Elias e pôs-se ao seu serviço."
     },
     "psalm": {
       "reference": "Salmo 15 (16)",
+      "refrain": "O Senhor é a porção da minha herança.",
       "text": "- Guardai-me, ó Deus, porque em vós me refugio! Digo ao Senhor:'Somente vós sois meu Senhor. Ó Senhor, sois minha herança e minha taça, meu destino está seguro em vossas Mãos!\n\n- Eu bendigo o Senhor, que me aconselha, e até de noite me adverte o coração. Tenho sempre o Senhor ante meus olhos, pois se o tenho a meu lado não vacilo.\n\n- Eis por que meu coração está em festa, minha alma rejubila de alegria, e até meu corpo no repouso está tranqüilo; pois não haveis de me deixar entregue à morte, nem vosso amigo conhecer a corrupção."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 5, 33-37",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Inclinai meu coração às vossas advertências e dai-me vossa lei como um presente vantajoso! (Sl 118,36.29)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus díscipulos: 33Vós ouvistes o que foi dito aos antigos: 'Não jurarás falso', mas'cumprirás os teus juramentos feitos ao Senhor'. 34Eu, porém, vos digo: Não jureis de modo algum: nem pelo céu, porque é o trono de Deus; 35nem pela terra, porque é o suporte onde apóia os seus pés; nem por Jerusalém, porque é a cidade do Grande Rei. 36Não jures tão pouco pela tua cabeça, porque tu não podes tornar branco ou preto um só fio de cabelo. 37Seja o vosso'sim':'Sim', e o vosso'nóo':'Não'. Tudo o que for além disso vem do Maligno."
     }
   },

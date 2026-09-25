@@ -260,6 +260,23 @@ async function parseLirio(html,date){
     return clean(s);
   }
 
+  const acclSection=section('ACLAMAÇÃO AO EVANGELHO',['EVANGELHO']);
+  let lirioAccl=null;
+  if(acclSection){
+    const aMatch=acclSection.match(/(?:℟|R\.)\s*(Aleluia[^\n℣]+)(?:[\s\S]*?[℣V]\.?\s*([^\n]+))?/i);
+    if(aMatch){
+      lirioAccl={
+        title: clean(aMatch[1] || 'Aleluia, Aleluia, Aleluia.'),
+        verse: clean(aMatch[2] || '')
+      };
+    }
+  }
+  let lirioRefrain='';
+  const rMatch=psalm.match(/℟\.\s*([^0-9\n*†\r]+)/i) || psalm.match(/(?:^|\n)\s*(?:℟|R\.)\s*([^0-9\n*†\r]+)/i);
+  if(rMatch){
+    lirioRefrain=clean(rMatch[1]).replace(/^[—–-]\s*/, '').replace(/^(?:℟\.?|R\s*[:.\-])\s*/i, '').trim();
+  }
+
   const gospelRef=refs[hasSecond?3:2]||'';
   return {
     date,
@@ -269,9 +286,9 @@ async function parseLirio(html,date){
     color:clean(colorMatch?.[1]||''),
     readings:{
       firstReading:{reference:refs[0]||'',text:stripSection(first,'PRIMEIRA LEITURA')},
-      psalm:{reference:refs[1]||'',text:stripSection(psalm,'SALMO RESPONSORIAL')},
+      psalm:{reference:refs[1]||'',refrain:lirioRefrain,text:stripSection(psalm,'SALMO RESPONSORIAL')},
       secondReading:hasSecond ? {reference:refs[2]||'',text:stripSection(second,'SEGUNDA LEITURA')} : null,
-      gospel:{reference:gospelRef,text:stripSection(gospel,'EVANGELHO')}
+      gospel:{reference:gospelRef,acclamation:lirioAccl,text:stripSection(gospel,'EVANGELHO')}
     },
     extra:[]
   };
@@ -336,6 +353,9 @@ function buildFromApi(j,date){
     const m=String(v||'').match(/:\s*([^:]+)$/);
     return m ? normalizeRef(m[1]) : '';
   };
+  const cleanLeadingHyphen = v => clean(v || '').replace(/^[—–-]\s*/, '').trim();
+  const cleanRefrain = v => clean(v || '').replace(/^(?:℟\.?|R\s*[:.\-])\s*/i, '').trim();
+
   const data = {
     date,
     source:'api-liturgia-diaria / Sagrada Liturgia',
@@ -343,10 +363,30 @@ function buildFromApi(j,date){
     heading:clean(String(t.entry_title||'').replace(/<[^>]+>/g,' ')),
     color:clean(t.color||''),
     readings:{
-      firstReading:{reference:refFromTitle(r.first_reading?.title), text:normalizeText(r.first_reading?.text)},
-      psalm:{reference:clean(r.psalm?.title||''), text:(r.psalm?.content_psalm||[]).map(normalizeText).join('\n\n')},
-      secondReading:r.second_reading ? {reference:refFromTitle(r.second_reading?.title), text:normalizeText(r.second_reading?.text)} : null,
-      gospel:{reference:clean(r.gospel?.head_title||''), text:normalizeText(r.gospel?.text)}
+      firstReading:{
+        reference:refFromTitle(r.first_reading?.title),
+        intro:clean(r.first_reading?.head || ''),
+        text:normalizeText(r.first_reading?.text)
+      },
+      psalm:{
+        reference:clean(r.psalm?.title||''),
+        refrain:cleanRefrain(r.psalm?.response || ''),
+        text:(r.psalm?.content_psalm||[]).map(normalizeText).join('\n\n')
+      },
+      secondReading:r.second_reading ? {
+        reference:refFromTitle(r.second_reading?.title),
+        intro:clean(r.second_reading?.head || ''),
+        text:normalizeText(r.second_reading?.text)
+      } : null,
+      gospel:{
+        reference:clean(r.gospel?.head_title||''),
+        intro:clean(r.gospel?.title || ''),
+        acclamation:(r.gospel?.head_response || r.gospel?.head) ? {
+          title: cleanLeadingHyphen(r.gospel?.head_response || 'Aleluia, Aleluia, Aleluia.'),
+          verse: cleanLeadingHyphen(r.gospel?.head || '').replace(/;$/, '.')
+        } : null,
+        text:normalizeText(r.gospel?.text)
+      }
     },
     extra:Array.isArray(t.extra)?t.extra.map(x=>clean(String(x))).filter(Boolean):[]
   };
@@ -370,27 +410,36 @@ async function main(){
   await fs.mkdir(OUT,{recursive:true});
   const dates=onlyDate?[onlyDate]:listDates(y,endYear);
   let ok=0, fail=0, api=0, osa=0, lirio=0;
-  for(const date of dates){
-    try{
-      const data=await loadDate(date);
-      const outPath=path.join(OUT, date.slice(0,4), `${date}.json`);
-      await fs.mkdir(path.dirname(outPath),{recursive:true});
-      await fs.writeFile(outPath, JSON.stringify(data,null,2),'utf8');
-      ok++;
-      if(data.source.startsWith('api-')) api++;
-      else if(data.source.startsWith('Lírio')) lirio++;
-      else osa++;
-      console.log(`OK ${date} (${data.source})`);
-    }catch(e){
-      fail++;
-      const msg=e.message;
-      console.log(`FALHOU ${date}: ${msg}`);
-      await fs.mkdir(path.join(OUT,date.slice(0,4)),{recursive:true});
-      await fs.writeFile(path.join(OUT, date.slice(0,4), `debug-${date}.json`), JSON.stringify({
-        date, error:msg, generatedAt:new Date().toISOString()
-      },null,2),'utf8');
+  const CONCURRENCY = onlyDate ? 1 : 6;
+  let cursor = 0;
+
+  async function worker(){
+    while(cursor < dates.length){
+      const date = dates[cursor++];
+      try{
+        const data=await loadDate(date);
+        const outPath=path.join(OUT, date.slice(0,4), `${date}.json`);
+        await fs.mkdir(path.dirname(outPath),{recursive:true});
+        await fs.writeFile(outPath, JSON.stringify(data,null,2),'utf8');
+        ok++;
+        if(data.source.startsWith('api-')) api++;
+        else if(data.source.startsWith('Lírio')) lirio++;
+        else osa++;
+        console.log(`OK ${date} (${data.source}) [${ok + fail}/${dates.length}]`);
+      }catch(e){
+        fail++;
+        const msg=e.message;
+        console.log(`FALHOU ${date}: ${msg}`);
+        await fs.mkdir(path.join(OUT,date.slice(0,4)),{recursive:true});
+        await fs.writeFile(path.join(OUT, date.slice(0,4), `debug-${date}.json`), JSON.stringify({
+          date, error:msg, generatedAt:new Date().toISOString()
+        },null,2),'utf8');
+      }
     }
   }
+
+  await Promise.all(Array.from({length: CONCURRENCY}, () => worker()));
+
   console.log(`\nConcluído: ${ok} registros OK; ${fail} falhas.`);
   console.log(`API: ${api}; Lírio: ${lirio}; OSA: ${osa}.`);
   if(onlyDate) console.log(`Modo teste: ${onlyDate}`);

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Ezequiel 37,1-14",
+      "intro": "Leitura da Profecia de Ezequiel:",
       "text": "Naqueles dias: 1A mão do Senhor estava sobre mim e por seu espírito ele me levou para fora e me deixou no meio de uma planície cheia de ossos 2e me fez andar no meio deles em todas as direções. Havia muitíssimos ossos na planície e estavam ressequidos. 3Ele me perguntou: 'Filho do homem, será que estes ossos podem voltar à vida?' E eu respondi: 'Senhor Deus, só tu o sabes'. 4E ele me disse: 'Profetiza sobre estes ossos e dize: Ossos ressequidos, escutai a palavra do Senhor! 5Assim diz o Senhor Deus a estes ossos: Eu mesmo vou fazer entrar um espírito em vós e voltareis à vida. 6Porei nervos em vós, farei crescer carne e estenderei a pele por cima. Porei em vós um espírito, para que possais voltar à vida. Assim sabereis que eu sou o Senhor'. 7Profetizei como me foi ordenado. Enquanto eu profetizava, ouviu-se primeiro um rumor, e logo um estrondo, quando os ossos se aproximaram uns dos outros. 8Olhei e vi nervos e carne crescendo sobre os ossos e, por cima, a pele que se estendia. Mas não tinham nenhum sopro de vida. 9Ele me disse: 'Profetiza para o espírito, profetiza, filho do homem! Dirás ao espírito: Assim diz o Senhor Deus: Vem dos quatro ventos, ó espírito, vem soprar sobre estes mortos, para que eles possam voltar à vida'. 10Profetizei como me foi ordenado, e o espírito entrou neles. Eles voltaram à vida e puseram-se de pé: era uma imensa multidão! 11Então ele me disse: 'Filho do homem, estes ossos são toda a casa de Israel. É isto que eles dizem: 'Nossos ossos estão secos, nossa esperança acabou, estamos perdidos! 12Por isso, profetiza e dize-lhes: Assim fala o Senhor Deus: Ó meu povo, vou abrir as vossas sepulturas e conduzir-vos para a terra de Israel; 13e quando eu abrir as vossas sepulturas e vos fizer sair delas, sabereis que eu sou o Senhor. 14Porei em vós o meu espírito, para que vivais e vos colocarei em vossa terra. Então sabereis que eu, o Senhor, digo e faço - oráculo do Senhor'."
     },
     "psalm": {
       "reference": "Salmo 106 (107)",
+      "refrain": "Dai graças ao Senhor, porque ele é bom, porque eterna é a sua misericórdia!",
       "text": "- Que o digam os libertos do Senhor, que da mão dos opressores os salvou e de todas as nações os reuniu, do Oriente, Ocidente, Norte e Sul.\n\n- Uns vagavam, no deserto, extraviados, sem acharem o caminho da cidade. Sofriam fome e também sofriam sede, e sua vida ia aos poucos definhando.\n\n- Mas gritaram ao Senhor na aflição, e ele os libertou daquela angústia. Pelo caminho bem seguro os conduziu para chegarem à cidade onde morar.\n\n- Agradeçam ao Senhor por seu amor e por suas maravilhas entre os homens! Deu de beber aos que sofriam tanta sede e os famintos saciou com muitos bens!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 22, 34-40",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Fazei-me conhecer vossa estrada, vossa verdade me oriente e me conduza! (24,4s)"
+      },
       "text": "Naquele tempo: 34Os fariseus ouviram dizer que Jesus tinha feito calar os saduceus. Então eles se reuniram em grupo, 35e um deles perguntou a Jesus, para experimentá-lo: 36'Mestre, qual é o maior mandamento da Lei?' 37Jesus respondeu: '`Amarás o Senhor teu Deus de todo o teu coração, de toda a tua alma, e de todo o teu entendimento!' 38Esse é o maior e o primeiro mandamento. 39O segundo é semelhante a esse: `Amarás ao teu próximo como a ti mesmo'. 40Toda a Lei e os profetas dependem desses dois mandamentos."
     }
   },

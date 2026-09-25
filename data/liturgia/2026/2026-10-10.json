@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Gálatas 3,22-29",
+      "intro": "Leitura da Carta de São Paulo aos Gálatas:",
       "text": "Irmãos: 22A Escritura pôs todos e tudo sob o jugo do pecado, a fim de que, pela fé em Jesus Cristo, se cumprisse a promessa em favor dos que crêem. 23Antes que se inaugurasse o regime da fé, nós éramos guardados, como prisioneiros, sob o jugo da Lei. Éramos guardados para o regime da fé, que estava para ser revelado. 24Assim, a Lei foi como um pedagogo que nos conduziu até Cristo, para que fôssemos justificados pela fé. 25Mas, uma vez inaugurado o regime da fé, já não estamos na dependência desse pedagogo. 26Com efeito, vós todos sois filhos de Deus pela fé em Jesus Cristo. 27Vós todos que fostes batizados em Cristo vos revestistes de Cristo. 28O que vale não é mais ser judeu nem grego, nem escravo nem livre, nem homem nem mulher, pois todos vós sois um só, em Jesus Cristo. 29Sendo de Cristo, sois então descendência de Abraão, herdeiros segundo a promessa."
     },
     "psalm": {
       "reference": "Salmo 104 (105)",
+      "refrain": "O Senhor se lembra sempre da Aliança!",
       "text": "- Cantai, entoai salmos para ele, publicai todas as suas maravilhas! Gloriai-vos em seu nome que é santo, exulte o coração que busca a Deus!\n\n- Procurai o Senhor Deus e seu poder, buscai constantemente a sua face! Lembrai as maravilhas que ele fez, seus prodígios e as palavras de seus lábios!\n\n- Descendentes de Abraão, seu servidor, e filhos de Jacó, seu escolhido, ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 27-28",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Feliz quem ouve e observa a Palavra de Deus! (Lc 11,28)."
+      },
       "text": "Naquele tempo: 27Enquanto Jesus falava, uma mulher levantou a voz no meio da multidão e lhe disse: 'Feliz o ventre que te trouxe e os seios que te amamentaram.' 28Jesus respondeu: 'Muito mais felizes são aqueles que ouvem a palavra de Deus e a põem em prática.'"
     }
   },

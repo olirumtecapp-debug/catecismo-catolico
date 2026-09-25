@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Êxodo 34,4-6.8-9",
+      "intro": "Leitura do Livro do Êxodo:",
       "text": "Naqueles dias: 4Moisés levantou-se, quando ainda fazia noite, e subiu ao monte Sinai, como o Senhor lhe havia mandado, levando consigo as duas tábuas de pedra. 5O Senhor desceu na nuvem e permaneceu com Moisés, e este invocou o nome do Senhor. 6Enquanto o Senhor passava diante dele Moisés gritou: 'Senhor, Senhor! Deus misericordioso e clemente, paciente, rico em bondade e fiel'. 8Imediatamente, Moisés curvou-se até o chão 9e, prostrado por terra, disse: 'Senhor, se é verdade que gozo de teu favor, peço-te, caminha conosco; embora este seja um povo de cabeça dura, perdoa nossas culpas e nossos pecados e acolhe-nos como propriedade tua'."
     },
     "psalm": {
       "reference": "Salmo Dn 3",
+      "refrain": "A vós louvor, honra e glória eternamente!",
       "text": "- Sede bendito, Senhor Deus de nossos pais.\n\n- Sede bendito, nome santo e glorioso.\n\n- No templo santo onde refulge a vossa glória.\n\n- E em vosso trono de poder vitorioso.\n\n- Sede bendito, que sondais as profundezas\n\n- E superior aos querubins vos assentais.\n\n- Sede bendito no celeste firmamento."
     },
     "secondReading": {
       "reference": "Coríntios 13,11-13",
+      "intro": "Leitura da Segunda Carta de São Paulo aos Coríntios:",
       "text": "11Irmãos: Alegrai-vos, trabalhai no vosso aperfeiçoamento, encorajai-vos, cultivai a concórdia, vivei em paz, e o Deus do amor e da paz estará convosco. 12Saudai-vos uns aos outros com o beijo santo. Todos os santos vos saúdam. 13A graça do Senhor Jesus Cristo, o amor de Deus e a comunhão do Espírito Santo estejam com todos vós."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 3, 16-18",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Glória ao Pai e ao Filho e ao Espírito divino, ao Deus que é, que era e que vem, pelos séculos. Amém (AP 1,8)."
+      },
       "text": "16Deus amou tanto o mundo, que deu o seu Filho unigênito, para que não morra todo o que nele crer, mas tenha a vida eterna. 17De fato, Deus não enviou o seu Filho ao mundo para condenar o mundo, mas para que o mundo seja salvo por ele. 18Quem nele crê, não é condenado, mas quem não crê, já está condenado, porque não acreditou no nome do Filho unigênito."
     }
   },

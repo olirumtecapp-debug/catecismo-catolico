@@ -11,11 +11,13 @@
     },
     "psalm": {
       "reference": "Sl 1,1-2.3.4 e 6 (R. Sl 39,5a)",
+      "refrain": "É feliz quem a Deus se confia!",
       "text": "Sl 1,1-2.3.4 e 6 (R. Sl 39,5a) ℟. É feliz quem a Deus se confia! 1 Feliz é todo aquele que não anda * conforme os conselhos dos perversos; que não entra no caminho dos malvados * nem junto aos zombadores vai sentar-se, 2 mas encontra seu prazer na lei de Deus * e a medita, dia e noite, sem cessar. 3 Eis que ele é semelhante a uma árvore * que à beira da torrente está plantada; ela sempre dá seus frutos a seu tempo, † e jamais as suas folhas vão murchar. * Eis que tudo o que ele faz vai prosperar. 4 Mas bem outra é a sorte dos perversos. † Ao contrário, são iguais à palha seca * espalhada e dispersada pelo vento. 6 Pois Deus vigia o caminho dos eleitos, * mas a estrada dos malvados leva à morte."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Lc 9,22-25",
+      "acclamation": null,
       "text": "Mt 4,17 ℟. Glória a vós, Senhor Jesus, primogênito dentre os mortos! ℣. Convertei-vos, nos diz o Senhor, está próximo o Reino de Deus! EVANGELHO Quem perder a sua vida por causa de mim, esse a salvará. Proclamação do Evangelho de Jesus Cristo segundo Lucas 9,22-25 Naquele tempo disse Jesus aos seus discípulos: 22 \"O Filho do Homem deve sofrer muito, ser rejeitado pelos anciãos, pelos sumos sacerdotes e doutores da Lei, deve ser morto e ressuscitar no terceiro dia\". 23 Depois Jesus disse a todos: \"Se alguém me quer seguir, renuncie a si mesmo, tome sua cruz cada dia, e siga-me. 24 Pois quem quiser salvar a sua vida, vai perdê-la; e quem perder a sua vida por causa de mim, esse a salvará. 25 Com efeito, de que adianta a um homem ganhar o mundo inteiro se se perde e se destrói a si mesmo?\" ℣."
     }
   },

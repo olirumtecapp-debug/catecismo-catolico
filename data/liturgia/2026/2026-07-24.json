@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Jeremias 3,14-17",
+      "intro": "Leitura do livro do profeta Jeremias:",
       "text": "14\"Convertei-vos, filhos, que vos tendes afastado de mim, diz o Senhor, pois eu sou vosso Senhor; vou tomar-vos, um de uma cidade e dois de uma família, e vos reconduzirei a Sião; 15eu vos darei pastores segundo o meu coração, que vos apascentarão com clarividência e sabedoria. 16Quando vos tiverdes multiplicado e crescerdes na terra, naqueles dias, diz o Senhor, não se falará mais da 'arca da aliança do Senhor'; ela não virá à memória de ninguém, não se lembrarão dela, não a procurarão nem fabricarão outra. 17Naquele tempo, chamarão Jerusalém 'Trono do Senhor', em torno dela se reunirão, em nome do Senhor, todos os povos; eles não se deixarão mais levar pelas inclinações de um coração mau\"."
     },
     "psalm": {
       "reference": "Salmo Jr 31",
+      "refrain": "O Senhor nos guardará qual pastor a seu rebanho.",
       "text": "- Ouvi, nações, a Palavra do Senhor e anunciai-a nas ilhas mais distantes: \"Quem dispersou Israel vai congregá-lo e o guardará qual pastor a seu rebanho!\"\n\n- Pois, na verdade, o Senhor remiu Jacó e o libertou do poder do prepotente. Voltarão para o monte de Sião, entre brados e cantos de alegria afluirão para as bênçãos do Senhor.\n\n- Então a virgem dançará alegremente, também o jovem e o velho exultarão; mudarei em alegria o seu luto, serei consolo e conforto após a guerra."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 18-23",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Felizes os que observam a Palavra do Senhor de reto coração e que produzem muitos frutos, até o fim perseverantes! (Lc 8,15)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 18\"Ouvi a parábola do semeador: 19todo aquele que ouve a palavra do Reino e não a compreende, vem o maligno e rouba o que foi semeado em seu coração. Este é o que foi semeado à beira do caminho. 20A semente que caiu em terreno pedregoso é aquele que ouve a palavra e logo a recebe com alegria; 21mas ele não tem raiz em si mesmo, é de momento: quando chega o sofrimento ou a perseguição por causa da palavra, ele desiste logo. 22A semente que caiu no meio dos espinhos é aquele que ouve a palavra, mas as preocupações do mundo e a ilusão da riqueza sufocam a palavra, e ele não dá fruto. 23A semente que caiu em boa terra é aquele que ouve a palavra e a compreende. Esse produz fruto. Um dá cem, outro sessenta e outro trinta\"."
     }
   },

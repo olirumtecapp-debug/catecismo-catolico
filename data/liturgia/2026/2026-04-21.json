@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 7,51-8,1",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias, Estevão disse ao povo, aos anciãos e aos doutores da lei: 51Homens de cabeça dura, insensíveis e incircuncisos de coração e ouvido! Vós sempre resististes ao Espírito Santo e como vossos pais agiram, assim fazeis vós! 52A qual dos profetas vossos pais não perseguiram? Eles mataram aqueles que anunciavam a vinda do Justo, do qual, agora, vós vos tornastes traidores e assassinos. 53Vós recebestes a Lei, por meio de anjos, e não a observastes!' 54Ao ouvir essas palavras, eles ficaram enfurecidos e rangeram os dentes contra Estêvão. 55Estêvão, cheio do Espírito Santo, olhou para o céu e viu a glória de Deus e Jesus, de pé, à direita de Deus. 56E disse: 'Estou vendo o céu aberto, e o Filho do Homem, de pé, à direita de Deus.' 57Mas eles, dando grandes gritos e, tapando os ouvidos, avançaram todos juntos contra Estêvão; 58arrastaram-no para fora da cidade e começaram a apedrejá-lo. As testemunhas deixaram suas vestes aos pés de um jovem, chamado Saulo. 59Enquanto o apedrejavam, Estêvão clamou dizendo: 'Senhor Jesus, acolhe o meu espírito.' 60Dobrando os joelhos, gritou com voz forte: 'Senhor, não os condenes por este pecado.' E, ao dizer isto, morreu. 8,1aSaulo era um dos que aprovavam a execução de Estêvão."
     },
     "psalm": {
       "reference": "Salmo 30 (31)",
+      "refrain": "Em vossas mãos, Senhor, entrego o meu espírito.",
       "text": "- Sede uma rocha protetora para mim, um abrigo bem seguro que me salve! Sim, sois vós a minha rocha e fortaleza; por vossa honra orientai-me e conduzi-me!\n\n- Em vossas mãos, Senhor, entrego o meu espírito, porque vós me salvareis, ó Deus fiel! Quanto a mim, é ao Senhor que me confio. Vosso amor me faz saltar de alegria.\n\n- Mostrai serena a vossa face ao vosso servo, e salvai-me pela vossa compaixão! Na proteção de vossa face os defendeis bem longe das intrigas dos mortais."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 6, 30-35",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, aleluia, aleluia.",
+        "verse": "Eu sou o pão da vida, quem vem a mim não terá fome; assim nos fala o Senhor (Jo 6,35)."
+      },
       "text": "Naquele tempo, a multidão perguntou a Jesus: 30'Que sinal realizas, para que possamos ver e crer em ti?' Que obra fazes? 31Nossos pais comeram o maná no deserto, como está na Escritura: 'Pão do céu deu-lhes a comer'. 32Jesus respondeu: 'Em verdade, em verdade vos digo, não foi Moisés quem vos deu o pão que veio do céu. É meu Pai que vos dá o verdadeiro pão do céu. 33Pois o pão de Deus é aquele que desce do céu e dá vida ao mundo.' 34Então pediram: 'Senhor, dá-nos sempre desse pão'. 35Jesus lhes disse: 'Eu sou o pão da vida. Quem vem a mim não terá mais fome e quem crê em mim nunca mais terá sede."
     }
   },

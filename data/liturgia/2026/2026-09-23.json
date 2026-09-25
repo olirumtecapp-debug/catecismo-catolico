@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Provérbios 30,5-9",
+      "intro": "Leitura do Livro dos Provérbios:",
       "text": "5A Palavra de Deus é comprovada. Ele é um escudo para os que nele se abrigam. 6Não acrescentes nada às suas palavras, para que ele não te repreenda e passes por mentiroso! 7Duas coisas eu te pedi; não mas recuses, antes de eu morrer: 8afasta de mim a falsidade e a mentira, não me dês pobreza nem riqueza, mas concede-me o pão que me é necessário. 9Não aconteça que, saciado, eu te renegue e diga: 'Quem é o Senhor?' Ou que, empobrecido, eu me ponha a roubar e profane o nome de meu Deus."
     },
     "psalm": {
       "reference": "Salmo 118 (119)",
+      "refrain": "Vossa palavra é uma luz para os meus passos!",
       "text": "- Afastai-me do caminho da mentira e dai-me a vossa lei como um presente!\n\n- A lei de vossa boca, para mim, vale mais do que milhões em ouro e prata.\n\n- É eterna, ó Senhor, vossa palavra, ela é tão firme e estável como o céu.\n\n- De todo mau caminho afasto os passos, para que eu siga fielmente as vossas ordens.\n\n- De vossa lei eu recebi inteligência, por isso odeio os caminhos da mentira.\n\n- Eu odeio e detesto a falsidade, porém amo vossas leis e mandamentos!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 9, 1-6",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Convertei-vos e crede no evangelho, pois o reino de Deus está chegando! (Mc 1,15)."
+      },
       "text": "Naquele tempo: 1Jesus convocou os Doze, deu-lhes poder e autoridade sobre todos os demônios e para curar doenças, 2enviou-os a proclamar o Reino de Deus e a curar os enfermos. 3E disse-lhes: 'Não leveis nada para o caminho: nem cajado, nem sacola, nem pão, nem dinheiro, nem mesmo duas túnicas. 4Em qualquer casa onde entrardes, ficai aí; e daí é que partireis de novo. 5Todos aqueles que não vos acolherem, ao sairdes daquela cidade, sacudi a poeira dos vossos pés, como protesto contra eles.' 6Os discípulos partiram e percorriam os povoados, anunciando a Boa Nova e fazendo curas em todos os lugares."
     }
   },

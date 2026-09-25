@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "São Pedro 1,10-16",
+      "intro": "Leitura da Primeira Carta de São Pedro:",
       "text": "Caríssimos: 10Esta salvação tem sido objeto das investigações e meditações dos profetas. Eles profetizaram a respeito da graça que vos estava destinada. 11Procuraram saber a que época e a que circunstâncias se referia o Espírito de Cristo, que estava neles, ao anunciar com antecedência os sofrimentos de Cristo e a glória conseqüente. 12Foi-lhes revelado que, não para si mesmos, mas para vós, estavam ministrando estas coisas, que agora são anunciadas a vós por aqueles que vos pregam o evangelho em virtude do Espírito Santo, enviado do céu; revelações essas, que até os anjos desejam contemplar! 13Por isso, aprontai a vossa mente; sede sóbrios e colocai toda a vossa esperança na graça que vos será oferecida na revelação de Jesus Cristo. 14Como filhos obedientes, não modeleis a vossa vida de acordo com as paixões de antigamente, do tempo da vossa ignorância. 15Antes, como é santo aquele que vos chamou, tornai-vos santos, também vós, em todo o vosso proceder. 16Pois está na Escritura: 'Sede santos, porque eu sou santo'."
     },
     "psalm": {
       "reference": "Salmo 97(98)",
+      "refrain": "O Senhor fez conhecer seu poder salvador, perante as nações.",
       "text": "- Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória.\n\n- O Senhor fez conhecer a salvação, e às nações, sua justiça; recordou o seu amor sempre fiel pela casa de Israel.\n\n- Os confins do universo contemplaram da salvação do nosso Deus. Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 10,28-31",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Graças te dou, ó Pai, Senhor do céu e da terra, pois revelaste os mistérios do teu reino aos pequeninos, escondendo-os aos doutores! (Mt 11,25)"
+      },
       "text": "Naquele tempo: 28Começou Pedro a dizer a Jesus: 'Eis que nós deixamos tudo e te seguimos.' 29Respondeu Jesus: 'Em verdade vos digo, quem tiver deixado casa, irmãos, irmãs, mãe, pai, filhos, campos, por causa de mim e do Evangelho, 30receberá cem vezes mais agora, durante esta vida - casa, irmãos, irmãs, mães, filhos e campos, com perseguições - e, no mundo futuro, a vida eterna. 31Muitos que agora sóo os primeiros serão os últimos. E muitos que agora são os últimos serão os primeiros.'"
     }
   },

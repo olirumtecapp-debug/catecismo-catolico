@@ -7,18 +7,26 @@
   "readings": {
     "firstReading": {
       "reference": "Atos dos Apóstolos 8,5-8.14-17",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "Naqueles dias: 5Felipe desceu a uma cidade da Samaria e anunciou-lhes o Cristo. 6As multidões seguiam com atenção as coisas que Felipe dizia. E todos unânimes o escutavam, pois viam os milagres que ele fazia. 7De muitos possessos saíam os espíritos maus, dando grandes gritos. Numerosos paralíticos e aleijados também foram curados. 8Era grande a alegria naquela cidade. 14Os apóstolos, que estavam em Jerusalém, souberam que a Samaria acolhera a Palavra de Deus, e enviaram lá Pedro e João. 15Chegando ali, oraram pelos habitantes da Samaria, para que recebessem o Espírito Santo. 16Porque o Espírito ainda não viera sobre nenhum deles; apenas tinham recebido o batismo em nome do Senhor Jesus. 17Pedro e João impuseram-lhes as mãos, e eles receberam o Espírito Santo."
     },
     "psalm": {
       "reference": "Salmo 65 (66)",
+      "refrain": "Aclamai o Senhor Deus, ó terra inteira, cantai salmos a seu nome glorioso!",
       "text": "- Aclamai o Senhor Deus, ó terra inteira, cantai salmos a seu nome glorioso, dai a Deus a mais sublime louvação! Dizei a Deus: 'Como são grandes vossas obras!\n\n- Toda a terra vos adore com respeito e proclame o louvor de vosso nome!' Vinde ver todas as obras do Senhor: seus prodígios estupendos entre os homens!\n\n- O mar ele mudou em terra firme, e passaram pelo rio a pé enxuto. Exultemos de alegria no Senhor! Ele domina para sempre com poder!\n\n- Todos vós que a Deus temeis, vinde escutar: vou contar-vos todo bem que ele me fez! Bendito seja o Senhor Deus que me escutou, não rejeitou minha oração e meu clamor, nem afastou longe de mim o seu amor!"
     },
     "secondReading": {
       "reference": "São Pedro 3,15-18",
+      "intro": "Leitura da Primeira Carta de São Pedro:",
       "text": "Caríssimos: 15Santificai em vossos corações o Senhor Jesus Cristo, e estai sempre prontos a dar razão da vossa esperança a todo aquele que vo-la pedir. 16Fazei-o, porém, com mansidão e respeito e com boa consciência. Então, se em alguma coisa fordes difamados, ficarão com vergonha aqueles que ultrajam o vosso bom procedimento em Cristo. 17Pois será melhor sofrer praticando o bem, se esta for a vontade de Deus do que praticando o mal. 18Com efeito, também Cristo morreu, uma vez por todas, por causa dos pecados, o justo, pelos injustos, a fim de nos conduzir a Deus. Sofreu a morte, na sua existência humana, mas recebeu nova vida pelo Espirito."
     },
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 14, 15-21",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Quem me ama realmente guardará minhas palavra, e meu Pai o amará, e a ele nós viremos (Jo 14,23)."
+      },
       "text": "Naquele tempo, disse Jesus a seus discípulos: 15Se me amais, guardareis os meus mandamentos, 16e eu rogarei ao Pai, e ele vos dará um outro Defensor, para que permaneça sempre convosco: 17o Espírito da Verdade, que o mundo não é capaz de receber, porque não o vê nem o conhece. Vós o conheceis, porque ele permanece junto de vós e estará dentro de vós. 18Não vos deixarei órfãos. Eu virei a vós. 19Pouco tempo ainda, e o mundo não mais me verá, mas vós me vereis, porque eu vivo e vós vivereis. 20Naquele dia sabereis que eu estou no meu Pai e vós em mim e eu em vós. 21Quem acolheu os meus mandamentos e os observa, esse me ama. Ora, quem me ama, será amado por meu Pai, e eu o amarei e me manifestarei a ele."
     }
   },

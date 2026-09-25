@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Ezequiel 2,8-3,4",
+      "intro": "Leitura da Profecia de Ezequiel:",
       "text": "Assim fala o Senhor: 8'Quanto a ti, Filho do homem, escuta o que eu te digo: Não sejas rebelde como esse bando de rebeldes. Abre a boca e come o que eu te vou dar'. 9Eu olhei e vi uma mão estendida para mim e, na mão, um livro enrolado. Desenrolou-o diante de mim; estava escrito na frente e no verso e nele havia cantos fúnebres, lamentações e ais. 3,1Ele me disse: 'Filho do homem, come o que tens diante de ti! Come este rolo e vai falar aos filhos de Israel'. 2Eu abri a boca, e ele fez-me comer o rolo. 3Depois disse-me: 'Filho do homem, alimenta teu ventre e sacia as entranhas com este rolo que eu te dou'. Eu o comi, e era doce como mel em minha boca. 4Ele disse-me então: 'Filho do homem, vai! Dirige-te à casa de Israel e fala-lhes com as minhas palavras'."
     },
     "psalm": {
       "reference": "Salmo 118 (119)",
+      "refrain": "Como é doce ao paladar vossa palavra, ó Senhor!",
       "text": "- Seguindo vossa lei me rejubilo muito mais do que em todas as riquezas.\n\n- Minha alegria é a vossa Aliança, meus conselheiros são os vossos mandamentos.\n\n- A lei de vossa boca, para mim, vale mais do que milhões em ouro e prata.\n\n- Como é doce ao paladar vossa palavra, muito mais doce do que o mel na minha boca!\n\n- Vossa palavra é minha herança para sempre, porque ela é que me alegra o coração!\n\n- Abro a boca e aspiro largamente, pois estou ávido de vossos mandamentos."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 18,1-5.10.12-14",
+      "intro": "Proclamação do Evangelho de Jesus Cristo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Tomai meu jugo sobre vós e aprendei de mim, que sou de coração humilde e manso! (Mt 11,29)"
+      },
       "text": "Naquele tempo: 1Os discípulos aproximaram-se de Jesus e perguntaram: 'Quem é o maior no Reino dos Céus?' 2Jesus chamou uma criança, colocou-a no meio deles 3e disse: 'Em verdade vos digo, se não vos converterdes, e não vos tornardes como crianças, não entrareis no Reino dos Céus. 4Quem se faz pequeno como esta criança, esse é o maior no Reino dos Céus. 5E quem recebe em meu nome uma criança como esta, é a mim que recebe. 10Não desprezeis nenhum desses pequeninos, pois eu vos digo que os seus anjos nos céus vêem sem cessar a face do meu Pai que está nos céus. 12Que vos parece? Se um homem tem cem ovelhas, e uma delas se perde, não deixa ele as noventa e nove nas montanhas, para procurar aquela que se perdeu? 13Em verdade vos digo, se ele a encontrar, ficará mais feliz com ela, do que com as noventa e nove que não se perderam. 14Do mesmo modo, o Pai que está nos céus não deseja que se perca nenhum desses pequeninos."
     }
   },

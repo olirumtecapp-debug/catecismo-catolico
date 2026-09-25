@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Coríntios 12,12-14.27-31",
+      "intro": "Leitura da Primeira Carta de São Paulo aos Coríntios:",
       "text": "Irmãos: 12Como o corpo é um, embora tenha muitos membros, e como todos os membros do corpo, embora sejam muitos, formam um só corpo, assim também acontece com Cristo. 13De fato, todos nós, judeus ou gregos, escravos ou livres, fomos batizados num único Espírito, para formarmos um único corpo, e todos nós bebemos de um único Espírito. 14Com efeito, o corpo não é feito de um membro apenas, mas de muitos membros. 27Vós, todos juntos, sois o corpo de Cristo e, individualmente, sois membros desse corpo. 28E, na Igreja, Deus colocou, em primeiro lugar, os apóstolos; em segundo lugar, os profetas; em terceiro lugar, os que têm o dom e a missão de ensinar; depois, outras pessoas com dons diversos, a saber: dom de milagres, dom de curas, dom para obras de misericórdia, dom de governo e direção, dom de línguas. 29Acaso todos são apóstolos? Todos são profetas? Todos ensinam? Todos realizam milagres? 30Todos têm o dom das curas? Todos falam em línguas? Todos as interpretam? 31aAspirai aos dons mais elevados."
     },
     "psalm": {
       "reference": "Salmo 99 (100)",
+      "refrain": "Nós somos o seu povo e seu rebanho.",
       "text": "- Aclamai o Senhor, ó terra inteira, servi ao Senhor com alegria, ide a ele cantando jubilosos!\n\n- Sabei que o Senhor, só ele, é Deus, Ele mesmo nos fez, e somos seus, nós somos seu povo e seu rebanho.\n\n- Entrai por suas portas dando graças, e em seus átrios com hinos de louvor; dai-lhe graças, seu nome bendizei!\n\n- Sim, é bom o Senhor e nosso Deus, sua bondade perdura para sempre, seu amor é fiel eternamente!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 7, 11-17",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Um grande profeta surgiu entre nós, e Deus visitou o seu povo (Lc 7,16)."
+      },
       "text": "Naquele tempo: 11Jesus dirigiu-se a uma cidade chamada Naim. Com ele iam seus discípulos e uma grande multidão. 12Quando chegou à porta da cidade, eis que levavam um defunto, filho único; e sua mãe era viúva. Grande multidão da cidade a acompanhava. 13Ao vê-la, o Senhor sentiu compaixão para com ela e lhe disse: 'Não chores!' 14Aproximou-se, tocou o caixão, e os que o carregavam pararam. Então, Jesus disse: 'Jovem, eu te ordeno, levanta-te!' 15O que estava morto sentou-se e começou a falar. E Jesus o entregou à sua mãe. 16Todos ficaram com muito medo e glorificavam a Deus, dizendo: 'Um grande profeta apareceu entre nós e Deus veio visitar o seu povo.' 17E a notícia do fato espalhou-se pela Judéia inteira, e por toda a redondeza."
     }
   },

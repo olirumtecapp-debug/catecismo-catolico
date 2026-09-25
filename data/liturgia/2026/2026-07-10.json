@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Oseias 14,2-10",
+      "intro": "Leitura da profecia de Oseias:",
       "text": "Assim fala o Senhor: 2\"Volta, Israel, para o Senhor, teu Deus, porque estavas caído em teu pecado. 3Vós todos, encontrai palavras e voltai para o Senhor; dizei-lhe: 'Livra-nos de todo mal e aceita este bem que oferecemos, o fruto de nossos lábios. 4A Assíria não nos salvará; não queremos montar nossos cavalos, não chamaremos mais 'deuses nossos' a produtos de nossas mãos; em ti encontrará o órfão misericórdia'. 5Hei de curar sua perversidade e me será fácil amá-los, deles afastou-se a minha cólera. 6Serei como orvalho para Israel; ele florescerá como o lírio e lançará raízes como plantas do Líbano. 7Seus ramos hão de estender-se; será seu esplendor como o da oliveira, e seu perfume como o do Líbano. 8Voltarão a sentar-se à minha sombra e a cultivar o trigo, e florescerão como a videira, cuja fama se iguala à do vinho do Líbano. 9Que tem ainda Efraim a ver com ídolos? Sou eu que o atendo e que olho por ele. Sou como o cipreste sempre verde: de mim procede o teu fruto. 10Compreenda estas palavras o homem sábio, reflita sobre elas o bom entendedor! São retos os caminhos do Senhor e por eles andarão os justos, enquanto os maus ali tropeçam e caem\"."
     },
     "psalm": {
       "reference": "Salmo 50 (51)",
+      "refrain": "Minha boca anunciará vosso louvor!",
       "text": "- Tende piedade, ó meu Deus, misericórdia! Na imensidão de vosso amor, purificai-me! Lavai-me todo inteiro do pecado e apagai completamente a minha culpa!\n\n- Mas vós amais os corações que são sinceros, na intimidade me ensinais sabedoria. Aspergi-me e serei puro do pecado, e mais branco do que a neve ficarei.\n\n- Criai em mim um coração que seja puro, dai-me de novo um espírito decidido. Ó Senhor, não me afasteis de vossa face nem retireis de mim o vosso Santo Espírito!\n\n- Dai-me de novo a alegria de ser salvo e confirmai-me com espírito generoso! Abri meus lábios, ó Senhor, para cantar, e minha boca anunciará vosso louvor!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 10, 16-23",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Quando o paráclito vier, o Espírito da verdade, ele vos conduzirá a toda a verdade, lembrar-vos-á de tudo o que eu tenho falado (Jo 16,13; 14,26)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 16\"Eis que eu vos envio como ovelhas no meio de lobos. Sede, portanto, prudentes como as serpentes e simples como as pombas. 17Cuidado com os homens, porque eles vos entregarão aos tribunais e vos açoitarão nas suas sinagogas. 18Vós sereis levados diante de governadores e reis por minha causa, para dar testemunho diante deles e das nações. 19Quando vos entregarem, não fiqueis preocupados de como falar ou do que dizer. Então naquele momento vos será indicado o que deveis dizer. 20Com efeito, não sereis vós que havereis de falar, mas sim o Espírito do vosso Pai é que falará através de vós. 21O irmão entregará à morte o próprio irmão; o pai entregará o filho; os filhos se levantarão contra seus pais e os matarão. 22Vós sereis odiados por todos por causa do meu nome. Mas quem perseverar até o fim, esse será salvo. 23Quando vos perseguirem numa cidade, fugi para outra. Em verdade vos digo, vós não acabareis de percorrer as cidades de Israel antes que venha o Filho do homem\"."
     }
   },

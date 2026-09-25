@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Atos 2,36-41",
+      "intro": "Leitura dos Atos dos Apóstolos:",
       "text": "No dia de Pentecostes, Pedro disse aos judeus: 36Que todo o povo de Israel reconheça com plena certeza: Deus constituiu Senhor e Cristo a este Jesus que vós crucificastes.' 37Quando ouviram isso, eles ficaram com o coração aflito, e perguntaram a Pedro e aos outros apóstolos: 'Irmãos, o que devemos fazer?' 38Pedro respondeu: 'Convertei-vos e cada um de vós seja batizado em nome de Jesus Cristo, para o perdão dos vossos pecados. E vós recebereis o dom do Espírito Santo. 39Pois a promessa é para vós e vossos filhos, e para todos aqueles que estão longe, todos aqueles que o Senhor nosso Deus chamar para si.' 40Com muitas outras palavras, Pedro lhes dava testemunho, e os exortava, dizendo: 'Salvai-vos dessa gente corrompida!' 41Os que aceitaram as palavras de Pedro receberam o batismo. Naquele dia, mais ou menos três mil pessoas, se uniram a eles."
     },
     "psalm": {
       "reference": "Salmo 32 (33)",
+      "refrain": "Transborda em toda a terra a bondade do Senhor.",
       "text": "- Reta é a palavra do Senhor, e tudo o que ele faz merece fé. Deus ama o direito e a justiça, transborda em toda a terra a sua graça.\n\n- Mas o Senhor pousa o olhar sobre os que o temem, e que confiam esperando em seu amor, para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria.\n\n- No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! Sobre nós venha, Senhor, a vossa graça, da mesma forma que em vós nós esperamos!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São João 20, 11-18",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "acclamation": {
+        "title": "Aleluia, aleluia, aleluia.",
+        "verse": "Este é o dia que o Senhor fez para nós, alegremo-nos e nele exultemos! (Sl 117,24)."
+      },
       "text": "Naquele tempo: 11Maria estava do lado de fora do túmulo, chorando. Enquanto chorava, inclinou-se e olhou para dentro do túmulo. 12Viu, então, dois anjos vestidos de branco, sentados onde tinha sido posto o corpo de Jesus, um à cabeceira e outro aos pés. 13Os anjos perguntaram: 'Mulher, por que choras?' Ela respondeu: 'Levaram o meu Senhor e não sei onde o colocaram'. 14Tendo dito isto, Maria voltou-se para trás e viu Jesus, de pé. Mas não sabia que era Jesus. 15Jesus perguntou-lhe: 'Mulher, por que choras? A quem procuras?' Pensando que era o jardineiro, Maria disse: 'Senhor, se foste tu que o levaste dize-me onde o colocaste, e eu o irei buscar'. 16Então Jesus disse: 'Maria!' Ela voltou-se e exclamou, em hebraico: 'Rabuni' (que quer dizer: Mestre). 17Jesus disse: 'Não me segures. Ainda não subi para junto do Pai. Mas vai dizer aos meus irmãos: subo para junto do meu Pai e vosso Pai, meu Deus e vosso Deus'. 18Então Maria Madalena foi anunciar aos discípulos: 'Eu vi o Senhor!', e contou o que Jesus lhe tinha dito."
     }
   },

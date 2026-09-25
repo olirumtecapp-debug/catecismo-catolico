@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Gálatas 3,1-5",
+      "intro": "Leitura da Carta de São Paulo aos Gálatas:",
       "text": "1Ó gálatas insensatos, quem é que vos fascinou? Diante de vossos olhos, não foi acaso representado, como que ao vivo, Jesus Cristo crucificado? 2Só isto quero saber de vós: Recebestes o Espírito pela prática da Lei ou pela fé através da pregação? 3Sois assim tão insensatos? A ponto de, depois de terdes começado pelo espírito, quererdes terminar pela carne? 4Foi acaso em vão que sofrestes tanto? Se é que foi mesmo em vão! 5Aquele que vos dá generosamente o Espírito e realiza milagres entre vós, faz isso porque praticais a Lei ou porque crestes, através da pregação?"
     },
     "psalm": {
       "reference": "Salmo (Lc 1)",
+      "refrain": "Bendito seja o Senhor Deus de Israel, porque a seu povo visitou e libertou!",
       "text": "- Fez surgir um poderoso Salvador na casa de Davi, seu servidor, como falara pela boca de seus santos, os profetas desde os tempos mais antigos.\n\n- Para salvar-nos do poder dos inimigos e da mão de todos quantos nos odeiam. Assim mostrou misericórdia a nossos pais, recordando a sua santa Aliança.\n\n- E o juramento a Abraão, o nosso pai, de conceder-nos que, libertos do inimigo, a ele nós sirvamos sem temor em santidade e em justiça diante dele, enquanto perdurarem nossos dias."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 5-13",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Abri-nos, ó Senhor, o coração para ouvirmos a palavra de Jesus! (At 16,14)."
+      },
       "text": "Naquele tempo, disse Jesus aos seus discípulos: 5E Jesus acrescentou: 'Se um de vós tiver um amigo e for procurá-lo à meia-noite e lhe disser: 'Amigo, empresta-me três pães, 6porque um amigo meu chegou de viagem e nada tenho para lhe oferecer', 7e se o outro responder lá de dentro: 'Não me incomoda! Já tranquei a porta, e meus filhos e eu já estamos deitados; não me posso levantar para te dar os pães'; 8eu vos declaro: mesmo que o outro não se levante para dá-los porque é seu amigo, vai levantar-se ao menos por causa da impertinência dele e lhe dará quanto for necessário. 9Portanto, eu vos digo: pedi e recebereis; procurai e encontrareis; batei e vos será aberto. 10Pois quem pede, recebe; quem procura, encontra; e, para quem bate, se abrirá. 11Será que algum de vós que é pai, se o filho pedir um peixe, lhe dará uma cobra? 12Ou ainda, se pedir um ovo, lhe dará um escorpião? 13Ora, se vós que sois maus, sabeis dar coisas boas aos vossos filhos, quanto mais o Pai do Céu dará o Espírito Santo aos que o pedirem! '"
     }
   },

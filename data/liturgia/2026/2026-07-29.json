@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Jeremias 15,10.16-21",
+      "intro": "Leitura do Livro do Profeta Jeremias:",
       "text": "Ai de mim, minha mãe, que me geraste um homem de controvérsia, um homem em discórdia com toda a gente! Não emprestei com usura nem ninguém me emprestou, e contudo todos me amaldiçoam. 16Quando encontrei tuas palavras, alimentei-me, elas se tornaram para mim uma delícia e a alegria do coração, o modo como invocar teu nome sobre mim, Senhor Deus dos exércitos. 17Não costumo frequentar a roda dos folgazões e gabo-me disso; fiquei a sós, sob o influxo de tua presença e cheio de indignação. 18Por que se tornou eterna minha dor, por que não sara minha chaga maligna? Para mim te tornaste como miragem de um regato, como visão d'águas ilusórias. 19Ainda assim, isto diz-me o Senhor: 'Se te converteres, converterei teu coração, para te sustentares em minha presença; se souberes separar o precioso do vil, falarás por minha boca; os outros voltarão para ti, e tu não voltarás para eles. 20Em favor deste povo, farei de ti uma muralha de bronze fortificada; combaterão contra ti, mas não prevalecerão, porque eu estou contigo para te salvar e te defender, diz o Senhor. 21Eu te libertarei das mãos dos perversos e te salvarei dos prepotentes'."
     },
     "psalm": {
       "reference": "Salmo 58 (59)",
+      "refrain": "Sois meu refúgio no dia da aflição.",
       "text": "- Libertai-me do inimigo, ó meu Deus, e protegei-me contra os meus perseguidores! 3Libertai-me dos obreiros da maldade, defendei-me desses homens sanguinários!\n\n- Eis que ficam espreitando a minha vida, poderosos armam tramas contra mim. 5aMas eu, Senhor, não cometi pecado ou crime.\n\n- Minha força, é a vós que me dirijo, porque sois o meu refúgio e proteção, 11Deus clemente e compassivo, meu amor! Deus virá com seu amor ao meu encontro, e hei de ver meus inimigos humilhados.\n\n- Eu, então, hei de cantar vosso poder, e de manhã celebrarei vossa bondade, porque fostes para mim o meu abrigo, o meu refúgio no dia da aflição.\n\n- Minha força, cantarei vossos louvores, porque sois o meu refúgio e proteção, Deus clemente e compassivo, meu amor!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 44-46",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Eu vos chamo meus amigos, pois vos dei a conhecer o que o Pai me revelou (Jo 15,15)."
+      },
       "text": "Naquele tempo, disse Jesus à multidão: 44'O Reino dos Céus é como um tesouro escondido no campo. Um homem o encontra e o mantém escondido. Cheio de alegria, ele vai, vende todos os seus bens e compra aquele campo. 45O Reino dos Céus também é como um comprador que procura pérolas preciosas. 46Quando encontra uma pérola de grande valor, ele vai, vende todos os seus bens e compra aquela pérola."
     }
   },

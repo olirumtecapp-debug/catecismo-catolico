@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Jeremias 13,1-11",
+      "intro": "Leitura do livro do profeta Jeremias:",
       "text": "1Isto disse-me o Senhor: \"Vai comprar um cinto de linho e põe-no em torno da cintura, mas não o deixes molhar na água\". 2Comprei o cinto, conforme a ordem do Senhor, e coloquei-o à cintura. 3E a palavra do Senhor dirigiu-se a mim pela segunda vez, dizendo: 4\"Toma o cinto que compraste e tens à cintura, levanta-te e vai ao Eufrates, esconde-o lá na fenda de uma pedra\". 5Fui e o escondi perto do Eufrates, conforme mandara o Senhor. 6Ora, ao cabo de muitos dias, disse-me o Senhor: \"Levanta-te, vai ao Eufrates e retira de lá o cinto que te mandei esconder\". 7Fui ao Eufrates, cavei e retirei o cinto do lugar, onde o tinha escondido; mas eis que o cinto tinha apodrecido tanto, que não servia mais para nada. 8E a palavra do Senhor dirigiu-se a mim, dizendo: 9\"Isto diz o Senhor: assim farei apodrecer a grande soberba de Judá e de Jerusalém; 10esse povo perverso, que se recusa a ouvir minhas palavras, convive com a maldade no coração e vai atrás de deuses estrangeiros, prestando-lhes culto e prostrando-se diante deles, será como este cinto que não serve mais para nada. 11Pois, assim como o cinto se une à cintura do homem, assim quis eu que toda a casa de Israel e toda a casa de Judá se unissem a mim, diz o Senhor, para ser meu povo, honra do meu nome, louvor e glória. Mas não ouviram\"."
     },
     "psalm": {
       "reference": "Salmo Dt 32",
+      "refrain": "Esqueceram o Deus que os gerou.",
       "text": "- Da rocha que te deu à luz te esqueceste, do Deus que te gerou não te lembraste. Vendo isso, o Senhor os desprezou, aborrecido com seus filhos e suas filhas.\n\n- E disse: Esconderei deles meu rosto e verei, então, o fim que eles terão, pois tornaram-se um povo pervertido, são filhos que não têm fidelidade.\n\n- Com deuses falsos provocaram minha ira, com ídolos vazios me irritaram; vou provocá-los por aqueles que nem povo são, através de gente louca hei de irritá-los."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 31-35",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Deus nos gerou pela Palavra da verdade como as primícias de suas criaturas (Tg 1,18)."
+      },
       "text": "Naquele tempo, 31Jesus contou-lhes outra parábola: \"O reino dos céus é como uma semente de mostarda que um homem pega e semeia no seu campo. 32Embora ela seja a menor de todas as sementes, quando cresce, fica maior do que as outras plantas. E torna-se uma árvore, de modo que os pássaros vêm e fazem ninhos em seus ramos\". 33Jesus contou-lhes ainda uma outra parábola: \"O reino dos céus é como o fermento que uma mulher pega e mistura com três porções de farinha, até que tudo fique fermentado\". 34Tudo isso Jesus falava em parábolas às multidões. Nada lhes falava sem usar parábolas, 35para se cumprir o que foi dito pelo profeta: \"Abrirei a boca para falar em parábolas; vou proclamar coisas escondidas desde a criação do mundo\"."
     }
   },

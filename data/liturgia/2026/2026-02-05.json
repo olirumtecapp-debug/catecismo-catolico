@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Reis 2,1-4.10-12",
+      "intro": "Leitura do primeiro livro dos Reis:",
       "text": "1Aproximando-se o fim da sua vida, Davi deu estas instruções a seu filho Salomão: 2\"Vou seguir o caminho de todos os mortais. Sê corajoso e porta-te como um homem. 3Observa os preceitos do Senhor, teu Deus, andando em seus caminhos, observando seus estatutos, seus mandamentos, seus preceitos e seus ensinamentos, como estão escritos na lei de Moisés. E assim serás bem-sucedido em tudo o que fizeres e em todos os teus projetos. 4Então o Senhor cumprirá a promessa que me fez, dizendo: 'Se teus filhos conservarem uma boa conduta, caminhando com lealdade diante de mim, com todo o seu coração e com toda a sua alma, jamais te faltará um sucessor no trono de Israel'\". 10E Davi adormeceu com seus pais e foi sepultado na cidade de Davi. 11O tempo que Davi reinou em Israel foi de quarenta anos: sete anos em Hebron e trinta e três em Jerusalém. 12Salomão sucedeu no trono a seu pai, Davi, e seu reino ficou solidamente estabelecido."
     },
     "psalm": {
       "reference": "Salmo (1Cr 29)",
+      "refrain": "Dominais todos os povos, ó Senhor.",
       "text": "- Bendito sejais vós, ó Senhor Deus, Senhor Deus de Israel, o nosso pai, desde sempre e por toda a eternidade!\n\n- A vós pertencem a grandeza e o poder, toda a glória, esplendor e majestade.\n\n- A vós, Senhor, também pertence a realeza, pois sobre a terra, como rei, vos elevais! Toda glória e riqueza vêm de vós!\n\n- Sois o Senhor e dominais o universo, em vossa mão se encontra a força e o poder, em vossa mão tudo se afirma e tudo cresce!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Marcos 6, 7-13",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Convertei-vos e crede no evangelho, pois o reino de Deus está chegando! (Mc 1,15)."
+      },
       "text": "Naquele tempo, 7Jesus chamou os doze e começou a enviá-los dois a dois, dando-lhes poder sobre os espíritos impuros. 8Recomendou-lhes que não levassem nada para o caminho, a não ser um cajado; nem pão, nem sacola, nem dinheiro na cintura. 9Mandou que andassem de sandálias e que não levassem duas túnicas. 10E Jesus disse ainda: \"Quando entrardes numa casa, ficai ali até vossa partida. 11Se em algum lugar não vos receberem nem quiserem vos escutar, quando sairdes, sacudi a poeira dos pés como testemunho contra eles!\" 12Então os doze partiram e pregaram que todos se convertessem. 13Expulsavam muitos demônios e curavam numerosos doentes, ungindo-os com óleo."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Jeremias 26,1-9",
+      "intro": "Leitura do livro do profeta Jeremias:",
       "text": "1No início do reinado de Joaquim, filho de Josias, rei de Judá, foi comunicada, da parte do Senhor, esta palavra, que dizia: 2\"Assim fala o Senhor: Põe-te de pé no átrio da casa do Senhor e fala a todos os que vêm das cidades de Judá, para adorar o Senhor no templo, todas as palavras que eu te mandei dizer. Não retires uma só palavra; 3talvez eles as ouçam e voltem do mau caminho, e eu me arrependa da decisão de castigá-los por suas más obras. 4A eles então dirás: Isto diz o Senhor: se não vos dispuserdes a viver segundo a lei que vos dei, 5a escutar as palavras dos meus servos, os profetas, que eu vos tenho enviado com solicitude e para vossa orientação, e que vós não tendes escutado, 6farei desta casa uma segunda Silo e farei desta uma cidade amaldiçoada por todos os povos da terra\". 7Os sacerdotes e profetas e todo o povo presente ouviram Jeremias dizer essas palavras na casa do Senhor. 8Quando Jeremias acabou de dizer tudo o que o Senhor lhe ordenara falasse a todo o povo, prenderam-no os sacerdotes, os profetas e o povo, dizendo: \"Este homem tem que morrer! 9Por que dizes, em nome do Senhor, a profecia: 'Esta casa será como Silo, e esta cidade será devastada e vazia de habitantes'?\" Todo o povo juntou-se contra Jeremias na casa do Senhor."
     },
     "psalm": {
       "reference": "Salmo 68 (69)",
+      "refrain": "Respondei-me, ó Senhor, pelo vosso imenso amor.",
       "text": "- Mais numerosos que os cabelos da cabeça são aqueles que me odeiam sem motivo; meus inimigos são mais fortes do que eu; contra mim eles se voltam com mentiras! Por acaso poderei restituir alguma coisa que de outros não roubei?\n\n- Por vossa causa é que sofri tantos insultos e o meu rosto se cobriu de confusão; eu me tornei como um estranho a meus irmãos, como estrangeiro para os filhos de minha mãe. Pois meu zelo e meu amor por vossa casa me devoram como fogo abrasador; e os insultos de infiéis que vos ultrajam recaíram todos eles sobre mim!\n\n- Por isso elevo para vós minha oração neste tempo favorável, Senhor Deus! Respondei-me pelo vosso imenso amor, pela vossa salvação que nunca falha!"
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 54-58",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "A Palavra do Senhor permanece eternamente, e esta é a Palavra que vos foi anunciada (1Pd 1,25)."
+      },
       "text": "Naquele tempo, 54dirigindo-se para a sua terra, Jesus ensinava na sinagoga, de modo que ficavam admirados. E diziam: \"De onde lhe vem essa sabedoria e esses milagres? 55 Não é ele o filho do carpinteiro? Sua mãe não se chama Maria, e seus irmãos não são Tiago, José, Simão e Judas? 56E suas irmãs não moram conosco? Então, de onde lhe vem tudo isso?\" 57E ficaram escandalizados por causa dele. Jesus, porém, disse: \"Um profeta só não é estimado em sua própria pátria e em sua família!\" 58E Jesus não fez ali muitos milagres, porque eles não tinham fé."
     }
   },

@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Efésios 4,7-16",
+      "intro": "Leitura da Carta de São Paulo aos Efésios:",
       "text": "Irmãos: 7Cada um de nós recebeu a graça na medida em que Cristo lha deu. 8Daí esta palavra: 'Tendo subido às alturas, ele capturou prisioneiros, e distribuiu dons aos homens'. 9'Ele subiu'! Que significa isso, senão que ele desceu também às profundezas da terra? 10Aquele que desceu é o mesmo que subiu mais alto do que todos os céus, a fim de encher o universo. 11E foi ele quem instituiu alguns como apóstolos, outros como profetas, outros ainda como evangelistas, outros, enfim, como pastores e mestres. 12Assim, ele capacitou os santos para o ministério, para edificar o corpo de Cristo, 13até que cheguemos todos juntos à unidade da fé e do conhecimento do Filho de Deus, ao estado do homem perfeito e à estatura de Cristo em sua plenitude. 14Assim, não seremos mais crianças ao sabor das ondas, arrastados por todo vento de doutrina, ludibriados pelos homens e induzidos por sua astúcia ao erro. 15Motivados pelo amor queremos ater-nos à verdade e crescer em tudo até atingirmos aquele que é a Cabeça, Cristo. 16Graças a ele, o corpo, coordenado e bem unido, por meio de todas as articulações que o servem, realiza o seu crescimento, segundo uma atividade à medida de cada membro, para a sua edificação no amor."
     },
     "psalm": {
       "reference": "Salmo 121 (122)",
+      "refrain": "Que alegria, quando me disseram: Vamos à casa Senhor!",
       "text": "- Que alegria, quando ouvi que me disseram: 'Vamos à casa do Senhor!' E agora nossos pés já se detêm, Jerusalém, em tuas portas.\n\n- Jerusalém,cidade bem edificada num conjunto harmonioso; para lá sobem as tribos de Israel, as tribos do Senhor.\n\n- Para louvar, segundo a lei de Israel, o nome do Senhor. A sede da justiça lá está e o trono de Davi."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Lucas 13, 1-9",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Não quero a morte do pecador, diz o Senhor, mas que ele volte, se converta e tenha vida (Ez 33,11)."
+      },
       "text": "1Naquele tempo, vieram algumas pessoas trazendo notícias a Jesus a respeito dos galileus que Pilatos tinha matado, misturando seu sangue com o dos sacrifícios que ofereciam. 2Jesus lhes respondeu: 'Vós pensais que esses galileus eram mais pecadores do que todos os outros galileus, por terem sofrido tal coisa? 3Eu vos digo que não. Mas se vós não vos converterdes, ireis morrer todos do mesmo modo. 4E aqueles dezoito que morreram, quando a torre de Siloé caiu sobre eles? Pensais que eram mais culpados do que todos os outros moradores de Jerusalém? 5Eu vos digo que não. Mas, se não vos converterdes, ireis morrer todos do mesmo modo.' 6E Jesus contou esta parábola: 'Certo homem tinha uma figueira plantada na sua vinha. Foi até ela procurar figos e não encontrou. 7Então disse ao vinhateiro: 'Já faz três anos que venho procurando figos nesta figueira e nada encontro. Corta-a! Por que está ela inutilizando a terra?' 8Ele, porém, respondeu: 'Senhor, deixa a figueira ainda este ano. Vou cavar em volta dela e colocar adubo. 9Pode ser que venha a dar fruto. Se não der, então tu a cortarás.'"
     }
   },

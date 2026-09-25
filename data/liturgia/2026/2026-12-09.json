@@ -7,15 +7,22 @@
   "readings": {
     "firstReading": {
       "reference": "Isaías 40,25-31",
+      "intro": "Leitura do livro do Profeta Isaías:",
       "text": "25\"Com quem haveis de me comparar, e a quem seria eu igual?\" - fala o Santo. 26Levantai os olhos para o alto e vede: Quem criou tudo isto? - Aquele que expressa em números o exército das estrelas e a cada uma chama pelo nome: tal é a grandeza e força e poder de Deus que nenhuma delas falta à chamada. 27Então, por que dizes, Jacó, e por que falas, Israel: \"Minha vida ocultou-se da vista do Senhor e meu julgamento escapa ao do meu Deus?\" 28Acaso ignoras, ou não ouviste? O Senhor é o Deus eterno que criou os confins da terra; ele não falha nem se cansa, insondável é sua sabedoria; 29ele dá coragem ao desvalido e aumenta o vigor do mais fraco. 30Cansam-se as crianças e param, os jovens tropeçam e caem, 31mas os que esperam no Senhor renovam suas forças, criam asas como as águias, correm sem se cansar, caminham sem parar."
     },
     "psalm": {
       "reference": "Salmo 102 (103)",
+      "refrain": "Bendize, ó minha alma, ao Senhor.",
       "text": "- Bendize, ó minha alma, ao Senhor, e todo o meu ser, o seu santo nome! Bendize, ó minha alma, ao Senhor, não te esqueças de nenhum de seus favores!\n\n- Pois ele te perdoa toda culpa e cura toda a tua enfermidade; da sepultura ele salva a tua vida e te cerca de carinho e compaixão;\n\n- O Senhor é indulgente, é favorável, é paciente, é bondoso e compassivo, não nos trata como exigem nossas faltas, nem nos pune em proporção às nossas culpas."
     },
     "secondReading": null,
     "gospel": {
       "reference": "Evangelho de Jesus Cristo segundo São Mateus 11, 28-30",
+      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia!",
+        "verse": "Eis que o Senhor há de vir, a fim de salvar o seu povo; felizes são todos aqueles que estão prontos para ir-lhe ao encontro."
+      },
       "text": "Naquele tempo, tomou Jesus a palavra e disse: 28\"Vinde a mim todos vós que estais cansados e fatigados sob o peso dos vossos fardos, e eu vos darei descanso. 29Tomai sobre vós o meu jugo e aprendei de mim, porque sou manso e humilde de coração, e vós encontrareis descanso.30Pois o meu jugo é suave e o meu fardo é leve\"."
     }
   },
