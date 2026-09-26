@@ -12600,7 +12600,7 @@ https://catecismo.creativeam.com.br
                 for (const term of candidates) {
                     if (!term || term.length < 3) continue;
                     const res = await fetch('https://pt.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(term), {
-                        headers: { 'User-Agent': 'CatecismoApp/1.0 (contato@creativeam.com.br)' }
+                        headers: { 'User-Agent': 'CatecismoApp/1.0 (contatocreativeam@gmail.com)' }
                     });
                     if (res.ok) {
                         const data = await res.json();
