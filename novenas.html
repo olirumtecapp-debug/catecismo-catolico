@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <script src="assets/vendor/tailwind.js" onerror="var s=document.createElement('script');s.src='https://cdn.tailwindcss.com';document.head.appendChild(s);"></script>
-    <script src="assets/data/santos_images_index.js"></script>
+    <script src="assets/data/santos_images_index.js?v=20260927"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -330,10 +330,20 @@
             }
         };
 
-        // Carregar JSON de Novenas
+        // Resolução inteligente e dinâmica da imagem oficial do santo para novenas
+        function getNovenaImage(item) {
+            if (!item) return '';
+            if (typeof window.resolveLocalSaintImage === 'function') {
+                const resolved = window.resolveLocalSaintImage(item.titulo, item.festa_liturgica?.data);
+                if (resolved) return resolved;
+            }
+            return item.imagem || '';
+        }
+
+        // Carregar JSON de Novenas com garantia de frescor de cache
         async function loadNovenas() {
             try {
-                const res = await fetch('/data/novenas.json');
+                const res = await fetch('/data/novenas.json?v=' + Date.now(), { cache: 'no-store' });
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 novenasList = await res.json();
                 
@@ -369,13 +379,14 @@
                 if (upcoming.length) {
                     const up = upcoming[0];
                     const fullNovena = novenasList.find(n => n.id === up.id);
+                    const upImg = getNovenaImage(fullNovena);
                     container.classList.remove('hidden');
                     container.innerHTML = `
                         <div class="p-5 rounded-3xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
                             <div class="flex items-center gap-3.5">
                                 <div class="w-14 h-14 rounded-2xl overflow-hidden bg-amber-100 dark:bg-amber-900/60 border border-amber-300 dark:border-amber-700 shadow-xs shrink-0 flex items-center justify-center">
-                                    ${fullNovena.imagem ? `
-                                        <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${fullNovena.id}')">
+                                    ${upImg ? `
+                                        <img src="${upImg}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${fullNovena.id}')">
                                         <div class="hidden w-full h-full items-center justify-center text-3xl">${fullNovena.simbolo || '⏳'}</div>
                                     ` : `<span class="text-3xl">${fullNovena.simbolo || '⏳'}</span>`}
                                 </div>
@@ -404,14 +415,15 @@
             container.classList.remove('hidden');
             const primaryActive = activeList[0];
             const fullNovena = novenasList.find(n => n.id === primaryActive.id);
+            const actImg = getNovenaImage(fullNovena);
 
             container.innerHTML = `
                 <div class="p-6 rounded-3xl bg-gradient-to-r from-rose-50 via-amber-50 to-emerald-50 dark:from-rose-950/30 dark:via-slate-900 dark:to-emerald-950/30 border border-rose-200 dark:border-rose-900 shadow-md">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
                         <div class="flex items-start gap-4">
                             <div class="w-16 h-16 rounded-2xl overflow-hidden bg-rose-500 text-white shadow-lg shrink-0 flex items-center justify-center border-2 border-white dark:border-slate-800">
-                                ${fullNovena.imagem ? `
-                                    <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${fullNovena.id}')">
+                                ${actImg ? `
+                                    <img src="${actImg}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${fullNovena.id}')">
                                     <div class="hidden w-full h-full items-center justify-center text-3xl">${fullNovena.simbolo || '🌹'}</div>
                                 ` : `<span class="text-3xl">${fullNovena.simbolo || '🌹'}</span>`}
                             </div>
@@ -500,8 +512,8 @@
                             <!-- Top Card Bar -->
                             <div class="flex items-center justify-between gap-2">
                                 <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-                                    ${novena.imagem ? `
-                                        <img src="${novena.imagem}" alt="${novena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${novena.id}')">
+                                    ${getNovenaImage(novena) ? `
+                                        <img src="${getNovenaImage(novena)}" alt="${novena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${novena.id}')">
                                         <div class="hidden w-full h-full items-center justify-center text-2xl">${novena.simbolo || '🙏'}</div>
                                     ` : `<span class="text-2xl">${novena.simbolo || '🙏'}</span>`}
                                 </div>
@@ -594,7 +606,7 @@
 
             const modalImg = document.getElementById('modal-novena-img');
             const modalIcon = document.getElementById('modal-novena-icon');
-            const resolvedImg = novena.imagem || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(novena.titulo)) || '';
+            const resolvedImg = getNovenaImage(novena);
             if (modalImg && resolvedImg) {
                 modalImg.src = resolvedImg;
                 modalImg.alt = novena.titulo;
