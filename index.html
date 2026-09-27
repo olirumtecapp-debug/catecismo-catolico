@@ -648,11 +648,10 @@
                         <span id="header-cloud-text" class="header-cloud-text hidden sm:inline">Nuvem</span>
                     </button>
 
-                    <!-- BOTÃO CAIXA POSTAL & CONTATO -->
-                    <button onclick="ContactManager.openMailboxModal()" id="header-mailbox-btn" class="relative flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50/80 dark:bg-indigo-950/50 text-indigo-950 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 transition shadow-xs text-xs font-bold cursor-pointer" title="Caixa Postal & Fale Conosco">
-                        <span class="text-sm">📬</span>
-                        <span class="hidden md:inline">Contato</span>
-                        <span id="header-mailbox-badge" class="mailbox-badge hidden absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full border-2 border-white shadow-xs">0</span>
+                    <!-- BOTÃO INSTALAR APP (PC & SMARTPHONE) -->
+                    <button onclick="openInstallModal()" id="header-install-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-amber-50/90 dark:bg-amber-950/50 text-amber-900 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/60 transition shadow-xs text-xs font-bold cursor-pointer" title="Instalar Aplicativo Catecismo no PC ou Celular">
+                        <span class="text-sm">📲</span>
+                        <span class="hidden md:inline">Instalar App</span>
                     </button>
                 </div>
             </header>
@@ -727,13 +726,23 @@
                         <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📊 Meu Progresso</button>
                         <button onclick="router.navigate('fontes'); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">ℹ️ Fontes e Transparência</button>
                         <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🔎 Pesquisar</button>
+                        <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="text-base shrink-0">📬</span>
+                                <span>Caixa Postal &amp; Contato</span>
+                            </div>
+                            <span class="mailbox-badge hidden bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow-xs">0</span>
+                        </button>
                     </nav>
                     <!-- Mobile Drawer Footer Actions -->
                     <div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 space-y-2">
+                        <button onclick="openInstallModal(); toggleMobileMenu();" id="mobile-install-btn" class="w-full py-2.5 px-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs shadow-sm flex items-center justify-center gap-2 cursor-pointer">
+                            <span class="text-sm">📲</span> <span>Instalar Aplicativo (App)</span>
+                        </button>
                         <button onclick="shareCatecismo('mobile_drawer'); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-xs flex items-center justify-center gap-2 cursor-pointer">
                             <span class="text-sm">📤</span> <span>Compartilhar Catecismo</span>
                         </button>
-                        <button onclick="openApoioModal(); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-amber-500 text-white font-bold text-xs shadow-sm flex items-center justify-center gap-2">
+                        <button onclick="openApoioModal(); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-slate-700 text-amber-700 dark:text-amber-300 font-bold text-xs shadow-xs flex items-center justify-center gap-2">
                             <span>☕</span> <span>Apoiar o Projeto (PIX)</span>
                         </button>
                         <button onclick="openDeveloperModal(); toggleMobileMenu();" class="w-full py-1.5 text-center text-slate-500 dark:text-slate-400 text-xs font-medium">
@@ -9325,6 +9334,138 @@ https://catecismo.creativeam.com.br
             });
         }
         window.copyCatecismoShareText = copyCatecismoShareText;
+
+        /* ========================================================
+           SISTEMA DE INSTALAÇÃO DO APP (PWA — PC & SMARTPHONE)
+           ======================================================== */
+        let deferredPWAInstallPrompt = null;
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(function() {});
+            });
+        }
+
+        window.addEventListener('beforeinstallprompt', function(e) {
+            e.preventDefault();
+            deferredPWAInstallPrompt = e;
+            const actionBtn = document.getElementById('pwa-modal-install-btn');
+            if (actionBtn) actionBtn.classList.remove('hidden');
+        });
+
+        function isAppAlreadyInstalled() {
+            return window.matchMedia('(display-mode: standalone)').matches ||
+                   window.navigator.standalone === true ||
+                   document.referrer.includes('android-app://');
+        }
+
+        window.addEventListener('appinstalled', function() {
+            deferredPWAInstallPrompt = null;
+            if (typeof showToast === 'function') showToast('Catecismo instalado com sucesso!', 'success');
+            hideInstallButtonsIfInstalled();
+        });
+
+        function hideInstallButtonsIfInstalled() {
+            if (isAppAlreadyInstalled()) {
+                const headerBtn = document.getElementById('header-install-btn');
+                const mobileBtn = document.getElementById('mobile-install-btn');
+                if (headerBtn) headerBtn.style.display = 'none';
+                if (mobileBtn) mobileBtn.style.display = 'none';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', hideInstallButtonsIfInstalled);
+
+        function openInstallModal() {
+            if (isAppAlreadyInstalled()) {
+                if (typeof showToast === 'function') {
+                    showToast('O Catecismo já está instalado no seu dispositivo!', 'info');
+                }
+                return;
+            }
+
+            const modal = document.getElementById('modal-container');
+            if (!modal) return;
+
+            modal.innerHTML = `
+                <div class="bg-white dark:bg-slate-800 w-full max-w-md rounded-3xl p-6 md:p-8 space-y-4 text-center shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
+                    <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-lg transition cursor-pointer">✕</button>
+
+                    <div class="flex items-center gap-3.5 pb-3 border-b border-slate-100 dark:border-slate-700">
+                        <img src="/icon-192.png" alt="Catecismo Católico" class="w-12 h-12 rounded-2xl shadow-md border border-amber-300 dark:border-amber-700">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-mariana dark:text-slate-100">Instalar Catecismo Digital</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Aplicativo para PC e Smartphone</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-900/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start gap-2.5">
+                            <span class="text-base text-amber-500 font-bold">⚡</span>
+                            <div><strong>Acesso Rápido:</strong> Abra direto da sua tela inicial ou área de trabalho sem precisar digitar endereço no navegador.</div>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="text-base text-amber-500 font-bold">📖</span>
+                            <div><strong>Leitura Solene e Imersiva:</strong> Navegação limpa em tela cheia, ideal para orações, estudos e liturgia diária.</div>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="text-base text-amber-500 font-bold">💾</span>
+                            <div><strong>Leve e Eficiente:</strong> Não consome espaço de armazenamento como apps tradicionais.</div>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Instalação Direta (1-Clique) -->
+                    <div id="pwa-install-action-container">
+                        <button type="button" id="pwa-modal-install-btn" onclick="executePWAInstall()" class="w-full py-3 px-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold rounded-xl text-sm transition shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                            <span class="text-base">📲</span> Instalar Aplicativo Agora
+                        </button>
+                    </div>
+
+                    <!-- Instruções Manuais -->
+                    <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700">
+                        <p class="text-[11px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wide">Como instalar manualmente:</p>
+                        
+                        <div class="p-3 bg-slate-50 dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 text-[11px] space-y-1">
+                            <div class="font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5">
+                                <span>🍎</span> No iPhone ou iPad (Safari):
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 pl-5">1. Toque no botão de <strong>Compartilhar</strong> (quadrado com seta para cima).</p>
+                            <p class="text-slate-500 dark:text-slate-400 pl-5">2. Selecione <strong>"Adicionar à Tela de Início"</strong>.</p>
+                        </div>
+
+                        <div class="p-3 bg-slate-50 dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 text-[11px] space-y-1">
+                            <div class="font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5">
+                                <span>💻</span> No Computador (Chrome / Edge):
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 pl-5">Clique no ícone de instalar <strong>(🖥️ / ⊕)</strong> na barra de endereços no topo direito.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-1">
+                        <button onclick="closeModal()" class="w-full py-2 text-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-medium transition cursor-pointer">
+                            Agora não, continuar lendo
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        window.openInstallModal = openInstallModal;
+
+        async function executePWAInstall() {
+            if (deferredPWAInstallPrompt) {
+                deferredPWAInstallPrompt.prompt();
+                const choice = await deferredPWAInstallPrompt.userChoice;
+                deferredPWAInstallPrompt = null;
+                closeModal();
+            } else {
+                if (typeof showToast === 'function') {
+                    showToast('Siga as instruções acima para adicionar à tela de início.', 'info');
+                }
+            }
+        }
+        window.executePWAInstall = executePWAInstall;
 
         function handleSearch(query) {
             if (!query || query.length < 2) return;
