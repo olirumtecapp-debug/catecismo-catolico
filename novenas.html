@@ -296,6 +296,40 @@
             document.documentElement.style.setProperty('--prayer-scale', fontScale);
         };
 
+        window.handleSaintImageError = function(imgEl, novenaIdOrTitle, dateStr) {
+            if (!imgEl) return;
+            const novena = (typeof novenasList !== 'undefined' && Array.isArray(novenasList)) ? novenasList.find(n => n.id === novenaIdOrTitle) : null;
+            const saintTitle = novena ? novena.titulo : (novenaIdOrTitle || '');
+
+            if (!imgEl.dataset.fallbackTried) {
+                imgEl.dataset.fallbackTried = '1';
+                if (imgEl.src.endsWith('.jpg')) {
+                    imgEl.src = imgEl.src.replace(/\.jpg$/, '.png');
+                    return;
+                } else if (imgEl.src.endsWith('.png')) {
+                    imgEl.src = imgEl.src.replace(/\.png$/, '.jpg');
+                    return;
+                }
+            }
+            if (!imgEl.dataset.catalogTried && typeof window.resolveLocalSaintImage === 'function') {
+                imgEl.dataset.catalogTried = '1';
+                const local = window.resolveLocalSaintImage(saintTitle, dateStr);
+                if (local && !imgEl.src.includes(local)) {
+                    imgEl.src = local;
+                    return;
+                }
+            }
+            if (!imgEl.dataset.blessingTried) {
+                imgEl.dataset.blessingTried = '1';
+                imgEl.src = 'assets/img/liturgia/cristo_bencao.jpg';
+                return;
+            }
+            imgEl.style.display = 'none';
+            if (imgEl.nextElementSibling) {
+                imgEl.nextElementSibling.style.display = 'flex';
+            }
+        };
+
         // Carregar JSON de Novenas
         async function loadNovenas() {
             try {
@@ -341,7 +375,7 @@
                             <div class="flex items-center gap-3.5">
                                 <div class="w-14 h-14 rounded-2xl overflow-hidden bg-amber-100 dark:bg-amber-900/60 border border-amber-300 dark:border-amber-700 shadow-xs shrink-0 flex items-center justify-center">
                                     ${fullNovena.imagem ? `
-                                        <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${fullNovena.id}')">
                                         <div class="hidden w-full h-full items-center justify-center text-3xl">${fullNovena.simbolo || '⏳'}</div>
                                     ` : `<span class="text-3xl">${fullNovena.simbolo || '⏳'}</span>`}
                                 </div>
@@ -377,7 +411,7 @@
                         <div class="flex items-start gap-4">
                             <div class="w-16 h-16 rounded-2xl overflow-hidden bg-rose-500 text-white shadow-lg shrink-0 flex items-center justify-center border-2 border-white dark:border-slate-800">
                                 ${fullNovena.imagem ? `
-                                    <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="${fullNovena.imagem}" alt="${fullNovena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${fullNovena.id}')">
                                     <div class="hidden w-full h-full items-center justify-center text-3xl">${fullNovena.simbolo || '🌹'}</div>
                                 ` : `<span class="text-3xl">${fullNovena.simbolo || '🌹'}</span>`}
                             </div>
@@ -467,7 +501,7 @@
                             <div class="flex items-center justify-between gap-2">
                                 <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
                                     ${novena.imagem ? `
-                                        <img src="${novena.imagem}" alt="${novena.titulo}" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <img src="${novena.imagem}" alt="${novena.titulo}" class="w-full h-full object-cover" onerror="window.handleSaintImageError(this, '${novena.id}')">
                                         <div class="hidden w-full h-full items-center justify-center text-2xl">${novena.simbolo || '🙏'}</div>
                                     ` : `<span class="text-2xl">${novena.simbolo || '🙏'}</span>`}
                                 </div>
