@@ -1008,6 +1008,14 @@
             if (kind === 'salmo') {
                 return ref.replace(/^Salmo\s+/i, 'Sl ').replace(/\s+/g, ' ');
             }
+            const matchGeneric = ref.match(/^([1-3]?\s*[A-Za-zÀ-ÿ]+)\s+(\d+)[\s,:]+([\d\-–.,\s]+)$/);
+            if (matchGeneric) {
+                const rawBook = matchGeneric[1].trim();
+                const book = bookAbbrMap[rawBook] || rawBook;
+                const chap = matchGeneric[2];
+                const verses = matchGeneric[3].replace(/\s+/g, '');
+                return `${book} ${chap},${verses}`;
+            }
             const parts = ref.split(/[,:]/);
             if (parts.length >= 2) {
                 const rawBook = parts[0].trim();
@@ -5117,9 +5125,9 @@
             buttons.forEach(btn => {
                 const isCurrent = btn.getAttribute('data-lit-tab') === tabName;
                 if (isCurrent) {
-                    btn.className = 'lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs';
+                    btn.className = 'lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer';
                 } else {
-                    btn.className = 'lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700';
+                    btn.className = 'lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer';
                 }
             });
 
@@ -5552,10 +5560,16 @@
 
                         ${showQuickGuide ? `
                             <!-- Guia Acolhedor de Primeiro Acesso (Dispensável) -->
-                            <div id="quick-guide-card" class="p-5 rounded-3xl bg-amber-50/80 dark:bg-slate-800/90 border border-amber-200/90 dark:border-amber-700/60 shadow-xs relative transition-all">
-                                <button onclick="localStorage.setItem('catecismo_hide_quick_guide', 'true'); document.getElementById('quick-guide-card')?.remove();" class="absolute top-3.5 right-3.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-bold px-2 py-1 rounded-lg hover:bg-amber-100/50 dark:hover:bg-slate-700 cursor-pointer" title="Dispensar orientação">✕ Dispensar</button>
-                                <div class="flex items-center gap-2 mb-3">
-                                    <span class="text-xs font-bold text-amber-900 dark:text-amber-200 uppercase tracking-wider">🕊️ O que você deseja fazer agora?</span>
+                            <div id="quick-guide-card" class="p-5 rounded-3xl bg-amber-50/80 dark:bg-slate-800/90 border border-amber-200/90 dark:border-amber-700/60 shadow-xs transition-all">
+                                <div class="flex items-start sm:items-center justify-between gap-3 mb-3.5">
+                                    <div class="flex items-center gap-2 min-w-0">
+                                        <span class="text-base shrink-0">🕊️</span>
+                                        <span class="text-xs font-bold text-amber-900 dark:text-amber-200 uppercase tracking-wider leading-snug">O que você deseja fazer agora?</span>
+                                    </div>
+                                    <button onclick="localStorage.setItem('catecismo_hide_quick_guide', 'true'); document.getElementById('quick-guide-card')?.remove();" class="shrink-0 inline-flex items-center gap-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xs font-bold px-2.5 py-1 rounded-lg hover:bg-amber-200/60 dark:hover:bg-slate-700 transition cursor-pointer border border-transparent hover:border-amber-300/60" title="Dispensar orientação">
+                                        <span>✕</span>
+                                        <span>Dispensar</span>
+                                    </button>
                                 </div>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
                                     <button onclick="router.navigate('oracao', 'intencoes')" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/80 dark:border-slate-700 hover:border-amber-400 text-left transition flex items-center gap-2.5 shadow-2xs cursor-pointer group">
@@ -6271,21 +6285,21 @@
                         </div>
 
                         <!-- Canção Nova Standard Liturgical Tabs -->
-                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar">
-                            <button onclick="window.switchLiturgiaTab('todas')" data-lit-tab="todas" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs">
+                        <div class="flex items-center gap-2 overflow-x-auto pb-2 pt-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar touch-pan-x -mx-1 px-1 sm:mx-0 sm:px-0">
+                            <button onclick="window.switchLiturgiaTab('todas')" data-lit-tab="todas" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer">
                                 Todas
                             </button>
-                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 1ª Leitura
                             </button>
-                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 Salmo
                             </button>
                             ${lit.secondReading ? `
-                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 2ª Leitura
                             </button>` : ''}
-                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 Evangelho
                             </button>
                         </div>
