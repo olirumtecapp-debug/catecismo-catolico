@@ -17,8 +17,11 @@
     "secondReading": null,
     "gospel": {
       "reference": "Mt 18,1-5.10",
-      "acclamation": null,
-      "text": "Sl 102(103),21 ℟. Aleluia, Aleluia, Aleluia. ℣. Bendizei ao Senhor Deus, os seus poderes, seus ministros que fazeis sua vontade! EVANGELHO Os seus anjos nos céus veem sem cessara face do meu Pai que está nos céus. Proclamação do Evangelho de Jesus Cristo segundo Mateus 18,1-5.10 1 Os discípulos aproximaram-se de Jesus e perguntaram: \"Quem é o maior no Reino dos Céus?\" 2 Jesus chamou uma criança, colocou-a no meio deles 3 e disse: \"Em verdade vos digo, se não vos converterdes, e não vos tornardes como crianças, não entrareis no Reino dos Céus. 4 Quem se faz pequeno como esta criança, esse é o maior no Reino dos Céus. 5 E quem recebe em meu nome uma criança como esta, é a mim que recebe. 10 Não desprezeis nenhum desses pequeninos, pois eu vos digo que os seus anjos nos céus veem sem cessar a face do meu Pai que está nos céus\". ℣."
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Bendizei ao Senhor Deus, os seus poderes, seus ministros que fazeis sua vontade!"
+      },
+      "text": "EVANGELHO Os seus anjos nos céus veem sem cessara face do meu Pai que está nos céus. Proclamação do Evangelho de Jesus Cristo segundo Mateus 18,1-5.10 1 Os discípulos aproximaram-se de Jesus e perguntaram: \"Quem é o maior no Reino dos Céus?\" 2 Jesus chamou uma criança, colocou-a no meio deles 3 e disse: \"Em verdade vos digo, se não vos converterdes, e não vos tornardes como crianças, não entrareis no Reino dos Céus. 4 Quem se faz pequeno como esta criança, esse é o maior no Reino dos Céus. 5 E quem recebe em meu nome uma criança como esta, é a mim que recebe. 10 Não desprezeis nenhum desses pequeninos, pois eu vos digo que os seus anjos nos céus veem sem cessar a face do meu Pai que está nos céus\"."
     }
   },
   "extra": []

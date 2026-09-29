@@ -17,8 +17,11 @@
     "secondReading": null,
     "gospel": {
       "reference": "Mt 12,46-50",
-      "acclamation": null,
-      "text": "Lc 11,28 ℟. Aleluia, Aleluia, Aleluia. ℣. Feliz quem ouve e observa a palavra de Deus! EVANGELHO E, estendendo a mão para os discípulos, Jesus disse:\"Eis minha mãe e meus irmãos\". Proclamação do Evangelho de Jesus Cristo segundo Mateus 12,46-50 Naquele tempo, 46 enquanto Jesus estava falando às multidões, sua mãe e seus irmãos ficaram do lado de fora, procurando falar com ele. 47 Alguém disse a Jesus: \"Olha! Tua mãe e teus irmãos estão aí fora, e querem falar contigo\". 48 Jesus perguntou àquele que tinha falado: \"Quem é minha mãe, e quem são meus irmãos?\" 49 E, estendendo a mão para os discípulos, Jesus disse: \"Eis minha mãe e meus irmãos. 50 Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe\". ℣."
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Feliz quem ouve e observa a palavra de Deus!"
+      },
+      "text": "Naquele tempo, 46 enquanto Jesus estava falando às multidões, sua mãe e seus irmãos ficaram do lado de fora, procurando falar com ele. 47 Alguém disse a Jesus: \"Olha! Tua mãe e teus irmãos estão aí fora, e querem falar contigo\". 48 Jesus perguntou àquele que tinha falado: \"Quem é minha mãe, e quem são meus irmãos?\" 49 E, estendendo a mão para os discípulos, Jesus disse: \"Eis minha mãe e meus irmãos. 50 Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe\"."
     }
   },
   "extra": []

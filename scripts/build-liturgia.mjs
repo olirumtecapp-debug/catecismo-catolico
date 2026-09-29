@@ -406,6 +406,44 @@ function buildFromApi(j,date){
 
 function nonEmpty(v){ return typeof v === 'string' && v.trim().length > 0; }
 
+function cleanLiturgyRecord(data){
+  const r = data?.readings;
+  if (!r) return data;
+  for(const k of ['firstReading','secondReading','psalm','gospel']){
+    if(r[k]?.text){
+      r[k].text = r[k].text.replace(/[℣℟]\.?\s*$/g, '').trim();
+    }
+  }
+  if(r.firstReading?.text){
+    r.firstReading.text = r.firstReading.text.replace(/^(?:\d+\s+leituras\s+[àa]\s+escolha[^\n]*\n*)/i, '').trim();
+  }
+  if(r.psalm?.text && r.psalm?.refrain){
+    const safeRef = r.psalm.refrain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    r.psalm.text = r.psalm.text.replace(new RegExp('^(?:[—–-]\\s*)?(?:Respons[óo]rio\\s+)?(?:Sl|Salmo)\\s+[^\n℟R]+(?:\\([^)]*\\))?\\s*(?:[℟R]\\.?\\s*)?' + safeRef + '[.!?:\\s-]*\n*', 'i'), '').trim();
+  }
+  if(r.gospel?.text){
+    let t = r.gospel.text;
+    if(!r.gospel.acclamation && (t.includes('Aleluia') || /℟\.?\s*Aleluia/i.test(t))){
+      const match = t.match(/(?:([A-Za-z0-9,\s\-]+?)\s*)?[℟R]\.?\s*(Aleluia[^\n℣]+)(?:[℣V]\.?\s*([\s\S]+?(?=EVANGELHO|Proclama[cç][aã]o|Naquele tempo|\d+\s*[A-ZÀ-ÿ])))?/i);
+      if(match){
+        r.gospel.acclamation = {
+          title: clean(match[2]?.replace(/[℣℟]/g, '') || 'Aleluia, Aleluia, Aleluia.'),
+          verse: clean(match[3]?.replace(/[℣℟]/g, '') || '')
+        };
+        t = t.slice(match.index + match[0].length).trim();
+      }
+    }
+    if(/Naquele tempo/i.test(t)){
+      const nqIdx = t.search(/Naquele tempo/i);
+      if(nqIdx > 0 && nqIdx < 250){
+        t = t.slice(nqIdx).trim();
+      }
+    }
+    r.gospel.text = t;
+  }
+  return data;
+}
+
 async function main(){
   await fs.mkdir(OUT,{recursive:true});
   const dates=onlyDate?[onlyDate]:listDates(y,endYear);
@@ -417,7 +455,8 @@ async function main(){
     while(cursor < dates.length){
       const date = dates[cursor++];
       try{
-        const data=await loadDate(date);
+        let data=await loadDate(date);
+        data = cleanLiturgyRecord(data);
         const outPath=path.join(OUT, date.slice(0,4), `${date}.json`);
         await fs.mkdir(path.dirname(outPath),{recursive:true});
         await fs.writeFile(outPath, JSON.stringify(data,null,2),'utf8');

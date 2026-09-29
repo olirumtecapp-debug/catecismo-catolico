@@ -17,8 +17,11 @@
     "secondReading": null,
     "gospel": {
       "reference": "Lc 19,1-10",
-      "acclamation": null,
-      "text": "1Jo 4,10b ℟. Aleluia, Aleluia, Aleluia. ℣. Por amor, Deus enviou-nos o seu Filho, como vítima por nossas transgressões. EVANGELHO O Filho do Homem veio procurar e salvar o que estava perdido. Proclamação do Evangelho de Jesus Cristo segundo Lucas 19,1-10 Naquele tempo, 1 Jesus tinha entrado em Jericó e estava atravessando a cidade. 2 Havia ali um homem chamado Zaqueu, que era chefe dos cobradores de impostos e muito rico. 3 Zaqueu procurava ver quem era Jesus, mas não conseguia, por causa da multidão, pois era muito baixo. 4 Então ele correu à frente e subiu numa figueira para ver Jesus, que devia passar por ali. 5 Quando Jesus chegou ao lugar, olhou para cima e disse: \"Zaqueu, desce depressa! Hoje eu devo ficar na tua casa\". 6 Ele desceu depressa, e recebeu Jesus com alegria. 7 Ao ver isso, todos começaram a murmurar, dizendo: \"Ele foi hospedar-se na casa de um pecador!\" 8 Zaqueu ficou de pé, e disse ao Senhor: \"Senhor, eu dou a metade dos meus bens aos pobres, e se defraudei alguém, vou devolver quatro vezes mais\". 9 Jesus lhe disse: \"Hoje a salvação entrou nesta casa, porque também este homem é um filho de Abraão. 10 Com efeito, o Filho do Homem veio procurar e salvar o que estava perdido\". ℣."
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Por amor, Deus enviou-nos o seu Filho, como vítima por nossas transgressões."
+      },
+      "text": "Naquele tempo, 1 Jesus tinha entrado em Jericó e estava atravessando a cidade. 2 Havia ali um homem chamado Zaqueu, que era chefe dos cobradores de impostos e muito rico. 3 Zaqueu procurava ver quem era Jesus, mas não conseguia, por causa da multidão, pois era muito baixo. 4 Então ele correu à frente e subiu numa figueira para ver Jesus, que devia passar por ali. 5 Quando Jesus chegou ao lugar, olhou para cima e disse: \"Zaqueu, desce depressa! Hoje eu devo ficar na tua casa\". 6 Ele desceu depressa, e recebeu Jesus com alegria. 7 Ao ver isso, todos começaram a murmurar, dizendo: \"Ele foi hospedar-se na casa de um pecador!\" 8 Zaqueu ficou de pé, e disse ao Senhor: \"Senhor, eu dou a metade dos meus bens aos pobres, e se defraudei alguém, vou devolver quatro vezes mais\". 9 Jesus lhe disse: \"Hoje a salvação entrou nesta casa, porque também este homem é um filho de Abraão. 10 Com efeito, o Filho do Homem veio procurar e salvar o que estava perdido\"."
     }
   },
   "extra": []

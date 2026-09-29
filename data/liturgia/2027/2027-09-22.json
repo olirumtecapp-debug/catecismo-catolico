@@ -17,8 +17,11 @@
     "secondReading": null,
     "gospel": {
       "reference": "Lc 9,1-6",
-      "acclamation": null,
-      "text": "Mc 1,15 ℟. Aleluia, Aleluia, Aleluia. ℣. Convertei-vos e crede no Evangelho, pois, o Reino de Deus está chegando! EVANGELHO Enviou-os a proclamar o Reino de Deuse a curar os enfermos. Proclamação do Evangelho de Jesus Cristo segundo Lucas 9,1-6 Naquele tempo, 1 Jesus convocou os Doze, deu-lhes poder e autoridade sobre todos os demônios e para curar doenças, 2 e enviou-os a proclamar o Reino de Deus e a curar os enfermos. 3 E disse-lhes: \"Não leveis nada para o caminho: nem cajado, nem sacola, nem pão, nem dinheiro, nem mesmo duas túnicas. 4 Em qualquer casa onde entrardes, ficai aí; e daí é que partireis de novo. 5 Todos aqueles que não vos acolherem, ao sairdes daquela cidade, sacudi a poeira dos vossos pés, como protesto contra eles\". 6 Os discípulos partiram e percorriam os povoados, anunciando a Boa-Nova e fazendo curas em todos os lugares. ℣."
+      "acclamation": {
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Convertei-vos e crede no"
+      },
+      "text": "Naquele tempo, 1 Jesus convocou os Doze, deu-lhes poder e autoridade sobre todos os demônios e para curar doenças, 2 e enviou-os a proclamar o Reino de Deus e a curar os enfermos. 3 E disse-lhes: \"Não leveis nada para o caminho: nem cajado, nem sacola, nem pão, nem dinheiro, nem mesmo duas túnicas. 4 Em qualquer casa onde entrardes, ficai aí; e daí é que partireis de novo. 5 Todos aqueles que não vos acolherem, ao sairdes daquela cidade, sacudi a poeira dos vossos pés, como protesto contra eles\". 6 Os discípulos partiram e percorriam os povoados, anunciando a Boa-Nova e fazendo curas em todos os lugares."
     }
   },
   "extra": []

@@ -6,3 +6,5 @@ backups
 *.bak_*
 .DS_Store
 Thumbs.db
+scratch/
+
