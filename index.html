@@ -5118,30 +5118,32 @@
         }
         window.compartilharEvangelhoWhatsApp = compartilharEvangelhoWhatsApp;
 
-        window.currentLiturgiaTab = 'todas';
-        window.switchLiturgiaTab = function(tabName) {
+        window.currentLiturgiaTab = 'primeira';
+        window.switchLiturgiaTab = function(tabName, scrollIntoView = false) {
             window.currentLiturgiaTab = tabName;
             const buttons = document.querySelectorAll('.lit-tab-btn');
             buttons.forEach(btn => {
                 const isCurrent = btn.getAttribute('data-lit-tab') === tabName;
                 if (isCurrent) {
-                    btn.className = 'lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer';
+                    btn.className = 'lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer';
                 } else {
-                    btn.className = 'lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer';
+                    btn.className = 'lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer';
                 }
             });
 
             const cards = document.querySelectorAll('[data-lit-card]');
             cards.forEach(card => {
                 const cardType = card.getAttribute('data-lit-card');
-                if (tabName === 'todas') {
-                    card.style.display = 'block';
-                } else if (tabName === 'evangelho') {
+                if (tabName === 'evangelho') {
                     card.style.display = (cardType === 'evangelho' || cardType === 'comentario') ? 'block' : 'none';
                 } else {
                     card.style.display = (cardType === tabName) ? 'block' : 'none';
                 }
             });
+
+            if (scrollIntoView) {
+                document.getElementById('liturgical-tabs-nav')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         };
 
         /* ==========================================
@@ -6185,8 +6187,50 @@
                         `;
                     }
 
+                    let navButtonsHtml = '';
+                    if (kindKey === 'primeira') {
+                        navButtonsHtml = `
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-end">
+                                <button onclick="window.switchLiturgiaTab('salmo', true)" class="px-4 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+                                    <span>Ir para o Salmo</span> <span>→</span>
+                                </button>
+                            </div>
+                        `;
+                    } else if (kindKey === 'salmo') {
+                        navButtonsHtml = `
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between gap-2">
+                                <button onclick="window.switchLiturgiaTab('primeira', true)" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>←</span> <span>1ª Leitura</span>
+                                </button>
+                                <button onclick="window.switchLiturgiaTab('${lit.secondReading ? 'segunda' : 'evangelho'}', true)" class="px-4 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+                                    <span>${lit.secondReading ? 'Ir para a 2ª Leitura' : 'Ir para o Evangelho'}</span> <span>→</span>
+                                </button>
+                            </div>
+                        `;
+                    } else if (kindKey === 'segunda') {
+                        navButtonsHtml = `
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between gap-2">
+                                <button onclick="window.switchLiturgiaTab('salmo', true)" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>←</span> <span>Salmo</span>
+                                </button>
+                                <button onclick="window.switchLiturgiaTab('evangelho', true)" class="px-4 py-2 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+                                    <span>Ir para o Evangelho</span> <span>→</span>
+                                </button>
+                            </div>
+                        `;
+                    } else if (kindKey === 'evangelho') {
+                        navButtonsHtml = `
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between gap-2">
+                                <button onclick="window.switchLiturgiaTab('${lit.secondReading ? 'segunda' : 'salmo'}', true)" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>←</span> <span>${lit.secondReading ? '2ª Leitura' : 'Salmo'}</span>
+                                </button>
+                                <div></div>
+                            </div>
+                        `;
+                    }
+
                     return `
-                        <div data-lit-card="${kindKey}" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-slate-700 card-shadow space-y-3 transition-all">
+                        <div data-lit-card="${kindKey}" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 border border-slate-200 dark:border-slate-700 card-shadow space-y-3 transition-all" style="${kindKey === 'primeira' ? '' : 'display: none;'}">
                             <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/80 pb-3">
                                 <h3 class="font-serif text-xl sm:text-2xl font-bold text-mariana dark:text-amber-200">${esc(cardHeader)}</h3>
                             </div>
@@ -6208,6 +6252,7 @@
                                 ` : '<div></div>'}
                                 ${reading.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(reading.reference)}')" class="text-[11px] font-bold text-mariana dark:text-amber-400 hover:text-dourado">📖 Abrir referência na Bíblia</button>` : ''}
                             </div>
+                            ${navButtonsHtml}
                         </div>
                     `;
                 };
@@ -6216,7 +6261,7 @@
                 const activeCommentary = lit.commentary || (typeof formatUnifiedCommentary === 'function' ? formatUnifiedCommentary(lit.extras?.map(e => e.texto)) : null);
                 if (activeCommentary) {
                     commentaryCardHtml = `
-                        <div data-lit-card="comentario" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
+                        <div data-lit-card="comentario" class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-4" style="display: none;">
                             <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-3">
                                 <div class="flex items-center gap-2">
                                     <span class="text-lg">🕊️</span>
@@ -6236,7 +6281,7 @@
                     `;
                 } else if (lit.extras && lit.extras.length > 0) {
                     commentaryCardHtml = `
-                        <div data-lit-card="comentario" class="space-y-3">
+                        <div data-lit-card="comentario" class="space-y-3" style="display: none;">
                             <h3 class="font-serif text-xl font-bold text-mariana dark:text-amber-200">Textos e opções adicionais</h3>
                             ${lit.extras.map(extra => `
                                 <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-5 card-shadow">
@@ -6284,22 +6329,19 @@
                             </button>
                         </div>
 
-                        <!-- Canção Nova Standard Liturgical Tabs -->
-                        <div class="flex items-center gap-2 overflow-x-auto pb-2 pt-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar touch-pan-x -mx-1 px-1 sm:mx-0 sm:px-0">
-                            <button onclick="window.switchLiturgiaTab('todas')" data-lit-tab="todas" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer">
-                                Todas
-                            </button>
-                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                        <!-- Canção Nova Standard Liturgical Tabs (1ª Leitura, Salmo, 2ª Leitura, Evangelho) -->
+                        <div id="liturgical-tabs-nav" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 pt-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar touch-pan-x">
+                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer">
                                 1ª Leitura
                             </button>
-                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 Salmo
                             </button>
                             ${lit.secondReading ? `
-                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 2ª Leitura
                             </button>` : ''}
-                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 Evangelho
                             </button>
                         </div>
