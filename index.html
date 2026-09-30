@@ -79,6 +79,11 @@
 
         #main-view p,
         #main-view .font-serif,
+        #modal-container p,
+        #modal-container .font-serif,
+        #rosary-content-area p,
+        #rosary-content-area .font-serif,
+        #rosary-content-area em,
         .bible-verse-text,
         .liturgical-reading-text,
         .reading-content,
@@ -1160,54 +1165,46 @@
                     }
                 }
                 // Strip explicit heading lines if present at the start, without cutting scripture text
-                text = text.replace(/^(?:[—–-]\s*)?EVANGELHO\b\s*[^\n.:]*[\n.]+\s*/i, '').trim();
-                
-                // Never cut into "Naquele tempo" or verse numbers
-                if (/Naquele tempo/i.test(text)) {
-                    text = text.replace(/^[\s\S]*?(?=Naquele tempo)/i, '').trim();
-                } else {
-                    text = text.replace(/^(?:[—–-]\s*)?Proclama[cç][aã]o\s+do\s+Evangelho\s+de\s+Jesus\s+Cristo[^\n]*\n*/i, '').trim();
-                    text = text.replace(/^(?:[—–-]\s*)?Gl[óo]ria\s+a\s+v[óo]s,\s*Senhor\.?\s*/i, '').trim();
+                text = text.replace(/^(?:[—–-]\s*)?(?:Santo\s+)?EVANGELHO\b\s*(?:\([^)]*\))?[^\n.:]*[\n.:]+\s*/i, '').trim();
+                text = text.replace(/^(?:[—–-]\s*)?Proclama[cç][aã]o\s+do\s+(?:Santo\s+)?Evangelho\s+de\s+Jesus\s+Cristo[^\n.:]*[\n.:]+\s*/i, '').trim();
+                text = text.replace(/^(?:[—–-]\s*)?Gl[óo]ria\s+a\s+v[óo]s,\s*Senhor\.?\s*/i, '').trim();
+
+                // Only trim to "Naquele tempo" if it appears at the start (introductory ritual formula)
+                const nqIdx = text.search(/\bNaquele tempo\b/i);
+                if (nqIdx >= 0 && nqIdx < 180) {
+                    text = text.slice(nqIdx).trim();
                 }
             } else if (kind === 'salmo') {
                 // Strip duplicate psalm reference at the start of text (e.g. "Sl 137(138)... ℟. Perante...")
                 text = text.replace(/^(?:[—–-]\s*)?(?:Respons[óo]rio\s+)?(?:Sl|Salmo)\s+[^\n℟R]+(?:\([^)]*\))?\s*/i, '').trim();
 
                 if (refrain) {
-                    const safeRef = refrain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const cleanRef = refrain.replace(/^[—–-]\s*/, '').replace(/^(?:[℟R]\.?|R\s*[:.\-])\s*/i, '').trim();
+                    const safeRef = cleanRef.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                     const refRegex = new RegExp('^(?:[—–-]\\s*)?(?:[℟R]\\.?\\s*)?' + safeRef + '[.!?:\\s-]*\n*', 'i');
                     text = text.replace(refRegex, '').trim();
                     text = text.replace(refRegex, '').trim();
                 } else {
-                    const rMatch = text.match(/(?:^|\n)\s*(?:[A-Za-z0-9(),.\s-]+\s*)?(?:℟|R\.)\s*([^\n.]+[\n.]+)/i);
+                    const rMatch = text.match(/^(?:[—–-]\s*)?(?:[℟R]\.?\s*)([^\n.]+[\n.]+)/i) || text.match(/(?:^|\n)\s*(?:[A-Za-z0-9(),.\s-]+\s*)?(?:℟|R\.)\s*([^\n.]+[\n.]+)/i);
                     if (rMatch) {
                         refrain = rMatch[1].replace(/[℟R]/g, '').trim();
                         text = text.slice(rMatch.index + rMatch[0].length).trim();
-                    } else {
-                        const match = text.match(/^([^.!\n]+[.!]?)/);
-                        if (match && match[1].length < 130) {
-                            refrain = match[1].replace(/[.!]$/, '').trim() + '!';
-                            text = text.slice(match[0].length).trim();
-                        }
                     }
                 }
+                text = text.replace(/^(?:[—–-]\s*)?[℟R]\.?\s*/i, '').trim();
             } else {
                 text = text.replace(/^(?:\d+\s+leituras\s+[àa]\s+escolha[^\n]*\n*)/i, '').trim();
                 text = text.replace(/^(?:[—–-]\s*)?(?:Primeira|Segunda)\s+Leitura\s*(?:\([^)]*\))?\s*/i, '').trim();
 
                 if (!intro) {
-                    const introMatch = text.match(/(Leitura (?:do Livro|da Carta|dos Atos|do Profeta|da Profecia)[^\n.:]*[\n.:]+)/i);
+                    const introMatch = text.match(/^(?:[—–-]\s*)?(Leitura (?:do Livro|da Carta|dos Atos|do Profeta|da Profecia)[^\n.:]*[\n.:]+)/i);
                     if (introMatch) {
                         intro = introMatch[1].trim();
-                        const lastIdx = text.lastIndexOf(introMatch[1]);
-                        if (lastIdx !== -1) {
-                            text = text.slice(lastIdx + introMatch[1].length).trim();
-                        }
+                        text = text.slice(introMatch[0].length).trim();
                     } else {
                         intro = getReadingIntro(reference);
                     }
-                }
-                if (intro) {
+                } else {
                     const safeIntro = intro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                     text = text.replace(new RegExp('^(?:[—–-]\\s*)?' + safeIntro + '\\s*', 'i'), '').trim();
                 }
@@ -5125,9 +5122,9 @@
             buttons.forEach(btn => {
                 const isCurrent = btn.getAttribute('data-lit-tab') === tabName;
                 if (isCurrent) {
-                    btn.className = 'lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer';
+                    btn.className = 'lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer';
                 } else {
-                    btn.className = 'lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer';
+                    btn.className = 'lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer';
                 }
             });
 
@@ -5562,15 +5559,15 @@
 
                         ${showQuickGuide ? `
                             <!-- Guia Acolhedor de Primeiro Acesso (Dispensável) -->
-                            <div id="quick-guide-card" class="p-5 rounded-3xl bg-amber-50/80 dark:bg-slate-800/90 border border-amber-200/90 dark:border-amber-700/60 shadow-xs transition-all">
-                                <div class="flex items-start sm:items-center justify-between gap-3 mb-3.5">
-                                    <div class="flex items-center gap-2 min-w-0">
+                            <div id="quick-guide-card" class="p-4 sm:p-5 rounded-3xl bg-amber-50/80 dark:bg-slate-800/90 border border-amber-200/90 dark:border-amber-700/60 shadow-xs transition-all">
+                                <div class="flex items-center justify-between gap-2 mb-3.5">
+                                    <div class="flex items-center gap-2 min-w-0 flex-1">
                                         <span class="text-base shrink-0">🕊️</span>
-                                        <span class="text-xs font-bold text-amber-900 dark:text-amber-200 uppercase tracking-wider leading-snug">O que você deseja fazer agora?</span>
+                                        <span class="text-xs font-bold text-amber-900 dark:text-amber-200 uppercase tracking-wide leading-tight truncate sm:whitespace-normal">O que você deseja fazer agora?</span>
                                     </div>
-                                    <button onclick="localStorage.setItem('catecismo_hide_quick_guide', 'true'); document.getElementById('quick-guide-card')?.remove();" class="shrink-0 inline-flex items-center gap-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xs font-bold px-2.5 py-1 rounded-lg hover:bg-amber-200/60 dark:hover:bg-slate-700 transition cursor-pointer border border-transparent hover:border-amber-300/60" title="Dispensar orientação">
-                                        <span>✕</span>
-                                        <span>Dispensar</span>
+                                    <button onclick="localStorage.setItem('catecismo_hide_quick_guide', 'true'); document.getElementById('quick-guide-card')?.remove();" class="shrink-0 inline-flex items-center gap-1 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xs font-semibold px-2 py-1 rounded-lg hover:bg-amber-200/60 dark:hover:bg-slate-700 transition cursor-pointer border border-transparent hover:border-amber-300/60" title="Dispensar orientação">
+                                        <span class="text-xs">✕</span>
+                                        <span class="text-[11px] sm:text-xs">Dispensar</span>
                                     </button>
                                 </div>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
@@ -6149,8 +6146,8 @@
                         const refrainText = (cleaned.refrain || reading.refrain || 'Bendito seja o Senhor!').replace(/^[—–-]\s*/, '').replace(/^(?:℟\.?|R\s*[:.\-])\s*/i, '').trim();
                         introHtml = `
                             <div class="p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-900/40 my-3 space-y-1">
-                                <p class="text-sm sm:text-base font-bold text-amber-900 dark:text-amber-300 leading-snug">— ${esc(refrainText)}</p>
-                                <p class="text-sm sm:text-base font-bold text-amber-900 dark:text-amber-300 leading-snug mt-1">— ${esc(refrainText)}</p>
+                                <p class="text-[11px] uppercase font-bold text-amber-800 dark:text-amber-300 tracking-wider">Refrão (todos):</p>
+                                <p class="text-sm sm:text-base font-bold text-amber-950 dark:text-amber-100 leading-snug">— ${esc(refrainText)}</p>
                             </div>
                         `;
                         const strophes = cleaned.text.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean);
@@ -6331,17 +6328,17 @@
 
                         <!-- Canção Nova Standard Liturgical Tabs (1ª Leitura, Salmo, 2ª Leitura, Evangelho) -->
                         <div id="liturgical-tabs-nav" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 pt-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar touch-pan-x">
-                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer">
                                 1ª Leitura
                             </button>
-                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('salmo')" data-lit-tab="salmo" class="lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 Salmo
                             </button>
                             ${lit.secondReading ? `
-                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('segunda')" data-lit-tab="segunda" class="lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 2ª Leitura
                             </button>` : ''}
-                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn flex-1 min-w-[76px] sm:min-w-0 shrink-0 sm:shrink text-center whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                            <button onclick="window.switchLiturgiaTab('evangelho')" data-lit-tab="evangelho" class="lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                                 Evangelho
                             </button>
                         </div>
@@ -9764,6 +9761,17 @@ https://catecismo.creativeam.com.br
                 }
                 const indicators = document.querySelectorAll('#font-scale-indicator, .font-scale-indicator');
                 indicators.forEach(el => el.innerText = this.labels[this.currentIndex]);
+
+                // Sincroniza escala com o iframe de Novenas
+                try {
+                    const novenasIframe = document.getElementById('novenas-iframe');
+                    if (novenasIframe && novenasIframe.contentWindow) {
+                        novenasIframe.contentWindow.postMessage({ type: 'CATECISMO_FONT_SCALE_CHANGE', scale }, '*');
+                        if (novenasIframe.contentDocument && novenasIframe.contentDocument.documentElement) {
+                            novenasIframe.contentDocument.documentElement.style.setProperty('--prayer-scale', String(scale));
+                        }
+                    }
+                } catch(e) {}
             }
         };
         window.FontScaleManager = FontScaleManager;
@@ -9795,8 +9803,14 @@ https://catecismo.creativeam.com.br
 
             modal.innerHTML = `
                 <div class="bg-white dark:bg-slate-800 w-full max-w-2xl rounded-3xl p-6 md:p-8 space-y-5 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
-                    <!-- Botão Fechar -->
-                    <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-xl transition">✕</button>
+                    <!-- Controles de Acessibilidade & Fechar -->
+                    <div class="absolute top-5 right-5 flex items-center gap-2">
+                        <div class="flex items-center bg-slate-100 dark:bg-slate-900 rounded-xl p-0.5 border border-slate-200 dark:border-slate-700 text-xs">
+                            <button onclick="FontScaleManager.decrease()" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold cursor-pointer" title="Diminuir texto (A-)">A-</button>
+                            <button onclick="FontScaleManager.increase()" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold cursor-pointer" title="Aumentar texto (A+)">A+</button>
+                        </div>
+                        <button onclick="closeModal()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 font-bold text-lg transition cursor-pointer" title="Fechar">✕</button>
+                    </div>
 
                     <!-- Header Mariano do Terço -->
                     <div class="flex items-center gap-4 pb-4 border-b border-slate-100 dark:border-slate-700">
@@ -13155,15 +13169,44 @@ https://catecismo.creativeam.com.br
 
             apply(theme, notify = true) {
                 this.theme = theme;
-                if (theme === 'dark') {
+                const isDark = (theme === 'dark');
+                if (isDark) {
                     document.documentElement.classList.add('dark');
                 } else {
                     document.documentElement.classList.remove('dark');
                 }
-                try { localStorage.setItem('catecismo_theme', theme); } catch(e) {}
+                try {
+                    localStorage.setItem('catecismo_theme', theme);
+                    localStorage.setItem('theme', theme);
+                } catch(e) {}
                 this.updateButtons();
+
+                // Sincroniza imediatamente com o iframe de Novenas
+                try {
+                    const novenasIframe = document.getElementById('novenas-iframe');
+                    if (novenasIframe) {
+                        if (novenasIframe.contentDocument && novenasIframe.contentDocument.documentElement) {
+                            novenasIframe.contentDocument.documentElement.classList.toggle('dark', isDark);
+                            if (typeof novenasIframe.contentWindow.initTheme === 'function') {
+                                novenasIframe.contentWindow.initTheme();
+                            }
+                        }
+                        if (novenasIframe.contentWindow) {
+                            novenasIframe.contentWindow.postMessage({ type: 'CATECISMO_THEME_CHANGE', theme }, '*');
+                        }
+                    }
+                } catch (e) {}
+
+                // Sincroniza com o iframe de Preceitos se existir
+                try {
+                    const preceitosIframe = document.getElementById('preceitos-iframe');
+                    if (preceitosIframe && preceitosIframe.contentDocument && preceitosIframe.contentDocument.documentElement) {
+                        preceitosIframe.contentDocument.documentElement.classList.toggle('dark', isDark);
+                    }
+                } catch (e) {}
+
                 if (notify) {
-                    showToast(theme === 'dark' ? '🌙 Modo Noturno suave ativado' : '☀️ Modo Claro ativado', 'info');
+                    showToast(isDark ? '🌙 Modo Noturno suave ativado' : '☀️ Modo Claro ativado', 'info');
                 }
             },
 
@@ -14170,6 +14213,26 @@ https://catecismo.creativeam.com.br
                 if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.includes('novenas') || novenaId) {
                     iframe.src = targetUrl;
                 }
+
+                // Sincroniza tema garantido com o iframe
+                const isDark = document.documentElement.classList.contains('dark');
+                const syncIframeState = () => {
+                    try {
+                        if (iframe.contentDocument && iframe.contentDocument.documentElement) {
+                            iframe.contentDocument.documentElement.classList.toggle('dark', isDark);
+                            if (typeof iframe.contentWindow.initTheme === 'function') {
+                                iframe.contentWindow.initTheme();
+                            }
+                        }
+                        if (iframe.contentWindow) {
+                            iframe.contentWindow.postMessage({ type: 'CATECISMO_THEME_CHANGE', theme: isDark ? 'dark' : 'light' }, '*');
+                        }
+                    } catch (e) {}
+                };
+
+                syncIframeState();
+                iframe.onload = syncIframeState;
+
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
                 requestAnimationFrame(() => {
@@ -14184,6 +14247,15 @@ https://catecismo.creativeam.com.br
                         MetricsTracker.trackInteraction('novenaStarts');
                     }
                 }
+            },
+            adjustIframeScale(delta) {
+                const iframe = document.getElementById('novenas-iframe');
+                if (!iframe) return;
+                try {
+                    if (iframe.contentWindow && typeof iframe.contentWindow.adjustScale === 'function') {
+                        iframe.contentWindow.adjustScale(delta);
+                    }
+                } catch(e) {}
             },
             close() {
                 const modal = document.getElementById('novenas-modal');
@@ -14639,10 +14711,19 @@ https://catecismo.creativeam.com.br
                 </div>
             </div>
             <div class="flex items-center gap-2">
+                <!-- Controle de Escala de Fonte Integrado -->
+                <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl p-0.5 border border-slate-200 dark:border-slate-700 text-xs">
+                    <button onclick="NovenasModal.adjustIframeScale(-0.1)" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold cursor-pointer" title="Diminuir texto (A-)">A-</button>
+                    <button onclick="NovenasModal.adjustIframeScale(0.1)" class="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-white dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold cursor-pointer" title="Aumentar texto (A+)">A+</button>
+                </div>
+                <!-- Alternar Tema (Modo Claro / Escuro) -->
+                <button onclick="ThemeManager.toggle()" class="w-8 h-8 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-amber-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer" title="Alternar Modo Noturno / Claro">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
                 <a href="/novenas.html" target="_blank" class="p-2 text-slate-400 hover:text-slate-700 dark:hover:text-white transition rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" title="Abrir em Nova Aba">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
-                <button onclick="NovenasModal.close()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer" title="Fechar">
+                <button onclick="NovenasModal.close()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer font-bold" title="Fechar">
                     ✕
                 </button>
             </div>

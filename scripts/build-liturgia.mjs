@@ -414,12 +414,22 @@ function cleanLiturgyRecord(data){
       r[k].text = r[k].text.replace(/[℣℟]\.?\s*$/g, '').trim();
     }
   }
-  if(r.firstReading?.text){
-    r.firstReading.text = r.firstReading.text.replace(/^(?:\d+\s+leituras\s+[àa]\s+escolha[^\n]*\n*)/i, '').trim();
+  for(const k of ['firstReading','secondReading']){
+    if(r[k]?.text){
+      r[k].text = r[k].text.replace(/^(?:\d+\s+leituras\s+[àa]\s+escolha[^\n]*\n*)/i, '').trim();
+      r[k].text = r[k].text.replace(/^(?:[—–-]\s*)?(?:Primeira|Segunda)\s+Leitura\s*(?:\([^)]*\))?[^\n.:]*[\n.:]+\s*/i, '').trim();
+      if(r[k].intro){
+        const safeIntro = r[k].intro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        r[k].text = r[k].text.replace(new RegExp('^(?:[—–-]\\s*)?' + safeIntro + '\\s*', 'i'), '').trim();
+      }
+    }
   }
   if(r.psalm?.text && r.psalm?.refrain){
-    const safeRef = r.psalm.refrain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const cleanRef = r.psalm.refrain.replace(/^[—–-]\s*/, '').replace(/^(?:[℟R]\.?|R\s*[:.\-])\s*/i, '').trim();
+    const safeRef = cleanRef.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     r.psalm.text = r.psalm.text.replace(new RegExp('^(?:[—–-]\\s*)?(?:Respons[óo]rio\\s+)?(?:Sl|Salmo)\\s+[^\n℟R]+(?:\\([^)]*\\))?\\s*(?:[℟R]\\.?\\s*)?' + safeRef + '[.!?:\\s-]*\n*', 'i'), '').trim();
+    r.psalm.text = r.psalm.text.replace(new RegExp('^(?:[—–-]\\s*)?(?:[℟R]\\.?\\s*)?' + safeRef + '[.!?:\\s-]*\n*', 'i'), '').trim();
+    r.psalm.text = r.psalm.text.replace(/^(?:[—–-]\s*)?[℟R]\.?\s*/i, '').trim();
   }
   if(r.gospel?.text){
     let t = r.gospel.text;
@@ -433,11 +443,16 @@ function cleanLiturgyRecord(data){
         t = t.slice(match.index + match[0].length).trim();
       }
     }
-    if(/Naquele tempo/i.test(t)){
-      const nqIdx = t.search(/Naquele tempo/i);
-      if(nqIdx > 0 && nqIdx < 250){
-        t = t.slice(nqIdx).trim();
-      }
+    t = t.replace(/^(?:[—–-]\s*)?(?:Santo\s+)?EVANGELHO\b\s*(?:\([^)]*\))?[^\n.:]*[\n.:]+\s*/i, '').trim();
+    t = t.replace(/^(?:[—–-]\s*)?Proclama[cç][aã]o\s+do\s+(?:Santo\s+)?Evangelho\s+de\s+Jesus\s+Cristo[^\n.:]*[\n.:]+\s*/i, '').trim();
+    t = t.replace(/^(?:[—–-]\s*)?Gl[óo]ria\s+a\s+v[óo]s,\s*Senhor\.?\s*/i, '').trim();
+    if(r.gospel.intro){
+      const safeIntro = r.gospel.intro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      t = t.replace(new RegExp('^(?:[—–-]\\s*)?' + safeIntro + '\\s*', 'i'), '').trim();
+    }
+    const nqIdx = t.search(/\bNaquele tempo\b/i);
+    if(nqIdx > 0 && nqIdx < 180){
+      t = t.slice(nqIdx).trim();
     }
     r.gospel.text = t;
   }
