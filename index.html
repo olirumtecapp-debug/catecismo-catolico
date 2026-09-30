@@ -12226,193 +12226,31 @@ https://catecismo.creativeam.com.br
 
                 <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-800 space-y-6">
 
-                    <!-- 0. HOMOLOGAÇÃO & VALIDAÇÃO DAS 8 FASES DE MELHORIAS LOCAIS -->
-                    <div class="rounded-3xl p-5 sm:p-6 bg-gradient-to-br from-slate-900 via-mariana to-blue-950 text-white border-2 border-amber-400/40 shadow-xl space-y-5">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
-                            <div class="space-y-1">
-                                <div class="flex items-center gap-2 flex-wrap">
-                                    <span class="text-xl">🛠️</span>
-                                    <h4 class="font-serif text-lg sm:text-xl font-bold text-amber-300">Central de Homologação Local (8 Fases)</h4>
-                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-                                        STATUS LOCAL: APROVADO
-                                    </span>
-                                </div>
-                                <p class="text-xs text-slate-300">
-                                    Ambiente: <code class="px-1.5 py-0.5 bg-black/40 rounded text-amber-200">http://localhost:3000/</code> • Produção: <span class="text-emerald-300 font-semibold">catecismo.creativeam.com.br (Intacta / Zero Deploy)</span>
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <button onclick="runDataIntegrityCheck()" class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
-                                    <span>🛡️</span> <span>Auditar Dados Agora</span>
-                                </button>
-                            </div>
+                    <!-- Métricas Locais de Interação Devocional -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700">
+                        <div class="text-[11px] font-bold text-mariana dark:text-amber-300 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                            <span>📈</span> <span>Interações Devocionais dos Usuários</span>
                         </div>
-
-                        <!-- Banner de Garantia de Zero Perda de Dados -->
-                        <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
-                            <span class="text-xl shrink-0 mt-0.5">🔒</span>
-                            <div class="space-y-1 text-xs text-slate-200 leading-relaxed">
-                                <p class="font-bold text-amber-200">Garantia Absoluta aos Usuários Atuais:</p>
-                                <p class="text-slate-300 text-[11px]">
-                                    A estrutura do <code class="text-amber-200">localStorage</code> (<code class="text-amber-200">catecismo_state_v5</code>, <code class="text-amber-200">thesaurus_progress_*</code>) é 100% retrocompatível. Quando essas melhorias forem publicadas, <strong>nenhum usuário existente perderá anotações, favoritos, ofensiva (streak) ou dados salvos</strong>.
-                                </p>
+                        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700 text-center shadow-2xs">
+                                <div class="text-[10px] text-slate-500">Orações / Diário</div>
+                                <div class="text-lg font-bold text-emerald-600 dark:text-emerald-400 font-mono">${interactions.oracaoStarts}</div>
                             </div>
-                        </div>
-
-                        <!-- Container para Resultados da Auditoria em Tempo Real -->
-                        <div id="data-integrity-results"></div>
-
-                        <!-- Grid de Homologação das 8 Fases -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-                            <!-- Fase 1 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 1: Primeiro Acesso</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Ações no Hero (Liturgia e Retomar) + Guia Rápido de Início (com Intenção).</p>
-                                </div>
-                                <button onclick="closeModal(); router.navigate('home');" class="w-full py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[11px] transition cursor-pointer">
-                                    Ver na Home ↗
-                                </button>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700 text-center shadow-2xs">
+                                <div class="text-[10px] text-slate-500">Novenas Acessadas</div>
+                                <div class="text-lg font-bold text-sky-600 dark:text-sky-400 font-mono">${interactions.novenaStarts}</div>
                             </div>
-
-                            <!-- Fase 2 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 2: Retorno Diário</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Ofensiva de oração visível no topo (🔥 dias) e acolhimento pelo progresso.</p>
-                                </div>
-                                <button onclick="closeModal(); router.navigate('oracao');" class="w-full py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[11px] transition cursor-pointer">
-                                    Ver Oração ↗
-                                </button>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700 text-center shadow-2xs">
+                                <div class="text-[10px] text-slate-500">E-mails Salvos (Nuvem)</div>
+                                <div class="text-lg font-bold text-blue-600 dark:text-blue-400 font-mono">${interactions.emailSaves}</div>
                             </div>
-
-                            <!-- Fase 3 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 3: Cadastro & Nuvem</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Salvar progresso só com e-mail, sem burocracia de senha + Política de Privacidade.</p>
-                                </div>
-                                <div class="flex gap-1.5">
-                                    <button onclick="CloudSyncManager.promptCloudModal('Homologação');" class="flex-1 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[10px] transition cursor-pointer">
-                                        Modal Nuvem ↗
-                                    </button>
-                                    <button onclick="PrivacyModal.open();" class="flex-1 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[10px] transition cursor-pointer">
-                                        Privacidade ↗
-                                    </button>
-                                </div>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700 text-center shadow-2xs">
+                                <div class="text-[10px] text-slate-500">Compartilhamentos</div>
+                                <div class="text-lg font-bold text-amber-600 dark:text-amber-400 font-mono">${interactions.shareClicks}</div>
                             </div>
-
-                            <!-- Fase 4 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 4: Mensagens Humanas</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Substituição de mensagens frias ("Aguardando API…") por acolhimento litúrgico.</p>
-                                </div>
-                                <button onclick="closeModal(); router.navigate('liturgia');" class="w-full py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[11px] transition cursor-pointer">
-                                    Ver Liturgia ↗
-                                </button>
-                            </div>
-
-                            <!-- Fase 5 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 5: Apoio & PIX</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">R$ 5, 10, 15. Asaas Murilo Ferreira Silva. Caps de 30 e 90 dias.</p>
-                                </div>
-                                <div class="flex gap-1.5">
-                                    <button onclick="openApoioModal();" class="flex-1 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-[10px] transition cursor-pointer">
-                                        Modal Apoio ↗
-                                    </button>
-                                    <button onclick="TransparenciaModal.open();" class="flex-1 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[10px] transition cursor-pointer">
-                                        Transparência ↗
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Fase 6 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 6: Divulgação</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Templates Novos Amigos e Paz e Bem, WhatsApp, Telegram e Cópia.</p>
-                                </div>
-                                <button onclick="openCatecismoShareModal();" class="w-full py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-[11px] transition cursor-pointer">
-                                    Abrir Compartilhar ↗
-                                </button>
-                            </div>
-
-                            <!-- Fase 7 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 7: Métricas Leves</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Contadores locais de oração, novenas, nuvem e compartilhamentos.</p>
-                                </div>
-                                <div class="text-[10px] text-amber-200 font-mono">
-                                    🙏 ${interactions.oracaoStarts} | 🕊️ ${interactions.novenaStarts} | ☁️ ${interactions.emailSaves} | 📢 ${interactions.shareClicks}
-                                </div>
-                            </div>
-
-                            <!-- Fase 8 -->
-                            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-2 flex flex-col justify-between">
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between">
-                                        <span class="font-bold text-amber-300 font-serif">Fase 8: QA & Responsividade</span>
-                                        <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">100% OK</span>
-                                    </div>
-                                    <p class="text-[11px] text-slate-300">Layout fluido testado em 375px (mobile), 768px (tablet) e 1280px (desktop).</p>
-                                </div>
-                                <button onclick="runDataIntegrityCheck();" class="w-full py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] transition cursor-pointer">
-                                    Auditar Agora 🛡️
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- KPIs de Métricas Leves da Fase 7 -->
-                        <div class="pt-2 border-t border-white/10">
-                            <div class="text-[11px] font-bold text-amber-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                                <span>📈</span> <span>Métricas Locais de Interação Devocional (Fase 7)</span>
-                            </div>
-                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
-                                <div class="p-2.5 rounded-xl bg-black/30 border border-white/10 text-center">
-                                    <div class="text-[10px] text-slate-400">Orações / Diário</div>
-                                    <div class="text-lg font-bold text-emerald-400 font-mono">${interactions.oracaoStarts}</div>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-black/30 border border-white/10 text-center">
-                                    <div class="text-[10px] text-slate-400">Novenas Acessadas</div>
-                                    <div class="text-lg font-bold text-sky-400 font-mono">${interactions.novenaStarts}</div>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-black/30 border border-white/10 text-center">
-                                    <div class="text-[10px] text-slate-400">E-mails Salvos (Nuvem)</div>
-                                    <div class="text-lg font-bold text-blue-400 font-mono">${interactions.emailSaves}</div>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-black/30 border border-white/10 text-center">
-                                    <div class="text-[10px] text-slate-400">Compartilhamentos</div>
-                                    <div class="text-lg font-bold text-amber-400 font-mono">${interactions.shareClicks}</div>
-                                </div>
-                                <div class="p-2.5 rounded-xl bg-black/30 border border-white/10 text-center col-span-2 sm:col-span-1">
-                                    <div class="text-[10px] text-slate-400">Apoio Aberto</div>
-                                    <div class="text-lg font-bold text-rose-400 font-mono">${data.apoio ? data.apoio.modalOpens : 0}</div>
-                                </div>
+                            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700 text-center col-span-2 sm:col-span-1 shadow-2xs">
+                                <div class="text-[10px] text-slate-500">Apoio Aberto</div>
+                                <div class="text-lg font-bold text-rose-600 dark:text-rose-400 font-mono">${data.apoio ? data.apoio.modalOpens : 0}</div>
                             </div>
                         </div>
                     </div>
