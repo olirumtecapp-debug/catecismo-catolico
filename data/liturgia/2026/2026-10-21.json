@@ -1,38 +1,28 @@
 {
   "date": "2026-10-21",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "29a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/10/21/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Efésios 3,14-21",
-      "intro": "Leitura da Carta de São Paulo aos Efésios:",
-      "text": "Irmãos: 14Eu dobro os joelhos diante do Pai, 15de quem toda e qualquer família recebe seu nome, no céu e sobre a terra. 16Que ele vos conceda, segundo a riqueza da sua glória, serdes robustecidos, por seu Espírito, quanto ao homem interior, 17que ele faça habitar, pela fé, Cristo em vossos corações, que estejais enraizados e fundados no amor. 18Tereis assim a capacidade de compreender, com todos os santos, qual a largura, o comprimento, a altura, a profundidade, 19e de conhecer o amor de Cristo, que ultrapassa todo o conhecimento, a fim de que sejais cumulados até receber toda a plenitude de Deus. 20Aquele que tudo pode realizar superabundantemente, e muito mais do que nós pedimos ou concebemos, e cujo poder atua em nós, 21a ele a glória, na Igreja e em Jesus Cristo, por todas as gerações, para sempre. Amém."
+      "reference": "Ef 3,2-12",
+      "text": "Irmãos, 2 se ao menos soubésseis da graça que Deus me concedeu para realizar o seu plano a vosso respeito, 3 como, por revelação, tive conhecimento do mistério, tal como o esbocei rapidamente. Ao ler-me, podeis conhecer a percepção que eu tenho do mistério de Cristo. 5 Este mistério, Deus não o fez conhecer aos homens das gerações passadas mas acaba de o revelar agora, pelo Espírito, aos seus santos apóstolos e profetas: 6 os pagãos são admitidos à mesma herança, são membros do corpo, são associados à mesma promessa em Jesus Cristo, por meio do"
     },
     "psalm": {
-      "reference": "Salmo 32 (33)",
-      "refrain": "Transborda em toda a terra a bondade do Senhor!",
-      "text": "- Ó justos, alegrai-vos no Senhor! aos retos fica bem glorificá-lo. Dai graças ao Senhor ao som da harpa, na lira de dez cordas celebrai-o!\n\n- Pois reta é a palavra do Senhor, e tudo o que ele faz merece fé. Deus ama o direito e a justiça, transborda em toda a terra a sua graça.\n\n- Mas os desígnios do Senhor são para sempre, e os pensamentos que ele traz no coração, de geração em geração, vão perdurar. Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança!\n\n- Mas o Senhor pousa o olhar sobre os que o temem, e que confiam esperando em seu amor, para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria."
+      "reference": "Is 12,2-3.4bcd.5-6 (R. cf. 3)",
+      "refrain": "Com alegria bebereis do manancial da salvação.",
+      "text": "Is 12,2-3.4bcd.5-6 (R. cf. 3) ℟. Com alegria bebereis do manancial da salvação. 2 Eis o Deus, meu Salvador, eu confio e nada temo; † o Senhor é minha força, meu louvor e salvação. 3 Com alegria bebereis do manancial da salvação 4 e direis naquele dia: \"Dai louvores ao Senhor, † c invocai seu santo nome, anunciai suas maravilhas, d entre os povos proclamai que seu nome é o mais sublime 5 Louvai cantando ao nosso Deus, que fez prodígios e portentos, publicai em toda a terra suas grandes maravilhas! 6 Exultai cantando alegres, habitantes de Sião, porque é grande em vosso meio o Deus Santo de Israel!\""
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 49-53",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "Lc 12,39-48",
       "acclamation": {
         "title": "Aleluia, Aleluia, Aleluia.",
-        "verse": "Eu tudo considero como perda e como lixo a fim de ganhar Cristo e ser achado nele\" (Fl 3,8s)."
+        "verse": "Vigiai, diz Jesus, vigiai, pois, no dia em que não esperais, o vosso Senhor há de vir."
       },
-      "text": "Naquele tempo, disse Jesus a seus discípulos: 49Eu vim para lançar fogo sobre a terra, e como gostaria que já estivesse aceso! 50Devo receber um batismo, e como estou ansioso até que isto se cumpra! 51Vós pensais que eu vim trazer a paz sobre a terra? Pelo contrário, eu vos digo, vim trazer divisão. 52Pois, daqui em diante, numa família de cinco pessoas, três ficarão divididas contra duas e duas contra três; 53ficarão divididos: o pai contra o filho e o filho contra o pai; a mãe contra a filha e a filha contra a mãe; a sogra contra a nora e a nora contra a sogra.'"
+      "text": "39 \"Ficai certos: se o dono da casa soubesse a hora em que o ladrão iria chegar, não deixaria que arrombasse a sua casa. 40 Vós também ficai preparados! Porque o Filho do Homem vai chegar na hora em que menos o esperardes\". 41 Então Pedro disse: \"Senhor, tu contas esta parábola para nós ou para todos?\" 42 E o Senhor respondeu: \"Quem é o administrador fiel e prudente que o senhor vai colocar à frente do pessoal de sua casa para dar comida a todos na hora certa? 43 Feliz o empregado que o patrão, ao chegar, encontrar agindo assim! 44 Em verdade eu vos digo: o senhor lhe confiará a administração de todos os seus bens. 45 Porém, se aquele empregado pensar: 'Meu patrão está demorando', e começar a espancar os criados e as criadas, e a comer, a beber e a embriagar-se, 46 o senhor daquele empregado chegará num dia inesperado e numa hora imprevista, ele o partirá ao meio e o fará participar do destino dos infiéis. 47 Aquele empregado que, conhecendo a vontade do senhor, nada preparou, nem agiu conforme a sua vontade, será chicoteado muitas vezes 48 Porém, o empregado que não conhecia essa vontade e fez coisas que merecem castigo, será chicoteado poucas vezes. A quem muito foi dado, muito será pedido; a quem muito foi confiado, muito mais será exigido!"
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário ao Evangelho por São Jerónimo, Presbítero e Doutor da Igreja<br/>",
-    "</b>",
-    "Comentário sobre Mateus 1, 34-37<br/>",
-    "Jesus, causa de divisão entre os homens<br/>",
-    "Cristo anuncia aqui o que vai seguir-se à sua pregação. O cristianismo suscitou divisões em todo o mundo, colocando umas pessoas contra as outras. Cada casa passou a ter os seus crentes e os seus incréus; foi lançada uma guerra boa, destinada a rasgar uma paz má. Está escrito no Génesis que Deus procedeu mais ou menos assim contra os homens rebeldes que, vindos do Oriente e cheios de altivez, construíram uma torre para penetrar nas alturas do Céu (cf Gn 11,1-9): provocou uma guerra entre eles. Donde a oração de David: dispersa, Senhor, os povos que querem a guerra (cf Sl 67,31).<br/>",
-    "É necessária a ordem nos afetos. Ama teu pai, ama tua mãe, ama teus filhos diante de Deus. Se se tornar inevitável decidir entre o amor aos pais e aos filhos, e o amor a Deus, não sendo possível manter os dois, é uma prova de piedade para com Deus não preferir a família.<br/>"
-  ]
+  "extra": []
 }

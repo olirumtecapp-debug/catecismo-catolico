@@ -1,40 +1,31 @@
 {
   "date": "2026-12-24",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "4a. Semana do Advento Ciclo do Natal",
-  "color": "roxo",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/12/24/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Samuel 1,24-28",
-      "intro": "Leitura do Primeiro Livro de Samuel:",
-      "text": "24 Ana, logo que o desmamou, levou consigo Samuel à casa do Senhor em Silo, e mais um novilho de três anos, três arrobas de farinha e um odre de vinho. O menino, porém, era ainda uma criança. 25 Depois de sacrificarem o novilho, apresentaram o menino a Eli. 26 E Ana disse-lhe: 'Ouve, meu senhor, por tua vida, eu sou a mulher que esteve aqui orando ao Senhor, na tua presença. 27 Eis o menino por quem eu pedi, e o Senhor ouviu a minha súplica. 28 Portanto, eu também o ofereço ao Senhor, a fim de que só a ele sirva em todos os dias da sua vida'. E adoraram o Senhor."
+      "reference": "2Sm 7,1-5.8b-12.14a.16",
+      "text": "O reino de Davi será estável para sempre diante do Senhor. Leitura do Segundo Livro de Samuel 7,1-5.8b-12.14a.16 1 Tendo-se o rei Davi instalado já em sua casa e tendo-lhe o Senhor dado a paz, livrando-o de todos os seus inimigos, 2 ele disse ao profeta Natã: \"Vê: eu resido num palácio de cedro, e a arca de Deus está alojada numa tenda!\" 3 Natã respondeu ao rei: \"Vai e faze tudo o que diz o teu coração, pois o Senhor está contigo\". 4 Mas, naquela mesma noite, a palavra do Senhor foi dirigida a Natã nestes termos: 5 \"Vai dizer ao meu servo Davi: Assim fala o Senhor: 'Porventura és tu que me construirás uma casa para eu habitar? 8b Fui eu que te tirei do pastoreio, do meio das ovelhas, para que fosses o chefe do meu povo, Israel. 9 Estive contigo em toda a parte por onde andaste, e exterminei diante de ti todos os teus inimigos, fazendo o teu nome tão célebre como o dos homens mais famosos da terra. 10 Vou preparar um lugar para o meu povo, Israel: eu o implantarei, de modo que possa morar lá sem jamais ser inquietado. Os homens violentos não tornarão a oprimi-lo como outrora, 11 no tempo em que eu estabelecia juízes sobre o meu povo, Israel. Concedo-te uma vida tranquila, livrando-te de todos os teus inimigos. E o Senhor te anuncia que te fará uma casa. 12 Quando chegar o fim dos teus dias e repousares com teus pais, então, suscitarei, depois de ti, um filho teu, e confirmarei a sua realeza. 14a Eu serei para ele um pai e ele será para mim um filho. 16 Tua casa e teu reino serão estáveis para sempre diante de mim, e teu trono será firme para sempre' \". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 1Sm 2",
-      "refrain": "Meu coração exultou no meu Senhor, salvador.",
-      "text": "- Exulta no Senhor meu coração, e se eleva a minha fronte no meu Deus. Minha boca desafia os meus rivais porque me alegro com a vossa salvação.\n\n- O arco dos fortes foi dobrado, foi quebrado, mas os fracos se vestiram de vigor. Os saciados se empregaram por um pão, mas os pobres e os famintos se fartaram. Muitas vezes deu à luz a que era estéril, mas a mãe de muitos filhos definhou.\n\n- É o Senhor quem dá a morte e dá a vida, faz descer à sepultura e faz voltar; é o Senhor quem faz o pobre e faz o rico, é o Senhor quem nos humilha e nos exalta.\n\n- O Senhor ergue do pó o homem fraco, e do lixo ele retira o indigente, para fazê-los assentar-se com os nobres num lugar de muita honra e distinção."
+      "reference": "Sl 88(89),2-3.4-5.27 e 29 (R. 2a)",
+      "refrain": "Ó Senhor, eu cantarei eternamente o vosso amor!",
+      "text": "2 Ó Senhor, eu cantarei eternamente o vosso amor, de geração em geração eu cantarei vossa verdade! 3 Porque dissestes: \"O amor é garantido para sempre!\" E a vossa lealdade é tão firme como os céus. ℟. 4 \"Eu firmei uma Aliança com meu servo, meu eleito, e eu fiz um juramento a Davi, meu servidor. 5 Para sempre, no teu trono, firmarei tua linhagem, de geração em geração garantirei o teu reinado!\" ℟. 27 Ele, então, me invocará: 'Ó Senhor, vós sois meu Pai, sois meu Deus, sois meu Rochedo onde encontro a salvação!' 29 Guardarei eternamente para ele a minha graça e com ele firmarei minha Aliança indissolúvel."
     },
-    "secondReading": null,
+    "secondReading": {
+      "reference": "Lc 1,67-79",
+      "text": "Tendo chegado a Antioquia da Pisídia, 16 Paulo levantou-se, na sinagoga, fez um sinal com a mão e disse: \"Israelitas e vós que temeis a Deus, escutai! 17 O Deus deste povo de Israel escolheu os nossos antepassados e fez deles um grande povo quando moravam como estrangeiros no Egito; e de lá os tirou com braço poderoso. 22 Em seguida, Deus fez surgir Davi como rei e assim testemunhou a seu respeito: 'Encontrei Davi, filho de Jessé, homem segundo o meu coração, que vai fazer em tudo a minha vontade'. 23 Conforme prometera, da descendência de Davi Deus fez surgir para Israel um Salvador, que é Jesus. 24 Antes que ele chegasse, João pregou um batismo de conversão para todo o povo de Israel. 25 Estando para terminar sua missão, João declarou: 'Eu não sou aquele que pensais que eu seja! Mas vede: depois de mim vem aquele, do qual nem mereço desamarrar as sandálias'\". ℣. Palavra do Senhor. ℟. Graças a Deus."
+    },
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 46-56",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "os seus inimigos,",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Ó rei e Senhor das nações e pedra angular da Igreja, vinde salvar a mulher e o homem, que, um dia, formastes do barro."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Ó Sol da manhã, ó Sol de justiça, da eterna luz esplendor: oh, vinde brilhar para o povo sentado, na sombra da morte."
       },
-      "text": "Naquele tempo: 46 Maria disse: 'A minha alma engrandece o Senhor, 47 e o meu espírito se alegra em Deus, meu Salvador, 48 porque olhou para a humildade de sua serva. Doravante todas as gerações me chamarão bem-aventurada, 49 porque o Todo-poderoso fez grandes coisas em meu favor. O seu nome é santo, 50 e sua misericórdia se estende, de geração em geração, a todos os que o temem. 51 Ele mostrou a força de seu braço: dispersou os soberbos de coração. 52 Derrubou do trono os poderosos e elevou os humildes. 53 Encheu de bens os famintos, e despediu os ricos de mãos vazias. 54 Socorreu Israel, seu servo, lembrando-se de sua misericórdia, 55 conforme prometera aos nossos pais, em favor de Abraão e de sua descendência, para sempre.' 56 Maria ficou três meses com Isabel; depois voltou para casa."
+      "text": "68 \"Bendito seja o Senhor, Deus de Israel, porque a seu povo visitou e libertou. 69 Fez aparecer para nós uma força de salvação na casa de seu servo Davi, 70 como tinha prometido desde outrora, pela boca de seus santos profetas, 71 para nos salvar dos nossos inimigos e da mão de todos os que nos odeiam. 72 Ele usou de misericórdia para com nossos pais, recordando-se de sua santa aliança 73 e do juramento que fez a nosso pai Abraão, para conceder-nos, 74 que, sem temor e libertos das mãos dos inimigos, nós o sirvamos, 75 com santidade e justiça, em sua presença, todos os nossos dias. 76 E tu, Menino, serás chamado profeta do Altíssimo, pois irás adiante do Senhor para preparar-lhe os caminhos, 77 anunciando ao seu povo a salvação, pelo perdão dos seus pecados. 78 Graças à misericordiosa compaixão do nosso Deus, o sol que nasce do alto nos visitará, 79 para iluminar os que jazem nas trevas e nas sombras da morte, e dirigir nossos passos no caminho da paz.\""
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por São Luis-Maria Grignion de Monfort (1673-1716)<br/>",
-    "</b>",
-    "Pregador, Fundador de Comunidades Religiosas<br/>",
-    "«Tratado da Verdadeira Devoção à Virgem Santíssima»<br/>",
-    "«O Todo-Poderoso fez em mim maravilhas»<br/>",
-    "Ao longo da sua vida, Maria deu muito pouco nas vistas. {...] A sua humildade era tão profunda que não teve na Terra interesse mais forte e mais constante do que esconder-se perante si mesma e perante toda a criatura, para só ser conhecida por Deus. [...] Deus Pai consentiu que ela não fizesse qualquer milagre durante a sua vida, pelo menos que se soubesse. [...] Deus Filho consentiu que ela quase não falasse, embora lhe tivesse comunicado a sua sabedoria. Deus Espírito Santo consentiu que os apóstolos e os evangelistas falassem muito pouco dela, apenas o necessário para dar a conhecer Jesus Cristo, embora ela tivesse sido a sua Esposa fiel.<br/>",
-    "Maria é a excelente obra-prima do Altíssimo, da qual só Ele tem o conhecimento e a posse. [...] Maria é a fonte selada e a Esposa fiel do Espírito Santo, onde só Ele pode entrar. Maria é o santuário e o lugar do repouso da Santíssima Trindade, onde Deus está de forma mais magnífica e divina do que em qualquer outro lugar do universo, incluindo a sua morada acima dos querubins e dos serafins; e não é permitido a nenhuma criatura, por mais pura que seja, entrar nela sem um privilégio especial.<br/>",
-    "Digo-o com todos os santos: Maria é o paraíso terrestre do novo Adão. [...] É o grande e divino mundo de Deus, onde há belezas e tesouros inefáveis. É a magnificência do Altíssimo, onde Ele escondeu, como em seu próprio seio, o seu Filho único e, nele, tudo o que há de mais excelente e mais precioso. Oh! quantas coisas grandes e ocultas fez o Deus poderoso nesta criatura admirável, como ela mesma se sente obrigada a dizer, apesar da sua profunda humildade: «O Todo-Poderoso fez em mim maravilhas!» O mundo não as conhece porque é disso incapaz e indigno.<br/>"
-  ]
+  "extra": []
 }

@@ -1,46 +1,31 @@
 {
   "date": "2026-11-22",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Solenidade: Nosso Senhor Jesus Cristo, Rei do Universo",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/11/22/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Daniel 7,13-14",
-      "intro": "Leitura da profecia de Daniel:",
-      "text": "13Continuei insistindo na visão noturna, e eis que, entre as nuvens do céu, vinha um como filho de homem, aproximando-se do Ancião de muitos dias, e foi conduzido à sua presença. 14Foram-lhe dados poder, glória e realeza, e todos os povos, nações e línguas o serviam: seu poder é um poder eterno que não lhe será tirado, e seu reino, um reino que não se dissolverá."
+      "reference": "Ez 34,11-12.15-17",
+      "text": "Quanto a vós, minhas ovelhas, farei justiça entre uma ovelha e outra. Leitura da Profecia de Ezequiel 34,11-12.15-17 11 Assim diz o Senhor Deus: \"Vede! Eu mesmo vou procurar minhas ovelhas e tomar conta delas. 12 Como o pastor toma conta do rebanho, de dia, quando se encontra no meio das ovelhas dispersas, assim vou cuidar de minhas ovelhas e vou resgatá-las de todos os lugares em que foram dispersadas num dia de nuvens e escuridão. 15 Eu mesmo vou apascentar as minhas ovelhas e fazê-las repousar — oráculo do Senhor Deus —. 16 Vou procurar a ovelha perdida, reconduzir a extraviada, enfaixar a da perna quebrada, fortalecer a doente, e vigiar a ovelha gorda e forte. Vou apascentá-las conforme o direito. 17 Quanto a vós, minhas ovelhas, — assim diz o Senhor Deus — eu farei justiça entre uma ovelha e outra, entre carneiros e bodes\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 92 (93)",
-      "refrain": "Deus é Rei e se vestiu de majestade, glória ao Senhor!",
-      "text": "- Deus é Rei e se vestiu de majestade, revestiu-se de poder e de esplendor!\n\n- Vós firmastes o universo inabalável, vós firmastes vosso trono desde a origem, desde sempre, ó Senhor, vós existis!\n\n- Verdadeiros são os vossos testemunhos, refulge a santidade em vossa casa, pelos séculos dos séculos, Senhor!"
+      "reference": "Sl 22(23),1-2a.2b-3.5-6 (R. 1)",
+      "refrain": "O Senhor é o pastor que me conduz; não me falta coisa alguma.",
+      "text": "2 Pelos prados e campinas verdejantes ele me leva a descansar. Para as águas repousantes me encaminha, 3 e restaura as minhas forças. 5 Preparais à minha frente uma mesa, bem à vista do inimigo, e com óleo vós ungis minha cabeça; o meu cálice transborda. 6 Felicidade e todo bem hão de seguir-me por toda a minha vida; e, na casa do Senhor, habitarei pelos tempos infinitos."
     },
     "secondReading": {
-      "reference": "Apocalipse 1,5-8",
-      "intro": "Leitura do livro do Apocalipse:",
-      "text": "Jesus Cristo é a testemunha fiel, o primeiro a ressuscitar dentre os mortos, o soberano dos reis da terra. A Jesus, que nos ama,que por seu sangue nos libertou dos nossos pecados6e que fez de nós um reino,sacerdotes para seu Deus e Pai,a ele a glória e o poder, em eternidade. Amém.7Olhai! Ele vem com as nuvens,e todos os olhos o verão- também aqueles que o traspassaram. Todas as tribos da terra baterão no peito por causa dele. Sim. Amém! 8'Eu sou o Alfa e o ômega', diz o Senhor Deus,'aquele que é, que era e que vem,"
+      "reference": "1Cor 15,20-26.28",
+      "text": "Irmãos: 20 Na realidade, Cristo ressuscitou dos mortos como primícias dos que morreram. 21 Com efeito, por um homem veio a morte, e é também por um homem que vem a ressurreição dos mortos. 22 Como em Adão todos morrem, assim também em Cristo todos reviverão. 23 Porém, cada qual segundo uma ordem determinada: Em primeiro lugar, Cristo, como primícias; depois, os que pertencem a Cristo, por ocasião da sua vinda. 24 A seguir, será o fim, quando ele entregar a realeza a Deus-Pai, depois de destruir todo principado e todo poder e força. 25 Pois é preciso que ele reine, até que todos os seus inimigos estejam debaixo de seus pés. 26 O último inimigo a ser destruído é a morte. 28 E, quando todas as coisas estiverem submetidas a ele, então o próprio Filho se submeterá àquele que lhe submeteu todas as coisas, para que Deus seja tudo em todos. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São João 18, 33-37",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "reference": "Mt 25,31-46",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "É bendito aquele que vem vindo, que vem vindo em nome do Senhor, e o reino que vem seja bendito, ao que vem e a seu reino, o louvor (Mc 11, 9s)"
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "É bendito aquele que vem vindo, que vem vindo em nome do Senhor; e o Reino que vem, seja bendito; ao que vem e a seu Reino, o louvor!"
       },
-      "text": "Naquele tempo: 33bPilatos chamou Jesus e perguntou-lhe: 'Tu és o rei dos judeus?' 34Jesus respondeu: 'Estás dizendo isto por ti mesmo, ou outros te disseram isto de mim?' 35Pilatos falou: 'Por acaso, sou judeu? O teu povo e os sumos sacerdotes te entregaram a mim. Que fizeste?'. 36Jesus respondeu: 'O meu reino não é deste mundo. Se o meu reino fosse deste mundo, os meus guardas lutariam para que eu não fosse entregue aos judeus. Mas o meu reino não é daqui'. 37Pilatos disse a Jesus: 'Então tu és rei?' Jesus respondeu: 'Tu o dizes: eu sou rei. Eu nasci e vim ao mundo para isto: para dar testemunho da verdade. Todo aquele que é da verdade escuta a minha voz'."
+      "text": "31 \"Quando o Filho do Homem vier em sua glória, acompanhado de todos os anjos, então se assentará em seu trono glorioso. 32 Todos os povos da terra serão reunidos diante dele, e ele separará uns dos outros, assim como o pastor separa as ovelhas dos cabritos. 33 E colocará as ovelhas à sua direita e os cabritos à sua esquerda. 34 Então o Rei dirá aos que estiverem à sua direita: 'Vinde, benditos de meu Pai! Recebei como herança o Reino que meu Pai vos preparou desde a criação do mundo! 35 Pois eu estava com fome e me destes de comer; eu estava com sede e me destes de beber; eu era estrangeiro e me recebestes em casa; 36 eu estava nu e me vestistes; eu estava doente e cuidastes de mim; eu estava na prisão e fostes me visitar'. 37 Então os justos lhe perguntarão: 'Senhor, quando foi que te vimos com fome e te demos de comer? com sede e te demos de beber? 38 Quando foi que te vimos como estrangeiro e te recebemos em casa, e sem roupa e te vestimos? 39 Quando foi que te vimos doente ou preso, e fomos te visitar?' 40 Então o Rei lhes responderá: 'Em verdade eu vos digo, que todas as vezes que fizestes isso a um dos menores de meus irmãos, foi a mim que o fizestes!' 41 Depois o Rei dirá aos que estiverem à sua esquerda: 'Afastai-vos de mim, malditos! Ide para o fogo eterno, preparado para o diabo e para os seus anjos. 42 Pois eu estava com fome e não me destes de comer; eu estava com sede e não me destes de beber; 43 eu era estrangeiro e não me recebestes em casa; eu estava nu e não me vestistes; eu estava doente e na prisão e não fostes me visitar'. 44 E responderão também eles: 'Senhor, quando foi que te vimos com fome, ou com sede, como estrangeiro, ou nu, doente ou preso, e não te servimos?' 45 Então o Rei lhes responderá: 'Em verdade eu vos digo, todas as vezes que não fizestes isso a um desses pequeninos, foi a mim que não o fizestes!' 46 Portanto, estes irão para o castigo eterno, enquanto os justos irão para a vida eterna\"."
     }
   },
-  "extra": [
-    "- Graças a Deus<br/>",
-    "<b>",
-    "Comentário do dia por Santo Agostinho (354-430)<br/>",
-    "</b>",
-    "Bispo de Hipona (norte de África), Doutor da Igreja<br/>",
-    "Homilias sobre S. João<br/>",
-    "«O meu Reino não é deste mundo»<br/>",
-    "Escutai todos, judeus e gentios [...]; escutai, todos os reinos da terra! Eu não impeço o vosso domínio sobre este mundo, «o meu Reino não é deste mundo» (Jo 18,36). Não temais, pois, com esse medo insensato que dominou Herodes quando lhe anunciaram o meu nascimento. [...] Não, diz o Salvador, «o meu Reino não é deste mundo». Vinde todos a um Reino que não é deste mundo; vinde a ele pela fé; que o medo não vos torne cruéis. É verdade que, numa profecia, o Filho de Deus diz, falando do Pai: «Por Ele, fui eleito rei sobre Sião, sobre a montanha sagrada» (Sl 2,6). Mas essa Sião e essa montanha não são deste mundo.<br/>",
-    "Com efeito, o que é o seu Reino? São os que acreditam nele, aqueles a quem Ele diz: Não sois do mundo, tal como Eu não sou do mundo (Jo 17,16). E, contudo, Ele quer que estejam no mundo e diz ao Pai: «Não te peço que os retires do mundo, mas que os guardes do mal» (Jo 17,15). É que Ele não disse: «O meu Reino não está neste mundo», mas sim «não é deste mundo; se fosse deste mundo, os meus servos viriam combater para que eu não fosse entregue.»<br/>",
-    "Na verdade, o seu Reino está aqui na terra até ao fim do mundo; até à colheita, o joio está misturado com o trigo (Mt 13,24s). [...] O seu Reino não é deste mundo porque Ele é como um viajante neste mundo. Àqueles sobre quem reina, diz: « Não sois do mundo, pois escolhi-vos do meio do mundo» (Jo 15,19). Eles eram, portanto, deste mundo, quando ainda não eram o seu Reino e pertenciam ao príncipe deste mundo. [...] Todos os que são gerados da raça de Adão pecador pertencem a este mundo; todos os que foram regenerados em Jesus Cristo pertencem ao seu Reino e já não são deste mundo.<br/>",
-    "«Deus arrancou-nos efectivamente do poder das trevas e transportou-nos para o Reino de seu Filho muito amado» (Col 1,13).<br/>"
-  ]
+  "extra": []
 }

@@ -1,39 +1,28 @@
 {
   "date": "2026-08-29",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Memoria: Martirio de Sao Joao Batista",
-  "color": "vermelho",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/8/29/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Coríntios 1,26-31",
-      "intro": "Leitura da Primeira Carta de São Paulo aos Coríntios:",
-      "text": "26Irmãos, considerai vós mesmos, como fostes chamados por Deus. Pois entre vós não há muitos sábios de sabedoria humana nem muitos poderosos nem muitos nobres. 27Na verdade, Deus escolheu o que o mundo considera como estúpido, para assim confundir os sábios; Deus escolheu o que o mundo considera como fraco, para assim confundir o que é forte; 28Deus escolheu o que para o mundo é sem importância e desprezado, o que não tem nenhuma serventia, para assim mostrar a inutilidade do que é considerado importante, 29para que ninguém possa gloriar-se diante dele. 30É graças a ele que vós estais em Cristo Jesus, o qual se tornou para nós, da parte de Deus: sabedoria, justiça, santificação e libertação, 31para que, como está escrito, 'quem se gloria, glorie-se no Senhor'."
+      "reference": "Jr 1,17-19",
+      "text": "Naqueles dias, a foi-me dirigida: 17 \"Vamos, põe a roupa e o cinto, levanta-te e comunica-lhes tudo que eu te mandar dizer: não tenhas medo, senão, eu te farei tremer na presença deles. 18 Com efeito, eu te transformarei hoje numa cidade fortificada, numa coluna de ferro, num muro de bronze contra todo o mundo, frente aos reis de Judá e seus príncipes, aos sacerdotes e ao povo da terra; 19 eles farão guerra contra ti, mas não prevalecerão, porque eu estou contigo para defender-te\", diz o Senhor. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 32 (33)",
-      "refrain": "Feliz o povo que o Senhor escolheu por sua herança!",
-      "text": "- Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança! Dos altos céus o Senhor olha e observa; ele se inclina para olhar todos os homens.\n\n- Mas o Senhor pousa o olhar sobre os que o temem, e que confiam esperando em seu amor, para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria.\n\n- No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! Por isso o nosso coração se alegra nele, seu santo nome é nossa única esperança."
+      "reference": "Sl 70(71),1-2.3-4a.5-6ab.15ab e 17 (R. 15a)",
+      "refrain": "Minha boca anunciará vossa justiça.",
+      "text": "1 Eu procuro meu refúgio em vós, Senhor: que eu não seja envergonhado para sempre! 2 Porque sois justo, defendei-me e libertai-me! Escutai a minha voz, vinde salvar-me! 3 Sede uma rocha protetora para mim, um abrigo bem seguro que me salve! Porque sois a minha força e meu amparo, † o meu refúgio, proteção e segurança! 4 Libertai-me, ó meu Deus, das mãos do ímpio. 5 Porque sois, ó Senhor Deus, minha esperança, em vós confio desde a minha juventude! 6 Sois meu apoio desde antes que eu nascesse, 6 desde o seio maternal, o meu amparo. 15 Minha boca anunciará todos os dias 15 vossa justiça e vossas graças incontáveis. 17 V ós me ensinastes desde a minha juventude, e até hoje canto as vossas maravilhas."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 25,14-30",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "reference": "Mc 6,17-29",
       "acclamation": {
         "title": "Aleluia, Aleluia, Aleluia.",
-        "verse": "Eu vos dou novo preceito: que uns aos outros vos ameis, como eu vos tenho amado (Jo 13,34)."
+        "verse": "Felizes os que são perseguidos, por causa da justiça do Senhor, porque o Reino dos Céus há de ser deles!"
       },
-      "text": "Naquele tempo, disse Jesus aos seus discípulos esta parábola: 14Um homem ia viajar para o estrangeiro. Chamou seus empregados e lhes entregou seus bens. 15A um deu cinco talentos, a outro deu dois e ao terceiro, um; a cada qual de acordo com a sua capacidade. Em seguida viajou. 16O empregado que havia recebido cinco talentos saiu logo, trabalhou com eles, e lucrou outros cinco. 17Do mesmo modo, o que havia recebido dois lucrou outros dois. 18Mas aquele que havia recebido um só, saiu, cavou um buraco na terra, e escondeu o dinheiro do seu patrão. 19Depois de muito tempo, o patrão voltou e foi acertar contas com os empregados. 20O empregado que havia recebido cinco talentos entregou-lhe mais cinco, dizendo: `Senhor, tu me entregaste cinco talentos. Aqui estão mais cinco que lucrei'. 21O patrão lhe disse: `Muito bem, servo bom e fiel! como foste fiel na administração de tão pouco, eu te confiarei muito mais. Vem participar da minha alegria!' 22Chegou também o que havia recebido dois talentos, e disse: `Senhor, tu me entregaste dois talentos. Aqui estão mais dois que lucrei'. 23O patrão lhe disse: `Muito bem, servo bom e fiel! Como foste fiel na administração de tão pouco, eu te confiarei muito mais. Vem participar da minha alegria!' 24Por fim, chegou aquele que havia recebido um talento, e disse: `Senhor, sei que és um homem severo, pois colhes onde não plantaste e ceifas onde não semeaste. 25Por isso fiquei com medo e escondi o teu talento no chão. Aqui tens o que te pertence'. 26O patrão lhe respondeu: `Servo mau e preguiçoso! Tu sabias que eu colho onde não plantei e que ceifo onde não semeei? 27Então devias ter depositado meu dinheiro no banco, para que, ao voltar, eu recebesse com juros o que me pertence.' 28Em seguida, o patrão ordenou: `Tirai dele o talento e dai-o àquele que tem dez! 29Porque a todo aquele que tem será dado mais, e terá em abundância, mas daquele que não tem, até o que tem lhe será tirado. 30Quanto a este servo inútil, jogai-o lá fora, na escuridão. Ali haverá choro e ranger de dentes!'"
+      "text": "Fez isso por causa de Herodíades, mulher do seu irmão Filipe, com quem se tinha casado. 18 João dizia a Herodes: \"Não te é permitido ficar com a mulher do teu irmão\". 19 Por isso Herodíades o odiava e queria matá-lo, mas não podia. 20 Com efeito, Herodes tinha medo de João, pois sabia que ele era justo e santo, e por isso o protegia. Gostava de ouvi-lo, embora ficasse embaraçado quando o escutava. 21 Finalmente, chegou o dia oportuno. Era o aniversário de Herodes, e ele fez um grande banquete para os grandes da corte, os oficiais e os cidadãos importantes da Galileia. 22 A filha de Herodíades entrou e dançou, agradando a Herodes e seus convidados. Então o rei disse à moça: \"Pede-me o que quiseres e eu to darei\". 23 E lhe jurou dizendo: \"Eu te darei qualquer coisa que me pedires, ainda que seja a metade do meu reino\". 24 Ela saiu e perguntou à mãe: \"O que vou pedir?\" A mãe respondeu: \"A cabeça de João Batista\". 25 E, voltando depressa para junto do rei, pediu: \"Quero que me dês agora, num prato, a cabeça de João Batista\". 26 O rei ficou muito triste, mas não pôde recusar. Ele tinha feito o juramento diante dos convidados. 27 Imediatamente, o rei mandou que um soldado fosse buscar a cabeça de João. O soldado saiu, degolou-o na prisão, 28 trouxe a cabeça num prato e a deu à moça. Ela a entregou à sua mãe. 29 Ao saberem disso, os discípulos de João foram lá, levaram o cadáver e o sepultaram."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário ao Evangelho por Catecismo da Igreja Católica<br/>",
-    "</b>",
-    "§§ 2402-2405<br/>",
-    "«Confiou-lhes os seus bens.»<br/>",
-    "O destino universal e a propriedade privada dos bens<br/>",
-    "No princípio, Deus confiou a Terra e os seus recursos à gestão comum da humanidade, para que dela cuidasse, a dominasse pelo seu trabalho e gozasse dos seus frutos (Gn 1,26-29).Os bens da criação são destinados a todo o género humano. No entanto, a Terra foi repartida entre os homens para garantir a segurança da sua vida, exposta à penúria e ameaçada pela violência. A apropriação dos bens é legítima, para garantir a liberdade e a dignidade das pessoas, e para ajudar cada qual a obviar às suas necessidades fundamentais e às necessidades daqueles que tem a seu cargo. Tal apropriação deve permitir que se manifeste a solidariedade natural entre os homens. O direito à propriedade privada [...] não anula a doação original da Terra à humanidade no seu conjunto. O destino universal dos bens continua a ser primordial, embora a promoção do bem comum exija o respeito pela propriedade privada, e pelo direito a ela e ao respetivo exercício.<br/>",
-    "«Quem usa desses bens, não deve considerar as coisas exteriores, que legitimamente possui, só como próprias, mas também como comuns, no sentido de que possam beneficiar, não só a si, mas também aos outros» (Gaudium et Spes, 69). A propriedade dum bem faz do seu detentor um administrador da providência de Deus, com a obrigação de o fazer frutificar e de comunicar os seus benefícios aos outros, a começar pelos seus próximos. Os bens de produção [...] requerem os cuidados dos seus possuidores, para que a sua fecundidade aproveite ao maior número. Os detentores dos bens de uso e de consumo devem utilizá-los com moderação, reservando a melhor parte para o hóspede, o doente, o pobre.<br/>"
-  ]
+  "extra": []
 }

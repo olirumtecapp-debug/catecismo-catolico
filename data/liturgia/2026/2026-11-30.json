@@ -1,37 +1,28 @@
 {
   "date": "2026-11-30",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Advento Ciclo do Natal Festa: Santo Andre, Apostolo",
-  "color": "vermelho",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/11/30/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Isaías 63,16-17.19; 64,2-7",
-      "intro": "Leitura do livro do Profeta Isaías:",
-      "text": "16Senhor, tu és nosso Pai, nosso redentor; eterno é o teu nome. 17Como nos deixaste andar longe de teus caminhos e endureceste nossos corações para não termos o teu temor? Por amor de teus servos, das tribos de tua herança, volta atrás. 19bAh! se rompesses os céus e descesses! As montanhas se desmanchariam diante de ti. 64,2bDesceste, pois, e as montanhas se derreteram diante de ti. 3Nunca se ouviu dizer nem chegou aos ouvidos de ninguém, jamais olhos viram que um Deus, exceto tu, tenha feito tanto pelos que nele esperam. 4Vens ao encontro de quem pratica a justiça com alegria, de quem se lembra de ti em teus caminhos. Tu te irritaste, porque nós pecamos; é nos caminhos de outrora que seremos salvos. 5Todos nós nos tornamos imundície, e todas as nossas boas obras são como um pano sujo; murchamos todos como folhas, e nossas maldades empurram-nos como o vento."
+      "reference": "Rm 10,9-18",
+      "text": "Irmãos, 9 se, com tua boca, confessares Jesus como Senhor e, no teu coração, creres que Deus o ressuscitou dos mortos, serás salvo. 10 É crendo no coração que se alcança a justiça e é confessando a fé com a boca que se consegue a salvação. 11 Pois a Escritura diz: \"Todo aquele que nele crer não ficará confundido\". 12 Portanto, não importa a diferença entre judeu e grego; todos têm o mesmo Senhor, que é generoso para com todos os que o invocam. 13 De fato, todo aquele que invocar o Nome do Senhor será salvo. 14 Mas, como invocá-lo, sem antes crer nele? E como crer, sem antes ter ouvido falar dele? E como ouvir, sem alguém que pregue? 15 E como pregar, sem ser enviado para isso? Assim é que está escrito: \"Quão belos são os pés dos que anunciam o bem\". 16 Mas nem todos obedeceram à Boa-nova. Pois Isaías diz: \"Senhor, quem acreditou em nossa pregação?\" 17 Logo, a fé vem da pregação e a pregação se faz pela palavra de Cristo. 18 Então, eu pergunto: Será que eles não ouviram? Certamente que ouviram, pois \"a voz deles se espalhou por toda a terra, e as suas palavras chegaram aos confins do mundo\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 79 (80)",
-      "refrain": "Iluminai a vossa face sobre nós, convertei-nos, para que sejamos salvos!",
-      "text": "- Ó Pastor de Israel, prestai ouvidos. Vós, que sobre os querubins vos assentais, aparecei cheio de glória e esplendor! Despertai vosso poder, ó nosso Deus, e vinde logo nos trazer a salvação!\n\n- Voltai-vos para nós, Deus do universo! Olhai dos altos céus e observai. Visitai a vossa vinha e protegei-a! Foi a vossa mão direita que a plantou; protegei-a, e ao rebento que firmastes!\n\n- Pousai a mão por sobre o vosso protegido, o filho do homem que escolhestes para vós! E nunca mais vos deixaremos, Senhor Deus! Dai-nos vida, e louvaremos vosso nome!"
+      "reference": "Sl 18(19A),2-3.4-5 (R. 5a)",
+      "refrain": "Seu som ressoa e se espalha em toda terra.",
+      "text": "2 Os céus proclamam a glória do Senhor, e o firmamento, a obra de suas mãos; 3 o dia ao dia transmite esta mensagem, a noite à noite publica esta notícia. 4 Não são discursos nem frases ou palavras, nem são vozes que possam ser ouvidas; 5 seu som ressoa e se espalha em toda a terra, chega aos confins do universo a sua voz."
     },
-    "secondReading": {
-      "reference": "Coríntios 1,3-9",
-      "intro": "Leitura da primeira carta de São Paulo aos Coríntios:",
-      "text": "Irmãos: 3Para vós, graça e paz, da parte de Deus, nosso Pai, e do Senhor Jesus Cristo. 4Dou graças a Deus sempre a vosso respeito, por causa da graça que Deus vos concedeu em Cristo Jesus: 5Nele fostes enriquecidos em tudo, em toda palavra e em todo conhecimento, 6à medida que o testemunho sobre Cristo se confirmou entre vós. 7Assim, não tendes falta de nenhum dom, vós que aguardais a revelação do Senhor nosso, Jesus Cristo. 8É ele também que vos dará perseverança em vosso procedimento irrepreensível, até o fim, até o dia de nosso Senhor, Jesus Cristo."
-    },
+    "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Marcos 13, 33-37",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "reference": "Mt 4,18-22",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Mostrai-nos, ó Senhor, vossa bondade, e a vossa salvação nos concedei! (Sl 84, 8)"
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Vinde após mim, disse o Senhor, e eu ensinarei a pescar gente."
       },
-      "text": "Naquele tempo, disse Jesus aos seus discípulos: 33Cuidado! Ficai atentos, porque não sabeis quando chegará o momento. 34É como um homem que, ao partir para o estrangeiro, deixou sua casa sob a responsabilidade de seus empregados, distribuindo a cada um sua tarefa. E mandou o porteiro ficar vigiando. 35Vigiai, portanto, porque não sabeis quando o dono da casa vem: à tarde, à meia-noite, de madrugada ou ao amanhecer. 36Para que não suceda que, vindo de repente, ele vos encontre dormindo. 37O que vos digo, digo a todos: Vigiai!\""
+      "text": "Simão, chamado Pedro, e seu irmão André. Estavam lançando a rede ao mar, pois eram pescadores. 19 Jesus disse a eles: \"Segui-me, e eu farei de vós pescadores de homens\". 20 Eles, imediatamente deixaram as redes e o seguiram. 21 Caminhando um pouco mais, Jesus viu outros dois irmãos: Tiago, filho de Zebedeu, e seu irmão João. Estavam na barca com seu pai Zebedeu consertando as redes. Jesus os chamou. 22 Eles, imediatamente deixaram a barca e o pai, e o seguiram."
     }
   },
-  "extra": [
-    "- Graças a Deus<br/>",
-    "- Graças a Deus<br/>"
-  ]
+  "extra": []
 }

@@ -1,40 +1,28 @@
 {
   "date": "2026-08-05",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "18a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/8/5/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Jeremias 31,1-7",
-      "intro": "Leitura do Livro do Profeta Jeremias:",
-      "text": "Naquele tempo, diz o Senhor, serei Deus para todas as tribos de Israel, e elas serão meu povo. 2Isto diz o Senhor: Encontrou perdão no deserto o povo que escapara à espada; Israel encaminha-se para o seu descanso.' 3O Senhor apareceu-me de longe: 'Amei-te com amor eterno e te atraí com a misericórdia. 4De novo te edificarei, serás reedificada, ó jovem nação de Israel; de novo teus tambores ornarão as praças e sairás entre grupos de dançantes. 5Hás de plantar vinhas nos montes de Samaria; os cultivadores hão de plantar e também colher. 6Virá o dia em que gritarão os guardas no monte Efraim: 'Levantai-vos, vamos a Sião, vamos ao Senhor, nosso Deus`. 7Isto diz o Senhor: Exultai de alegria por Jacó, aclamai a primeira das nações; tocai, cantai e dizei: 'Salva, Senhor, teu povo, o resto de Israel."
+      "reference": "Jr 31,1-7",
+      "text": "\"Naquele tempo, diz o Senhor, serei Deus para todas as tribos de Israel, e elas serão meu povo\". 2 Isto diz o Senhor: \"Encontrou perdão no deserto o povo que escapara à espada; Israel encaminha-se para o seu descanso\". 3 O Senhor apareceu-me de longe: \"Amei-te com amor eterno e te atraí com a misericórdia. 4 De novo te edificarei, serás reedificada, ó jovem nação de Israel; de novo teus tambores ornarão as praças e sairás entre grupos de dançantes. 5 Hás de plantar vinhas nos montes de Samaria; os cultivadores hão de plantar e também colher. 6 Virá o dia em que gritarão os guardas no monte Efraim: 'Levantai-vos, vamos a Sião, vamos ao Senhor, nosso Deus'. 7 Isto diz o Senhor: Exultai de alegria por Jacó, aclamai a primeira das nações; tocai, cantai e dizei: 'Salva, Senhor, teu povo, o resto de Israel'\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo (Jr 31)",
+      "reference": "Jr 31,10.11-12ab.13 (R. cf. 10d)",
       "refrain": "O Senhor nos guardará qual pastor a seu rebanho.",
-      "text": "- Ouvi, nações, a palavra do Senhor e anunciai-a nas ilhas mais distantes: 'Quem dispersou Israel, vai congregá-lo, e o guardará qual pastor a seu rebanho!\n\n- Pois, na verdade, o Senhor remiu Jacó e o libertou do poder do prepotente. Voltarão para o monte de Sião, entre brados e cantos de alegria afluirão para as bênçãos do Senhor:\n\n- Então a virgem dançará alegremente, também o jovem e o velho exultarão; mudarei em alegria o seu luto, serei consolo e conforto após a guerra."
+      "text": "Jr 31,10.11-12ab.13 (R. cf. 10 ) ℟. O Senhor nos guardará qual pastor a seu rebanho. 10 Ouvi, nações, a palavra do Senhor e anunciai-a nas ilhas mais distantes: \"Quem dispersou Israel, vai congregá-lo, e o guardará qual pastor a seu rebanho!\" 11 Pois, na verdade, o Senhor remiu Jacó e o libertou do poder do prepotente. 12 Voltarão para o monte de Sião, † entre brados e cantos de alegria b afluirão para as bênçãos do Senhor. 13 Então a virgem dançará alegremente, também o jovem e o velho exultarão; mudarei em alegria o seu luto, serei consolo e conforto após a guerra."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 15, 21-28",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "reference": "Mt 15,21-28",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Um grande profeta surgiu entre nós e Deus visitou o seu povo, aleluia (Lc 7,16)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Um grande profeta surgiu entre nós e Deus visitou o seu povo, aleluia."
       },
-      "text": "Naquele tempo: 21Jesus foi para a região de Tiro e Sidônia. 22Eis que uma mulher cananéia, vindo daquela região, pôs-se a gritar: 'Senhor, filho de Davi, tem piedade de mim: minha filha está cruelmente atormentada por um demônio!' 23Mas, Jesus não lhe respondeu palavra alguma. Então seus discípulos aproximaram-se e lhe pediram: 'Manda embora essa mulher, pois ela vem gritando atrás de nós.' 24Jesus respondeu: 'Eu fui enviado somente às ovelhas perdidas da casa de Israel.' 25Mas, a mulher, aproximando-se, prostrou-se diante de Jesus, e começou a implorar: 'Senhor, socorre-me!' 26Jesus lhe disse: 'Não fica bem tirar o pão dos filhos para jogá-lo aos cachorrinhos.' 27A mulher insistiu: 'É verdade, Senhor; mas os cachorrinhos também comem as migalhas que caem da mesa de seus donos!' 28Diante disso, Jesus lhe disse: 'Mulher, grande é a tua fé! Seja feito como tu queres!' E desde aquele momento sua filha ficou curada."
+      "text": "22 Eis que uma mulher cananeia, vindo daquela região, pôs-se a gritar: \"Senhor, filho de Davi, tem piedade de mim: minha filha está cruelmente atormentada por um demônio!\" 23 Mas, Jesus não lhe respondeu palavra alguma. Então seus discípulos aproximaram-se e lhe pediram: \"Manda embora essa mulher, pois ela vem gritando atrás de nós\". 24 Jesus respondeu: \"Eu fui enviado somente às ovelhas perdidas da casa de Israel\". 25 Mas, a mulher, aproximando-se, prostrou-se diante de Jesus, e começou a implorar: \"Senhor, socorre-me!\" 26 Jesus lhe disse: \"Não fica bem tirar o pão dos filhos para jogá-lo aos cachorrinhos\". 27 A mulher insistiu: \"É verdade, Senhor; mas os cachorrinhos também comem as migalhas que caem da mesa de seus donos!\" 28 Diante disso, Jesus lhe disse: \"Mulher, grande é a tua fé! Seja feito como tu queres!\" E desde aquele momento sua filha ficou curada."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por São João Crisóstomo (c. 345-407)<br/>",
-    "</b>",
-    "Presbítero de Antioquia, Bispo de Constantinopla, Doutor da Igreja<br/>",
-    "Homilias sobre S. Mateus<br/>",
-    "O poder de uma oração perseverante<br/>",
-    "Quando seria de esperar que se afastasse desanimada, a cananeia aproxima-se mais e, prostrando-se aos pés de Jesus, diz-lhe: «Socorre-me, Senhor!» Mas então, mulher, não O ouviste dizer: «Não fui enviado senão às ovelhas perdidas da casa de Israel»? Ouvi, replica ela; mas Ele é o Senhor. [...]<br/>",
-    "Foi por ter previsto esta resposta que Cristo adiou a concessão do pedido. Recusou a solicitação para lhe sublinhar a piedade. Se não quisesse conceder-lhe o que lhe pedia, não teria acabado por fazê-lo. [...] As suas respostas não visavam magoá-la, mas atraí-la e revelar este tesouro escondido.<br/>",
-    "Considera porém, peço-te, não apenas a fé, mas a profunda humildade desta mulher. Jesus deu aos judeus o nome de filhos; a cananeia ainda lhes aumenta o título, chamando-lhes donos e senhores, tão longe se encontra de sofrer com o elogio a outrem: « Mas também os cachorrinhos comem das migalhas que caem da mesa de seus donos» […] E é por essa humildade que é admitida no número dos filhos. Cristo diz então: «Mulher, é grande a tua fé.» Demorou-Se a pronunciar estas palavras e a recompensar esta mulher: «Faça-se como desejas.» Estás a ver, a cananeia desempenha um papel importante na cura de sua filha. Com efeito, Cristo não diz: «Que a tua filha fique curada», mas antes: «É grande a tua fé. Faça-se como desejas.» E observa ainda o seguinte: ela conseguiu aquilo que os apóstolos não tinham conseguido. Tal é poder de uma oração perseverante.<br/>"
-  ]
+  "extra": []
 }

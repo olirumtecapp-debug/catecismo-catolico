@@ -1,29 +1,27 @@
 {
   "date": "2027-05-19",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "7a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/5/19/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Eclesiástico 4,12-22",
-      "intro": "Leitura do livro do Eclesiástico:",
-      "text": "12 A sabedoria inspira a vida aos seus filhos, ela toma sob a sua proteção aqueles que a procuram; ela os precede no caminho da justiça. 13 Aquele que a ama, ama a vida; aqueles que velam para encontrá-la sentirão sua doçura. 14 Aqueles que a possuem terão a vida como herança, e Deus abençoará todo o lugar onde ele entrar. 15 Aqueles que a servem serão obedientes ao Santo; aqueles que a amam serão amados por Deus. 16 Aquele que a ouve julgará as nações; aquele que é atento em contemplá-la permanecerá seguro. 17 Quem nela põe sua confiança tê-la-á como herança e sua posteridade a possuirá, 18 pois na provação ela anda com ele, e escolhe-o em primeiro lugar. 19 Ela traz-lhe o temor, o pavor e a aprovação. Ela o atormenta com sua penosa disciplina, até que, tendo-o experimentado nos seus pensamentos, ela possa confiar nele. 20 Então ela o porá firme, voltará a ele em linha reta. Ela o cumula de alegria, 21 desvenda-lhe seus segredos e enriquece-o com tesouros de ciência, de inteligência e de justiça. 22 Porém, se ele se transviar, ela o abandonará, e o entregará às mãos do seu inimigo."
+      "reference": "Eclo 4,12-22",
+      "text": "Deus ama aqueles que amam a sabedoria. 12 A sabedoria comunica a vida a seus filhos e acolhe os que a procuram. 13 Os que a amam, amam a vida; os que a procuram desde manhã cedo, serão repletos de alegria pelo Senhor. 14 Quem a ela se apega, herdará a glória; para onde for, Deus o abençoará. 15 Os que a veneram, prestam culto ao Santo; pois Deus ama os que a amam. 16 Quem a escutar, julgará as nações; quem a ela se dedicar, viverá em segurança. 17 Se alguém confiar nela, vai recebê-la em herança; e na sua posse continuarão seus descendentes. 18 No começo, ela o acompanha por caminhos contrários, 19 trazendo-lhe temor e tremor; começa a prová-lo com a sua disciplina, até que ele a tenha em seus pensamentos e nela deponha sua confiança. 20 Então voltará a ele em linha reta, o confirmará e lhe dará alegria, 21 lhe revelará os seus segredos e lhe dará o tesouro da ciência e da compreensão da justiça. 22 Se, porém, se desviar, ela o abandonará e o entregará às mãos de seu inimigo. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 118(119)",
+      "reference": "Sl 118(119),165.168.171.174.175 (R. 165a)",
       "refrain": "Os que amam vossa lei têm grande paz!",
-      "text": "- Os que amam vossa lei têm grande paz, e não há nada que os faça tropeçar.\n\n- Serei fiel à vossa lei, vossa aliança; os meus caminhos estão todos ante vós.\n\n- Que prorrompam os meus lábios em canções, pois me fizestes conhecer vossa vontade!\n\n- Desejo a vossa salvação ardentemente e encontro em vossa lei minhas delícias!\n\n- Possa eu viver e para sempre vos louvar; e que me ajudem, ó Senhor, vossos conselhos!"
+      "text": "165 Os que amam vossa lei têm grande paz, e não há nada que os faça tropeçar. 168 Serei fiel à vossa lei, vossa Aliança; os meus caminhos estão todos ante vós. 171 Que prorrompam os meus lábios em canções, pois me fizestes conhecer vossa vontade! 174 Desejo a vossa salvação ardentemente e encontro em vossa lei minhas delícias!"
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Marcos 9,38-40",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "reference": "Mc 9,38-40",
       "acclamation": {
         "title": "Aleluia, Aleluia, Aleluia.",
-        "verse": "Sou o caminho, a verdade e a vida, ninguém vem ao Pai, senão por mim (Jo 14,6)."
+        "verse": "Sou o Caminho, a Verdade e a Vida, ninguém vem ao Pai, senão por mim."
       },
-      "text": "Naquele tempo, 38João disse a Jesus: \"Mestre\", disse João, \"vimos um homem expulsando demônios em teu nome e procuramos impedi-lo, porque ele não era um dos nossos.\" 39 \"Não o impeçam\", disse Jesus. \"Ninguém que faça um milagre em meu nome, pode falar mal de mim logo em seguida, 40 pois quem não é contra nós está a nosso favor."
+      "text": "\"Mestre, vimos um homem expulsar demônios em teu nome. Mas nós o proibimos, porque ele não nos segue\". 39 Jesus disse: \"Não o proibais, pois ninguém faz milagres em meu nome para depois falar mal de mim. 40 Quem não é contra nós é a nosso favor\"."
     }
   },
   "extra": []

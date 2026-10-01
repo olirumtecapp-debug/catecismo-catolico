@@ -1,38 +1,28 @@
 {
   "date": "2026-11-05",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "31a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/11/5/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Filipenses 3,3-8",
-      "intro": "Leitura da carta de são Paulo aos Filipenses:",
-      "text": "Irmãos, 3os verdadeiros circuncidados somos nós, que prestamos culto pelo Espírito de Deus, colocamos a nossa glória em Cristo Jesus e não pomos confiança na carne. 4Aliás, também eu poderia pôr minha confiança na carne. Pois, se algum outro pensa que pode confiar na carne, eu mais ainda. 5Fui circuncidado no oitavo dia, sou da raça de Israel, da tribo de Benjamim, hebreu filho de hebreus. Em relação à lei, fariseu; 6pelo zelo, perseguidor da Igreja de Deus; quanto à justiça que vem da lei, sempre irrepreensível. 7Mas essas coisas, que eram vantagens para mim, considerei-as como perda, por causa de Cristo. 8Na verdade, considero tudo como perda diante da vantagem suprema que consiste em conhecer a Cristo Jesus, meu Senhor."
+      "reference": "Fl 3,3-8a",
+      "text": "os verdadeiros circuncidados somos nós, que prestamos culto pelo Espírito de Deus, colocamos a nossa glória em Cristo Jesus e não pomos confiança na carne. 4 Aliás, também eu poderia pôr minha confiança na carne. Pois, se algum outro pensa que pode confiar na carne, eu mais ainda. 5 Fui circuncidado no oitavo dia, sou da raça de Israel, da tribo de Benjamim, hebreu filho de hebreus. Em relação à Lei, fariseu, 6 pelo zelo, perseguidor da Igreja de Deus; quanto à justiça que vem da Lei, sempre irrepreensível. 7 Mas essas coisas, que eram vantagens para mim, considerei-as como perda, por causa de Cristo. 8a Na verdade, considero tudo como perda diante da vantagem suprema que consiste em conhecer a Cristo Jesus, meu Senhor. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 104 (105)",
-      "refrain": "Exulte o coração dos que buscam o Senhor!",
-      "text": "- Cantai, entoai salmos para ele, publicai todas as suas maravilhas! Gloriai-vos em seu nome que é santo, exulte o coração que busca a Deus!\n\n- Procurai o Senhor Deus e seu poder, buscai constantemente a sua face! Lembrai as maravilhas que ele fez, seus prodígios e as palavras de seus lábios!\n\n- Descendentes de Abraão, seu servidor, e filhos de Jacó, seu escolhido, ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra."
+      "reference": "Sl 104(105),2-3.4-5.6-7 (R. 3b)",
+      "refrain": "Exulte o coração dos que buscam o Senhor! Ou: Aleluia, Aleluia, Aleluia <div class=\"refrao_salmo\"><font color=\"#ff",
+      "text": "0000\">Ou:</font> Aleluia, Aleluia, Aleluia 2 Cantai, entoai salmos para ele, publicai todas as suas maravilhas! 3 Gloriai-vos em seu nome que é santo, exulte o coração que busca a Deus! 4 Procurai o Senhor Deus e seu poder, buscai constantemente a sua face! 5 Lembrai as maravilhas que ele fez, seus prodígios e as palavras de seus lábios! 6 Descendentes de Abraão, seu servidor, e filhos de Jacó, seu escolhido, 7 ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 15, 1-10",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "Lc 15,1-10",
       "acclamation": {
         "title": "Aleluia, Aleluia, Aleluia.",
-        "verse": "Vinde a mim, todos vós que estais cansados, e descanso eu vos darei, diz o Senhor (Mt 11,28)."
+        "verse": "Vinde a mim, todos vós que estais cansados, e descanso eu vos darei, diz o Senhor."
       },
-      "text": "Naquele tempo, 1os publicanos e pecadores aproximavam-se de Jesus para o escutar. 2Os fariseus, porém, e os mestres da lei criticavam Jesus: \"Este homem acolhe os pecadores e faz refeição com eles\". 3Então, Jesus contou-lhes esta parábola: 4\"Se um de vós tem cem ovelhas e perde uma, não deixa as noventa e nove no deserto e vai atrás daquela que se perdeu, até encontrá-la? 5Quando a encontra, coloca-a nos ombros com alegria 6e, chegando a casa, reúne os amigos e vizinhos e diz: 'Alegrai-vos comigo! Encontrei a minha ovelha que estava perdida!' 7Eu vos digo, assim haverá no céu mais alegria por um só pecador que se converte do que por noventa e nove justos que não precisam de conversão. 8E se uma mulher tem dez moedas de prata e perde uma, não acende uma lâmpada, varre a casa e a procura cuidadosamente, até encontrá-la? 9Quando a encontra, reúne as amigas e vizinhas e diz: 'Alegrai-vos comigo! Encontrei a moeda que tinha perdido!' 10Por isso, eu vos digo, haverá alegria entre os anjos de Deus por um só pecador que se converte\"."
+      "text": "2 Os fariseus, porém, e os mestres da Lei criticavam Jesus. \"Este homem acolhe os pecadores e faz refeição com eles\". 3 Então Jesus contou-lhes esta parábola: 4 \"Se um de vós tem cem ovelhas e perde uma, não deixa as noventa e nove no deserto, e vai atrás daquela que se perdeu, até encontrá-la? 5 Quando a encontra, coloca-a nos ombros com alegria, 6 e, chegando a casa, reúne os amigos e vizinhos, e diz: 'Alegrai-vos comigo! Encontrei a minha ovelha que estava perdida!' 7 Eu vos digo: Assim haverá no céu mais alegria por um só pecador que se converte, do que por noventa e nove justos que não precisam de conversão. 8 E se uma mulher tem dez moedas de prata e perde uma, não acende uma lâmpada, varre a casa e a procura cuidadosamente, até encontrá-la? 9 Quando a encontra, reúne as amigas e vizinhas, e diz: 'Alegrai-vos comigo! Encontrei a moeda que tinha perdido!' 10 Por isso, eu vos digo, haverá alegria entre os anjos de Deus por um só pecador que se converte\"."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário ao Evangelho São Pedro Crisólogo, Bispo e Doutor da Igreja<br/>",
-    "</b>",
-    "Sermão 168, 4-6<br/>",
-    "Deus à procura de uma só ovelha para salvação de todas<br/>",
-    "O facto de encontrarmos um objeto que tínhamos perdido enche-nos de uma alegria nova cada vez que ocorre. E esta alegria é maior do que a que experimentávamos, antes de o perder, quando aquele objeto estava bem guardado. Mas a parábola da ovelha perdida fala mais da ternura de Deus do que da maneira como os homens habitualmente se comportam. E exprime uma verdade profunda: abandonar o que tem importância por amor do que há de mais humilde é próprio do poder divino, não da cobiça humana. Porque Deus faz existir o que não é; Ele parte à procura do que está perdido guardando o que deixou ficar para trás, e encontra o que se tinha transviado sem perder o que está à sua guarda.<br/>",
-    "É por isso que este pastor não é da Terra, mas do Céu. A parábola não é de forma alguma uma representação de obras humanas, mas esconde mistérios divinos, como é demonstrado cabalmente pelos números que menciona: «Quem de vós, que possua cem ovelhas e tenha perdido uma delas...» Como vedes, a perda de uma só ovelha magoou tanto o pastor como se o rebanho inteiro, privado da sua proteção, se tivesse metido por um caminho errado. É por isso que, deixando as outras noventa e nove, ele parte à procura de uma só, [...] a fim de, nela, as encontrar e as salvar a todas.<br/>"
-  ]
+  "extra": []
 }

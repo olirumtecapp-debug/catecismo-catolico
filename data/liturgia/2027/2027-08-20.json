@@ -1,29 +1,27 @@
 {
   "date": "2027-08-20",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Memoria: Sao Bernardo",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/8/20/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Rute 1,1.3-6.14-16.22",
-      "intro": "Início do Livro de Rute:",
-      "text": "1No tempo em que os juízes governavam, houve uma fome no país e um homem de Belém de Judá foi morar nos campos de Moab com sua mulher e seus dois filhos. 3Entretanto, morreu Elimelec, marido de Noemi, e esta ficou sozinha com seus dois filhos. 4Eles casaram-se com mulheres moabitas, uma das quais se chamava Orfa, a outra, Rute. E ali permaneceram uns dez anos. 5Depois morreram também os dois, Maalon e Quelion e a mulher ficou só, sem os dois filhos e sem o marido. 6Então ela se dispôs a voltar do campo de Moab para a sua pátria com as duas noras, porque tinha ouvido dizer que o Senhor havia olhado para o seu povo, e lhe tinha dado alimentos. 14bOrfa beijou sua sogra e partiu. Rute, porém, ficou com Noemi. 15Esta disse-lhe: 'Olha, tua cunhada voltou para o seu povo e para os seus deuses. Vai com ela'. 16Mas Rute respondeu: 'Não insistas comigo para que te deixe e me afaste de ti. Porque para onde fores irei contigo, onde pousares, lá pousarei eu também. Teu povo será o meu povo, e o teu Deus será o meu Deus'. 22Assim Noemi voltou dos campos de Moab, acompanhada de sua nora Rute, a moabita. Regressaram a Belém, quando começava a colheita da cevada."
+      "reference": "Rt 1,1.3-6.14b-16.22",
+      "text": "Noemi acompanhada de sua nora Rute, a moabita, regressou a Belém. Início do Livro de Rute 1,1.3-6.14b-16.22 1 No tempo em que os juízes governavam, houve uma fome no país e um homem de Belém de Judá foi morar nos campos de Moab com sua mulher e seus dois filhos. 3 Entretanto, morreu Elimelec, marido de Noemi, e esta ficou sozinha com seus dois filhos. 4 Eles casaram-se com mulheres moabitas, uma das quais se chamava Orfa, a outra, Rute. E ali permaneceram uns dez anos. 5 Depois morreram também os dois, Maalon e Quelion e a mulher ficou só, sem os dois filhos e sem o marido. 6 Então ela se dispôs a voltar do campo de Moab para a sua pátria com as duas noras, porque tinha ouvido dizer que o Senhor havia olhado para o seu povo, e lhe tinha dado alimentos. 14b Orfa beijou sua sogra e partiu. Rute, porém, ficou com Noemi. 15 Esta disse-lhe: \"Olha, tua cunhada voltou para o seu povo e para os seus deuses. Vai com ela\". 16 Mas Rute respondeu: \"Não insistas comigo para que te deixe e me afaste de ti. Porque para onde fores irei contigo, onde pousares, lá pousarei eu também. Teu povo será o meu povo, e o teu Deus será o meu Deus\". 22 Assim Noemi voltou dos campos de Moab, acompanhada de sua nora Rute, a moabita. Regressaram a Belém, quando começava a colheita da cevada. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 145 (146)",
-      "refrain": "Bendize, ó minha alma, ao Senhor!",
-      "text": "- É feliz todo homem que busca seu auxílio no Deus de Jacó, e que põe no Senhor a esperança. O Senhor fez o céu e a terra, fez o mar e o que neles existe.\n\n- Faz justiça aos que são oprimidos; ele dá alimento aos famintos, é o Senhor quem liberta os cativos.\n\n- O Senhor abre os olhos aos cegos o Senhor faz erguer-se o caído; o Senhor ama aquele que é justo. É o Senhor quem protege o estrangeiro.\n\n-Ele ampara a viúva e o órfão, mas confunde os caminhos dos maus. O Senhor reinará para sempre! Ó Sião, o teu Deus reinará para sempre e por todos os séculos!"
+      "reference": "Sl 145(146),5-6.7.8-9a.9bc-10 (R. 2a)",
+      "refrain": "Bendize, ó minha alma, ao Senhor! Ou: Aleluia, Aleluia, Aleluia. <div class=\"refrao_salmo\"><font color=\"#ff",
+      "text": "0000\">Ou:</font> Aleluia, Aleluia, Aleluia. 5 É feliz todo homem que busca † seu auxílio no Deus de Jacó, e que põe no Senhor a esperança. 6 O Senhor fez o céu e a terra, fez o mar e o que neles existe. 7 Faz justiça aos que são oprimidos; † ele dá alimento aos famintos, é o Senhor quem liberta os cativos. 8 O Senhor abre os olhos aos cegos o Senhor faz erguer-se o caído; o Senhor ama aquele que é justo É o Senhor quem protege o estrangeiro. 9 Ele ampara a viúva e o órfão, c mas confunde os caminhos dos maus. 10 O Senhor reinará para sempre! † Ó Sião, o teu Deus reinará para sempre e por todos os séculos!"
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 22, 34-40",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "reference": "Mt 22,34-40",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Fazei-me conhecer vossa estrada, vossa verdade me oriente e me conduza! (SI 24,4s)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Fazei-me conhecer vossa estrada, vossa verdade me oriente e me conduza!"
       },
-      "text": "Naquele tempo: 34Os fariseus ouviram dizer que Jesus tinha feito calar os saduceus. Então eles se reuniram em grupo, 35e um deles perguntou a Jesus, para experimentá-lo: 36'Mestre, qual é o maior mandamento da Lei?' 37Jesus respondeu: '`Amarás o Senhor teu Deus de todo o teu coração, de toda a tua alma, e de todo o teu entendimento!' 38Esse é o maior e o primeiro mandamento. 39O segundo é semelhante a esse: `Amarás ao teu próximo como a ti mesmo'. 40Toda a Lei e os profetas dependem desses dois mandamentos."
+      "text": "Então eles se reuniram em grupo, 35 e um deles perguntou a Jesus, para experimentá-lo: 36 \"Mestre, qual é o maior mandamento da Lei?\" 37 Jesus respondeu: \"'Amarás o Senhor teu Deus de todo o teu coração, de toda a tua alma, e de todo o teu entendimento!' 38 Esse é o maior e o primeiro mandamento. 39 O segundo é semelhante a esse: 'Amarás ao teu próximo como a ti mesmo'. 40 Toda a Lei e os profetas dependem desses dois mandamentos\"."
     }
   },
   "extra": []

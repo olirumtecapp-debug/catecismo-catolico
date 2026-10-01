@@ -1,33 +1,27 @@
 {
   "date": "2027-05-06",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "6a. Semana da Pascoa Ciclo da Pascoa",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/5/6/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Êxodo 12,1-8.11-14",
-      "intro": "Leitura do livro do Êxodo:",
-      "text": "Naqueles dias, 1o Senhor disse a Moisés e a Aarão no Egito: 2\"Este mês será para vós o começo dos meses; será o primeiro mês do ano. 3Falai a toda a comunidade dos filhos de Israel, dizendo: No décimo dia deste mês, cada um tome um cordeiro por família, um cordeiro para cada casa. 4Se a família não for bastante numerosa para comer um cordeiro, convidará também o vizinho mais próximo, de acordo com o número de pessoas. Deveis calcular o número de comensais conforme o tamanho do cordeiro. 5O cordeiro será sem defeito, macho, de um ano. Podereis escolher tanto um cordeiro como um cabrito: 6e devereis guardá-lo preso até o dia catorze deste mês. Então toda a comunidade de Israel reunida o imolará ao cair da tarde. 7Tomareis um pouco do seu sangue e untareis os marcos e a travessa da porta, nas casas em que o comerdes. 8Comereis a carne nessa mesma noite, assada ao fogo, com pães ázimos e ervas amargas. 11Assim devereis comê-lo: com os rins cingidos, sandálias nos pés e cajado na mão. E comereis às pressas, pois é a Páscoa, isto é, a 'passagem' do Senhor! 12E naquela noite passarei pela terra do Egito e ferirei na terra do Egito todos os primogênitos, desde os homens até os animais; e infligirei castigos contra todos os deuses do Egito, eu, o Senhor. 13O sangue servirá de sinal nas casas onde estiverdes. Ao ver o sangue, passarei adiante, e não vos atingirá a praga exterminadora quando eu ferir a terra do Egito. 14Este dia será para vós uma festa memorável em honra do Senhor, que haveis de celebrar, por todas as gerações, como instituição perpétua\"."
+      "reference": "At 18,1-8",
+      "text": "Naqueles dias: 1 Paulo deixou Atenas e foi para Corinto. 2 Aí encontrou um judeu chamado Áquila, natural do Ponto, que acabava de chegar da Itália, e sua esposa Priscila, pois o imperador Cláudio tinha decretado que todos os judeus saíssem de Roma. Paulo entrou em contato com eles. 3 E, como tinham a mesma profissão - eram fabricantes de tendas - Paulo passou a morar com eles e trabalhavam juntos. 4 Todos os sábados, Paulo discutia na sinagoga, procurando convencer judeus e gregos. 5 Quando Silas e Timóteo chegaram da Macedônia, Paulo dedicou-se inteiramente à Palavra, testemunhando diante dos judeus que Jesus era o Messias. 6 Mas, por causa da resistência e blasfêmias deles, Paulo sacudiu as vestes e disse: \"Vós sois responsáveis pelo que acontecer. Eu não tenho culpa; de agora em diante, vou dirigir-me aos pagãos\". 7 Então, saindo dali, Paulo foi para a casa de um pagão, um certo Tício Justo, adorador do Deus único, que morava ao lado da sinagoga. 8 Crispo, o chefe da sinagoga, acreditou no Senhor com toda a sua família; e muitos coríntios, que escutavam Paulo, acreditavam e recebiam o batismo. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 115 (116B)",
-      "refrain": "O cálice por nós abençoado é a nossa comunhão com o sangue do Senhor.",
-      "text": "- Que poderei retribuir ao Senhor Deus por tudo aquilo que ele fez em meu favor? Elevo o cálice da minha salvação, invocando o nome santo do Senhor.\n\n- É sentida por demais pelo Senhor a morte de seus santos, seus amigos. Eis que sou o vosso servo, ó Senhor, mas me quebrastes os grilhões da escravidão!\n\n- Por isso oferto um sacrifício de louvor, invocando o nome santo do Senhor. Vou cumprir minhas promessas ao Senhor na presença de seu povo reunido."
+      "reference": "Sl 97(98),1.2-3ab.3cd-4 (R. cf. 2b)",
+      "refrain": "O Senhor fez conhecer seu poder salvador perante as nações. Ou: Aleluia, Aleluia, Aleluia. <div class=\"refrao_salmo\">",
+      "text": "1 Cantai ao Senhor Deus um canto novo, porque ele fez prodígios! Sua mão e o seu braço forte e santo alcançaram-lhe a vitória. 2 O Senhor fez conhecer a salvação, e às nações, sua justiça; 3 recordou o seu amor sempre fiel b pela casa de Israel c Os confins do universo contemplaram d a salvação do nosso Deus. 4 Aclamai o Senhor Deus, ó terra inteira, alegrai-vos e exultai!"
     },
-    "secondReading": {
-      "reference": "Coríntios 11,23-26",
-      "intro": "Leitura da primeira carta de São Paulo aos Coríntios:",
-      "text": "Irmãos, 23o que eu recebi do Senhor, foi isso que eu vos transmiti: na noite em que foi entregue, o Senhor Jesus tomou o pão 24e, depois de dar graças, partiu-o e disse: \"Isto é o meu corpo que é dado por vós. Fazei isto em minha memória\". 25Do mesmo modo, depois da ceia, tomou também o cálice e disse: \"Este cálice é a nova aliança, em meu sangue. Todas as vezes que dele beberdes, fazei isto em minha memória\". 26Todas as vezes, de fato, que comerdes desse pão e beberdes desse cálice, estareis proclamando a morte do Senhor, até que ele venha."
-    },
+    "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São João 13, 1-15",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "reference": "Jo 16,16-20",
       "acclamation": {
-        "title": "Glória a vós, ó Cristo, Verbo de Deus.",
-        "verse": "Eu vos dou este novo mandamento, nova ordem agora vos dou, que também vos ameis uns aos outros, como eu vos amei, diz o Senhor (Jo 13,34)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eu não vos deixarei órfãos: eu irei, mas voltarei, e o vosso coração muito há de se alegrar."
       },
-      "text": "1Era antes da festa da Páscoa. Jesus sabia que tinha chegado a sua hora de passar deste mundo para o Pai; tendo amado os seus que estavam no mundo, amou-os até o fim. 2Estavam tomando a ceia. O diabo já tinha posto no coração de Judas, filho de Simão Iscariotes, o propósito de entregar Jesus. 3Jesus, sabendo que o Pai tinha colocado tudo em suas mãos e que de Deus tinha saído e para Deus voltava, 4levantou-se da mesa, tirou o manto, pegou uma toalha e amarrou-a na cintura. 5Derramou água numa bacia e começou a lavar os pés dos discípulos, enxugando-os com a toalha com que estava cingido. 6Chegou a vez de Simão Pedro. Pedro disse: \"Senhor, tu me lavas os pés?\" 7Respondeu Jesus: \"Agora não entendes o que estou fazendo; mais tarde compreenderás\". 8Disse-lhe Pedro: \"Tu nunca me lavarás os pés!\" Mas Jesus respondeu: \"Se eu não te lavar, não terás parte comigo\". 9Simão Pedro disse: \"Senhor, então lava não somente os meus pés, mas também as mãos e a cabeça\". 10Jesus respondeu: \"Quem já se banhou não precisa lavar senão os pés, porque já está todo limpo. Também vós estais limpos, mas não todos\". 11Jesus sabia quem o ia entregar; por isso disse: \"Nem todos estais limpos\". 12Depois de ter lavado os pés dos discípulos, Jesus vestiu o manto e sentou-se de novo. E disse aos discípulos: \"Compreendeis o que acabo de fazer? 13Vós me chamais Mestre e Senhor e dizeis bem, pois eu o sou. 14Portanto, se eu, o Senhor e Mestre, vos lavei os pés, também vós deveis lavar os pés uns dos outros. 15Dei-vos o exemplo, para que façais a mesma coisa que eu fiz\"."
+      "text": "16 \"Pouco tempo ainda, e já não me vereis. E outra vez pouco tempo, e me vereis de novo\". 17 Alguns dos seus discípulos disseram então entre si: 'O que significa o que ele nos está dizendo: 'Pouco tempo, e não me vereis, e outra vez pouco tempo, e me vereis de novo', e: 'Eu vou para junto do Pai?'\" 18 Diziam, pois: \"O que significa este pouco tempo? Não entendemos o que ele quer dizer\". 19 Jesus compreendeu que eles queriam interrogá-lo; então disse-lhes: \"Estais discutindo entre vós porque eu disse: 'Pouco tempo e já não me vereis, e outra vez pouco tempo e me vereis'? 20 Em verdade, em verdade vos digo: Vós chorareis e vos lamentareis, mas o mundo se alegrará. Vós ficareis tristes, mas a vossa tristeza se transformará em alegria\"."
     }
   },
   "extra": []

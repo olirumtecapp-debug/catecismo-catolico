@@ -1,29 +1,27 @@
 {
   "date": "2026-08-22",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Memoria: Nossa Senhora Rainha",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/8/22/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Ezequiel 43,1-7",
-      "intro": "Leitura da profecia de Ezequiel:",
-      "text": "1O homem conduziu-me até a porta da casa do Senhor que dá para o nascente, 2e eu vi a glória do Deus de Israel, vinda do oriente; um ruído a acompanhava, semelhante ao ruído de águas caudalosas, e a terra brilhava com a sua glória. 3A visão era idêntica à visão que tive quando ele veio destruir a cidade, bem como à visão que tive junto ao rio Cobar; e eu caí com o rosto no chão. 4A glória do Senhor entrou no templo pela porta que dá para o nascente. 5Então, o espírito raptou-me e me levou para dentro do pátio interno, e eu vi que o templo ficou cheio da glória do Senhor. 6Ouvi alguém falando-me de dentro do templo, enquanto o homem esteve de pé junto a mim. 7Ele me disse: \"Filho do homem, este é o lugar do meu trono, é o lugar em que coloco a planta dos meus pés, o lugar onde habitarei para sempre no meio dos israelitas\"."
+      "reference": "Is 9,1-6",
+      "text": "O povo, que andava na escuridão, viu uma grande luz; para os que habitavam nas sombras da morte, uma luz resplandeceu. 2 Fizeste crescer a alegria, e aumentaste a felicidade; todos se regozijam em tua presença como alegres ceifeiros na colheita, ou como exaltados guerreiros ao dividirem os despojos. 3 Pois o jugo que oprimia o povo, - a carga sobre os ombros, o orgulho dos fiscais - tu os abateste como na jornada de Madiã. 4 Botas de tropa de assalto, trajes manchados de sangue, tudo será queimado e devorado pelas chamas. 5 Porque nasceu para nós um menino, foi-nos dado um filho; ele traz aos ombros a marca da realeza; o nome que lhe foi dado é: Conselheiro admirável, Deus forte, Pai dos tempos futuros, Príncipe da Paz. 6 Grande será o seu reino e a paz não há de ter fim sobre o trono de Davi e sobre o seu reinado, que ele irá consolidar e confirmar em justiça e santidade, a partir de agora e para todo o sempre. O amor zeloso do Senhor dos exércitos há de realizar estas coisas. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 84 (85)",
-      "refrain": "A glória do Senhor habitará em nossa terra.",
-      "text": "- Quero ouvir o que o Senhor irá falar: é a paz que ele vai anunciar. Está perto a salvação dos que o temem, e a glória habitará em nossa terra.\n\n- A verdade e o amor se encontrarão, a justiça e a paz se abraçarão; da terra brotará a fidelidade, e a justiça olhará dos altos céus.\n\n- O Senhor nos dará tudo o que é bom, e a nossa terra nos dará suas colheitas; a justiça andará na sua frente e a salvação há de seguir os passos seus."
+      "reference": "Sl 112(113),1-2.3-4.5-6.7-8 (R. 2)",
+      "refrain": "Bendito seja o nome do Senhor, agora e por toda a eternidade!",
+      "text": "1 Louvai, louvai, ó servos do Senhor, louvai, louvai o nome do Senhor! 2 Bendito seja o nome do Senhor, agora e por toda a eternidade! 3 Do nascer do sol até o seu ocaso, louvado seja o nome do Senhor! 4 O Senhor está acima das nações, sua glória vai além dos altos céus. 5 Quem pode comparar-se ao nosso Deus, † ao Senhor, que no alto céu tem o seu trono 6 e se inclina para olhar o céu e a terra? 7 Levanta da poeira o indigente e do lixo ele retira o pobrezinho, 8 para fazê-lo assentar-se com os nobres, assentar-se com os nobres do seu povo."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 23, 1-12",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "reference": "Lc 1,26-38",
       "acclamation": {
         "title": "Aleluia, Aleluia, Aleluia.",
-        "verse": "Vós tendes um só Pai, que está no céu, vosso guia é um somente, é o Messias (Mt 23,9s)."
+        "verse": "Maria, alegra-te, ó cheia de graça, o Senhor é contigo; és bendita entre todas as mulheres da terra!"
       },
-      "text": "Naquele tempo, 1Jesus falou às multidões e aos seus discípulos: 2\"Os mestres da lei e os fariseus têm autoridade para interpretar a lei de Moisés. 3Por isso, deveis fazer e observar tudo o que eles dizem. Mas não imiteis suas ações! Pois eles falam e não praticam. 4Amarram pesados fardos e os colocam nos ombros dos outros, mas eles mesmos não estão dispostos a movê-los nem sequer com um dedo. 5Fazem todas as suas ações só para serem vistos pelos outros. Eles usam faixas largas, com trechos da Escritura, na testa e nos braços e põem na roupa longas franjas. 6Gostam de lugar de honra nos banquetes e dos primeiros lugares nas sinagogas. 7Gostam de ser cumprimentados nas praças públicas e de serem chamados de mestre. 8Quanto a vós, nunca vos deixeis chamar de mestre, pois um só é vosso mestre e todos vós sois irmãos. 9Na terra, não chameis a ninguém de pai, pois um só é vosso Pai, aquele que está nos céus. 10Não deixeis que vos chamem de guias, pois um só é o vosso guia, Cristo. 11Pelo contrário, o maior dentre vós deve ser aquele que vos serve. 12Quem se exaltar será humilhado, e quem se humilhar será exaltado\"."
+      "text": "Ele era descendente de Davi e o nome da virgem era Maria. 28 O anjo entrou onde ela estava e disse: \"Alegra-te, cheia de graça, o Senhor está contigo!\" 29 Maria ficou perturbada com estas palavras e começou a pensar qual seria o significado da saudação. 30 O anjo, então, disse-lhe: \"Não tenhas medo, Maria, porque encontraste graça diante de Deus. 31 Eis que conceberás e darás à luz um filho, a quem porás o nome de Jesus. 32 Ele será grande, será chamado Filho do Altíssimo, e o Senhor Deus lhe dará o trono de seu pai Davi. 33 Ele reinará para sempre sobre os descendentes de Jacó, e o seu reino não terá fim\". 34 Maria perguntou ao anjo: \"Como acontecerá isso, se eu não conheço homem algum?\" 35 O anjo respondeu: \"O Espírito virá sobre ti, e o poder do Altíssimo te cobrirá com sua sombra. Por isso, o menino que vai nascer será chamado Santo, Filho de Deus. 36 Também Isabel, tua parenta, concebeu um filho na velhice. Este já é o sexto mês daquela que era considerada estéril, 37 porque para Deus nada é impossível\". 38 Maria, então, disse: \"Eis aqui a serva do Senhor; faça-se em mim segundo a tua palavra!\" E o anjo retirou-se."
     }
   },
   "extra": []

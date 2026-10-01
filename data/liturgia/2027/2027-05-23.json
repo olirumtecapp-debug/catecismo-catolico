@@ -1,97 +1,31 @@
 {
   "date": "2027-05-23",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Solenidade: Santissima Trindade",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/5/23/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Êxodo 34,4-6.8-9",
-      "intro": "Leitura do Livro do Êxodo:",
-      "text": "Naqueles dias: 4Moisés levantou-se, quando ainda fazia noite, e subiu ao monte Sinai, como o Senhor lhe havia mandado, levando consigo as duas tábuas de pedra. 5O Senhor desceu na nuvem e permaneceu com Moisés, e este invocou o nome do Senhor. 6Enquanto o Senhor passava diante dele Moisés gritou: 'Senhor, Senhor! Deus misericordioso e clemente, paciente, rico em bondade e fiel'. 8Imediatamente, Moisés curvou-se até o chão 9e, prostrado por terra, disse: 'Senhor, se é verdade que gozo de teu favor, peço-te, caminha conosco; embora este seja um povo de cabeça dura, perdoa nossas culpas e nossos pecados e acolhe-nos como propriedade tua'."
+      "reference": "Dt 4,32-34.39-40",
+      "text": "Moisés falou ao povo dizendo: 32 \"Interroga os tempos antigos que te precederam, desde o dia em que Deus criou o homem sobre a terra, e investiga de um extremo ao outro dos céus, se houve jamais um acontecimento tão grande, ou se ouviu algo semelhante. 33 Existe, porventura, algum povo que tenha ouvido a voz de Deus falando-lhe do meio do fogo, como tu ouviste, e tenha permanecido vivo? 34 Ou terá jamais algum Deus vindo escolher para si um povo entre as nações, por meio de provações, de sinais e prodígios, por meio de combates, com mão forte e braço estendido, e por meio de grandes terrores, como tudo o que por ti o Senhor vosso Deus fez no Egito, diante de teus próprios olhos? 39 Reconhece, pois, hoje, e grava-o em teu coração, que o Senhor é o Deus lá em cima do céu e cá embaixo na terra, e que não há outro além dele. 40 Guarda suas leis e seus mandamentos que hoje te prescrevo, para que sejas feliz, tu e teus filhos depois de ti, e vivas longos dias sobre a terra que o Senhor teu Deus te vai dar para sempre\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo Dn 3",
-      "refrain": "A vós louvor, honra e glória eternamente!",
-      "text": "- Sede bendito, Senhor Deus de nossos pais.\n\n- Sede bendito, nome santo e glorioso.\n\n- No templo santo onde refulge a vossa glória.\n\n- E em vosso trono de poder vitorioso.\n\n- Sede bendito, que sondais as profundezas\n\n- E superior aos querubins vos assentais.\n\n- Sede bendito no celeste firmamento."
+      "reference": "Sl 32(33),4-5.6.9.18-19.20.22 (R. 12b)",
+      "refrain": "Feliz o povo que o Senhor escolheu por sua herança.",
+      "text": "4 Reta é a palavra do Senhor, e tudo o que ele faz merece fé. 5 Deus ama o direito e a justiça, transborda em toda a terra a sua graça. 6 A palavra do Senhor criou os céus, e o sopro de seus lábios, as estrelas. 9 Ele falou e toda a terra foi criada, ele ordenou e as coisas todas existiram. 18 Mas o Senhor pousa o olhar sobre os que o temem, e que confiam esperando em seu amor, 19 para da morte libertar as suas vidas e alimentá-los quando é tempo de penúria. 20 No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! 22 Sobre nós venha, Senhor, a vossa graça, da mesma forma que em vós nós esperamos!"
     },
     "secondReading": {
-      "reference": "Coríntios 13,11-13",
-      "intro": "Leitura da Segunda Carta de São Paulo aos Coríntios:",
-      "text": "11Irmãos: Alegrai-vos, trabalhai no vosso aperfeiçoamento, encorajai-vos, cultivai a concórdia, vivei em paz, e o Deus do amor e da paz estará convosco. 12Saudai-vos uns aos outros com o beijo santo. Todos os santos vos saúdam. 13A graça do Senhor Jesus Cristo, o amor de Deus e a comunhão do Espírito Santo estejam com todos vós."
+      "reference": "Rm 8,14-17",
+      "text": "Irmãos: 14 Todos aqueles que se deixam conduzir pelo Espírito de Deus são filhos de Deus. 15 De fato, vós não recebestes um espírito de escravos, para recairdes no medo, mas recebestes um espírito de filhos adotivos, no qual todos nós clamamos: Abá, ó Pai! 16 O próprio Espírito se une ao nosso espírito para nos atestar que somos filhos de Deus. 17 E, se somos filhos, somos também herdeiros, herdeiros de Deus e coerdeiros de Cristo; se realmente sofremos com ele, é para sermos também glorificados com ele. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São João 3, 16-18",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "reference": "Mt 28,16-20",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Glória ao Pai e ao Filho e ao Espírito divino, ao Deus que é, que era e que vem, pelos séculos. Amém (AP 1,8)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Glória ao Pai e ao Filho e ao Espírito Divino, ao Deus que é, que era e que vem, pelos séculos. Amém."
       },
-      "text": "16Deus amou tanto o mundo, que deu o seu Filho unigênito, para que não morra todo o que nele crer, mas tenha a vida eterna. 17De fato, Deus não enviou o seu Filho ao mundo para condenar o mundo, mas para que o mundo seja salvo por ele. 18Quem nele crê, não é condenado, mas quem não crê, já está condenado, porque não acreditou no nome do Filho unigênito."
+      "text": "17 Quando viram Jesus, prostraram-se diante dele. Ainda assim alguns duvidaram. 18 Então Jesus aproximou-se e falou: \"Toda a autoridade me foi dada no céu e sobre a terra. 19 Portanto, ide e fazei discípulos meus todos os povos, batizando-os em nome do Pai e do Filho e do Espírito Santo, 20 e ensinando-os a observar tudo o que vos ordenei! Eis que eu estarei convosco todos os dias, até ao fim do mundo\"."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por Santo Efrém (c. 306-373)<br/>",
-    "</b>",
-    "Diácono da Síria, Doutor da Igreja<br/>",
-    "Hino sobre a Trindade<br/>",
-    "«Um só Deus, um só Senhor, não na unidade de uma só pessoa, mas na trindade de uma só natureza» (do Prefácio)<br/>",
-    "Refrão: Bendito seja Aquele que Te envia!<br/>",
-    "Toma como símbolos o sol para o Pai,<br/>",
-    "A luz para o Filho,<br/>",
-    "O calor para o Espírito Santo.<br/>",
-    "Embora sendo um único ser,<br/>",
-    "Percebemos nele uma trindade.<br/>",
-    "Quem poderá compreender o inexplicável?<br/>",
-    "Este único é múltiplo: um é formado por três,<br/>",
-    "E três formam apenas um,<br/>",
-    "Grande mistério e maravilha manifesta!<br/>",
-    "O sol é distinto do seu irradiar<br/>",
-    "Embora esteja a ele unido,<br/>",
-    "Pois os seus raios também são o sol.<br/>",
-    "E contudo ninguém fala de dois sois,<br/>",
-    "Embora os raios sejam também<br/>",
-    "O sol cá em baixo.<br/>",
-    "Assim também não dizemos que há dois deuses.<br/>",
-    "Deus, Nosso Senhor, é Deus;<br/>",
-    "E também Ele Se encontra acima do criado.<br/>",
-    "Quem será capaz de mostrar como e onde<br/>",
-    "Está ligado o raio do sol,<br/>",
-    "Bem como o seu calor, ainda que soltos?<br/>",
-    "Não se encontram, nem separados nem confundidos,<br/>",
-    "Estão unidos, embora sejam distintos,<br/>",
-    "São livres, embora estejam ligados, ó maravilha!<br/>",
-    "Quem poderá, perscrutando-os, ter domínio sobre eles?<br/>",
-    "E contudo, não é certo que são<br/>",
-    "Aparentemente tão simples, tão fáceis?<br/>",
-    "Embora o sol permaneça no alto<br/>",
-    "A claridade e o calor que dele emanam<br/>",
-    "São, para os de cá de baixo, um símbolo claro.<br/>",
-    "Sim, os seus raios incidem sobre a terra<br/>",
-    "E permanecem nos nossos olhos,<br/>",
-    "Como se fosse ele a revestir-nos a carne.<br/>",
-    "Quando se fecham os olhos no instante do sono,<br/>",
-    "Como mortos, ele abandona-os,<br/>",
-    "A eles que em breve despertarão.<br/>",
-    "E, assim como ninguém compreende<br/>",
-    "De que forma entra a luz no olho,<br/>",
-    "Assim Nosso Senhor no seio. [...]<br/>",
-    "O nosso Salvador tomou um corpo<br/>",
-    "Com a toda a fragilidade que nele existe,<br/>",
-    "Para vir santificar o universo.<br/>",
-    "Mas, quando o raio remonta à sua fonte,<br/>",
-    "Vemos que nunca esteve separado<br/>",
-    "Daquele que o engendrou.<br/>",
-    "Derrama o seu calor sobre os que se encontram cá em baixo,<br/>",
-    "Como Nosso Senhor<br/>",
-    "Deixou o Espírito Santo aos discípulos.<br/>",
-    "Contempla estas imagens do mundo criado<br/>",
-    "E não duvides do que diz respeito aos Três,<br/>",
-    "Pois de outra forma perder-te-ás!<br/>",
-    "Tornei claro para ti aquilo que era obscuro:<br/>",
-    "Como podem os três formar um só,<br/>",
-    "A Trindade que é uma mesma essência!<br/>",
-    "Refrão: Bendito seja Aquele que Te envia!<br/>"
-  ]
+  "extra": []
 }

@@ -1,36 +1,31 @@
 {
   "date": "2026-05-24",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Pascal Ciclo da Pascoa Solenidade: Pentecostes",
-  "color": "vermelho",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/5/24/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Atos dos Apóstolos 2,1-11",
-      "intro": "Leitura dos Atos dos Apóstolos:",
-      "text": "1Quando chegou o dia de Pentecostes, os discípulos estavam todos reunidos no mesmo lugar. 2De repente, veio do céu um barulho como se fosse uma forte ventania, que encheu a casa onde eles se encontravam. 3Então apareceram línguas como de fogo que se repartiram e pousaram sobre cada um deles. 4Todos ficaram cheios do Espírito Santo e começaram a falar em outras línguas, conforme o Espírito os inspirava. 5Moravam em Jerusalém judeus devotos, de todas as nações do mundo. 6Quando ouviram o barulho, juntou-se a multidão e todos ficaram confusos, pois cada um ouvia os discípulos falar em sua própria língua. 7Cheios de espanto e admiração, diziam: \"Esses homens que estão falando não são todos galileus? 8Como é que nós os escutamos na nossa própria língua? 9Nós que somos partos, medos e elamitas, habitantes da Mesopotâmia, da Judeia e da Capadócia, do Ponto e da Ásia, 10da Frígia e da Panfília, do Egito e da parte da Líbia próxima de Cirene, também romanos que aqui residem; 11judeus e prosélitos, cretenses e árabes, todos nós os escutamos anunciar as maravilhas de Deus na nossa própria língua!\""
+      "reference": "At 2,1-11a",
+      "text": ""
     },
     "psalm": {
-      "reference": "Salmo 103 (104)",
+      "reference": "Sl 103(104),1ab.24ac.29bc-30.31.34 (R. cf. 30)",
       "refrain": "Enviai o vosso Espírito, Senhor, e da terra toda a face renovai.",
-      "text": "- Bendize, ó minha alma, ao Senhor! Ó meu Deus e meu Senhor, como sois grande! Quão numerosas, ó Senhor, são vossas obras! Encheu-se a terra com as vossas criaturas!\n\n- Se tirais o seu respiro, elas perecem e voltam para o pó de onde vieram. Enviais o vosso espírito e renascem, e da terra toda a face renovais.\n\n- Que a glória do Senhor perdure sempre, e alegre-se o Senhor em suas obras! Hoje, seja-lhe agradável o meu canto, pois o Senhor é a minha grande alegria!"
+      "text": "Sl 103(104),1-2 .24.35 .27-28.29bc-30 (R. cf. 30) Ou: Aleluia, Aleluia, Aleluia. ℟. Enviai o vosso Espírito, Senhor, e da terra toda a face renovai. 1 Bendize, ó minha alma, ao Senhor! Ó meu Deus e meu Senhor, como sois grande! 2 De majestade e esplendor vos revestis e de luz vos envolveis como num manto. ℟. 24 Quão numerosas, ó Senhor, são vossas obras, e que sabedoria em todas elas! Encheu-se a terra com as vossas criaturas. 35 Bendize, ó minha alma, ao Senhor! ℟. 27 Todos eles, ó Senhor, de vós esperam que a seu tempo vós lhes deis o alimento; 28 vós lhes dais o que comer e eles recolhem, vós abris a vossa mão e eles se fartam. ℟. 29bc Se tirais o seu respiro, eles perecem e voltam para o pó de onde vieram; 30 enviais o vosso espírito e renascem e da terra toda a face renovais."
     },
     "secondReading": {
-      "reference": "Coríntios 12,3-7.12-13",
-      "intro": "Leitura da primeira carta de são Paulo aos Coríntios:",
-      "text": "Irmãos, 3ninguém pode dizer: \"Jesus é o Senhor\", a não ser no Espírito Santo. 4Há diversidade de dons, mas um mesmo é o Espírito. 5Há diversidade de ministérios, mas um mesmo é o Senhor. 6Há diferentes atividades, mas um mesmo Deus que realiza todas as coisas em todos. 7A cada um é dada a manifestação do Espírito em vista do bem comum. 12Como o corpo é um, embora tenha muitos membros, e como todos os membros do corpo, embora sejam muitos, formam um só corpo, assim também acontece com Cristo. 13De fato, todos nós, judeus ou gregos, escravos ou livres, fomos batizados num único Espírito, para formarmos um único corpo, e todos nós bebemos de um único Espírito."
+      "reference": "1Cor 12,3b-7.12-13",
+      "text": "Irmãos: 22 Sabemos que toda a criação, até ao tempo presente, está gemendo como que em dores de parto. 23 E não somente ela, mas nós também, que temos os primeiros frutos do Espírito, estamos interiormente gemendo, aguardando a adoção filial e a libertação para o nosso corpo. 24 Pois já fomos salvos, mas na esperança. Ora, o objeto da esperança não é aquilo que a gente está vendo; como pode alguém esperar o que já vê? 25 Mas, se esperamos o que não vemos, é porque o estamos aguardando mediante a perseverança. 26 Também o Espírito vem em socorro da nossa fraqueza. Pois nós não sabemos o que pedir, nem como pedir; é o próprio Espírito que intercede em nosso favor, com gemidos inefáveis. 27 E aquele que penetra o íntimo dos corações sabe qual é a intenção do Espírito. Pois é sempre segundo Deus que o Espírito intercede em favor dos santos. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São João 20, 19-23",
-      "intro": "<b>",
+      "reference": "Jo 20,19-23",
       "acclamation": {
-        "title": "Caminho da perfeição, 17, Ed. Carmelo, 2000",
-        "verse": "Aleluia, Aleluia, Aleluia."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Vinde, Espírito divino, e enchei com vossos dons os corações dos fiéis; e acendei neles o amor como um fogo abrasador!"
       },
-      "text": "</b>"
+      "text": "\"Se alguém tem sede, venha a mim, e beba. 38 Aquele que crê em mim, conforme diz a Escritura, rios de água viva jorrarão do seu interior\". 39 Jesus falava do Espírito, que deviam receber os que tivessem fé nele; pois ainda não tinha sido dado o Espírito, porque Jesus ainda não tinha sido glorificado."
     }
   },
-  "extra": [
-    "- Glória a Vós, Senhor<br/>"
-  ]
+  "extra": []
 }

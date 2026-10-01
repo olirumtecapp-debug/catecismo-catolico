@@ -1,29 +1,27 @@
 {
   "date": "2026-07-29",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Memoria: Santa Marta",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/7/29/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Jeremias 15,10.16-21",
-      "intro": "Leitura do Livro do Profeta Jeremias:",
-      "text": "Ai de mim, minha mãe, que me geraste um homem de controvérsia, um homem em discórdia com toda a gente! Não emprestei com usura nem ninguém me emprestou, e contudo todos me amaldiçoam. 16Quando encontrei tuas palavras, alimentei-me, elas se tornaram para mim uma delícia e a alegria do coração, o modo como invocar teu nome sobre mim, Senhor Deus dos exércitos. 17Não costumo frequentar a roda dos folgazões e gabo-me disso; fiquei a sós, sob o influxo de tua presença e cheio de indignação. 18Por que se tornou eterna minha dor, por que não sara minha chaga maligna? Para mim te tornaste como miragem de um regato, como visão d'águas ilusórias. 19Ainda assim, isto diz-me o Senhor: 'Se te converteres, converterei teu coração, para te sustentares em minha presença; se souberes separar o precioso do vil, falarás por minha boca; os outros voltarão para ti, e tu não voltarás para eles. 20Em favor deste povo, farei de ti uma muralha de bronze fortificada; combaterão contra ti, mas não prevalecerão, porque eu estou contigo para te salvar e te defender, diz o Senhor. 21Eu te libertarei das mãos dos perversos e te salvarei dos prepotentes'."
+      "reference": "1Jo 4,7-16",
+      "text": "Caríssimos, amemo-nos uns aos outros, porque o amor vem de Deus e todo aquele que ama nasceu de Deus e conhece Deus. 8 Quem não ama, não chegou a conhecer Deus, pois Deus é amor. 9 Foi assim que o amor de Deus se manifestou entre nós: Deus enviou o seu Filho único ao mundo, para que tenhamos vida por meio dele. 10 Nisto consiste o amor: não fomos nós que amamos a Deus, mas foi ele que nos amou e enviou o seu Filho como vítima de reparação pelos nossos pecados. 11 Caríssimos, se Deus nos amou assim, nós também devemos amar-nos uns aos outros. 12 Ninguém jamais viu a Deus. Se nos amamos uns aos outros, Deus permanece conosco e seu amor é plenamente realizado entre nós. 13 A prova de que permanecemos com ele, e ele conosco, é que ele nos deu o seu Espírito. 14 E nós vimos, e damos testemunho, que o Pai enviou o seu Filho como Salvador do mundo. 15 Todo aquele que proclama que Jesus é o Filho de Deus, Deus permanece com ele, e ele com Deus. 16 E nós conhecemos o amor que Deus tem para conosco, e acreditamos nele. Deus é amor: quem permanece no amor, permanece com Deus, e Deus permanece com ele. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 58 (59)",
-      "refrain": "Sois meu refúgio no dia da aflição.",
-      "text": "- Libertai-me do inimigo, ó meu Deus, e protegei-me contra os meus perseguidores! 3Libertai-me dos obreiros da maldade, defendei-me desses homens sanguinários!\n\n- Eis que ficam espreitando a minha vida, poderosos armam tramas contra mim. 5aMas eu, Senhor, não cometi pecado ou crime.\n\n- Minha força, é a vós que me dirijo, porque sois o meu refúgio e proteção, 11Deus clemente e compassivo, meu amor! Deus virá com seu amor ao meu encontro, e hei de ver meus inimigos humilhados.\n\n- Eu, então, hei de cantar vosso poder, e de manhã celebrarei vossa bondade, porque fostes para mim o meu abrigo, o meu refúgio no dia da aflição.\n\n- Minha força, cantarei vossos louvores, porque sois o meu refúgio e proteção, Deus clemente e compassivo, meu amor!"
+      "reference": "Sl 33(34),2-3.4-5.6-7.8-9.10-11 (R. 2a ou 9a)",
+      "refrain": "Bendirei o Senhor Deus em todo o tempo!",
+      "text": "2 Bendirei o Senhor Deus em todo o tempo, seu louvor estará sempre em minha boca. 3 Minha alma se gloria no Senhor; que ouçam os humildes e se alegrem! 4 Comigo engrandecei ao Senhor Deus, exaltemos todos juntos o seu nome! 5 Todas as vezes que o busquei, ele me ouviu, e de todos os temores me livrou. 6 Contemplai a sua face e alegrai-vos, e vosso rosto não se cubra de vergonha! 7 Este infeliz gritou a Deus, e foi ouvido, e o Senhor o libertou de toda angústia. 8 O anjo do Senhor vem acampar ao redor dos que o temem, e os salva. 9 Provai e vede quão suave é o Senhor! Feliz o homem que tem nele o seu refúgio! 10 Respeitai o Senhor Deus, seus santos todos, porque nada faltará aos que o temem. 11 Os ricos empobrecem, passam fome, mas aos que buscam o Senhor não falta nada."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 13, 44-46",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "reference": "Jo 11,19-27 ou Lc 10,38-42",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Eu vos chamo meus amigos, pois vos dei a conhecer o que o Pai me revelou (Jo 15,15)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eu sou a luz do mundo; aquele que me segue, não caminha entre as trevas, mas terá a luz da vida."
       },
-      "text": "Naquele tempo, disse Jesus à multidão: 44'O Reino dos Céus é como um tesouro escondido no campo. Um homem o encontra e o mantém escondido. Cheio de alegria, ele vai, vende todos os seus bens e compra aquele campo. 45O Reino dos Céus também é como um comprador que procura pérolas preciosas. 46Quando encontra uma pérola de grande valor, ele vai, vende todos os seus bens e compra aquela pérola."
+      "text": "Eu creio firmemente que tu és o Messias, o Filho de Deus. Proclamação do Evangelho de Jesus Cristo segundo João 11,19-27. Naquele tempo, 19 muitos judeus tinham vindo à casa de Marta e Maria para as consolar por causa do irmão. 20 Quando Marta soube que Jesus tinha chegado, foi ao encontro dele. Maria ficou sentada em casa. 21 Então Marta disse a Jesus: \"Senhor, se tivesses estado aqui, meu irmão não teria morrido. 22 Mas mesmo assim, eu sei que o que pedires a Deus, ele to concederá\". 23 Respondeu-lhe Jesus: \"Teu irmão ressuscitará\". 24 Disse Marta: \"Eu sei que ele ressuscitará na ressurreição, no último dia\". 25 Então Jesus disse: \"Eu sou a ressurreição e a vida. Quem crê em mim, mesmo que morra, viverá. 26 E todo aquele que vive e crê em mim, não morrerá jamais. Crês isto?\" 27 Respondeu ela: \"Sim, Senhor, eu creio firmemente que tu és o Messias, o Filho de Deus, que devia vir ao mundo\"."
     }
   },
   "extra": []

@@ -1,29 +1,24 @@
 {
   "date": "2026-02-26",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "1a. Semana da Quaresma Ciclo da Pascoa",
-  "color": "roxo",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/2/26/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Ester 4,17",
-      "intro": "Leitura do livro de Ester:",
-      "text": "Naqueles dias: 17nA rainha Ester, temendo o perigo de morte que se aproximava, buscou refúgio no Senhor. 17pProstrou-se por terra desde a manhã até ao anoitecer, juntamente com suas servas, e disse: 17q'Deus de Abraão, Deus de Isaac e Deus de Jacó, tu és bendito. Vem em meu socorro, pois estou só e não tenho outro defensor fora de ti, Senhor, 17rpois eu mesma me expus ao perigo. 17aaSenhor, eu ouvi, dos livros de meus antepassados, que tu libertas, Senhor, até ao fim, todos os que te são caros. 17bbAgora, pois, ajuda-me, a mim que estou sozinha e não tenho mais ninguém senão a ti, Senhor meu Deus. 17ggVem, pois, em auxílio de minha orfandade. Põe em meus lábios um discurso atraente, quando eu estiver diante do leão, e muda o seu coração para que odeie aquele que nos ataca, para que este pereça com todos os seus cúmplices. 17hhE livra-nos da mão de nossos inimigos. Transforma nosso luto em alegria e nossas dores em bem-estar'."
+      "reference": "Est 4,17n.p-r.aa-bb.gg-hh",
+      "text": "Não tenho outro defensor fora de ti, Senhor. Naqueles dias, 17n a rainha Ester, temendo o perigo de morte que se aproximava, buscou refúgio no Senhor. 17p Prostrou-se por terra desde a manhã até ao anoitecer, juntamente com suas servas, e disse: 17q \"Deus de Abraão, Deus de Isaac e Deus de Jacó, tu és bendito. Vem em meu socorro, pois estou só e não tenho outro defensor fora de ti, Senhor, 17r pois eu mesma me expus ao perigo. 17aa Senhor, eu ouvi, dos livros de meus antepassados, que tu libertas, Senhor, até ao fim, todos os que te são caros. 17bb A gora, pois, ajuda-me, a mim que estou sozinha e não tenho mais ninguém senão a ti, Senhor meu Deus. 17gg Vem, pois, em auxílio de minha orfandade. Põe em meus lábios um discurso atraente, quando eu estiver diante do leão, e muda o seu coração para que odeie aquele que nos ataca, para que este pereça com todos os seus cúmplices. 17hh E livra-nos da mão de nossos inimigos. Transforma nosso luto em alegria e nossas dores em bem-estar\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 137 (138)",
-      "refrain": "Naquele dia em que gritei, vós me escutastes, ó Senhor!",
-      "text": "- Ó Senhor, de coração eu vos dou graças, porque ouvistes as palavras dos meus lábios! Perante os vossos anjos vou cantar-vos e ante o vosso templo vou prostrar-me.\n\n- Eu agradeço vosso amor, vossa verdade, porque fizestes muito mais que prometestes; naquele dia em que gritei, vós me escutastes e aumentastes o vigor da minha alma.\n\n- Estendereis o vosso braço em meu auxílio e havereis de me salvar com vossa destra. Completai em mim a obra começada; ó Senhor, vossa bondade é para sempre! Eu vos peço: não deixeis inacabada esta obra que fizeram vossas mãos!"
+      "reference": "Sl 137(138),1-2a.2bc-3.7c-8 (R. 3a)",
+      "refrain": "Naquele dia em que gritei, vós me escutastes, ó Senhor!.",
+      "text": "1 Ó Senhor, de coração eu vos dou graças, porque ouvistes as palavras dos meus lábios! Perante os vossos anjos vou cantar-vos 2 e ante o vosso templo vou prostrar-me. b Eu agradeço vosso amor, vossa verdade, c porque fizestes muito mais que prometestes; 3 naquele dia em que gritei, vós me escutastes e aumentastes o vigor da minha alma. 7 estendereis o vosso braço em meu auxílio e havereis de me salvar com vossa destra. 8 Completai em mim a obra começada; ó Senhor, vossa bondade é para sempre! Eu vos peço: não deixeis inacabada esta obra que fizeram vossas mãos!"
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 7, 7-12",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
-      "acclamation": {
-        "title": "Salve, ó Cristo, imagem do Pai, a plena verdade nos comunicai!",
-        "verse": "Criai em mim um coração que seja puro, dai-me de novo a alegria de ser salvo (Sl 50.12.14)"
-      },
-      "text": "Naquele tempo, disse Jesus aos seus discípulos: 7Pedi e vos será dado! Procurai e achareis! Batei e a porta vos será aberta! 8Pois todo aquele que pede, recebe; quem procura, encontra; e a quem bate, a porta será aberta. 9Quem de vós dá ao filho uma pedra, quando ele pede um pão? 10Ou lhe dá uma cobra, quando ele pede um peixe? 11Ora, se vós, que sois maus, sabeis dar coisas boas a vossos filhos, quanto mais vosso Pai que está nos céus dará coisas boas aos que lhe pedirem! 12Tudo quanto quereis que os outros vos façam, fazei também a eles. Nisto consiste a Lei e os Profetas."
+      "reference": "Mt 7,7-12",
+      "acclamation": null,
+      "text": "Sl 50,12a.14a ℟. Salve, ó Cristo, imagem do Pai, a plena verdade nos comunicai! ℣. Criai em mim um coração que seja puro, dai-me de novo a alegria de ser salvo! EVANGELHO Todo aquele que pede, recebe. Proclamação do Evangelho de Jesus Cristo segundo Mateus 7,7-12 Naquele tempo, disse Jesus aos seus discípulos: 7 \"Pedi e vos será dado! Procurai e achareis! Batei e a porta vos será aberta! 8 Pois todo aquele que pede, recebe; quem procura, encontra; e a quem bate, a porta será aberta. 9 Quem de vós dá ao filho uma pedra, quando ele pede um pão? 10 Ou lhe dá uma cobra, quando ele pede um peixe? 11 Ora, se vós, que sois maus, sabeis dar coisas boas a vossos filhos, quanto mais vosso Pai que está nos céus dará coisas boas aos que lhe pedirem! 12 Tudo quanto quereis que os outros vos façam, fazei também a eles. Nisto consiste a Lei e os Profetas\"."
     }
   },
   "extra": []

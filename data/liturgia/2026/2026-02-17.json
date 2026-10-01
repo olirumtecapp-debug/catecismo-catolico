@@ -1,29 +1,27 @@
 {
   "date": "2026-02-17",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "6a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/2/17/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Tiago 1,12-18",
-      "intro": "Leitura da carta de São Tiago:",
-      "text": "12Feliz o homem que suporta a provação. Porque, uma vez provado, receberá a coroa da vida, que o Senhor prometeu àqueles que o amam. 13Ninguém, ao ser tentado, deve dizer: \"É Deus que me está tentando\", pois Deus não pode ser tentado pelo mal e tampouco ele tenta a ninguém. 14Antes, cada qual é tentado por sua própria concupiscência, que o arrasta e seduz. 15Em seguida, a concupiscência concebe o pecado e o dá à luz, e o pecado, uma vez consumado, gera a morte. 16Meus queridos irmãos, não vos enganeis. 17Todo dom precioso e toda dádiva perfeita vêm do alto; descem do Pai das luzes, no qual não há mudança nem sombra de variação. 18De livre vontade ele nos gerou, pela Palavra da verdade, a fim de sermos como que as primícias de suas criaturas."
+      "reference": "Tg 1,12-18",
+      "text": "Feliz o homem que suporta a provação. Porque, uma vez provado, receberá a coroa da vida, que o Senhor prometeu àqueles que o amam. 13 Ninguém, ao ser tentado, deve dizer: \"É Deus que me está tentando\", pois Deus não pode ser tentado pelo mal e tampouco ele tenta a ninguém. 14 Antes, cada qual é tentado por sua própria concupiscência, que o arrasta e seduz. 15 Em seguida, a concupiscência concebe o pecado e o dá à luz, e o pecado, uma vez consumado, gera a morte. 16 Meus queridos irmãos, não vos enganeis. 17 Todo o dom precioso e toda a dádiva perfeita vêm do alto; descem do Pai das luzes, no qual não há mudança, nem sombra de variação. 18 De livre vontade ele nos gerou, pela Palavra da verdade, a fim de sermos como que as primícias de suas criaturas. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 93 (94)",
+      "reference": "Sl 93(94),12-13a.14-15.18-19 (R. 12a)",
       "refrain": "Bem-aventurado é aquele a quem ensinais vossa lei!",
-      "text": "- É feliz, ó Senhor, quem formais e educais nos caminhos da lei, para dar-lhe um alívio na angústia.\n\n- O Senhor não rejeita o seu povo e não pode esquecer sua herança: voltarão a juízo as sentenças; quem é reto andará na justiça.\n\n- Quando eu penso: \"Estou quase caindo!\", vosso amor me sustenta, Senhor! Quando o meu coração se angustia, consolais e alegrais minha alma."
+      "text": "12 É feliz, ó Senhor, quem formais † e educais nos caminhos da Lei, 13 para dar-lhe um alívio na angústia. 14 O Senhor não rejeita o seu povo e não pode esquecer sua herança: 15 voltarão a juízo as sentenças; quem é reto andará na justiça. 18 Quando eu penso: \"Estou quase caindo!\" Vosso amor me sustenta, Senhor! 19 Quando o meu coração se angustia, consolais e alegrais minha alma."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Marcos 8, 14-21",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "reference": "Mc 8,14-21",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Quem me ama, realmente, guardará minha palavra e meu Pai o amará, e a ele nós viremos (Jo 14,2)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Quem me ama, realmente, guardará minha palavra e meu Pai o amará, e a ele nós viremos."
       },
-      "text": "Naquele tempo, 14os discípulos tinham se esquecido de levar pães. Tinham consigo na barca apenas um pão. 15Então Jesus os advertiu: \"Prestai atenção e tomai cuidado com o fermento dos fariseus e com o fermento de Herodes\". 16Os discípulos diziam entre si: \"É porque não temos pão\". 17Mas Jesus percebeu e perguntou-lhes: \"Por que discutis sobre a falta de pão? Ainda não entendeis nem compreendeis? Vós tendes o coração endurecido? 18Tendo olhos, vós não vedes e, tendo ouvidos, não ouvis? Não vos lembrais 19de quando reparti cinco pães para cinco mil pessoas? Quantos cestos vós recolhestes cheios de pedaços?\" Eles responderam: \"Doze\". 20Jesus perguntou: \"E quando reparti sete pães com quatro mil pessoas, quantos cestos vós recolhestes cheios de pedaços?\" Eles responderam: \"Sete\". 21Jesus disse: \"E vós ainda não compreendeis?\""
+      "text": "Tinham consigo na barca apenas um pão. 15 Então Jesus os advertiu: \"Prestai atenção e tomai cuidado com o fermento dos fariseus e com o fermento de Herodes\". 16 Os discípulos diziam entre si: \"É porque não temos pão\". 17 Mas Jesus percebeu e perguntou-lhes: \"Por que discutis sobre a falta de pão? Ainda não entendeis e nem compreendeis? Vós tendes o coração endurecido? 18 Tendo olhos, vós não vedes, e tendo ouvidos, não ouvis? Não vos lembrais 19 de quando reparti cinco pães para cinco mil pessoas? Quantos cestos vós recolhestes cheios de pedaços?\" Eles responderam: \"Doze\". 20 Jesus perguntou: E quando reparti sete pães com quatro mil pessoas, quantos cestos vós recolhestes cheios de pedaços? Eles responderam: \"Sete\". 21 Jesus disse: \"E vós ainda não compreendeis?\""
     }
   },
   "extra": []

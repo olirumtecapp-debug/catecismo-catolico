@@ -1,38 +1,28 @@
 {
   "date": "2026-01-14",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "1a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/1/14/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Samuel 3,1-10.19-20",
-      "intro": "Leitura do Primeiro Livro de Samuel:",
-      "text": "Naqueles dias, 1O jovem Samuel servia ao Senhor na presença de Eli. Naquele tempo, a palavra do Senhor era rara e as visões não eram frequentes. 2Acontece que, um dia, Eli estava dormindo no seu quarto. Seus olhos começavam a enfraquecer, e já não conseguia enxergar. 3A lâmpada de Deus ainda não se tinha apagado e Samuel estava dormindo no templo do Senhor, onde se encontrava a arca de Deus. 4Então o Senhor chamou: \"Samuel, Samuel!\" Ele respondeu: \"Eis-me aqui\". 5E correu para junto de Eli e disse: \"Tu me chamaste, aqui estou\". Eli respondeu: \"Eu não te chamei. Volta a dormir!\" E ele foi deitar-se. 6O Senhor chamou de novo: \"Samuel, Samuel!\" E Samuel levantou-se, foi ter com Eli e disse: \"Tu me chamaste, aqui estou\". Ele respondeu: \"Não te chamei, meu filho. Volta a dormir 7Samuel ainda não conhecia o Senhor, pois, até então, a palavra do Senhor não se lhe tinha manifestado. 8O Senhor chamou pela terceira vez: \"Samuel, Samuel!\" Ele levantou-se, foi para junto de Eli e disse: \"Tu me chamaste, aqui estou\". Eli compreendeu que era o Senhor que estava chamando o menino. 9Então disse a Samuel: \"Volta a deitar-te e, se alguém te chamar, responderás: 'Senhor, fala, que teu servo escuta!\" E Samuel voltou ao seu lugar para dormir. 10O Senhor veio, pôs-se junto dele e chamou-o como das outras vezes: \"Samuel, Samuel!\" E ele respondeu: \"Fala, que teu servo escuta\". 19Samuel crescia, e o Senhor estava com ele. E não deixava cair por terra nenhuma de suas palavras. 20Todo Israel, desde Dã até Bersabeia, reconheceu que Samuel era um profeta do Senhor."
+      "reference": "1Sm 3,1-10.19-20",
+      "text": "Fala, Senhor que teu servo escuta. Leitura do Primeiro Livro de Samuel 3,1-10.19-20 Naqueles dias, 1 o jovem Samuel servia ao Senhor na presença de Eli. Naquele tempo a palavra do Senhor era rara e as visões não eram frequentes. 2 Aconteceu que, um dia, Eli estava dormindo no seu quarto. Seus olhos começavam a enfraquecer e já não conseguia enxergar. 3 A lâmpada de Deus ainda não se tinha apagado e Samuel estava dormindo no templo do Senhor, onde se encontrava a arca de Deus. 4 Então o Senhor chamou: \"Samuel, Samuel!\" Ele respondeu: \"Estou aqui\". 5 E correu para junto de Eli e disse: \"Tu me chamaste, aqui estou\". Eli respondeu: \"Eu não te chamei. Volta a dormir!\" E ele foi deitar-se. 6 O senhor chamou de novo: \"Samuel, Samuel!\" E Samuel levantou-se, foi ter com Eli e disse: \"Tu me chamaste, aqui estou\". Ele respondeu: \"Não te chamei, meu filho. Volta a dormir!\" 7 Samuel ainda não conhecia o Senhor, pois, até então, a palavra do Senhor não se lhe tinha manifestado. 8 O Senhor chamou pela terceira vez: \"Samuel, Samuel!\" Ele levantou-se, foi para junto de Eli e disse: \"Tu me chamaste, aqui estou\". Eli compreendeu que era o Senhor que estava chamando o menino. 9 Então disse a Samuel: \"Volta a deitar-te e, se alguém te chamar, responderás: 'Senhor, fala, que teu servo escuta!'\" E Samuel voltou ao seu lugar para dormir. 10 O Senhor veio, pôs-se junto dele e chamou-o como das outras vezes: \"Samuel! Samuel!\" E ele respondeu: \"Fala, que teu servo escuta\". 19 Samuel crescia, e o Senhor estava com ele. E não deixava cair por terra nenhuma de suas palavras. 20 Todo Israel, desde Dã até Bersabeia, reconheceu que Samuel era um profeta do Senhor. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 39 (40)",
-      "refrain": "Eis que venho fazer, com prazer, a vossa vontade Senhor!",
-      "text": "- Esperando, esperei no Senhor, e inclinando-se, ouviu meu clamor. É feliz quem a Deus se confia; quem não segue os que adoram os ídolos e se perdem por falsos caminhos.\n\n- Sacrifício e oblação não quisestes, mas abristes, Senhor, meus ouvidos; não pedistes ofertas nem vítimas, holocaustos por nossos pecados. E então eu vos disse: \"Eis que venho!\"\n\n- Sobre mim está escrito no livro: \"Com prazer faço a vossa vontade, guardo em meu coração vossa lei!\".\n\n- Boas novas de vossa justiça anunciei numa grande assembleia; vós sabeis: não fechei os meus lábios!"
+      "reference": "Sl 39(40),2 e 5.7-8a.8b-9.10 (R. 8a.9a)",
+      "refrain": "Eis que venho fazer, com prazer, a vossa vontade, Senhor!",
+      "text": "2 Esperando, esperei no Senhor, e inclinando-se, ouviu meu clamor. 5 É feliz quem a Deus se confia; † quem não segue os que adoram os ídolos e se perdem por falsos caminhos. 7 Sacrifício e oblação não quisestes, mas abristes, Senhor, meus ouvidos; não pedistes ofertas nem vítimas, † holocaustos por nossos pecados, 8 E então eu vos disse: \"Eis que venho!\" b Sobre mim está escrito no livro: † 9 \"Com prazer faço a vossa vontade, guardo em meu coração vossa lei!\" 10 Boas-novas de vossa justiça † anunciei numa grande assembleia; vós sabeis: não fechei os meus lábios!"
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 29-39",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "reference": "Mc 1,29-39",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Minhas ovelhas escutam minha voz, eu as conheço e elas me seguem (Jo 10,27)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Minhas ovelhas escutam minha voz, e as conheço e elas me seguem."
       },
-      "text": "Naquele tempo, 29Jesus saiu da sinagoga e foi, com Tiago e João, para a casa de Simão e André. 30A sogra de Simão estava de cama, com febre, e eles logo contaram a Jesus. 31E ele se aproximou, segurou sua mão e ajudou-a a levantar-se. Então, a febre desapareceu; e ela começou a servi-los. 32À tarde, depois do pôr do sol, levaram a Jesus todos os doentes e os possuídos pelo demônio. 33A cidade inteira se reuniu em frente da casa. 34Jesus curou muitas pessoas de diversas doenças e expulsou muitos demônios. E não deixava que os demônios falassem, pois sabiam quem ele era. 35De madrugada, quando ainda estava escuro, Jesus se levantou e foi rezar num lugar deserto. 36Simão e seus companheiros foram à procura de Jesus. 37Quando o encontraram, disseram: \"Todos estão te procurando\". 38Jesus respondeu: \"Vamos a outros lugares, às aldeias da redondeza! Devo pregar também ali, pois foi para isso que eu vim\". 39E andava por toda a Galileia, pregando em suas sinagogas e expulsando os demônios."
+      "text": "30 A sogra de Simão estava de cama, com febre, e eles logo contaram a Jesus. 31 E ele se aproximou, segurou sua mão e ajudou-a a levantar-se. Então, a febre desapareceu; e ela começou a servi-los. 32 À tarde, depois do pôr do sol, levaram a Jesus todos os doentes e os possuídos pelo demônio. 33 A cidade inteira se reuniu em frente da casa. 34 Jesus curou muitas pessoas de diversas doenças e expulsou muitos demônios. E não deixava que os demônios falassem, pois sabiam quem ele era. 35 De madrugada, quando ainda estava escuro, Jesus se levantou e foi rezar num lugar deserto. 36 Simão e seus companheiros foram à procura de Jesus. 37 Quando o encontraram, disseram: \"Todos estão te procurando\". 38 Jesus respondeu: \"Vamos a outros lugares, às aldeias da redondeza! Devo pregar também ali, pois foi para isso que eu vim\". 39 E andava por toda a Galileia, pregando em suas sinagogas e expulsando os demônios."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por Santo Agostinho, Bispo de Hipona (norte de África), Doutor da Igreja <br/>",
-    "</b>",
-    "Discurso sobre o Salmo 85<br/>",
-    "«Retirou-Se para um sítio ermo e aí começou a orar.»<br/>",
-    "Deus não podia ter dado aos homens dom maior do que o seu Verbo, a sua Palavra, por meio do qual criou todas as coisas. Fez dele chefe dos homens, quer dizer, sua cabeça, e dos homens seus membros (Ef 5,23.30), para que Ele fosse, ao mesmo tempo, Filho de Deus e Filho do homem: um só Deus com o Pai, um só homem com os homens. Presenteou-nos com esse dom a fim de que, ao falarmos com Deus na oração, não separássemos dele o Filho, e para que, ao rezar, o corpo do Filho se não separasse do seu chefe - para que Ele fosse o único Salvador do seu corpo, Nosso Senhor Jesus Cristo, o Filho de Deus, que simultaneamente reza por nós, reza em nós e é rezado por nós. <br/>",
-    "Reza por nós como nosso sacerdote, reza em nós como nosso chefe, como cabeça do corpo, é rezado por nós como nosso Deus. Reconheçamos, pois, as nossas palavras nele e as suas palavras em nós. […] Ele não hesitou em Se unir a nós. Toda a criação Lhe está sujeita, porque toda a criação foi feita por Ele: «No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus. […] Tudo começou a existir por meio dele, e sem Ele nada foi criado» (Jo 1,1s). […] Mas se, a seguir, ouvimos nas Escrituras a voz do mesmo Cristo gemendo, rezando, confessando, não hesitemos em Lhe atribuir estas palavras. Contemplemos Aquele que «era de condição divina» tomar «a condição de servo, tornando-Se semelhante aos homens», humilhando-Se «a Si mesmo, feito obediente até à morte» (Fil 2,6s). Oiçamo-Lo, suspenso da cruz, tornar sua a oração de um salmo. […] Nós rezamos a Cristo, pois, na sua condição de Deus, e Ele reza na sua condição de servo; de um lado, está o Criador, do outro, um homem unido à criação, formando um só homem connosco - a cabeça e o corpo. Rezamos-Lhe, pois, e rezamos por Ele e nele.<br/>"
-  ]
+  "extra": []
 }

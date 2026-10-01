@@ -1,29 +1,27 @@
 {
   "date": "2026-12-19",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "3a. Semana do Advento Ciclo do Natal",
-  "color": "roxo",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/12/19/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Gênesis 49,2.8-10",
-      "intro": "Leitura do livro do Gênesis:",
-      "text": "Naqueles dias, Jacó chamou seus filhos e disse: 2Juntai-vos e ouvi, filhos de Jacó, ouvi Israel, vosso pai! 8Judá, teus irmãos te louvarão; pesará tua mão sobre a nuca de teus inimigos, se prostrarão diante de ti os filhos de teu pai. 9Judá, filhote de leão: subiste, meu filho, da pilhagem; ele se agacha e se deita como um leão, e como uma leoa; quem o despertará? 10O cetro não será tirado de Judá, nem o bastão de comando dentre seus pés, até que venha Aquele a quem pertencem, e a quem obedecerão os povos'."
+      "reference": "Jz 13,2-7.24-25a",
+      "text": "O nascimento de Sansão é anunciado por um anjo. Naqueles dias, 2 havia um homem de Saraá, da tribo de Dã, chamado Manué, cuja mulher era estéril. 3 O anjo do Senhor apareceu à mulher e disse-lhe: \"Tu és estéril e não tiveste filhos, mas conceberás e darás à luz um filho. 4 Toma cuidado de não beberes vinho nem licor, de não comeres coisa alguma impura, 5 pois conceberás e darás à luz um filho. Sua cabeça não será tocada por navalha, porque ele será consagrado ao Senhor desde o ventre materno, e começará a libertar Israel das mãos dos filisteus\". 6 A mulher foi dizer ao seu marido: \"Veio visitar-me um homem de Deus, cujo aspecto era terrível como o de um anjo do Senhor. Não lhe perguntei de onde vinha nem ele me revelou o seu nome. 7 Ele disse-me: 'Conceberás e darás à luz um filho. De hoje em diante, toma cuidado para não beberes vinho nem licor, e não comeres nada de impuro, pois o menino será consagrado a Deus, desde o ventre materno até ao dia da sua morte' \". 24 Ela deu à luz um filho e deu-lhe o nome de Sansão. O menino cresceu e o Senhor o abençoou. 25a O espírito do Senhor começou a agir nele no Campo de Dã. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 71 (72)",
-      "refrain": "Nos seus dias a justiça florirá e paz em abundância, para sempre",
-      "text": "- Dai ao Rei vossos poderes, Senhor Deus, vossa justiça ao descendente da realeza! Com justiça ele governe o vosso povo, com equidade ele julgue os vossos pobres.\n\n- Das montanhas venha a paz a todo o povo, e desça das colinas a justiça! Este Rei defenderá os que são pobres, os filhos dos humildes salvará.\n\n- Nos seus dias a justiça florirá e grande paz, até que a lua perca o brilho! De mar a mar estenderá o seu domínio, e desde o rio até os confins de toda a terra!\n\n- Seja bendito o seu nome para sempre! E que dure como o sol sua memória! Todos os povos serão nele abençoados, todas as gentes cantarão o seu louvor!"
+      "reference": "Sl 70(71),3-4a.5-6ab.16-17 (R. cf. 8a)",
+      "refrain": "Minha boca se encha de louvor, para que eu cante vossa glória.",
+      "text": "3 Sede uma rocha protetora para mim, um abrigo bem seguro que me salve! Porque sois a minha força e meu amparo, † 4 Libertai-me, ó meu Deus, das mãos do ímpio 5 Porque sois, ó Senhor Deus, minha esperança, em vós confio desde a minha juventude! 6 Sois meu apoio desde antes que eu nascesse, b desde o seio maternal, o meu amparo 16 Cantarei vossos portentos, ó Senhor, lembrarei vossa justiça sem igual! 17 Vós me ensinastes desde a minha juventude, e até hoje canto as vossas maravilhas."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Mateus 1, 1-17",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Mateus:",
+      "reference": "Lc 1,5-25",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Ó Sabedoria do Altíssimo, que tudo determina, com doçura e com vigor: oh, vem nos ensinar o caminho da prudência!"
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Ó Raiz de Jessé, sinal das nações: oh, vinde livrar-nos, e não tardeis mais!"
       },
-      "text": "1Livro da origem de Jesus Cristo, filho de Davi, filho de Abraão. 2Abraão gerou Isaac; Isaac gerou Jacó; Jacó gerou Judá e seus irmãos. 3Judá gerou Farés e Zara, cuja mãe era Tamar. Farés gerou Esrom; Esrom gerou Aram; 4Aram gerou Aminadab; Aminadab gerou Naasson; Naasson Gerou Salmon; 5Salmon gerou Booz, cuja mãe era Raab. Booz gerou Obed, cuja mãe era Rute. Obed gerou Jessé. 6Jessé gerou o rei Davi. Davi gerou Salomão, daquela que tinha sido a mulher de Urias. 7Salomão gerou Roboão; Roboão gerou Abias; Abias gerou Asa; 8Asa gerou Josafá; Josafá gerou Jorão; Jorão gerou Ozias; 9Ozias gerou Joatão; Joatão gerou Acaz; Acaz gerou Ezequias; 10Ezequias gerou Manassés; Manassés gerou Amon; Amon gerou Josias. 11Josias gerou Jeconias e seus irmãos, no tempo do exílio na Babilônia. 12Depois do exílio na Babilônia, Jeconias gerou Salatiel; Salatiel gerou Zorobabel; 13Zorobabel gerou Abiud; Abiud gerou Eliaquim; Eliaquim gerou Azor; 14Azor gerou Sadoc; Sadoc gerou Aquim; Aquim gerou Eliud; 15Eliud gerou Eleazar; Eleazar gerou Matã; Matã gerou Jacó. 16Jacó gerou José, o esposo de Maria, da qual nasceu Jesus, que é chamado o Cristo. 17Assim, as gerações desde Abraão até Davi são quatorze; de Davi até o exílio na Babilônia, quatorze; e do exílio na Babilônia até Cristo, quatorze."
+      "text": "Sua esposa era descendente de Aarão e chamava-se Isabel. 6 Ambos eram justos diante de Deus e obedeciam fielmente a todos os mandamentos e ordens do Senhor. 7 Não tinham filhos, porque Isabel era estéril, e os dois já eram de idade avançada. 8 Em certa ocasião, Zacarias estava exercendo as funções sacerdotais no Templo, pois era a vez do seu grupo. 9 Conforme o costume dos sacerdotes, ele foi sorteado para entrar no Santuário, e fazer a oferta do incenso. 10 Toda a assembleia do povo estava do lado de fora rezando, enquanto o incenso estava sendo oferecido. 11 Então apareceu-lhe o anjo do Senhor, de pé, à direita do altar do incenso. 12 Ao vê-lo, Zacarias ficou perturbado e o temor apoderou-se dele. 13 Mas o anjo disse: \"Não tenhas medo, Zacarias, porque Deus ouviu tua súplica. Tua esposa, Isabel, vai ter um filho, e tu lhe darás o nome de João. 14 Tu ficarás alegre e feliz, e muita gente se alegrará com o nascimento do menino, 15 porque ele vai ser grande diante do Senhor. Não beberá vinho nem bebida fermentada e, desde o ventre materno, ficará repleto do Espírito Santo. 16 Ele reconduzirá muitos do povo de Israel ao Senhor seu Deus. 17 E há de caminhar à frente deles, com o espírito e o poder de Elias, a fim de converter os corações dos pais aos filhos, e os rebeldes à sabedoria dos justos, preparando para o Senhor um povo bem disposto\". 18 Então Zacarias perguntou ao anjo: \"Como terei certeza disto? Sou velho e minha mulher é de idade avançada\". 19 O anjo respondeu-lhe: \"Eu sou Gabriel. Estou sempre na presença de Deus, e fui enviado para dar-te esta boa notícia. 20 Eis que ficarás mudo e não poderás falar, até ao dia em que essas coisas acontecerem, porque tu não acreditaste nas minhas palavras, que hão de se cumprir no tempo certo\". 21 O povo estava esperando Zacarias, e admirava-se com a sua demora no Santuário. 22 Quando saiu, não podia falar-lhes. E compreenderam que ele tinha tido uma visão no Santuário. Zacarias falava com sinais e continuava mudo. 23 Depois que terminou seus dias de serviço no Santuário, Zacarias voltou para casa. 24 Algum tempo depois, sua esposa Isabel ficou grávida, e escondeu-se durante cinco meses. 25 Ela dizia: \"Eis o que o Senhor fez por mim, nos dias em que ele se dignou tirar-me da humilhação pública!\""
     }
   },
   "extra": []

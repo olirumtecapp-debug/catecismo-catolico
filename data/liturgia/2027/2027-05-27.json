@@ -1,45 +1,31 @@
 {
   "date": "2027-05-27",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Solenidade: Corpus Christi",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/5/27/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Deuteronômio 8,2-3.14-16",
-      "intro": "Leitura do Livro do Deuteronômio:",
-      "text": "Moisés falou ao povo, dizendo: 2Lembra-te de todo o caminho por onde o Senhor teu Deus te conduziu, esses quarenta anos, no deserto, para te humilhar e te pôr à prova, para saber o que tinhas no teu coração, e para ver se observarias ou não seus mandamentos. 3Ele te humilhou, fazendo-te passar fome e alimentando-te com o maná que nem tu nem teus pais conheciam, para te mostrar que nem só de pão vive o homem, mas de toda a palavra que sai da boca do Senhor. 14bNão te esqueças do Senhor teu Deus que te fez sair do Egito da casa da escravidão, 15e que foi teu guia no vasto e terrível deserto, onde havia serpentes abrasadoras, escorpiões, e uma terra árida e sem água nenhuma. Foi ele que fez jorrar água para ti da pedra duríssima, 16ae te alimentou no deserto com maná, que teus pais não conheciam."
+      "reference": "Ex 24,3-8",
+      "text": "Naqueles dias, 3 Moisés veio e transmitiu ao povo todas as palavras do Senhor e todos os decretos. O povo respondeu em coro: \"Faremos tudo o que o Senhor nos disse\". 4 Então Moisés escreveu todas as palavras do Senhor. Levantando-se na manhã seguinte, ergueu ao pé da montanha um altar e doze marcos de pedra pelas doze tribos de Israel. 5 Em seguida, mandou alguns jovens israelitas oferecer holocaustos e imolar novilhos como sacrifícios pacíficos ao Senhor. 6 Moisés tomou metade do sangue e o pôs em vasilhas, e derramou a outra metade sobre o altar. 7 Tomou depois o livro da aliança e o leu em voz alta ao povo, que respondeu: \"Faremos tudo o que o Senhor disse e lhe obedeceremos\". 8 Moisés, então, com o sangue separado, aspergiu o povo, dizendo: \"Este é o sangue da aliança, que o Senhor fez convosco, segundo todas estas palavras\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 147 (147B)",
-      "refrain": "Glorifica o Senhor, Jerusalém; celebra teu Deus, ó Sião!",
-      "text": "- Glorifica o Senhor, Jerusalém! Â Sião, canta louvores ao teu Deus! Pois reforçou com segurança as tuas portas, e os teus filhos em teu seio abençoou.\n\n- A paz em teus limites garantiu e te dá como alimento a flor do trigo. Ele envia suas ordens para a terra, e a palavra que ele diz corre veloz.\n\n- Anuncia a Jacó sua palavra, seus preceitos suas leis a Israel. Nenhum povo recebeu tanto carinho, a nenhum outro revelou os seus preceitos."
+      "reference": "Sl 115(116),12-13.15.16bc.17-18 (R. 13",
+      "refrain": "Elevo o cálice da minha salvação, invocando o nome santo do Senhor.",
+      "text": "12 Que poderei retribuir ao Senhor Deus por tudo aquilo que ele fez em meu favor? 13 Elevo o cálice da minha salvação, invocando o nome santo do Senhor. 15 É sentida por demais pelo Senhor a morte de seus santos, seus amigos. 16 Eis que sou o vosso servo, ó Senhor, † que nasceu de vossa serva; c mas me quebrastes os grilhões da escravidão! 17 Por isso oferto um sacrifício de louvor, invocando o nome santo do Senhor. 18 Vou cumprir minhas promessas ao Senhor na presença de seu povo reunido."
     },
     "secondReading": {
-      "reference": "Coríntios 10,16-17",
-      "intro": "Leitura da Primeira Carta de São Paulo aos Coríntios:",
-      "text": "Irmãos: 16O cálice da bênção, o cálice que abençoamos, não é comunhão com o sangue de Cristo? E o pão que partimos, não é comunhão com o corpo de Cristo? 17Porque há um só pão, nós todos somos um só corpo, pois todos participamos desse único pão."
+      "reference": "Hb 9,11-15",
+      "text": "Irmãos: 11 Cristo veio como sumo-sacerdote dos bens futuros. Através de uma tenda maior e mais perfeita, que não é obra de mãos humanas, isto é, que não faz parte desta criação, 12 e não com o sangue de bodes e bezerros, mas com o seu próprio sangue, ele entrou no Santuário uma vez por todas, obtendo uma redenção eterna. 13 De fato, se o sangue de bodes e touros, e a cinza de novilhas espalhada sobre os seres impuros os santifica e realiza a pureza ritual dos corpos, 14 quanto mais o Sangue de Cristo, purificará a nossa consciência das obras mortas, para servirmos ao Deus vivo, pois, em virtude do espírito eterno, Cristo se ofereceu a si mesmo a Deus como vítima sem mancha. 15 Por isso, ele é mediador de uma nova aliança. Pela sua morte, ele reparou as transgressões cometidas no decorrer da primeira aliança. E, assim, aqueles que são chamados recebem a promessa da herança eterna. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São João 6, 51-58",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São João:",
+      "reference": "Mc 14,12-16.22-26",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Eu sou o pão vivo descido do céu; quem deste pão come, sempre há de viver! (Jo 6,51)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Eu sou o pão descido do céu; quem deste pão come, sempre há de viver! ."
       },
-      "text": "Naquele tempo: disse Jesus às multidões dos judeus: 51'Eu sou o pão vivo descido do céu. Quem comer deste pão viverá eternamente. E o pão que eu darei é a minha carne dada para a vida do mundo'. 52Os judeus discutiam entre si, dizendo: 'Como é que ele pode dar a sua carne a comer?' 53Então Jesus disse: 'Em verdade, em verdade vos digo, se não comerdes a carne do Filho do Homem e não beberdes o seu sangue, não tereis a vida em vós. 54Quem come a minha carne e bebe o meu sangue tem a vida eterna, e eu o ressuscitarei no último dia. 55Porque a minha carne é verdadeira comida e o meu sangue, verdadeira bebida. 56Quem come a minha carne e bebe o meu sangue permanece em mim e eu nele. 57Como o Pai, que vive, me enviou, e eu vivo por causa do Pai, assim o que me come viverá por causa de mim. 58Este é o pão que desceu do céu. Não é como aquele que os vossos pais comeram. Eles morreram. Aquele que come este pão viverá para sempre.'"
+      "text": "Isto é meu sangue. Proclamação do Evangelho de Jesus Cristo segundo Marcos 14,12-16.22-26 12 No primeiro dia dos Ázimos, quando se imolava o cordeiro pascal, os discípulos disseram a Jesus: \"Onde queres que façamos os preparativos para comeres a Páscoa?\" 13 Jesus enviou então dois dos seus discípulos e lhes disse: \"Ide à cidade. Um homem carregando um jarro de água virá ao vosso encontro. Segui-o 14 e dizei ao dono da casa em que ele entrar: 'O Mestre manda dizer: onde está a sala em que vou comer a Páscoa com os meus discípulos?' 15 Então ele vos mostrará, no andar de cima, uma grande sala, arrumada com almofadas. Aí fareis os preparativos para nós!\" 16 Os discípulos saíram e foram à cidade. Encontraram tudo como Jesus havia dito, e prepararam a Páscoa. 22 Enquanto comiam, Jesus tomou o pão e, tendo pronunciado a bênção, partiu-o e entregou-lhes, dizendo: \"Tomai, isto é o meu corpo\". 23 Em seguida, tomou o cálice, deu graças, entregou-lhes e todos beberam dele. 24 Jesus lhes disse: \"Isto é o meu sangue, o sangue da aliança, que é derramado em favor de muitos. 25 Em verdade vos digo, não beberei mais do fruto da videira, até o dia em que beberei o vinho novo no Reino de Deus\". 26 Depois de terem cantado o hino, foram para o monte das Oliveiras."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por São João-Maria Vianney (1786-1859)<br/>",
-    "</b>",
-    "Presbítero, Cura de Ars<br/>",
-    "«Pensamentos escolhidos do Santo Cura d'Ars»<br/>",
-    "A Eucaristia abre a porta do Paraíso<br/>",
-    "Se fôssemos capazes de compreender todos os bens que a sagrada comunhão encerra, nada mais seria preciso para contentar o coração do homem.<br/>",
-    "Nosso Senhor afirmou: «Tudo o que pedirdes a meu Pai em meu nome, Ele vo-lo concederá» (Jo 16,23). Nunca nos teríamos lembrado de pedir a Deus o seu próprio Filho. Mas Deus faz aquilo que o homem não seria capaz de imaginar. Deus, no seu amor, concebeu e executou aquilo que o homem não é capaz de dizer nem de conceber, e que não teria jamais ousado desejar.<br/>",
-    "Sem a divina Eucaristia, não haveria felicidade neste mundo, a vida seria insuportável. Quando recebemos a sagrada comunhão, recebemos a nossa alegria e a nossa felicidade. Querendo dar-Se a nós no sacramento do seu amor, Deus deu-nos um desejo enorme, que só Ele pode satisfazer. [...] Ao lado deste belo sacramento, somos como uma pessoa que morre de sede à beira de um rio - e contudo, bastava-lhe baixar a cabeça!... Somos como uma pessoa que permanece pobre ao lado de um tesouro - e bastava-lhe estender a mão!<br/>",
-    "Se fôssemos capazes de compreender todos os bens que a sagrada comunhão encerra, nada mais seria preciso para contentar o coração do homem.<br/>"
-  ]
+  "extra": []
 }

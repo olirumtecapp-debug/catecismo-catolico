@@ -1,29 +1,27 @@
 {
   "date": "2027-10-16",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "28a. Semana do Tempo Comum",
-  "color": "verde",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/10/16/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Romanos 4,13.16-18",
-      "intro": "Leitura da Carta de São Paulo aos Romanos:",
-      "text": "Irmãos: 13Não foi por causa da Lei, mas por causa da justiça que vem da fé, que Deus prometeu o mundo como herança a Abraão ou à sua descendência. 16É em virtude da fé que alguém se torna herdeiro. Logo, a condiçóo de herdeiro é uma graça, um dom gratuito, e a promessa de Deus continua valendo para toda a descendência de Abraóo, tanto para a descendência que se apega à Lei, quanto para a que se apóia somente na fé de Abraão, que é o pai de todos nós. 17Pois está escrito: 'Eu fiz de ti pai de muitos povos'. Ele é pai diante de Deus, porque creu em Deus que vivifica os mortos e faz existir o que antes nóo existia. 18Contra toda a humana esperança, ele firmou-se na esperança e na fé. Assim, tornou-se pai de muitos povos, conforme lhe fora dito: 'Assim será a tua posteridade'."
+      "reference": "Rm 4,13.16-18",
+      "text": "Irmãos, 13 não foi por causa da Lei, mas por causa da justiça que vem da fé, que Deus prometeu o mundo como herança a Abraão ou à sua descendência. 16 É em virtude da fé que alguém se torna herdeiro. Logo, a condição de herdeiro é uma graça, um dom gratuito, e a promessa de Deus continua valendo para toda a descendência de Abraão, tanto para a descendência que se apega à Lei, quanto para a que se apoia somente na fé de Abraão, que é o pai de todos nós. 17 Pois está escrito: \"Eu fiz de ti pai de muitos povos\". Ele é pai diante de Deus, porque creu em Deus que vivifica os mortos e faz existir o que antes não existia. 18 Contra toda a humana esperança, ele firmou-se na esperança e na fé. Assim, tornou-se pai de muitos povos, conforme lhe fora dito: \"Assim será a tua posteridade\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 104 (105)",
-      "refrain": "O Senhor se lembra sempre da Aliança.",
-      "text": "- Descendentes de Abraóo, seu servidor, e filhos de Jacó, seu escolhido, ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra.\n\n- Ele sempre se recorda da Aliança, promulgada a incontáveis geraçðes; da Aliança que ele fez com Abraão, e do seu santo juramento a Isaac.\n\n- Ele lembrou-se de seu santo juramento, que fizera a Abraão, seu servidor. Fez sair com grande júbilo o seu povo, e seus eleitos, entre gritos de alegria."
+      "reference": "Sl 104(105),6-7.8-9.42-43 (R. 8a)",
+      "refrain": "O Senhor se lembra sempre da Aliança. Ou: Aleluia, Aleluia, Aleluia. <div class=\"refrao_salmo\"><font color=\"#ff",
+      "text": "0000\">Ou:</font> Aleluia, Aleluia, Aleluia. 6 Descendentes de Abraão, seu servidor, e filhos de Jacó, seu escolhido, 7 ele mesmo, o Senhor, é nosso Deus, vigoram suas leis em toda a terra. 8 Ele sempre se recorda da Aliança, promulgada a incontáveis gerações; 9 da Aliança que ele fez com Abraão, e do seu santo juramento a Isaac. 42 Ele lembrou-se de seu santo juramento, que fizera a Abraão, seu servidor. 43 Fez sair com grande júbilo o seu povo, e seus eleitos, entre gritos de alegria."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 12, 8-12",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "Lc 12,8-12",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "O Espírito Santo, a verdade, de mim irá testemunhar; e vós minhas testemunhas sereis em todo lugar (Jo 15,26s)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "O Espírito Santo, a verdade, de mim irá testemunhar; e vós minhas testemunhas sereis em todo lugar."
       },
-      "text": "Naquele tempo, disse Jesus aos seus discípulos: 8Todo aquele que der testemunho de mim diante dos homens, o Filho do Homem também dará testemunho dele diante dos anjos de Deus. 9Mas aquele que me renegar diante dos homens, será negado diante dos anjos de Deus. 10Todo aquele que disser alguma coisa contra o Filho do Homem será perdoado. Mas quem blasfemar contra o Espírito Santo não será perdoado. 11Quando vos conduzirem diante das sinagogas, magistrados e autoridades, não fiqueis preocupados como ou com que vos defendereis, ou com o que direis. 12Pois nessa hora o Espírito Santo vos ensinará o que deveis dizer.'"
+      "text": "8 \"Todo aquele que der testemunho de mim diante dos homens, o Filho do Homem também dará testemunho dele diante dos anjos de Deus. 9 Mas aquele que me renegar diante dos homens, será negado diante dos anjos de Deus. 10 Todo aquele que disser alguma coisa contra o Filho do Homem será perdoado. Mas quem blasfemar contra o Espírito Santo não será perdoado. 11 Quando vos conduzirem diante das sinagogas, magistrados e autoridades, não fiqueis preocupados como ou com que vos defendereis, ou com o que direis. 12 Pois nessa hora o Espírito Santo vos ensinará o que deveis dizer\"."
     }
   },
   "extra": []

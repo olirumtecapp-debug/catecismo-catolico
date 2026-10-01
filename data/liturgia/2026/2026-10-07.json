@@ -1,37 +1,28 @@
 {
   "date": "2026-10-07",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Comum Memoria: Nossa Senhora do Rosario",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/10/7/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Gálatas 2,1-2.7-14",
-      "intro": "Leitura da Carta de São Paulo aos Gálatas:",
-      "text": "Irmãos: 1Quatorze anos mais tarde, subi, de novo, a Jerusalém, com Barnabé, levando também Tito comigo. 2Fui lá, por causa de uma revelação. Expus-lhes o evangelho que tenho pregado entre os pagãos, o que fiz em particular aos líderes da Igreja, para não acontecer estivesse eu correndo em vão ou tivesse corrido em vão. 7Pelo contrário, viram que a evangelização dos pagãos foi confiada a mim, como a Pedro foi confiada a evangelização dos judeus. 8De fato, aquele que preparou Pedro para o apostolado entre os judeus preparou-me também a mim para o apostolado entre os pagãos. 9Reconhecendo a graça que me foi dada, Tiago, Cefas e João, considerados as colunas da Igreja, deram-nos a mão, a mim e a Barnabé, como sinal de nossa comunhão recíproca. Assim ficou confirmado que nós iríamos aos pagãos e eles iriam aos judeus. 10O que nos recomendaram foi somente que nos lembrassemos dos pobres. E isso procurei fazer sempre, com toda a solicitude. 11Mas, quando Cefas chegou a Antioquia, opus-me a ele abertamente, pois ele merecia censura. 12Com efeito, antes que chegassem alguns da comunidade de Tiago, ele tomava refeição com os gentios. Mas, depois que eles chegaram, Cefas começou a esquivar-se e a afastar-se, por medo dos circuncidados. 13E os demais judeus acompanharam-no nessa dissimulação, a ponto de até Barnabé se deixar arrastar pela hipocrisia deles. 14Quando vi que não estavam procedendo direito, de acordo com a verdade do Evangelho, disse a Cefas, diante de todos: 'Se tu, que és judeu, vives como pagão e não como judeu, como podes obrigar os pagãos a viverem como judeus?"
+      "reference": "At 1,12-14",
+      "text": "Depois que Jesus subiu ao céu, 12 os apóstolos voltaram para Jerusalém, vindo do monte das Oliveiras, que fica perto de Jerusalém, a mais ou menos um quilômetro. 13 Entraram na cidade e subiram para a sala de cima, onde costumavam ficar. Eram Pedro e João, Tiago e André, Filipe e Tomé, Bartolomeu e Mateus, Tiago, filho de Alfeu, Simão Zelota e Judas, filho de Tiago. 14 Todos eles perseveravam na oração em comum, junto com algumas mulheres, entre as quais Maria, mãe de Jesus, e com os irmãos de Jesus. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 116 (117)",
-      "refrain": "Ide, por todo o mundo, e a todos pregai o Evangelho.",
-      "text": "- Cantai louvores ao Senhor, todas as gentes, povos todos, festejai-o!\n\n- Pois comprovado é seu amor para conosco, para sempre ele é fiel!"
+      "reference": "Cânt.: Lc 1,46-47.48-49.50-51.52-53.54-55 (R. 49 ou: Bendita sejais,ó Virgem Maria,trouxestes no ventre a Palavra eterna!)",
+      "refrain": "O Poderoso fez por mim maravilhas,",
+      "text": "Lc 1,46-47.48-49.50-51.52-53.54-55 (R. 49 ou:) ℟. O Poderoso fez por mim maravilhas, 46 A minh'alma engrandece ao Senhor, 47 e se alegrou o meu espírito em Deus, meu Salvador, 48 pois, ele viu a pequenez de sua serva, desde agora as gerações hão de chamar-me de bendita. 49 O Poderoso fez por mim maravilhas e Santo é o seu nome! 50 Seu amor, de geração em geração, chega a todos que o respeitam. 51 Demonstrou o poder de seu braço, dispersou os orgulhosos. 52 Derrubou os poderosos de seus tronos e os humildes exaltou. 53 De bens saciou os famintos e despediu, sem nada, os ricos. 54 Acolheu Israel, seu servidor, fiel ao seu amor, 55 como havia prometido aos nossos pais, em favor de Abraão e de seus filhos, para sempre."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 11, 1-4",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "Lc 1,26-38",
       "acclamation": {
         "title": "Aleluia, Aleluia, Aleluia.",
-        "verse": "Recebestes um espírito de adoção, no qual clamamos Aba! Pai! (Rm 8,15)."
+        "verse": "Maria, alegra-te, ó cheia de graça, o Senhor é contigo; és bendita entre todas as mulheres da terra!"
       },
-      "text": "1Um dia, Jesus estava rezando num certo lugar. Quando terminou, um de seus discípulos pediu-lhe: 'Senhor, ensina-nos a rezar, como também João ensinou a seus discípulos.' 2Jesus respondeu: 'Quando rezardes, dizei: 'Pai, santificado seja o teu nome. Venha o teu Reino. 3Dá-nos a cada dia o pão de que precisamos, 4e perdoa-nos os nossos pecados, pois nós também perdoamos a todos os nossos devedores; e não nos deixes cair em tentação'.'"
+      "text": "Ele era descendente de Davi e o nome da virgem era Maria. 28 O anjo entrou onde ela estava e disse: \"Alegra-te, cheia de graça, o Senhor está contigo!\" 29 Maria ficou perturbada com estas palavras e começou a pensar qual seria o significado da saudação. 30 O anjo, então, disse-lhe: \"Não tenhas medo, Maria, porque encontraste graça diante de Deus. 31 Eis que conceberás e darás à luz um filho, a quem porás o nome de Jesus. 32 Ele será grande, será chamado Filho do Altíssimo, e o Senhor Deus lhe dará o trono de seu pai Davi. 33 Ele reinará para sempre sobre os descendentes de Jacó, e o seu reino não terá fim\". 34 Maria perguntou ao anjo: \"Como acontecerá isso, se eu não conheço homem algum?\" 35 O anjo respondeu: \"O Espírito virá sobre ti, e o poder do Altíssimo te cobrirá com sua sombra. Por isso, o menino que vai nascer será chamado Santo, Filho de Deus. 36 Também Isabel, tua parenta, concebeu um filho na velhice. Este já é o sexto mês daquela que era considerada estéril, 37 porque para Deus nada é impossível\". 38 Maria, então, disse: \"Eis aqui a serva do Senhor; faça-se em mim segundo a tua palavra!\" E o anjo retirou-se."
     }
   },
-  "extra": [
-    "Comentário por Beato Columba Marmion, Abade<br/>",
-    "A união a Deus em Cristo nas cartas de direção espiritual de Dom Marmion<br/>",
-    "A confiança filial<br/>",
-    "A consideração que faz das suas faltas é inteiramente verdadeira: as faltas que têm origem na nossa fragilidade, e que são realmente detestadas, não impedem que Deus nos ame. Pelo contrário, suscitam a sua compaixão: «Como um pai se compadece dos filhos, assim o Senhor Se compadece dos que O temem, [...] Ele não Se esquece de que somos pó da terra» (Sl 102,13.14).<br/>",
-    "A grande devoção de São Paulo consistia em que se apresentar diante do Pai celeste com todas as suas enfermidades; e, como se considerou sempre um membro de Cristo, tais enfermidades eram as do próprio Cristo: «Prefiro gloriar-me nas minhas fraquezas, para que habite em mim a força de Cristo» (2Cor 12,9). Esforce-se portanto por se encher deste espírito de confiança de menino para com Deus.<br/>",
-    "Parece-me que, quanto mais intimamente unido me encontro ao nosso divino Senhor, mais Ele me atrai a seu Pai - e mais me quer encher do seu espírito filial. É este o espírito da Nova Lei: «Vós não recebestes um Espírito que vos escravize e volte a encher-vos de medo; mas recebestes um Espírito que faz de vós filhos adotivos. É por Ele que clamamos: \"Abbá, ó Pai!\"» (Rom 8,15)<br/>"
-  ]
+  "extra": []
 }

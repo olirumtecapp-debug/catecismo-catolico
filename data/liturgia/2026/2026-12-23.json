@@ -1,69 +1,28 @@
 {
   "date": "2026-12-23",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "4a. Semana do Advento Ciclo do Natal",
-  "color": "roxo",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/12/23/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Leitura do Cântico dos Cânticos 2,8-14",
-      "intro": "Leitura do Cântico dos Cânticos:",
-      "text": "8É a voz do meu amado! Eis que ele vem saltando pelos montes, pulando sobre as colinas. 9O meu amado parece uma gazela, ou um cervo ainda novo. Eis que ele está de pé atrás de nossa parede, espiando pelas janelas, observando através das grades. 10O meu amado me fala dizendo: 'Levanta-te, minha amada, minha rola, formosa minha, e vem! 11O inverno já passou, as chuvas pararam e já se foram. 12No campo aparecem as flores, chegou o tempo das canções, a rola já faz ouvir seu canto em nossa terra. 13Da figueira brotam os primeiros frutos, soltam perfume as vinhas em flor. Levanta-te, minha amada, formosa minha, e vem! 14Minha rola, que moras nas fendas da rocha, no esconderijo escarpado, mostra-me teu rosto, deixa-me ouvir tua voz! Pois a tua voz é tão doce, e gracioso o teu semblante'."
+      "reference": "Ml 3,1-4.23-24",
+      "text": "Eu vos enviarei o profeta Elias, antes que venha o dia do Senhor. Leitura da Profecia de Malaquias 3,1-4.23-24 Assim fala o Senhor Deus: 1 \"Eis que envio meu anjo, e ele há de preparar o caminho para mim; logo chegará ao seu templo o Dominador, que tentais encontrar, e o anjo da aliança, que desejais. Ei-lo que vem, diz o Senhor dos exércitos; 2 e quem poderá fazer-lhe frente, no dia de sua chegada? E quem poderá resistir-lhe, quando ele aparecer? Ele é como o fogo da forja e como a barrela dos lavadeiros; 3 e estará a postos, como para fazer derreter e purificar a prata: assim ele purificará os filhos de Levi e os refinará como ouro e como prata, e eles poderão assim fazer oferendas justas ao Senhor. 4 Será então aceitável ao Senhor a oblação de Judá e de Jerusalém, como nos primeiros tempos e nos anos antigos. 23 Eis que eu vos enviarei o profeta Elias, antes que venha o dia do Senhor, dia grande e terrível; 24 o coração dos pais há de voltar-se para os filhos, e o coração dos filhos para seus pais, para que eu não intervenha, ferindo de maldição a vossa terra\". ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 32 (33)",
-      "refrain": "Ó justos, alegrai-vos no Senhor! Cantai para o Senhor um canto novo!",
-      "text": "- Dai graças ao Senhor ao som da harpa, na lira de dez cordas celebrai-o! Cantai para o Senhor um canto novo, com arte sustentai a louvação!\n\n- Mas os desígnios do Senhor são para sempre, e os pensamentos que ele traz no coração, de geração em geração, vão perdurar. Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança!\n\n- No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! Por isso o nosso coração se alegra nele, seu santo nome é nossa única esperança."
+      "reference": "Sl 24(25),4-5ab.8-9.10 e 14 (R. Lc 21,28)",
+      "refrain": "Levantai vossa cabeça e olhai, pois, a vossa redenção se aproxima!",
+      "text": "4 Mostrai-me, ó Senhor, vossos caminhos, e fazei-me conhecer a vossa estrada! 5 Vossa verdade me oriente e me conduza, b porque sois o Deus da minha salvação! 8 O Senhor é piedade e retidão, e reconduz ao bom caminho os pecadores. 9 Ele dirige os humildes na justiça, e aos pobres ele ensina o seu caminho. 10 Verdade e amor são os caminhos do Senhor para quem guarda sua Aliança e seus preceitos. 14 O Senhor se torna íntimo aos que o temem e lhes dá a conhecer sua Aliança."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 39-45",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "Lc 1,57-66",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Ó Emanuel, sois nosso rei e orientador: vinde salvar-nos, ó Senhor e nosso Deus!"
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Ó Rei e Senhor das nações e Pedra angular da Igreja, vinde salvar a mulher e o homem, que, um dia, formastes do barro."
       },
-      "text": "39Naqueles dias, Maria partiu para a região montanhosa, dirigindo-se, apressadamente, a uma cidade da Judéia. 40Entrou na casa de Zacarias e cumprimentou Isabel. 41Quando Isabel ouviu a saudação de Maria, a criança pulou no seu ventre e Isabel ficou cheia do Espírito Santo. 42Com um grande grito, exclamou: 'Bendita és tu entre as mulheres e bendito é o fruto do teu ventre!' 43Como posso merecer que a mãe do meu Senhor me venha visitar? 44Logo que a tua saudação chegou aos meus ouvidos, a criança pulou de alegria no meu ventre. 45Bem-aventurada aquela que acreditou, porque será cumprido, o que o Senhor lhe prometeu.'"
+      "text": "58 Os vizinhos e parentes ouviram dizer como o Senhor tinha sido misericordioso para com Isabel, e alegraram-se com ela. 59 No oitavo dia, foram circuncidar o menino, e queriam dar-lhe o nome de seu pai, Zacarias. 60 A mãe porém disse: \"Não! Ele vai chamar-se João. \" 61 Os outros disseram: \"Não existe nenhum parente teu com esse nome!\" 62 Então fizeram sinais ao pai, perguntando como ele queria que o menino se chamasse. 63 Zacarias pediu uma tabuinha, e escreveu: \"João é o seu nome. \" 64 No mesmo instante, a boca de Zacarias se abriu, sua língua se soltou, e ele começou a louvar a Deus. 65 Todos os vizinhos ficaram com medo, e a notícia espalhou-se por toda a região montanhosa da Judeia. 66 E todos os que ouviam a notícia, ficavam pensando: \"O que virá a ser este menino?\" De fato, a mão do Senhor estava com ele."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por Santa Teresinha do Menino Jesus (1873-1897)<br/>",
-    "</b>",
-    "Carmelita, Doutora da Igreja<br/>",
-    "Poema «Porque te amo, ó Maria», estrofes 4-7<br/>",
-    "«O Senhor fez em mim maravilhas» (Lc 1,49)<br/>",
-    "Como te amo, Maria, quando te dizes serva<br/>",
-    "do Deus que conquistaste pela tua humildade (Lc 1,38),<br/>",
-    "tornou-te omnipotente essa virtude oculta<br/>",
-    "que trouxe ao teu coração a Santíssima Trindade.<br/>",
-    "E quando o Espírito de Amor te cobriu com a sua sombra (Lc 1, 35),<br/>",
-    "o Filho, igual ao Pai, em ti encarnou.<br/>",
-    "Inúmeros serão os seus irmãos pecadores,<br/>",
-    "uma vez que Jesus é o teu primogénito (Lc 2,7)!<br/>",
-    "Ó Mãe muito amada, apesar da minha pequenez,<br/>",
-    "trago em mim, como tu, o Todo-Poderoso,<br/>",
-    "mas não tremo ao ver em mim tanta fraqueza.<br/>",
-    "Os tesouros da Mãe pertencem aos filhos,<br/>",
-    "e sendo eu tua filha, ó Mãe querida,<br/>",
-    "as tuas virtudes e o teu amor não me pertencerão também?<br/>",
-    "Quando ao meu coração chega a Hóstia santa,<br/>",
-    "Jesus, teu suave Cordeiro, crê repousar em ti!<br/>",
-    "Tu fazes-me sentir que não é impossível<br/>",
-    "seguir os teus passos, ó Rainha dos eleitos,<br/>",
-    "porque tornaste visível o trilho do Céu,<br/>",
-    "vivendo cada dia as mais humildes virtudes.<br/>",
-    "A teu lado, Maria, gosto de ser pequena<br/>",
-    "para ver como são vãs as grandezas do mundo.<br/>",
-    "Na tua visita à casa de Isabel,<br/>",
-    "aprendo a praticar uma caridade ardente.<br/>",
-    "Aí escuto arrebatada, ó doce Rainha dos anjos,<br/>",
-    "o canto sagrado que jorrou de teu peito (Lc 1,46s.);<br/>",
-    "tu ensinas-me a cantar os divinos louvores<br/>",
-    "e a gloriar-me em Jesus, meu Salvador.<br/>",
-    "Tuas palavras de amor são rosas místicas<br/>",
-    "que perfumarão os séculos vindouros.<br/>",
-    "Em ti, o Todo-Poderoso fez maravilhas,<br/>",
-    "desejo meditá-las para delas usufruir.<br/>"
-  ]
+  "extra": []
 }

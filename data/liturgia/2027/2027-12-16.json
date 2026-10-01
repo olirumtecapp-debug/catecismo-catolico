@@ -1,38 +1,28 @@
 {
   "date": "2027-12-16",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "3a. Semana do Advento Ciclo do Natal",
-  "color": "roxo",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/12/16/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Cântico dos Cânticos 2,8-14",
-      "intro": "Leitura do Cântico dos Cânticos:",
-      "text": "8É a voz do meu amado! Eis que ele vem saltando pelos montes, pulando sobre as colinas. 9O meu amado parece uma gazela, ou um cervo ainda novo. Eis que ele está de pé atrás de nossa parede, espiando pelas janelas, observando através das grades. 10O meu amado me fala dizendo: 'Levanta-te, minha amada, minha rola, formosa minha, e vem! 11O inverno já passou, as chuvas pararam e já se foram. 12No campo aparecem as flores, chegou o tempo das canções, a rola já faz ouvir seu canto em nossa terra. 13Da figueira brotam os primeiros frutos, soltam perfume as vinhas em flor. Levanta-te, minha amada, formosa minha, e vem! 14Minha rola, que moras nas fendas da rocha, no esconderijo escarpado, mostra-me teu rosto, deixa-me ouvir tua voz! Pois a tua voz é tão doce, e gracioso o teu semblante'."
+      "reference": "Is 54,1-10",
+      "text": "Alegra-te, ó estéril, que nunca foste mãe, exulta e regozija-te, tu que nunca deste à luz; os filhos da mulher abandonada são mais numerosos do que os filhos da bem-casada, diz o Senhor. 2 Alarga o espaço de tua tenda e distende bastante as peles das tuas barracas; usa cordas bem longas e finca as estacas com segurança. 3 Farás expansão para um lado e para outro e tua posteridade receberá em herança as nações que povoarão cidades abandonadas. 4 Não tenhas medo, pois não sofrerás afronta alguma; nem te perturbes, pois não tens de que te envergonhar; esquecerás a vergonha sofrida na juventude e não te recordarás mais da humilhação da viuvez. 5 Teu esposo é aquele que te criou, seu nome é Senhor dos exércitos; teu redentor, o Santo de Israel, chama-se Deus de toda a terra. 6 O Senhor te chamou, como a mulher abandonada e de alma aflita; como a esposa repudiada na mocidade, falou o teu Deus. 7 Por um breve instante eu te abandonei, mas com imensa compaixão volto a acolher-te. 8 Num momento de indignação, por um pouco ocultei de ti minha face, mas com misericórdia eterna compadeci-me de ti, diz teu salvador, o Senhor. 9 Como fiz nos dias de Noé, a quem jurei nunca mais inundar a terra, assim juro que não me irritarei contra ti nem te farei ameaças. 10 Podem os montes recuar e as colinas abalar-se, mas minha misericórdia não se apartará de ti, nada fará mudar a aliança de minha paz, diz o teu misericordioso Senhor. ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 32 (33)",
-      "refrain": "Ó justos, alegrai-vos no Senhor! Cantai para o Senhor um canto novo!",
-      "text": "- Dai graças ao Senhor ao som da harpa, na lira de dez cordas celebrai-o! Cantai para o Senhor um canto novo, com arte sustentai a louvação!\n\n- Mas os desígnios do Senhor são para sempre, e os pensamentos que ele traz no coração, de geração em geração, vão perdurar. Feliz o povo cujo Deus é o Senhor, e a nação que escolheu por sua herança!\n\n- No Senhor nós esperamos confiantes, porque ele é nosso auxílio e proteção! Por isso o nosso coração se alegra nele, seu santo nome é nossa única esperança."
+      "reference": "Sl 29(30),2 e 4.5-6.11.12a e 13b (R. 2a)",
+      "refrain": "Eu vos exalto, ó Senhor, porque vós me livrastes!",
+      "text": "2 Eu vos exalto, ó Senhor, pois me livrastes, e não deixastes rir de mim meus inimigos! 4 Vós tirastes minha alma dos abismos e me salvastes, quando estava já morrendo! 5 Cantai salmos ao Senhor, povo fiel, dai-lhe graças e invocai seu santo nome! 6 Pois sua ira dura apenas um momento, mas sua bondade permanece a vida inteira; se à tarde vem o pranto visitar-nos, de manhã vem saudar-nos a alegria. 11 Escutai-me, Senhor Deus, tende piedade! Sede, Senhor, o meu abrigo protetor! 12 Transformastes o meu pranto em uma festa, 13 Senhor meu Deus, eternamente hei de louvar-vos!"
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Lucas 1, 39-45",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Lucas:",
+      "reference": "Lc 7,24-30",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Ó Emanuel, sois o nosso rei e orientador: vinde salvar-nos, ó Senhor e nosso Deus!"
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Preparai o caminho do Senhor, endireitai suas veredas! Toda carne há de ver a salvação que vem de Deus!"
       },
-      "text": "Naquele tempo: 26O anjo Gabriel foi enviado por Deus a uma cidade da Galiléia, chamada Nazaré, 27a uma virgem, prometida em casamento a um homem chamado José. Ele era descendente de Davi e o nome da virgem era Maria 28O anjo entrou onde ela estava e disse: 'Alegra-te, cheia de graça, o Senhor está contigo!' 29Maria ficou perturbada com estas palavras e começou a pensar qual seria o significado da saudação. 30O anjo, então, disse-lhe: 'Não tenhas medo, Maria, porque encontraste graça diante de Deus. 31Eis que conceberás e darás à luz um filho, a quem porás o nome de Jesus. 32Ele será grande, será chamado Filho do Altíssimo, e o Senhor Deus lhe dará o trono de seu pai Davi. 33Ele reinará para sempre sobre os descendentes de Jacó, e o seu reino não terá fim'. 34Maria perguntou ao anjo: 'Como acontecerá isso, se eu não conheço homem algum?' 35O anjo respondeu: 'O Espírito virá sobre ti, e o poder do Altissimo te cobrirá com sua sombra. Por isso, o menino que vai nascer será chamado Santo, Filho de Deus. 36Também Isabel, tua parenta, concebeu um filho na velhice. Este já é o sexto mês daquela que era considerada estéril, 37porque para Deus nada é impossível'. 38Maria, então, disse: 'Eis aqui a serva do Senhor; faça-se em mim segundo a tua palavra!' E o anjo retirou-se.39Naqueles dias, Maria partiu para a região montanhosa, dirigindo-se, apressadamente, a uma cidade da Judéia. 40Entrou na casa de Zacarias e cumprimentou Isabel. 41Quando Isabel ouviu a saudação de Maria, a criança pulou no seu ventre e Isabel ficou cheia do Espírito Santo. 42Com um grande grito, exclamou: 'Bendita és tu entre as mulheres e bendito é o fruto do teu ventre!' 43Como posso merecer que a mãe do meu Senhor me venha visitar? 44Logo que a tua saudação chegou aos meus ouvidos, a criança pulou de alegria no meu ventre. 45Bem-aventurada aquela que acreditou, porque será cumprido, o que o Senhor lhe prometeu.'"
+      "text": "\"O que fostes ver no deserto? Um caniço agitado pelo vento? 25 O que fostes ver? Um homem vestido com roupas finas? Ora, os que se vestem com roupas preciosas e vivem no luxo estão nos palácios dos reis. 26 Então, o que fostes ver? Um profeta? Eu vos afirmo que sim, e alguém que é mais do que um profeta. 27 É de João que está escrito: 'Eis que eu envio o meu mensageiro à tua frente; ele vai preparar o meu caminho diante de ti'. 28 Eu vos digo: entre os nascidos de mulher, ninguém é maior do que João. No entanto, o menor no Reino de Deus é maior do que ele\". 29 Todo o povo ouviu e até mesmo os cobradores de impostos reconheceram a justiça de Deus, e receberam o batismo de João. 30 Mas os fariseus e os mestres da Lei, rejeitando o batismo de João, tornaram inútil para si mesmos o projeto de Deus."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por São João Damasceno, Monge, Teólogo, Doutor da Igreja <br/>",
-    "</b>",
-    "1.º sermão sobre a Dormição da Virgem <br/>",
-    "«Donde me é dado que venha ter comigo a Mãe do meu Senhor?»<br/>",
-    "«Bendita és tu entre as mulheres e bendito é o fruto do teu ventre». [...] Com efeito, eis que as gerações te chamam bem-aventurada, como tu declaraste (Lc 1,48). As filhas de Jerusalém, isto é, da Igreja viram-te e proclamaram a tua felicidade. [...] Tu és, na verdade, o trono real junto do qual se encontravam os anjos contemplando o seu Senhor e Criador, que nele estava sentado (Dn 7,9). Tu tornaste-te o Éden espiritual, mais sagrado e mais divino que o antigo Éden. No primeiro, habitava o Adão terreno; em ti, habita o Senhor que veio dos céus (1Cor 15,47). A arca de Noé prefigurou-te, ela que salvou o gérmen da segunda criação, pois tu geraste a Cristo, a salvação do mundo, que submergiu o pecado e acalmou as vagas. <br/>",
-    "Foi a ti que a sarça ardente revelou antecipadamente, que as tábuas escritas por Deus desenharam (Ex 31,18), que a arca da aliança narrou; foi a ti que a urna de ouro, o candelabro [...] e o ramo florido de Aarão (Nm 17,23) manifestamente prefiguraram. [...] E já me esquecia da escada de Jacob. Tal como Jacob viu o céu unido à terra pelas extremidades da escada, os anjos a subirem e descerem por ela e aquele que é realmente o forte e invencível travar com ele uma luta simbólica, assim tu mesma te tornaste a mediadora e a escada por onde Deus desceu até nós, tomando sobre Si as fraquezas da nossa substância, abraçando-a e unindo-Se estreitamente a ela. <br/>"
-  ]
+  "extra": []
 }

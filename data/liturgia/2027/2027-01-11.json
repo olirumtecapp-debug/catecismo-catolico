@@ -1,41 +1,28 @@
 {
   "date": "2027-01-11",
-  "source": "api-liturgia-diaria / Sagrada Liturgia",
-  "sourceUrl": "https://sagradaliturgia.com.br/",
-  "heading": "Tempo: Natal Ciclo do Natal Festa: Batismo do Senhor",
-  "color": "branco",
+  "source": "Lírio Católico / CNBB-Edições CNBB",
+  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/27/1/11/",
+  "heading": "",
+  "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Isaías 42,1-4.6-7",
-      "intro": "Leitura do Livro do Profeta Isaías:",
-      "text": "Assim fala o Senhor: 1'Eis o meu servo - eu o recebo; eis o meu eleito - nele se compraz minh'alma; pus meu espírito sobre ele, ele promoverá o julgamento das nações. 2Ele não clama nem levanta a voz, nem se faz ouvir pelas ruas. 3Não quebra uma cana rachada nem apaga um pavio que ainda fumega; mas promoverá o julgamento para obter a verdade. 4Não esmorecerá nem se deixará abater, enquanto não estabelecer a justiça na terra; os países distantes esperam seus ensinamentos.' 6'Eu, o Senhor, te chamei para a justiça e te tomei pela mão; eu te formei e te constituí como o centro de aliança do povo, luz das nações, 7para abrires os olhos dos cegos, tirar os cativos da prisão, livrar do cárcere os que vivem nas trevas."
+      "reference": "Hb 1,1-6",
+      "text": "Deus falou-nos por meio do Filho. 1 Muitas vezes e de muitos modos falou Deus outrora aos nossos pais, pelos profetas; 2 nestes dias, que são os últimos, ele nos falou por meio do Filho, a quem ele constituiu herdeiro de todas as coisas e pelo qual também ele criou o universo. 3 Este é o esplendor da glória do Pai, a expressão do seu ser. Ele sustenta o universo com o poder de sua palavra. Tendo feito a purificação dos pecados, ele sentou-se à direita da majestade divina, nas alturas. 4 Ele foi colocado tanto acima dos anjos quanto o nome que ele herdou supera o nome deles. 5 De fato, a qual dos anjos Deus disse alguma vez: \"Tu és o meu Filho, eu hoje te gerei\"? Ou ainda: \"Eu serei para ele um Pai e ele será para mim um filho\"? 6 Mas, quando faz entrar o Primogênito no mundo, Deus diz: \"Todos os anjos devem adorá-lo!\" ℣. Palavra do Senhor. ℟. Graças a Deus."
     },
     "psalm": {
-      "reference": "Salmo 28 (29)",
-      "refrain": "Que o Senhor abençoe, com a paz, o seu povo!",
-      "text": "- Filhos de Deus, tributai ao Senhor, tributai-lhe a glória e o poder! Dai-lhe a glória devida ao seu nome; adorai-o com santo ornamento!\n\n- Eis a voz do Senhor sobre as águas, sua voz sobre as águas imensas! Eis a voz do Senhor com poder! Eis a voz do Senhor majestosa.\n\n- Sua voz no trovão reboando! No seu templo os fiéis bradam: 'Glória!' É o Senhor que domina os dilúvios, o Senhor reinará para sempre!"
+      "reference": "Sl 96(97),1-2.6 e 7c.9 (R. cf. 7c)",
+      "refrain": "Adorai o Senhor Deus, vós anjos todos!",
+      "text": "1 Deus é Rei! Exulte a terra de alegria, e as ilhas numerosas rejubilem! 2 Treva e nuvem o rodeiam no seu trono, que se apoia na justiça e no direito. 6 E assim proclama o céu sua justiça, † todos os povos podem ver a sua glória. 7 Aos pés de Deus vêm se prostrar todos os deuses! 9 Porque vós sois o Altíssimo, Senhor, † muito acima do universo que criastes, e de muito superais todos os deuses."
     },
     "secondReading": null,
     "gospel": {
-      "reference": "Evangelho de Jesus Cristo segundo São Marcos 1, 7-11",
-      "intro": "Proclamação do Evangelho de Jesus Cristo segundo São Marcos:",
+      "reference": "Mc 1,14-20",
       "acclamation": {
-        "title": "Aleluia, Aleluia, Aleluia!",
-        "verse": "Abriram-se os céus e fez-se ouvir a voz do Pai: Eis meu Filho muito amado; escutai-o, todos vós! (Mc 9,7)."
+        "title": "Aleluia, Aleluia, Aleluia.",
+        "verse": "Convertei-vos e crede no Evangelho, pois o Reino de Deus está chegando!"
       },
-      "text": "Naquele tempo, 7João Batista pregava, dizendo: \"Depois de mim virá alguém mais forte do que eu. Eu nem sou digno de me abaixar para desamarrar suas sandálias. 8Eu vos batizei com água, mas ele vos batizará com o Espírito Santo\". 9Naqueles dias, Jesus veio de Nazaré da Galileia, e foi batizado por João no rio Jordão. 10E logo, ao sair da água, viu o céu se abrindo, e o Espírito, como pomba, descer sobre ele. 11E do céu veio uma voz: \"Tu és o meu Filho amado, em ti ponho meu bem-querer\"."
+      "text": "EVANGELHO Convertei-vos e crede no Evangelho! Proclamação do Evangelho de Jesus Cristo segundo Marcos 1,14-20 14 Depois que João Batista foi preso, Jesus foi para a Galileia, pregando o Evangelho de Deus e dizendo: 15 \"O tempo já se completou e o Reino de Deus está próximo. Convertei-vos e crede no Evangelho!\" 16 E, passando à beira do mar da Galileia, Jesus viu Simão e André, seu irmão, que lançavam a rede ao mar, pois eram pescadores. 17 Jesus lhes disse: \"Segui-me e eu farei de vós pescadores de homens\". 18 E eles, deixando imediatamente as redes, seguiram a Jesus. 19 Caminhando mais um pouco, viu também Tiago e João, filhos de Zebedeu. Estavam na barca, consertando as redes; 20 e logo os chamou. Eles deixaram seu pai Zebedeu na barca com os empregados, e partiram, seguindo Jesus."
     }
   },
-  "extra": [
-    "<b>",
-    "Comentário do dia por São Jerónimo (347-420), Presbítero, Doutor da Igreja<br/>",
-    "</b>",
-    "Homilias sobre o evangelho de Marcos 1C, SC 494<br/>",
-    "O batismo de Jesus<br/>",
-    "«Foi batizado por João no rio Jordão». Grande é a sua misericórdia: Aquele que não tinha cometido qualquer pecado é batizado como se fosse pecador. No batismo do Senhor, são redimidos todos os pecados; mas ele é apenas uma prefiguração do batismo do Salvador, porque a verdadeira remissão dos pecados reside no sangue de Cristo, no mistério da Trindade.<br/>",
-    "«Ao subir da água, viu os céus rasgarem-se». Tudo isto foi escrito para nós. Pois antes de recebermos o batismo, nós tínhamos os olhos fechados, não podíamos ver as realidades celestes.<br/>",
-    "E viu «o Espírito, como uma pomba, descer sobre Ele. E dos céus ouviu-se uma voz: \"Tu és o meu Filho muito amado, em Ti pus toda a minha complacência\"». Vemos aqui o mistério da Trindade: Jesus é batizado, o Espírito Santo desce sob a aparência de pomba e o Pai fala do alto do céu.<br/>",
-    "«Viu os céus rasgarem-se». A expressão «viu» mostra que os outros não tinham visto. Não se imagine que foram os céus que, simples e materialmente, se abriram; nós próprios, que estamos agora aqui, segundo a diversidade dos nossos méritos, vemos os céus abertos ou fechados. Uma fé total vê os céus abertos; mas uma fé que duvida vê-os fechados.<br/>",
-    "«Vi o Espírito que descia do céu como uma pomba e permanecia sobre Ele» (Jo 1,32). Vede o que diz a Escritura: que permanecia, isto é, que não Se ia embora. O Espírito Santo desceu sobre Cristo e permaneceu; enquanto sobre os homens desce, mas não permanece. Com efeito, esperamos que o Espírito Santo permaneça em nós, quando odiamos o nosso irmão e temos maus pensamentos? Se temos bons pensamentos, saibamos que o Espírito Santo habita em nós; mas, se temos maus pensamentos, isso é sinal de que o Espírito Santo Se retirou de nós. É por isso que Ele diz acerca do Salvador: «Aquele sobre quem vires descer o Espírito e permanecer, é Ele» (Jo 1,33).<br/>"
-  ]
+  "extra": []
 }
