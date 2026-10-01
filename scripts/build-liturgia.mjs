@@ -204,12 +204,12 @@ async function parseLirio(html,date){
   }
 
   function section(startLabel, ends){
-    const m=text.match(new RegExp(startLabel,'i'));
+    const m=text.match(new RegExp('(?:^|\\n)\\s*'+startLabel,'i'));
     if(!m) return '';
     const s=m.index;
     let e=text.length;
     for(const en of ends){
-      const x=text.slice(s+m[0].length).search(new RegExp(en,'i'));
+      const x=text.slice(s+m[0].length).search(new RegExp('(?:^|\\n)\\s*'+en+'\\s*(?:\\n|$)','i'));
       if(x>=0) e=Math.min(e,s+m[0].length+x);
     }
     return text.slice(s,e).trim();

@@ -1,22 +1,22 @@
 {
   "date": "2026-07-05",
-  "source": "Lírio Católico / CNBB-Edições CNBB",
-  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/7/5/",
-  "heading": "",
+  "source": "Canção Nova",
+  "sourceUrl": "https://liturgia.cancaonova.com/liturgia/14o-domingo-tempo-comum-domingo-2/?sDia=5&sMes=7&sAno=2026",
+  "heading": "14º Domingo do Tempo Comum | Domingo",
   "color": "",
   "readings": {
     "firstReading": {
       "reference": "Zc 9,9-10",
-      "text": "Eis que teu rei, humilde, vem ao teu encontro. Leitura da Profecia de Zacarias 9,9-10 Assim diz o Senhor: 9 \"Exulta, cidade de Sião! Rejubila, cidade de Jerusalém. Eis que vem teu rei ao teu encontro; ele é justo, ele salva; é humilde e vem montado num jumento, um potro, cria de jumenta. 10 Eliminará os carros de Efraim, os cavalos de Jerusalém; ele quebrará o arco de guerreiro, anunciará a paz às nações. Seu domínio se estenderá de um mar a outro mar, e desde o rio até aos confins da terra\". ℣. Palavra do Senhor. ℟. Graças a Deus."
+      "text": "Assim diz o Senhor: 9 \"Exulta, cidade de Sião! Rejubila, cidade de Jerusalém. Eis que vem teu rei ao teu encontro; ele é justo, ele salva; é humilde e vem montado num jumento, um potro, cria de jumenta. 10 Eliminará os carros de Efraim, os cavalos de Jerusalém; ele quebrará o arco de guerreiro, anunciará a paz às nações. Seu domínio se estenderá de um mar a outro mar, e desde o rio até aos confins da terra\"."
     },
     "psalm": {
       "reference": "Sl 144(145),1-2.8-9.10-11.13cd-14 (R. 1b)",
-      "refrain": "Bendirei, eternamente, vosso nome, ó Senhor! Ou: Aleluia, Aleluia, Aleluia. <div class=\"refrao_salmo\"><font color=\"#ff",
-      "text": "0000\">Ou:</font> Aleluia, Aleluia, Aleluia. 1 Ó meu Deus, quero exaltar-vos, ó meu Rei, e bendizer o vosso nome pelos séculos. 2 Todos os dias haverei de bendizer-vos, hei de louvar o vosso nome para sempre. 8 8 Misericórdia e piedade é o Senhor, ele é amor, é paciência, é compaixão. 8 Misericórdia e piedade é o Senhor, ele é amor, é paciência, é compaixão. 9 O Senhor é muito bom para com todos, sua ternura abraça toda criatura. 10 Que vossas obras, ó Senhor, vos glorifiquem, e os vossos santos com louvores vos bendigam! 11 Narrem a glória e o esplendor do vosso reino e saibam proclamar vosso poder! 13cd O Senhor é amor fiel em sua palavra, é santidade em toda obra que ele faz. 14 Ele sustenta todo aquele que vacila e levanta todo aquele que tombou."
+      "refrain": "Bendirei, eternamente, vosso nome, ó Senhor!",
+      "text": "Ó meu Deus, quero exaltar-vos, ó meu Rei, e bendizer o vosso nome pelos séculos. Todos os dias haverei de bendizer-vos, hei de louvar o vosso nome para sempre.\n\nMisericórdia e piedade é o Senhor, ele é amor, é paciência, é compaixão. O Senhor é muito bom para com todos, sua ternura abraça toda criatura.\n\nQue vossas obras, ó Senhor, vos glorifiquem, e os vossos santos com louvores vos bendigam! Narrem a glória e o esplendor do vosso reino e saibam proclamar vosso poder!\n\nO Senhor é amor fiel em sua palavra, é santidade em toda obra que ele faz. Ele sustenta todo aquele que vacila e levanta todo aquele que tombou."
     },
     "secondReading": {
       "reference": "Rm 8,9.11-13",
-      "text": "Irmãos: 9 Vós não viveis segundo a carne, mas segundo o espírito, se realmente o Espírito de Deus mora em vós. Se alguém não tem o Espírito de Cristo, não pertence a Cristo. 11 E, se o Espírito daquele que ressuscitou Jesus dentre os mortos mora em vós, então aquele que ressuscitou Jesus Cristo dentre os mortos vivificará também vossos corpos mortais por meio do seu Espírito que mora em vós. 12 Portanto, irmãos, temos uma dívida, mas não para com a carne, para vivermos segundo a carne. 13 Pois, se viverdes segundo a carne, morrereis, mas se, pelo espírito, matardes o procedimento carnal, então vivereis. ℣. Palavra do Senhor. ℟. Graças a Deus."
+      "text": "Irmãos: 9 Vós não viveis segundo a carne, mas segundo o espírito, se realmente o Espírito de Deus mora em vós. Se alguém não tem o Espírito de Cristo, não pertence a Cristo. 11 E, se o Espírito daquele que ressuscitou Jesus dentre os mortos mora em vós, então aquele que ressuscitou Jesus Cristo dentre os mortos vivificará também vossos corpos mortais por meio do seu Espírito que mora em vós. 12 Portanto, irmãos, temos uma dívida, mas não para com a carne, para vivermos segundo a carne. 13 Pois, se viverdes segundo a carne, morrereis, mas se, pelo espírito, matardes o procedimento carnal, então vivereis."
     },
     "gospel": {
       "reference": "Mt 11,25-30",
@@ -24,7 +24,7 @@
         "title": "Aleluia, Aleluia, Aleluia.",
         "verse": "Eu te louvo, ó Pai Santo, Deus do céu, Senhor da terra; os mistérios do teu Reino aos pequenos, Pai, revelas!"
       },
-      "text": "25 \"Eu te louvo, ó Pai, Senhor do céu e da terra, porque escondeste estas coisas aos sábios e entendidos e as revelaste aos pequeninos. 26 Sim, Pai, porque assim foi do teu agrado. 27 Tudo me foi entregue por meu Pai, e ninguém conhece o Filho, senão o Pai, e ninguém conhece o Pai, senão o Filho e aquele a quem o Filho o quiser revelar. 28 Vinde a mim todos vós que estais cansados e fatigados sob o peso dos vossos fardos, e eu vos darei descanso. 29 Tomai sobre vós o meu jugo e aprendei de mim, porque sou manso e humilde de coração, e vós encontrareis descanso. 30 Pois o meu jugo é suave e o meu fardo é leve\"."
+      "text": "Naquele tempo, Jesus pôs-se a dizer: 25 \"Eu te louvo, ó Pai, Senhor do céu e da terra, porque escondeste estas coisas aos sábios e entendidos e as revelaste aos pequeninos. 26 Sim, Pai, porque assim foi do teu agrado. 27 Tudo me foi entregue por meu Pai, e ninguém conhece o Filho, senão o Pai, e ninguém conhece o Pai, senão o Filho e aquele a quem o Filho o quiser revelar. 28 Vinde a mim todos vós que estais cansados e fatigados sob o peso dos vossos fardos, e eu vos darei descanso. 29 Tomai sobre vós o meu jugo e aprendei de mim, porque sou manso e humilde de coração, e vós encontrareis descanso. 30 Pois o meu jugo é suave e o meu fardo é leve\"."
     }
   },
   "extra": []

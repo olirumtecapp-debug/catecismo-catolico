@@ -1,18 +1,18 @@
 {
   "date": "2026-09-14",
-  "source": "Lírio Católico / CNBB-Edições CNBB",
-  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/9/14/",
-  "heading": "",
+  "source": "Canção Nova",
+  "sourceUrl": "https://liturgia.cancaonova.com/liturgia/exaltacao-da-santa-cruz-festa-segunda-feira/?sDia=14&sMes=9&sAno=2026",
+  "heading": "Exaltação da Santa Cruz - Festa | Segunda-feira",
   "color": "",
   "readings": {
     "firstReading": {
-      "reference": "Nm 21,4b-9 ou Fl 2,6-11",
-      "text": ""
+      "reference": "Fl 2,6-11",
+      "text": "6 Jesus Cristo, existindo em condição divina, não fez do ser igual a Deus uma usurpação, 7 mas ele esvaziou-se a si mesmo, assumindo a condição de escravo e tornando-se igual aos homens. Encontrado com aspecto humano, 8 humilhou-se a si mesmo, fazendo-se obediente até a morte, e morte de cruz. 9 Por isso, Deus o exaltou acima de tudo e lhe deu o Nome que está acima de todo nome. 10 Assim, ao nome de Jesus, todo joelho se dobre no céu, na terra e abaixo da terra, 11 e toda língua proclame: \"Jesus Cristo é o Senhor\" - para a glória de Deus Pai."
     },
     "psalm": {
       "reference": "Sl 77(78),1-2.34-35.36-37.38 (R. cf. 7c)",
       "refrain": "Das obras do Senhor, ó meu povo, não te esqueças!",
-      "text": "1 Escuta, ó meu povo, a minha Lei, ouve atento as palavras que eu te digo; 2 abrirei a minha boca em parábolas, os mistérios do passado lembrarei. 34 Quando os feria, eles então o procuravam, convertiam-se correndo para ele; 35 recordavam que o Senhor é sua rocha e que Deus, seu Redentor, é o Deus Altíssimo. 36 Mas apenas o honravam com seus lábios e mentiam ao Senhor com suas línguas; 37 seus corações enganadores eram falsos e, infiéis, eles rompiam a Aliança. 38 Mas o Senhor, sempre benigno e compassivo, não os matava e perdoava seu pecado; quantas vezes dominou a sua ira e não deu largas à vazão de seu furor."
+      "text": "Escuta, ó meu povo, a minha Lei, ouve atento as palavras que eu te digo; abrirei a minha boca em parábolas, os mistérios do passado lembrarei.\n\nQuando os feria, eles então o procuravam, convertiam-se correndo para ele; recordavam que o Senhor é sua rocha e que Deus, seu Redentor, é o Deus Altíssimo.\n\nMas apenas o honravam com seus lábios e mentiam ao Senhor com suas línguas; seus corações enganadores eram falsos e, infiéis, eles rompiam a Aliança.\n\nMas o Senhor, sempre benigno e compassivo, não os matava e perdoava seu pecado; quantas vezes dominou a sua ira e não deu largas à vazão de seu furor."
     },
     "secondReading": null,
     "gospel": {
@@ -21,7 +21,7 @@
         "title": "Aleluia, Aleluia, Aleluia.",
         "verse": "Nós vos adoramos, Senhor Jesus Cristo, e vos bendizemos, porque pela cruz remistes o mundo!"
       },
-      "text": "13 \"Ninguém subiu ao céu, a não ser aquele que desceu do céu, o Filho do Homem. 14 Do mesmo modo como Moisés levantou a serpente no deserto, assim é necessário que o Filho do Homem seja levantado, 15 para que todos os que nele crerem tenham a vida eterna. 16 Pois Deus amou tanto o mundo, que deu o seu Filho unigênito, para que não morra todo o que nele crer, mas tenha a vida eterna. 17 De fato, Deus não enviou o seu Filho ao mundo para condenar o mundo, mas para que o mundo seja salvo por ele\"."
+      "text": "Naquele tempo, disse Jesus a Nicodemos: 13 \"Ninguém subiu ao céu, a não ser aquele que desceu do céu, o Filho do Homem. 14 Do mesmo modo como Moisés levantou a serpente no deserto, assim é necessário que o Filho do Homem seja levantado, 15 para que todos os que nele crerem tenham a vida eterna. 16 Pois Deus amou tanto o mundo, que deu o seu Filho unigênito, para que não morra todo o que nele crer, mas tenha a vida eterna. 17 De fato, Deus não enviou o seu Filho ao mundo para condenar o mundo, mas para que o mundo seja salvo por ele\"."
     }
   },
   "extra": []

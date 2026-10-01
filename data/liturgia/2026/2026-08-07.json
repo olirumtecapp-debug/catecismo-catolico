@@ -1,18 +1,18 @@
 {
   "date": "2026-08-07",
-  "source": "Lírio Católico / CNBB-Edições CNBB",
-  "sourceUrl": "https://www.liriocatolico.com.br/liturgia_diaria/dia/26/8/7/",
-  "heading": "",
+  "source": "Canção Nova",
+  "sourceUrl": "https://liturgia.cancaonova.com/liturgia/18a-semana-tempo-comum-sexta-feira-5/?sDia=7&sMes=8&sAno=2026",
+  "heading": "18ª Semana do Tempo Comum | Sexta-feira",
   "color": "",
   "readings": {
     "firstReading": {
       "reference": "Na 2,1.3.3,1-3.6-7",
-      "text": "Ai de ti, cidade sanguinária. Leitura da Profecia de Naum 2,1.3; 3,1-3.6-7 1 \"Eis sobre os montes os passos de um mensageiro, que anuncia a paz. Ó Judá, celebra tuas festas, cumpre tuas promessas: nunca mais Belial pisará teu solo; ele foi aniquilado. 3 O Senhor há de restaurar a grandeza de Jacó, assim como a grandeza de Israel, pois os ladrões os saquearam e devastaram suas videiras. 3,1 Ai de ti, cidade sanguinária, cheia de imposturas, cheia de espoliação e de incessante rapinagem. 2 Estalo de chicotes, fragor de rodas, cavalos relinchando, ringir de carros impetuosos, cavaleiros à carga, 3 espadas brilhando e lanças reluzentes, trucidados sem conta, mortos aos montes; cadáveres sem fim, tropeça-se sobre os corpos. 6 Farei cair sobre ti tuas abominações, e te lançarei em rosto merecidos insultos; de ti farei um exemplo. 7 Assim, todos os que te virem, fugirão para longe, dizendo: 'Nínive está em ruínas! Quem terá compaixão dela? Onde achar quem a console?'\" ℣. Palavra do Senhor. ℟. Graças a Deus."
+      "text": "1 \"Eis sobre os montes os passos de um mensageiro, que anuncia a paz. Ó Judá, celebra tuas festas, cumpre tuas promessas: nunca mais Belial pisará teu solo; ele foi aniquilado. 3 O Senhor há de restaurar a grandeza de Jacó, assim como a grandeza de Israel, pois os ladrões os saquearam e devastaram suas videiras. 3,1 Ai de ti, cidade sanguinária, cheia de imposturas, cheia de espoliação e de incessante rapinagem. 2 Estalo de chicotes, fragor de rodas, cavalos relinchando, ringir de carros impetuosos, cavaleiros à carga, 3 espadas brilhando e lanças reluzentes, trucidados sem conta, mortos aos montes; cadáveres sem fim, tropeça-se sobre os corpos. 6 Farei cair sobre ti tuas abominações, e te lançarei em rosto merecidos insultos; de ti farei um exemplo. 7 Assim, todos os que te virem, fugirão para longe, dizendo: 'Nínive está em ruínas! Quem terá compaixão dela? Onde achar quem a console?'\""
     },
     "psalm": {
-      "reference": "Dt 32,35cd-36ab.39abcd.41 (R. 39c)",
+      "reference": "Sl Dt 32,35cd-36ab.39abcd.41 (R. 39c)",
       "refrain": "Sou eu que tiro a vida, sou eu quem faz viver!",
-      "text": "Dt 32,35cd-36ab.39abcd.41 (R. 39 ) ℟. Sou eu que tiro a vida, sou eu quem faz viver! 35 Já vem o dia em que serão arruinados d e o seu destino se apressa em chegar. 36 Porque o Senhor fará justiça ao seu povo b e salvará todos aqueles que o servem. 39 Saibam todos que eu sou, somente eu b e não existe outro Deus além de mim: c quem mata e faz viver, sou eu somente, d sou eu que firo e eu que torno a curar. 41 Se eu afiar a minha espada reluzente e com as minhas próprias mãos fizer justiça, dos adversários todos hei de me vingar e vou retribuir aos que odeiam."
+      "text": "Já vem o dia em que serão arruinados e o seu destino se apressa em chegar. Porque o Senhor fará justiça ao seu povo e salvará todos aqueles que o servem.\n\nSaibam todos que eu sou, somente eu e não existe outro Deus além de mim: quem mata e faz viver, sou eu somente, sou eu que firo e eu que torno a curar.\n\nSe eu afiar a minha espada reluzente e com as minhas próprias mãos fizer justiça, dos adversários todos hei de me vingar e vou retribuir aos que odeiam."
     },
     "secondReading": null,
     "gospel": {
@@ -21,7 +21,7 @@
         "title": "Aleluia, Aleluia, Aleluia.",
         "verse": "Felizes os que são perseguidos, por causa da justiça do Senhor, porque o Reino dos Céus há de ser deles!"
       },
-      "text": "\"Se alguém quer me seguir, renuncie a si mesmo, tome a sua cruz e me siga. 25 Pois quem quiser salvar a sua vida vai perdê-la; e quem perder a sua vida por causa de mim, vai encontrá-la. 26 De fato, que adianta ao homem ganhar o mundo inteiro mas perder a sua vida? O que poderá alguém dar em troca de sua vida? 27 Porque o Filho do Homem virá na glória do seu Pai, com os seus anjos, e então retribuirá a cada um de acordo com a sua conduta. 28 Em verdade vos digo: Alguns daqueles que estão aqui não morrerão antes de verem o Filho do Homem vindo com o seu Reino\"."
+      "text": "Naquele tempo, 24 Jesus disse aos discípulos: \"Se alguém quer me seguir, renuncie a si mesmo, tome a sua cruz e me siga. 25 Pois quem quiser salvar a sua vida vai perdê-la; e quem perder a sua vida por causa de mim, vai encontrá-la. 26 De fato, que adianta ao homem ganhar o mundo inteiro mas perder a sua vida? O que poderá alguém dar em troca de sua vida? 27 Porque o Filho do Homem virá na glória do seu Pai, com os seus anjos, e então retribuirá a cada um de acordo com a sua conduta. 28 Em verdade vos digo: Alguns daqueles que estão aqui não morrerão antes de verem o Filho do Homem vindo com o seu Reino."
     }
   },
   "extra": []
