@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-15",
-      "name": "Santa Teresa de Jesus, virgem, doutora da Igreja, carmelita descalça",
+      "name": "Santa Teresa de Jesus (Teresa de Ávila)",
       "normalizedName": "santa teresa de jesus, , doutora da igreja, carmelita descalca",
       "imageUrl": "./assets/img/santos/10-15-santa-teresa-de-jesus-virgem-doutora-da-igreja-carmelita-descalca.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/15/s--teresa-de-jesus--virgem--doutora-da-igreja--carmelita-descalc.html",
@@ -23,8 +23,15 @@
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/15/s--teresa-de-jesus--virgem--doutora-da-igreja--carmelita-descalc.html",
       "sourceText": "Encontra-se entre as Santas e Místicas mais veneradas do mundo: nos anos de Lutero, Santa Teresa de Ávila dedicou-se a uma importante obra reformadora no interior do Carmelo. Padroeira dos escritores católicos, foi a primeira mulher a ser proclamada Doutora da Igreja junto com Santa Catarina de Sena",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.380Z"
+      },
+      "biography": "Teresa Sánchez de Cepeda y Ahumada nasceu em Ávila, Espanha, em 28 de março de 1515. Dotada de inteligência brilhante, vigor de espírito e grande sensibilidade, ingressou no Mosteiro da Encarnação aos 20 anos. Após anos de lutas interiores e doenças severas, experimentou diante de uma imagem de Cristo chagado uma profunda \"segunda conversão\" mística que revolucionou para sempre a sua existência.\n\nInspirada pelo Espírito Santo e amparada por grandes diretores espirituais como São Pedro de Alcântara e São João da Cruz, Teresa empreendeu a colossal Reforma do Carmelo, restaurando o rigor da clausura, o silêncio, a pobreza autêntica e a oração contemplativa contínua. Descalça e enfrentando incompreensões, perseguições e a oposição de poderosos, fundou 17 conventos de carmelitas descalças por toda a Espanha.\n\nComo mística extraordinária, Teresa alcançou os mais elevados graus de união transformante com Deus, vivenciando o célebre fenômeno da Transverberação do Coração por um anjo com um dardo de ouro em brasa. Deixou escritas obras-primas incomparáveis da teologia e da literatura universal: 'Livro da Vida', 'Caminho de Perfeição' e 'Castelo Interior (ou Moradas)'.\n\nFaleceu em Alba de Tormes em 4 de outubro de 1582, pronunciando as célebres palavras de fidelidade e júbilo: \"Enfim, morro como filha da Igreja!\". Foi canonizada em 1622 por Gregório XV e proclamada, em 1970 pelo Papa São Paulo VI, a primeira mulher Doutora da Igreja da história cristã.",
+      "reflection": "Santa Teresa nos ensina a essência da oração cristã: \"A oração mental não é outra coisa senão um trato de amizade, estando muitas vezes a sós com Quem sabemos que nos ama\". Orar não é multiplicar palavras vazias, mas estar com o Amigo Jesus.",
+      "prayer": "Nada te turbe, nada te espante; tudo passa, Deus não muda. A paciência tudo alcança; a quem tem Deus, nada lhe falta: só Deus basta! Ó Santa Teresa de Ávila, ensinai-nos a cultivar uma amizade íntima com Jesus na oração diária e a viver inteiramente para a glória de Deus e a edificação da Santa Igreja. Amém!",
+      "patronage": "Pessoas em busca de vida de oração, Escritores católicos, Professores, Doentes de coração e Espanha",
+      "vocation": "Virgem carmelita, Fundadora do Carmelo Descalço e Primeira Doutora da Igreja"
     }
   ]
 }

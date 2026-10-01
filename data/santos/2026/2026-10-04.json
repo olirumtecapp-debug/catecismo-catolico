@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-04",
-      "name": "São Francisco de Assis, fundador da Ordem franciscana, Padroeiro da Itália",
+      "name": "São Francisco de Assis",
       "normalizedName": "sao francisco de assis, fundador",
       "imageUrl": "./assets/img/santos/10-04-sao-francisco-de-assis-fundador-da-ordem-franciscana-padroeiro-da-italia.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/04/s--francisco-de-assis--fundador-da-ordem-franciscana--padroeiro-.html",
@@ -23,8 +23,15 @@
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/04/s--francisco-de-assis--fundador-da-ordem-franciscana--padroeiro-.html",
       "sourceText": "É um dos santos mais amados. Recordado em 4 de outubro, há 800 anos São Francisco de Assis é um farol para a Igreja pela sua plena adesão ao Evangelho, que lhe conferiu o nome de “alter Christus”: a escolha da pobreza para encontrar o Senhor, o amor a Deus Pai e aos irmãos, o respeito pela criação.",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.303Z"
+      },
+      "biography": "Giovanni di Pietro di Bernardone, carinhosamente chamado de Francisco, nasceu em Assis, Itália, em 1182. Filho de um próspero comerciante de tecidos, viveu uma juventude mundana e sonhava com a glória da cavalaria militar. No entanto, após participar da guerra entre Assis e Perúgia e ser aprisionado, experimentou uma profunda crise existencial que preparou o solo para a graça de Deus.\n\nRezando diante do crucifixo bizantino na decadente igrejinha de São Damião, ouviu a voz viva de Cristo que lhe disse três vezes: \"Francisco, vai e reconstrói a minha Igreja, que como vês está em ruínas!\". Tomando a ordem a princípio ao pé da letra, reparou a ermida; logo em seguida, compreendeu que o Senhor o chamava para reconstruir a Igreja viva mediante a pobreza evangélica radical, o desapego total e a caridade sem limites.\n\nDesfez-se de todos os bens diante do bispo de Assis e de seu pai furioso, despindo-se das próprias roupas e proclamando: \"Doravante não direi mais 'meu pai Pedro Bernardone', mas sim 'Pai nosso que estais nos céus'!\". Atraiu inúmeros companheiros com os quais fundou a Ordem dos Frades Menores, e junto com Santa Clara deu início à Ordem das Clarissas. \n\nFrancisco via em toda a criação o reflexo luminoso da beleza divina, compondo o imortal \"Cântico das Criaturas\" (irmão Sol, irmã Lua, irmã Terra). Em 1224, em profunda oração no Monte Alverne, recebeu em seu próprio corpo os sagrados Estigmas da Paixão do Senhor — sendo o primeiro santo da história a ser marcado visivelmente com as chagas de Cristo nas mãos, pés e lado. Faleceu em 3 de outubro de 1226, deitado nu sobre a terra nua ao som do Salmo 141, acolhendo em paz a \"irmã Morte corporal\". Foi canonizado pelo Papa Gregório IX em 1228.",
+      "reflection": "São Francisco não foi um mero amante da natureza, mas um apaixonado absoluto por Jesus Cristo Crucificado. Ele nos convida à sobriedade evangélica, à fraternidade sincera com todos os homens e ao cuidado generoso com a criação que Deus nos confiou.",
+      "prayer": "Senhor, fazei-me instrumento de vossa paz. Onde houver ódio, que eu leve o amor; onde houver ofensa, que eu leve o perdão; onde houver discórdia, que eu leve a união; onde houver dúvida, que eu leve a fé; onde houver erro, que eu leve a verdade; onde houver desespero, que eu leve a esperança; onde houver tristeza, que eu leve a alegria; onde houver trevas, que eu leve a luz. Ó Mestre, fazei que eu procure mais consolar que ser consolado, compreender que ser compreendido, amar que ser amado. Pois é dando que se recebe, é perdoando que se é perdoado, e é morrendo que se vive para a vida eterna. Amém!",
+      "patronage": "Ecologia, Animais, Meio Ambiente, Paz Universal, Itália e Ação Franciscana",
+      "vocation": "Diácono, Fundador da Ordem dos Frades Menores (Franciscanos) e Padroeiro da Ecologia"
     }
   ]
 }

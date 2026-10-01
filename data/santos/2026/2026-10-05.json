@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-05",
-      "name": "SS. Plácido e Mauro, discípulos de S. Bento",
+      "name": "Santa Maria Faustina Kowalska e São Benedito o Mouro",
       "normalizedName": "ss. placido e mauro, discipulos de s. bento",
       "imageUrl": "./assets/img/santos/10-05-ss-placido-e-mauro-discipulos-de-s-bento.png",
       "profileUrl": null,
@@ -23,8 +23,15 @@
       "sourceUrl": null,
       "sourceText": "Confiados aos cuidados de São Bento, em Subiaco, Plácido e Mauro foram seus discípulos prediletos. Um episódio, sobre ambos, narra que, um dia, Plácido caiu em um lago e Bento, que soube através de uma revelação divina, enviou Mauro; para salvá-lo, o Santo caminhou, milagrosamente, sobre a água.",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.332Z"
+      },
+      "biography": "Neste dia 5 de outubro, a Santa Igreja celebra a memória de dois insignes luminares da santidade cristã:\n\nSanta Maria Faustina Kowalska (1905-1938), nascida Helena Kowalska na Polônia, ingressou na Congregação das Irmãs de Nossa Senhora da Misericórdia. Em Plock e Cracóvia, o próprio Jesus Cristo apareceu-lhe repetidas vezes com vestes brancas e dois raios luminosos (um vermelho simbolizando o Sangue que é a vida das almas e um pálido simbolizando a Água que justifica as almas) saindo do Seu Coração transpassado. Jesus encarregou-a de ser a \"Secretária e Apóstola da Minha Misericórdia\", transmitindo ao mundo a imagem milagrosa com a legenda \"Jesus, eu confio em Vós\", a Festa da Divina Misericórdia (no 2º Domingo da Páscoa), a Novena e o Terço da Divina Misericórdia e a comemoração da Hora da Misericórdia (às três horas da tarde). Seu 'Diário: A Misericórdia Divina na Minha Alma' tornou-se um dos maiores clássicos místicos do século XX. Foi canonizada no Grande Jubileu do ano 2000 por São João Paulo II.\n\nSão Benedito o Mouro (1526-1589), também comemorado no Brasil nesta data, nasceu na Sicília de pais escravizados procedentes da África. Liberto ao nascer, abraçou com ardor a vida eremítica franciscana. Embora analfabeto e exercendo humildemente a função de cozinheiro no convento de Santa Maria de Jesus em Palermo, sua sabedoria sobrenatural, sua santidade translúcida e seus milagres de multiplicação de alimentos eram tão insignes que teólogos, prelados e o povo acorriam a ele em busca de conselho e oração. Tornou-se um dos santos mais populares e amados das comunidades brasileiras e padroeiro dos afrodescendentes e cozinheiros.",
+      "reflection": "A mensagem de Santa Faustina e de São Benedito convergem para uma verdade central do Evangelho: diante de Deus, não contam os títulos humanos ou a condição social, mas a pureza de um coração humilde que confia cegamente na misericórdia e se faz servo de todos.",
+      "prayer": "Ó Deus de misericórdia infinita, que Vos dignastes manifestar à Santa Faustina os tesouros inesgotáveis do Vosso amor e cumulastes São Benedito com a sabedoria dos humildes: concedei-nos a graça de nunca desconfiar do Vosso perdão e de servir aos nossos irmãos com caridade paciente e despretensiosa. Jesus, eu confio em Vós! São Benedito, rogai por nós!",
+      "patronage": "Apóstolos da Misericórdia, Cozinheiros, Pobres, Afrodescendentes e Famílias Humildes",
+      "vocation": "Apóstola e Secretária da Divina Misericórdia / Religioso Franciscano e Modelo de Humildade"
     },
     {
       "date": "2026-10-05",

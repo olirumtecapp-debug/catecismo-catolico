@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-12",
-      "name": "São Hedisto, mártir, na via Ardeatina",
+      "name": "Nossa Senhora da Conceição Aparecida",
       "normalizedName": "sao hedisto, martir, na via ardeatina",
       "imageUrl": "./assets/img/santos/10-12-sao-hedisto-martir-na-via-ardeatina.png",
       "profileUrl": null,
@@ -23,8 +23,15 @@
       "sourceUrl": null,
       "sourceText": "Edisto, também conhecido como Orestes ou Aristo, mártir do século I, era é um escudeiro de Nero. Enquanto acompanhava o imperador, em Laurento, conheceu um presbítero local, que o converteu, e foi batizado por São Pedro. Segundo uma \"passio\" lendária, foi sepultado na Via Laurentina, em Roma.",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.367Z"
+      },
+      "biography": "A história de Nossa Senhora Aparecida teve início em outubro de 1717, quando o governador das capitanias de São Paulo e Minas de Ouro, Dom Pedro de Almeida (o Conde de Assumar), passava pela vila de Santo Antônio de Guaratinguetá a caminho de Vila Rica. A câmara local incumbiu três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — de conseguirem peixes no Rio Paraíba do Sul para o banquete oficial.\n\nApós horas de tentativas frustradas e com as redes vazias, os pescadores chegaram ao Porto de Itaguaçu. Ao lançar novamente a rede, João Alves recolheu o corpo de uma imagem de terracota da Imaculada Conceição, sem a cabeça. Lançando a rede mais adiante, apanhou a cabeça da mesma imagem, que se encaixou com perfeita exatidão. A partir daquele instante solene, as redes dos humildes pescadores se encheram de uma quantidade tão portentosa de peixes que os barcos quase afundaram.\n\nGuardada inicialmente na casa de Filipe Pedroso, a humilde imagem escura atraía diariamente os vizinhos para rezar o terço. Ali multiplicaram-se prodígios: as velas apagadas acenderam-se espontaneamente, as correntes do escravizado Zacarias quebraram-se diante do altar, e o cavaleiro orgulhoso viu as patas de seu cavalo grudarem na pedra da igreja.\n\nEm 1904 a imagem foi solenemente coroada, e em 1930 o Papa Pio XI proclamou Nossa Senhora Aparecida como Padroeira Principal do Brasil. Seu Santuário Nacional em Aparecida do Norte acolhe anualmente mais de 12 milhões de peregrinos, consolidando-se como o maior templo mariano do mundo católico e o coração espiritual da nação brasileira.",
+      "reflection": "A Virgem Aparecida manifestou o amor de Deus pelos humildes ao escolher as águas lamacentas de um rio e as mãos calejadas de três pobres pescadores. Na sua pele morena de terracota, Maria abraça todas as dores, esperanças e lutas do povo brasileiro, convocando-nos à unidade, à paz e à justiça social.",
+      "prayer": "Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, Rainha e Padroeira do Brasil: prostrados diante de vossa imagem milagrosa, nós vos consagramos as nossas famílias, as nossas crianças e a nossa Pátria. Protegei o nosso país contra todos os males, curai os enfermos, consolai os aflitos e conduzi todos os brasileiros ao caminho da concórdia e do Evangelho de Vosso Filho Jesus. Nossa Senhora Aparecida, rogai por nós!",
+      "patronage": "Padroeira Principal do Brasil, Pescadores, Famílias Brasileiras e Proteção da Nação",
+      "vocation": "Rainha e Padroeira Principal do Brasil"
     },
     {
       "date": "2026-10-12",

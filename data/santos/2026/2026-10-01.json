@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-01",
-      "name": "Santa Teresa do Menino Jesus, virgem carmelita, doutora da Igreja, padroeira das Missões",
+      "name": "Santa Teresa do Menino Jesus e da Sagrada Face (Santa Terezinha)",
       "normalizedName": "santa teresa do menino jesus, carmelita, doutora da igreja, padroeira das missoes",
       "imageUrl": "./assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/01/s--teresa-do-menino-jesus--virgem-carmelita--doutora-da-igreja--.html",
@@ -23,8 +23,15 @@
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/01/s--teresa-do-menino-jesus--virgem-carmelita--doutora-da-igreja--.html",
       "sourceText": "Santa Teresa de Lisieux ou Santa Terezinha do Menino Jesus, que a Igreja celebra dia 01 de outubro, é Padroeira dos missionários e da França. A cem anos da sua morte (1897-1997), foi proclamada, por João Paulo II, Doutora da Igreja: a terceira mulher depois de Catarina de Sena e Teresa de Ávila.",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.295Z"
+      },
+      "biography": "Maria Francisca Teresa Martin nasceu em Alençon, França, em 2 de janeiro de 1873, no seio de uma família profundamente cristã — filha dos santos Luís e Zélia Martin. Desde a mais tenra infância sentiu o chamado irresistível para consagrar-se inteiramente a Deus no Carmelo de Lisieux, onde já se encontravam duas de suas irmãs mais velhas.\n\nCom apenas 15 anos de idade, demonstrando uma audácia e maturidade espiritual extraordinárias, viajou a Roma e, em audiência com o Papa Leão XIII, ajoelhou-se aos seus pés pedindo autorização especial para ingressar no claustro antes da idade canônica. Autorizada por seu bispo, entrou no Carmelo em abril de 1888, adotando o nome de Irmã Teresa do Menino Jesus e da Sagrada Face.\n\nNo recolhimento do mosteiro, sem jamais cruzar suas portas ou realizar grandes viagens, Teresinha descobriu a sua genial \"Pequena Via\" (a infância espiritual): o caminho da santidade ao alcance de todas as almas, baseado na humildade, no abandono filial nos braços de Deus Pai e na realização com amor divino das mais ínfimas tarefas cotidianas. Ao meditar o capítulo 13 da Primeira Carta aos Coríntios, exclamou em êxtase: \"No coração da Igreja, minha Mãe, eu serei o amor!\".\n\nAcometida pela tuberculose aos 23 anos, suportou com serenidade e fé heroica o sofrimento atroz da doença e uma profunda \"noite escura da fé\", na qual se assentou à mesa dos pecadores e dos sem-fé para oferecer seu sofrimento por eles. Expirou santamente em 30 de setembro de 1897, aos 24 anos de idade, sussurrando suas últimas palavras: \"Meu Deus, eu Vos amo!\". Antes de partir, fez a celestial promessa: \"Passarei o meu Céu fazendo o bem na terra. Do Céu, farei cair uma chuva de rosas!\". Proclamada Doutora da Igreja pelo Papa São João Paulo II em 1997, seus manuscritos autobiográficos reunidos em \"História de uma Alma\" iluminam e convertem corações em todo o planeta.",
+      "reflection": "Santa Terezinha nos ensina que a perfeição evangélica não consiste em realizar obras extraordinárias aos olhos humanos, mas em colocar um amor infinito em cada pequeno ato do dia a dia: sorrir perante uma contrariedade, aceitar o silêncio nos momentos de provação e confiar cegamente que Deus é um Pai de ternura infinita.",
+      "prayer": "Santíssima Trindade: Pai, Filho e Espírito Santo, nós Vos agradecemos por todos os dons e graças com que cumulastes a vida terrena de Santa Terezinha do Menino Jesus. Pelos méritos de seu abandono amoroso e de sua Pequena Via, concedei-nos a graça de amar a Jesus com a pureza e a fidelidade de uma criança nos braços do Pai. Fazei cair sobre a nossa vida, sobre as nossas famílias e sobre as missões da Igreja a vossa chuva de rosas espirituais e temporais. Santa Terezinha do Menino Jesus, rogai por nós!",
+      "patronage": "Missões Universais, Missionários, Vocações Sacerdotais, Floristas, Doentes de Tuberculose e França",
+      "vocation": "Virgem carmelita descalça, Doutora da Igreja e Padroeira Universal das Missões"
     }
   ]
 }

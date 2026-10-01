@@ -266,7 +266,7 @@
             background: rgba(10, 16, 30, 0.8) !important;
         }
 
-        /* Estilos Litúrgicos Nobres (Lecionário / Canção Nova Standard) */
+        /* Estilos Litúrgicos Nobres (Lecionário Canônico da Igreja) */
         .liturgical-verse-num {
             display: inline-block;
             font-weight: 700;
@@ -1490,7 +1490,7 @@
                     biography:fullText,
                     prayer:this.extractSectionText(sections,/^Minha oração$/i),
                     patronage:this.extractSectionText(sections,/^Protetora e Padroeira$|^Protetor e Padroeiro$/i),
-                    source:url,sourceName:String(payload?.source || 'Canção Nova'),
+                    source:url,sourceName:String(payload?.source || 'Lecionário Canônico Oficial'),
                     otherSaints:Array.isArray(item.outros_santos) ? item.outros_santos.filter(Boolean) : [],
                     dateValidated:true, returnedDate:requested, api:true
                 };
@@ -1564,22 +1564,22 @@
                     id: 'local_' + String(raw.normalizedName || raw.name || '').replace(/[^a-z0-9]+/gi,'_'),
                     name: raw.name || 'Santo do dia',
                     memoryDate: raw.date || '',
-                    vocation: '',
-                    biography: a12.biography || paragraphs.join('\n\n') || raw.sourceText || '',
-                    reflection: a12.reflection || '',
-                    prayer: a12.prayer || '',
-                    mainTeaching: '',
-                    virtues: [],
-                    patronage: '',
+                    vocation: raw.vocation || '',
+                    biography: raw.biography || a12.biography || paragraphs.join('\n\n') || raw.sourceText || '',
+                    reflection: raw.reflection || a12.reflection || '',
+                    prayer: raw.prayer || raw.oracao || a12.prayer || '',
+                    mainTeaching: raw.mainTeaching || '',
+                    virtues: raw.virtues || [],
+                    patronage: raw.patronage || '',
                     feast: raw.date || '',
-                    birth: '',
-                    death: '',
-                    country: '',
+                    birth: raw.birth || '',
+                    death: raw.death || '',
+                    country: raw.country || '',
                     imageUrl: raw.imageUrl || null,
                     profileUrl: raw.profileUrl || a12.profileUrl || null,
-                    source: raw.source || 'Vatican News',
+                    source: raw.source || 'Tradição e Magistério da Igreja',
                     sourceUrl: raw.sourceUrl || null,
-                    sources: [raw.source, raw.a12?.source].filter(Boolean).join(' + '),
+                    sources: [raw.source, raw.a12?.source, raw.enrichment?.canonicalEnriched ? 'Tradição Canônica da Igreja' : null].filter(Boolean).join(' + '),
                     localSaintRecord: raw
                 };
             }
@@ -1665,9 +1665,87 @@
                 { id: "p_12", title: "Coroinha da Divina Misericórdia", category: "Misericórdia", text: "(No início) Eterno Pai, eu vos ofereço o Corpo e o Sangue, a Alma e a Divindade de vosso diletíssimo Filho, nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.\n\n(Nas contas menores) Pela sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.\n\n(Ao final, 3 vezes) Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.\n\nJesus, eu confio em Vós!" },
                 { id: "p_13", title: "Memorare (Lembrai-vos)", category: "Maria", text: "Lembrai-vos, ó piedosíssima Virgem Maria,\nque jamais se ouviu dizer\nque algum daqueles que têm recorrido\nà vossa proteção,\nimplorado a vossa assistência\ne reclamado o vosso socorro,\nfosse por vós desamparado.\nAnimado, pois, com igual confiança,\na vós, ó Virgem entre todas singular,\ncomo a Mãe recorro, de vós me valho\ne, gemendo sob o peso dos meus pecados,\nme prostro a vossos pés.\nNão desprezeis as minhas súplicas,\nó Mãe do Verbo de Deus humanado,\nmas dignai-vos de as ouvir propícia\ne de me alcançar o que vos rogo.\nAmém." },
                 { id: "p_14", title: "Oração da Manhã", category: "Dia a dia", text: "Senhor, no silêncio deste dia que amanhece,\nvenho pedir-vos a paz, a sabedoria e a força.\nQuero olhar hoje o mundo com olhos cheios de amor;\nser paciente, compreensivo, manso e prudente;\nver os vossos filhos além das aparências,\ncomo vós mesmos os vedes,\ne assim não ver senão o bem em cada um.\nCerrai meus ouvidos a toda calúnia;\nguardai minha língua de toda maldade;\nque só de bênçãos se encha o meu espírito.\nQue eu seja tão bondoso e alegre\nque todos quantos se achegarem a mim\nsintam a vossa presença.\nRevesti-me da vossa beleza, Senhor,\ne que, no decurso deste dia, eu vos revele a todos.\nAmém." },
-                { id: "p_15", title: "Oração da Noite (Exame de Consciência)", category: "Dia a dia", text: "Senhor, ao terminar este dia, venho à vossa presença.\n\n1. Ação de graças: Revejo o dia e agradeço pelos dons recebidos — a vida, os encontros, o pão, o trabalho.\n\n2. Luz do Espírito: Peço ao Espírito Santo que ilumine minha memória e meu coração.\n\n3. Revisão do dia: Onde estive hoje? O que fiz? Como amei? Onde faltei com o amor a Deus e ao próximo?\n\n4. Arrependimento: Peço perdão pelas faltas cometidas, pelas omissões do bem e pelas palavras que feriram.\n\n5. Propósito: Confio o amanhã à vossa providência e proponho amar melhor.\n\nGuardai-me nesta noite, Senhor, sob as vossas asas.\nAmém." }
+                { id: "p_15", title: "Oração da Noite (Exame de Consciência)", category: "Dia a dia", text: "Senhor, ao terminar este dia, venho à vossa presença.\n\n1. Ação de graças: Revejo o dia e agradeço pelos dons recebidos — a vida, os encontros, o pão, o trabalho.\n\n2. Luz do Espírito: Peço ao Espírito Santo que ilumine minha memória e meu coração.\n\n3. Revisão do dia: Onde estive hoje? O que fiz? Como amei? Onde faltei com o amor a Deus e ao próximo?\n\n4. Arrependimento: Peço perdão pelas faltas cometidas, pelas omissões do bem e pelas palavras que feriram.\n\n5. Propósito: Confio o amanhã à vossa providência e proponho amar melhor.\n\nGuardai-me nesta noite, Senhor, sob as vossas asas.\nAmém." },
+                {
+                    id: "p_16",
+                    title: "Via-Sacra (As 14 Estações da Paixão do Senhor)",
+                    category: "Grandes Devoções",
+                    text: "ORAÇÃO INICIAL:\nSenhor Jesus, nós nos unimos à Vossa dolorosa Paixão e Morte de Cruz, pela redenção da humanidade.\n\n(Em cada estação reza-se: 'Nós Vos adoramos, ó Cristo, e Vos bendizemos, porque pela Vossa Santa Cruz remistes o mundo.')\n\n1ª Estação: Jesus é condenado à morte.\nPilatos lava as mãos; o Inocente abraça a sentença para nos livrar da morte eterna.\n\n2ª Estação: Jesus carrega a Cruz aos ombros.\nO Salvador recebe sobre os ombros feridos o peso de todas as nossas culpas.\n\n3ª Estação: Jesus cai pela primeira vez.\nSob o peso do madeiro, o Filho de Deus beija a terra para reerguer os pecadores.\n\n4ª Estação: Jesus encontra sua Mãe Santíssima.\nO olhar doloroso de Maria e de Jesus une dois corações no mesmo sacrifício redentor.\n\n5ª Estação: Simão Cirineu ajuda Jesus a levar a Cruz.\nSomos chamados a carregar a cruz uns dos outros na caridade fraterna.\n\n6ª Estação: Verônica enxuga o rosto de Jesus.\nUm gesto de compaixão grava para sempre a Sagrada Face no linho da caridade.\n\n7ª Estação: Jesus cai pela segunda vez.\nAumentam as dores físicas; cresce o amor infinito do Redentor pelos homens.\n\n8ª Estação: Jesus consola as mulheres de Jerusalém.\n'Não choreis por Mim, mas por vós mesmas e por vossos filhos'.\n\n9ª Estação: Jesus cai pela terceira vez.\nQuase sem forças, o Senhor atinge o cume do Calvário para nossa justificação.\n\n10ª Estação: Jesus é despojado de suas vestes.\nPartilham Suas túnicas; Jesus ensina o desapego e a pureza de coração.\n\n11ª Estação: Jesus é pregado na Cruz.\nCravos transpassam as mãos e os pés do Autor da Vida: 'Pai, perdoa-lhes, não sabem o que fazem'.\n\n12ª Estação: Jesus morre na Cruz.\n'Tudo está consumado'. O véu do templo se rasga; Jesus entrega o Seu Espírito.\n\n13ª Estação: Jesus é descido da Cruz e entregue a Sua Mãe.\nNos braços da Piedade repousa o Cordeiro imolado por nosso amor.\n\n14ª Estação: Jesus é sepultado.\nNa esperança certa da Ressurreição pascal, a morte é vencida para sempre.\n\nORAÇÃO FINAL:\nSenhor Jesus Cristo, que pela Vossa Santa Cruz nos alcançastes a salvação eterna, concedei-nos a graça de Vos seguir com amor até a glória da Ressurreição. Amém."
+                },
+                {
+                    id: "p_17",
+                    title: "Ofício da Imaculada Conceição",
+                    category: "Maria",
+                    text: "MATINAS:\nAbri, lábios meus, para bendizer a Virgem Maria.\nDeus vos salve, Maria, Senhora do mundo, Rainha dos céus e das virgens.\nEstrela da manhã, cheia de graça divina, socorrei a nós e ao mundo.\n\nPRIMA:\nDeus vos salve, templo consagrado à Trindade Santa.\nTu fostes preservada da culpa original desde o primeiro instante de tua conceição pura.\nRogai por nós, Mãe de misericórdia.\n\nTERÇA:\nDeus vos salve, Arca da Aliança e trono do verdadeiro Salomão.\nO Altíssimo vos adornou com todas as virtudes para serdes Mãe digna do Salvador.\n\nSEXTA:\nDeus vos salve, Virgem Mãe, Cidade de refúgio e porta do Céu.\nEm vós resplandece a beleza do Criador que esmagou a cabeça da serpente antiga.\n\nNOA:\nDeus vos salve, Cidade de Deus e monte sagrado.\nSocorrei os pecadores, curai os enfermos e guiai os navegantes neste mar revolto.\n\nVÉSPERAS:\nDeus vos salve, Luz que não conhece ocaso, Mãe do Sol de Justiça.\nA vós recorremos nas horas de tentação e tribulação terrena.\n\nCOMPLETAS:\nRogai por nós, Virgem Imaculada, para que sejamos dignos das promessas de Cristo.\nGuardai o nosso sono, purificai a nossa alma e conduzi-nos à eterna bem-aventurança.\n\nORAÇÃO:\nSanta Maria, Rainha dos céus, Mãe de Nosso Senhor Jesus Cristo e Senhora do mundo, que a nenhum pecador desamparais nem desprezais: ponde em nós os olhos de vossa piedade e alcançai-nos o perdão de todos os nossos pecados. Por Cristo, Nosso Senhor. Amém."
+                },
+                {
+                    id: "p_18",
+                    title: "Angelus Domini (O Anjo do Senhor)",
+                    category: "Maria",
+                    text: "V. O Anjo do Senhor anunciou a Maria.\nR. E Ela concebeu do Espírito Santo.\nAve-Maria...\n\nV. Eis aqui a serva do Senhor.\nR. Faça-se em mim segundo a Vossa palavra.\nAve-Maria...\n\nV. E o Verbo se fez carne (inclina-se a cabeça).\nR. E habitou entre nós.\nAve-Maria...\n\nV. Rogai por nós, Santa Mãe de Deus.\nR. Para que sejamos dignos das promessas de Cristo.\n\nOREMOS:\nInfundi, Senhor, a Vossa graça em nossas almas, para que nós, que pela anunciação do Anjo conhecemos a encarnação de Jesus Cristo, Vosso Filho, cheguemos, por Sua Paixão e Morte na Cruz, à glória da Ressurreição. Por Cristo, Nosso Senhor. Amém.\n\nGlória ao Pai... (3 vezes)"
+                },
+                {
+                    id: "p_19",
+                    title: "Regina Caeli (Rainha do Céu — Tempo Pascal)",
+                    category: "Maria",
+                    text: "(Reza-se no lugar do Angelus durante o Tempo Pascal, da Páscoa ao Domingo de Pentecostes)\n\nV. Rainha do Céu, alegrai-vos, aleluia!\nR. Porque Aquele que merecestes trazer em vosso seio, aleluia!\n\nV. Ressuscitou como havia dito, aleluia!\nR. Rogai por nós a Deus, aleluia!\n\nV. Alegrai-vos e exultai, ó Virgem Maria, aleluia!\nR. Porque o Senhor ressuscitou verdadeiramente, aleluia!\n\nOREMOS:\nÓ Deus, que Vos dignastes alegrar o mundo com a Ressurreição do Vosso Filho, Nosso Senhor Jesus Cristo, concedei-nos, nós Vos suplicamos, que por Sua Mãe, a Virgem Maria, alcancemos as alegrias da vida eterna. Por Cristo, Nosso Senhor. Amém."
+                },
+                {
+                    id: "p_20",
+                    title: "Ladainha Lauretana (Ladainha de Nossa Senhora)",
+                    category: "Ladainhas",
+                    text: "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nCristo, ouvi-nos.\nCristo, atendei-nos.\n\nDeus Pai dos céus, tende piedade de nós.\nDeus Filho, Redentor do mundo, tende piedade de nós.\nDeus Espírito Santo, tende piedade de nós.\nSantíssima Trindade, que sois um só Deus, tende piedade de nós.\n\nSanta Maria, rogai por nós.\nSanta Mãe de Deus, rogai por nós.\nSanta Virgem das virgens, rogai por nós.\nMãe de Cristo, rogai por nós.\nMãe da Igreja, rogai por nós.\nMãe de misericórdia, rogai por nós.\nMãe da divina graça, rogai por nós.\nMãe da esperança, rogai por nós.\nMãe puríssima, rogai por nós.\nMãe castíssima, rogai por nós.\nMãe sempre virgem, rogai por nós.\nMãe imaculada, rogai por nós.\nMãe amável, rogai por nós.\nMãe admirável, rogai por nós.\nMãe do bom conselho, rogai por nós.\nMãe do Criador, rogai por nós.\nMãe do Salvador, rogai por nós.\nVirgem prudentíssima, rogai por nós.\nVirgem venerável, rogai por nós.\nVirgem louvável, rogai por nós.\nVirgem poderosa, rogai por nós.\nVirgem clemente, rogai por nós.\nVirgem fiel, rogai por nós.\nEspelho de justiça, rogai por nós.\nSede da sabedoria, rogai por nós.\nCausa de nossa alegria, rogai por nós.\nVaso espiritual, rogai por nós.\nVaso honorífico, rogai por nós.\nVaso insigne de devoção, rogai por nós.\nRosa mística, rogai por nós.\nTorre de Davi, rogai por nós.\nTorre de marfim, rogai por nós.\nCasa de ouro, rogai por nós.\nArca da aliança, rogai por nós.\nPorta do céu, rogai por nós.\nEstrela da manhã, rogai por nós.\nSaúde dos enfermos, rogai por nós.\nRefúgio dos pecadores, rogai por nós.\nSocorro dos migrantes, rogai por nós.\nConsoladora dos aflitos, rogai por nós.\nAuxílio dos cristãos, rogai por nós.\nRainha dos Anjos, rogai por nós.\nRainha dos Patriarcas, rogai por nós.\nRainha dos Profetas, rogai por nós.\nRainha dos Apóstolos, rogai por nós.\nRainha dos Mártires, rogai por nós.\nRainha dos Confessores, rogai por nós.\nRainha das Virgens, rogai por nós.\nRainha de todos os Santos, rogai por nós.\nRainha concebida sem pecado original, rogai por nós.\nRainha assunta aos céus, rogai por nós.\nRainha do Santo Rosário, rogai por nós.\nRainha da família, rogai por nós.\nRainha da paz, rogai por nós.\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\n\nV. Rogai por nós, Santa Mãe de Deus.\nR. Para que sejamos dignos das promessas de Cristo. Amém."
+                },
+                {
+                    id: "p_21",
+                    title: "Ladainha do Sagrado Coração de Jesus",
+                    category: "Ladainhas",
+                    text: "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nJesus Cristo, ouvi-nos.\nJesus Cristo, atendei-nos.\n\nDeus Pai dos céus, tende piedade de nós.\nDeus Filho, Redentor do mundo, tende piedade de nós.\nDeus Espírito Santo, tende piedade de nós.\nSantíssima Trindade, que sois um só Deus, tende piedade de nós.\n\nCoração de Jesus, Filho do Pai Eterno, tende piedade de nós.\nCoração de Jesus, formado pelo Espírito Santo no seio da Virgem Mãe,\nCoração de Jesus, unido substancialmente ao Verbo de Deus,\nCoração de Jesus, de majestade infinita,\nCoração de Jesus, templo santo de Deus,\nCoração de Jesus, tabernáculo do Altíssimo,\nCoração de Jesus, casa de Deus e porta do céu,\nCoração de Jesus, fornalha ardente de caridade,\nCoração de Jesus, santuário de justiça e de amor,\nCoração de Jesus, cheio de bondade e de amor,\nCoração de Jesus, abismo de todas as virtudes,\nCoração de Jesus, digníssimo de todo o louvor,\nCoração de Jesus, Rei e centro de todos os corações,\nCoração de Jesus, no qual estão todos os tesouros da sabedoria e ciência,\nCoração de Jesus, no qual habita toda a plenitude da divindade,\nCoração de Jesus, no qual o Pai pôs as suas complacências,\nCoração de Jesus, de cuja plenitude todos nós recebemos,\nCoração de Jesus, desejado das colinas eternas,\nCoração de Jesus, paciente e de muita misericórdia,\nCoração de Jesus, rico para todos os que vos invocam,\nCoração de Jesus, fonte de vida e de santidade,\nCoração de Jesus, propiciação pelos nossos pecados,\nCoração de Jesus, saciado de opróbrios,\nCoração de Jesus, esmagado de dor por causa dos nossos crimes,\nCoração de Jesus, obediente até à morte,\nCoração de Jesus, transpassado pela lança,\nCoração de Jesus, fonte de toda a consolação,\nCoração de Jesus, nossa vida e ressurreição,\nCoração de Jesus, nossa paz e reconciliação,\nCoração de Jesus, vítima dos pecadores,\nCoração de Jesus, salvação dos que em vós esperam,\nCoração de Jesus, esperança dos que morrem em vós,\nCoração de Jesus, delícia de todos os santos,\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\n\nV. Jesus, manso e humilde de coração.\nR. Fazei o nosso coração semelhante ao vosso. Amém."
+                },
+                {
+                    id: "p_22",
+                    title: "Ladainha de São José",
+                    category: "Ladainhas",
+                    text: "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nCristo, ouvi-nos.\nCristo, atendei-nos.\n\nDeus Pai dos céus, tende piedade de nós.\nDeus Filho, Redentor do mundo, tende piedade de nós.\nDeus Espírito Santo, tende piedade de nós.\nSantíssima Trindade, que sois um só Deus, tende piedade de nós.\n\nSanta Maria, rogai por nós.\nSão José, rogai por nós.\nIlustre filho de Davi, rogai por nós.\nLuz dos Patriarcas, rogai por nós.\nEsposo da Mãe de Deus, rogai por nós.\nCasto guarda da Virgem, rogai por nós.\nSustentador do Filho de Deus, rogai por nós.\nZeloso defensor de Cristo, rogai por nós.\nChefe da Sagrada Família, rogai por nós.\nJosé justíssimo, rogai por nós.\nJosé castíssimo, rogai por nós.\nJosé prudentíssimo, rogai por nós.\nJosé fortíssimo, rogai por nós.\nJosé obedientíssimo, rogai por nós.\nJosé fidelíssimo, rogai por nós.\nEspelho de paciência, rogai por nós.\nAmante da pobreza, rogai por nós.\nModelo dos operários, rogai por nós.\nGlória da vida doméstica, rogai por nós.\nGuarda das virgens, rogai por nós.\nSustentáculo das famílias, rogai por nós.\nConsolo dos desgraçados, rogai por nós.\nEsperança dos doentes, rogai por nós.\nPadroeiro dos moribundos, rogai por nós.\nTerror dos demônios, rogai por nós.\nProtetor da Santa Igreja, rogai por nós.\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\n\nV. Ele o constituiu senhor de sua casa.\nR. E príncipe de todos os seus bens. Amém."
+                },
+                {
+                    id: "p_23",
+                    title: "Oração a São Miguel Arcanjo (Papa Leão XIII)",
+                    category: "Santos",
+                    text: "São Miguel Arcanjo, defendei-nos no combate;\nsede o nosso refúgio contra as maldades e ciladas do demônio.\n\nOrdene-lhe Deus, instantemente o pedimos;\ne vós, príncipe da milícia celeste,\npelo poder divino, precipitai no inferno a Satanás\ne a todos os espíritos malignos\nque andam pelo mundo para perder as almas.\n\nAmém."
+                },
+                {
+                    id: "p_24",
+                    title: "Oração da Medalha de São Bento",
+                    category: "Santos",
+                    text: "A Cruz Sagrada seja a minha luz,\nnão seja o dragão o meu guia.\n\nRetira-te, satanás!\nNunca me aconselhes coisas vãs.\nÉ mau o que tu me ofereces,\nbebe tu mesmo o teu veneno!\n\n(Em latim)\nCrux Sacra Sit Mihi Lux,\nNon Draco Sit Mihi Dux.\nVade Retro Satana!\nNunquam Suade Mihi Vana.\nSunt Mala Quae Libas,\nIpse Venena Bibas.\n\nEm nome do Pai, do Filho e do Espírito Santo. Amém."
+                },
+                {
+                    id: "p_25",
+                    title: "Consagração a Nossa Senhora",
+                    category: "Maria",
+                    text: "Ó minha Senhora, ó minha Mãe,\neu me ofereço todo a vós,\ne em prova da minha devoção para convosco,\nvos consagro neste dia\nos meus olhos, os meus ouvidos,\na minha boca, o meu coração\ne inteiramente todo o meu ser.\n\nE porque assim sou vosso, ó incomparável Mãe,\nguardai-me e defendei-me\ncomo coisa e propriedade vossa.\n\nAmém."
+                },
+                {
+                    id: "p_26",
+                    title: "Atos das Virtudes Teologais (Fé, Esperança e Caridade)",
+                    category: "Fundamentais",
+                    text: "ATO DE FÉ:\nMeu Deus, eu creio firmemente em tudo o que revelastes e que a Santa Igreja Católica nos ensina para crer, porque Vós sois a suma Verdade, que não podeis enganar-Vos nem enganar-nos. Neste sentimento quero viver e morrer.\n\nATO DE ESPERANÇA:\nMeu Deus, eu espero com firme confiança que, pelos merecimentos de Nosso Senhor Jesus Cristo, me dareis a salvação eterna e as graças necessárias para alcançá-la, porque Vós, sumamente bom e fiel, o prometestes.\n\nATO DE CARIDADE:\nMeu Deus, eu Vos amo de todo o meu coração e sobre todas as coisas, porque sois infinitamente bom e amável; e por amor de Vós amo ao meu próximo como a mim mesmo, perdoando de coração todas as injúrias recebidas. Senhor, aumentai a minha caridade! Amém."
+                },
+                {
+                    id: "p_27",
+                    title: "Te Deum (Hino Litúrgico de Ação de Graças)",
+                    category: "Grandes Devoções",
+                    text: "A Vós, ó Deus, louvamos; a Vós, Senhor, cantamos.\nA Vós, Eterno Pai, adora toda a terra.\nA Vós os Anjos, os Céus e todas as Potestades;\na Vós os Querubins e Serafins proclamam sem cessar:\n\nSanto, Santo, Santo, Senhor Deus dos Exércitos!\nCheios estão os céus e a terra da majestade da Vossa glória!\n\nA Vós o glorioso coro dos Apóstolos,\na Vós a falange venerável dos Profetas,\na Vós o exército brilhante dos Mártires louvam.\n\nPor toda a terra a Santa Igreja proclama o Vosso Nome:\nPai de imensa majestade;\nadorável, verdadeiro e único Filho;\ne o Espírito Santo Paráclito.\n\nVós sois o Rei da Glória, ó Cristo!\nVós sois o Filho eterno do Pai!\nVós, para salvar o homem, não recusastes o seio da Virgem.\nVós, vencendo o aguilhão da morte, abristes aos fiéis o Reino dos Céus.\n\nSalvai, Senhor, o Vosso povo e abençoai a Vossa herança!\nGovernai-nos e exaltai-nos pela eternidade.\nDia a dia Vos bendizemos e louvamos o Vosso Nome para sempre.\nDignai-Vos, Senhor, neste dia, guardar-nos do pecado.\nTende piedade de nós, Senhor, tende piedade de nós.\nDesça sobre nós a Vossa misericórdia, como em Vós esperamos.\nEm Vós, Senhor, esperei: não serei confundido eternamente. Amém."
+                },
+                {
+                    id: "p_28",
+                    title: "Tantum Ergo (Tão Sublime Sacramento / Bênção Eucarística)",
+                    category: "Eucaristia",
+                    text: "Tão sublime Sacramento\nadoremos neste altar,\npois o Antigo Testamento\ndeu ao Novo seu lugar.\nVenha a fé por suplemento\nos sentidos completar.\n\nAo Eterno Pai cantemos\ne a Jesus, o Salvador,\nao Espírito exaltemos,\nna Trindade eterno amor.\nAo Deus Uno e Trino demos\na glória, o louvor e o poder.\nAmém.\n\nV. Do Céu lhes destes o pão.\nR. Que contém em si todo o sabor.\n\nOREMOS:\nSenhor Jesus Cristo, que neste admirável Sacramento nos deixastes o memorial da Vossa Paixão, dai-nos venerar de tal modo os sagrados mistérios do Vosso Corpo e Sangue, que sintamos continuamente em nós o fruto da Vossa Redenção. Vós que sois Deus com o Pai, na unidade do Espírito Santo. Amém."
+                }
             ],
-            categories: ["Fundamentais", "Maria", "Espírito Santo", "Eucaristia", "Confissão", "Misericórdia", "Santos", "Dia a dia"],
+            categories: ["Fundamentais", "Maria", "Grandes Devoções", "Espírito Santo", "Eucaristia", "Confissão", "Misericórdia", "Santos", "Ladainhas", "Dia a dia"],
 
             rosary: {
                 mysteries: {
@@ -4799,6 +4877,7 @@
                 if (!drawer.classList.contains('hidden')) {
                     if (window.ReflectionsManager) ReflectionsManager.updateBadges();
                     if (window.NovenasManager) NovenasManager.updateHomeCard();
+                    AdventManager.updateHomeCard();
                 }
             }
         }
@@ -5142,6 +5221,332 @@
                 document.getElementById('liturgical-tabs-nav')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         };
+
+        window.currentLectioStep = 1;
+        window.switchLectioStep = function(stepNum) {
+            window.currentLectioStep = Number(stepNum) || 1;
+            const buttons = document.querySelectorAll('.lectio-step-btn');
+            buttons.forEach(btn => {
+                const s = Number(btn.getAttribute('data-step') || 1);
+                if (s === window.currentLectioStep) {
+                    btn.className = 'lectio-step-btn flex-1 min-w-0 text-center px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer';
+                } else {
+                    btn.className = 'lectio-step-btn flex-1 min-w-0 text-center px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer';
+                }
+            });
+
+            const panels = document.querySelectorAll('.lectio-step-panel');
+            panels.forEach(p => {
+                const s = Number(p.getAttribute('data-step') || 1);
+                p.style.display = (s === window.currentLectioStep) ? 'block' : 'none';
+            });
+
+            document.getElementById('lectio-gospel-of-day')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        };
+
+        
+        /* ========================================================
+           GESTOR DO CALENDÁRIO DO ADVENTO (MOTOR LITÚRGICO PERPÉTUO)
+           ======================================================== */
+        const AdventManager = {
+            data: null,
+            simulatedDate: null,
+
+            async loadData() {
+                if (this.data && this.data.length) return this.data;
+                try {
+                    const res = await fetch('/data/advento.json');
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    this.data = await res.json();
+                    return this.data;
+                } catch (e) {
+                    console.warn('[AdventManager] Erro ao carregar /data/advento.json:', e);
+                    return [];
+                }
+            },
+
+            getEffectiveDate() {
+                if (this.simulatedDate) return this.simulatedDate;
+                try {
+                    const savedSim = sessionStorage.getItem('catecismo_advent_simulated_date');
+                    if (savedSim) return savedSim;
+                } catch(e) {}
+                return getLocalDateString();
+            },
+
+            setSimulatedDate(dateStr) {
+                this.simulatedDate = dateStr;
+                try {
+                    if (dateStr) sessionStorage.setItem('catecismo_advent_simulated_date', dateStr);
+                    else sessionStorage.removeItem('catecismo_advent_simulated_date');
+                } catch(e) {}
+                this.updateHomeCard();
+                if (window.renderAdminDashboardModal) renderAdminDashboardModal();
+            },
+
+            async getStatus() {
+                if (!window.LiturgicalEngine) {
+                    try {
+                        const mod = await import('./services/liturgicalEngine.js');
+                        window.LiturgicalEngine = mod.default || mod;
+                    } catch(e) {}
+                }
+                const dateStr = this.getEffectiveDate();
+                if (window.LiturgicalEngine && typeof window.LiturgicalEngine.getAdventStatus === 'function') {
+                    return window.LiturgicalEngine.getAdventStatus(dateStr);
+                }
+                return { isActive: false, currentDay: null };
+            },
+
+            getProgress(year) {
+                const y = year || new Date().getFullYear();
+                try {
+                    return JSON.parse(localStorage.getItem(`advento_progress_${y}`) || '[]');
+                } catch(e) { return []; }
+            },
+
+            toggleProgress(day, year) {
+                const y = year || new Date().getFullYear();
+                let list = this.getProgress(y);
+                const d = Number(day);
+                if (list.includes(d)) {
+                    list = list.filter(x => x !== d);
+                } else {
+                    list.push(d);
+                    if (window.AppState) {
+                        AppState.xp = (AppState.xp || 0) + 10;
+                        saveState();
+                    }
+                    showToast('Propósito do Advento concluído! (+10 XP)', 'success');
+                }
+                try {
+                    localStorage.setItem(`advento_progress_${y}`, JSON.stringify(list));
+                } catch(e) {}
+                this.updateHomeCard();
+                return list.includes(d);
+            },
+
+            async updateHomeCard() {
+                const container = document.getElementById('home-advento-alert-container');
+                if (!container) return;
+
+                const status = await this.getStatus();
+                const isSimulated = !!this.simulatedDate;
+
+                if (!status.isActive && !isSimulated) {
+                    container.innerHTML = '';
+                    return;
+                }
+
+                const data = await this.loadData();
+                const currentDay = status.currentDay || 1;
+                const dayItem = data.find(x => x.dia === currentDay) || data[0];
+                const year = status.schedule?.year || new Date().getFullYear();
+                const progress = this.getProgress(year);
+                const isCompletedToday = progress.includes(currentDay);
+
+                container.innerHTML = `
+                    <div class="p-4 sm:p-5 rounded-3xl bg-linear-to-r from-indigo-900 via-purple-900 to-amber-950 text-white shadow-lg border border-amber-300/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in fade-in duration-300 relative">
+                        ${isSimulated ? `
+                            <div class="absolute -top-2.5 left-6 px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-rose-600 text-white shadow-xs">
+                                🛠️ Modo de Teste ADM Simulado: ${this.simulatedDate}
+                            </div>
+                        ` : ''}
+                        <div class="flex items-center gap-3.5 min-w-0 pr-4 sm:pr-0">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/20 border border-amber-300/40 text-amber-200 flex items-center justify-center text-2xl shrink-0 shadow-inner">
+                                🕯️
+                            </div>
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-2 mb-0.5">
+                                    <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-amber-400 text-slate-950 shadow-2xs">
+                                        Tempo do Advento • Dia ${currentDay} de ${status.totalDays || 26}
+                                    </span>
+                                    <span class="text-[10px] text-purple-200 font-semibold">${dayItem.vela || 'Coroa do Advento'}</span>
+                                    ${isCompletedToday ? `<span class="text-[9px] bg-emerald-500 text-white font-bold px-1.5 py-0.2 rounded-full">✓ Cumprido</span>` : ''}
+                                </div>
+                                <h4 class="font-serif text-base sm:text-lg font-bold truncate text-amber-100">${dayItem.titulo}</h4>
+                                <p class="text-xs text-slate-200/90 line-clamp-1">🎯 <strong>Missão de hoje:</strong> ${dayItem.missao_concreta}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0 self-end sm:self-center">
+                            <button type="button" onclick="AdventManager.toggleProgress(${currentDay}, ${year})" class="px-3.5 py-2 rounded-xl ${isCompletedToday ? 'bg-emerald-600 text-white' : 'bg-white/20 hover:bg-white/30 text-white'} text-xs font-bold transition flex items-center gap-1.5 cursor-pointer border border-white/20">
+                                <span>${isCompletedToday ? '✓ Concluído' : 'Cumprir Missão'}</span>
+                            </button>
+                            <button type="button" onclick="AdventManager.openModal(${currentDay})" class="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
+                                <span>Ver Calendário</span> <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            },
+
+            async openModal(selectedDay) {
+                const modal = document.getElementById('modal-container');
+                if (!modal) return;
+
+                const data = await this.loadData();
+                const status = await this.getStatus();
+                const year = status.schedule?.year || new Date().getFullYear();
+                const progress = this.getProgress(year);
+                const currentDay = Number(selectedDay) || status.currentDay || 1;
+                const currentItem = data.find(x => x.dia === currentDay) || data[0];
+                const isCompleted = progress.includes(currentDay);
+
+                // Calcular velas acesas na Coroa do Advento (1 a 4)
+                const currentWeek = status.currentWeek || Math.min(4, Math.floor((currentDay - 1) / 7) + 1);
+
+                modal.innerHTML = `
+                    <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-3xl p-6 sm:p-8 space-y-6 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-800 relative text-left">
+                        <button onclick="closeModal()" class="absolute top-6 right-6 w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 font-bold text-xl hover:text-red-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer">✕</button>
+
+                        <!-- Cabeçalho Litúrgico do Advento -->
+                        <div class="pr-12 space-y-2">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-xl text-xs font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-950/80 text-purple-900 dark:text-purple-200 border border-purple-300 dark:border-purple-700">
+                                <span>🕯️</span> <span>Itinerário Canônico do Advento • ${year}</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-mariana dark:text-amber-200">
+                                Calendário do Advento — Caminho para Belém
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Preparai o caminho do Senhor! A cada dia do Advento, uma reflexão bíblica, uma oração e um gesto concreto de amor para acolher o Menino Jesus no coração.
+                            </p>
+                        </div>
+
+                        <!-- A Coroa do Advento (Velas Acessas Dinâmicas) -->
+                        <div class="bg-linear-to-r from-purple-950 via-slate-900 to-amber-950 p-4 sm:p-5 rounded-2xl border border-amber-400/40 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="space-y-1 text-center sm:text-left">
+                                <span class="text-[10px] font-bold text-amber-300 uppercase tracking-widest block">A Coroa do Advento</span>
+                                <h4 class="font-serif font-bold text-base text-amber-100">Semana ${currentWeek} de 4 • ${currentWeek >= 3 ? 'Alegria de Gaudete' : 'Vigilância e Conversão'}</h4>
+                                <p class="text-xs text-slate-300">${progress.length} de ${status.totalDays || 26} dias de propósitos concluídos (${Math.round((progress.length / (status.totalDays || 26)) * 100)}%)</p>
+                            </div>
+                            <!-- Representação das 4 Velas da Coroa -->
+                            <div class="flex items-center gap-3">
+                                ${[1, 2, 3, 4].map(w => {
+                                    const isLit = currentWeek >= w;
+                                    const isGaudete = w === 3;
+                                    return `
+                                        <div class="flex flex-col items-center gap-1 text-center">
+                                            <div class="text-xl ${isLit ? 'animate-bounce' : 'opacity-30'} select-none">${isLit ? '🔥' : '🕯️'}</div>
+                                            <div class="w-5 h-8 rounded-sm ${isGaudete ? 'bg-rose-400 border border-rose-300' : 'bg-purple-700 border border-purple-500'} ${isLit ? 'shadow-lg shadow-amber-500/50' : 'opacity-40'}"></div>
+                                            <span class="text-[9px] font-bold ${isLit ? 'text-amber-300' : 'text-slate-500'}">${w}ª Vela</span>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Mosaico dos Dias do Calendário -->
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block mb-2">Selecione o Dia para Meditar:</span>
+                            <div class="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-12 gap-1.5">
+                                ${data.map(item => {
+                                    const isDone = progress.includes(item.dia);
+                                    const isSel = item.dia === currentDay;
+                                    return `
+                                        <button type="button" onclick="AdventManager.openModal(${item.dia})" class="p-2 rounded-xl text-center font-bold text-xs transition cursor-pointer flex flex-col items-center justify-center ${isSel ? 'bg-amber-500 text-slate-950 shadow-md scale-105' : (isDone ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200 border border-emerald-300' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200')}">
+                                            <span class="text-[9px]">${isDone ? '✓' : 'Dia'}</span>
+                                            <span>${item.dia}</span>
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Detalhe do Dia Selecionado -->
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-4">
+                            <div class="flex items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-700 pb-3 flex-wrap">
+                                <div>
+                                    <span class="text-[10px] font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider">${currentItem.vela}</span>
+                                    <h4 class="font-serif text-xl sm:text-2xl font-bold text-mariana dark:text-amber-200 mt-0.5">
+                                        Dia ${currentItem.dia} — ${currentItem.titulo}
+                                    </h4>
+                                </div>
+                                <button type="button" onclick="AdventManager.toggleProgress(${currentItem.dia}, ${year}); AdventManager.openModal(${currentItem.dia});" class="px-4 py-2 rounded-xl ${isCompleted ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'gold-gradient text-mariana-dark'} text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer">
+                                    <span>${isCompleted ? '✓ Missão Cumprida' : 'Marcar como Cumprida (+10 XP)'}</span>
+                                </button>
+                            </div>
+
+                            <!-- Palavra Bíblica -->
+                            <div class="bg-amber-50/70 dark:bg-amber-950/40 p-4 rounded-xl border border-amber-200 dark:border-amber-800/60">
+                                <span class="text-[10px] font-bold text-amber-800 dark:text-amber-300 uppercase tracking-widest block mb-1">Palavra de Deus:</span>
+                                <p class="font-serif text-sm sm:text-base text-slate-800 dark:text-slate-100 italic leading-relaxed">
+                                    "${currentItem.versiculo}"
+                                </p>
+                            </div>
+
+                            <!-- Reflexão Espiritual -->
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block">Meditação do Coração:</span>
+                                <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line">
+                                    ${currentItem.reflexao}
+                                </p>
+                            </div>
+
+                            <!-- Oração Diária -->
+                            <div class="bg-purple-50/70 dark:bg-purple-950/30 p-4 rounded-xl border border-purple-200 dark:border-purple-800/60">
+                                <span class="text-[10px] font-bold text-purple-800 dark:text-purple-300 uppercase tracking-widest block mb-1">Oração em Família / Pessoal:</span>
+                                <p class="font-serif text-xs sm:text-sm text-purple-950 dark:text-purple-200 italic leading-relaxed">
+                                    "${currentItem.oracao}"
+                                </p>
+                            </div>
+
+                            <!-- Missão Prática Concreta -->
+                            <div class="p-4 rounded-xl bg-amber-100/70 dark:bg-amber-950/60 border-2 border-amber-300 dark:border-amber-700 space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-base">🎯</span>
+                                    <span class="text-xs font-bold text-amber-950 dark:text-amber-200 uppercase tracking-wider">Missão Concreta do Dia:</span>
+                                </div>
+                                <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed pl-6">
+                                    ${currentItem.missao_concreta}
+                                </p>
+                            </div>
+
+                            <!-- Botão Compartilhar no WhatsApp -->
+                            <div class="flex justify-end pt-2">
+                                <button type="button" onclick="AdventManager.compartilharWhatsApp(${currentItem.dia})" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer">
+                                    <span>📲 Compartilhar Missão no WhatsApp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            },
+
+            async compartilharWhatsApp(dayNum) {
+                const data = await this.loadData();
+                const item = data.find(x => x.dia === dayNum) || data[0];
+                const msg = `🕯️ *Calendário do Advento — Dia ${item.dia}*
+
+📖 *Palavra de Deus:*
+_"${item.versiculo}"_
+
+💭 *Meditação:*
+${item.reflexao}
+
+🙏 *Oração:*
+_"${item.oracao}"_
+
+🎯 *Missão de Hoje:*
+${item.missao_concreta}
+
+✨ _Prepare seu coração para o Natal no Catecismo Católico:_
+https://catecismo.creativeam.com.br`;
+
+                if (navigator.share) {
+                    try {
+                        await navigator.share({ title: `Calendário do Advento • Dia ${item.dia}`, text: msg });
+                        return;
+                    } catch(e) {
+                        if (e.name === 'AbortError') return;
+                    }
+                }
+                window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
+            }
+        };
+        window.AdventManager = AdventManager;
 
         /* ==========================================
            GESTOR DE NOVENAS CATÓLICAS (THESAURUS)
@@ -5925,9 +6330,10 @@
                     if (router.currentRoute !== 'oracao' || !mainView.isConnected) return;
                     if (!lit || !lit.gospel) {
                         container.innerHTML = `
-                            <div class="p-4 bg-amber-50 rounded-xl border border-amber-200 text-amber-900 text-sm">
-                                <p class="font-bold">Evangelho de Hoje Indisponível</p>
-                                <p class="text-xs mt-1">Abra a Liturgia Diária ou a Bíblia para realizar a leitura orante.</p>
+                            <div class="p-6 bg-amber-50 dark:bg-amber-950/40 rounded-2xl border border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200 text-sm space-y-2">
+                                <p class="font-bold flex items-center gap-2 text-base"><span>⚠️</span> Evangelho de Hoje Indisponível</p>
+                                <p class="text-xs">Abra a Liturgia Diária ou a Bíblia para realizar a leitura orante.</p>
+                                <button onclick="router.navigate('liturgia')" class="mt-2 px-4 py-2 bg-mariana text-white rounded-xl text-xs font-bold shadow-xs">Ir para Liturgia Diária →</button>
                             </div>
                         `;
                         return;
@@ -5935,36 +6341,148 @@
                     const gospel = lit.gospel;
                     const savedNotes = (AppState.lectioNotes && AppState.lectioNotes[date]) || '';
                     const savedNotesCount = Object.keys(AppState.lectioNotes || {}).filter(k => (AppState.lectioNotes[k] || '').trim().length > 0).length;
+                    
                     container.innerHTML = `
-                        <div class="space-y-4">
-                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/80 pb-3">
+                        <div class="space-y-6">
+                            <!-- Cabeçalho Litúrgico da Passagem -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200/80 dark:border-slate-700/80 pb-4">
                                 <div>
-                                    <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-md">Passagem de Hoje</span>
-                                    <h4 class="font-serif text-xl font-bold text-mariana mt-1">${gospel.reference}</h4>
-                                    <p class="text-xs text-slate-500">${lit.celebration || 'Liturgia Diária'} • ${date.split('-').reverse().join('/')}</p>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[10px] font-black uppercase tracking-wider text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700 px-2.5 py-1 rounded-lg">Evangelho do Dia</span>
+                                        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">${date.split('-').reverse().join('/')}</span>
+                                    </div>
+                                    <h4 class="font-serif text-2xl font-bold text-mariana dark:text-amber-200 mt-1">${gospel.reference}</h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">${lit.celebration || 'Liturgia Diária'}</p>
                                 </div>
-                                <button onclick="openScriptureReferenceFromText('${encodeURIComponent(gospel.reference)}')" class="px-4 py-2 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-sm">
-                                    <span>📖</span> Abrir no Texto Bíblico Completo (Matos Soares) →
+                                <button onclick="openScriptureReferenceFromText('${encodeURIComponent(gospel.reference)}')" class="self-start sm:self-center px-4 py-2.5 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer">
+                                    <span>📖</span> <span>Bíblia Completa</span> <span>→</span>
                                 </button>
                             </div>
-                            <div class="bg-white p-5 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed max-h-72 overflow-y-auto custom-scrollbar font-serif whitespace-pre-line">
-                                ${esc(formatLiturgicalText(gospel.text))}
+
+                            <!-- Navegação das 4 Etapas Canônicas da Lectio Divina -->
+                            <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 no-scrollbar">
+                                <button onclick="window.switchLectioStep(1)" data-step="1" class="lectio-step-btn flex-1 min-w-0 text-center px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer whitespace-nowrap">
+                                    1. Lectio (Leitura)
+                                </button>
+                                <button onclick="window.switchLectioStep(2)" data-step="2" class="lectio-step-btn flex-1 min-w-0 text-center px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer whitespace-nowrap">
+                                    2. Meditatio (Meditação)
+                                </button>
+                                <button onclick="window.switchLectioStep(3)" data-step="3" class="lectio-step-btn flex-1 min-w-0 text-center px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer whitespace-nowrap">
+                                    3. Oratio (Oração)
+                                </button>
+                                <button onclick="window.switchLectioStep(4)" data-step="4" class="lectio-step-btn flex-1 min-w-0 text-center px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer whitespace-nowrap">
+                                    4. Contemplatio & Actio
+                                </button>
                             </div>
-                            <div class="bg-amber-50/60 dark:bg-amber-950/30 p-4 rounded-2xl border border-amber-200/70 dark:border-amber-800/50 space-y-2.5">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold text-mariana dark:text-slate-100 flex items-center gap-1.5">
-                                        <span>✍️</span> Seu Diário Espiritual (Lectio / Meditatio)
-                                    </span>
-                                    <span id="lectio-saved-indicator" class="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold hidden">✓ Salvo no Diário</span>
+
+                            <!-- PAINEL 1: LECTIO (LEITURA ATENTA) -->
+                            <div class="lectio-step-panel space-y-4" data-step="1" style="display: block;">
+                                <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/40 rounded-2xl border border-blue-200/80 dark:border-blue-800/60 flex items-start gap-3">
+                                    <span class="text-xl shrink-0">📖</span>
+                                    <div class="text-xs leading-relaxed text-blue-950 dark:text-blue-200">
+                                        <strong class="font-bold">Passo 1 — Lectio (Leitura):</strong> Leia o Evangelho pausadamente, ao menos duas vezes. Deixe que as palavras ressoem no silêncio da sua alma. Preste atenção aos detalhes: onde Jesus está? Com quem Ele fala? Que palavras tocam o seu coração?
+                                    </div>
                                 </div>
-                                <textarea id="lectio-user-notes" placeholder="O que este Evangelho diz ao meu coração hoje? Escreva aqui sua oração ou propósito..." class="w-full p-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-100 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition resize-y min-h-[75px] bg-white dark:bg-slate-900 leading-relaxed font-serif">${savedNotes}</textarea>
-                                <div class="flex items-center justify-between pt-1">
-                                    <button type="button" onclick="ReflectionsManager.openModal()" class="text-xs font-bold text-amber-800 dark:text-amber-300 hover:text-amber-950 dark:hover:text-amber-100 flex items-center gap-1.5 cursor-pointer hover:underline transition">
-                                        <span>📖</span> <span>Minhas Reflexões</span>
-                                        <span class="bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 px-1.5 py-0.2 rounded-full text-[10px] font-mono font-bold">${savedNotesCount}</span>
+                                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 text-sm text-slate-800 dark:text-slate-100 leading-relaxed font-serif whitespace-pre-line shadow-xs max-h-96 overflow-y-auto custom-scrollbar select-text">
+                                    ${esc(formatLiturgicalText(gospel.text))}
+                                </div>
+                                <div class="flex justify-end pt-2">
+                                    <button onclick="window.switchLectioStep(2)" class="px-5 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white font-bold text-xs shadow-xs transition flex items-center gap-2 cursor-pointer">
+                                        <span>Ir para 2. Meditatio (Meditação)</span> <span>→</span>
                                     </button>
-                                    <button onclick="saveLectioNotes('${date}')" class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer flex items-center gap-1.5">
-                                        <span>💾</span> <span>Gravar Reflexão</span>
+                                </div>
+                            </div>
+
+                            <!-- PAINEL 2: MEDITATIO (MEDITAÇÃO DO CORAÇÃO) -->
+                            <div class="lectio-step-panel space-y-4" data-step="2" style="display: none;">
+                                <div class="p-3.5 bg-amber-50/80 dark:bg-amber-950/40 rounded-2xl border border-amber-200/80 dark:border-amber-800/60 flex items-start gap-3">
+                                    <span class="text-xl shrink-0">💭</span>
+                                    <div class="text-xs leading-relaxed text-amber-950 dark:text-amber-200">
+                                        <strong class="font-bold">Passo 2 — Meditatio (Meditação):</strong> Rumine a Palavra como um tesouro. Não se trata de um estudo puramente intelectual, mas de perguntar: <em>"O que Deus está falando pessoalmente para mim através deste texto hoje?"</em>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+                                        <div class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 flex items-center justify-center font-bold text-xs">1</div>
+                                        <h5 class="font-serif font-bold text-sm text-mariana dark:text-amber-200">O que o texto revela?</h5>
+                                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Qual face de Deus Jesus revela neste trecho? Sua misericórdia, Sua justiça, Seu zelo ou Sua paciência de Bom Pastor?</p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+                                        <div class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 flex items-center justify-center font-bold text-xs">2</div>
+                                        <h5 class="font-serif font-bold text-sm text-mariana dark:text-amber-200">Como ilumina a minha vida?</h5>
+                                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Onde as palavras de Jesus tocam minhas alegrias, preocupações de trabalho, feridas familiares ou desafios de hoje?</p>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+                                        <div class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 flex items-center justify-center font-bold text-xs">3</div>
+                                        <h5 class="font-serif font-bold text-sm text-mariana dark:text-amber-200">O apelo de conversão</h5>
+                                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Onde estou falhando ou me acomodando? Que atitude Jesus me pede para desapegar ou transformar?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between pt-2">
+                                    <button onclick="window.switchLectioStep(1)" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-200 transition cursor-pointer">
+                                        <span>← Reeler o Evangelho</span>
+                                    </button>
+                                    <button onclick="window.switchLectioStep(3)" class="px-5 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white font-bold text-xs shadow-xs transition flex items-center gap-2 cursor-pointer">
+                                        <span>Ir para 3. Oratio (Oração)</span> <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- PAINEL 3: ORATIO (ORAÇÃO PESSOAL) -->
+                            <div class="lectio-step-panel space-y-4" data-step="3" style="display: none;">
+                                <div class="p-3.5 bg-rose-50/80 dark:bg-rose-950/40 rounded-2xl border border-rose-200/80 dark:border-rose-900/60 flex items-start gap-3">
+                                    <span class="text-xl shrink-0">🙏</span>
+                                    <div class="text-xs leading-relaxed text-rose-950 dark:text-rose-200">
+                                        <strong class="font-bold">Passo 3 — Oratio (Oração):</strong> Agora é a sua vez de responder a Deus. Fale com Ele como um filho fala com seu pai muito amado, ou como um amigo com outro amigo. Agradeça, peça perdão, suplique ajuda e entregue suas dores.
+                                    </div>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+                                    <span class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider block">Oração Espontânea Inspirada no Evangelho de Hoje:</span>
+                                    <p class="font-serif text-sm sm:text-base text-slate-800 dark:text-slate-100 leading-relaxed italic select-text">
+                                        "Senhor Jesus Cristo, Vós que falais com tanta clareza e autoridade no Vosso Santo Evangelho, abri os meus ouvidos para escutar a Vossa voz e purificai o meu coração para acolher a Vossa verdade. Não permitais que as preocupações do mundo e o apego às coisas passageiras sufoquem a semente da Vossa Palavra em minha alma. Dai-me a graça de viver hoje segundo o Vosso Espírito. Amém."
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between pt-2">
+                                    <button onclick="window.switchLectioStep(2)" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-200 transition cursor-pointer">
+                                        <span>← Voltar à Meditação</span>
+                                    </button>
+                                    <button onclick="window.switchLectioStep(4)" class="px-5 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white font-bold text-xs shadow-xs transition flex items-center gap-2 cursor-pointer">
+                                        <span>Ir para 4. Contemplatio & Actio</span> <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- PAINEL 4: CONTEMPLATIO & ACTIO (CONTEMPLAÇÃO E PROPÓSITO) -->
+                            <div class="lectio-step-panel space-y-4" data-step="4" style="display: none;">
+                                <div class="p-3.5 bg-emerald-50/80 dark:bg-emerald-950/40 rounded-2xl border border-emerald-200/80 dark:border-emerald-800/60 flex items-start gap-3">
+                                    <span class="text-xl shrink-0">✨</span>
+                                    <div class="text-xs leading-relaxed text-emerald-950 dark:text-emerald-200">
+                                        <strong class="font-bold">Passo 4 — Contemplatio & Actio:</strong> Permaneça um instante em silêncio puro, deixando-se olhar por Deus com ternura. Em seguida, formule um <strong>propósito prático e concreto</strong> de caridade, perdão ou serviço para viver hoje.
+                                    </div>
+                                </div>
+
+                                <div class="bg-amber-50/70 dark:bg-amber-950/30 p-5 rounded-2xl border border-amber-200/80 dark:border-amber-800/60 space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs font-bold text-mariana dark:text-slate-100 flex items-center gap-1.5">
+                                            <span>✍️</span> <span>Seu Diário Espiritual (Fruto da Lectio Divina)</span>
+                                        </span>
+                                        <span id="lectio-saved-indicator" class="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold hidden">✓ Salvo no Diário Espiritual</span>
+                                    </div>
+                                    <textarea id="lectio-user-notes" placeholder="Qual palavra tocou o meu coração hoje? Que propósito concreto de oração, paciência ou caridade assumirei para o dia de hoje?..." class="w-full p-3.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-800 dark:text-slate-100 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition resize-y min-h-[110px] bg-white dark:bg-slate-900 leading-relaxed font-serif">${savedNotes}</textarea>
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+                                        <button type="button" onclick="ReflectionsManager.openModal()" class="text-xs font-bold text-amber-800 dark:text-amber-300 hover:text-amber-950 dark:hover:text-amber-100 flex items-center gap-1.5 cursor-pointer hover:underline transition">
+                                            <span>📖</span> <span>Ver Minhas Reflexões Gravadas</span>
+                                            <span class="bg-amber-100 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold">${savedNotesCount}</span>
+                                        </button>
+                                        <button onclick="saveLectioNotes('${date}')" class="px-5 py-2.5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white rounded-xl text-xs font-bold transition shadow-xs cursor-pointer flex items-center justify-center gap-2">
+                                            <span>💾</span> <span>Gravar Reflexão & Propósito</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-start pt-2">
+                                    <button onclick="window.switchLectioStep(3)" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-200 transition cursor-pointer">
+                                        <span>← Voltar à Oração</span>
                                     </button>
                                 </div>
                             </div>
@@ -6217,11 +6735,13 @@
                         `;
                     } else if (kindKey === 'evangelho') {
                         navButtonsHtml = `
-                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between gap-2">
-                                <button onclick="window.switchLiturgiaTab('${lit.secondReading ? 'segunda' : 'salmo'}', true)" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                            <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                <button onclick="window.switchLiturgiaTab('${lit.secondReading ? 'segunda' : 'salmo'}', true)" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer self-start">
                                     <span>←</span> <span>${lit.secondReading ? '2ª Leitura' : 'Salmo'}</span>
                                 </button>
-                                <div></div>
+                                <button onclick="router.navigate('oracao')" class="px-4 py-2.5 rounded-xl bg-linear-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:to-amber-900 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                                    <span>🙏</span> <span>Fazer Leitura Orante (Lectio Divina) deste Evangelho</span> <span>→</span>
+                                </button>
                             </div>
                         `;
                     }
@@ -6313,10 +6833,11 @@
 
                         <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 border border-slate-200 dark:border-slate-700 card-shadow space-y-4">
                             <div><span class="text-[10px] font-bold text-dourado uppercase tracking-wider">Conexões</span><h3 class="font-serif text-xl font-bold text-mariana dark:text-amber-200 mt-1">Leitura, Palavra e vida</h3><p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Da liturgia de hoje você pode seguir diretamente para a Bíblia e para o Santo do Dia.</p></div>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                ${lit.gospel?.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(lit.gospel.reference)}')" class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 text-left hover:bg-blue-100 dark:hover:bg-blue-900/50 transition"><span class="text-[10px] font-bold text-blue-700 dark:text-blue-300 uppercase">📖 Evangelho</span><strong class="block text-sm text-blue-950 dark:text-blue-100 mt-1">${esc(lit.gospel.reference)}</strong><span class="text-[10px] text-blue-800/80 dark:text-blue-300/80">Abrir na Bíblia</span></button>` : ''}
-                                <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-left hover:bg-amber-100 dark:hover:bg-amber-900/50 transition"><span class="text-[10px] font-bold text-amber-700 dark:text-amber-300 uppercase">☩ Santo</span><strong class="block text-sm text-amber-950 dark:text-amber-100 mt-1">${esc(lit.saintOrMemory || 'Celebração do dia')}</strong><span class="text-[10px] text-amber-800/80 dark:text-amber-300/80">Ver Santo do Dia</span></button>
-                                <button onclick="router.navigate('catecismo')" class="p-4 rounded-2xl bg-violet-50 dark:bg-violet-950/40 border border-violet-200 dark:border-violet-800/60 text-left hover:bg-violet-100 dark:hover:bg-violet-900/50 transition"><span class="text-[10px] font-bold text-violet-700 dark:text-violet-300 uppercase">📜 Catecismo</span><strong class="block text-sm text-violet-950 dark:text-violet-100 mt-1">Relacionar com a fé</strong><span class="text-[10px] text-violet-800/80 dark:text-violet-300/80">Estudar doutrina</span></button>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                ${lit.gospel?.reference ? `<button onclick="openScriptureReferenceFromText('${encodeURIComponent(lit.gospel.reference)}')" class="p-4 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 text-left hover:bg-blue-100 dark:hover:bg-blue-900/50 transition cursor-pointer"><span class="text-[10px] font-bold text-blue-700 dark:text-blue-300 uppercase">📖 Evangelho</span><strong class="block text-sm text-blue-950 dark:text-blue-100 mt-1 truncate">${esc(lit.gospel.reference)}</strong><span class="text-[10px] text-blue-800/80 dark:text-blue-300/80">Abrir na Bíblia</span></button>` : ''}
+                                <button onclick="router.navigate('oracao')" class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 text-left hover:bg-rose-100 dark:hover:bg-rose-900/50 transition cursor-pointer"><span class="text-[10px] font-bold text-rose-700 dark:text-rose-300 uppercase">🙏 Lectio Divina</span><strong class="block text-sm text-rose-950 dark:text-rose-100 mt-1 truncate">Leitura Orante</strong><span class="text-[10px] text-rose-800/80 dark:text-rose-300/80">Meditar Palavra de Hoje</span></button>
+                                <button onclick="router.navigate('santo')" class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-left hover:bg-amber-100 dark:hover:bg-amber-900/50 transition cursor-pointer"><span class="text-[10px] font-bold text-amber-700 dark:text-amber-300 uppercase">☩ Santo</span><strong class="block text-sm text-amber-950 dark:text-amber-100 mt-1 truncate">${esc(lit.saintOrMemory || 'Celebração do dia')}</strong><span class="text-[10px] text-amber-800/80 dark:text-amber-300/80">Ver Santo do Dia</span></button>
+                                <button onclick="router.navigate('catecismo')" class="p-4 rounded-2xl bg-violet-50 dark:bg-violet-950/40 border border-violet-200 dark:border-violet-800/60 text-left hover:bg-violet-100 dark:hover:bg-violet-900/50 transition cursor-pointer"><span class="text-[10px] font-bold text-violet-700 dark:text-violet-300 uppercase">📜 Catecismo</span><strong class="block text-sm text-violet-950 dark:text-violet-100 mt-1 truncate">Relacionar com a fé</strong><span class="text-[10px] text-violet-800/80 dark:text-violet-300/80">Estudar doutrina</span></button>
                             </div>
                         </div>
 
@@ -6326,7 +6847,7 @@
                             </button>
                         </div>
 
-                        <!-- Canção Nova Standard Liturgical Tabs (1ª Leitura, Salmo, 2ª Leitura, Evangelho) -->
+                        <!-- Abas Litúrgicas Canônicas (1ª Leitura, Salmo, 2ª Leitura, Evangelho) -->
                         <div id="liturgical-tabs-nav" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 pt-1 border-b border-slate-200 dark:border-slate-700/60 no-scrollbar touch-pan-x">
                             <button onclick="window.switchLiturgiaTab('primeira')" data-lit-tab="primeira" class="lit-tab-btn flex-1 min-w-0 text-center whitespace-nowrap px-2 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-mariana text-white shadow-xs cursor-pointer">
                                 1ª Leitura
@@ -6797,14 +7318,16 @@
                                     <div class="min-w-0 flex-1">
                                         <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">${index + 1}º registro</span>
                                         <h3 class="font-serif text-2xl font-bold text-mariana mt-1 break-words">${esc(saint.name)}</h3>
-                                        <p class="text-xs text-slate-500 mt-2">Fonte principal: ${esc(saint.source || 'Vatican News')}</p>
-                                        ${profileUrl ? `<a href="${esc(profileUrl)}" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs font-bold text-mariana underline">Abrir perfil da fonte →</a>` : ''}
+                                        ${saint.vocation ? `<p class="text-xs text-amber-800 dark:text-amber-300 font-semibold mt-1">✨ ${esc(saint.vocation)}</p>` : ''}
+                                        ${saint.patronage ? `<p class="text-xs text-slate-600 dark:text-slate-300 mt-1">🛡️ <strong>Padroeiro de:</strong> ${esc(saint.patronage)}</p>` : ''}
+                                        <p class="text-[11px] text-slate-400 mt-2">Fonte canônica: ${esc(saint.sources || saint.source || 'Tradição e Magistério da Igreja')}</p>
+                                        ${profileUrl ? `<a href="${esc(profileUrl)}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-xs font-bold text-mariana underline">Abrir perfil da fonte →</a>` : ''}
                                     </div>
                                 </div>
                                 <div class="mt-5 space-y-4">
-                                    ${biography ? `<div><h4 class="font-serif text-lg font-bold text-mariana">Vida e testemunho</h4><p class="text-sm text-slate-700 leading-7 whitespace-pre-line mt-2">${esc(biography)}</p></div>` : ''}
-                                    ${reflection ? `<div class="bg-amber-50/70 rounded-2xl p-5 border border-amber-200/60"><h4 class="font-serif text-base font-bold text-amber-900">Reflexão</h4><p class="text-sm text-amber-800 italic leading-7 mt-2">${esc(reflection)}</p></div>` : ''}
-                                    ${prayer ? `<div class="bg-slate-50 rounded-2xl p-5 border border-slate-200"><h4 class="font-serif text-base font-bold text-mariana">Oração</h4><p class="text-sm text-slate-700 italic leading-7 whitespace-pre-line mt-2">${esc(prayer)}</p></div>` : ''}
+                                    ${biography ? `<div><h4 class="font-serif text-lg font-bold text-mariana dark:text-amber-200">Vida e testemunho</h4><p class="text-sm text-slate-700 dark:text-slate-200 leading-7 whitespace-pre-line mt-2">${esc(biography)}</p></div>` : ''}
+                                    ${reflection ? `<div class="bg-amber-50/70 dark:bg-slate-900/60 rounded-2xl p-5 border border-amber-200/60 dark:border-slate-700/80"><h4 class="font-serif text-base font-bold text-amber-900 dark:text-amber-300">Reflexão Espiritual</h4><p class="text-sm text-amber-900 dark:text-amber-100 italic leading-7 mt-2">${esc(reflection)}</p></div>` : ''}
+                                    ${prayer ? `<div class="bg-linear-to-br from-amber-50 to-orange-50/50 dark:from-slate-900 dark:to-amber-950/40 rounded-2xl p-5 sm:p-6 border border-amber-300/80 dark:border-amber-700/60 shadow-xs"><div class="flex items-center gap-2 mb-2"><span class="text-base">🙏</span><h4 class="font-serif text-base font-bold text-amber-950 dark:text-amber-200">Oração ao Santo</h4></div><p class="text-sm text-slate-800 dark:text-slate-200 italic leading-relaxed whitespace-pre-line">${esc(prayer)}</p></div>` : ''}
                                 </div>
                             </article>`;
                     }).join('');
@@ -6825,7 +7348,7 @@
                             ${firstRef ? `<div class="bg-blue-50/60 border border-blue-100 rounded-3xl p-6"><span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider">Primeira leitura</span><p class="text-sm text-blue-950 font-bold mt-2">${esc(firstRef)}</p></div>` : ''}
                             <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow">
                                 <h3 class="font-serif text-lg font-bold text-mariana">Fontes</h3>
-                                <p class="text-xs text-slate-600 leading-6 mt-2">Santos: Vatican News. Enriquecimento: A12 quando disponível. A celebração litúrgica é carregada separadamente do banco local de Liturgia.</p>
+                                <p class="text-xs text-slate-600 leading-6 mt-2">Santos: Acervo Hagiográfico Oficial da Igreja e Tradição Católica. A celebração litúrgica é carregada separadamente do banco canônico de Liturgia.</p>
                             </div>
                         </div>`;
                 } catch (error) {
@@ -8311,19 +8834,19 @@ https://catecismo.creativeam.com.br
             const isFav = AppState.favorites.includes('prayer_' + id);
             const modal = document.getElementById('modal-container');
             modal.innerHTML = `
-                <div class="bg-white w-full max-w-2xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border relative">
-                    <div class="absolute top-6 right-6 flex gap-3">
-                        <button onclick="toggleFavorite('prayer_${p.id}')" class="text-lg" title="Favoritar">${isFav ? '⭐' : '☆'}</button>
-                        <button onclick="closeModal()" class="text-slate-400 font-bold text-xl hover:text-red-500 transition">✕</button>
+                <div class="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-3xl p-6 md:p-8 space-y-6 max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-800 relative">
+                    <div class="absolute top-6 right-6 flex items-center gap-2">
+                        <button onclick="toggleFavorite('prayer_${p.id}')" class="p-2 rounded-xl text-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Favoritar">${isFav ? '⭐' : '☆'}</button>
+                        <button onclick="closeModal()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 font-bold text-xl hover:text-red-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer">✕</button>
                     </div>
                     <div class="pr-16">
-                        <span class="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-lg text-[10px] font-bold tracking-wider uppercase">${p.category}</span>
-                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana mt-3 leading-tight">${p.title}</h3>
+                        <span class="px-2.5 py-1 bg-amber-100 dark:bg-amber-950/80 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-700 rounded-lg text-[10px] font-bold tracking-wider uppercase">${p.category}</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-mariana dark:text-amber-200 mt-3 leading-tight">${p.title}</h3>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                        <p class="font-serif text-base text-slate-800 leading-loose whitespace-pre-line">${p.text}</p>
+                    <div class="bg-slate-50 dark:bg-slate-800/70 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+                        <p class="font-serif text-base text-slate-800 dark:text-slate-100 leading-loose whitespace-pre-line select-text">${p.text}</p>
                     </div>
-                    <button onclick="closeModal(); markPrayerDone();" class="w-full py-3.5 mariana-gradient text-white rounded-xl text-xs font-bold shadow-md transition hover:scale-105">🙏 Rezei esta oração (+10 XP)</button>
+                    <button onclick="closeModal(); markPrayerDone();" class="w-full py-3.5 mariana-gradient text-white rounded-xl text-xs font-bold shadow-md transition hover:scale-105 cursor-pointer">🙏 Rezei esta oração (+10 XP)</button>
                 </div>
             `;
             modal.classList.remove('hidden');
@@ -12551,6 +13074,74 @@ https://catecismo.creativeam.com.br
 
 
                     
+                    <!-- 7.5 GESTÃO DO CALENDÁRIO DO ADVENTO (MOTOR LITÚRGICO PERPÉTUO) -->
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-5">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-2xl bg-purple-100 dark:bg-purple-950/80 border border-purple-300 dark:border-purple-700 text-purple-900 dark:text-purple-200 flex items-center justify-center text-xl shrink-0">
+                                    🕯️
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg font-bold text-mariana dark:text-slate-100">
+                                        Gestão do Calendário do Advento (Motor Litúrgico Perpétuo)
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">
+                                        Cálculo canônico perpétuo e simulador para os anos 2026, 2027, 2028, 2029 e 2030
+                                    </p>
+                                </div>
+                            </div>
+                            <button type="button" onclick="AdventManager.openModal(1)" class="px-3.5 py-2 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs transition flex items-center gap-1.5 cursor-pointer shadow-xs self-start sm:self-center">
+                                <span>📖</span> <span>Visualizar Calendário Completo</span>
+                            </button>
+                        </div>
+
+                        <!-- Informações do Motor Litúrgico em Tempo Real -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Ano Vigente (2026)</span>
+                                <strong class="text-sm text-mariana dark:text-amber-200 block">29/11/2026 a 24/12/2026</strong>
+                                <span class="text-[11px] text-slate-500 block">Duração: 26 dias (Natal na Sexta-feira)</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Próximo Ano (2027)</span>
+                                <strong class="text-sm text-mariana dark:text-amber-200 block">28/11/2027 a 24/12/2027</strong>
+                                <span class="text-[11px] text-slate-500 block">Duração: 27 dias (Natal no Sábado)</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Ano 2028</span>
+                                <strong class="text-sm text-mariana dark:text-amber-200 block">03/12/2028 a 24/12/2028</strong>
+                                <span class="text-[11px] text-slate-500 block">Duração: 22 dias (Natal na Segunda-feira)</span>
+                            </div>
+                        </div>
+
+                        <!-- Painel de Simulação Rápida para o Administrador -->
+                        <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-800/60 space-y-3">
+                            <div>
+                                <span class="text-[10px] font-bold text-amber-800 dark:text-amber-300 uppercase tracking-widest block">Simulador de Teste para o Administrador:</span>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                                    Clique em uma data para simular imediatamente como a Home e o Calendário do Advento aparecem para o fiel sem precisar esperar dezembro:
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-1">
+                                <button type="button" onclick="AdventManager.setSimulatedDate(null); showToast('Retornado para o modo de data real de hoje.', 'info');" class="px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 transition cursor-pointer">
+                                    🟢 Data Real de Hoje (${getLocalDateString()})
+                                </button>
+                                <button type="button" onclick="AdventManager.setSimulatedDate('2026-11-29'); showToast('Simulando 1º Domingo do Advento (29/11/2026)!', 'success');" class="px-3 py-1.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold transition cursor-pointer shadow-xs">
+                                    🕯️ Simular 1º Domingo do Advento (Dia 1)
+                                </button>
+                                <button type="button" onclick="AdventManager.setSimulatedDate('2026-12-05'); showToast('Simulando Dia 7 do Advento (05/12/2026)!', 'success');" class="px-3 py-1.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold transition cursor-pointer shadow-xs">
+                                    🕯️ Simular Dia 7 do Advento
+                                </button>
+                                <button type="button" onclick="AdventManager.setSimulatedDate('2026-12-13'); showToast('Simulando 3º Domingo de Gaudete (13/12/2026)!', 'success');" class="px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition cursor-pointer shadow-xs">
+                                    🌹 Simular Gaudete (Vela Rosa)
+                                </button>
+                                <button type="button" onclick="AdventManager.setSimulatedDate('2026-12-24'); showToast('Simulando Véspera de Natal (24/12/2026)!', 'success');" class="px-3 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition cursor-pointer shadow-xs">
+                                    ⭐ Simular Véspera de Natal (24/Dez)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 8. GESTÃO E ATUALIZAÇÃO DA LITURGIA DIÁRIA -->
                     <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">

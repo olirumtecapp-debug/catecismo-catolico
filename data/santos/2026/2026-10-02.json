@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-02",
-      "name": "SS. Anjos da Guarda",
+      "name": "Santos Anjos da Guarda",
       "normalizedName": "ss. anjos da guarda",
       "imageUrl": "./assets/img/santos/10-02-ss-anjos-da-guarda.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/02/ss--anjos-da-guarda.html",
@@ -23,8 +23,15 @@
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/02/ss--anjos-da-guarda.html",
       "sourceText": "A Igreja dedica o dia de hoje à memória dos Santos Anjos da Guarda, figuras celestiais presentes no universo religioso da Bíblia. Estes contempladores do rosto de Deus desempenham, muitas vezes, a função de enviados do Senhor aos homens, os quais acompanham com a sua presença invisível e silenciosa.",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.302Z"
+      },
+      "biography": "A memória obrigatória dos Santos Anjos da Guarda remonta à mais sólida tradição bíblica e apostólica da Santa Igreja. Desde a criação do mundo invisível por Deus, os santos anjos foram designados para contemplar face a face a glória do Todo-Poderoso (Mt 18,10) e desempenhar a sublime missão de ministros da Providência junto à humanidade.\n\nA doutrina católica, reiterada com clareza pelo Catecismo da Igreja Católica (§ 336), ensina que: \"Desde o início até à morte, a vida humana é cercada pela sua proteção e pela sua intercessão. Cada fiel é ladeado por um anjo como protetor e pastor para o conduzir à vida\".\n\nNa Sagrada Escritura, o Salmo 90 (91) canta com certeza consoladora: \"Pois Ele dará ordem a Seus anjos a teu respeito, para que te guardem em todos os teus caminhos. Eles te levarão em suas mãos, para que teu pé não tropece em nenhuma pedra\". Jesus Cristo adverte os discípulos a respeito do valor infinito de cada alma aos olhos de Deus: \"Guardai-vos de desprezar um só destes pequeninos; porque eu vos digo que os seus anjos nos céus vêem continuamente a face de meu Pai celestial\".\n\nAo longo dos séculos, grandes santos e doutores — como São Basílio Magno, Santo Tomás de Aquino, São Bernardo de Claraval e São Pio de Pietrelcina — cultivaram uma terna e contínua amizade com os seus Santos Anjos da Guarda. Padre Pio recomendava com insistência aos seus filhos espirituais: \"Invoca o teu Anjo da Guarda nos perigos, pois ele jamais te abandonará e te ajudará a resistir às seduções do maligno\". A celebração litúrgica universal foi estendida a toda a Cristandade pelo Papa Paulo V em 1608 e fixada pelo Papa Clemente X em 2 de outubro.",
+      "reflection": "Ter um Anjo da Guarda é a prova constante de que Deus nunca nos deixa sós. Ele caminha ao nosso lado nas ruas, inspira bons pensamentos em nossa mente, acalma a nossa agitação interior e apresenta as nossas preces diante do trono do Todo-Poderoso. Cultivemos a piedade de saudar diariamente o nosso companheiro invisível.",
+      "prayer": "Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarde, me governe, me ilumine. Defendei-me nas tentações, amparai-me nos tropeços e conduzi com segurança os meus passos para a Pátria Celeste. Amém.",
+      "patronage": "Proteção contra perigos da alma e do corpo, viajantes, crianças, motoristas e guarda espiritual",
+      "vocation": "Mensageiros celestes, protetores perpétuos e ministros da Providência Divina"
     }
   ]
 }

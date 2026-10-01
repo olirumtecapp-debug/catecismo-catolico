@@ -15,7 +15,7 @@
   "saints": [
     {
       "date": "2026-10-28",
-      "name": "SS. Simão e Judas (Tadeu), apóstolos",
+      "name": "São Judas Tadeu e São Simão Apóstolos",
       "normalizedName": "ss. simao e judas (tadeu), apostolos",
       "imageUrl": "./assets/img/santos/10-28-ss-simao-e-judas-tadeu-apostolos.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/28/ss--simao-e-judas--tadeu---apostolos.html",
@@ -23,8 +23,15 @@
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/28/ss--simao-e-judas--tadeu---apostolos.html",
       "sourceText": "Dois Santos e dois Apóstolos de Cristo; segundo a tradição, ambos foram mártires do Evangelho, na Mesopotâmia. A Igreja comemora a sua festa no dia 28 de outubro: A história dos dois discípulos, unidos pelo amor de Cristo e pelo seu testemunho corajoso, é recordada em uma única data.",
       "enrichment": {
-        "a12Found": false
-      }
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-01T14:00:02.395Z"
+      },
+      "biography": "Nesta data litúrgica, a Santa Igreja celebra conjuntamente o martírio glorioso de dois dos Doze Apóstolos escolhidos pessoalmente por Cristo: São Judas Tadeu e São Simão, o Zelota.\n\nSão Judas Tadeu, irmão de Tiago Menor e parente consanguíneo de Jesus e de São José, esteve presente na Última Ceia, onde dirigiu a célebre pergunta a Jesus: \"Senhor, por que te hás de manifestar a nós e não ao mundo?\" (Jo 14,22). É o autor da inspirada Epístola de Judas no Novo Testamento, onde exorta os fiéis a combaterem com ardor pelas verdades da fé transmitida aos santos.\n\nSão Simão, cognominado o Zelota pelo zelo ardente com que observava a Lei e o Evangelho, consagrou todo o seu entusiasmo patriótico à proclamação do Reino de Deus.\n\nApós a descida do Espírito Santo em Pentecostes, ambos os Apóstolos partiram juntos em missão apostólica pela Mesopotâmia, Síria, Líbia e Pérsia, pregando o Evangelho, realizando curas e convertendo multidões ao Batismo. Em Suanir, na Pérsia, foram cercados por sacerdotes idólatras e carrascos pagos. Intimados a renunciar a Cristo e a queimar incenso aos falsos deuses pagãos, responderam com santa valentia que adoravam unicamente o Deus vivo. Foram cruelmente martirizados: São Judas foi golpeado com um machado e decapitado, e São Simão foi supliciado com uma serra. \n\nAs relíquias de ambos repousam na Basílica de São Pedro no Vaticano. Desde a Idade Média, Santa Brígida da Suécia e São Bernardo receberam de Cristo a revelação de que São Judas Tadeu é o patrono especial para socorrer as causas mais desesperadas e de difícil solução.",
+      "reflection": "São Judas Tadeu e São Simão demonstram que o seguimento de Cristo exige coragem e fidelidade até o derramamento de sangue. Quando nos deparamos com problemas familiares, financeiros ou de saúde aparentemente insolúveis, a intercessão apostólica nos recorda que Deus nunca abandona os que clamam com fé.",
+      "prayer": "São Judas Tadeu, glorioso Apóstolo e servo fiel de Jesus, a Igreja vos honra e invoca universalmente como patrono dos casos desesperados e das causas sem remédio. Rogai por mim que estou tão desamparado e aflito. Fazei uso, eu vos suplico, desse privilégio particular que vos foi concedido de trazer alívio visível e imediato onde o socorro parece quase impossível. Vinde em meu auxílio nesta grande necessidade para que eu possa receber a consolação e o socorro do Céu em todas as minhas tribulações, e possa louvar a Deus convosco por toda a eternidade. São Judas Tadeu, rogai por nós!",
+      "patronage": "Causas Perdidas, Casos Desesperados, Desempregados, Trabalhadores e Aflições Extremas",
+      "vocation": "Apóstolos de Jesus Cristo, Mártires da Fé e Patronos das Causas Impossíveis"
     }
   ]
 }
