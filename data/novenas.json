@@ -12,7 +12,7 @@
     },
     "simbolo": "🌹",
     "cor": "rose",
-    "imagem": "assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png",
+    "imagem": "assets/img/santos/ns_santa-teresinha-do-menino-jesus.png",
     "instrucoes": "A Novena das Rosas comemora os 24 anos de Santa Terezinha na terra. Em cada um dos 9 dias reza-se a Intenção do Dia, a Oração da Novena à Santíssima Trindade pedindo a graça e o sinal de uma rosa, 24 vezes o Glória ao Pai com a invocação a Santa Terezinha por cada ano de sua vida terrena, e finaliza-se com 1 Ave-Maria e 1 Pai-Nosso.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Santa Terezinha do Menino Jesus e da Sagrada Face, modelo de pureza, de humildade e de abandono filial aos braços do Pai: colocamo-nos sob a vossa proteção e vos pedimos que sejais nossa intercessora no Céu.",
     "oracao_padrao_dia": "Santíssima Trindade: Pai, Filho e Espírito Santo: eu vos agradeço por todas as graças com que enriqueceste a vida de vossa serva, Santa Terezinha do Menino Jesus e da Sagrada Face, nestes 24 anos que passou na terra. E pelos méritos de tão querida santinha, concedei-me a graça que ardentemente vos peço … (faça aqui o pedido), se for conforme a Vossa Santíssima Vontade e para a salvação de minha alma (ou da pessoa por quem está rezando).\n\nAjudai minha fé e minha esperança, Santa Terezinha, cumprindo mais uma vez vossa promessa de que ficareis no Céu a fazer o bem na terra, permitindo que eu ganhe um rosa em sinal de que alcançarei a graça pedida.",
@@ -81,7 +81,8 @@
         "reflexao": "9º dia – Pelos incrédulos\n\nNos últimos meses de vida na terra, suportou a noite escura da fé em comunhão de sacrifício pelos ateus e incrédulos, para que a luz de Deus os iluminasse.\n\n\"Do céu eu farei cair sobre a Terra uma chuva de Rosas.\"",
         "oracao": "Senhor Deus, Luz indefectível, iluminai as mentes e tocai os corações dos que vivem distantes da fé e da esperança cristã. E dignai-Vos atender a graça que com fé viva vos suplicamos nesta novena por intercessão de Santa Terezinha. Amém."
       }
-    ]
+    ],
+    "santo_slug": "santa-teresinha-do-menino-jesus"
   },
   {
     "id": "padre-pio",
@@ -96,7 +97,7 @@
     },
     "simbolo": "✝️",
     "cor": "amber",
-    "imagem": "assets/img/santos/09-23-sao-pio-de-pietrelcina-presbitero.png",
+    "imagem": "assets/img/santos/ns_sao-padre-pio-de-pietrelcina.jpeg",
     "instrucoes": "A Novena a São Padre Pio celebra o capuchinho que carregou em seu corpo os estigmas da Paixão de Cristo por 50 anos. Tradicionalmente rezada de 14 a 22 de setembro (com festa litúrgica em 23 de setembro), culmina com a célebre oração 'Fica Comigo, Senhor' e a Coroinha ao Sagrado Coração de Jesus que o santo rezava diariamente por todos os que lhe pediam orações.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Deus, que a São Pio de Pietrelcina, sacerdote capuchinho, concedestes o privilégio insigne de participar, de modo admirável, da Paixão de Vosso Filho: concedei-nos, por sua virtuosa intercessão, a graça de nos unirmos à Cruz de Cristo para alcançarmos a glória da ressurreição.",
     "oracao_padrao_dia": "Ó São Padre Pio, amado protetor das almas que sofrem, vós que passáveis até 16 horas diárias no confessionário acolhendo os pecadores e enxugando as lágrimas dos aflitos: olhai com benevolência para mim. Vós que prometestes estar à porta do Paraíso esperando até que o último de vossos filhos espirituais entre: acolhei a súplica que com tanta confiança vos apresento (faça aqui o seu pedido pessoal)... 'Reza, tem fé e não te preocupes. A preocupação é inútil. Deus é misericordioso e ouvirá a tua oração'.",
@@ -165,7 +166,8 @@
         "reflexao": "No dia 22 de setembro de 1968, Padre Pio celebrou sua última Santa Missa e na madrugada de 23 de setembro expirou sussurrando: 'Jesus, Maria...'. Ele partiu deixando-nos o segredo da santidade.",
         "oracao": "Ó amado São Padre Pio de Pietrelcina, neste nono dia de prece fervorosa, tomo posse de vosso bendito conselho: não quero mais me preocupar com o amanhã, mas descansar na Providência Divina. Apresentai ao Coração Sagrado de Jesus a súplica desta novena e alcançai-me a graça que vos pedi. Sede o meu pai espiritual e guiai-me até o Céu. Amém."
       }
-    ]
+    ],
+    "santo_slug": "sao-padre-pio-de-pietrelcina"
   },
   {
     "id": "sao-geraldo-magela",
@@ -249,7 +251,8 @@
         "reflexao": "São Geraldo entregou sua alma a Deus aos 29 anos de idade, sereno, cantando as misericórdias do Senhor. Ele partiu deste mundo para ser nosso intercessor perpétuo junto de Deus.",
         "oracao": "Ó São Geraldo Magela, acolhei sob a vossa proteção perpétua a mim, aos meus filhos e a toda a minha parentela. Alcançai-nos a graça solicitada nesta novena e conduzi-nos à pátria celeste onde contemplaremos convosco o esplendor de Deus por todos os séculos dos séculos. Amém."
       }
-    ]
+    ],
+    "santo_slug": "sao-geraldo-majella"
   },
   {
     "id": "santa-edwiges",
@@ -264,7 +267,7 @@
     },
     "simbolo": "🏰",
     "cor": "amber",
-    "imagem": "assets/img/santos/10-16-santa-edviges-duquesa-da-silesia-religiosa.png",
+    "imagem": "assets/img/santos/ns_santa-edwiges.webp",
     "instrucoes": "Santa Edwiges (1174-1243), duquesa da Silésia e depois religiosa no convento de Trebnitz, usava sua fortuna para libertar os prisioneiros endividados, pagar as contas dos pobres e garantir que nenhuma família ficasse desabrigada.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Deus, que ensinastes a Santa Edwiges a preferir com alegria a pobreza do Evangelho às delícias e grandezas de um reino ducal, concedei-nos, por suas preces e méritos, a graça de desapegar nossos corações dos bens transitórios e confiar unicamente na Vossa Providência Divina.",
     "oracao_padrao_dia": "Ó Santa Edwiges, vós que na terra fostes o amparo dos desvalidos, a mãe carinhosa dos órfãos e o refúgio seguro dos endividados: olhai com benevolência para as aflições materiais e financeiras de meu lar. Vós bem sabeis o desespero e a dor de quem não consegue saldar suas dívidas ou sustentar dignamente os seus. Intercedei por mim diante de Nosso Senhor Jesus Cristo para que eu obtenha o socorro necessário (faça o pedido de trabalho, quitação de dívidas ou bênção financeira)... e a graça suprema da salvação da minha alma.",
@@ -333,7 +336,8 @@
         "reflexao": "'Deus provê, Deus proverá, Sua Misericórdia não faltará.' Esta certeza inabalável sustentou Santa Edwiges até a sua páscoa definitiva rumo ao Reino dos Céus.",
         "oracao": "Ó gloriosa Santa Edwiges, padroeira dos necessitados e dos endividados, coloco em vossas mãos generosas esta minha prece urgente. Apresentai-a a Nosso Senhor Jesus Cristo e obtende-me o alívio que necessito. Prometo ser grato à vossa intercessão e testemunhar a bondade de Deus em minha vida. Por Cristo, Nosso Senhor. Amém."
       }
-    ]
+    ],
+    "santo_slug": "santa-edwiges"
   },
   {
     "id": "santa-luzia",
@@ -348,7 +352,7 @@
     },
     "simbolo": "👀",
     "cor": "emerald",
-    "imagem": "assets/img/santos/12-13-santa-luzia-virgem-e-martir-de-siracusa.png",
+    "imagem": "assets/img/santos/ns_santa-luzia.jpg",
     "instrucoes": "Santa Luzia (283-304), nascida em Siracusa na Sicília, preferiu derramar seu sangue e sofrer o martírio durante a perseguição de Diocleciano antes de manchar sua virgindade ou renegar a fé cristã. Seu próprio nome significa 'Cheia de Luz', sendo invocada há 17 séculos como defensora da vista corpórea e espiritual.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Deus, que alegrais a Vossa Igreja com a celebração da santa virgem e mártir Luzia, concedei-nos, por sua virtuosa intercessão, a graça de uma vida santa e luminosa neste mundo e a posse da luz eterna na glória do Céu.",
     "oracao_padrao_dia": "Ó Santa Luzia, virgem sapientíssima e mártir gloriosa, que preferistes que vossos olhos fossem vazados e arrancados antes de renegar o Cristo Salvador e manchar vossa pureza de fé: olhai com compaixão para mim. Vinde em socorro da saúde de meus olhos e preservai-me de toda enfermidade na visão (faça aqui o pedido de cura da vista ou intenção particular). Mas, acima de tudo, livrai minha alma das trevas do pecado e da cegueira espiritual, para que meus passos sejam sempre iluminados pelo Evangelho da verdade.",
@@ -417,7 +421,8 @@
         "reflexao": "Santa Luzia agora contempla para sempre, face a face, a beleza infinita da Santíssima Trindade. Ela é nossa intercessora fiel na terra até o encontro definitivo na glória.",
         "oracao": "Ó Santa Luzia, virgem e mártir, protegei a luz dos meus olhos, curai qualquer fraqueza visual ou enfermidade que me aflija, e concedei-me a graça que com fé vos pedi nesta novena. Acima de tudo, guiai-me para que eu viva na luz de Deus e mereça contemplar convosco no Paraíso o Salvador. Amém."
       }
-    ]
+    ],
+    "santo_slug": "santa-luzia"
   },
   {
     "id": "nossa-senhora-aparecida",
@@ -432,7 +437,7 @@
     },
     "simbolo": "👑",
     "cor": "blue",
-    "imagem": "assets/img/santos/10-12-nossa-senhora-aparecida.png",
+    "imagem": "assets/img/santos/ns_nossa-senhora-aparecida.png",
     "instrucoes": "A Novena da Padroeira do Brasil é rezada anualmente de 3 a 11 de outubro no Santuário Nacional de Aparecida e em todas as paróquias do Brasil, celebrando o encontro milagroso da imagem nas águas do Rio Paraíba do Sul em 1717.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Maria Santíssima, Mãe de Deus e nossa Mãe, que nas águas do Rio Paraíba vos dignastes manifestar o vosso carinho maternal pelo povo brasileiro: acolhei os vossos filhos que hoje se prostram cheios de confiança diante de vossa bendita imagem.",
     "oracao_padrao_dia": "Ó Virgem Imaculada, Senhora da Conceição Aparecida, vós que quebrastes as correntes do escravo Zacarias, devolvestes a visão à menina cega e amparastes os humildes pescadores: olhai para a nossa família e para a nossa pátria. Apresentai a Jesus a súplica sincera que neste dia vos apresento (faça o seu pedido pessoal)... Guardai nossos lares no amor, na fidelidade e na paz de Cristo.",
@@ -501,7 +506,8 @@
         "reflexao": "Milhões de romeiros chegam a Aparecida descalços, com velas e lágrimas nos olhos. Nenhum filho jamais voltou de lá sem o consolo da Mãe.",
         "oracao": "Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus, Rainha dos Anjos, Advogada dos pecadores: neste nono dia vos agradeço a graça de rezar convosco. Atendei a súplica do meu coração e guiai os meus passos até que eu vos contemple um dia na glória celestial. Amém."
       }
-    ]
+    ],
+    "santo_slug": "nossa-senhora-aparecida"
   },
   {
     "id": "sao-judas-tadeu",
@@ -516,7 +522,7 @@
     },
     "simbolo": "🔥",
     "cor": "emerald",
-    "imagem": "assets/img/santos/10-28-ss-simao-e-judas-tadeu-apostolos.png",
+    "imagem": "assets/img/santos/ns_sao-judas-tadeu.jpg",
     "instrucoes": "São Judas Tadeu, parente de Jesus segundo a carne e irmão de São Tiago Menor, é universalmente invocado quando todos os recursos humanos falham. O próprio Nosso Senhor revelou a Santa Brígida da Suécia que recorresse com confiança a São Judas para causas aflitas.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ glorioso Apóstolo São Judas Tadeu, servo fiel e amigo de Jesus, a Igreja vos honra e invoca por todo o mundo como o patrono dos casos desesperados, das coisas quase desenganadas. Rogai por mim, que me sinto tão desamparado.",
     "oracao_padrao_dia": "São Judas Tadeu, apóstolo amado, valei-me nesta grande necessidade espiritual e temporal (apresente aqui com fervor a sua causa impossível ou aflição profunda). Prometo, ó bendito São Judas, lembrar-me sempre deste grande favor, nunca deixar de vos honrar como meu padroeiro especial e poderoso, e fazer tudo o que estiver em meu alcance para incentivar a devoção para convosco.",
@@ -585,7 +591,8 @@
         "reflexao": "São Judas reina com os doze apóstolos junto ao Cordeiro imolado. De lá, ele ouve sem cessar os clamores dos que na terra suplicam socorro.",
         "oracao": "Glorioso São Judas Tadeu, acolhei com ternura as lágrimas e as preces desta novena. Apresentai o meu pedido ao Coração Sagrado de Jesus e alcançai-me a graça que vos peço. Serei eternamente vosso devoto e cantarei as misericórdias de Deus para sempre. Amém."
       }
-    ]
+    ],
+    "santo_slug": "sao-judas-tadeu"
   },
   {
     "id": "nossa-senhora-desatadora-dos-nos",
@@ -669,7 +676,8 @@
         "reflexao": "No quadro milagroso, a fita que entrava cheia de nós e emaranhados nas mãos de Maria sai do outro lado completamente lisa, alva e luminosa. Assim faz a Mãe com a vida de quem nEla confia.",
         "oracao": "Ó Virgem Desatadora dos Nós, admirável e bendita entre todas as mulheres! Ao concluir esta novena, vejo com lágrimas de esperança a fita de minha existência sendo renovada por tuas mãos. Obrigado por teres acolhido minha prece. Guarda-me para sempre sob teu manto até que eu chegue contigo à glória eterna de Jesus. Amém."
       }
-    ]
+    ],
+    "santo_slug": "nossa-senhora-desatadora-dos-nos"
   },
   {
     "id": "divina-misericordia",
@@ -689,7 +697,7 @@
     },
     "simbolo": "✨",
     "cor": "red",
-    "imagem": "assets/img/santos/10-05-santa-faustina-kowalska.png",
+    "imagem": "assets/img/santos/ns_santa-faustina-kowalska.png",
     "instrucoes": "Esta novena foi ditada pelo próprio Jesus a Santa Maria Faustina Kowalska, conforme registrado em seu Diário (parágrafos 1209-1229). Jesus pediu que começasse na Sexta-feira Santa e se concluísse no Sábado da Oitava da Páscoa, véspera da Festa da Misericórdia. Em cada dia, Jesus pede para trazer ao Seu Coração um grupo diferente de almas.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nExpirastes, Jesus, mas a fonte da vida brotou para as almas e o oceano da misericórdia abriu-se para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo todo e derramai-Vos sobre nós.\n\nÓ Sangue e Água que brotastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!",
     "oracao_padrao_dia": "Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro. Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.",
@@ -758,7 +766,8 @@
         "reflexao": "Estas almas foram as que causaram mais dor a Jesus no Horto das Oliveiras, arrancando-Lhe a queixa: 'Pai, afasta de Mim este cálice.'",
         "oracao": "Fogo de Puro Amor, abrasai na Vossa compaixão estas almas frias e indiferentes. Despertai-as para a vida da graça, para que não se percam eternamente. Amém."
       }
-    ]
+    ],
+    "santo_slug": "santa-faustina-kowalska"
   },
   {
     "id": "pentecostes",
@@ -847,7 +856,8 @@
         "reflexao": "Em Pentecostes, línguas de fogo pousaram sobre os Apóstolos reunidos com a Santíssima Virgem, transformando homens tímidos em colunas invencíveis da verdade.",
         "oracao": "Ó Divino Espírito Santo, acolhei-me neste Cenáculo com a Virgem Maria! Batizai o meu coração com o Vosso fogo sagrado. Concedei-me a graça desta novena e fazei de mim uma testemunha corajosa do Evangelho por toda a minha vida. Amém."
       }
-    ]
+    ],
+    "santo_slug": null
   },
   {
     "id": "sao-bento",
@@ -862,7 +872,7 @@
     },
     "simbolo": "🛡️",
     "cor": "amber",
-    "imagem": "assets/img/santos/07-11-sao-bento-abade-padroeiro-da-europa.png",
+    "imagem": "assets/img/santos/ns_sao-bento-de-nursia.jpg",
     "instrucoes": "São Bento de Núrsia (480-547), pai da civilização monástica ocidental e autor da célebre Regra 'Ora et Labora' (Reza e Trabalha), é patrono supremo da proteção espiritual contra as opressões demoníacas e feitiçarias, através da Santa Cruz.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ glorioso São Bento, que sempre fostes modelo de vida evangélica e de vitória inabalável contra o demônio e o pecado: protegei-nos de todos os males da alma e do corpo, e ensinai-nos a buscar a Deus sobre todas as coisas terrenas.",
     "oracao_padrao_dia": "Ó São Bento, patriarca dos monges e amigo de Deus, vós que quebrastes com o sinal da Santa Cruz a taça de veneno e fizestes voar o pão contaminado que vos queriam dar: livrai a mim, minha casa e minha família de toda influência maligna, cilada, inveja e malefício (apresente aqui a sua intenção e pedido de libertação). Que a Vossa Santa Cruz seja a minha luz e meu escudo perpétuo.",
@@ -931,7 +941,8 @@
         "reflexao": "São Bento morreu de pé na capela, sustentado pelos braços de seus monges, após comungar o Santo Viático, com as mãos erguidas aos céus em oração ininterrupta.",
         "oracao": "Glorioso São Bento, alcançai-me a graça que vos suplico nesta novena e sede meu protetor na hora da morte. Que a vossa santa medalha e a Cruz de Cristo me defendam dos ardis do demônio até o meu último suspiro. Amém."
       }
-    ]
+    ],
+    "santo_slug": "sao-bento-de-nursia"
   },
   {
     "id": "santo-antonio",
@@ -946,7 +957,7 @@
     },
     "simbolo": "🍞",
     "cor": "amber",
-    "imagem": "assets/img/santos/06-13-sao-antonio-de-padua-sacerdote-franciscano-e-doutor-da-igreja.png",
+    "imagem": "assets/img/santos/ns_santo-antonio-de-padua.jpg",
     "instrucoes": "Santo Antônio de Lisboa e Pádua (1195-1231), frade menor franciscano, é um dos santos mais populares e amados da Cristandade. Rezada frequentemente sob a forma de Novena (9 dias) ou Trezena (13 dias), a oração invoca seu poder de intercessão junto ao Menino Jesus.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ admirável Santo Antônio, luzeiro brilhante da Santa Igreja e glória da Ordem Franciscana: com o Menino Jesus em vossos braços e o lírio da pureza em vossas mãos, olhai com carinho para as necessidades do meu coração.",
     "oracao_padrao_dia": "Ó Santo Antônio, que recebestes de Deus o dom extraordinário de restituir as coisas perdidas e socorrer os necessitados: recuperai para a minha vida a graça santificante, a paz e a concórdia familiar. Apresentai com bondade a Jesus Menino a súplica que hoje vos confio (faça o seu pedido pessoal ou familiar). Se milagres desejais, recorrei a Santo Antônio e vereis o poder de Deus manifestado na vossa vida!",
@@ -1015,7 +1026,8 @@
         "reflexao": "Aos 36 anos, ao expirar no convento de Arcella perto de Pádua, perguntaram-lhe o que via e ele respondeu em júbilo: 'Vejo o meu Senhor!'",
         "oracao": "Ó Santo Antônio de Pádua, rogai por nós a Jesus, atendei a súplica fervorosa desta novena e guiai-nos até a posse da bem-aventurança eterna no Céu. Amém."
       }
-    ]
+    ],
+    "santo_slug": "santo-antonio-de-padua"
   },
   {
     "id": "sao-jose",
@@ -1030,7 +1042,7 @@
     },
     "simbolo": "🪵",
     "cor": "amber",
-    "imagem": "assets/img/santos/03-19-santa-jose-esposo-da-santissima-virgem-maria-padroeiro-da-igreja-universal.png",
+    "imagem": "assets/img/santos/ns_sao-jose.jpg",
     "instrucoes": "São José, o justo carpinteiro da linhagem de Davi, foi escolhido pelo Pai Eterno como guarda fiel dos Seus maiores tesouros na terra: Jesus e Maria. Santa Teresa de Ávila afirmava que nunca pediu uma graça a São José sem ser prontamente atendida.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nA vós, São José, recorremos em nossa tribulação e, depois de ter implorado o auxílio de vossa santíssima Esposa, cheios de confiança solicitamos também o vosso patrocínio. Por aquele laço sagrado de caridade que vos uniu à Virgem Imaculada Mãe de Deus e pelo amor paternal que tivestes ao Menino Jesus, vos suplicamos que lanceis um olhar benigno para a herança que Jesus Cristo adquiriu com Seu sangue.",
     "oracao_padrao_dia": "Ó São José, guarda da Sagrada Família, socorrei-me em minhas necessidades temporais e espirituais (apresente aqui o seu pedido de moradia, sustento, família ou graça espiritual). Vós a quem o próprio Filho de Deus chamou de pai na terra e obedeceu com amor filial: apresentai a Ele a minha súplica e alcançai-me a virtude do vosso silêncio, da vossa obediência e da vossa pureza.",
@@ -1099,7 +1111,8 @@
         "reflexao": "Nenhum homem na terra teve morte tão feliz e santa: São José expirou docemente adormecendo nos braços amorosos de Jesus e de Maria Santíssima.",
         "oracao": "Ó glorioso São José, patrono dos moribundos e da boa morte: atendei a graça que com fé vos suplico nesta novena. Quando chegar a minha hora derradeira, vinde com Jesus e Maria receber a minha alma para a vida eterna. Amém."
       }
-    ]
+    ],
+    "santo_slug": "sao-jose"
   },
   {
     "id": "sao-miguel-arcanjo",
@@ -1114,7 +1127,7 @@
     },
     "simbolo": "⚔️",
     "cor": "red",
-    "imagem": "assets/img/santos/09-29-sao-miguel-arcanjo.png",
+    "imagem": "assets/img/santos/ns_sao-miguel-arcanjo.png",
     "instrucoes": "A Novena a São Miguel Arcanjo é tradicionalmente rezada de 20 a 28 de setembro (precedendo a festa dos Santos Arcanjos em 29 de setembro) ou durante a Quaresma de São Miguel (iniciada em 15 de agosto). Cada dia invoca a intercessão do Arcanjo junto a um dos Nove Coros Celestes.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Deus, vinde em meu auxílio. Senhor, apressai-Vos em me socorrer. Glória ao Pai, ao Filho e ao Espírito Santo, como era no princípio, agora e sempre. Amém.\n\nSão Miguel Arcanjo, defendei-nos no combate, sede o nosso refúgio contra as maldades e as ciladas do demônio. Ordene-lhe Deus, instantemente o pedimos, e vós, príncipe da milícia celeste, pela virtude divina, precipitai no inferno a Satanás e a todos os espíritos malignos que andam pelo mundo para perder as almas. Amém.",
     "oracao_padrao_dia": "Gloriosíssimo Príncipe da Milícia Celeste, São Miguel Arcanjo, terror dos demônios e protetor do povo de Deus: olhai com benevolência para as minhas angústias e provações (apresente aqui o seu combate espiritual ou necessidade pessoal). Pelo vosso brado vitorioso 'Quem como Deus?!', protegei a minha alma e dai-me a vitória sobre as forças do mal.",
@@ -1183,7 +1196,8 @@
         "reflexao": "Os Santos Anjos da Guarda caminham ao nosso lado desde o nascimento até a morte, iluminando, guardando, governando e protegendo nossa alma.",
         "oracao": "Pela intercessão de São Miguel e do Coro Celeste de todos os Anjos, o Senhor nos conceda a proteção de Seus santos mensageiros nesta vida e a entrada no Céu. Amém."
       }
-    ]
+    ],
+    "santo_slug": "sao-miguel-arcanjo"
   },
   {
     "id": "novena-de-natal",
@@ -1267,7 +1281,8 @@
         "reflexao": "Chegou o grande dia da salvação! O Salvador nasceu para nós! A Luz resplandece nas trevas e as trevas não puderam sufocá-la.",
         "oracao": "Vinde, ó Divino Menino Jesus, e não tardeis mais! Nascei em nossos corações, renovai a nossa fé, abençoai nossa ceia e nossa família, e dai-nos um dia a graça de Vos contemplar na festa eterna do Vosso Reino Celestial. Amém."
       }
-    ]
+    ],
+    "santo_slug": null
   },
   {
     "id": "santa-rita-de-cassia",
@@ -1282,7 +1297,7 @@
     },
     "simbolo": "🌹",
     "cor": "rose",
-    "imagem": "assets/img/santos/05-22-santa-rita-de-cassia-religiosa-agostiniana.png",
+    "imagem": "assets/img/santos/ns_santa-rita-de-cassia.png",
     "instrucoes": "A Novena de Santa Rita de Cássia prepara o coração para recorrer à intercessão da 'Santa dos Impossíveis'. Em cada um dos 9 dias, inicia-se com o Sinal da Cruz e a Oração Inicial, reza-se a Reflexão e a Oração própria do dia com a intenção pessoal, e conclui-se com a Oração Final, 3 Pai-Nossos, 3 Ave-Marias e 3 Glórias ao Pai.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ gloriosa Santa Rita de Cássia, vós que fostes digna de participar da dolorosa Paixão de Nosso Senhor Jesus Cristo trazendo na fronte a chaga de um dos seus sagrados espinhos: acolhei as nossas súplicas e intercedei por nós junto ao trono de Deus. Ensinai-nos a virtude da paciência nas cruzes, do perdão sincero e da confiança inabalável na Providência Divina.",
     "oracao_padrao_dia": "Ó poderosa advogada dos aflitos, Santa Rita de Cássia, a vossa vida na terra foi um hino contínuo de fé, mansidão e fidelidade evangélica. Como esposa paciente, mãe abnegada e religiosa recolhida no claustro agostiniano, nunca duvidastes do amor de Deus, mesmo nas noites mais escuras.\n\nCom filial confiança recorro a vós nesta hora de grande angústia e provação. Apresentai diante de Jesus esta minha necessidade premente que aos olhos humanos parece impossível: (mencione com fervor a sua intenção).\n\nAlcançai-me, ó Santa dos Impossíveis, se for para a maior glória de Deus e a salvação da minha alma, a graça que tão humildemente vos suplico.",
@@ -1351,7 +1366,8 @@
         "reflexao": "9º dia – A Intercessão que Nunca Falha\nHá mais de cinco séculos, multidões de fiéis em todo o mundo atestam que nenhuma oração sincera confiada a Santa Rita fica sem resposta consoladora. Deus glorifica os seus santos que o amaram até o fim.",
         "oracao": "Ó Santa Rita de Cássia, acolhei sob o vosso manto a minha vida, a minha família e a causa que vos confiei. Prometo testemunhar com renovado zelo a Vossa intercessão e viver uma vida cristã autêntica para a glória do Pai, do Filho e do Espírito Santo. Amém!"
       }
-    ]
+    ],
+    "santo_slug": "santa-rita-de-cassia"
   },
   {
     "id": "sagrado-coracao-de-jesus",
@@ -1366,7 +1382,7 @@
     },
     "simbolo": "❤️‍🔥",
     "cor": "amber",
-    "imagem": "assets/img/santos/10-16-santa-margarida-maria-alacoque-virgem-da-ordem-da-visitacao.png",
+    "imagem": "assets/img/liturgia/cristo_bencao.jpg",
     "instrucoes": "A Novena da Confiança ao Sagrado Coração de Jesus baseia-se nas revelações a Santa Margarida Maria Alacoque. Reze em cada um dos nove dias o Oferecimento, a Meditação Bíblica, a Oração da Confiança Irrestrita e a Ladainha ou Invocação Final.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Jesus misericordioso, que dissestes: 'Vinde a mim todos vós que estais cansados e fatigados sob o peso dos vossos fardos, e Eu vos aliviarei': eis-me prostrado diante do Vosso Coração aberto na Cruz pela lança do soldado. A Vós consagro o meu coração, as minhas angústias e todas as minhas esperanças.",
     "oracao_padrao_dia": "Ó Divino Coração de Jesus, fonte perene de toda consolação: a Vós recorro com filial e irrestrita confiança. Vós bem conheceis as minhas misérias, a minha fraqueza e as grandes aflições que me cercam.\n\nOlhai com misericórdia para esta prece que do fundo da minha alma Vos apresento: (faça aqui o seu pedido com profunda fé).\n\nCoração Eucarístico de Jesus, manso e humilde, transformai o meu coração para que seja semelhante ao Vosso, e concedei-me a graça que ardentemente vos suplico.",
@@ -1435,7 +1451,8 @@
         "reflexao": "9º dia – 'Eu reinarei apesar dos meus inimigos'\nNada pode vencer o amor infinito de Deus. Aquele que se abandona no Sagrado Coração de Jesus já é mais que vencedor em Cristo Jesus.",
         "oracao": "Sagrado Coração de Jesus, eu me entrego a Vós por inteiro: o meu passado à Vossa misericórdia, o meu presente ao Vosso amor, e o meu futuro à Vossa santíssima Providência. Amém!"
       }
-    ]
+    ],
+    "santo_slug": null
   },
   {
     "id": "nossa-senhora-de-fatima",
@@ -1450,7 +1467,7 @@
     },
     "simbolo": "🕊️",
     "cor": "mariana",
-    "imagem": "assets/img/santos/05-13-nossa-senhora-de-fatima.png",
+    "imagem": "assets/img/santos/ns_nossa-senhora-de-fatima.jpeg",
     "instrucoes": "A Novena de Nossa Senhora de Fátima comemora as aparições da Santíssima Virgem aos três pastorinhos (Lúcia, Francisco e Jacinta) na Cova da Iria em 1917. Reze cada dia com o Santo Rosário, meditação da Mensagem de Fátima e a oração reparadora do Anjo da Paz.",
     "oracao_inicial": "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ Santíssima Virgem Maria, Rainha do Santo Rosário e Mãe de Misericórdia, que descestes do Céu para lembrar à humanidade a urgência da oração, da conversão dos costumes e da penitência: acolhei com benevolência a nossa súplica e ensinai-nos a amar a Jesus com o Vosso Imaculado Coração.",
     "oracao_padrao_dia": "Ó Virgem Imaculada de Fátima, Senhora do Rosário, volvei para nós os vossos olhos cheios de ternura maternal. Ao verdes a terra ameaçada pelas guerras, pela discórdia e pelo esquecimento dos mandamentos divinos, viestes pedir a oração perseverante do Terço e a consagração dos nossos lares.\n\nAnimados pela Vossa promessa consoladora de que 'por fim, o meu Imaculado Coração triunfará', nós Vos confiamos a nossa vida, a nossa família e esta necessidade urgente que trazemos no íntimo da alma: (apresente o seu pedido).\n\nConcedei-nos, Mãe querida, a fidelidade à graça de Deus e a coragem de sermos apóstolos da paz e da esperança no meio do mundo.",
@@ -1519,7 +1536,8 @@
         "reflexao": "9º dia – O Triunfo da Graça\nA promessa de Fátima não é de derrota, mas de esperança luminosa. Por maiores que sejam as tempestades da história, o Reino de Deus prevalecerá e Maria nos conduzirá com segurança a Cristo.",
         "oracao": "Ó Senhora de Fátima, consagramos a Vós os nossos corpos, as nossas famílias e os destinos do nosso país. Reinai em nossos corações até o encontro definitivo na glória celeste. Amém!"
       }
-    ]
+    ],
+    "santo_slug": "nossa-senhora-de-fatima"
   },
   {
     "id": "sao-peregrino",
@@ -1603,7 +1621,8 @@
         "reflexao": "9º dia – O Triunfo da Vida Eterna\nNo dia 1º de maio de 1345, aos 80 anos, São Peregrino entrou no repouso do Senhor. Sua vida nos lembra que a última palavra nunca pertence à doença ou à morte, mas à Ressurreição de Jesus Cristo.",
         "oracao": "Ó Deus todo-poderoso, que em São Peregrino nos destes um refúgio admirável na provação do câncer, concedei-nos a saúde da alma e do corpo para que Vos sirvamos com alegria todos os dias de nossa vida. Por Cristo, Nosso Senhor. Amém!"
       }
-    ]
+    ],
+    "santo_slug": "sao-peregrino"
   },
   {
     "id": "medalha-milagrosa",
@@ -1687,6 +1706,7 @@
         "reflexao": "9º dia – O Triunfo da Devoção\n'Todas as pessoas que usarem a Medalha ao pescoço com confiança receberão grandes graças'. Não é um amuleto, mas um sinal exterior de pertença e consagração filial a Maria.",
         "oracao": "Ó Virgem da Medalha Milagrosa, acolhei o meu coração e a minha vida inteira. Que ao trazer a vossa santa medalha eu me lembre sempre de agir como verdadeiro filho de Deus. Amém!"
       }
-    ]
+    ],
+    "santo_slug": null
   }
 ]

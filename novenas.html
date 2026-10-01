@@ -461,11 +461,12 @@
         // Resolução inteligente e dinâmica da imagem oficial do santo para novenas
         function getNovenaImage(item) {
             if (!item) return '';
+            if (item.imagem) return item.imagem;
             if (typeof window.resolveLocalSaintImage === 'function') {
                 const resolved = window.resolveLocalSaintImage(item.titulo, item.festa_liturgica?.data);
                 if (resolved) return resolved;
             }
-            return item.imagem || '';
+            return '';
         }
 
         // Carregar JSON de Novenas com garantia de frescor de cache
