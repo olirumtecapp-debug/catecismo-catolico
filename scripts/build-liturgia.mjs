@@ -406,6 +406,101 @@ function buildFromApi(j,date){
 
 function nonEmpty(v){ return typeof v === 'string' && v.trim().length > 0; }
 
+const EVANGELISTA_MAP = {
+  'mateus': 'Mt', 'marcos': 'Mc', 'lucas': 'Lc', 'joao': 'Jo',
+};
+
+function cleanPsalmText(text) {
+  if (!text) return text;
+  return text
+    .replace(/\s*\*\s*/g, ' ')
+    .replace(/\b(\d+)([a-e])\b\s*/g, '$1 ')
+    .replace(/(^|\n)\s*[a-e]\s+/g, '$1')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n[ \t]+/g, '\n')
+    .trim();
+}
+
+function fixPsalmRef(ref) {
+  if (!ref) return ref;
+  if (/^Sl\s/i.test(ref)) return ref;
+  if (/^Salmo\s+/i.test(ref)) {
+    return ref.replace(/^Salmo\s+/i, 'Sl ').replace(/\s+\(/g, '(');
+  }
+  if (/^\d/.test(ref)) return 'Sl ' + ref;
+  return ref;
+}
+
+function fixGospelRef(ref) {
+  if (!ref) return ref;
+  if (/^(Mt|Mc|Lc|Jo)\s+\d/i.test(ref)) return ref;
+  const m = ref.match(/segundo\s+(?:são\s+|s\.?\s*)?(\w+)\s+(\d[\d,;\.\s\-–]+)/i);
+  if (m) {
+    const key = m[1].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const evang = EVANGELISTA_MAP[key];
+    if (evang) {
+      const nums = m[2].replace(/\s+/g, '').replace(/,\s*/g, ',');
+      return `${evang} ${nums}`;
+    }
+  }
+  return ref;
+}
+
+function fixReadingText(text) {
+  if (!text) return text;
+  const leituraMatch = text.match(/Leitura\s+d(?:o\s+(?:Livro|Profeta)|a\s+(?:Carta|Primeira|Segunda|Terceira)|os\s+Atos|o\s+Apocalipse|o\s+livro|a\s+Epístola)/i);
+  if (leituraMatch && leituraMatch.index > 5) {
+    text = text.slice(leituraMatch.index).trim();
+  }
+  text = text
+    .replace(/^Leitura\s+d[oa]s?\s+[^\n]+?(?:\d[\d,;.\-–\/]+|[\d]+)\s+(?=[A-ZÀ-ÿ"'"\u201c])/i, '')
+    .replace(/^Leitura\s+d[oa]s?\s+[^\n]+\.\s+/i, '')
+    .replace(/^Leitura\s+d[oa]s?\s+[^\n]+\n/i, '')
+    .trim();
+  text = text.replace(/^(?:Primeira|Segunda)\s+Leitura\s*\([^)]+\)\s*/i, '').trim();
+  text = text.replace(/^Proclama[cç][aã]o\s+do\s+(?:Santo\s+)?Evangelho\s+de\s+Jesus\s+Cristo[^.]+\.\s*/i, '').trim();
+  text = text.replace(/^Gl[oó]ria\s+a\s+v[oó]s,\s*Senhor\.?\s*/i, '').trim();
+  text = text.replace(/\b(\d+)([A-ZÀ-ÿ"\u201c])/g, '$1 $2');
+  text = text.replace(/[ \t]+/g, ' ').trim();
+  return text;
+}
+
+function fixGospelText(text, hasAcclamation) {
+  if (!text) return text;
+  if (hasAcclamation) {
+    text = text.replace(/^(?:[—–-]\s*)?Aleluia[^.]*\.\s*/i, '').trim();
+    text = text.replace(/^(?:[—–-]\s*)?Proclama[cç][aã]o[^.]+\.\s*/i, '').trim();
+    text = text.replace(/^(?:[—–-]\s*)?Gl[oó]ria\s+a\s+v[oó]s,\s*Senhor\.?\s*/i, '').trim();
+  }
+  return fixReadingText(text);
+}
+
+function fixAcclamationVerse(verse) {
+  if (!verse) return verse;
+  const known = [
+    {
+      pattern: /^Convertei-vos e crede no\s*$/i,
+      full: 'Convertei-vos e crede no Evangelho, pois o Reino de Deus está chegando!'
+    },
+    {
+      pattern: /^Convertei-vos e crede no Evangelho\s*$/i,
+      full: 'Convertei-vos e crede no Evangelho, pois o Reino de Deus está chegando!'
+    },
+    {
+      pattern: /Eu vos escolhi.*do meio do mundo.*Eu vos escolhi.*do meio do mundo/i,
+      full: 'Eu vos escolhi do meio do mundo, a fim de que deis um fruto que dure. (Jo 15,16)'
+    },
+    {
+      pattern: /Eu sou o pão vivo.*quem deste pão come.*Eu sou o pão vivo/i,
+      full: 'Eu sou o pão vivo, descido do céu; quem deste pão come, sempre há de viver. (Jo 6,51)'
+    },
+  ];
+  for (const { pattern, full } of known) {
+    if (pattern.test(verse.trim())) return full;
+  }
+  return verse;
+}
+
 function cleanLiturgyRecord(data){
   const r = data?.readings;
   if (!r) return data;
@@ -456,6 +551,26 @@ function cleanLiturgyRecord(data){
     }
     r.gospel.text = t;
   }
+
+  // Padronizações definitivas padrão Canção Nova
+  if (r.firstReading) {
+    r.firstReading.text = fixReadingText(r.firstReading.text);
+  }
+  if (r.secondReading) {
+    r.secondReading.text = fixReadingText(r.secondReading.text);
+  }
+  if (r.psalm) {
+    r.psalm.reference = fixPsalmRef(r.psalm.reference);
+    r.psalm.text = cleanPsalmText(r.psalm.text);
+  }
+  if (r.gospel) {
+    r.gospel.reference = fixGospelRef(r.gospel.reference);
+    if (r.gospel.acclamation?.verse !== undefined) {
+      r.gospel.acclamation.verse = fixAcclamationVerse(r.gospel.acclamation.verse);
+    }
+    r.gospel.text = fixGospelText(r.gospel.text, !!r.gospel.acclamation);
+  }
+
   return data;
 }
 
