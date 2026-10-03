@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-01-03",
-      "name": "São Antero, papa",
-      "normalizedName": "sao antero, papa",
-      "imageUrl": "./assets/img/santos/01-03-sao-antero-papa.png",
+      "name": "Santo Antero, papa",
+      "normalizedName": "sao antero papa",
+      "imageUrl": "./assets/img/santos/01-03-santo-antero-papa.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

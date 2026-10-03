@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-04-21",
-      "name": "São Anselmo, arcebispo de Cantuária e doutor da Igreja",
-      "normalizedName": "sao anselmo, arcebispo de cantuaria e doutor da igreja",
-      "imageUrl": "./assets/img/santos/04-21-sao-anselmo-arcebispo-de-cantuaria-e-doutor-da-igreja.png",
+      "name": "Santo Anselmo, arcebispo de Cantuária e doutor da Igreja",
+      "normalizedName": "sao anselmo arcebispo de cantuaria e doutor da igreja",
+      "imageUrl": "./assets/img/santos/04-21-santo-anselmo-arcebispo-de-cantuaria-e-doutor-da-igreja.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/21/s--anselmo--arcebispo-de-cantuaria-e-doutor-da-igreja.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/04/21/s--anselmo--arcebispo-de-cantuaria-e-doutor-da-igreja.html",
@@ -28,9 +28,9 @@
     },
     {
       "date": "2026-04-21",
-      "name": "São Apolônio, filósofo e mártir romano",
-      "normalizedName": "sao apolonio, filosofo e martir romano",
-      "imageUrl": "./assets/img/santos/04-21-sao-apolonio-filosofo-e-martir-romano.png",
+      "name": "Santo Apolônio, filósofo e mártir romano",
+      "normalizedName": "sao apolonio filosofo e martir romano",
+      "imageUrl": "./assets/img/santos/04-21-santo-apolonio-filosofo-e-martir-romano.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

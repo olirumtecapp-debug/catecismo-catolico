@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-09-29",
-      "name": "B. Nicolau de Furca Palena, presbítero da Ordem de S. Jerônimo",
-      "normalizedName": "b. nicolau de furca palena, presbitero",
-      "imageUrl": "./assets/img/santos/09-29-b-nicolau-de-furca-palena-presbitero-da-ordem-de-s-jeronimo.png",
+      "name": "Beato Nicolau de Furca Palena, presbítero da Ordem de S. Jerônimo",
+      "normalizedName": "beato nicolau de furca palena presbitero da ordem de sao jeronimo",
+      "imageUrl": "./assets/img/santos/09-29-beato-nicolau-de-furca-palena-presbitero-da-ordem-de-s-jeronimo.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
@@ -41,9 +41,9 @@
     },
     {
       "date": "2026-09-29",
-      "name": "San Gabriel Arcanjo",
-      "normalizedName": "san gabriel arcanjo",
-      "imageUrl": "./assets/img/santos/09-29-san-gabriel-arcanjo.png",
+      "name": "São Gabriel Arcanjo",
+      "normalizedName": "sao gabriel arcanjo",
+      "imageUrl": "./assets/img/santos/09-29-sao-gabriel-arcanjo.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-gabriel-arcanjo.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-gabriel-arcanjo.html",
@@ -54,9 +54,9 @@
     },
     {
       "date": "2026-09-29",
-      "name": "San Rafael Arcanjo",
-      "normalizedName": "san rafael arcanjo",
-      "imageUrl": "./assets/img/santos/09-29-san-rafael-arcanjo.png",
+      "name": "São Rafael Arcanjo",
+      "normalizedName": "sao rafael arcanjo",
+      "imageUrl": "./assets/img/santos/09-29-sao-rafael-arcanjo.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-rafael-arcanjo.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/09/29/san-rafael-arcanjo.html",

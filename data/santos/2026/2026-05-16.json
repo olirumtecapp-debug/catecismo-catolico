@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-05-16",
-      "name": "São Alexandre, bispo de Jerusalém e mártir",
-      "normalizedName": "sao alexandre, bispo de jerusalem e martir",
-      "imageUrl": "./assets/img/santos/05-16-sao-alexandre-bispo-de-jerusalem-e-martir.png",
+      "name": "Santo Alexandre, bispo de Jerusalém e mártir",
+      "normalizedName": "sao alexandre bispo de jerusalem e martir",
+      "imageUrl": "./assets/img/santos/05-16-santo-alexandre-bispo-de-jerusalem-e-martir.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/16/s--alexandre--bispo-de-jerusalem-e-martir.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/05/16/s--alexandre--bispo-de-jerusalem-e-martir.html",
@@ -28,9 +28,9 @@
     },
     {
       "date": "2026-05-16",
-      "name": "São Ubaldo, bispo de Gúbio",
-      "normalizedName": "sao ubaldo, bispo de gubio",
-      "imageUrl": "./assets/img/santos/05-16-sao-ubaldo-bispo-de-gubio.png",
+      "name": "Santo Ubaldo, bispo de Gúbio",
+      "normalizedName": "sao ubaldo bispo de gubio",
+      "imageUrl": "./assets/img/santos/05-16-santo-ubaldo-bispo-de-gubio.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-01-10",
-      "name": "São Agatão, papa",
-      "normalizedName": "sao agatao, papa",
-      "imageUrl": "./assets/img/santos/01-10-sao-agatao-papa.png",
+      "name": "Santo Agatão, papa",
+      "normalizedName": "sao agatao papa",
+      "imageUrl": "./assets/img/santos/01-10-santo-agatao-papa.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
@@ -41,9 +41,9 @@
     },
     {
       "date": "2026-01-10",
-      "name": "B. Gregório X, papa",
-      "normalizedName": "b. gregorio x, papa",
-      "imageUrl": "./assets/img/santos/01-10-b-gregorio-x-papa.png",
+      "name": "Beato Gregório X, papa",
+      "normalizedName": "beato gregorio x papa",
+      "imageUrl": "./assets/img/santos/01-10-beato-gregorio-x-papa.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

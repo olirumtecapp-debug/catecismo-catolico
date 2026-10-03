@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-07-20",
-      "name": "São Apolinário, bispo de Ravena e mártir",
-      "normalizedName": "sao apolinario, bispo de ravena e martir",
-      "imageUrl": "./assets/img/santos/07-20-sao-apolinario-bispo-de-ravena-e-martir.png",
+      "name": "Santo Apolinário, bispo de Ravena e mártir",
+      "normalizedName": "sao apolinario bispo de ravena e martir",
+      "imageUrl": "./assets/img/santos/07-20-santo-apolinario-bispo-de-ravena-e-martir.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--apolinario--bispo-de-ravena-e-martir.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--apolinario--bispo-de-ravena-e-martir.html",
@@ -28,9 +28,9 @@
     },
     {
       "date": "2026-07-20",
-      "name": "São Elias, profeta",
-      "normalizedName": "sao elias, profeta",
-      "imageUrl": "./assets/img/santos/07-20-sao-elias-profeta.png",
+      "name": "Santo Elias, profeta",
+      "normalizedName": "sao elias profeta",
+      "imageUrl": "./assets/img/santos/07-20-santo-elias-profeta.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--elias--profeta.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/20/s--elias--profeta.html",
@@ -41,9 +41,9 @@
     },
     {
       "date": "2026-07-20",
-      "name": "São Aurélio, bispo de Cartago",
-      "normalizedName": "sao aurelio, bispo de cartago",
-      "imageUrl": "./assets/img/santos/07-20-sao-aurelio-bispo-de-cartago.png",
+      "name": "Santo Aurélio, bispo de Cartago",
+      "normalizedName": "sao aurelio bispo de cartago",
+      "imageUrl": "./assets/img/santos/07-20-santo-aurelio-bispo-de-cartago.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

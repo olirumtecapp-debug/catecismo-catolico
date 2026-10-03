@@ -126,6 +126,74 @@ function normalizeSaintName(v = '') {
     return norm;
 }
 
+const FEMALE_EXPLICIT_SET = new Set([
+    'marcela', 'flavia domitila', 'aurea', 'lidia', 'susana', 'emilia', 'emilia de vialar',
+    'sabina', 'basila', 'filipina rosa duchesne', 'petronila', 'marina de bitinia',
+    'maria', 'ana', 'clara', 'teresa', 'terezinha', 'catarina', 'rita', 'ines', 'lucia', 'luzia',
+    'barbara', 'cecilia', 'edviges', 'edwiges', 'filomena', 'monica', 'marta', 'isabel', 'helena',
+    'beatriz', 'joana', 'josefina', 'julia', 'juliana', 'angela', 'bernadete', 'faustina', 'agueda',
+    'escolastica', 'adelaide', 'anastasia', 'agostinha', 'antonina', 'apolonia', 'asela', 'balbina',
+    'bibiana', 'brigida', 'candida', 'clotilde', 'coleta', 'columba', 'cristina', 'cunegunda', 'dimpna',
+    'doroteia', 'efigenia', 'emerenciana', 'emerita', 'eufemia', 'eustoquia', 'fabiola', 'felicidade',
+    'franca', 'francisca', 'gala', 'gema', 'genoveva', 'germana', 'gertrudes', 'irene', 'irmina',
+    'jacinta', 'leocadia', 'lia', 'luisa', 'madalena', 'marcelina', 'margarida', 'martinha', 'matilde',
+    'melania', 'paula', 'pelagia', 'praxedes', 'prisca', 'priscila', 'rafaela', 'regina', 'rosa',
+    'rosalia', 'sofia', 'sotera', 'tarsila', 'ursula', 'veronica', 'zita', 'madre teresa de calcuta'
+]);
+
+const BEATA_NAMES_SET = new Set([
+    'ludovica albertoni', 'isabel canori mora', 'maria gabriela sagheddu', 
+    'ana maria taigi', 'maria teresa ledochowska', 'columba gabriel', 
+    'maria de jesus do bom pastor', 'maria dos apostolos'
+]);
+
+function getCanonicalName(name) {
+    name = cleanText(name);
+    if (!name) return '';
+    if (name === 'SÃO JOSÉ VAZ') return 'São José Vaz';
+    if (name === 'São JOSAFÁ KUNCEWICZ, BISPO E MÁRTIR') return 'São Josafá Kuncewicz, bispo e mártir';
+    if (/^San\s+Gabriel/i.test(name)) return name.replace(/^San\s+/i, 'São ');
+    if (/^San\s+Rafael/i.test(name)) return name.replace(/^San\s+/i, 'São ');
+    if (/^Santa\s+Antônio Maria Claret/i.test(name)) return name.replace(/^Santa\s+/i, 'Santo ');
+    if (/^BB\.\s+/i.test(name)) return name.replace(/^BB\.\s+/i, 'Beatos ');
+
+    if (/^(B\.|b\.)\s+/i.test(name)) {
+        const rest = name.replace(/^(B\.|b\.)\s+/i, '').trim();
+        const normRest = rest.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        let isFem = false;
+        for (const b of BEATA_NAMES_SET) {
+            if (normRest.startsWith(b)) { isFem = true; break; }
+        }
+        return (isFem ? 'Beata ' : 'Beato ') + rest;
+    }
+
+    if (/^s\.\s+/i.test(name)) {
+        const rest = name.replace(/^s\.\s+/i, '').trim();
+        const normRest = rest.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        const firstWord = normRest.split(/[\s,]/)[0];
+        const twoWords = normRest.split(',')[0].trim().split(/\s+/).slice(0, 2).join(' ');
+        const isFem = FEMALE_EXPLICIT_SET.has(firstWord) || FEMALE_EXPLICIT_SET.has(twoWords);
+        if (isFem) return 'Santa ' + rest;
+        const firstChar = rest[0].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
+        return (['A','E','I','O','U','H'].includes(firstChar) ? 'Santo ' : 'São ') + rest;
+    }
+
+    if (/^São\s+/i.test(name)) {
+        const rest = name.replace(/^São\s+/i, '').trim();
+        const normRest = rest.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        const firstWord = normRest.split(/[\s,]/)[0];
+        const twoWords = normRest.split(',')[0].trim().split(/\s+/).slice(0, 2).join(' ');
+        const isFem = FEMALE_EXPLICIT_SET.has(firstWord) || FEMALE_EXPLICIT_SET.has(twoWords);
+        if (isFem) return 'Santa ' + rest;
+        const firstChar = rest[0].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase();
+        if (['A','E','I','O','U','H'].includes(firstChar)) {
+            return 'Santo ' + rest;
+        }
+    }
+
+    return name;
+}
+
 function backupSaintDayFile(filePath) {
     if (fs.existsSync(filePath)) {
         const filename = path.basename(filePath);
@@ -168,10 +236,7 @@ function parseVaticanPage(html, date) {
         const $s = $(section);
         let name = cleanText($s.find('.section__head h2').first().text());
         if (!name) return;
-        if (/^S\.\s+Edviges\b/i.test(name)) name = name.replace(/^S\.\s+/i, 'Santa ');
-        else if (/^S\.\s+(Margarida Maria Alacoque)\b/i.test(name)) name = name.replace(/^S\.\s+/i, 'Santa ');
-        else if (/^S\.\s+(Geraldo Majella)\b/i.test(name)) name = name.replace(/^S\.\s+/i, 'São ');
-        else if (/^S\.\s+/.test(name)) name = name.replace(/^S\.\s+/, /\b(virgem|religiosa|freira|duquesa|rainha|abadessa|madre)\b/i.test(name) ? 'Santa ' : 'São ');
+        name = getCanonicalName(name);
         
         let profileHref = $s.find('a.saintReadMore[href]').first().attr('href') || null;
         if (profileHref && !profileHref.startsWith('http')) profileHref = `https://www.vaticannews.va${profileHref}`;
@@ -576,8 +641,10 @@ const server = http.createServer(async (req, res) => {
                     if (!Array.isArray(dayData.saints)) dayData.saints = [];
                 }
 
+                const canonicalName = getCanonicalName(name);
+
                 // Verificar se já existe santo com o mesmo nome nessa data
-                const exists = dayData.saints.some(s => s.name && s.name.trim().toLowerCase() === name.trim().toLowerCase());
+                const exists = dayData.saints.some(s => s.name && s.name.trim().toLowerCase() === canonicalName.toLowerCase());
                 if (exists) {
                     res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
                     res.end(JSON.stringify({ success: false, error: 'Este santo já está cadastrado nesta data!' }));
@@ -586,8 +653,8 @@ const server = http.createServer(async (req, res) => {
 
                 const newSaint = {
                     date,
-                    name: name.trim(),
-                    normalizedName: name.trim().toLowerCase(),
+                    name: canonicalName,
+                    normalizedName: normalizeSaintName(canonicalName),
                     imageUrl: '',
                     profileUrl: null,
                     source: source || 'Curadoria Manual',
@@ -729,12 +796,13 @@ const server = http.createServer(async (req, res) => {
                     }
 
                     // Verifica se já existe para não duplicar
-                    const normNew = normalizeSaintName(name);
+                    const canon = getCanonicalName(name);
+                    const normNew = normalizeSaintName(canon);
                     const exists = dayData.saints.some(ex => normalizeSaintName(ex.name) === normNew);
                     if (!exists) {
                         dayData.saints.push({
                             date,
-                            name: name.trim(),
+                            name: canon,
                             normalizedName: normNew,
                             imageUrl: '',
                             profileUrl: s.profileUrl || null,

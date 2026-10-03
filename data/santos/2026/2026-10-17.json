@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-10-17",
-      "name": "São Inácio de Antioquia, bispo, mártir em Roma",
-      "normalizedName": "sao inacio de antioquia, bispo, martir em roma",
-      "imageUrl": "./assets/img/santos/10-17-sao-inacio-de-antioquia-bispo-martir-em-roma.png",
+      "name": "Santo Inácio de Antioquia, bispo, mártir em Roma",
+      "normalizedName": "sao inacio de antioquia bispo martir em roma",
+      "imageUrl": "./assets/img/santos/10-17-santo-inacio-de-antioquia-bispo-martir-em-roma.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/17/s--inacio-de-antioquia--bispo--martir-em-roma.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/17/s--inacio-de-antioquia--bispo--martir-em-roma.html",
@@ -28,9 +28,9 @@
     },
     {
       "date": "2026-10-17",
-      "name": "B. Pedro Casani, sacerdote escolápio",
-      "normalizedName": "b. pedro casani, sacerdote escolapio",
-      "imageUrl": "./assets/img/santos/10-17-b-pedro-casani-sacerdote-escolapio.png",
+      "name": "Beato Pedro Casani, sacerdote escolápio",
+      "normalizedName": "beato pedro casani sacerdote escolapio",
+      "imageUrl": "./assets/img/santos/10-17-beato-pedro-casani-sacerdote-escolapio.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

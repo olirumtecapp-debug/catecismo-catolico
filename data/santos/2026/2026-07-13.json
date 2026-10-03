@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-07-13",
-      "name": "São Henrique II, imperador",
-      "normalizedName": "sao henrique ii, imperador",
-      "imageUrl": "./assets/img/santos/07-13-sao-henrique-ii-imperador.png",
+      "name": "Santo Henrique II, imperador",
+      "normalizedName": "sao henrique ii imperador",
+      "imageUrl": "./assets/img/santos/07-13-santo-henrique-ii-imperador.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/13/s--henrique-ii--imperador.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/07/13/s--henrique-ii--imperador.html",
@@ -28,9 +28,9 @@
     },
     {
       "date": "2026-07-13",
-      "name": "São Esdra, escriba",
-      "normalizedName": "sao esdra, escriba",
-      "imageUrl": "./assets/img/santos/07-13-sao-esdra-escriba.png",
+      "name": "Santo Esdra, escriba",
+      "normalizedName": "sao esdra escriba",
+      "imageUrl": "./assets/img/santos/07-13-santo-esdra-escriba.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

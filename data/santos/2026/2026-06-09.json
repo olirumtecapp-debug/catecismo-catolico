@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-06-09",
-      "name": "São Efrém, diácono e doutor da Igreja",
-      "normalizedName": "sao efrem, diacono e doutor da igreja",
-      "imageUrl": "./assets/img/santos/06-09-sao-efrem-diacono-e-doutor-da-igreja.png",
+      "name": "Santo Efrém, diácono e doutor da Igreja",
+      "normalizedName": "sao efrem diacono e doutor da igreja",
+      "imageUrl": "./assets/img/santos/06-09-santo-efrem-diacono-e-doutor-da-igreja.png",
       "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/09/s--efrem--diacono-e-doutor-da-igreja.html",
       "source": "Vatican News",
       "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/06/09/s--efrem--diacono-e-doutor-da-igreja.html",
@@ -28,9 +28,9 @@
     },
     {
       "date": "2026-06-09",
-      "name": "B. Ana Maria Taigi, mãe de família",
-      "normalizedName": "b. ana maria taigi, mae de familia",
-      "imageUrl": "./assets/img/santos/06-09-b-ana-maria-taigi-mae-de-familia.png",
+      "name": "Beata Ana Maria Taigi, mãe de família",
+      "normalizedName": "beato ana maria taigi mae de familia",
+      "imageUrl": "./assets/img/santos/06-09-beata-ana-maria-taigi-mae-de-familia.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,

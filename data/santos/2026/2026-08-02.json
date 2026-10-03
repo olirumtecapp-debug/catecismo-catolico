@@ -15,9 +15,9 @@
   "saints": [
     {
       "date": "2026-08-02",
-      "name": "São Eusébio, bispo de Vercelli",
-      "normalizedName": "sao eusebio, bispo de vercelli",
-      "imageUrl": "./assets/img/santos/08-02-sao-eusebio-bispo-de-vercelli.png",
+      "name": "Santo Eusébio, bispo de Vercelli",
+      "normalizedName": "sao eusebio bispo de vercelli",
+      "imageUrl": "./assets/img/santos/08-02-santo-eusebio-bispo-de-vercelli.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
@@ -41,9 +41,9 @@
     },
     {
       "date": "2026-08-02",
-      "name": "São Estêvão I, papa",
-      "normalizedName": "sao estevao i, papa",
-      "imageUrl": "./assets/img/santos/08-02-sao-estevao-i-papa.png",
+      "name": "Santo Estêvão I, papa",
+      "normalizedName": "sao estevao i papa",
+      "imageUrl": "./assets/img/santos/08-02-santo-estevao-i-papa.png",
       "profileUrl": null,
       "source": "Vatican News",
       "sourceUrl": null,
