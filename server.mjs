@@ -4,9 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
 import * as cheerio from 'cheerio';
-import contactListHandler from './api/contact/list.js';
-import contactSendHandler from './api/contact/send.js';
-import contactUpdateStatusHandler from './api/contact/update-status.js';
+import contactHandler from './api/contact.js';
 import adminBroadcastsHandler from './api/admin/broadcasts.js';
 import adminAuthHandler from './api/admin/auth.js';
 import cloudSyncSaveHandler from './api/cloud-sync/save.js';
@@ -310,14 +308,8 @@ const server = http.createServer(async (req, res) => {
     // ==========================================
     // ROTAS DE CAIXA POSTAL & COMUNICADOS
     // ==========================================
-    if (pathname === '/api/contact/list') {
-        return handleServerlessFunction(contactListHandler, req, res);
-    }
-    if (pathname === '/api/contact/send') {
-        return handleServerlessFunction(contactSendHandler, req, res);
-    }
-    if (pathname === '/api/contact/update-status') {
-        return handleServerlessFunction(contactUpdateStatusHandler, req, res);
+    if (pathname.startsWith('/api/contact')) {
+        return handleServerlessFunction(contactHandler, req, res);
     }
     if (pathname === '/api/admin/broadcasts') {
         return handleServerlessFunction(adminBroadcastsHandler, req, res);

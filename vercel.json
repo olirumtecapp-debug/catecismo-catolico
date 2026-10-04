@@ -2,6 +2,14 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/api/contact/:path*",
+      "destination": "/api/contact"
+    },
+    {
+      "source": "/api/admin/liturgia/:path*",
+      "destination": "/api/admin/liturgia"
+    },
+    {
       "source": "/auditoria",
       "destination": "/auditoria.html"
     },
