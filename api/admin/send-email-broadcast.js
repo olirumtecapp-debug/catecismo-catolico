@@ -163,7 +163,7 @@ export const EMAIL_PRESETS = [
             {
                 icon: '🎯',
                 title: 'Quiz Católico & Formação da Fé',
-                description: 'Teste e aprofunde seus conhecimentos bíblicos e doutrinários com perguntas diárias, sistema de XP, níveis e ofensivas (streak) para aprender a fé de forma leve e envolvente.'
+                description: 'Exercite e aprofunde seus conhecimentos bíblicos e doutrinários com perguntas diárias, sistema de XP, níveis e ofensivas (streak) para aprender a fé de forma leve e envolvente.'
             },
             {
                 icon: '🕊️',
