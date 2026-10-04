@@ -18,6 +18,7 @@ const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'expedicao-brasil';
 const COL_USERS = 'catecismo_cloud_users';
 const COL_MESSAGES = 'catecismo_contact_messages';
 const COL_BROADCASTS = 'catecismo_broadcasts';
+const COL_EMAIL_BROADCASTS = 'catecismo_email_broadcasts';
 
 const CACHE_MS = 5000;
 const TIMEOUT_MS = 8000;
@@ -279,6 +280,34 @@ export async function deleteBroadcastInDatabase(broadcastId) {
         return res.ok;
     } catch (err) {
         console.error('[db] falha ao excluir comunicado:', err && err.message);
+        return false;
+    }
+}
+
+// ================= EMAIL BROADCASTS DB =================
+
+export async function getEmailBroadcastsDatabase() {
+    const cached = cacheGet('email_broadcasts');
+    if (cached) return cached;
+
+    const docs = await listDocs(COL_EMAIL_BROADCASTS);
+    const emails = docs
+        .filter(b => b && b.id)
+        .sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || '')));
+
+    const db = { _meta: { source: 'firestore', updatedAt: new Date().toISOString() }, emails };
+    cacheSet('email_broadcasts', db);
+    return db;
+}
+
+export async function saveEmailBroadcastToDatabase(record) {
+    if (!record || !record.id) return false;
+    try {
+        const ok = await upsertDoc(COL_EMAIL_BROADCASTS, docId(record.id), record);
+        cacheClear();
+        return ok;
+    } catch (err) {
+        console.error('[db] falha ao gravar log de email:', err && err.message);
         return false;
     }
 }

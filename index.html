@@ -12274,6 +12274,332 @@ https://catecismo.creativeam.com.br
         }
         window.adminExcluirBroadcast = adminExcluirBroadcast;
 
+        // ==========================================
+        // GESTÃO DE DISPARO DE E-MAILS AOS FIÉIS (BROADCASTS)
+        // ==========================================
+        let adminEmailPresets = {};
+        let adminEmailState = {
+            totalUsers: 0,
+            emailConfigured: false,
+            currentHighlights: []
+        };
+
+        async function loadAdminEmailBroadcasts() {
+            const badge = document.getElementById('admin-email-users-badge');
+            const historyContainer = document.getElementById('admin-email-history-container');
+            try {
+                const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/send-email-broadcast'));
+                const data = await res.json();
+                if (data.ok) {
+                    adminEmailState.totalUsers = data.totalUsers || 0;
+                    adminEmailState.emailConfigured = data.emailConfigured;
+                    if (badge) {
+                        badge.textContent = `${data.totalUsers} fiéis cadastrados` + (data.emailConfigured ? ' • SMTP Ativo' : ' • SMTP Inativo');
+                    }
+                    if (data.presets && Array.isArray(data.presets)) {
+                        adminEmailPresets = {};
+                        data.presets.forEach(p => { adminEmailPresets[p.id] = p; });
+                        const subjInput = document.getElementById('admin-email-subject');
+                        if (subjInput && !subjInput.value) {
+                            adminSelectEmailPreset('novidades_recentes');
+                        }
+                    }
+                    renderAdminEmailHistory(data.history || []);
+                }
+            } catch (err) {
+                console.warn('[AdminEmail] Erro ao carregar status:', err);
+                if (badge) badge.textContent = 'Erro ao carregar';
+                if (historyContainer) {
+                    historyContainer.innerHTML = '<p class="text-xs text-rose-500 py-2 text-center">Não foi possível carregar o histórico de e-mails.</p>';
+                }
+            }
+        }
+        window.loadAdminEmailBroadcasts = loadAdminEmailBroadcasts;
+
+        function renderAdminEmailHistory(history) {
+            const container = document.getElementById('admin-email-history-container');
+            if (!container) return;
+            if (!history || history.length === 0) {
+                container.innerHTML = '<p class="text-xs text-slate-400 py-3 text-center">Nenhum disparo de e-mail realizado ainda.</p>';
+                return;
+            }
+            container.innerHTML = history.map(item => {
+                const dateStr = item.sentAt ? new Date(item.sentAt).toLocaleString('pt-BR') : 'Data não informada';
+                const isTest = item.type === 'test';
+                return `
+                    <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-2xs">
+                        <div class="space-y-0.5">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${isTest ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200' : 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200'}">
+                                    ${isTest ? '🧪 Teste Individual' : '🚀 Disparo Coletivo'}
+                                </span>
+                                <span class="text-xs font-bold text-slate-700 dark:text-slate-200">${item.subject || 'Sem assunto'}</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 dark:text-slate-500">
+                                ${dateStr} • ${item.recipientsCount || 1} destinatário(s) • Sucesso: ${item.successCount || 0} ${item.failCount ? `• Falhas: ${item.failCount}` : ''}
+                            </p>
+                        </div>
+                        <div class="shrink-0 text-right">
+                            <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">✓ Concluído</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function adminSelectEmailPreset(presetId) {
+            const preset = adminEmailPresets[presetId];
+            if (!preset) {
+                if (presetId === 'custom') {
+                    const s = document.getElementById('admin-email-subject'); if (s) s.value = '';
+                    const t = document.getElementById('admin-email-title'); if (t) t.value = '';
+                    const sub = document.getElementById('admin-email-subtitle'); if (sub) sub.value = '';
+                    const g = document.getElementById('admin-email-greeting'); if (g) g.value = 'Paz e bem no Senhor Jesus!';
+                    const p = document.getElementById('admin-email-paragraphs'); if (p) p.value = '';
+                    const cta = document.getElementById('admin-email-cta-text'); if (cta) cta.value = 'Acessar o Catecismo';
+                    const ctau = document.getElementById('admin-email-cta-url'); if (ctau) ctau.value = 'https://catecismo.creativeam.com.br';
+                    const cl = document.getElementById('admin-email-closing'); if (cl) cl.value = 'Que Deus abençoe ricamente você e sua família.';
+                    adminEmailState.currentHighlights = [];
+                }
+                return;
+            }
+
+            const s = document.getElementById('admin-email-subject'); if (s) s.value = preset.subject || '';
+            const t = document.getElementById('admin-email-title'); if (t) t.value = preset.title || '';
+            const sub = document.getElementById('admin-email-subtitle'); if (sub) sub.value = preset.subtitle || '';
+            const g = document.getElementById('admin-email-greeting'); if (g) g.value = preset.greeting || '';
+            const p = document.getElementById('admin-email-paragraphs'); if (p) p.value = (preset.paragraphs || []).join('\n\n');
+            const cta = document.getElementById('admin-email-cta-text'); if (cta) cta.value = preset.ctaText || 'Acessar o Catecismo & Rezar Agora';
+            const ctau = document.getElementById('admin-email-cta-url'); if (ctau) ctau.value = preset.ctaUrl || 'https://catecismo.creativeam.com.br';
+            const cl = document.getElementById('admin-email-closing'); if (cl) cl.value = preset.closing || '';
+            adminEmailState.currentHighlights = preset.highlights || [];
+            showToast(`Modelo "${preset.name || presetId}" aplicado no formulário! ✨`, 'success');
+        }
+        window.adminSelectEmailPreset = adminSelectEmailPreset;
+
+        function getAdminEmailFormData() {
+            const subject = document.getElementById('admin-email-subject')?.value?.trim();
+            const title = document.getElementById('admin-email-title')?.value?.trim() || 'Novidades no Catecismo Católico';
+            const subtitle = document.getElementById('admin-email-subtitle')?.value?.trim() || '';
+            const greeting = document.getElementById('admin-email-greeting')?.value?.trim() || 'Paz e bem no Senhor Jesus!';
+            const rawParagraphs = document.getElementById('admin-email-paragraphs')?.value?.trim() || '';
+            const paragraphs = rawParagraphs.split('\n').map(p => p.trim()).filter(Boolean);
+            const ctaText = document.getElementById('admin-email-cta-text')?.value?.trim() || 'Acessar o Catecismo & Rezar Agora';
+            const ctaUrl = document.getElementById('admin-email-cta-url')?.value?.trim() || 'https://catecismo.creativeam.com.br';
+            const closing = document.getElementById('admin-email-closing')?.value?.trim() || 'Que a paz de Nosso Senhor Jesus Cristo esteja sempre com você.';
+            return {
+                subject,
+                title,
+                subtitle,
+                greeting,
+                paragraphs,
+                highlights: adminEmailState.currentHighlights || [],
+                ctaText,
+                ctaUrl,
+                closing
+            };
+        }
+
+        function adminPreviewEmailBroadcast() {
+            const data = getAdminEmailFormData();
+            if (!data.paragraphs || data.paragraphs.length === 0) {
+                showToast('Preencha ao menos um parágrafo da mensagem.', 'warning');
+                return;
+            }
+
+            const highlightsHtml = (data.highlights && data.highlights.length > 0) ? `
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 20px; margin: 20px 0;">
+                    <p style="margin: 0 0 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #b45309;">
+                        ✨ Destaques da Mensagem:
+                    </p>
+                    ${data.highlights.map(h => `
+                        <div style="display: flex; margin-bottom: 10px; align-items: flex-start; text-align: left;">
+                            <span style="font-size: 16px; margin-right: 10px; line-height: 20px;">${h.icon || '🕊️'}</span>
+                            <div style="font-size: 13px; line-height: 20px; color: #334155;">
+                                <strong style="color: #0f172a;">${h.title}:</strong> ${h.description}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            ` : '';
+
+            const paragraphsHtml = data.paragraphs.map(p => `
+                <p style="margin: 0 0 14px; font-size: 14px; line-height: 24px; color: #334155; text-align: left;">
+                    ${p}
+                </p>
+            `).join('');
+
+            const previewHtml = `
+                <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #0f172a; padding: 24px 12px; border-radius: 20px;">
+                    <div style="max-width: 580px; margin: 0 auto; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);">
+                        <div style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px 24px 24px; text-align: center; border-bottom: 4px solid #f59e0b;">
+                            <div style="font-size: 28px; margin-bottom: 8px;">🕊️</div>
+                            <h2 style="margin: 0 0 6px; color: #ffffff; font-family: Georgia, serif; font-size: 20px; font-weight: bold;">${data.title}</h2>
+                            ${data.subtitle ? `<p style="margin: 0; color: #93c5fd; font-size: 12px; letter-spacing: 0.5px;">${data.subtitle}</p>` : ''}
+                        </div>
+                        <div style="padding: 26px 24px; text-align: left;">
+                            <p style="margin: 0 0 14px; font-size: 15px; font-weight: bold; color: #1e3a8a;">
+                                ${data.greeting}
+                            </p>
+                            ${paragraphsHtml}
+                            ${highlightsHtml}
+                            <div style="text-align: center; margin: 26px 0 18px;">
+                                <a href="${data.ctaUrl}" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: #ffffff; text-decoration: none; font-size: 14px; font-weight: bold; padding: 13px 26px; border-radius: 12px; box-shadow: 0 4px 12px rgba(37,99,235,0.35);">
+                                    ${data.ctaText} →
+                                </a>
+                            </div>
+                            <div style="border-top: 1px solid #f1f5f9; padding-top: 16px; margin-top: 20px; text-align: center;">
+                                <p style="margin: 0; font-size: 12px; font-style: italic; color: #64748b;">
+                                    ${data.closing}
+                                </p>
+                            </div>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 14px 20px; text-align: center; border-top: 1px solid #e2e8f0; font-size: 11px; color: #94a3b8;">
+                            Catecismo Católico • Plataforma Apostólica Gratuita<br>
+                            Você recebeu esta mensagem porque se cadastrou em catecismo.creativeam.com.br
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            let modal = document.getElementById('admin-email-preview-modal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'admin-email-preview-modal';
+                modal.className = 'fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4';
+                document.body.appendChild(modal);
+            }
+            modal.innerHTML = `
+                <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+                    <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="text-base">👁️</span>
+                            <span class="font-serif font-bold text-mariana dark:text-amber-400 text-sm">Pré-visualização do E-mail Litúrgico</span>
+                        </div>
+                        <button onclick="document.getElementById('admin-email-preview-modal').remove()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer font-bold">
+                            ✕
+                        </button>
+                    </div>
+                    <div class="p-4 overflow-y-auto custom-scrollbar flex-1 bg-slate-100 dark:bg-slate-950">
+                        <div class="mb-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                            <div><strong class="text-slate-500">De:</strong> "Catecismo Católico" &lt;contatocreativeam@gmail.com&gt;</div>
+                            <div><strong class="text-slate-500">Assunto:</strong> ${data.subject || 'Sem assunto definido'}</div>
+                        </div>
+                        ${previewHtml}
+                    </div>
+                    <div class="px-5 py-3 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-2 bg-slate-50 dark:bg-slate-900">
+                        <button onclick="document.getElementById('admin-email-preview-modal').remove()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+        window.adminPreviewEmailBroadcast = adminPreviewEmailBroadcast;
+
+        async function adminSendTestEmailBroadcast() {
+            const data = getAdminEmailFormData();
+            if (!data.subject) {
+                showToast('Informe o assunto do e-mail.', 'warning');
+                return;
+            }
+            if (!data.paragraphs || data.paragraphs.length === 0) {
+                showToast('Informe ao menos um parágrafo de conteúdo.', 'warning');
+                return;
+            }
+
+            const defaultTest = 'olirumdev1@gmail.com';
+            const testEmail = prompt('Digite o endereço de e-mail para receber o teste:', defaultTest);
+            if (!testEmail || !testEmail.includes('@')) {
+                if (testEmail !== null) showToast('E-mail de teste inválido.', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('btn-admin-email-test');
+            if (btn) { btn.disabled = true; btn.innerHTML = '<span>⏳</span> <span>Enviando teste...</span>'; }
+
+            try {
+                const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/send-email-broadcast'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        testEmail: testEmail.trim(),
+                        subject: data.subject,
+                        title: data.title,
+                        subtitle: data.subtitle,
+                        greeting: data.greeting,
+                        paragraphs: data.paragraphs,
+                        highlights: data.highlights,
+                        ctaText: data.ctaText,
+                        ctaUrl: data.ctaUrl,
+                        closing: data.closing
+                    })
+                });
+                const result = await res.json();
+                if (result.ok) {
+                    showToast(`E-mail de teste enviado com sucesso para ${testEmail}! 📬`, 'success');
+                    loadAdminEmailBroadcasts();
+                } else {
+                    showToast(result.error || 'Erro ao enviar e-mail de teste.', 'error');
+                }
+            } catch (err) {
+                showToast('Erro de conexão ao enviar teste: ' + err.message, 'error');
+            } finally {
+                if (btn) { btn.disabled = false; btn.innerHTML = '<span>🧪</span> <span>Enviar E-mail de Teste</span>'; }
+            }
+        }
+        window.adminSendTestEmailBroadcast = adminSendTestEmailBroadcast;
+
+        async function adminSendBulkEmailBroadcast() {
+            const data = getAdminEmailFormData();
+            if (!data.subject) {
+                showToast('Informe o assunto do e-mail antes de disparar.', 'warning');
+                return;
+            }
+            if (!data.paragraphs || data.paragraphs.length === 0) {
+                showToast('Informe a mensagem antes de disparar.', 'warning');
+                return;
+            }
+
+            const total = adminEmailState.totalUsers || 0;
+            const confirmMsg = `ATENÇÃO: Deseja realmente disparar este e-mail para TODOS os ${total} fiéis cadastrados?\n\nAssunto: "${data.subject}"\n\nO sistema enviará com pausa anti-spam de 800ms por fiel. Confirma o envio?`;
+            if (!confirm(confirmMsg)) return;
+
+            const btn = document.getElementById('btn-admin-email-bulk');
+            if (btn) { btn.disabled = true; btn.innerHTML = '<span>⏳</span> <span>Disparando e-mails...</span>'; }
+
+            try {
+                const res = await fetch(CloudSyncManager.getApiUrl('/api/admin/send-email-broadcast'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sendToAll: true,
+                        subject: data.subject,
+                        title: data.title,
+                        subtitle: data.subtitle,
+                        greeting: data.greeting,
+                        paragraphs: data.paragraphs,
+                        highlights: data.highlights,
+                        ctaText: data.ctaText,
+                        ctaUrl: data.ctaUrl,
+                        closing: data.closing
+                    })
+                });
+                const result = await res.json();
+                if (result.ok) {
+                    showToast(`Disparo concluído! ${result.successCount} e-mails enviados com sucesso de ${result.totalRecipients}! 🎉`, 'success');
+                    loadAdminEmailBroadcasts();
+                } else {
+                    showToast(result.error || 'Erro ao realizar disparo em massa.', 'error');
+                }
+            } catch (err) {
+                showToast('Erro de conexão durante o disparo: ' + err.message, 'error');
+            } finally {
+                if (btn) { btn.disabled = false; btn.innerHTML = '<span>🚀</span> <span>Disparar para Todos os Fiéis</span>'; }
+            }
+        }
+        window.adminSendBulkEmailBroadcast = adminSendBulkEmailBroadcast;
+
 
 
         const DiarioBackupManager = {
@@ -13046,6 +13372,119 @@ https://catecismo.creativeam.com.br
                         </div>
                     </div>
 
+                    <!-- 7.1 DISPARO DE E-MAILS AOS FIÉIS (EMAIL BROADCASTS) -->
+                    <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-5">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">✉️</span>
+                                <div>
+                                    <h4 class="font-serif text-xl font-bold text-mariana dark:text-slate-100 flex items-center gap-2">
+                                        Disparo de E-mails aos Fiéis
+                                        <span id="admin-email-users-badge" class="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-200">0 fiéis cadastrados</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">Envie convites fraternos, novidades e comunicados pastorais diretamente para a caixa de entrada dos cadastrados</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="loadAdminEmailBroadcasts()" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>🔄</span> <span>Atualizar Status</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Seletor Rápido de Modelos (Presets) -->
+                        <div class="bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-800/60 p-4 rounded-2xl space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 dark:text-amber-200 flex items-center gap-1.5">
+                                    <span>📜</span> Modelos Prontos de E-mail (Clique para Preencher Automaticamente):
+                                </span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-1" id="admin-email-preset-buttons">
+                                <button type="button" onclick="adminSelectEmailPreset('novidades_recentes')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100/50 dark:hover:bg-slate-700 transition cursor-pointer shadow-2xs flex items-center gap-1.5">
+                                    <span>🕊️</span> <span>Grandes Novidades & 713 Santos</span>
+                                </button>
+                                <button type="button" onclick="adminSelectEmailPreset('convite_retorno')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100/50 dark:hover:bg-slate-700 transition cursor-pointer shadow-2xs flex items-center gap-1.5">
+                                    <span>✨</span> <span>Convite Fraterno de Retorno à Oração</span>
+                                </button>
+                                <button type="button" onclick="adminSelectEmailPreset('custom')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition cursor-pointer shadow-2xs flex items-center gap-1.5">
+                                    <span>✏️</span> <span>Personalizado (Em Branco)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Formulário de Composição do E-mail Litúrgico -->
+                        <div class="bg-slate-50 dark:bg-slate-800/60 p-4 md:p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Assunto do E-mail *</label>
+                                    <input type="text" id="admin-email-subject" placeholder="Ex: 🕊️ Grandes novidades no Catecismo Católico..." class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Título de Destaque (Cabeçalho do E-mail)</label>
+                                    <input type="text" id="admin-email-title" placeholder="Ex: Grandes Novidades & Convite para Rezar" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Subtítulo / Chamada Secundária</label>
+                                    <input type="text" id="admin-email-subtitle" placeholder="Ex: Novas orações, Lectio Divina e Santos canônicos para sua alma" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Saudação Inicial</label>
+                                    <input type="text" id="admin-email-greeting" placeholder="Ex: Paz e bem no Senhor Jesus!" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Parágrafos da Mensagem (um por linha ou bloco) *</label>
+                                <textarea id="admin-email-paragraphs" rows="4" placeholder="Escreva a mensagem pastoral aos fiéis..." class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none leading-relaxed"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Texto do Botão de Ação (CTA)</label>
+                                    <input type="text" id="admin-email-cta-text" value="Acessar o Catecismo & Rezar Agora" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Link de Destino do Botão</label>
+                                    <input type="url" id="admin-email-cta-url" value="https://catecismo.creativeam.com.br" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-1">Bênção Pastoral / Citação de Fechamento</label>
+                                <input type="text" id="admin-email-closing" placeholder='Ex: "Que o Senhor te abençoe e te guarde..." (Nm 6, 24-26)' class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-xl text-xs bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+
+                            <!-- Botões de Ação do Envio -->
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-200 dark:border-slate-700">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <button type="button" onclick="adminPreviewEmailBroadcast()" class="px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center gap-1.5 cursor-pointer">
+                                        <span>👁️</span> <span>Pré-visualizar E-mail</span>
+                                    </button>
+                                    <button type="button" onclick="adminSendTestEmailBroadcast()" id="btn-admin-email-test" class="px-4 py-2 bg-amber-100 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700 hover:bg-amber-200 dark:hover:bg-amber-900 text-amber-900 dark:text-amber-200 font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center gap-1.5 cursor-pointer">
+                                        <span>🧪</span> <span>Enviar E-mail de Teste</span>
+                                    </button>
+                                </div>
+
+                                <div>
+                                    <button type="button" onclick="adminSendBulkEmailBroadcast()" id="btn-admin-email-bulk" class="w-full sm:w-auto px-5 py-2.5 bg-gradient-to-r from-blue-700 to-indigo-800 hover:from-blue-800 hover:to-indigo-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
+                                        <span>🚀</span> <span>Disparar para Todos os Fiéis</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Histórico de Disparos de E-mail -->
+                        <div>
+                            <label class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-2">Histórico de Disparos Realizados</label>
+                            <div id="admin-email-history-container" class="space-y-2">
+                                <p class="text-xs text-slate-400 text-center py-3">Carregando histórico...</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 7. CAIXA POSTAL & MENSAGENS DOS FIÉIS (FALE CONOSCO & INTENÇÕES) -->
                     <div class="bg-white dark:bg-slate-900 rounded-3xl p-5 md:p-6 border border-slate-200 dark:border-slate-700 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
@@ -13345,6 +13784,8 @@ https://catecismo.creativeam.com.br
                 fallbackModal.classList.add('flex');
             }
             loadAdminCommunityTable();
+            loadAdminBroadcastsList();
+            loadAdminEmailBroadcasts();
             loadAdminMessagesTable();
         }
         window.openAdminDashboard = promptAdminAccess;

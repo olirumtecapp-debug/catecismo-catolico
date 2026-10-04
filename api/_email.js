@@ -36,12 +36,12 @@ export async function enviarEmail({ para, assunto, texto, html }) {
         try {
             const remetente = process.env.EMAIL_REMETENTE_NOME 
                 ? `"${process.env.EMAIL_REMETENTE_NOME}" <${GMAIL_USER}>`
-                : `"CreativeAM Suporte" <${GMAIL_USER}>`;
+                : `"Catecismo Católico" <${GMAIL_USER}>`;
 
             const info = await transporter.sendMail({
                 from: remetente,
                 to: para,
-                subject: assunto || 'CreativeAM',
+                subject: assunto || 'Catecismo Católico',
                 replyTo: GMAIL_USER,
                 text: texto || '',
                 html: html || undefined

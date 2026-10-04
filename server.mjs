@@ -13,6 +13,7 @@ import cloudSyncSaveHandler from './api/cloud-sync/save.js';
 import cloudSyncLoadHandler from './api/cloud-sync/load.js';
 import adminCommunityMetricsHandler from './api/admin/community-metrics.js';
 import adminExportUsersCsvHandler from './api/admin/export-users-csv.js';
+import adminSendEmailBroadcastHandler from './api/admin/send-email-broadcast.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -320,6 +321,9 @@ const server = http.createServer(async (req, res) => {
     }
     if (pathname === '/api/admin/broadcasts') {
         return handleServerlessFunction(adminBroadcastsHandler, req, res);
+    }
+    if (pathname === '/api/admin/send-email-broadcast') {
+        return handleServerlessFunction(adminSendEmailBroadcastHandler, req, res);
     }
     if (pathname === '/api/admin/auth') {
         return handleServerlessFunction(adminAuthHandler, req, res);
