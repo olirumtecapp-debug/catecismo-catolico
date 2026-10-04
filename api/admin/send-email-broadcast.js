@@ -140,15 +140,31 @@ export const EMAIL_PRESETS = [
     {
         id: 'novidades_recentes',
         name: 'Grandes Novidades & Convite para Rezar',
-        subject: '🕊️ Grandes novidades no Catecismo Católico: Venha rezar conosco!',
-        title: 'Atualizações Espirituais & Novas Orações no Catecismo',
-        subtitle: 'Conheça os novos recursos de oração e formação da nossa plataforma católica',
+        subject: '🕊️ Grandes novidades no Catecismo Católico: Nova Liturgia Diária, Quiz, Santos e muito mais!',
+        title: 'Atualizações Espirituais, Nova Liturgia & Formação no Catecismo',
+        subtitle: 'Sua rotina com Deus ainda mais rica: Liturgia aprimorada, Pílula Diária, Quiz da Fé e 713 Santos',
         greeting: 'Paz e bem no Senhor Jesus!',
         paragraphs: [
             'Esperamos que este e-mail encontre você e sua família com muita paz, saúde e abundantes bênçãos divinas.',
-            'Temos a alegria de compartilhar que o Catecismo Católico passou recentemente por uma grande atualização espiritual e doutrinal, trazendo novos recursos fundamentais para alimentar a sua vida de oração diária.'
+            'Temos a alegria de compartilhar que o Catecismo Católico passou por grandes melhorias em sua estrutura e conteúdo! Atualizamos e aperfeiçoamos toda a base da Liturgia Diária, fortalecemos as ferramentas diárias de formação como o Quiz Católico e a Pílula Diária de Sabedoria, além de um trabalho profundo de auditoria em todos os Santos e orações da Tradição.',
+            'Venha conferir o que preparamos com tanto zelo para a sua alma e retome seus momentos diários de intimidade com Deus:'
         ],
         highlights: [
+            {
+                icon: '☀️',
+                title: 'Liturgia Diária Atualizada & Aprimorada',
+                description: 'Primeira Leitura, Salmo responsorial e Evangelho com textos canônicos revisados, reflexões da Santa Igreja e calendário litúrgico completo.'
+            },
+            {
+                icon: '💡',
+                title: 'Pílula Diária de Sabedoria',
+                description: 'Uma dose diária de reflexão profunda e ensinamentos dos Doutores e Santos da Igreja para iluminar o seu coração logo no início do dia.'
+            },
+            {
+                icon: '🎯',
+                title: 'Quiz Católico & Formação da Fé',
+                description: 'Teste e aprofunde seus conhecimentos bíblicos e doutrinários com perguntas diárias, sistema de XP, níveis e ofensivas (streak) para aprender a fé de forma leve e envolvente.'
+            },
             {
                 icon: '🕊️',
                 title: '713 Santos da Igreja Auditados',
@@ -161,18 +177,8 @@ export const EMAIL_PRESETS = [
             },
             {
                 icon: '🌹',
-                title: '20 Grandes Novenas Católicas',
-                description: 'Novenas canônicas dos 9 dias com acompanhamento de progresso diário e persistência automática no seu perfil.'
-            },
-            {
-                icon: '🙏',
-                title: 'Orações por Intenção & Padroeiros',
-                description: '23 causas oficiais da Igreja (Emprego, Família, Ansiedade, Cura e Causas Impossíveis) com os santos intercessores adequados.'
-            },
-            {
-                icon: '📜',
-                title: 'Devocionário Tradicional (28 Orações)',
-                description: 'Via-Sacra Completa, Ofício da Imaculada, Santo Terço guiado e as Ladainhas Maiores da Tradição.'
+                title: '20 Grandes Novenas & Devocionário Completo',
+                description: 'Novenas canônicas dos 9 dias com progresso automático, Santo Terço guiado, Via-Sacra e 28 grandes orações da Tradição da Igreja.'
             }
         ],
         ctaText: 'Acessar o Catecismo & Rezar Agora',
@@ -182,13 +188,13 @@ export const EMAIL_PRESETS = [
     {
         id: 'convite_retorno',
         name: 'Convite Fraterno de Retorno à Oração',
-        subject: '✨ Um momento para sua alma: retome suas orações no Catecismo Católico',
+        subject: '✨ Um momento para sua alma: retome suas orações e formação no Catecismo Católico',
         title: 'Um convite fraterno para alimentar o seu coração',
-        subtitle: 'Sua rotina com Deus: orações, Santo Terço e Liturgia Diária ao seu alcance',
+        subtitle: 'Sua rotina com Deus: Liturgia diária, Pílula de Sabedoria, Quiz da Fé e Santo Terço',
         greeting: 'Paz e bem, querido(a) irmão(ã)!',
         paragraphs: [
             'Na agitação e desafios do dia a dia, reservar alguns minutos de silêncio e intimidade com Deus faz toda a diferença para o nosso coração.',
-            'O Catecismo Católico continua disponível para você, 100% gratuito e sem distrações, pronto para acompanhar a sua caminhada com a Liturgia Diária, o Santo Terço, o exame de consciência e as reflexões dos Santos.'
+            'O Catecismo Católico continua disponível para você, 100% gratuito e sem distrações, pronto para acompanhar a sua caminhada com a Liturgia Diária aprimorada, o Quiz da Fé, a Pílula Diária de reflexão e o Santo Terço interativo.'
         ],
         highlights: [
             {
@@ -197,14 +203,19 @@ export const EMAIL_PRESETS = [
                 description: 'Primeira Leitura, Salmo responsorial e Evangelho com reflexão diária da Santa Igreja.'
             },
             {
+                icon: '💡',
+                title: 'Pílula de Sabedoria & Quiz Diário',
+                description: 'Ensinamentos inspiradores dos santos e desafios doutrinários para exercitar e fortalecer sua fé.'
+            },
+            {
                 icon: '📿',
-                title: 'Santo Terço Interativo',
-                description: 'Reze os mistérios do dia com meditações guiadas e contagem de contas.'
+                title: 'Santo Terço & Novenas Interativas',
+                description: 'Reze os mistérios do dia com meditações guiadas e acompanhe suas novenas com persistência no seu perfil.'
             },
             {
                 icon: '🕯️',
                 title: 'Seu Diário Espiritual Protegido',
-                description: 'Suas anotações e momentos com Deus salvos de forma segura e sincronizados.'
+                description: 'Suas anotações, propósitos e momentos com Deus salvos de forma segura e sincronizados.'
             }
         ],
         ctaText: 'Rezar a Liturgia de Hoje',
