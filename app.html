@@ -1454,7 +1454,7 @@
                 const date = String(dateStr || '');
                 if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
                 if (this.cache.has(date)) return this.cache.get(date);
-                const url = `${this.baseUrl}${date.slice(0,4)}/${date}.json`;
+                const url = `${this.baseUrl}${date.slice(0,4)}/${date}.json?t=${Date.now()}`;
                 try {
                     const response = await fetch(url, { cache: 'no-store' });
                     if (!response.ok) throw new Error(`Santos locais indisponíveis (${response.status})`);

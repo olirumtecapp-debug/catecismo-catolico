@@ -5,7 +5,7 @@
   "day": 12,
   "source": "Vatican News",
   "calendarUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12.html",
-  "liturgicalCelebration": null,
+  "liturgicalCelebration": "Solenidade de Nossa Senhora da Conceição Aparecida, Rainha e Padroeira Principal do Brasil",
   "methodology": {
     "primarySaintSource": "Vatican News",
     "enrichmentSource": "A12 — Portal A12",
@@ -16,16 +16,16 @@
     {
       "date": "2026-10-12",
       "name": "Nossa Senhora da Conceição Aparecida",
-      "normalizedName": "sao hedisto, martir, na via ardeatina",
-      "imageUrl": "./assets/img/santos/10-12-sao-hedisto-martir-na-via-ardeatina.png",
-      "profileUrl": null,
-      "source": "Vatican News",
-      "sourceUrl": null,
-      "sourceText": "Edisto, também conhecido como Orestes ou Aristo, mártir do século I, era é um escudeiro de Nero. Enquanto acompanhava o imperador, em Laurento, conheceu um presbítero local, que o converteu, e foi batizado por São Pedro. Segundo uma \"passio\" lendária, foi sepultado na Via Laurentina, em Roma.",
+      "normalizedName": "nossa senhora da conceicao aparecida",
+      "imageUrl": "./assets/img/santos/10-12-nossa-senhora-aparecida.png",
+      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12/nossa-senhora-aparecida.html",
+      "source": "Vatican News / Tradição Canônica da Igreja",
+      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12/nossa-senhora-aparecida.html",
+      "sourceText": "No mês de outubro, tradicionalmente dedicado à Virgem Maria, devido à festa de Nossa Senhora do Rosário, celebra-se a Solenidade de Nossa Senhora Aparecida, Rainha e Padroeira Principal do Brasil, cuja imagem milagrosa foi pescada nas águas do Rio Paraíba do Sul em 1717.",
       "enrichment": {
-        "a12Found": false,
+        "a12Found": true,
         "canonicalEnriched": true,
-        "enrichedAt": "2026-10-01T14:00:02.367Z"
+        "enrichedAt": "2026-10-05T11:00:00.000Z"
       },
       "biography": "A história de Nossa Senhora Aparecida teve início em outubro de 1717, quando o governador das capitanias de São Paulo e Minas de Ouro, Dom Pedro de Almeida (o Conde de Assumar), passava pela vila de Santo Antônio de Guaratinguetá a caminho de Vila Rica. A câmara local incumbiu três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — de conseguirem peixes no Rio Paraíba do Sul para o banquete oficial.\n\nApós horas de tentativas frustradas e com as redes vazias, os pescadores chegaram ao Porto de Itaguaçu. Ao lançar novamente a rede, João Alves recolheu o corpo de uma imagem de terracota da Imaculada Conceição, sem a cabeça. Lançando a rede mais adiante, apanhou a cabeça da mesma imagem, que se encaixou com perfeita exatidão. A partir daquele instante solene, as redes dos humildes pescadores se encheram de uma quantidade tão portentosa de peixes que os barcos quase afundaram.\n\nGuardada inicialmente na casa de Filipe Pedroso, a humilde imagem escura atraía diariamente os vizinhos para rezar o terço. Ali multiplicaram-se prodígios: as velas apagadas acenderam-se espontaneamente, as correntes do escravizado Zacarias quebraram-se diante do altar, e o cavaleiro orgulhoso viu as patas de seu cavalo grudarem na pedra da igreja.\n\nEm 1904 a imagem foi solenemente coroada, e em 1930 o Papa Pio XI proclamou Nossa Senhora Aparecida como Padroeira Principal do Brasil. Seu Santuário Nacional em Aparecida do Norte acolhe anualmente mais de 12 milhões de peregrinos, consolidando-se como o maior templo mariano do mundo católico e o coração espiritual da nação brasileira.",
       "reflection": "A Virgem Aparecida manifestou o amor de Deus pelos humildes ao escolher as águas lamacentas de um rio e as mãos calejadas de três pobres pescadores. Na sua pele morena de terracota, Maria abraça todas as dores, esperanças e lutas do povo brasileiro, convocando-nos à unidade, à paz e à justiça social.",
@@ -35,35 +35,9 @@
     },
     {
       "date": "2026-10-12",
-      "name": "São Serafim de Monte Granaro, leigo capuchinho",
-      "normalizedName": "sao serafim de monte granaro, leigo capuchinho",
-      "imageUrl": "./assets/img/santos/10-12-sao-serafim-de-monte-granaro-leigo-capuchinho.png",
-      "profileUrl": null,
-      "source": "Vatican News",
-      "sourceUrl": null,
-      "sourceText": "Serafim, irmão leigo da Ordem dos Frades Capuchinhos, passou por muitos conventos antes de se estabelecer em Ascoli Piceno. Humilde, paciente e sempre criticado, consolava todos os coirmãos com seus \"dois livros\": o crucifixo e o terço. Faleceu em 1604 e foi canonizado por Clemente XIII, em 1767.",
-      "enrichment": {
-        "a12Found": false
-      }
-    },
-    {
-      "date": "2026-10-12",
-      "name": "Nossa Senhora Aparecida",
-      "normalizedName": "nossa senhora aparecida",
-      "imageUrl": "./assets/img/santos/10-12-nossa-senhora-aparecida.png",
-      "profileUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12/nossa-senhora-aparecida.html",
-      "source": "Vatican News",
-      "sourceUrl": "https://www.vaticannews.va/pt/santo-do-dia/10/12/nossa-senhora-aparecida.html",
-      "sourceText": "No mês de outubro, tradicionalmente dedicado à Virgem Maria, devido à festa de Nossa Senhora do Rosário, celebra-se outra festa dedicada à Mãe de Deus: Nossa Senhora Aparecida, Padroeira do Brasil, que se celebra em 12 de outubro.",
-      "enrichment": {
-        "a12Found": false
-      }
-    },
-    {
-      "date": "2026-10-12",
       "name": "Santo Carlo Acutis",
       "normalizedName": "santo carlo acutis",
-      "imageUrl": "./assets/img/santos/10-12-santo-carlo-acutis.png",
+      "imageUrl": "./assets/img/santos/10-12-sao-carlo-acutis.jpg",
       "profileUrl": "https://www.carloacutis.com/",
       "source": "Diocese de Assis / Associação Carlo Acutis",
       "sourceUrl": "https://www.carloacutis.com/pt/association/preghiera-ufficiale",
@@ -78,6 +52,46 @@
       "prayer": "Ó Deus, nosso Pai, obrigado por nos teres dado Carlo, modelo de vida para os jovens e mensagem de amor para todos. Tu fizeste com que se apaixonasse pelo teu Filho Jesus, fazendo da Eucaristia a sua 'rodovia para o Céu'. Tu lhe deste Maria como Mãe amadíssima e fizeste dele, com o Rosário, um cantor da sua ternura. Aceita a sua oração por nós. Olha especialmente para os pobres, que ele amou e socorreu. Concede também a mim, pela sua intercessão, a graça de que eu preciso... E torna plena a nossa alegria, colocando Carlo entre os santos da tua Igreja universal, para que o seu sorriso resplandeça ainda para nós, para a glória do teu nome. Amém. (Pater, Ave, Gloria — Imprimatur + Domenico Sorrentino, Bispo de Assis)",
       "patronage": "Padroeiro da Internet, Programadores, Jovens, Estudantes e Comunicadores Digitais",
       "vocation": "Leigo, Apóstolo da Eucaristia e Evangelizador Digital"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "São Serafim de Monte Granaro, leigo capuchinho",
+      "normalizedName": "sao serafim de monte granaro, leigo capuchinho",
+      "imageUrl": "./assets/img/santos/10-12-sao-serafim-de-monte-granaro-leigo-capuchinho.png",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Serafim, irmão leigo da Ordem dos Frades Capuchinhos, passou por muitos conventos antes de se estabelecer em Ascoli Piceno. Humilde, paciente e sempre criticado, consolava todos os coirmãos com seus \"dois livros\": o crucifixo e o terço. Faleceu em 1604 e foi canonizado por Clemente XIII, em 1767.",
+      "enrichment": {
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-05T11:00:00.000Z"
+      },
+      "biography": "São Serafim nasceu em Montegranaro, Itália, em 1540. De família humilde e pobre, guardou rebanhos na infância antes de ingressar na Ordem dos Frades Menores Capuchinhos como irmão leigo. Notabilizou-se pela humildade heroica, paciência inalterável nas humilhações e amor fervoroso à Eucaristia e a Nossa Senhora. Seus únicos conselheiros e mestres eram o crucifixo e a coroa do Santo Rosário. Dotado de dons extraordinários de profecia e cura, consolou inúmeros aflitos até seu trânsito para o Céu em 12 de outubro de 1604.",
+      "reflection": "A vida de São Serafim demonstra que a verdadeira sabedoria não vem dos altos estudos mundanos, mas da intimidade orante aos pés da Cruz e da fidelidade no cumprimento humilde dos deveres diários.",
+      "prayer": "Ó Deus, que destes a São Serafim de Monte Granaro a graça de seguir a Cristo na pobreza e na humildade extrema, concedei-nos, por sua intercessão, suportar com paciência as cruzes da vida e amar a oração com coração simples. Por Cristo, nosso Senhor. Amém.",
+      "patronage": "Irmãos Leigos, Humildes e Aflitos",
+      "vocation": "Religioso Franciscano Capuchinho"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "São Hedisto, mártir, na via Ardeatina",
+      "normalizedName": "sao hedisto, martir, na via ardeatina",
+      "imageUrl": "./assets/img/santos/10-12-sao-hedisto-martir-na-via-ardeatina.png",
+      "profileUrl": null,
+      "source": "Vatican News",
+      "sourceUrl": null,
+      "sourceText": "Edisto, também conhecido como Orestes ou Aristo, mártir do século I, era um escudeiro de Nero. Enquanto acompanhava o imperador, em Laurento, conheceu um presbítero local, que o converteu, e foi batizado por São Pedro. Sofreu o martírio durante as perseguições romanas e foi sepultado na Via Laurentina/Ardeatina, em Roma.",
+      "enrichment": {
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-05T11:00:00.000Z"
+      },
+      "biography": "São Hedisto (ou Edisto) viveu no século I, durante o reinado do imperador Nero, servindo como oficial na corte imperial. Ao travar conhecimento com os primeiros cristãos, recebeu a fé e foi batizado nas águas do Evangelho. Em meio às violentas perseguições contra os seguidores de Cristo, recusou terminantemente renunciar ao Senhor ou queimar incenso aos ídolos pagãos, selando com seu sangue o testemunho heroico de fidelidade evangélica.",
+      "reflection": "O testemunho dos primeiros mártires nos recorda que nada neste mundo — nem honrarias da corte, nem ameaças terrenas — deve nos separar do amor de Cristo.",
+      "prayer": "Ó Deus de fortaleza, que destes ao mártir São Hedisto a graça de permanecer inabalável diante da perseguição e dar a vida pelo Vosso Nome, concedei-nos uma fé corajosa e perseverante em todas as provações. Por Cristo, nosso Senhor. Amém.",
+      "patronage": "Fidelidade na Fé e Mártires",
+      "vocation": "Mártir Romano"
     }
   ]
 }
