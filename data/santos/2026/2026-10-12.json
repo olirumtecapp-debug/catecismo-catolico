@@ -58,6 +58,26 @@
       "enrichment": {
         "a12Found": false
       }
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Santo Carlo Acutis",
+      "normalizedName": "santo carlo acutis",
+      "imageUrl": "./assets/img/santos/10-12-santo-carlo-acutis.png",
+      "profileUrl": "https://www.carloacutis.com/",
+      "source": "Diocese de Assis / Associação Carlo Acutis",
+      "sourceUrl": "https://www.carloacutis.com/pt/association/preghiera-ufficiale",
+      "sourceText": "Nascido em Londres e criado em Milão, Carlo Acutis faleceu em Monza no dia 12 de outubro de 2006, aos 15 anos de idade, oferecendo sua vida e sofrimentos pelo Papa e pela Igreja. Apaixonado pela Eucaristia — que chamava de 'minha rodovia para o Céu' — e autodidata da informática, usou os meios digitais para evangelizar. Seu corpo repousa no Santuário do Despojamento, em Assis.",
+      "enrichment": {
+        "a12Found": false,
+        "canonicalEnriched": true,
+        "enrichedAt": "2026-10-05T06:20:00.000Z"
+      },
+      "biography": "Carlo Acutis nasceu em Londres no dia 3 de maio de 1991 e cresceu em Milão. Desde muito jovem demonstrou amor ardente por Deus e pela Santa Missa diária. Autodidata em tecnologia e programação, criou o catálogo digital dos Milagres Eucarísticos no mundo, que alcançou milhões de pessoas nos cinco continentes. Em outubro de 2006, aos 15 anos, acometido por leucemia fulminante, ofereceu com total serenidade seus sofrimentos pelo Santo Padre e pela Igreja Católica. Faleceu em 12 de outubro de 2006 e foi beatificado e canonizado, tornando-se o primeiro santo millennial da era digital.",
+      "reflection": "'Todos nascem como originais, mas muitos morrem como fotocópias.' Carlo Acutis ensina às gerações do século XXI que a santidade é concreta, próxima e possível no cotidiano, na internet e em cada comunhão eucarística.",
+      "prayer": "Ó Deus, nosso Pai, obrigado por nos teres dado Carlo, modelo de vida para os jovens e mensagem de amor para todos. Tu fizeste com que se apaixonasse pelo teu Filho Jesus, fazendo da Eucaristia a sua 'rodovia para o Céu'. Tu lhe deste Maria como Mãe amadíssima e fizeste dele, com o Rosário, um cantor da sua ternura. Aceita a sua oração por nós. Olha especialmente para os pobres, que ele amou e socorreu. Concede também a mim, pela sua intercessão, a graça de que eu preciso... E torna plena a nossa alegria, colocando Carlo entre os santos da tua Igreja universal, para que o seu sorriso resplandeça ainda para nós, para a glória do teu nome. Amém. (Pater, Ave, Gloria — Imprimatur + Domenico Sorrentino, Bispo de Assis)",
+      "patronage": "Padroeiro da Internet, Programadores, Jovens, Estudantes e Comunicadores Digitais",
+      "vocation": "Leigo, Apóstolo da Eucaristia e Evangelizador Digital"
     }
   ]
 }

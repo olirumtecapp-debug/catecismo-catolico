@@ -6,7 +6,7 @@
    ========================================================================= */
 
 window.SAINTS_DATA = {
-  "total": 713,
+  "total": 714,
   "catalogTotal": 140,
   "mapTotal": 131,
   "centuries": [
@@ -4111,8 +4111,8 @@ window.SAINTS_DATA = {
       "id": "ns_68",
       "slug": "santo-carlo-acutis",
       "name": "Santo Carlo Acutis",
-      "formattedDate": "",
-      "image": "assets/img/santos/01-06-sao-carlos-de-sezze-religioso-franciscano.png",
+      "formattedDate": "12 de outubro",
+      "image": "assets/img/santos/10-12-santo-carlo-acutis.png",
       "hasSacredImage": true,
       "seculo": "Século XX",
       "seculos": [
@@ -8098,8 +8098,8 @@ window.SAINTS_DATA = {
       "id": "ns_68",
       "slug": "santo-carlo-acutis",
       "name": "Santo Carlo Acutis",
-      "formattedDate": "",
-      "image": "assets/img/santos/ns_santo-carlo-acutis.jpg",
+      "formattedDate": "12 de outubro",
+      "image": "assets/img/santos/10-12-santo-carlo-acutis.png",
       "hasSacredImage": true,
       "seculo": "Século XX",
       "seculos": [
@@ -35583,6 +35583,42 @@ window.SAINTS_DATA = {
         "richBio": "\n<p class=\"wp-block-paragraph\">A história de Nossa Senhora Aparecida começou em <strong>outubro de 1717</strong>, no Rio Paraíba do Sul, em São Paulo. Três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — enfrentavam uma escassez de peixes quando jogaram as redes e retiraram das águas uma pequena imagem de terracota enegrecida de Nossa Senhora da Conceição, primeiro o corpo e depois a cabeça. Logo após o achado, as redes que antes vinham vazias se encheram com uma quantidade tão abundante de peixes que os pescadores precisaram retornar ao porto para o barco não afundar.</p>\n\n\n\n<p class=\"wp-block-paragraph\">A imagem foi guardada inicialmente na casa de Filipe Pedroso, onde a comunidade se reunia para rezar. Rapidamente, a fama da &#8220;Santa Aparecida&#8221; se espalhou devido a relatos de prodígios, como o Milagre das Velas, que se acenderam sozinhas, e a libertação do escravo Zacarias, cujas correntes se romperam diante da imagem. A devoção cresceu tanto que a antiga vila deu lugar à cidade de Aparecida, impulsionando a construção de capelas e, mais tarde, do <strong>Santuário Nacional</strong>, a segunda maior basílica do mundo.</p>\n\n\n\n<p class=\"wp-block-paragraph\">O forte apelo popular e a cor negra da imagem criaram uma profunda identificação com o povo brasileiro, especialmente com as classes mais humildes. Em 1904, a imagem foi coroada com uma joia doada pela Princesa Isabel e, em <strong>1930</strong>, o Papa Pio XI declarou oficialmente Nossa Senhora Aparecida como a Padroeira Principal do Brasil. Hoje, o dia 12 de outubro é feriado nacional e atrai milhões de peregrinos ao seu santuário, consolidando-a como o maior símbolo de fé do país.</p>\n\n\n\n<h3 class=\"wp-block-heading\">O Que Ela Protege</h3>\n\n\n\n<p class=\"wp-block-paragraph\">Nossa Senhora Aparecida é a <strong>Rainha e Padroeira do Brasil</strong>. Ela protege as <strong>famílias brasileiras</strong>, os <strong>pescadores</strong>, e é a intercessora poderosa para quem precisa de uma <strong>restauração na vida</strong> (seja na saúde, nas finanças ou nos laços afetivos). Por ter sido encontrada por homens simples e trabalhadores, ela é a protetora dos humildes e dos que buscam sustento com dignidade. É também invocada para a união da nação e pela paz social.</p>\n\n\n\n<h3 class=\"wp-block-heading\">A Jornada de Fé</h3>\n\n\n\n<p class=\"wp-block-paragraph\">A história começou em 1717, quando os pescadores Domingos Garcia, Filipe Pedroso e João Alves foram encarregados de conseguir peixes para um banquete em honra ao Governador da Província. Após horas sem sucesso, no Porto Itaguaçu, a rede de João Alves trouxe o corpo de uma imagem de terracota; no segundo arremesso, veio a cabeça. Era a Imaculada Conceição.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ao unirem as partes, o milagre aconteceu: a rede, antes vazia, ficou tão pesada que quase afundou o barco. A abundância de peixes foi o sinal de que o Céu estava agindo. A partir daquela pequena &#8220;Capela das Velas&#8221; na casa dos pescadores, a devoção cresceu até o imponente Santuário Nacional de hoje. Os milagres do <strong>Escravo Zacarias</strong> (as correntes que caíram), do <strong>Cavaleiro Sem-Fé</strong> (as ferraduras presas na escada) e da <strong>Menina Cega</strong> confirmaram que a Mãe de Deus escolheu o solo brasileiro para manifestar sua ternura.</p>\n\n\n\n<h3 class=\"wp-block-heading\">Virtudes para Imitar</h3>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Humildade:</strong> Aprender com a Mãe que se apresenta pequena e simples para estar perto de todos.</li>\n\n\n\n<li><strong>Esperança Perseverante:</strong> Continuar lançando as redes, mesmo quando as circunstâncias parecem desfavoráveis.</li>\n\n\n\n<li><strong>União (Restauração):</strong> Buscar sempre a reconciliação e a reconstrução do que foi quebrado em nossas relações.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
         "summary": "A história de Nossa Senhora Aparecida começou em outubro de 1717, no Rio Paraíba do Sul, em São Paulo. Três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — enfrentavam uma escassez de peixes quando jogaram as redes e retiraram das águas uma pequena imagem de terracota enegrecida de Nossa Senhora da Conceição, primeiro [&hellip;]",
         "isVerifiedSacred": true
+      },
+      {
+        "id": "st_2026_10_12_4",
+        "date": "2026-10-12",
+        "month": 10,
+        "day": 12,
+        "formattedDate": "12 de Outubro",
+        "name": "Santo Carlo Acutis",
+        "title": "Padroeiro da Internet e Apóstolo da Eucaristia",
+        "image": "assets/img/santos/10-12-santo-carlo-acutis.png",
+        "bio": "Nascido em Londres e criado em Milão, Carlo Acutis faleceu aos 15 anos em 12 de outubro de 2006, oferecendo sua vida e sofrimentos pelo Papa e pela Igreja. Apaixonado pela Eucaristia — que chamava de 'minha rodovia para o Céu' — e autodidata da informática, usou a tecnologia para catalogar os milagres eucarísticos pelo mundo. Seu corpo repousa no Santuário do Despojamento, em Assis.",
+        "category": "Santos da Igreja",
+        "source": "Diocese de Assis / Associação Carlo Acutis",
+        "hasSacredImage": true,
+        "seculo": "Século XXI",
+        "seculos": [
+          "Século XX",
+          "Século XXI"
+        ],
+        "pais": "Itália",
+        "paises": [
+          "Itália"
+        ],
+        "causas": [
+          "Internet",
+          "Jovens",
+          "Milagres Eucarísticos",
+          "Programadores",
+          "Estudantes"
+        ],
+        "virtudes": "O jovem que vestia calça jeans e tênis e usou o seu talento para a informática para evangelizar. Carlo Acutis ensinou que a santidade é possível no século XXI e que a Eucaristia é o caminho mais rápido para chegar a Deus.",
+        "lat": 43.0714,
+        "lng": 12.6131,
+        "richBio": "\n<p class=\"wp-block-paragraph\"><strong>Carlo Acutis</strong> nasceu em Londres no dia <strong>3 de maio de 1991</strong> e cresceu em Milão. Desde os sete anos, quando fez a Primeira Comunhão, colocou a Missa e o Terço diário como pilares da sua vida. Autodidata genial em informática e programação, criou a Exposição Internacional dos Milagres Eucarísticos, levando relatos e documentos sobre mais de 130 milagres reconhecidos pela Igreja para os cinco continentes.</p>\n\n<p class=\"wp-block-paragraph\">Diagnosticado com leucemia fulminante em outubro de 2006, ofereceu todo o sofrimento pelo Sumo Pontífice e pela Igreja Católica. Faleceu em <strong>12 de outubro de 2006</strong>, com apenas 15 anos. Seu corpo incorrupto repousa no Santuário do Despojamento, em Assis. Foi beatificado em 2020 e elevado à glória dos altares como Santo.</p>\n\n<h3 class=\"wp-block-heading\">Oração Oficial com Imprimatur</h3>\n<p class=\"wp-block-paragraph\"><em>Ó Deus, nosso Pai, obrigado por nos teres dado Carlo, modelo de vida para os jovens e mensagem de amor para todos. Tu fizeste com que se apaixonasse pelo teu Filho Jesus, fazendo da Eucaristia a sua “rodovia para o Céu”. Tu lhe deste Maria, como mãe amadíssima, e fizeste dele com o Rosário um cantor da sua ternura. Aceita a sua oração por nós. Olha especialmente para os pobres, que ele amou e socorreu. Concede também a mim, pela sua intercessão, a graça de que eu preciso... E torna plena a nossa alegria, colocando Carlo entre os santos da tua igreja universal, para que o seu sorriso resplandeça ainda para nós para a glória do teu nome. Amém.</em><br><strong>(Pater, Ave, Gloria — Imprimatur + Domenico Sorrentino, Bispo de Assis)</strong></p>\n",
+        "summary": "Carlo Acutis nasceu em Londres no dia 3 de maio de 1991 e cresceu em Milão. Desde muito pequeno manifestou profundo amor a Deus, fazendo sua Primeira Comunhão aos sete anos e tornando-se assíduo na Missa e no Terço diário. Faleceu santamente em 12 de outubro de 2006.",
+        "isVerifiedSacred": true
       }
     ],
     "10-12": [
@@ -35672,6 +35708,42 @@ window.SAINTS_DATA = {
         "lng": -45.2332,
         "richBio": "\n<p class=\"wp-block-paragraph\">A história de Nossa Senhora Aparecida começou em <strong>outubro de 1717</strong>, no Rio Paraíba do Sul, em São Paulo. Três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — enfrentavam uma escassez de peixes quando jogaram as redes e retiraram das águas uma pequena imagem de terracota enegrecida de Nossa Senhora da Conceição, primeiro o corpo e depois a cabeça. Logo após o achado, as redes que antes vinham vazias se encheram com uma quantidade tão abundante de peixes que os pescadores precisaram retornar ao porto para o barco não afundar.</p>\n\n\n\n<p class=\"wp-block-paragraph\">A imagem foi guardada inicialmente na casa de Filipe Pedroso, onde a comunidade se reunia para rezar. Rapidamente, a fama da &#8220;Santa Aparecida&#8221; se espalhou devido a relatos de prodígios, como o Milagre das Velas, que se acenderam sozinhas, e a libertação do escravo Zacarias, cujas correntes se romperam diante da imagem. A devoção cresceu tanto que a antiga vila deu lugar à cidade de Aparecida, impulsionando a construção de capelas e, mais tarde, do <strong>Santuário Nacional</strong>, a segunda maior basílica do mundo.</p>\n\n\n\n<p class=\"wp-block-paragraph\">O forte apelo popular e a cor negra da imagem criaram uma profunda identificação com o povo brasileiro, especialmente com as classes mais humildes. Em 1904, a imagem foi coroada com uma joia doada pela Princesa Isabel e, em <strong>1930</strong>, o Papa Pio XI declarou oficialmente Nossa Senhora Aparecida como a Padroeira Principal do Brasil. Hoje, o dia 12 de outubro é feriado nacional e atrai milhões de peregrinos ao seu santuário, consolidando-a como o maior símbolo de fé do país.</p>\n\n\n\n<h3 class=\"wp-block-heading\">O Que Ela Protege</h3>\n\n\n\n<p class=\"wp-block-paragraph\">Nossa Senhora Aparecida é a <strong>Rainha e Padroeira do Brasil</strong>. Ela protege as <strong>famílias brasileiras</strong>, os <strong>pescadores</strong>, e é a intercessora poderosa para quem precisa de uma <strong>restauração na vida</strong> (seja na saúde, nas finanças ou nos laços afetivos). Por ter sido encontrada por homens simples e trabalhadores, ela é a protetora dos humildes e dos que buscam sustento com dignidade. É também invocada para a união da nação e pela paz social.</p>\n\n\n\n<h3 class=\"wp-block-heading\">A Jornada de Fé</h3>\n\n\n\n<p class=\"wp-block-paragraph\">A história começou em 1717, quando os pescadores Domingos Garcia, Filipe Pedroso e João Alves foram encarregados de conseguir peixes para um banquete em honra ao Governador da Província. Após horas sem sucesso, no Porto Itaguaçu, a rede de João Alves trouxe o corpo de uma imagem de terracota; no segundo arremesso, veio a cabeça. Era a Imaculada Conceição.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ao unirem as partes, o milagre aconteceu: a rede, antes vazia, ficou tão pesada que quase afundou o barco. A abundância de peixes foi o sinal de que o Céu estava agindo. A partir daquela pequena &#8220;Capela das Velas&#8221; na casa dos pescadores, a devoção cresceu até o imponente Santuário Nacional de hoje. Os milagres do <strong>Escravo Zacarias</strong> (as correntes que caíram), do <strong>Cavaleiro Sem-Fé</strong> (as ferraduras presas na escada) e da <strong>Menina Cega</strong> confirmaram que a Mãe de Deus escolheu o solo brasileiro para manifestar sua ternura.</p>\n\n\n\n<h3 class=\"wp-block-heading\">Virtudes para Imitar</h3>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Humildade:</strong> Aprender com a Mãe que se apresenta pequena e simples para estar perto de todos.</li>\n\n\n\n<li><strong>Esperança Perseverante:</strong> Continuar lançando as redes, mesmo quando as circunstâncias parecem desfavoráveis.</li>\n\n\n\n<li><strong>União (Restauração):</strong> Buscar sempre a reconciliação e a reconstrução do que foi quebrado em nossas relações.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
         "summary": "A história de Nossa Senhora Aparecida começou em outubro de 1717, no Rio Paraíba do Sul, em São Paulo. Três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — enfrentavam uma escassez de peixes quando jogaram as redes e retiraram das águas uma pequena imagem de terracota enegrecida de Nossa Senhora da Conceição, primeiro [&hellip;]",
+        "isVerifiedSacred": true
+      },
+      {
+        "id": "st_2026_10_12_4",
+        "date": "2026-10-12",
+        "month": 10,
+        "day": 12,
+        "formattedDate": "12 de Outubro",
+        "name": "Santo Carlo Acutis",
+        "title": "Padroeiro da Internet e Apóstolo da Eucaristia",
+        "image": "assets/img/santos/10-12-santo-carlo-acutis.png",
+        "bio": "Nascido em Londres e criado em Milão, Carlo Acutis faleceu aos 15 anos em 12 de outubro de 2006, oferecendo sua vida e sofrimentos pelo Papa e pela Igreja. Apaixonado pela Eucaristia — que chamava de 'minha rodovia para o Céu' — e autodidata da informática, usou a tecnologia para catalogar os milagres eucarísticos pelo mundo. Seu corpo repousa no Santuário do Despojamento, em Assis.",
+        "category": "Santos da Igreja",
+        "source": "Diocese de Assis / Associação Carlo Acutis",
+        "hasSacredImage": true,
+        "seculo": "Século XXI",
+        "seculos": [
+          "Século XX",
+          "Século XXI"
+        ],
+        "pais": "Itália",
+        "paises": [
+          "Itália"
+        ],
+        "causas": [
+          "Internet",
+          "Jovens",
+          "Milagres Eucarísticos",
+          "Programadores",
+          "Estudantes"
+        ],
+        "virtudes": "O jovem que vestia calça jeans e tênis e usou o seu talento para a informática para evangelizar. Carlo Acutis ensinou que a santidade é possível no século XXI e que a Eucaristia é o caminho mais rápido para chegar a Deus.",
+        "lat": 43.0714,
+        "lng": 12.6131,
+        "richBio": "\n<p class=\"wp-block-paragraph\"><strong>Carlo Acutis</strong> nasceu em Londres no dia <strong>3 de maio de 1991</strong> e cresceu em Milão. Desde os sete anos, quando fez a Primeira Comunhão, colocou a Missa e o Terço diário como pilares da sua vida. Autodidata genial em informática e programação, criou a Exposição Internacional dos Milagres Eucarísticos, levando relatos e documentos sobre mais de 130 milagres reconhecidos pela Igreja para os cinco continentes.</p>\n\n<p class=\"wp-block-paragraph\">Diagnosticado com leucemia fulminante em outubro de 2006, ofereceu todo o sofrimento pelo Sumo Pontífice e pela Igreja Católica. Faleceu em <strong>12 de outubro de 2006</strong>, com apenas 15 anos. Seu corpo incorrupto repousa no Santuário do Despojamento, em Assis. Foi beatificado em 2020 e elevado à glória dos altares como Santo.</p>\n\n<h3 class=\"wp-block-heading\">Oração Oficial com Imprimatur</h3>\n<p class=\"wp-block-paragraph\"><em>Ó Deus, nosso Pai, obrigado por nos teres dado Carlo, modelo de vida para os jovens e mensagem de amor para todos. Tu fizeste com que se apaixonasse pelo teu Filho Jesus, fazendo da Eucaristia a sua “rodovia para o Céu”. Tu lhe deste Maria, como mãe amadíssima, e fizeste dele com o Rosário um cantor da sua ternura. Aceita a sua oração por nós. Olha especialmente para os pobres, que ele amou e socorreu. Concede também a mim, pela sua intercessão, a graça de que eu preciso... E torna plena a nossa alegria, colocando Carlo entre os santos da tua igreja universal, para que o seu sorriso resplandeça ainda para nós para a glória do teu nome. Amém.</em><br><strong>(Pater, Ave, Gloria — Imprimatur + Domenico Sorrentino, Bispo de Assis)</strong></p>\n",
+        "summary": "Carlo Acutis nasceu em Londres no dia 3 de maio de 1991 e cresceu em Milão. Desde muito pequeno manifestou profundo amor a Deus, fazendo sua Primeira Comunhão aos sete anos e tornando-se assíduo na Missa e no Terço diário. Faleceu santamente em 12 de outubro de 2006.",
         "isVerifiedSacred": true
       }
     ],
@@ -55119,6 +55191,42 @@ window.SAINTS_DATA = {
       "lng": -45.2332,
       "richBio": "\n<p class=\"wp-block-paragraph\">A história de Nossa Senhora Aparecida começou em <strong>outubro de 1717</strong>, no Rio Paraíba do Sul, em São Paulo. Três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — enfrentavam uma escassez de peixes quando jogaram as redes e retiraram das águas uma pequena imagem de terracota enegrecida de Nossa Senhora da Conceição, primeiro o corpo e depois a cabeça. Logo após o achado, as redes que antes vinham vazias se encheram com uma quantidade tão abundante de peixes que os pescadores precisaram retornar ao porto para o barco não afundar.</p>\n\n\n\n<p class=\"wp-block-paragraph\">A imagem foi guardada inicialmente na casa de Filipe Pedroso, onde a comunidade se reunia para rezar. Rapidamente, a fama da &#8220;Santa Aparecida&#8221; se espalhou devido a relatos de prodígios, como o Milagre das Velas, que se acenderam sozinhas, e a libertação do escravo Zacarias, cujas correntes se romperam diante da imagem. A devoção cresceu tanto que a antiga vila deu lugar à cidade de Aparecida, impulsionando a construção de capelas e, mais tarde, do <strong>Santuário Nacional</strong>, a segunda maior basílica do mundo.</p>\n\n\n\n<p class=\"wp-block-paragraph\">O forte apelo popular e a cor negra da imagem criaram uma profunda identificação com o povo brasileiro, especialmente com as classes mais humildes. Em 1904, a imagem foi coroada com uma joia doada pela Princesa Isabel e, em <strong>1930</strong>, o Papa Pio XI declarou oficialmente Nossa Senhora Aparecida como a Padroeira Principal do Brasil. Hoje, o dia 12 de outubro é feriado nacional e atrai milhões de peregrinos ao seu santuário, consolidando-a como o maior símbolo de fé do país.</p>\n\n\n\n<h3 class=\"wp-block-heading\">O Que Ela Protege</h3>\n\n\n\n<p class=\"wp-block-paragraph\">Nossa Senhora Aparecida é a <strong>Rainha e Padroeira do Brasil</strong>. Ela protege as <strong>famílias brasileiras</strong>, os <strong>pescadores</strong>, e é a intercessora poderosa para quem precisa de uma <strong>restauração na vida</strong> (seja na saúde, nas finanças ou nos laços afetivos). Por ter sido encontrada por homens simples e trabalhadores, ela é a protetora dos humildes e dos que buscam sustento com dignidade. É também invocada para a união da nação e pela paz social.</p>\n\n\n\n<h3 class=\"wp-block-heading\">A Jornada de Fé</h3>\n\n\n\n<p class=\"wp-block-paragraph\">A história começou em 1717, quando os pescadores Domingos Garcia, Filipe Pedroso e João Alves foram encarregados de conseguir peixes para um banquete em honra ao Governador da Província. Após horas sem sucesso, no Porto Itaguaçu, a rede de João Alves trouxe o corpo de uma imagem de terracota; no segundo arremesso, veio a cabeça. Era a Imaculada Conceição.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ao unirem as partes, o milagre aconteceu: a rede, antes vazia, ficou tão pesada que quase afundou o barco. A abundância de peixes foi o sinal de que o Céu estava agindo. A partir daquela pequena &#8220;Capela das Velas&#8221; na casa dos pescadores, a devoção cresceu até o imponente Santuário Nacional de hoje. Os milagres do <strong>Escravo Zacarias</strong> (as correntes que caíram), do <strong>Cavaleiro Sem-Fé</strong> (as ferraduras presas na escada) e da <strong>Menina Cega</strong> confirmaram que a Mãe de Deus escolheu o solo brasileiro para manifestar sua ternura.</p>\n\n\n\n<h3 class=\"wp-block-heading\">Virtudes para Imitar</h3>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Humildade:</strong> Aprender com a Mãe que se apresenta pequena e simples para estar perto de todos.</li>\n\n\n\n<li><strong>Esperança Perseverante:</strong> Continuar lançando as redes, mesmo quando as circunstâncias parecem desfavoráveis.</li>\n\n\n\n<li><strong>União (Restauração):</strong> Buscar sempre a reconciliação e a reconstrução do que foi quebrado em nossas relações.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
       "summary": "A história de Nossa Senhora Aparecida começou em outubro de 1717, no Rio Paraíba do Sul, em São Paulo. Três pescadores — Domingos Garcia, Filipe Pedroso e João Alves — enfrentavam uma escassez de peixes quando jogaram as redes e retiraram das águas uma pequena imagem de terracota enegrecida de Nossa Senhora da Conceição, primeiro [&hellip;]",
+      "isVerifiedSacred": true
+    },
+    {
+      "id": "st_2026_10_12_4",
+      "date": "2026-10-12",
+      "month": 10,
+      "day": 12,
+      "formattedDate": "12 de Outubro",
+      "name": "Santo Carlo Acutis",
+      "title": "Padroeiro da Internet e Apóstolo da Eucaristia",
+      "image": "assets/img/santos/10-12-santo-carlo-acutis.png",
+      "bio": "Nascido em Londres e criado em Milão, Carlo Acutis faleceu aos 15 anos em 12 de outubro de 2006, oferecendo sua vida e sofrimentos pelo Papa e pela Igreja. Apaixonado pela Eucaristia — que chamava de 'minha rodovia para o Céu' — e autodidata da informática, usou a tecnologia para catalogar os milagres eucarísticos pelo mundo. Seu corpo repousa no Santuário do Despojamento, em Assis.",
+      "category": "Santos da Igreja",
+      "source": "Diocese de Assis / Associação Carlo Acutis",
+      "hasSacredImage": true,
+      "seculo": "Século XXI",
+      "seculos": [
+        "Século XX",
+        "Século XXI"
+      ],
+      "pais": "Itália",
+      "paises": [
+        "Itália"
+      ],
+      "causas": [
+        "Internet",
+        "Jovens",
+        "Milagres Eucarísticos",
+        "Programadores",
+        "Estudantes"
+      ],
+      "virtudes": "O jovem que vestia calça jeans e tênis e usou o seu talento para a informática para evangelizar. Carlo Acutis ensinou que a santidade é possível no século XXI e que a Eucaristia é o caminho mais rápido para chegar a Deus.",
+      "lat": 43.0714,
+      "lng": 12.6131,
+      "richBio": "\n<p class=\"wp-block-paragraph\"><strong>Carlo Acutis</strong> nasceu em Londres no dia <strong>3 de maio de 1991</strong> e cresceu em Milão. Desde os sete anos, quando fez a Primeira Comunhão, colocou a Missa e o Terço diário como pilares da sua vida. Autodidata genial em informática e programação, criou a Exposição Internacional dos Milagres Eucarísticos, levando relatos e documentos sobre mais de 130 milagres reconhecidos pela Igreja para os cinco continentes.</p>\n\n<p class=\"wp-block-paragraph\">Diagnosticado com leucemia fulminante em outubro de 2006, ofereceu todo o sofrimento pelo Sumo Pontífice e pela Igreja Católica. Faleceu em <strong>12 de outubro de 2006</strong>, com apenas 15 anos. Seu corpo incorrupto repousa no Santuário do Despojamento, em Assis. Foi beatificado em 2020 e elevado à glória dos altares como Santo.</p>\n\n<h3 class=\"wp-block-heading\">Oração Oficial com Imprimatur</h3>\n<p class=\"wp-block-paragraph\"><em>Ó Deus, nosso Pai, obrigado por nos teres dado Carlo, modelo de vida para os jovens e mensagem de amor para todos. Tu fizeste com que se apaixonasse pelo teu Filho Jesus, fazendo da Eucaristia a sua “rodovia para o Céu”. Tu lhe deste Maria, como mãe amadíssima, e fizeste dele com o Rosário um cantor da sua ternura. Aceita a sua oração por nós. Olha especialmente para os pobres, que ele amou e socorreu. Concede também a mim, pela sua intercessão, a graça de que eu preciso... E torna plena a nossa alegria, colocando Carlo entre os santos da tua igreja universal, para que o seu sorriso resplandeça ainda para nós para a glória do teu nome. Amém.</em><br><strong>(Pater, Ave, Gloria — Imprimatur + Domenico Sorrentino, Bispo de Assis)</strong></p>\n",
+      "summary": "Carlo Acutis nasceu em Londres no dia 3 de maio de 1991 e cresceu em Milão. Desde muito pequeno manifestou profundo amor a Deus, fazendo sua Primeira Comunhão aos sete anos e tornando-se assíduo na Missa e no Terço diário. Faleceu santamente em 12 de outubro de 2006.",
       "isVerifiedSacred": true
     },
     {
