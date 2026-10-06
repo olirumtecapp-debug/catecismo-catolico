@@ -7646,47 +7646,42 @@
             const manter = confirm('Neste aparelho ja existe progresso conectado ao e-mail ' + anterior + '.\n\nOK = continuar com o e-mail que ja tem progresso\nCancelar = conectar ' + email);
             if (manter) { if (inp) inp.value = anterior; return; }
         }
-        const pinNovo = (prompt('Opcional: crie um PIN de 4 a 6 digitos para proteger seu progresso (deixe vazio para nao usar):') || '').trim();
-        if (pinNovo) {
-            if (!/^\d{4,6}$/.test(pinNovo)) { showToast('PIN invalido: use de 4 a 6 digitos.', 'error'); return; }
-            window.__pinNuvem = pinNovo;
-        }
         AppState.cloudSyncEmail = email;
+        saveState();
+        this.updateIndicator();
+        closeModal();
+
+        showToast('Conectando e salvando na nuvem...', 'info');
+        await this.syncToCloud(true);
+    },
+
+    async syncToCloud(showToastFeedback = false) {
+        if (!AppState.cloudSyncEmail) return;
+
+        const url = this.getApiUrl('/api/cloud-sync/save');
+        try {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: AppState.cloudSyncEmail,
+                    appState: AppState,
+                    pin: window.__pinNuvem || ''
+                })
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                if (data && data.recoveryCode) {
+                    AppState.recoveryCode = data.recoveryCode;
+                }
+                AppState.lastCloudSync = new Date().toISOString();
                 saveState();
                 this.updateIndicator();
-                closeModal();
-
-                showToast('Conectando e salvando na nuvem...', 'info');
-                await this.syncToCloud(true);
-            },
-
-            async syncToCloud(showToastFeedback = false) {
-                if (!AppState.cloudSyncEmail) return;
-
-                const url = this.getApiUrl('/api/cloud-sync/save');
-                try {
-                    const res = await fetch(url, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            email: AppState.cloudSyncEmail,
-                            appState: AppState,
-                            pin: window.__pinNuvem || ''
-                        })
-                    });
-
-                    if (res.ok) {
-                        const data = await res.json();
-                        if (data && data.recoveryCode) {
-                        alert('GUARDE ESTE CODIGO DE RECUPERACAO: ' + data.recoveryCode + '\n\nCom ele voce recupera seu progresso em outro aparelho, mesmo se esquecer o e-mail. Ele aparece so uma vez.');
-                    }
-                    AppState.lastCloudSync = new Date().toISOString();
-                        saveState();
-                        this.updateIndicator();
-                        if (showToastFeedback) {
-                            showToast('Deus seja louvado! Seu progresso e reflexões foram salvos na nuvem com sucesso! ☁️✨', 'success');
-                        }
-                    } else {
+                if (showToastFeedback) {
+                    showToast('Deus seja louvado! Seu progresso e reflexões foram salvos na nuvem com sucesso! ☁️✨', 'success');
+                }
+            } else {
                         // Fallback silencioso: tenta salvar local
                         if (showToastFeedback) {
                             showToast('Salvo localmente. Sincronizaremos na nuvem assim que houver conexão.', 'info');
@@ -7848,22 +7843,13 @@
                 const url = this.getApiUrl('/api/cloud-sync/load?email=' + encodeURIComponent(email));
 
                 try {
-                    let pin = window.__pinNuvem || '';
-                    let res = await fetch(url + (pin ? '&pin=' + encodeURIComponent(pin) : ''));
-                    let data = await res.json();
-                    if (data && data.precisaPin) {
-                    pin = (prompt('Esta conta esta protegida por PIN. Digite seu PIN:') || '').trim();
-                    if (!pin) return;
-                    window.__pinNuvem = pin;
-                    saveState();
-                    res = await fetch(url + '&pin=' + encodeURIComponent(pin));
-                    data = await res.json();
-                }
-                if (data && data.pinInvalido) {
-                    showToast('PIN incorreto para este e-mail.', 'error');
-                    return;
-                }
-                if (res.ok) {
+                    const res = await fetch(url);
+                    const data = await res.json();
+                    if (!res.ok || (data && data.success === false)) {
+                        showToast(data && data.error ? data.error : 'Nenhum progresso encontrado para este e-mail.', 'error');
+                        return;
+                    }
+                    if (res.ok) {
                     if (data.appState) {
                             AppState = data.appState;
                             AppState.cloudSyncEmail = email;

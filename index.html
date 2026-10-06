@@ -11154,9 +11154,9 @@ https://catecismo.creativeam.com.br
                     if (res.ok) {
                         const data = await res.json();
                         if (data && data.recoveryCode) {
-                        alert('GUARDE ESTE CODIGO DE RECUPERACAO: ' + data.recoveryCode + '\n\nCom ele voce recupera seu progresso em outro aparelho, mesmo se esquecer o e-mail. Ele aparece so uma vez.');
-                    }
-                    AppState.lastCloudSync = new Date().toISOString();
+                            AppState.recoveryCode = data.recoveryCode;
+                        }
+                        AppState.lastCloudSync = new Date().toISOString();
                         saveState();
                         this.updateIndicator();
                         if (showToastFeedback) {
@@ -11324,22 +11324,13 @@ https://catecismo.creativeam.com.br
                 const url = this.getApiUrl('/api/cloud-sync/load?email=' + encodeURIComponent(email));
 
                 try {
-                    let pin = window.__pinNuvem || '';
-                    let res = await fetch(url + (pin ? '&pin=' + encodeURIComponent(pin) : ''));
-                    let data = await res.json();
-                    if (data && data.precisaPin) {
-                    pin = (prompt('Esta conta esta protegida por PIN. Digite seu PIN:') || '').trim();
-                    if (!pin) return;
-                    window.__pinNuvem = pin;
-                    saveState();
-                    res = await fetch(url + '&pin=' + encodeURIComponent(pin));
-                    data = await res.json();
-                }
-                if (data && data.pinInvalido) {
-                    showToast('PIN incorreto para este e-mail.', 'error');
-                    return;
-                }
-                if (res.ok) {
+                    const res = await fetch(url);
+                    const data = await res.json();
+                    if (!res.ok || (data && data.success === false)) {
+                        showToast(data && data.error ? data.error : 'Nenhum progresso encontrado para este e-mail.', 'error');
+                        return;
+                    }
+                    if (res.ok) {
                     if (data.appState) {
                             AppState = data.appState;
                             AppState.cloudSyncEmail = email;
@@ -11401,6 +11392,11 @@ https://catecismo.creativeam.com.br
                                 <div class="flex justify-between"><span>Reflexões protegidas:</span> <span class="font-bold">${reflectionsCount}</span></div>
                                 <div class="flex justify-between"><span>Pontos de Fé (XP):</span> <span class="font-bold">${AppState.xp || 0} XP</span></div>
                                 <div class="flex justify-between"><span>Dias de Oração:</span> <span class="font-bold">${AppState.streak || 0} dias</span></div>
+                                ${AppState.recoveryCode ? `
+                                <div class="flex items-center justify-between pt-1.5 border-t border-slate-200 dark:border-slate-800">
+                                    <span class="text-[11px] text-slate-500">Código de recuperação:</span>
+                                    <span class="font-mono font-bold text-blue-600 dark:text-blue-400 cursor-pointer" title="Clique para copiar" onclick="navigator.clipboard.writeText('${AppState.recoveryCode}'); showToast('Código copiado!', 'success');">${AppState.recoveryCode} 📋</span>
+                                </div>` : ''}
                             </div>
 
                             <div class="flex gap-2">
