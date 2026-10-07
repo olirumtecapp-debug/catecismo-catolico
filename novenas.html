@@ -517,9 +517,10 @@
                     const status = LiturgicalEngine.evaluateNovenaStatus(nov, todayDate);
                     const startedTime = meta.startedAt || (meta.date ? new Date(meta.date).getTime() : 0) || (status.schedule?.startDate ? status.schedule.startDate.getTime() : 0);
                     const nextPendingDay = [1,2,3,4,5,6,7,8,9].find(d => !prog.includes(d)) || 1;
-                    const calendarDay = status.currentDay || nextPendingDay;
+                    // PRIORIDADE CANÔNICA: Se a novena está em andamento na Igreja, o dia de hoje é status.currentDay!
+                    const calendarDay = (status.status === 'em_andamento' && status.currentDay) ? status.currentDay : nextPendingDay;
                     const isTodayPrayed = prog.includes(calendarDay);
-                    const targetDay = isTodayPrayed ? calendarDay : nextPendingDay;
+                    const targetDay = isTodayPrayed ? calendarDay : calendarDay;
 
                     inProgressList.push({
                         novena: nov,
@@ -546,6 +547,8 @@
                 const actImg = getNovenaImage(fullNovena);
                 const nextPending = primary.nextPendingDay;
                 const targetDay = primary.targetDay;
+                const calendarDay = primary.calendarDay;
+                const isTodayPrayed = primary.isTodayPrayed;
                 const completedCount = primary.completedCount;
                 const pct = primary.pct;
 
@@ -568,21 +571,21 @@
                                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-300">
                                             Progresso: ${completedCount}/9 dias (${pct}%)
                                         </span>
-                                        <span class="text-[11px] font-bold text-rose-800 dark:text-rose-300">
-                                            Próximo: Dia ${nextPending}
+                                        <span class="text-[11px] font-bold ${isTodayPrayed ? 'text-emerald-700 dark:text-emerald-300' : 'text-rose-800 dark:text-rose-300'}">
+                                            📅 Dia ${calendarDay} Hoje na Igreja
                                         </span>
                                     </div>
                                     <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-white mt-1">
                                         ${fullNovena.titulo}
                                     </h3>
                                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl">
-                                        Você já completou ${completedCount} dias. Continue sua oração para não quebrar a sequência: <em>${fullNovena.dias[targetDay - 1]?.tema || ''}</em>.
+                                        ${!isTodayPrayed ? `Oração de hoje: <strong>Dia ${calendarDay} de 9</strong>. <em>${fullNovena.dias[calendarDay - 1]?.tema || ''}</em>.` : `✓ <strong>Dia ${calendarDay} de hoje rezado com devoção!</strong> Amanhã continuaremos com o Dia ${Math.min(9, calendarDay + 1)}.`}
                                     </p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-3 shrink-0">
-                                <button onclick="openNovenaModal('${fullNovena.id}', ${targetDay})" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm shadow-md transition transform hover:scale-[1.02] cursor-pointer flex items-center justify-center gap-2">
-                                    <span>Continuar Oração (Dia ${targetDay})</span>
+                                <button onclick="openNovenaModal('${fullNovena.id}', ${targetDay})" class="w-full sm:w-auto px-6 py-3 rounded-xl ${isTodayPrayed ? 'bg-slate-700 hover:bg-slate-600' : 'bg-rose-600 hover:bg-rose-700'} text-white font-bold text-sm shadow-md transition transform hover:scale-[1.02] cursor-pointer flex items-center justify-center gap-2">
+                                    <span>${!isTodayPrayed ? `Rezar Dia ${calendarDay} Hoje` : `✓ Rever Dia ${calendarDay}`}</span>
                                     <span>➔</span>
                                 </button>
                             </div>
@@ -712,7 +715,10 @@
                 const completedCount = userProgress.length;
                 const progressPct = Math.round((completedCount / 9) * 100);
                 const nextDayToPray = [1,2,3,4,5,6,7,8,9].find(d => !userProgress.includes(d)) || status.currentDay || 1;
-                const targetDayToOpen = (completedCount > 0 && completedCount < 9) ? nextDayToPray : (status.currentDay || 1);
+                // PRIORIDADE LITÚRGICA: Se a novena está em andamento na Igreja, o dia alvo É O DIA DE HOJE
+                const isLiturgicalActive = status.status === 'em_andamento' && Boolean(status.currentDay);
+                const targetDayToOpen = isLiturgicalActive ? status.currentDay : ((completedCount > 0 && completedCount < 9) ? nextDayToPray : (status.currentDay || 1));
+                const isTargetDone = userProgress.includes(targetDayToOpen);
 
                 let badgeHtml = '';
                 if (status.status === 'em_andamento') {
@@ -770,7 +776,7 @@
                                 <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
                                     <span>Seu Progresso: ${completedCount}/9 dias (${progressPct}%)</span>
                                     ${completedCount > 0 && completedCount < 9 ? `
-                                        <span class="text-amber-700 dark:text-amber-300 font-extrabold">Pendente: Dia ${nextDayToPray}</span>
+                                        <span class="text-amber-700 dark:text-amber-300 font-extrabold">${isLiturgicalActive ? `Hoje: Dia ${targetDayToOpen}` : `Pendente: Dia ${nextDayToPray}`}</span>
                                     ` : (completedCount === 9 ? `<span class="text-emerald-600 font-extrabold">✓ Concluída!</span>` : '')}
                                 </div>
                                 <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
@@ -781,8 +787,8 @@
 
                         <!-- CTA Button & Link ao Banco de Santos -->
                         <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
-                            <button onclick="openNovenaModal('${novena.id}', ${targetDayToOpen})" class="w-full py-2.5 px-4 rounded-xl bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:hover:bg-amber-400 text-white dark:text-slate-900 font-bold text-xs shadow-sm transition text-center cursor-pointer flex items-center justify-center gap-1.5">
-                                <span>${completedCount > 0 && completedCount < 9 ? `Continuar Oração (Dia ${nextDayToPray})` : `Rezar Novena`}</span>
+                            <button onclick="openNovenaModal('${novena.id}', ${targetDayToOpen})" class="w-full py-2.5 px-4 rounded-xl ${isTargetDone ? 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-200 text-slate-700' : 'bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:hover:bg-amber-400 text-white dark:text-slate-900'} font-bold text-xs shadow-sm transition text-center cursor-pointer flex items-center justify-center gap-1.5">
+                                <span>${isLiturgicalActive ? (isTargetDone ? `✓ Dia ${targetDayToOpen} Rezado (Rever)` : `Rezar Dia ${targetDayToOpen} Hoje`) : (completedCount > 0 && completedCount < 9 ? `Continuar: Dia ${nextDayToPray}` : `Rezar Novena`)}</span>
                                 <span>➔</span>
                             </button>
                             ${novena.santo_slug ? `
@@ -1142,7 +1148,8 @@
                     const st = LiturgicalEngine.evaluateNovenaStatus(n, todayDate);
                     const userProgress = getNovenaCompletedDays(n.id);
                     const nextPendingDay = [1,2,3,4,5,6,7,8,9].find(d => !userProgress.includes(d)) || 1;
-                    const finalDay = targetDay || ((userProgress.length > 0 && userProgress.length < 9) ? nextPendingDay : (st.currentDay || 1));
+                    const liturgicalDay = (st.status === 'em_andamento' && st.currentDay) ? st.currentDay : null;
+                    const finalDay = targetDay || liturgicalDay || ((userProgress.length > 0 && userProgress.length < 9) ? nextPendingDay : 1);
                     openNovenaModal(n.id, finalDay);
                 }
             }

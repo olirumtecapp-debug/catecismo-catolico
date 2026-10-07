@@ -5792,9 +5792,14 @@ https://catecismo.creativeam.com.br`;
                         const startedTime = meta.startedAt || (meta.date ? new Date(meta.date).getTime() : 0) || (status.schedule?.startDate ? status.schedule.startDate.getTime() : 0);
                         
                         let nextPendingDay = [1,2,3,4,5,6,7,8,9].find(d => !prog.includes(d)) || 1;
-                        const calendarDay = status.currentDay || nextPendingDay;
+                        // REGRA CANÔNICA DE PRIORIDADE:
+                        // Se a novena está ativa na Igreja hoje (status.currentDay existe), O DIA DE HOJE É status.currentDay!
+                        // Nunca forçar o fiel para um dia passado se hoje a Igreja reza o Dia X.
+                        const calendarDay = (status.status === 'em_andamento' && status.currentDay) ? status.currentDay : nextPendingDay;
                         const isTodayPrayed = prog.includes(calendarDay);
-                        const targetDay = isTodayPrayed ? calendarDay : nextPendingDay;
+                        // Se o dia de hoje ainda não foi rezado, o alvo prioritário É HOJE (calendarDay)!
+                        // Se o dia de hoje já foi rezado, o alvo é rever hoje (calendarDay) ou se houver pendência anterior, ela fica acessível.
+                        const targetDay = isTodayPrayed ? calendarDay : calendarDay;
 
                         inProgressList.push({
                             novena: nov,
@@ -5854,21 +5859,21 @@ https://catecismo.creativeam.com.br`;
                                                 <span class="text-[10px] text-slate-700 dark:text-slate-200 font-bold bg-white/90 dark:bg-slate-800/90 px-2 py-0.5 rounded-full border border-slate-200 dark:border-slate-700">
                                                     ${completedCount}/9 dias rezados (${pct}%)
                                                 </span>
-                                                <span class="text-[10px] text-amber-700 dark:text-amber-300 font-semibold">
-                                                    📅 Dia ${currentDay} no Calendário
+                                                <span class="text-[10px] ${isTodayPrayed ? 'text-emerald-700 dark:text-emerald-300' : 'text-amber-700 dark:text-amber-300'} font-semibold">
+                                                    📅 Dia ${currentDay} Hoje no Calendário Litúrgico
                                                 </span>
                                             </div>
                                             <h4 class="font-serif text-base font-bold text-slate-900 dark:text-slate-100 mt-1">
                                                 ${full.titulo}
                                             </h4>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">
-                                                ${!isTodayPrayed ? `Próxima oração: <strong>Dia ${nextPending} de 9</strong> ${dayData?.tema ? `• <em>"${dayData.tema}"</em>` : ''}` : `✓ <strong>Dia ${currentDay} de hoje concluído!</strong> Amanhã continuaremos com o Dia ${currentDay + 1}.`}
+                                                ${!isTodayPrayed ? `Oração de Hoje: <strong>Dia ${currentDay} de 9</strong> ${dayData?.tema ? `• <em>"${dayData.tema}"</em>` : ''}${nextPending < currentDay ? ` <span class="text-amber-700 dark:text-amber-400 font-medium">(Dia ${nextPending} não marcado)</span>` : ''}` : `✓ <strong>Dia ${currentDay} de hoje rezado com devoção!</strong> Amanhã continuaremos com o Dia ${Math.min(9, currentDay + 1)}.`}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-2 shrink-0">
-                                        <button onclick="NovenasModal.open('${full.id}', ${primary.targetDay})" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:text-slate-900 text-white font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
-                                            <span>${!isTodayPrayed ? `Continuar: Rezar Dia ${nextPending} Agora` : `Rever Oração do Dia ${currentDay}`}</span>
+                                        <button onclick="NovenasModal.open('${full.id}', ${primary.targetDay})" class="w-full sm:w-auto px-5 py-2.5 rounded-xl ${isTodayPrayed ? 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-200 text-slate-800' : 'bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:text-slate-900 text-white'} font-bold text-xs shadow-sm transition flex items-center justify-center gap-2 cursor-pointer">
+                                            <span>${!isTodayPrayed ? `Rezar Dia ${currentDay} Hoje` : `✓ Rever Dia ${currentDay}`}</span>
                                             <span>➔</span>
                                         </button>
                                     </div>
@@ -6025,7 +6030,7 @@ https://catecismo.creativeam.com.br`;
                         badge.textContent = `✓ Dia ${targetDay} Rezado!`;
                         badge.className = "px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700";
                     } else if (completedCount > 0) {
-                        badge.textContent = `🌹 Em Andamento (${completedCount}/9)`;
+                        badge.textContent = `🌹 Hoje: Dia ${targetDay}/9`;
                         badge.className = "px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-200 border border-rose-200 dark:border-rose-800 animate-pulse";
                     } else {
                         badge.textContent = `🔔 Rezar Hoje: Dia ${targetDay}/9`;
@@ -6035,9 +6040,9 @@ https://catecismo.creativeam.com.br`;
                 if (title) title.textContent = full.titulo;
                 if (intent) {
                     if (isTodayPrayed) {
-                        intent.innerHTML = `Você cumpriu a oração do <strong>Dia ${targetDay}</strong> com devoção.`;
+                        intent.innerHTML = `Você cumpriu a oração do <strong>Dia ${targetDay}</strong> com devoção hoje.`;
                     } else if (completedCount > 0) {
-                        intent.innerHTML = `Você rezou <strong>${completedCount} de 9 dias</strong>. Próxima oração: <strong>Dia ${nextPendingDay}</strong>.`;
+                        intent.innerHTML = `Oração de hoje: <strong>Dia ${targetDay}</strong> (${completedCount}/9 rezados).`;
                     } else {
                         intent.innerHTML = `Hoje reza-se o <strong>Dia ${targetDay}</strong>: <em>${dayData?.tema || full.subtitulo || ''}</em>.`;
                     }
@@ -6050,11 +6055,8 @@ https://catecismo.creativeam.com.br`;
                     if (isTodayPrayed) {
                         cta.innerHTML = `<span>✓ Dia ${targetDay} Rezado (Rever)</span> <span>→</span>`;
                         cta.className = "flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold rounded-xl text-xs transition shadow-xs flex items-center justify-center gap-1.5 cursor-pointer";
-                    } else if (completedCount > 0) {
-                        cta.innerHTML = `<span>Continuar: Dia ${nextPendingDay}</span> <span>→</span>`;
-                        cta.className = "flex-1 py-2.5 bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:text-slate-900 text-white font-bold rounded-xl text-xs transition shadow-xs flex items-center justify-center gap-1.5 cursor-pointer";
                     } else {
-                        cta.innerHTML = `<span>Rezar Dia ${targetDay}</span> <span>→</span>`;
+                        cta.innerHTML = `<span>Rezar Dia ${targetDay} Hoje</span> <span>→</span>`;
                         cta.className = "flex-1 py-2.5 bg-mariana hover:bg-mariana-dark dark:bg-dourado dark:text-slate-900 text-white font-bold rounded-xl text-xs transition shadow-xs flex items-center justify-center gap-1.5 cursor-pointer";
                     }
                     cta.onclick = () => NovenasModal.open(full.id, targetDay);
@@ -11245,7 +11247,9 @@ https://catecismo.creativeam.com.br
                             const cloudStreak = Number(data.user.streak) || 0;
                             const localStreak = Number(AppState.streak) || 0;
 
-                            // 1. SEMPRE MESCLAR NOVENAS (Nuvem + Local)
+                            // 1. SEMPRE MESCLAR NOVENAS (Nuvem + Local - Bidirecional sem perda)
+                            let novenasChangedLocally = false;
+                            this.collectNovenasData();
                             if (data.appState && data.appState.novenas) {
                                 AppState.novenas = AppState.novenas || { progress: {}, meta: {} };
                                 AppState.novenas.progress = AppState.novenas.progress || {};
@@ -11253,6 +11257,7 @@ https://catecismo.creativeam.com.br
                                 const cloudProgress = data.appState.novenas.progress || {};
                                 const cloudMeta = data.appState.novenas.meta || {};
 
+                                // Mescla chaves da nuvem para o local
                                 Object.keys(cloudProgress).forEach(novenaId => {
                                     let localDays = [];
                                     try {
@@ -11260,8 +11265,20 @@ https://catecismo.creativeam.com.br
                                     } catch(e) { localDays = []; }
                                     const cDays = cloudProgress[novenaId] || [];
                                     const mergedDays = Array.from(new Set([...(localDays || []), ...(cDays || [])])).sort((a,b)=>a-b);
+                                    if (mergedDays.length !== localDays.length) {
+                                        novenasChangedLocally = true;
+                                    }
                                     localStorage.setItem(`thesaurus_progress_${novenaId}`, JSON.stringify(mergedDays));
                                     AppState.novenas.progress[novenaId] = mergedDays;
+                                });
+
+                                // Verifica também se o local tem dias de novenas que a nuvem ainda não tem!
+                                Object.keys(AppState.novenas.progress).forEach(novenaId => {
+                                    const cDays = cloudProgress[novenaId] || [];
+                                    const lDays = AppState.novenas.progress[novenaId] || [];
+                                    if (lDays.some(d => !cDays.includes(d))) {
+                                        novenasChangedLocally = true;
+                                    }
                                 });
 
                                 Object.keys(cloudMeta).forEach(novenaId => {
@@ -11284,6 +11301,8 @@ https://catecismo.creativeam.com.br
                                         iframe.contentWindow.postMessage({ type: 'NOVENAS_DATA_SYNC', novenas: AppState.novenas }, '*');
                                     } catch(e) {}
                                 }
+                            } else if (AppState.novenas && Object.keys(AppState.novenas.progress || {}).length > 0) {
+                                novenasChangedLocally = true;
                             }
 
                             // 2. SEMPRE MESCLAR LITURGIA DIÁRIA, REFLEXÕES E CONQUISTAS (Aditivo e Nunca perde nada)
@@ -11324,8 +11343,8 @@ https://catecismo.creativeam.com.br
                                 }
                             }
 
-                            // 4. Se o local tiver novos dados ou mais XP que a nuvem, sincroniza de volta para a nuvem!
-                            if (localXp > cloudXp || (data.appState && Object.keys(AppState.liturgicalRead || {}).length > Object.keys(data.appState.liturgicalRead || {}).length)) {
+                            // 4. Se o local tiver novos dados, novenas rezadas ou mais XP que a nuvem, sincroniza de volta para a nuvem!
+                            if (novenasChangedLocally || localXp > cloudXp || (data.appState && Object.keys(AppState.liturgicalRead || {}).length > Object.keys(data.appState.liturgicalRead || {}).length)) {
                                 await this.syncToCloud(false);
                             }
 
