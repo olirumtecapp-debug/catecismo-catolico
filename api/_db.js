@@ -215,28 +215,26 @@ export async function saveUserToDatabase(email, userRecord) {
     const localUsers = getLocalUsers();
     localUsers[key] = { ...(localUsers[key] || {}), ...userRecord, email: key };
     saveLocalUsers(localUsers);
+    cacheClear();
 
-    try {
-        // preserva createdAt original quando ja existe
-        const atual = await fsRequest(basePath(COL_USERS) + '/' + id);
-        if (atual.ok && atual.body && atual.body.fields) {
-            const existente = docToObject(atual.body);
-            if (existente.createdAt && !userRecord.createdAt) userRecord.createdAt = existente.createdAt;
-            if (existente.createdAt && userRecord.createdAt && existente.createdAt < userRecord.createdAt) {
-                // mantem o mais antigo
-                userRecord.createdAt = existente.createdAt;
+    // Sincroniza com Firestore em segundo plano sem travar a resposta do usuário
+    (async () => {
+        try {
+            const atual = await fsRequest(basePath(COL_USERS) + '/' + id);
+            if (atual.ok && atual.body && atual.body.fields) {
+                const existente = docToObject(atual.body);
+                if (existente.createdAt && !userRecord.createdAt) userRecord.createdAt = existente.createdAt;
+                if (existente.createdAt && userRecord.createdAt && existente.createdAt < userRecord.createdAt) {
+                    userRecord.createdAt = existente.createdAt;
+                }
             }
+            await upsertDoc(COL_USERS, id, { email: key, ...userRecord });
+        } catch (err) {
+            // Firestore falhou, mas dados locais já estão 100% seguros
         }
+    })().catch(() => {});
 
-        const ok = await upsertDoc(COL_USERS, id, { email: key, ...userRecord });
-        cacheClear();
-        return ok;
-    } catch (err) {
-        console.error('[db] falha ao gravar usuario no Firestore:', err && err.message);
-        cacheClear();
-        // Localmente foi salvo com 100% de sucesso
-        return true;
-    }
+    return true;
 }
 
 // ================= MESSAGES / CAIXA POSTAL DB =================

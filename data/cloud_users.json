@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-09-11T16:17:55.685Z",
-    "updated": "2026-09-22T00:25:53.347Z",
+    "updated": "2026-10-07T21:53:03.574Z",
     "description": "Backup Local de Usuários e Sincronização em Nuvem - CATECISMO (Espelho do Firestore)",
-    "totalUsers": 5
+    "totalUsers": 6
   },
   "users": {
     "patriciamedino1@gmail.com": {
@@ -105,86 +105,16 @@
     },
     "olirumdev1@gmail.com": {
       "xp": 945,
-      "updatedAt": "2026-09-22T00:18:19.547Z",
+      "updatedAt": "2026-10-07T21:53:03.573Z",
       "recoveryHash": "0bceec1b216004ec29f72a7c66954e7f874bed3f6639bc7bb40ffae751cc16cc",
       "pinHash": "edf04ab3f1b5aba3c160ed4faafe8da4a700d6be826706ce86051e3112c26eee",
       "level": "ApÃ³stolo de Cristo",
       "appState": {
-        "unlockedAchievements": [
-          "first_liturgy",
-          "prayer_streak",
-          "first_study",
-          "first_lectio",
-          "first_rosary",
-          "three_liturgies",
-          "five_lessons",
-          "pillar_master",
-          "xp_master",
-          "first_quiz",
-          "seven_liturgies"
-        ],
         "xp": 945,
-        "dailyChallenges": {
-          "2026-09-21": true,
-          "2026-09-18": true
-        },
-        "streak": 5,
-        "lectioNotes": {
-          "2026-09-14": "Ele veio foi humilde e voltou ensinando o melhor, Jesus Seja Louvado.",
-          "2026-09-19": "Escutar diferente de ouvir... quero muito ser a semente boa.",
-          "2026-09-15": "Jesus e seus prodígios e ainda assim nós o condenamos. Misericórdia de nós senhor.",
-          "2026-09-13": "Perdoar sem medidas"
-        },
-        "activeStudyPlan": "plan_creio",
-        "lastCloudSync": "2026-09-21T20:40:51.557Z",
-        "favorites": [],
-        "cloudSyncEmail": "olirumdev1@gmail.com",
-        "completedQuizzes": [
-          1789403008353
-        ],
-        "planProgress": {
-          "plan_creio": []
-        },
-        "readBibleChapters": {
-          "MAT_18": true
-        },
-        "completedLessons": [
-          "creio_1",
-          "creio_2",
-          "creio_3",
-          "creio_4",
-          "creio_5",
-          "celebro_1",
-          "celebro_2",
-          "celebro_3"
-        ],
-        "lastPrayerDate": "2026-09-19",
-        "completedRosaries": [
-          {
-            "date": "2026-09-13",
-            "timestamp": 1789301969248,
-            "mystery": "gloriosos"
-          },
-          {
-            "date": "2026-09-19",
-            "mystery": "gozosos",
-            "timestamp": 1789810899053
-          }
-        ],
-        "liturgicalRead": {
-          "2026-09-18": true,
-          "2026-09-21": true,
-          "2026-09-17": true,
-          "2026-09-16": true,
-          "2026-09-13": true,
-          "2026-09-19": true,
-          "2026-09-14": true,
-          "2026-09-11": true,
-          "2026-09-15": true
-        }
+        "streak": 5
       },
       "email": "olirumdev1@gmail.com",
-      "reflectionsCount": 4,
+      "reflectionsCount": 0,
       "createdAt": "2026-09-15T13:46:20.200Z",
       "recoveryCreatedAt": "2026-09-16T01:04:28.606Z",
       "streak": 5
@@ -213,6 +143,38 @@
       },
       "createdAt": "2026-09-14T10:38:19.272Z",
       "level": "Peregrino"
+    },
+    "maahnndss@gmail.com": {
+      "email": "maahnndss@gmail.com",
+      "xp": 210,
+      "streak": 4,
+      "level": "Peregrino",
+      "reflectionsCount": 1,
+      "createdAt": "2026-10-02T12:00:00.000Z",
+      "updatedAt": "2026-10-04T00:35:39.000Z",
+      "appState": {
+        "xp": 210,
+        "streak": 4,
+        "cloudSyncEmail": "maahnndss@gmail.com",
+        "lastCloudSync": "2026-10-04T00:35:39.000Z",
+        "unlockedAchievements": [
+          "first_study",
+          "prayer_streak"
+        ],
+        "completedLessons": [
+          "creio_1"
+        ],
+        "completedQuizzes": [],
+        "favorites": [],
+        "lectioNotes": {},
+        "liturgicalRead": {
+          "2026-10-03": true
+        },
+        "novenas": {
+          "progress": {},
+          "meta": {}
+        }
+      }
     }
   }
 }
