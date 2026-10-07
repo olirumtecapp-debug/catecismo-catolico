@@ -4181,7 +4181,15 @@
         window.AppState = AppState;
 
         function saveState() {
-            localStorage.setItem('catecismo_state_v5', JSON.stringify(AppState));
+            try {
+                // Auto-coleta progresso de novenas espalhado no localStorage antes de salvar
+                if (window.CloudSyncManager && typeof CloudSyncManager.collectNovenasData === 'function') {
+                    CloudSyncManager.collectNovenasData();
+                }
+                localStorage.setItem('catecismo_state_v5', JSON.stringify(AppState));
+            } catch(e) {
+                console.warn('[saveState] Falha ao persistir no localStorage:', e.message);
+            }
             updateHeaderBadges();
             checkAchievements();
         }
@@ -4191,9 +4199,24 @@
             const saved = localStorage.getItem('catecismo_state_v5');
             if (saved) {
                 try { 
-                    AppState = JSON.parse(saved); 
+                    const parsed = JSON.parse(saved);
+                    // Mesclagem segura e defensiva: preserva chaves canônicas existentes
+                    AppState = Object.assign({}, AppState, parsed);
+                    // Garante que arrays e objetos essenciais sejam tipos válidos
+                    AppState.completedLessons = Array.isArray(AppState.completedLessons) ? AppState.completedLessons : [];
+                    AppState.unlockedAchievements = Array.isArray(AppState.unlockedAchievements) ? AppState.unlockedAchievements : [];
+                    AppState.favorites = Array.isArray(AppState.favorites) ? AppState.favorites : [];
+                    AppState.liturgicalRead = (AppState.liturgicalRead && typeof AppState.liturgicalRead === 'object') ? AppState.liturgicalRead : {};
+                    AppState.lectioNotes = (AppState.lectioNotes && typeof AppState.lectioNotes === 'object') ? AppState.lectioNotes : {};
+                    AppState.novenas = (AppState.novenas && typeof AppState.novenas === 'object') ? AppState.novenas : { progress: {}, meta: {} };
+                    AppState.novenas.progress = AppState.novenas.progress || {};
+                    AppState.novenas.meta = AppState.novenas.meta || {};
                     window.AppState = AppState;
-                } catch(e) { console.error(e); }
+                } catch(e) { console.error('[loadState] Erro ao carregar AppState:', e); }
+            }
+            // Coleta novenas das chaves individuais se houver
+            if (window.CloudSyncManager && typeof CloudSyncManager.collectNovenasData === 'function') {
+                CloudSyncManager.collectNovenasData();
             }
             updateHeaderBadges();
         }
@@ -4744,128 +4767,144 @@
                 const titleEl = document.getElementById('page-title');
                 const subtitleEl = document.getElementById('page-subtitle');
 
-                switch(route) {
-                    case 'novenas':
-                        NovenasModal.open(params);
-                        break;
-                    case 'preceitos':
-                        PreceitosModal.open();
-                        break;
-                    case 'cards':
-                    case 'evangelho-card':
-                    case 'evangelho_card':
-                        if (window.EvangelhoCardModal) EvangelhoCardModal.open();
-                        break;
-                    case 'admin':
-                        if (window.AdminModal) AdminModal.open();
-                        else promptAdminAccess();
-                        break;
-                    case 'livros':
-                        titleEl.innerText = "Livraria Católica";
-                        subtitleEl.innerText = "Bíblias, Catecismos e Clássicos de Espiritualidade dos Santos";
-                        mainView.innerHTML = Views.renderLivros();
-                        break;
-                    case 'home':
-                        titleEl.innerText = "Meu Momento";
-                        subtitleEl.innerText = "Conhecer, compreender e viver a fé.";
-                        mainView.innerHTML = Views.renderHome();
-                        Views.loadHomeContextAsync(mainView);
-                        break;
-                    case 'liturgia':
-                        titleEl.innerText = "Liturgia Diária";
-                        subtitleEl.innerText = "Leituras, salmo e evangelho do dia";
-                        mainView.innerHTML = Views.renderLiturgia(null, params);
-                        Views.loadLiturgiaAsync(params || getLocalDateString(), mainView);
-                        break;
-                    case 'catecismo':
-                        titleEl.innerText = "Catecismo da Igreja Católica";
-                        subtitleEl.innerText = "Estudo sistemático dos pilares da fé";
-                        mainView.innerHTML = Views.renderCatecismo(params);
-                        break;
-                    case 'catecismo-completo':
-                        titleEl.innerText = "Biblioteca do Catecismo";
-                        subtitleEl.innerText = "Índice completo e acesso ao texto oficial da Santa Sé";
-                        mainView.innerHTML = Views.renderCatecismoCompleto(params);
-                        break;
-                    case 'biblia':
-                        titleEl.innerText = "Bíblia Sagrada";
-                        subtitleEl.innerText = "73 livros, leitura por capítulo e navegação por referência";
-                        mainView.innerHTML = Views.renderBiblia(params);
-                        Views.loadBibliaAsync(params, mainView);
-                        break;
-                    case 'santo':
-                        titleEl.innerText = "Santo do Dia";
-                        subtitleEl.innerText = "Exemplo e intercessão dos amigos de Deus";
-                        mainView.innerHTML = Views.renderSanto((params && /^\d{4}-\d{2}-\d{2}$/.test(params)) ? params : getLocalDateString());
-                        Views.loadSantoAsync((params && /^\d{4}-\d{2}-\d{2}$/.test(params)) ? params : getLocalDateString(), mainView);
-                        break;
-                    case 'oracao':
-                        titleEl.innerText = "Oração & Lectio Divina";
-                        subtitleEl.innerText = "Momentos de recolhimento e leitura orante";
-                        mainView.innerHTML = Views.renderOracao();
-                        Views.loadLectioContextAsync(mainView);
-                        if (params) {
-                            setTimeout(() => {
-                                const targetSec = document.getElementById('secao-oracoes-intencoes');
-                                if (targetSec) {
-                                    targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }
-                                if (params !== 'intencoes') {
-                                    const chip = document.querySelector(`.intention-chip[data-slug="${params}"]`);
-                                    if (chip && typeof filterIntentionsByChip === 'function') {
-                                        filterIntentionsByChip(params, chip);
+                try {
+                    switch(route) {
+                        case 'novenas':
+                            NovenasModal.open(params);
+                            break;
+                        case 'preceitos':
+                            PreceitosModal.open();
+                            break;
+                        case 'cards':
+                        case 'evangelho-card':
+                        case 'evangelho_card':
+                            if (window.EvangelhoCardModal) EvangelhoCardModal.open();
+                            break;
+                        case 'admin':
+                            if (window.AdminModal) AdminModal.open();
+                            else promptAdminAccess();
+                            break;
+                        case 'livros':
+                            titleEl.innerText = "Livraria Católica";
+                            subtitleEl.innerText = "Bíblias, Catecismos e Clássicos de Espiritualidade dos Santos";
+                            mainView.innerHTML = Views.renderLivros();
+                            break;
+                        case 'home':
+                            titleEl.innerText = "Meu Momento";
+                            subtitleEl.innerText = "Conhecer, compreender e viver a fé.";
+                            mainView.innerHTML = Views.renderHome();
+                            Views.loadHomeContextAsync(mainView);
+                            break;
+                        case 'liturgia':
+                            titleEl.innerText = "Liturgia Diária";
+                            subtitleEl.innerText = "Leituras, salmo e evangelho do dia";
+                            mainView.innerHTML = Views.renderLiturgia(null, params);
+                            Views.loadLiturgiaAsync(params || getLocalDateString(), mainView);
+                            break;
+                        case 'catecismo':
+                            titleEl.innerText = "Catecismo da Igreja Católica";
+                            subtitleEl.innerText = "Estudo sistemático dos pilares da fé";
+                            mainView.innerHTML = Views.renderCatecismo(params);
+                            break;
+                        case 'catecismo-completo':
+                            titleEl.innerText = "Biblioteca do Catecismo";
+                            subtitleEl.innerText = "Índice completo e acesso ao texto oficial da Santa Sé";
+                            mainView.innerHTML = Views.renderCatecismoCompleto(params);
+                            break;
+                        case 'biblia':
+                            titleEl.innerText = "Bíblia Sagrada";
+                            subtitleEl.innerText = "73 livros, leitura por capítulo e navegação por referência";
+                            mainView.innerHTML = Views.renderBiblia(params);
+                            Views.loadBibliaAsync(params, mainView);
+                            break;
+                        case 'santo':
+                            titleEl.innerText = "Santo do Dia";
+                            subtitleEl.innerText = "Exemplo e intercessão dos amigos de Deus";
+                            mainView.innerHTML = Views.renderSanto((params && /^\d{4}-\d{2}-\d{2}$/.test(params)) ? params : getLocalDateString());
+                            Views.loadSantoAsync((params && /^\d{4}-\d{2}-\d{2}$/.test(params)) ? params : getLocalDateString(), mainView);
+                            break;
+                        case 'oracao':
+                            titleEl.innerText = "Oração & Lectio Divina";
+                            subtitleEl.innerText = "Momentos de recolhimento e leitura orante";
+                            mainView.innerHTML = Views.renderOracao();
+                            Views.loadLectioContextAsync(mainView);
+                            if (params) {
+                                setTimeout(() => {
+                                    const targetSec = document.getElementById('secao-oracoes-intencoes');
+                                    if (targetSec) {
+                                        targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                     }
-                                }
-                            }, 120);
-                        }
-                        break;
-                    case 'missa':
-                        titleEl.innerText = "A Santa Missa Explicada";
-                        subtitleEl.innerText = "Compreenda cada rito e misteriosa liturgia";
-                        mainView.innerHTML = Views.renderMissa();
-                        break;
-                    case 'quiz':
-                        titleEl.innerText = "Quizzes de Conhecimento";
-                        subtitleEl.innerText = "Teste e reforce o seu aprendizado";
-                        mainView.innerHTML = Views.renderQuiz();
-                        break;
-                    case 'planos':
-                        titleEl.innerText = "Planos de Estudo";
-                        subtitleEl.innerText = "Roteiros guiados para sua jornada espiritual";
-                        mainView.innerHTML = Views.renderPlanos();
-                        break;
-                    case 'reflexoes':
-                        titleEl.innerText = "Diário Espiritual & Reflexões";
-                        subtitleEl.innerText = "Suas meditações e orações registradas na Lectio Divina";
-                        mainView.innerHTML = Views.renderReflexoes();
-                        break;
-                    case 'favoritos':
-                        titleEl.innerText = "Meus Favoritos";
-                        subtitleEl.innerText = "Conteúdos salvos para consulta rápida";
-                        mainView.innerHTML = Views.renderFavoritos();
-                        break;
-                    case 'conquistas':
-                        titleEl.innerText = "Conquistas";
-                        subtitleEl.innerText = "Seu progresso coroado pela perseverança";
-                        mainView.innerHTML = Views.renderConquistas();
-                        break;
-                    case 'progresso':
-                        titleEl.innerText = "Meu Progresso";
-                        subtitleEl.innerText = "Estatísticas detalhadas de estudo e oração";
-                        mainView.innerHTML = Views.renderProgresso();
-                        break;
-                    case 'fontes':
-                        titleEl.innerText = "Fontes e Transparência";
-                        subtitleEl.innerText = "Direitos, referências e independência institucional";
-                        mainView.innerHTML = Views.renderFontes();
-                        break;
-                    case 'pesquisa':
-                        titleEl.innerText = "Pesquisa Global";
-                        subtitleEl.innerText = "Encontre conteúdos em todo o aplicativo";
-                        mainView.innerHTML = Views.renderPesquisa();
-                        break;
-                    default:
-                        mainView.innerHTML = `<div class="p-10 text-center font-serif text-xl">Página não encontrada.</div>`;
+                                    if (params !== 'intencoes') {
+                                        const chip = document.querySelector(`.intention-chip[data-slug="${params}"]`);
+                                        if (chip && typeof filterIntentionsByChip === 'function') {
+                                            filterIntentionsByChip(params, chip);
+                                        }
+                                    }
+                                }, 120);
+                            }
+                            break;
+                        case 'missa':
+                            titleEl.innerText = "A Santa Missa Explicada";
+                            subtitleEl.innerText = "Compreenda cada rito e misteriosa liturgia";
+                            mainView.innerHTML = Views.renderMissa();
+                            break;
+                        case 'quiz':
+                            titleEl.innerText = "Quizzes de Conhecimento";
+                            subtitleEl.innerText = "Teste e reforce o seu aprendizado";
+                            mainView.innerHTML = Views.renderQuiz();
+                            break;
+                        case 'planos':
+                            titleEl.innerText = "Planos de Estudo";
+                            subtitleEl.innerText = "Roteiros guiados para sua jornada espiritual";
+                            mainView.innerHTML = Views.renderPlanos();
+                            break;
+                        case 'reflexoes':
+                            titleEl.innerText = "Diário Espiritual & Reflexões";
+                            subtitleEl.innerText = "Suas meditações e orações registradas na Lectio Divina";
+                            mainView.innerHTML = Views.renderReflexoes();
+                            break;
+                        case 'favoritos':
+                            titleEl.innerText = "Meus Favoritos";
+                            subtitleEl.innerText = "Conteúdos salvos para consulta rápida";
+                            mainView.innerHTML = Views.renderFavoritos();
+                            break;
+                        case 'conquistas':
+                            titleEl.innerText = "Conquistas";
+                            subtitleEl.innerText = "Seu progresso coroado pela perseverança";
+                            mainView.innerHTML = Views.renderConquistas();
+                            break;
+                        case 'progresso':
+                            titleEl.innerText = "Meu Progresso";
+                            subtitleEl.innerText = "Estatísticas detalhadas de estudo e oração";
+                            mainView.innerHTML = Views.renderProgresso();
+                            break;
+                        case 'fontes':
+                            titleEl.innerText = "Fontes e Transparência";
+                            subtitleEl.innerText = "Direitos, referências e independência institucional";
+                            mainView.innerHTML = Views.renderFontes();
+                            break;
+                        case 'pesquisa':
+                            titleEl.innerText = "Pesquisa Global";
+                            subtitleEl.innerText = "Encontre conteúdos em todo o aplicativo";
+                            mainView.innerHTML = Views.renderPesquisa();
+                            break;
+                        default:
+                            mainView.innerHTML = `<div class="p-10 text-center font-serif text-xl">Página não encontrada.</div>`;
+                    }
+                } catch (navErr) {
+                    console.error('[Router] Erro na rota ' + route + ':', navErr);
+                    mainView.innerHTML = `
+                        <div class="max-w-md mx-auto p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 card-shadow text-center space-y-4 my-8">
+                            <div class="w-12 h-12 mx-auto rounded-2xl bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200 flex items-center justify-center text-2xl">
+                                ✝️
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-mariana dark:text-dourado">Recarregando Seção</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Ocorreu uma pequena instabilidade ao exibir esta tela. Clique abaixo para retornar ao início com segurança.</p>
+                            <button onclick="router.navigate('home')" class="px-5 py-2.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white font-bold text-xs shadow-sm transition">
+                                Ir para a Página Inicial
+                            </button>
+                        </div>
+                    `;
                 }
             }
         };
