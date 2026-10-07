@@ -8993,20 +8993,25 @@ https://catecismo.creativeam.com.br
         }
 
         function markLiturgicalRead(date) {
-            if (AppState.liturgicalRead[date]) {
+            if (AppState.liturgicalRead && AppState.liturgicalRead[date]) {
                 showToast("Esta liturgia já foi lida!", "info");
                 return;
             }
+            AppState.liturgicalRead = AppState.liturgicalRead || {};
             AppState.liturgicalRead[date] = true;
-            AppState.xp += 15;
-            if (window.CloudSyncManager) {
-                CloudSyncManager.checkPromptOnAction('Marcar Liturgia Diária como Lida');
-            }
+            AppState.xp = (AppState.xp || 0) + 15;
             if (!AppState.unlockedAchievements.includes('first_liturgy')) {
                 AppState.unlockedAchievements.push('first_liturgy');
                 showToast("🏆 Conquista: Ouvinte da Palavra!", "success");
             }
             saveState();
+            if (window.CloudSyncManager) {
+                if (AppState.cloudSyncEmail) {
+                    CloudSyncManager.syncToCloud(false);
+                } else {
+                    CloudSyncManager.checkPromptOnAction('Marcar Liturgia Diária como Lida');
+                }
+            }
             showToast("Liturgia lida! +15 XP", "success");
             router.navigate('liturgia', date);
         }
@@ -11194,10 +11199,8 @@ https://catecismo.creativeam.com.br
                             const localXp = Number(AppState.xp) || 0;
                             const cloudStreak = Number(data.user.streak) || 0;
                             const localStreak = Number(AppState.streak) || 0;
-                            const cloudUpdated = data.user.updatedAt ? new Date(data.user.updatedAt).getTime() : 0;
-                            const localUpdated = AppState.lastCloudSync ? new Date(AppState.lastCloudSync).getTime() : 0;
 
-                            // Mesclagem não-destrutiva e aditiva de NOVENAS (para smartphone e PC compartilharem 100% dos dias)
+                            // 1. SEMPRE MESCLAR NOVENAS (Nuvem + Local)
                             if (data.appState && data.appState.novenas) {
                                 AppState.novenas = AppState.novenas || { progress: {}, meta: {} };
                                 AppState.novenas.progress = AppState.novenas.progress || {};
@@ -11238,42 +11241,44 @@ https://catecismo.creativeam.com.br
                                 }
                             }
 
-                            // Se a nuvem tem mais XP ou atualização mais recente:
-                            if (cloudXp > localXp || cloudUpdated > localUpdated) {
-                                AppState.xp = Math.max(localXp, cloudXp);
-                                AppState.streak = Math.max(localStreak, cloudStreak);
-                                
-                                if (data.appState) {
-                                    if (data.appState.lectioNotes) {
-                                        AppState.lectioNotes = Object.assign({}, data.appState.lectioNotes, AppState.lectioNotes || {});
-                                    }
-                                    if (Array.isArray(data.appState.completedLessons)) {
-                                        const setL = new Set([...(AppState.completedLessons || []), ...data.appState.completedLessons]);
-                                        AppState.completedLessons = Array.from(setL);
-                                    }
-                                    if (Array.isArray(data.appState.unlockedAchievements)) {
-                                        const setA = new Set([...(AppState.unlockedAchievements || []), ...data.appState.unlockedAchievements]);
-                                        AppState.unlockedAchievements = Array.from(setA);
-                                    }
-                                    if (data.appState.liturgicalRead) {
-                                        AppState.liturgicalRead = Object.assign({}, data.appState.liturgicalRead, AppState.liturgicalRead || {});
-                                    }
-                                    if (data.appState.dailyChallenges) {
-                                        AppState.dailyChallenges = Object.assign({}, data.appState.dailyChallenges, AppState.dailyChallenges || {});
-                                    }
+                            // 2. SEMPRE MESCLAR LITURGIA DIÁRIA, REFLEXÕES E CONQUISTAS (Aditivo e Nunca perde nada)
+                            if (data.appState) {
+                                if (data.appState.liturgicalRead) {
+                                    AppState.liturgicalRead = Object.assign({}, data.appState.liturgicalRead, AppState.liturgicalRead || {});
                                 }
-                                AppState.lastCloudSync = data.user.updatedAt || new Date().toISOString();
-                                saveState();
-                                this.updateIndicator();
-                                if (typeof updateHeaderBadges === 'function') updateHeaderBadges();
-                                if (showToastFeedback) {
-                                    showToast('Sincronizado com a nuvem! (' + AppState.xp + ' XP, ' + AppState.streak + ' dias)', 'success');
+                                if (data.appState.lectioNotes) {
+                                    AppState.lectioNotes = Object.assign({}, data.appState.lectioNotes, AppState.lectioNotes || {});
                                 }
-                                return;
-                            } else if (localXp > cloudXp) {
-                                await this.syncToCloud(showToastFeedback);
-                                return;
+                                if (Array.isArray(data.appState.completedLessons)) {
+                                    const setL = new Set([...(AppState.completedLessons || []), ...data.appState.completedLessons]);
+                                    AppState.completedLessons = Array.from(setL);
+                                }
+                                if (Array.isArray(data.appState.unlockedAchievements)) {
+                                    const setA = new Set([...(AppState.unlockedAchievements || []), ...data.appState.unlockedAchievements]);
+                                    AppState.unlockedAchievements = Array.from(setA);
+                                }
+                                if (data.appState.dailyChallenges) {
+                                    AppState.dailyChallenges = Object.assign({}, data.appState.dailyChallenges, AppState.dailyChallenges || {});
+                                }
                             }
+
+                            // 3. Atualizar XP e Ofensiva (Sempre o maior)
+                            AppState.xp = Math.max(localXp, cloudXp);
+                            AppState.streak = Math.max(localStreak, cloudStreak);
+                            AppState.lastCloudSync = new Date().toISOString();
+                            saveState();
+                            this.updateIndicator();
+                            if (typeof updateHeaderBadges === 'function') updateHeaderBadges();
+
+                            // 4. Se o local tiver novos dados ou mais XP que a nuvem, sincroniza de volta para a nuvem!
+                            if (localXp > cloudXp || (data.appState && Object.keys(AppState.liturgicalRead || {}).length > Object.keys(data.appState.liturgicalRead || {}).length)) {
+                                await this.syncToCloud(false);
+                            }
+
+                            if (showToastFeedback) {
+                                showToast('Sincronizado com a nuvem! (' + AppState.xp + ' XP, ' + AppState.streak + ' dias)', 'success');
+                            }
+                            return;
                         }
                     }
                     await this.syncToCloud(showToastFeedback);
