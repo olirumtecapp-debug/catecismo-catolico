@@ -58,9 +58,9 @@ const jsContent = `/* ==========================================================
     window.SANTOS_CATALOG_VERSION = "${Date.now()}";
 
     const CANONICAL_MAP = {
-        'aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
-        'nossa senhora aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
-        'nossa senhora da conceicao aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
+        'aparecida': 'assets/img/santos/10-12-nossa-senhora-da-conceicao-aparecida.png',
+        'nossa senhora aparecida': 'assets/img/santos/10-12-nossa-senhora-da-conceicao-aparecida.png',
+        'nossa senhora da conceicao aparecida': 'assets/img/santos/10-12-nossa-senhora-da-conceicao-aparecida.png',
         'santa teresinha': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
         'santa teresa do menino jesus': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
         'novena das rosas': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
@@ -265,7 +265,7 @@ function resolveLocal(saintName, dateStr) {
 
 // Mapa canônico garantido para as novenas oficiais
 const canonicalNovenaImages = {
-    'nossa-senhora-aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
+    'nossa-senhora-aparecida': 'assets/img/santos/10-12-nossa-senhora-da-conceicao-aparecida.png',
     'santa-teresinha': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
     'padre-pio': 'assets/img/santos/09-23-sao-pio-de-pietrelcina-presbitero.png',
     'sao-geraldo-magela': 'assets/img/santos/10-16-sao-geraldo-majella-irmao-leigo-redentorista.png',

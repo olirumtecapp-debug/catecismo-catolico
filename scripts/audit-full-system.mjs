@@ -61,11 +61,12 @@ global.window = {};
 eval(indexContent);
 assert(typeof global.window.resolveLocalSaintImage === 'function', 'resolveLocalSaintImage é uma função válida');
 
+const expectedAparecida = 'assets/img/santos/10-12-nossa-senhora-da-conceicao-aparecida.png';
 const apRes1 = global.window.resolveLocalSaintImage("Novena Oficial de Nossa Senhora Aparecida");
-assert(apRes1 === 'assets/img/santos/10-12-nossa-senhora-aparecida.png', `Aparecida (título completo) resolve para imagem canônica auditada: ${apRes1}`);
+assert(apRes1 === expectedAparecida, `Aparecida (título completo) resolve para imagem canônica auditada: ${apRes1}`);
 
 const apRes2 = global.window.resolveLocalSaintImage("Nossa Senhora Aparecida");
-assert(apRes2 === 'assets/img/santos/10-12-nossa-senhora-aparecida.png', `Aparecida (nome curto) resolve para imagem canônica auditada: ${apRes2}`);
+assert(apRes2 === expectedAparecida, `Aparecida (nome curto) resolve para imagem canônica auditada: ${apRes2}`);
 
 // Validação de todas as 20 novenas
 let perfectResolutions = 0;
