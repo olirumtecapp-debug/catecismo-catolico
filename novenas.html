@@ -461,12 +461,15 @@
         // Resolução inteligente e dinâmica da imagem oficial do santo para novenas
         function getNovenaImage(item) {
             if (!item) return '';
-            if (item.imagem) return item.imagem;
+            // 1. Prioridade absoluta para o banco auditado de imagens dos santos
             if (typeof window.resolveLocalSaintImage === 'function') {
                 const resolved = window.resolveLocalSaintImage(item.titulo, item.festa_liturgica?.data);
                 if (resolved) return resolved;
             }
-            return '';
+            // 2. Se a novena tem imagem própria definida e válida
+            if (item.imagem) return item.imagem;
+            // 3. Fallback canônico seguro para arte sacra
+            return 'assets/img/liturgia/cristo_bencao.jpg';
         }
 
         // Carregar JSON de Novenas com garantia de frescor de cache

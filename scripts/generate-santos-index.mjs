@@ -192,16 +192,40 @@ function resolveLocal(saintName, dateStr) {
     return null;
 }
 
-// 2. Auto-sincroniza data/novenas.json
+// Mapa canônico garantido para as novenas oficiais
+const canonicalNovenaImages = {
+    'nossa-senhora-aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
+    'santa-teresinha': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
+    'padre-pio': 'assets/img/santos/09-23-sao-pio-de-pietrelcina-presbitero.png',
+    'sao-geraldo-magela': 'assets/img/santos/10-16-sao-geraldo-majella-irmao-leigo-redentorista.png',
+    'santa-edwiges': 'assets/img/santos/10-16-santa-edviges-duquesa-da-silesia-religiosa.png',
+    'santa-luzia': 'assets/img/santos/12-13-santa-luzia-virgem-e-martir-de-siracusa.png',
+    'sao-judas-tadeu': 'assets/img/santos/10-28-ss-simao-e-judas-tadeu-apostolos.png',
+    'nossa-senhora-desatadora-dos-nos': 'assets/img/santos/ns_nossa-senhora-desatadora-dos-nos.png',
+    'divina-misericordia': 'assets/img/santos/10-05-santa-faustina-kowalska.png',
+    'pentecostes': 'assets/img/liturgia/cristo_bencao.jpg',
+    'sao-bento': 'assets/img/santos/07-11-sao-bento-abade-padroeiro-da-europa.png',
+    'santo-antonio': 'assets/img/santos/06-13-santo-antonio-de-padua-sacerdote-franciscano-e-doutor-da-igreja.png',
+    'sao-jose': 'assets/img/santos/03-19-santa-jose-esposo-da-santissima-virgem-maria-padroeiro-da-igreja-universal.png',
+    'sao-miguel-arcanjo': 'assets/img/santos/09-29-sao-miguel-arcanjo.png',
+    'novena-de-natal': 'assets/img/liturgia/adoracao_pastores.jpg',
+    'santa-rita-de-cassia': 'assets/img/santos/05-22-santa-rita-de-cassia-religiosa-agostiniana.png',
+    'sagrado-coracao-de-jesus': 'assets/img/liturgia/cristo_bencao.jpg',
+    'nossa-senhora-de-fatima': 'assets/img/santos/05-13-nossa-senhora-de-fatima.png',
+    'sao-peregrino': 'assets/img/santos/ns_sao-peregrino.jpg',
+    'medalha-milagrosa': 'assets/img/santos/01-01-santa-maria-mae-de-deus.png'
+};
+
+// 2. Auto-sincroniza data/novenas.json com garantia canônica
 if (fs.existsSync(novenasJsonPath)) {
     try {
         const novenas = JSON.parse(fs.readFileSync(novenasJsonPath, 'utf8'));
         let updatedNovenas = 0;
         for (const n of novenas) {
-            const resolved = resolveLocal(n.titulo, n.festa_liturgica?.data);
-            if (resolved && n.imagem !== resolved) {
-                console.log(`  [Novena Auto-Sync] ${n.id}: ${n.imagem} -> ${resolved}`);
-                n.imagem = resolved;
+            const canonical = canonicalNovenaImages[n.id] || resolveLocal(n.titulo, n.festa_liturgica?.data);
+            if (canonical && n.imagem !== canonical && fs.existsSync(canonical)) {
+                console.log(`  [Novena Auto-Sync] ${n.id}: ${n.imagem} -> ${canonical}`);
+                n.imagem = canonical;
                 updatedNovenas++;
             }
         }

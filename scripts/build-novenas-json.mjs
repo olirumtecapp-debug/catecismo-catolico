@@ -954,7 +954,7 @@ const novenas = [
     },
     simbolo: "🍞",
     cor: "amber",
-    imagem: "assets/img/santos/06-13-sao-antonio-de-padua-sacerdote-franciscano-e-doutor-da-igreja.png",
+    imagem: "assets/img/santos/06-13-santo-antonio-de-padua-sacerdote-franciscano-e-doutor-da-igreja.png",
     instrucoes: "Santo Antônio de Lisboa e Pádua (1195-1231), frade menor franciscano, é um dos santos mais populares e amados da Cristandade. Rezada frequentemente sob a forma de Novena (9 dias) ou Trezena (13 dias), a oração invoca seu poder de intercessão junto ao Menino Jesus.",
     oracao_inicial: "Em nome do Pai, do Filho e do Espírito Santo. Amém.\n\nÓ admirável Santo Antônio, luzeiro brilhante da Santa Igreja e glória da Ordem Franciscana: com o Menino Jesus em vossos braços e o lírio da pureza em vossas mãos, olhai com carinho para as necessidades do meu coração.",
     oracao_padrao_dia: "Ó Santo Antônio, que recebestes de Deus o dom extraordinário de restituir as coisas perdidas e socorrer os necessitados: recuperai para a minha vida a graça santificante, a paz e a concórdia familiar. Apresentai com bondade a Jesus Menino a súplica que hoje vos confio (faça o seu pedido pessoal ou familiar). Se milagres desejais, recorrei a Santo Antônio e vereis o poder de Deus manifestado na vossa vida!",

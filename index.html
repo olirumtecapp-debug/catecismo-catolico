@@ -5796,6 +5796,7 @@ https://catecismo.creativeam.com.br`;
                     const pct = primary.pct;
                     const isTodayPrayed = primary.isTodayPrayed;
                     const dayData = full.dias ? full.dias[(primary.targetDay || 1) - 1] : null;
+                    const novenaImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, full.festa_liturgica?.data)) || full.imagem || 'assets/img/liturgia/cristo_bencao.jpg';
 
                     if (bannerContainer) {
                         let bannerHtml = `
@@ -5803,7 +5804,7 @@ https://catecismo.creativeam.com.br`;
                                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                     <div class="flex items-center gap-3.5">
                                         <div class="w-14 h-14 min-w-[56px] max-w-[56px] h-[56px] max-h-[56px] rounded-2xl overflow-hidden bg-rose-100 dark:bg-rose-900/60 border border-rose-300 dark:border-rose-700 shadow-xs shrink-0 flex items-center justify-center relative">
-                                            ${full.imagem ? `<img src="${full.imagem}" alt="${full.titulo}" style="width:56px;height:56px;min-width:56px;max-width:56px;min-height:56px;max-height:56px;object-fit:cover;display:block;border-radius:14px;">` : `<span class="text-2xl">${full.simbolo || '🌹'}</span>`}
+                                            ${novenaImg ? `<img src="${novenaImg}" alt="${full.titulo}" style="width:56px;height:56px;min-width:56px;max-width:56px;min-height:56px;max-height:56px;object-fit:cover;display:block;border-radius:14px;" onerror="this.onerror=null;this.src='assets/img/liturgia/cristo_bencao.jpg';">` : `<span class="text-2xl">${full.simbolo || '🌹'}</span>`}
                                         </div>
                                         <div>
                                             <div class="flex items-center gap-2 flex-wrap">
@@ -5898,13 +5899,14 @@ https://catecismo.creativeam.com.br`;
                     const full = novenas.find(n => n.id === startingItem.id) || novenas[0];
                     const currentDay = startingItem.currentDay || 1;
                     const dayData = full.dias ? full.dias[currentDay - 1] : null;
+                    const novenaImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, full.festa_liturgica?.data)) || full.imagem || 'assets/img/liturgia/cristo_bencao.jpg';
 
                     if (bannerContainer) {
                         bannerContainer.innerHTML = `
                             <div class="p-4 rounded-3xl bg-linear-to-r from-rose-50 via-amber-50/50 to-rose-50/30 dark:from-rose-950/40 dark:via-slate-900 dark:to-amber-950/20 border border-rose-200/90 dark:border-rose-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-fadeIn">
                                 <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-2xl overflow-hidden bg-rose-100 dark:bg-rose-900/60 border border-rose-300 dark:border-rose-700 shadow-xs shrink-0 flex items-center justify-center">
-                                        ${full.imagem ? `<img src="${full.imagem}" alt="${full.titulo}" class="w-full h-full object-cover">` : `<span class="text-2xl">${full.simbolo || '🌹'}</span>`}
+                                    <div class="w-14 h-14 min-w-[56px] max-w-[56px] h-[56px] max-h-[56px] rounded-2xl overflow-hidden bg-rose-100 dark:bg-rose-900/60 border border-rose-300 dark:border-rose-700 shadow-xs shrink-0 flex items-center justify-center relative">
+                                        ${novenaImg ? `<img src="${novenaImg}" alt="${full.titulo}" style="width:56px;height:56px;min-width:56px;max-width:56px;min-height:56px;max-height:56px;object-fit:cover;display:block;border-radius:14px;" onerror="this.onerror=null;this.src='assets/img/liturgia/cristo_bencao.jpg';">` : `<span class="text-2xl">${full.simbolo || '🌹'}</span>`}
                                     </div>
                                     <div>
                                         <div class="flex items-center gap-2">
@@ -11270,6 +11272,15 @@ https://catecismo.creativeam.com.br
                             this.updateIndicator();
                             if (typeof updateHeaderBadges === 'function') updateHeaderBadges();
 
+                            // Re-renderiza a tela de liturgia em tempo real se o fiel estiver nela
+                            if (router && router.currentRoute === 'liturgia') {
+                                const currentParam = router.currentParams || getLocalDateString();
+                                const container = document.querySelector('[data-liturgia-view]');
+                                if (container) {
+                                    Views.loadLiturgiaAsync(currentParam, document.getElementById('main-content'));
+                                }
+                            }
+
                             // 4. Se o local tiver novos dados ou mais XP que a nuvem, sincroniza de volta para a nuvem!
                             if (localXp > cloudXp || (data.appState && Object.keys(AppState.liturgicalRead || {}).length > Object.keys(data.appState.liturgicalRead || {}).length)) {
                                 await this.syncToCloud(false);
@@ -15021,6 +15032,18 @@ https://catecismo.creativeam.com.br
             }
             router.navigate('home');
             ContactManager.init();
+
+            // Sincronização automática em segundo plano quando a janela/aba volta a ficar ativa
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden && typeof CloudSyncManager !== 'undefined' && AppState && AppState.cloudSyncEmail) {
+                    CloudSyncManager.smartSync(false);
+                }
+            });
+            window.addEventListener('focus', () => {
+                if (typeof CloudSyncManager !== 'undefined' && AppState && AppState.cloudSyncEmail) {
+                    CloudSyncManager.smartSync(false);
+                }
+            });
         };
     </script>
 
