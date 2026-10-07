@@ -181,6 +181,12 @@
                 <button onclick="toggleDarkMode()" class="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-amber-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="Alternar Modo Escuro">
                     <span id="theme-icon">🌙</span>
                 </button>
+
+                <!-- Cloud Sync Status / Button -->
+                <button type="button" id="novena-cloud-btn" onclick="handleNovenaCloudBtnClick()" class="px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center gap-1.5 cursor-pointer shadow-2xs" title="Sincronização em Nuvem (Celular e PC)">
+                    <span id="novena-cloud-icon">☁️</span>
+                    <span id="novena-cloud-label" class="hidden sm:inline">Nuvem</span>
+                </button>
             </div>
         </div>
     </header>
@@ -1076,6 +1082,9 @@
                     console.warn('Erro ao notificar parent:', e);
                 }
             }
+
+            // Sincronização direta na nuvem (garante persistência mesmo se aberto direto/standalone no smartphone)
+            syncStandaloneNovenaToCloud(currentNovena.id, completed, meta);
         };
 
         window.toggleGloriaStep = function(num) {
@@ -1166,35 +1175,186 @@
         document.getElementById('novena-search')?.addEventListener('input', handleSearchInput);
         document.getElementById('novena-search-bar')?.addEventListener('input', handleSearchInput);
 
+        function getNovenaCloudEmail() {
+            try {
+                const direct = localStorage.getItem('thesaurus_cloud_email');
+                if (direct && direct.includes('@')) return direct.trim().toLowerCase();
+                const v5 = localStorage.getItem('catecismo_state_v5');
+                if (v5) {
+                    const parsed = JSON.parse(v5);
+                    if (parsed && parsed.cloudSyncEmail && parsed.cloudSyncEmail.includes('@')) {
+                        return parsed.cloudSyncEmail.trim().toLowerCase();
+                    }
+                }
+            } catch(e) {}
+            return null;
+        }
+
+        function updateNovenaCloudIndicator() {
+            const btn = document.getElementById('novena-cloud-btn');
+            const icon = document.getElementById('novena-cloud-icon');
+            const label = document.getElementById('novena-cloud-label');
+            if (!btn || !icon || !label) return;
+            const email = getNovenaCloudEmail();
+            if (email) {
+                const shortEmail = email.split('@')[0];
+                icon.innerText = '🟢';
+                label.innerText = shortEmail;
+                btn.title = `Sincronizado na Nuvem com: ${email} (Clique para sincronizar agora)`;
+            } else {
+                icon.innerText = '☁️';
+                label.innerText = 'Nuvem';
+                btn.title = 'Conectar e-mail para sincronizar novenas entre Celular e Computador';
+            }
+        }
+
+        async function syncStandaloneNovenaToCloud(novenaId, completedDays, meta) {
+            const email = getNovenaCloudEmail();
+            // Atualiza sempre o catecismo_state_v5 localmente
+            try {
+                let state = {};
+                const saved = localStorage.getItem('catecismo_state_v5');
+                if (saved) state = JSON.parse(saved);
+                state.novenas = state.novenas || { progress: {}, meta: {} };
+                state.novenas.progress = state.novenas.progress || {};
+                state.novenas.meta = state.novenas.meta || {};
+                state.novenas.progress[novenaId] = completedDays;
+                if (meta) state.novenas.meta[novenaId] = meta;
+                localStorage.setItem('catecismo_state_v5', JSON.stringify(state));
+            } catch(e) {}
+
+            if (!email) return;
+
+            try {
+                let state = {};
+                try { state = JSON.parse(localStorage.getItem('catecismo_state_v5') || '{}'); } catch(e){}
+                await fetch('/api/cloud-sync/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        appState: state,
+                        pin: localStorage.getItem('thesaurus_cloud_pin') || ''
+                    })
+                });
+            } catch(err) {
+                console.warn('[NovenaCloudSync] Falha ao enviar para API:', err);
+            }
+        }
+
+        async function loadCloudNovenasDirect(showFeedback = false) {
+            const email = getNovenaCloudEmail();
+            if (!email) {
+                if (showFeedback) {
+                    handleNovenaCloudBtnClick();
+                }
+                return;
+            }
+            try {
+                const res = await fetch('/api/cloud-sync/load?email=' + encodeURIComponent(email));
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data.success && data.appState && data.appState.novenas) {
+                        const { progress, meta } = data.appState.novenas;
+                        let changed = false;
+                        if (progress && typeof progress === 'object') {
+                            Object.keys(progress).forEach(id => {
+                                const local = getNovenaCompletedDays(id);
+                                const cloud = progress[id] || [];
+                                const merged = Array.from(new Set([...local, ...cloud])).sort((a,b)=>a-b);
+                                if (merged.length !== local.length) {
+                                    localStorage.setItem(`thesaurus_progress_${id}`, JSON.stringify(merged));
+                                    changed = true;
+                                }
+                            });
+                        }
+                        if (meta && typeof meta === 'object') {
+                            Object.keys(meta).forEach(id => {
+                                const localMeta = JSON.parse(localStorage.getItem(`thesaurus_meta_${id}`) || '{}');
+                                const cloudMeta = meta[id] || {};
+                                const mergedMeta = Object.assign({}, localMeta, cloudMeta);
+                                localStorage.setItem(`thesaurus_meta_${id}`, JSON.stringify(mergedMeta));
+                            });
+                        }
+                        if (changed) {
+                            renderCards();
+                            if (currentNovena) {
+                                renderModalDaysNav();
+                                renderModalDay(currentDayIndex);
+                            }
+                        }
+                        if (showFeedback) {
+                            alert(`Sincronização concluída com sucesso! Seus dias rezados foram atualizados.`);
+                        }
+                    } else if (showFeedback) {
+                        alert(`Sincronizado com a nuvem (${email}). Tudo atualizado!`);
+                    }
+                }
+            } catch(e) {
+                if (showFeedback) alert(`Não foi possível conectar à nuvem no momento. Seus dados continuam salvos neste dispositivo.`);
+            }
+        }
+
+        window.handleNovenaCloudBtnClick = function() {
+            const email = getNovenaCloudEmail();
+            if (email) {
+                if (window.parent && window.parent !== window) {
+                    try { window.parent.postMessage({ type: 'TRIGGER_CLOUD_SYNC' }, '*'); } catch(e){}
+                }
+                loadCloudNovenasDirect(true);
+            } else {
+                const input = prompt("Digite seu e-mail para conectar e sincronizar suas novenas e orações entre o celular e o computador:");
+                if (input && input.includes('@') && input.includes('.')) {
+                    const clean = input.trim().toLowerCase();
+                    localStorage.setItem('thesaurus_cloud_email', clean);
+                    try {
+                        let state = {};
+                        const saved = localStorage.getItem('catecismo_state_v5');
+                        if (saved) state = JSON.parse(saved);
+                        state.cloudSyncEmail = clean;
+                        localStorage.setItem('catecismo_state_v5', JSON.stringify(state));
+                    } catch(e) {}
+                    updateNovenaCloudIndicator();
+                    loadCloudNovenasDirect(true);
+                }
+            }
+        };
+
         // Ouvir sincronizações enviadas pela janela pai (vindas do CloudSync da Nuvem)
         window.addEventListener('message', (e) => {
-            if (e.data && e.data.type === 'NOVENAS_DATA_SYNC' && e.data.novenas) {
-                const { progress, meta } = e.data.novenas;
-                let changed = false;
-                if (progress && typeof progress === 'object') {
-                    Object.keys(progress).forEach(id => {
-                        const local = getNovenaCompletedDays(id);
-                        const cloud = progress[id] || [];
-                        const merged = Array.from(new Set([...local, ...cloud])).sort((a,b)=>a-b);
-                        if (merged.length !== local.length) {
-                            localStorage.setItem(`thesaurus_progress_${id}`, JSON.stringify(merged));
-                            changed = true;
+            if (e.data && e.data.type === 'NOVENAS_DATA_SYNC') {
+                if (e.data.email) {
+                    localStorage.setItem('thesaurus_cloud_email', e.data.email);
+                    updateNovenaCloudIndicator();
+                }
+                if (e.data.novenas) {
+                    const { progress, meta } = e.data.novenas;
+                    let changed = false;
+                    if (progress && typeof progress === 'object') {
+                        Object.keys(progress).forEach(id => {
+                            const local = getNovenaCompletedDays(id);
+                            const cloud = progress[id] || [];
+                            const merged = Array.from(new Set([...local, ...cloud])).sort((a,b)=>a-b);
+                            if (merged.length !== local.length) {
+                                localStorage.setItem(`thesaurus_progress_${id}`, JSON.stringify(merged));
+                                changed = true;
+                            }
+                        });
+                    }
+                    if (meta && typeof meta === 'object') {
+                        Object.keys(meta).forEach(id => {
+                            const localMeta = JSON.parse(localStorage.getItem(`thesaurus_meta_${id}`) || '{}');
+                            const cloudMeta = meta[id] || {};
+                            const mergedMeta = Object.assign({}, localMeta, cloudMeta);
+                            localStorage.setItem(`thesaurus_meta_${id}`, JSON.stringify(mergedMeta));
+                        });
+                    }
+                    if (changed) {
+                        renderCards();
+                        if (currentNovena) {
+                            renderModalDaysNav();
+                            renderModalDay(currentDayIndex);
                         }
-                    });
-                }
-                if (meta && typeof meta === 'object') {
-                    Object.keys(meta).forEach(id => {
-                        const localMeta = JSON.parse(localStorage.getItem(`thesaurus_meta_${id}`) || '{}');
-                        const cloudMeta = meta[id] || {};
-                        const mergedMeta = Object.assign({}, localMeta, cloudMeta);
-                        localStorage.setItem(`thesaurus_meta_${id}`, JSON.stringify(mergedMeta));
-                    });
-                }
-                if (changed) {
-                    renderCards();
-                    if (currentNovena) {
-                        renderModalDaysNav();
-                        renderModalDay(currentDayIndex);
                     }
                 }
             }
@@ -1203,9 +1363,21 @@
         // Ao abrir incorporado, requisita dados mais recentes de novenas do pai
         if (window.parent && window.parent !== window) {
             window.parent.postMessage({ type: 'REQUEST_NOVENAS_SYNC' }, '*');
+        } else {
+            // Se aberto avulso no navegador do celular, carrega direto da API de nuvem
+            loadCloudNovenasDirect(false);
         }
 
+        window.addEventListener('focus', () => {
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({ type: 'REQUEST_NOVENAS_SYNC' }, '*');
+            } else {
+                loadCloudNovenasDirect(false);
+            }
+        });
+
         // Iniciar aplicação
+        updateNovenaCloudIndicator();
         loadNovenas();
     </script>
 </body>

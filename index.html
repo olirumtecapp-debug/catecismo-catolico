@@ -5862,12 +5862,21 @@ https://catecismo.creativeam.com.br`;
                                                 <span class="text-[10px] ${isTodayPrayed ? 'text-emerald-700 dark:text-emerald-300' : 'text-amber-700 dark:text-amber-300'} font-semibold">
                                                     📅 Dia ${currentDay} Hoje no Calendário Litúrgico
                                                 </span>
+                                                ${AppState.cloudSyncEmail ? `
+                                                    <button type="button" onclick="CloudSyncManager.smartSync(true)" class="text-[10px] text-blue-700 dark:text-blue-300 font-bold bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded-full border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900 transition flex items-center gap-1 cursor-pointer" title="Sincronizar com seu celular agora">
+                                                        <span>🔄</span> <span>Sincronizar Celular/PC</span>
+                                                    </button>
+                                                ` : `
+                                                    <button type="button" onclick="CloudSyncManager.promptCloudModal('Sincronizar Novenas')" class="text-[10px] text-amber-800 dark:text-amber-200 font-bold bg-amber-100 dark:bg-amber-950/60 px-2 py-0.5 rounded-full border border-amber-300 dark:border-amber-800 hover:bg-amber-200 dark:hover:bg-amber-900 transition flex items-center gap-1 cursor-pointer" title="Conectar e-mail para sincronizar com seu celular">
+                                                        <span>☁️</span> <span>Sincronizar Celular/PC</span>
+                                                    </button>
+                                                `}
                                             </div>
                                             <h4 class="font-serif text-base font-bold text-slate-900 dark:text-slate-100 mt-1">
                                                 ${full.titulo}
                                             </h4>
                                             <p class="text-xs text-slate-600 dark:text-slate-400">
-                                                ${!isTodayPrayed ? `Oração de Hoje: <strong>Dia ${currentDay} de 9</strong> ${dayData?.tema ? `• <em>"${dayData.tema}"</em>` : ''}${nextPending < currentDay ? ` <span class="text-amber-700 dark:text-amber-400 font-medium">(Dia ${nextPending} não marcado)</span>` : ''}` : `✓ <strong>Dia ${currentDay} de hoje rezado com devoção!</strong> Amanhã continuaremos com o Dia ${Math.min(9, currentDay + 1)}.`}
+                                                ${!isTodayPrayed ? `Oração de Hoje: <strong>Dia ${currentDay} de 9</strong> ${dayData?.tema ? `• <em>"${dayData.tema}"</em>` : ''}` : `✓ <strong>Dia ${currentDay} de hoje rezado com devoção!</strong> Amanhã continuaremos com o Dia ${Math.min(9, currentDay + 1)}.`}
                                             </p>
                                         </div>
                                     </div>
@@ -11223,6 +11232,14 @@ https://catecismo.creativeam.com.br
             },
 
             init() {
+                if (!AppState.cloudSyncEmail) {
+                    const fallbackEmail = localStorage.getItem('thesaurus_cloud_email');
+                    if (fallbackEmail && fallbackEmail.includes('@')) {
+                        AppState.cloudSyncEmail = fallbackEmail.trim().toLowerCase();
+                    }
+                } else {
+                    localStorage.setItem('thesaurus_cloud_email', AppState.cloudSyncEmail);
+                }
                 this.updateIndicator();
                 // Sincronização inteligente bidirecional (Smart Sync): puxa os dados mais recentes ou envia o progresso local
                 if (AppState.cloudSyncEmail) {
@@ -11465,6 +11482,7 @@ https://catecismo.creativeam.com.br
                 }
 
                 AppState.cloudSyncEmail = email;
+                localStorage.setItem('thesaurus_cloud_email', email);
                 saveState();
                 if (window.MetricsTracker && typeof MetricsTracker.trackInteraction === 'function') {
                     MetricsTracker.trackInteraction('emailSaves');
@@ -11675,6 +11693,7 @@ https://catecismo.creativeam.com.br
                     if (data.appState) {
                             AppState = data.appState;
                             AppState.cloudSyncEmail = email;
+                            localStorage.setItem('thesaurus_cloud_email', email);
                             window.AppState = AppState;
                             // Restaura as novenas no localStorage do dispositivo restaurado
                             if (data.appState.novenas) {
@@ -15486,6 +15505,11 @@ https://catecismo.creativeam.com.br
                     iframe.src = targetUrl;
                 }
 
+                // Sincroniza em segundo plano ao abrir para garantir que orações feitas no celular apareçam na hora
+                if (typeof CloudSyncManager !== 'undefined' && AppState.cloudSyncEmail) {
+                    CloudSyncManager.smartSync(false);
+                }
+
                 // Sincroniza tema garantido com o iframe
                 const isDark = document.documentElement.classList.contains('dark');
                 const syncIframeState = () => {
@@ -15498,6 +15522,9 @@ https://catecismo.creativeam.com.br
                         }
                         if (iframe.contentWindow) {
                             iframe.contentWindow.postMessage({ type: 'CATECISMO_THEME_CHANGE', theme: isDark ? 'dark' : 'light' }, '*');
+                            if (AppState.novenas) {
+                                iframe.contentWindow.postMessage({ type: 'NOVENAS_DATA_SYNC', novenas: AppState.novenas, email: AppState.cloudSyncEmail || null }, '*');
+                            }
                         }
                     } catch (e) {}
                 };
@@ -15632,11 +15659,27 @@ https://catecismo.creativeam.com.br
                     CloudSyncManager.syncToCloud(false);
                 }
             }
+            if (e.data && e.data.type === 'TRIGGER_CLOUD_SYNC') {
+                if (typeof CloudSyncManager !== 'undefined') {
+                    CloudSyncManager.smartSync(true);
+                }
+            }
             if (e.data && e.data.type === 'REQUEST_NOVENAS_SYNC') {
                 const iframe = document.getElementById('novenas-iframe');
                 if (iframe && iframe.contentWindow && typeof CloudSyncManager !== 'undefined') {
                     CloudSyncManager.collectNovenasData();
-                    iframe.contentWindow.postMessage({ type: 'NOVENAS_DATA_SYNC', novenas: AppState.novenas }, '*');
+                    iframe.contentWindow.postMessage({ type: 'NOVENAS_DATA_SYNC', novenas: AppState.novenas, email: AppState.cloudSyncEmail || null }, '*');
+                }
+            }
+        });
+
+        // Sincronização entre abas e janelas em tempo real
+        window.addEventListener('storage', (e) => {
+            if (e.key && (e.key.startsWith('thesaurus_progress_') || e.key.startsWith('thesaurus_meta_') || e.key === 'catecismo_state_v5')) {
+                if (window.CloudSyncManager) {
+                    CloudSyncManager.collectNovenasData();
+                    if (window.NovenasManager) NovenasManager.updateHomeCard();
+                    if (AppState.cloudSyncEmail) CloudSyncManager.syncToCloud(false);
                 }
             }
         });
