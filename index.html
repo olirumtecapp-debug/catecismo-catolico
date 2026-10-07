@@ -5835,7 +5835,8 @@ https://catecismo.creativeam.com.br`;
                     const pct = primary.pct;
                     const isTodayPrayed = primary.isTodayPrayed;
                     const dayData = full.dias ? full.dias[(primary.targetDay || 1) - 1] : null;
-                    const novenaImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, full.festa_liturgica?.data)) || full.imagem || 'assets/img/liturgia/cristo_bencao.jpg';
+                    const novenaDateStr = full.festa_liturgica?.data || (full.festa_liturgica?.mes && full.festa_liturgica?.dia ? `2026-${String(full.festa_liturgica.mes).padStart(2, '0')}-${String(full.festa_liturgica.dia).padStart(2, '0')}` : null);
+                    const novenaImg = full.imagem || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, novenaDateStr || full.festa_liturgica)) || 'assets/img/liturgia/cristo_bencao.jpg';
 
                     if (bannerContainer) {
                         let bannerHtml = `
@@ -5938,7 +5939,8 @@ https://catecismo.creativeam.com.br`;
                     const full = novenas.find(n => n.id === startingItem.id) || novenas[0];
                     const currentDay = startingItem.currentDay || 1;
                     const dayData = full.dias ? full.dias[currentDay - 1] : null;
-                    const novenaImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, full.festa_liturgica?.data)) || full.imagem || 'assets/img/liturgia/cristo_bencao.jpg';
+                    const novenaDateStr = full.festa_liturgica?.data || (full.festa_liturgica?.mes && full.festa_liturgica?.dia ? `2026-${String(full.festa_liturgica.mes).padStart(2, '0')}-${String(full.festa_liturgica.dia).padStart(2, '0')}` : null);
+                    const novenaImg = full.imagem || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, novenaDateStr || full.festa_liturgica)) || 'assets/img/liturgia/cristo_bencao.jpg';
 
                     if (bannerContainer) {
                         bannerContainer.innerHTML = `
@@ -5997,7 +5999,8 @@ https://catecismo.creativeam.com.br`;
                 const img = document.getElementById('home-novena-img');
                 const icon = document.getElementById('home-novena-icon');
 
-                const novenaImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, full.festa_liturgica?.data)) || full.imagem || '';
+                const novenaDateStr = full.festa_liturgica?.data || (full.festa_liturgica?.mes && full.festa_liturgica?.dia ? `2026-${String(full.festa_liturgica.mes).padStart(2, '0')}-${String(full.festa_liturgica.dia).padStart(2, '0')}` : null);
+                const novenaImg = full.imagem || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, novenaDateStr || full.festa_liturgica)) || '';
                 if (img && novenaImg) {
                     img.src = novenaImg;
                     img.alt = full.titulo;
@@ -6067,7 +6070,8 @@ https://catecismo.creativeam.com.br`;
                 const img = document.getElementById('home-novena-img');
                 const icon = document.getElementById('home-novena-icon');
 
-                const novenaImg = (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, full.festa_liturgica?.data)) || full.imagem || '';
+                const novenaDateStr = full.festa_liturgica?.data || (full.festa_liturgica?.mes && full.festa_liturgica?.dia ? `2026-${String(full.festa_liturgica.mes).padStart(2, '0')}-${String(full.festa_liturgica.dia).padStart(2, '0')}` : null);
+                const novenaImg = full.imagem || (window.resolveLocalSaintImage && window.resolveLocalSaintImage(full.titulo, novenaDateStr || full.festa_liturgica)) || '';
                 if (img && novenaImg) {
                     img.src = novenaImg;
                     img.alt = full.titulo;

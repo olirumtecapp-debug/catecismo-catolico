@@ -56,6 +56,26 @@ const indexContent = fs.readFileSync(indexJsPath, 'utf8');
 assert(indexContent.includes('window.resolveLocalSaintImage'), 'window.resolveLocalSaintImage está definida');
 assert(indexContent.includes('window.LOCAL_SAINTS_IMAGES'), 'window.LOCAL_SAINTS_IMAGES está preenchida');
 
+// Teste de resolução canônica em ambiente simulado
+global.window = {};
+eval(indexContent);
+assert(typeof global.window.resolveLocalSaintImage === 'function', 'resolveLocalSaintImage é uma função válida');
+
+const apRes1 = global.window.resolveLocalSaintImage("Novena Oficial de Nossa Senhora Aparecida");
+assert(apRes1 === 'assets/img/santos/10-12-nossa-senhora-aparecida.png', `Aparecida (título completo) resolve para imagem canônica auditada: ${apRes1}`);
+
+const apRes2 = global.window.resolveLocalSaintImage("Nossa Senhora Aparecida");
+assert(apRes2 === 'assets/img/santos/10-12-nossa-senhora-aparecida.png', `Aparecida (nome curto) resolve para imagem canônica auditada: ${apRes2}`);
+
+// Validação de todas as 20 novenas
+let perfectResolutions = 0;
+novenas.forEach(n => {
+    const res = global.window.resolveLocalSaintImage(n.titulo, n.festa_liturgica);
+    if (res === n.imagem) perfectResolutions++;
+});
+assert(perfectResolutions === novenas.length, `100% das 20 novenas resolvem para suas imagens canônicas auditadas (${perfectResolutions}/${novenas.length})`);
+
+
 // 3. TESTE DO SERVICE WORKER (Network-First)
 console.log('\n--- 3. Verificando sw.js ---');
 const swPath = path.join(ROOT, 'sw.js');

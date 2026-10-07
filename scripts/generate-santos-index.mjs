@@ -57,6 +57,53 @@ const jsContent = `/* ==========================================================
     window.LOCAL_SAINTS_IMAGES = IMAGES;
     window.SANTOS_CATALOG_VERSION = "${Date.now()}";
 
+    const CANONICAL_MAP = {
+        'aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
+        'nossa senhora aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
+        'nossa senhora da conceicao aparecida': 'assets/img/santos/10-12-nossa-senhora-aparecida.png',
+        'santa teresinha': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
+        'santa teresa do menino jesus': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
+        'novena das rosas': 'assets/img/santos/10-01-santa-teresa-do-menino-jesus-virgem-carmelita-doutora-da-igreja-padroeira-das-missoes.png',
+        'padre pio': 'assets/img/santos/09-23-sao-pio-de-pietrelcina-presbitero.png',
+        'pio de pietrelcina': 'assets/img/santos/09-23-sao-pio-de-pietrelcina-presbitero.png',
+        'sao geraldo magela': 'assets/img/santos/10-16-sao-geraldo-majella-irmao-leigo-redentorista.png',
+        'sao geraldo majella': 'assets/img/santos/10-16-sao-geraldo-majella-irmao-leigo-redentorista.png',
+        'santa edwiges': 'assets/img/santos/10-16-santa-edviges-duquesa-da-silesia-religiosa.png',
+        'santa edviges': 'assets/img/santos/10-16-santa-edviges-duquesa-da-silesia-religiosa.png',
+        'santa luzia': 'assets/img/santos/12-13-santa-luzia-virgem-e-martir-de-siracusa.png',
+        'sao judas tadeu': 'assets/img/santos/10-28-ss-simao-e-judas-tadeu-apostolos.png',
+        'judas tadeu': 'assets/img/santos/10-28-ss-simao-e-judas-tadeu-apostolos.png',
+        'desatadora dos nos': 'assets/img/santos/ns_nossa-senhora-desatadora-dos-nos.png',
+        'nossa senhora desatadora dos nos': 'assets/img/santos/ns_nossa-senhora-desatadora-dos-nos.png',
+        'divina misericordia': 'assets/img/santos/10-05-santa-faustina-kowalska.png',
+        'faustina kowalska': 'assets/img/santos/10-05-santa-faustina-kowalska.png',
+        'sao bento': 'assets/img/santos/07-11-sao-bento-abade-padroeiro-da-europa.png',
+        'santo antonio': 'assets/img/santos/06-13-santo-antonio-de-padua-sacerdote-franciscano-e-doutor-da-igreja.png',
+        'antonio de padua': 'assets/img/santos/06-13-santo-antonio-de-padua-sacerdote-franciscano-e-doutor-da-igreja.png',
+        'sao jose': 'assets/img/santos/03-19-santa-jose-esposo-da-santissima-virgem-maria-padroeiro-da-igreja-universal.png',
+        'sao miguel': 'assets/img/santos/09-29-sao-miguel-arcanjo.png',
+        'sao miguel arcanjo': 'assets/img/santos/09-29-sao-miguel-arcanjo.png',
+        'santa rita': 'assets/img/santos/05-22-santa-rita-de-cassia-religiosa-agostiniana.png',
+        'santa rita de cassia': 'assets/img/santos/05-22-santa-rita-de-cassia-religiosa-agostiniana.png',
+        'fatima': 'assets/img/santos/05-13-nossa-senhora-de-fatima.png',
+        'nossa senhora de fatima': 'assets/img/santos/05-13-nossa-senhora-de-fatima.png',
+        'lourdes': 'assets/img/santos/02-11-nossa-senhora-de-lourdes.png',
+        'nossa senhora de lourdes': 'assets/img/santos/02-11-nossa-senhora-de-lourdes.png',
+        'guadalupe': 'assets/img/santos/12-12-nossa-senhora-de-guadalupe.jpg',
+        'nossa senhora de guadalupe': 'assets/img/santos/12-12-nossa-senhora-de-guadalupe.jpg',
+        'sao peregrino': 'assets/img/santos/ns_sao-peregrino.jpg',
+        'medalha milagrosa': 'assets/img/santos/01-01-santa-maria-mae-de-deus.png',
+        'nossa senhora das gracas': 'assets/img/santos/01-01-santa-maria-mae-de-deus.png',
+        'sagrado coracao': 'assets/img/liturgia/cristo_bencao.jpg',
+        'sagrado coracao de jesus': 'assets/img/liturgia/cristo_bencao.jpg',
+        'pentecostes': 'assets/img/liturgia/cristo_bencao.jpg',
+        'novena de natal': 'assets/img/liturgia/adoracao_pastores.jpg',
+        'natal': 'assets/img/liturgia/adoracao_pastores.jpg',
+        'carlo acutis': 'assets/img/santos/10-12-sao-carlo-acutis.png',
+        'sao carlo acutis': 'assets/img/santos/10-12-sao-carlo-acutis.png',
+        'santo carlo acutis': 'assets/img/santos/10-12-sao-carlo-acutis.png'
+    };
+
     function norm(s) {
         let str = String(s || '').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase();
         str = str.replace(/\\bmajella\\b/g, 'magela')
@@ -75,15 +122,42 @@ const jsContent = `/* ==========================================================
         isPng: file.toLowerCase().endsWith('.png')
     }));
 
-    window.resolveLocalSaintImage = function(saintName, dateStr) {
-        if (!saintName && !dateStr) return 'assets/img/liturgia/cristo_bencao.jpg';
+    window.resolveLocalSaintImage = function(saintName, dateParam) {
+        if (!saintName && !dateParam) return 'assets/img/liturgia/cristo_bencao.jpg';
 
-        // 1. Prioridade absoluta por data litúrgica (ex: 2026-12-13 -> 12-13)
+        // 1. Extrai data canônica caso venha em formato YYYY-MM-DD, MM-DD ou objeto litúrgico
+        let dateStr = null;
+        if (typeof dateParam === 'string') {
+            if (/^\\d{4}-\\d{2}-\\d{2}$/.test(dateParam)) dateStr = dateParam;
+            else if (/^\\d{2}-\\d{2}$/.test(dateParam)) dateStr = '2026-' + dateParam;
+        } else if (dateParam && typeof dateParam === 'object') {
+            if (dateParam.data && /^\\d{4}-\\d{2}-\\d{2}$/.test(dateParam.data)) {
+                dateStr = dateParam.data;
+            } else if (dateParam.mes && dateParam.dia) {
+                dateStr = '2026-' + String(dateParam.mes).padStart(2, '0') + '-' + String(dateParam.dia).padStart(2, '0');
+            }
+        }
+
+        const rawLower = String(saintName || '').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase();
+        const cleanDevotion = rawLower
+            .replace(/^novena\\s+(oficial\\s+|canonica\\s+|tradicional\\s+|milagrosa\\s+|das\\s+rosas\\s+de\\s+|de\\s+|ao\\s+|a\\s+)?/, '')
+            .replace(/^(solenidade|festa liturgica|festa|memoria|comemoracao)\\s+(de\\s+|dos\\s+|das\\s+)?/, '')
+            .replace(/,.*$/, '')
+            .trim();
+
+        // 2. Prioridade canônica para devoções e santos consolidados
+        for (const [key, path] of Object.entries(CANONICAL_MAP)) {
+            if (cleanDevotion.includes(key) || rawLower.includes(key)) {
+                return path;
+            }
+        }
+
+        // 3. Prioridade absoluta por data litúrgica (ex: 2026-10-12 -> 10-12)
         if (dateStr && /^\\d{4}-\\d{2}-\\d{2}$/.test(dateStr)) {
             const mmdd = dateStr.slice(5);
             const dateMatches = index.filter(it => it.file.startsWith(mmdd));
             if (saintName) {
-                const sNorm = norm(saintName).replace(/^sao|^santa|^santo|^beato|^beata|^ss/, '');
+                const sNorm = norm(cleanDevotion).replace(/^sao|^santa|^santo|^beato|^beata|^ss/, '');
                 for (const dm of dateMatches) {
                     if (sNorm && dm.norm.includes(sNorm)) {
                         return 'assets/img/santos/' + dm.file;
@@ -97,13 +171,12 @@ const jsContent = `/* ==========================================================
 
         if (!saintName) return null;
 
-        const clean = norm(saintName)
+        const clean = norm(cleanDevotion)
             .replace(/^sao|^santa|^santo|^beato|^beata|^ss/, '')
             .trim();
 
-        // 2. Busca exata ou por substring de alta especificidade
+        // 4. Busca exata ou por substring de alta especificidade
         if (clean.length >= 4) {
-            // Prioriza arquivos canônicos datados e .png
             const exact = index.find(it => it.isMMDD && (it.norm.includes(clean) || (clean.length > 6 && clean.includes(it.norm.replace(/^\\d{4}/, '')))));
             if (exact) return 'assets/img/santos/' + exact.file;
 
@@ -111,11 +184,9 @@ const jsContent = `/* ==========================================================
             if (anyExact) return 'assets/img/santos/' + anyExact.file;
         }
 
-        // 3. Busca por tokens/palavras-chave representativas do santo
-        const stopWords = ['santo', 'santa', 'sao', 'beato', 'beata', 'ss', 'padroeiro', 'padroeira', 'bispo', 'papa', 'virgem', 'martir', 'martires', 'doutor', 'doutora', 'igreja', 'padre', 'frei', 'irmao', 'irma', 'de', 'da', 'do', 'dos', 'das', 'e', 'em', 'o', 'a', 'com', 'pela', 'pelo', 'fundador', 'fundadora', 'apostolo', 'apostolos'];
-        const words = String(saintName)
-            .normalize('NFD').replace(/[\\u0300-\\u036f]/g, '')
-            .toLowerCase()
+        // 5. Busca por tokens com stop words estritas para evitar falsos positivos
+        const stopWords = ['santo', 'santa', 'sao', 'beato', 'beata', 'ss', 'padroeiro', 'padroeira', 'bispo', 'papa', 'virgem', 'martir', 'martires', 'doutor', 'doutora', 'igreja', 'padre', 'frei', 'irmao', 'irma', 'de', 'da', 'do', 'dos', 'das', 'e', 'em', 'o', 'a', 'com', 'pela', 'pelo', 'fundador', 'fundadora', 'apostolo', 'apostolos', 'nossa', 'senhora', 'santissima', 'oficial', 'canonica', 'novena', 'solenidade', 'festa', 'brasil', 'universal', 'principal'];
+        const words = cleanDevotion
             .replace(/[^a-z0-9\\s]/g, '')
             .split(/\\s+/)
             .filter(w => w.length >= 4 && !stopWords.includes(w));
@@ -125,7 +196,7 @@ const jsContent = `/* ==========================================================
             if (match) return 'assets/img/santos/' + match.file;
         }
 
-        // 4. Fallback no catálogo do window.SAINTS_DATA se disponível
+        // 6. Fallback no catálogo do window.SAINTS_DATA se disponível
         if (window.SAINTS_DATA && Array.isArray(window.SAINTS_DATA.catalog)) {
             const found = window.SAINTS_DATA.catalog.find(s => {
                 const sn = norm(s.name);
