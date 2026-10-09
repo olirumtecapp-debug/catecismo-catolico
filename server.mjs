@@ -1014,6 +1014,8 @@ const server = http.createServer(async (req, res) => {
     if (pathname === '/auditoria') filePath = path.join(__dirname, 'auditoria.html');
     if (pathname === '/preceitos') filePath = path.join(__dirname, 'preceitos.html');
     if (pathname === '/novenas') filePath = path.join(__dirname, 'novenas.html');
+    if (pathname === '/luxo') filePath = path.join(__dirname, 'luxo.html');
+    if (pathname === '/luxo-azul') filePath = path.join(__dirname, 'luxo-azul.html');
 
     // Security check to avoid path traversal
     if (!filePath.startsWith(__dirname)) {

@@ -413,7 +413,7 @@
     <div id="app" class="flex h-screen w-screen overflow-hidden bg-marfim">
 
         <!-- Sidebar / Desktop Navigation -->
-        <aside id="desktop-sidebar" class="hidden lg:flex flex-col w-72 bg-white border-r border-slate-200 z-30 shadow-sm">
+        <aside id="desktop-sidebar" class="hidden lg:flex flex-col w-80 bg-white border-r border-slate-200 z-30 shadow-sm shrink-0">
             <div class="px-4 py-3.5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-lg shadow-sm border border-dourado/40" title="Símbolo Oficial da Tradição Católica (Alt+Shift+M para ADM)" data-admin-trigger="true">
                     ✝
@@ -479,20 +479,23 @@
 
                 <!-- SEÇÃO 2: DOUTRINA & SAGRADA ESCRITURA -->
                 <div class="space-y-1 pt-1 border-t border-slate-100">
-                    <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
-                        <span>Doutrina &amp; Sagrada Escritura</span>
-                        <span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold">Offline</span>
+                    <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between gap-1.5">
+                        <span class="whitespace-nowrap">Doutrina &amp; Sagrada Escritura</span>
+                        <span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold shrink-0 whitespace-nowrap">Offline</span>
                     </div>
                     <button onclick="router.navigate('biblia')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="biblia" data-menu-key="biblia">
-                        <svg class="w-4 h-4 shrink-0 text-blue-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> <span>Bíblia Sagrada</span>
-                        <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100">73 Livros</span>
+                        <svg class="w-4 h-4 shrink-0 text-blue-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> <span class="whitespace-nowrap">Bíblia Sagrada</span>
+                        <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100 shrink-0 whitespace-nowrap">73 Livros</span>
                     </button>
-                    <button onclick="router.navigate('catecismo')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="catecismo" data-menu-key="catecismo">
-                        <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M11 7h2m-1-1v2"/></svg> <span>Catecismo &amp; Doutrina</span>
-                        <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">4 Pilares</span>
+                    <button onclick="router.navigate('catecismo')" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="catecismo" data-menu-key="catecismo">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M11 7h2m-1-1v2"/></svg>
+                            <span class="whitespace-nowrap font-medium">Catecismo &amp; Doutrina</span>
+                        </div>
+                        <span class="text-[9px] uppercase tracking-wider font-bold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded shrink-0 whitespace-nowrap">4 Pilares</span>
                     </button>
                     <button onclick="router.navigate('catecismo-completo')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="catecismo-completo" data-menu-key="catecismo-completo">
-                        <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8 14v5m4-9v9m4-5v5M4 19h16a1 1 0 001-1V6a1 1 0 00-1-1H4a1 1 0 00-1 1v12a1 1 0 001 1z"/></svg> <span>Biblioteca do Catecismo</span>
+                        <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8 14v5m4-9v9m4-5v5M4 19h16a1 1 0 001-1V6a1 1 0 00-1-1H4a1 1 0 00-1 1v12a1 1 0 001 1z"/></svg> <span class="whitespace-nowrap">Biblioteca do Catecismo</span>
                     </button>
                     <button onclick="router.navigate('livros')" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-mariana transition text-sm text-left" data-route="livros" data-menu-key="livros">
                         <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
@@ -535,15 +538,12 @@
                         <svg class="w-4 h-4 shrink-0 text-slate-500 group-hover:text-mariana transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> <span>Fontes e Transparência</span>
                     </button>
 
-                    <div class="pt-2 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400">Comunidade & Nuvem</div>
+                    <div class="pt-2 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400">Comunidade & Suporte</div>
                     <button onclick="ContactManager.openMailboxModal()" class="nav-item group w-full flex items-center justify-between px-3.5 py-2 rounded-xl font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-900 dark:hover:bg-indigo-950/40 transition text-sm text-left cursor-pointer">
                         <span class="flex items-center gap-3">
                             <span class="text-base shrink-0">📬</span> <span>Caixa Postal & Contato</span>
                         </span>
                         <span class="mailbox-badge hidden bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow-xs">0</span>
-                    </button>
-                    <button onclick="CloudSyncManager.openCloudStatusModal()" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2 rounded-xl font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-900 dark:hover:bg-blue-950/40 transition text-sm text-left cursor-pointer">
-                        <span class="text-base shrink-0">☁️</span> <span class="header-cloud-text">Minha Nuvem (E-mail)</span>
                     </button>
                 </div>
             </nav>
@@ -599,47 +599,42 @@
         <div class="flex-1 flex flex-col h-full overflow-hidden relative">
 
             <!-- Top Header -->
-            <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-3 md:px-6 z-20 shrink-0">
-                <div class="flex items-center gap-2 sm:gap-4 min-w-0 pr-2">
-                    <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl text-mariana p-1" title="Abrir Menu">☰</button>
-                    <div class="truncate">
-                        <h2 id="page-title" class="font-serif text-base sm:text-xl font-bold text-mariana truncate">Meu Momento</h2>
-                        <p id="page-subtitle" class="text-xs text-slate-500 hidden sm:block">Conhecer, compreender e viver a fé.</p>
+            <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-3 md:px-6 z-20 shrink-0 gap-3">
+                <div class="flex items-center gap-2 sm:gap-3.5 shrink-0 min-w-max">
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl text-mariana p-1 hover:bg-slate-100 rounded-lg transition" title="Abrir Menu">☰</button>
+                    <div>
+                        <h2 id="page-title" class="font-serif text-base sm:text-lg md:text-xl font-bold text-mariana whitespace-nowrap">Meu Momento</h2>
+                        <p id="page-subtitle" class="text-[11px] text-slate-500 hidden sm:block whitespace-nowrap">Conhecer, compreender e viver a fé.</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+                <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
+                    <!-- Busca mobile -->
                     <button onclick="router.navigate('pesquisa')" class="md:hidden p-1.5 text-slate-600 hover:bg-slate-100 rounded-xl" title="Pesquisar">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     </button>
-                    <div class="relative hidden md:block w-52 lg:w-64">
-                        <input type="text" id="global-search" oninput="handleSearch(this.value)" placeholder="Pesquisar na plataforma..." class="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-mariana transition">
-                        <span class="absolute left-3 top-2.5 text-slate-400 text-xs">🔍</span>
-                    </div>
-
-                    <!-- Ofensiva e XP: visíveis a partir de telas médias/grandes para liberar espaço no celular -->
-                    <div class="hidden sm:flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-amber-800">
-                        <span>🔥</span> <span id="header-streak">0</span> dias
-                    </div>
                     
-                    <div class="hidden sm:flex items-center gap-1.5 bg-blue-50 border border-blue-200 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-blue-900">
-                        <span>⭐</span> <span id="header-xp">0</span> XP
+                    <!-- Busca Desktop/Tablet: flexível com largura balanceada sem sobrepor o título -->
+                    <div class="relative hidden md:block w-36 lg:w-48 xl:w-56">
+                        <input type="text" id="global-search" oninput="handleSearch(this.value)" placeholder="Pesquisar..." class="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-mariana transition">
+                        <span class="absolute left-2.5 top-2 text-slate-400 text-xs">🔍</span>
                     </div>
 
-                    <!-- CONTROLES DE FONTE A- / A+ (SEMPRE VISÍVEIS NO SMARTPHONE!) -->
-                    <div class="flex items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-0.5 shadow-xs" title="Tamanho da fonte para leitura">
-                        <button onclick="FontScaleManager.decrease()" title="Diminuir fonte (A-)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A-</button>
+
+                    <!-- CONTROLES DE FONTE A- / A+ -->
+                    <div class="hidden sm:flex items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-0.5 shadow-xs shrink-0" title="Tamanho da fonte para leitura">
+                        <button onclick="FontScaleManager.decrease()" title="Diminuir fonte (A-)" class="w-6 h-6 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A-</button>
                         <span class="font-scale-indicator px-1 text-[10px] font-bold text-slate-600 dark:text-slate-300 font-mono select-none">100%</span>
-                        <button onclick="FontScaleManager.increase()" title="Aumentar fonte (A+)" class="w-7 h-7 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A+</button>
+                        <button onclick="FontScaleManager.increase()" title="Aumentar fonte (A+)" class="w-6 h-6 flex items-center justify-center text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-700 rounded-lg transition cursor-pointer">A+</button>
                     </div>
                     
-                    <!-- BOTÃO MODO ESCURO / CLARO (SEMPRE VISÍVEL NO SMARTPHONE!) -->
-                    <!-- BOTÃO COMPARTILHAR CATECISMO (DISCRETO & VIRAL) -->
-                    <button onclick="shareCatecismo('header')" id="header-share-btn" title="Compartilhar Catecismo Digital" class="w-8 h-8 p-1.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-800 dark:text-blue-300 transition flex items-center justify-center shadow-xs cursor-pointer">
-                        <span class="text-sm">📤</span>
+                    <!-- BOTÃO COMPARTILHAR CATECISMO -->
+                    <button onclick="shareCatecismo('header')" id="header-share-btn" title="Compartilhar Catecismo Digital" class="hidden sm:flex w-8 h-8 p-1.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-800 dark:text-blue-300 transition items-center justify-center shadow-xs cursor-pointer shrink-0">
+                        <span class="text-xs">📤</span>
                     </button>
 
-                    <button onclick="ThemeManager.toggle()" id="header-theme-toggle" title="Alternar Modo Escuro / Claro" class="w-8 h-8 p-1.5 rounded-xl border border-slate-200 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800 transition flex items-center justify-center shadow-xs cursor-pointer">
+                    <!-- BOTÃO MODO ESCURO / CLARO -->
+                    <button onclick="ThemeManager.toggle()" id="header-theme-toggle" title="Alternar Modo Escuro / Claro" class="w-8 h-8 p-1.5 rounded-xl border border-slate-200 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800 transition flex items-center justify-center shadow-xs cursor-pointer shrink-0">
                         <span class="theme-toggle-icon">
                             <svg class="w-4 h-4 text-slate-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
@@ -648,15 +643,15 @@
                     </button>
 
                     <!-- BOTÃO NUVEM / SINCRONIZAR E-MAIL -->
-                    <button onclick="CloudSyncManager.openCloudStatusModal()" id="header-cloud-btn" class="header-cloud-btn flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 text-blue-950 dark:text-blue-200 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition shadow-xs text-xs font-bold cursor-pointer" title="Sincronizar e salvar na nuvem">
+                    <button onclick="CloudSyncManager.openCloudStatusModal()" id="header-cloud-btn" class="header-cloud-btn flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50/80 dark:bg-blue-950/50 text-blue-950 dark:text-blue-200 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition shadow-xs text-xs font-bold cursor-pointer shrink-0" title="Sincronizar e salvar na nuvem">
                         <span class="text-sm">☁️</span>
-                        <span id="header-cloud-text" class="header-cloud-text hidden sm:inline">Nuvem</span>
+                        <span id="header-cloud-text" class="header-cloud-text hidden md:inline max-w-[100px] truncate">Nuvem</span>
                     </button>
 
                     <!-- BOTÃO INSTALAR APP (PC & SMARTPHONE) -->
-                    <button onclick="openInstallModal()" id="header-install-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-amber-50/90 dark:bg-amber-950/50 text-amber-900 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/60 transition shadow-xs text-xs font-bold cursor-pointer" title="Instalar Aplicativo Catecismo no PC ou Celular">
+                    <button onclick="openInstallModal()" id="header-install-btn" class="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-amber-50/90 dark:bg-amber-950/50 text-amber-900 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/60 transition shadow-xs text-xs font-bold cursor-pointer shrink-0" title="Instalar Aplicativo Catecismo no PC ou Celular">
                         <span class="text-sm">📲</span>
-                        <span class="hidden md:inline">Instalar App</span>
+                        <span>Instalar App</span>
                     </button>
                 </div>
             </header>
@@ -688,56 +683,123 @@
                     </div>
 
 
-                    <nav class="flex-1 overflow-y-auto p-4 space-y-1 custom-scrollbar">
-                        <button onclick="router.navigate('home'); toggleMobileMenu();" data-menu-key="home" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">☀️ Meu Momento</button>
-                        <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="liturgia" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">✝️ Liturgia Diária</button>
-                        <button onclick="router.navigate('catecismo'); toggleMobileMenu();" data-menu-key="catecismo" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📖 Catecismo & Doutrina</button>
-                        <button onclick="router.navigate('catecismo-completo'); toggleMobileMenu();" data-menu-key="catecismo-completo" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📚 Biblioteca do Catecismo</button>
-                        <button onclick="router.navigate('livros'); toggleMobileMenu();" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" data-menu-key="livros">📖 Livraria Católica</button>
-                        <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-mariana bg-blue-50/70 border border-blue-100 hover:bg-blue-100 hover:border-blue-200 transition text-sm shadow-sm">📖 Bíblia Sagrada <span class="ml-auto text-[9px] uppercase tracking-wider font-bold text-blue-700">Essencial</span></button>
-                        <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">☩ Santo do Dia</button>
-                        <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <div class="flex items-center gap-3 min-w-0">
-                                <span class="text-base shrink-0">🌹</span>
-                                <span class="truncate">Novenas Católicas</span>
+                                        <nav class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+                        <!-- SEÇÃO 1: VIDA DIÁRIA & LITURGIA -->
+                        <div class="space-y-1">
+                            <div class="px-3 pt-1 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+                                <span>Vida Diária &amp; Liturgia</span>
+                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold">Hoje</span>
                             </div>
-                            <span id="mobile-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
-                        </button>
-                        <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🙏 Oração & Lectio</button>
-                        <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <div class="flex items-center gap-3 min-w-0">
-                                <span class="text-base shrink-0">📖</span>
-                                <span class="truncate">Diário Espiritual</span>
+                            <button onclick="router.navigate('home'); toggleMobileMenu();" data-menu-key="home" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>☀️</span> <span>Meu Momento</span>
+                            </button>
+                            <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="liturgia" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>✝️</span> <span>Liturgia Diária</span>
+                            </button>
+                            <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>☩</span> <span>Santo do Dia</span>
+                            </button>
+                            <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-base shrink-0">🌹</span>
+                                    <span class="truncate">Novenas Católicas</span>
+                                </div>
+                                <span id="mobile-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
+                            </button>
+                            <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>🙏</span> <span>Oração &amp; Lectio</span>
+                            </button>
+                            <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-base shrink-0">📖</span>
+                                    <span class="truncate">Diário Espiritual</span>
+                                </div>
+                                <span id="mobile-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
+                            </button>
+                            <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>⛪</span> <span>A Santa Missa</span>
+                            </button>
+                            <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>📜</span> <span>Preceitos &amp; Calendário</span>
+                            </button>
+                            <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl font-semibold text-amber-900 bg-amber-50/80 hover:bg-amber-100 border border-amber-200/90 transition text-sm">
+                                <div class="flex items-center gap-3">
+                                    <span>📖</span> <span>Escola da Fé</span>
+                                </div>
+                                <span class="text-xs text-amber-700 font-bold flex items-center gap-1">Acessar ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- SEÇÃO 2: DOUTRINA & SAGRADA ESCRITURA -->
+                        <div class="space-y-1 pt-1 border-t border-slate-100">
+                            <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between gap-1.5">
+                                <span>Doutrina &amp; Sagrada Escritura</span>
+                                <span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold shrink-0">Offline</span>
                             </div>
-                            <span id="mobile-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
-                        </button>
-                        <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⛪ A Santa Missa</button>
-                        <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <span>📜 Preceitos &amp; Calendário</span>
-                        </button>
-                        <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-3 px-4 py-3 rounded-xl font-semibold text-amber-900 bg-amber-50/80 hover:bg-amber-100 border border-amber-200/90 transition text-sm">
-                            <div class="flex items-center gap-3">
-                                <span>📖</span> <span>Escola da Fé</span>
+                            <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span>📖</span> <span>Bíblia Sagrada</span>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-wider font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100 shrink-0">73 Livros</span>
+                            </button>
+                            <button onclick="router.navigate('catecismo'); toggleMobileMenu();" data-menu-key="catecismo" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span>📄</span> <span class="whitespace-nowrap">Catecismo &amp; Doutrina</span>
+                                </div>
+                                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded shrink-0">4 Pilares</span>
+                            </button>
+                            <button onclick="router.navigate('catecismo-completo'); toggleMobileMenu();" data-menu-key="catecismo-completo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>📚</span> <span>Biblioteca do Catecismo</span>
+                            </button>
+                            <button onclick="router.navigate('livros'); toggleMobileMenu();" data-menu-key="livros" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span>📖</span> <span>Livraria Católica</span>
+                                </div>
+                                <span class="text-[9px] px-1.5 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold border border-amber-300 shrink-0">Livros</span>
+                            </button>
+                        </div>
+
+                        <!-- SEÇÃO 3: FORMAÇÃO & PRÁTICA -->
+                        <div class="space-y-1 pt-1 border-t border-slate-100">
+                            <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                                <span>Formação &amp; Prática</span>
                             </div>
-                            <span class="text-xs text-amber-700 font-bold flex items-center gap-1">Acessar ↗</span>
-                        </a>
-                        <button onclick="EvangelhoCardModal.open(); toggleMobileMenu();" data-menu-key="evangelho_card" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm" style="display: none;">
-                            <span>📸 Card do Evangelho</span>
-                        </button>
-                        <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🧠 Quizzes</button>
-                        <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🎯 Planos de Estudo</button>
-                        <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">⭐ Favoritos</button>
-                        <button onclick="router.navigate('conquistas'); toggleMobileMenu();" data-menu-key="conquistas" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🏆 Conquistas</button>
-                        <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">📊 Meu Progresso</button>
-                        <button onclick="router.navigate('fontes'); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">ℹ️ Fontes e Transparência</button>
-                        <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">🔎 Pesquisar</button>
-                        <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                            <div class="flex items-center gap-3 min-w-0">
-                                <span class="text-base shrink-0">📬</span>
-                                <span>Caixa Postal &amp; Contato</span>
+                            <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>🎯</span> <span>Planos de Estudo</span>
+                            </button>
+                            <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>🧠</span> <span>Quizzes de Fixação</span>
+                            </button>
+                        </div>
+
+                        <!-- SEÇÃO 4: MEU ESPAÇO & APOIO -->
+                        <div class="space-y-1 pt-1 border-t border-slate-100">
+                            <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                                <span>Meu Espaço &amp; Apoio</span>
                             </div>
-                            <span class="mailbox-badge hidden bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow-xs">0</span>
-                        </button>
+                            <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>⭐</span> <span>Meus Favoritos</span>
+                            </button>
+                            <button onclick="router.navigate('conquistas'); toggleMobileMenu();" data-menu-key="conquistas" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>🏆</span> <span>Conquistas</span>
+                            </button>
+                            <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>📊</span> <span>Meu Progresso</span>
+                            </button>
+                            <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>🔎</span> <span>Pesquisar</span>
+                            </button>
+                            <button onclick="router.navigate('fontes'); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                                <span>ℹ️</span> <span>Fontes e Transparência</span>
+                            </button>
+                            <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-900 transition text-sm">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="text-base shrink-0">📬</span>
+                                    <span>Caixa Postal &amp; Contato</span>
+                                </div>
+                                <span class="mailbox-badge hidden bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow-xs">0</span>
+                            </button>
+                        </div>
                     </nav>
                     <!-- Mobile Drawer Footer Actions -->
                     <div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 space-y-2">
@@ -5940,7 +6002,7 @@ https://catecismo.creativeam.com.br`;
 
                     if (novenaBadges && novenaBadges.length) {
                         novenaBadges.forEach(b => {
-                            b.textContent = isTodayPrayed ? `Dia ${currentDay} ✓` : "Ativa";
+                            b.textContent = isTodayPrayed ? `Dia ${currentDay} ✓` : `Dia ${currentDay}`;
                             b.className = isTodayPrayed
                                 ? "menu-novenas-badge shrink-0 text-[9px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-700"
                                 : "menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/80 px-1.5 py-0.5 rounded border border-rose-300 dark:border-rose-700 animate-pulse";
@@ -5987,6 +6049,12 @@ https://catecismo.creativeam.com.br`;
                         `;
                     }
                     this.renderSideCard(full, currentDay, 0, 0, false, dayData, 1);
+                    if (novenaBadges && novenaBadges.length) {
+                        novenaBadges.forEach(b => {
+                            b.textContent = "9 Dias";
+                            b.className = "menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800";
+                        });
+                    }
                 } else {
                     if (bannerContainer) bannerContainer.innerHTML = '';
                     const upcoming = engine.getUpcomingNovenas(novenas, today, 1);
