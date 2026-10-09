@@ -521,7 +521,27 @@
                     let meta = {};
                     try { meta = JSON.parse(localStorage.getItem(`thesaurus_meta_${nov.id}`) || '{}'); } catch(e) {}
                     const status = LiturgicalEngine.evaluateNovenaStatus(nov, todayDate);
-                    const startedTime = meta.startedAt || (meta.date ? new Date(meta.date).getTime() : 0) || (status.schedule?.startDate ? status.schedule.startDate.getTime() : 0);
+                    
+                    // PRIORIDADE DA NOVENA MAIS ANTIGA (CANÔNICA E TEMPORAL):
+                    // 1. Carimbo exato meta.startedAt (se já gravado)
+                    // 2. Data litúrgica canônica de início do Dia 1 (status.schedule.startDate)
+                    // 3. Início baseado na festa litúrgica (9 dias antes)
+                    // 4. Estimativa pelo número de dias rezados (quem tem mais dias rezados começou mais cedo)
+                    let startedTime = 0;
+                    if (meta && typeof meta.startedAt === 'number') {
+                        startedTime = meta.startedAt;
+                    } else if (status.schedule && status.schedule.startDate instanceof Date) {
+                        startedTime = status.schedule.startDate.getTime();
+                    } else if (nov.festa_liturgica && nov.festa_liturgica.mes && nov.festa_liturgica.dia) {
+                        const y = todayDate.getFullYear();
+                        const fDate = new Date(y, nov.festa_liturgica.mes - 1, nov.festa_liturgica.dia);
+                        startedTime = fDate.getTime() - (9 * 86400000);
+                    } else {
+                        const daysCount = prog.length || 1;
+                        const base = (meta && meta.date) ? new Date(meta.date).getTime() : todayDate.getTime();
+                        startedTime = base - ((daysCount - 1) * 86400000);
+                    }
+
                     const nextPendingDay = [1,2,3,4,5,6,7,8,9].find(d => !prog.includes(d)) || 1;
                     // PRIORIDADE CANÔNICA: Se a novena está em andamento na Igreja, o dia de hoje é status.currentDay!
                     const calendarDay = (status.status === 'em_andamento' && status.currentDay) ? status.currentDay : nextPendingDay;
@@ -543,8 +563,8 @@
                 }
             }
 
-            // Ordenar da mais antiga para a mais recente
-            inProgressList.sort((a, b) => a.startedTime - b.startedTime);
+            // Ordenar da mais antiga para a mais recente (desempate por mais dias rezados)
+            inProgressList.sort((a, b) => (a.startedTime - b.startedTime) || (b.completedCount - a.completedCount));
 
             // SE O FIEL TEM NOVENA EM ANDAMENTO, ELA É O SPOTLIGHT PRINCIPAL!
             if (inProgressList.length > 0) {
@@ -1053,9 +1073,13 @@
 
             localStorage.setItem(`thesaurus_progress_${currentNovena.id}`, JSON.stringify(completed));
             
-            // Meta com data do último dia rezado
+            // Meta com data de início preservada e último dia rezado
+            let existingMeta = {};
+            try { existingMeta = JSON.parse(localStorage.getItem(`thesaurus_meta_${currentNovena.id}`) || '{}'); } catch(e){}
+            const startedAt = (existingMeta && existingMeta.startedAt) ? existingMeta.startedAt : Date.now();
             const meta = {
                 novenaId: currentNovena.id,
+                startedAt: startedAt,
                 lastDay: currentDayIndex,
                 date: (new Date()).toISOString().slice(0, 10),
                 total: completed.length

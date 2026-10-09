@@ -121,20 +121,94 @@ export default async function handler(req, res) {
         }
 
         // ---- gravacao normal ----
-        const appState = payload.appState || {};
-        // protecao: o PIN nunca deve ser gravado dentro do estado do aluno
-        if (appState && typeof appState === 'object' && appState.cloudSyncPin !== undefined) {
-            delete appState.cloudSyncPin;
+        const incomingState = payload.appState || {};
+        if (incomingState && typeof incomingState === 'object' && incomingState.cloudSyncPin !== undefined) {
+            delete incomingState.cloudSyncPin;
         }
         const pinInformado = String(payload.pin || '').trim();
         if (pinInformado && !/^\d{4,6}$/.test(pinInformado)) {
-            return res.status(200).json({ success: false, error: 'O PIN deve ter de 4 a 6 dÃ­gitos.' });
+            return res.status(200).json({ success: false, error: 'O PIN deve ter de 4 a 6 dígitos.' });
         }
+
+        const existingState = (existente && existente.appState) ? existente.appState : {};
+
+        // 1. Mesclagem Aditiva e Concorrente de Novenas (Zero perda de dados entre Smartphone e PC)
+        const mergedNovenas = { progress: {}, meta: {} };
+        const oldNovenas = existingState.novenas || { progress: {}, meta: {} };
+        const newNovenas = incomingState.novenas || { progress: {}, meta: {} };
+        const allNovenaIds = new Set([
+            ...Object.keys(oldNovenas.progress || {}),
+            ...Object.keys(newNovenas.progress || {})
+        ]);
+
+        allNovenaIds.forEach(id => {
+            const oldDays = oldNovenas.progress?.[id] || [];
+            const newDays = newNovenas.progress?.[id] || [];
+            mergedNovenas.progress[id] = Array.from(new Set([...oldDays, ...newDays])).sort((a,b)=>a-b);
+
+            const oldMeta = oldNovenas.meta?.[id] || {};
+            const newMeta = newNovenas.meta?.[id] || {};
+            const startedAt = (oldMeta.startedAt && newMeta.startedAt)
+                ? Math.min(oldMeta.startedAt, newMeta.startedAt)
+                : (oldMeta.startedAt || newMeta.startedAt || null);
+
+            mergedNovenas.meta[id] = {
+                ...oldMeta,
+                ...newMeta,
+                ...(startedAt ? { startedAt } : {}),
+                total: mergedNovenas.progress[id].length,
+                lastDay: Math.max(0, ...mergedNovenas.progress[id], oldMeta.lastDay || 0, newMeta.lastDay || 0)
+            };
+        });
+
+        // 2. Mesclagem de Lectio / Notas do Diário Espiritual
+        const mergedLectio = Object.assign({}, existingState.lectioNotes || {}, incomingState.lectioNotes || {});
+
+        // 3. Mesclagem de Liturgia Diária lida
+        const mergedLiturgia = Object.assign({}, existingState.liturgicalRead || {}, incomingState.liturgicalRead || {});
+
+        // 4. Mesclagem de Aulas Concluídas
+        const mergedLessons = Array.from(new Set([
+            ...(existingState.completedLessons || []),
+            ...(incomingState.completedLessons || [])
+        ]));
+
+        // 5. Mesclagem de Conquistas Desbloqueadas
+        const mergedAchievements = Array.from(new Set([
+            ...(existingState.unlockedAchievements || []),
+            ...(incomingState.unlockedAchievements || [])
+        ]));
+
+        // 6. Mesclagem de Desafios Diários
+        const mergedChallenges = Object.assign({}, existingState.dailyChallenges || {}, incomingState.dailyChallenges || {});
+
+        // 7. Mesclagem de Terços Concluídos
+        const mergedRosaries = Array.from(new Set([
+            ...((existingState.completedRosaries || []).map(r => JSON.stringify(r))),
+            ...((incomingState.completedRosaries || []).map(r => JSON.stringify(r)))
+        ])).map(s => {
+            try { return JSON.parse(s); } catch(e) { return null; }
+        }).filter(Boolean);
+
+        const xp = Math.max(existingState.xp || 0, incomingState.xp || 0, Number(payload.xp) || 0, Number(existente && existente.xp) || 0);
+        const streak = Math.max(existingState.streak || 0, incomingState.streak || 0, Number(payload.streak) || 0, Number(existente && existente.streak) || 0);
+
+        const appState = {
+            ...existingState,
+            ...incomingState,
+            novenas: mergedNovenas,
+            lectioNotes: mergedLectio,
+            liturgicalRead: mergedLiturgia,
+            completedLessons: mergedLessons,
+            unlockedAchievements: mergedAchievements,
+            dailyChallenges: mergedChallenges,
+            completedRosaries: mergedRosaries,
+            xp,
+            streak
+        };
 
         const nowIso = new Date().toISOString();
         const reflectionsCount = appState.lectioNotes ? Object.keys(appState.lectioNotes).length : 0;
-        const xp = appState.xp || 0;
-        const streak = appState.streak || 0;
         const levelName = NIVEIS[Math.min(Math.floor(xp / 150), NIVEIS.length - 1)];
 
         const userRecord = {

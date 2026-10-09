@@ -5851,7 +5851,26 @@ https://catecismo.creativeam.com.br`;
 
                     if (prog.length > 0 && prog.length < 9) {
                         const status = engine.evaluateNovenaStatus(nov, today);
-                        const startedTime = meta.startedAt || (meta.date ? new Date(meta.date).getTime() : 0) || (status.schedule?.startDate ? status.schedule.startDate.getTime() : 0);
+                        
+                        // PRIORIDADE DA NOVENA MAIS ANTIGA (CANÔNICA E TEMPORAL):
+                        // 1. Carimbo exato meta.startedAt (se já gravado)
+                        // 2. Data litúrgica canônica de início do Dia 1 (status.schedule.startDate)
+                        // 3. Início baseado na festa litúrgica (9 dias antes)
+                        // 4. Estimativa pelo número de dias rezados (quem tem mais dias rezados começou mais cedo)
+                        let startedTime = 0;
+                        if (meta && typeof meta.startedAt === 'number') {
+                            startedTime = meta.startedAt;
+                        } else if (status.schedule && status.schedule.startDate instanceof Date) {
+                            startedTime = status.schedule.startDate.getTime();
+                        } else if (nov.festa_liturgica && nov.festa_liturgica.mes && nov.festa_liturgica.dia) {
+                            const y = today.getFullYear();
+                            const fDate = new Date(y, nov.festa_liturgica.mes - 1, nov.festa_liturgica.dia);
+                            startedTime = fDate.getTime() - (9 * 86400000);
+                        } else {
+                            const daysCount = prog.length || 1;
+                            const base = (meta && meta.date) ? new Date(meta.date).getTime() : today.getTime();
+                            startedTime = base - ((daysCount - 1) * 86400000);
+                        }
                         
                         let nextPendingDay = [1,2,3,4,5,6,7,8,9].find(d => !prog.includes(d)) || 1;
                         // REGRA CANÔNICA DE PRIORIDADE:
@@ -5879,8 +5898,8 @@ https://catecismo.creativeam.com.br`;
                     }
                 }
 
-                // ORDENAR DA MAIS ANTIGA INICIADA PARA A MAIS NOVA (prioridade exigida pelo usuário)
-                inProgressList.sort((a, b) => a.startedTime - b.startedTime);
+                // ORDENAR DA MAIS ANTIGA INICIADA PARA A MAIS NOVA (prioridade exigida pelo usuário: desempate por mais dias rezados)
+                inProgressList.sort((a, b) => (a.startedTime - b.startedTime) || (b.completedCount - a.completedCount));
 
                 // 2. Identificar novenas que começam HOJE no calendário litúrgico (currentDay === 1) e não iniciadas
                 const startingToday = active.filter(act => {
