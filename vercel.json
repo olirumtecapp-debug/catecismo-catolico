@@ -18,7 +18,11 @@
       "destination": "/preceitos.html"
     },
     {
-      "source": "/((?!assets/|data/|api/|auditoria|preceitos|.*\\..*).*)",
+      "source": "/novenas",
+      "destination": "/novenas.html"
+    },
+    {
+      "source": "/((?!assets/|data/|api/|auditoria|preceitos|novenas|.*\\..*).*)",
       "destination": "/index.html"
     }
   ],
