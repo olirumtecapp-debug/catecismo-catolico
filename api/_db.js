@@ -139,9 +139,18 @@ async function fsRequest(path, options = {}) {
 }
 
 async function listDocs(col, pageSize = 300) {
-    const res = await fsRequest(basePath(col) + '?pageSize=' + pageSize);
-    if (!res.ok || !res.body) return [];
-    return (res.body.documents || []).map(docToObject);
+    const allDocs = [];
+    let pageToken = '';
+    for (let page = 0; page < 25; page++) {
+        const tokenParam = pageToken ? '&pageToken=' + encodeURIComponent(pageToken) : '';
+        const res = await fsRequest(basePath(col) + '?pageSize=' + pageSize + tokenParam);
+        if (!res.ok || !res.body) break;
+        const batch = (res.body.documents || []).map(docToObject);
+        allDocs.push(...batch);
+        if (!res.body.nextPageToken) break;
+        pageToken = res.body.nextPageToken;
+    }
+    return allDocs;
 }
 
 async function upsertDoc(col, id, obj) {
@@ -150,6 +159,24 @@ async function upsertDoc(col, id, obj) {
         body: JSON.stringify({ fields: toFields(obj) })
     });
     return res.ok;
+}
+
+let lastVaultSnapshotDay = '';
+async function ensureDailyCloudVaultSnapshot(usersMap) {
+    try {
+        const today = new Date().toISOString().slice(0, 10);
+        if (lastVaultSnapshotDay === today) return;
+        lastVaultSnapshotDay = today;
+        const daySlot = 'slot_day_' + new Date().getUTCDay(); // 0 (Dom) a 6 (Sab) - rotacao automatica de 7 dias
+        await upsertDoc('catecismo_vault_snapshots', daySlot, {
+            date: today,
+            updatedAt: new Date().toISOString(),
+            totalUsers: Object.keys(usersMap || {}).length,
+            payloadJson: JSON.stringify(usersMap || {})
+        });
+    } catch (e) {
+        // Silencioso para nunca interromper o fluxo principal
+    }
 }
 
 // ---------- cache curto (mesmo comportamento de antes) ----------
@@ -191,15 +218,13 @@ export async function getDatabase() {
         db.users[email] = { ...(db.users[email] || {}), ...u, email };
     }
 
-    // Se o Firestore estava vazio ou com menos usuários que o local, sincroniza o Firestore silenciosamente
+    // Se o Firestore estava vazio ou com menos usuários que o local, sincroniza o Firestore
     if (docs.length < Object.keys(localUsers).length) {
-        (async () => {
-            for (const [em, rec] of Object.entries(localUsers)) {
-                try {
-                    await upsertDoc(COL_USERS, docId(em), { email: em, ...rec });
-                } catch(e) {}
-            }
-        })().catch(() => {});
+        for (const [em, rec] of Object.entries(localUsers)) {
+            try {
+                await upsertDoc(COL_USERS, docId(em), { email: em, ...rec });
+            } catch(e) {}
+        }
     }
 
     cacheSet('users', db);
@@ -211,28 +236,27 @@ export async function saveUserToDatabase(email, userRecord) {
     const key = String(email).trim().toLowerCase();
     const id = docId(key);
 
-    // 1. Sempre salva localmente primeiro (garantia de dados nunca perdidos)
+    // 1. Salva localmente primeiro (para desenvolvimento local)
     const localUsers = getLocalUsers();
     localUsers[key] = { ...(localUsers[key] || {}), ...userRecord, email: key };
     saveLocalUsers(localUsers);
     cacheClear();
 
-    // Sincroniza com Firestore em segundo plano sem travar a resposta do usuário
-    (async () => {
-        try {
-            const atual = await fsRequest(basePath(COL_USERS) + '/' + id);
-            if (atual.ok && atual.body && atual.body.fields) {
-                const existente = docToObject(atual.body);
-                if (existente.createdAt && !userRecord.createdAt) userRecord.createdAt = existente.createdAt;
-                if (existente.createdAt && userRecord.createdAt && existente.createdAt < userRecord.createdAt) {
-                    userRecord.createdAt = existente.createdAt;
-                }
+    // 2. Aguarda gravacao confirmada no Firestore (impede que a Vercel congele a funcao antes de salvar!)
+    try {
+        const atual = await fsRequest(basePath(COL_USERS) + '/' + id);
+        if (atual.ok && atual.body && atual.body.fields) {
+            const existente = docToObject(atual.body);
+            if (existente.createdAt && !userRecord.createdAt) userRecord.createdAt = existente.createdAt;
+            if (existente.createdAt && userRecord.createdAt && existente.createdAt < userRecord.createdAt) {
+                userRecord.createdAt = existente.createdAt;
             }
-            await upsertDoc(COL_USERS, id, { email: key, ...userRecord });
-        } catch (err) {
-            // Firestore falhou, mas dados locais já estão 100% seguros
         }
-    })().catch(() => {});
+        await upsertDoc(COL_USERS, id, { email: key, ...userRecord });
+        await ensureDailyCloudVaultSnapshot(localUsers);
+    } catch (err) {
+        console.warn('[db] Aviso ao sincronizar Firestore:', err && err.message);
+    }
 
     return true;
 }
