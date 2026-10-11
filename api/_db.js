@@ -50,7 +50,7 @@ function saveLocalUsers(users) {
     }
 }
 
-const API_KEY = process.env.FIREBASE_API_KEY || 'AIzaSyBUHGXoUMg0bV3EdmfpfmVAEYMLQceqkQc';
+const API_KEY = process.env.FIREBASE_API_KEY || '';
 const PROJECT_ID = process.env.FIREBASE_PROJECT_ID || 'expedicao-brasil';
 
 const COL_USERS = 'catecismo_cloud_users';
