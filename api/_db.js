@@ -218,15 +218,7 @@ export async function getDatabase() {
         db.users[email] = { ...(db.users[email] || {}), ...u, email };
     }
 
-    // Se o Firestore estava vazio ou com menos usuários que o local, sincroniza o Firestore
-    if (docs.length < Object.keys(localUsers).length) {
-        for (const [em, rec] of Object.entries(localUsers)) {
-            try {
-                await upsertDoc(COL_USERS, docId(em), { email: em, ...rec });
-            } catch(e) {}
-        }
-    }
-
+    // Leitura 100% passiva: 0 gravações no Firestore durante consulta
     cacheSet('users', db);
     return db;
 }
@@ -253,7 +245,6 @@ export async function saveUserToDatabase(email, userRecord) {
             }
         }
         await upsertDoc(COL_USERS, id, { email: key, ...userRecord });
-        await ensureDailyCloudVaultSnapshot(localUsers);
     } catch (err) {
         console.warn('[db] Aviso ao sincronizar Firestore:', err && err.message);
     }
