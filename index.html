@@ -980,7 +980,7 @@
                             <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
                                 <span>🔎</span> <span>Pesquisar</span>
                             </button>
-                            <button onclick="router.navigate('fontes'); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="openFontesModal(); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
                                 <span>ℹ️</span> <span>Fontes e Transparência</span>
                             </button>
                             <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-900 transition text-sm">
@@ -7262,7 +7262,7 @@ https://catecismo.creativeam.com.br`;
                                     <span>📬</span> <span>Caixa Postal &amp; Contato</span>
                                 </button>
                                 <span class="text-slate-300 dark:text-slate-700">·</span>
-                                <button onclick="router.navigate('fontes')" class="hover:text-cgreen dark:hover:text-csage transition cursor-pointer">
+                                <button onclick="openFontesModal()" class="hover:text-cgreen dark:hover:text-csage transition cursor-pointer">
                                     Fontes e Transparência
                                 </button>
                                 <span class="text-slate-300 dark:text-slate-700">·</span>
@@ -7272,7 +7272,7 @@ https://catecismo.creativeam.com.br`;
                             </div>
                             <div class="flex items-center gap-2">
                                 <button onclick="openDeveloperModal()" class="hover:text-cgreen dark:hover:text-csage transition cursor-pointer">
-                                    Desenvolvedor: <strong>Murilo Silva</strong>
+                                    Desenvolvedor: <strong>Murilo Silva - CreativeAM</strong>
                                 </button>
                             </div>
                         </footer>
@@ -9090,9 +9090,17 @@ https://catecismo.creativeam.com.br`;
 
             renderFontes() {
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-6">
-                            <h2 class="font-serif text-3xl font-bold text-mariana">Fontes e Transparência</h2>
+                    <div class="max-w-[1190px] w-full mx-auto space-y-6">
+                        <div class="flex items-center justify-between pb-1">
+                            <button onclick="router.navigate('home')" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-2xs">
+                                <span>←</span> <span>Voltar ao Início</span>
+                            </button>
+                            <button onclick="openFontesModal()" class="px-4 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 text-xs font-bold transition cursor-pointer">
+                                <span>📜</span> <span>Abrir em Janela Modal</span>
+                            </button>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-6">
+                            <h2 class="font-serif text-3xl font-bold text-mariana dark:text-slate-100">Fontes e Transparência</h2>
                             <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
                                 <p>Esta plataforma é um <strong>aplicativo independente de estudo leigo</strong>, sem vínculo institucional com a Santa Sé, a CNBB ou qualquer diocese. Seu objetivo é auxiliar católicos e interessados a conhecer, compreender e viver a fé.</p>
                                 <div class="space-y-3">
@@ -15540,7 +15548,7 @@ https://catecismo.creativeam.com.br
                         </div>
                         <div>
                             <div class="flex items-center gap-2 flex-wrap">
-                                <h3 class="text-xl font-serif font-bold text-mariana dark:text-slate-100">Murilo Silva</h3>
+                                <h3 class="text-xl font-serif font-bold text-mariana dark:text-slate-100">Murilo Silva <span class="text-xs font-sans font-bold text-amber-600 dark:text-amber-400">· CreativeAM</span></h3>
                                 <span class="bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 text-[10px] font-bold uppercase px-2 py-0.5 rounded-full">Idealizador & Desenvolvedor</span>
                             </div>
                             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Engenharia de Software • EdTech Católica & Gamificação</p>
@@ -15856,46 +15864,71 @@ https://catecismo.creativeam.com.br
                 if (!modal) return;
 
                 modal.innerHTML = `
-                    <div class="bg-white dark:bg-slate-800 w-full max-w-lg rounded-3xl p-6 md:p-8 space-y-5 max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
-                        <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-bold text-xl transition cursor-pointer">✕</button>
+                    <div class="bg-white dark:bg-slate-800 w-full max-w-xl rounded-3xl p-6 sm:p-8 space-y-5 max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left my-auto">
+                        <!-- Botão Fechar -->
+                        <button onclick="closeModal()" title="Fechar" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl font-bold text-lg transition cursor-pointer">✕</button>
 
-                        <div class="flex items-center gap-3.5 pb-3 border-b border-slate-100 dark:border-slate-700">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-2xl shrink-0">
-                                🕊️
+                        <!-- Cabeçalho -->
+                        <div class="flex items-center gap-3.5 pb-4 border-b border-slate-100 dark:border-slate-700">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl shrink-0 shadow-xs">
+                                📜
                             </div>
                             <div>
-                                <h3 class="font-serif text-2xl font-bold text-mariana dark:text-slate-100">Transparência do Projeto</h3>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">Informações sobre a manutenção e sustentabilidade do Catecismo</p>
+                                <h3 class="font-serif text-2xl font-bold text-mariana dark:text-slate-100">Fontes & Transparência</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Direitos, referências doutrinárias e independência da plataforma</p>
                             </div>
                         </div>
 
-                        <div class="space-y-3.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
-                                <strong class="text-mariana dark:text-amber-200 block text-sm font-serif">Quem mantém o projeto?</strong>
-                                <p>O projeto CATECISMO é uma iniciativa católica independente desenvolvida e mantida por <strong>Murilo Ferreira Silva</strong>, graduado em Gestão em Tecnologia da Informação (TI).</p>
+                        <!-- Conteúdo com Scroll Limpo -->
+                        <div class="space-y-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <!-- Independência e Propósito -->
+                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+                                <strong class="text-mariana dark:text-amber-300 block text-xs font-serif uppercase tracking-wider font-bold">🕊️ Independência & Apostolado Leigo</strong>
+                                <p>Esta plataforma é um aplicativo independente de estudo e oração católica leiga, sem vínculo institucional formal com a Santa Sé, CNBB ou dioceses. Seu objetivo exclusivo é auxiliar fiéis a conhecer, meditar e aprofundar sua vida litúrgica, bíblica e catequética.</p>
                             </div>
 
-                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
-                                <strong class="text-mariana dark:text-amber-200 block text-sm font-serif">Para que servem os apoios voluntários?</strong>
-                                <p>Toda contribuição voluntária é destinada à cobertura de custos de servidores de alta velocidade, hospedagem em nuvem, licenciamento de fontes e manutenção contínua dos acervos sagrados.</p>
+                            <!-- Fontes Doutrinárias -->
+                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2">
+                                <strong class="text-mariana dark:text-amber-300 block text-xs font-serif uppercase tracking-wider font-bold">📖 Fontes Doutrinárias & Canônicas</strong>
+                                <ul class="space-y-2 text-xs">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-amber-600 font-bold shrink-0">•</span>
+                                        <span><strong>Catecismo da Igreja Católica (CCC):</strong> Todos os módulos de formação citam seus parágrafos magisteriais oficiais correspondentes (ex.: CCC § 1324).</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-amber-600 font-bold shrink-0">•</span>
+                                        <span><strong>Sagrada Escritura:</strong> Citações e leituras bíblicas de referência em conformidade com as traduções das edições católicas aprovadas.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-amber-600 font-bold shrink-0">•</span>
+                                        <span><strong>Liturgia Diária Própria:</strong> Acervo litúrgico próprio auditado e integrado, assegurando funcionamento rápido, confiável e independente de conexões externas.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-amber-600 font-bold shrink-0">•</span>
+                                        <span><strong>Tradição & Magistério:</strong> Vida e escritos dos santos, novenas e orações seculares da Igreja Católica.</span>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
-                                <strong class="text-mariana dark:text-amber-200 block text-sm font-serif">Gratuidade e Acesso Livre</strong>
-                                <p>A plataforma é e sempre continuará 100% gratuita para leitura da Bíblia, Liturgia Diária, Catecismo, Novenas e Orações. Nenhum recurso ou oração é bloqueado por falta de apoio.</p>
-                            </div>
-
-                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1">
-                                <strong class="text-mariana dark:text-amber-200 block text-sm font-serif">Contato Direto</strong>
-                                <p>Dúvidas, pedidos de oração ou sugestões podem ser enviados a qualquer momento através do botão <strong>Contato</strong> no menu ou rodapé.</p>
+                            <!-- Manutenção e Gratuidade -->
+                            <div class="p-3.5 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+                                <strong class="text-mariana dark:text-amber-300 block text-xs font-serif uppercase tracking-wider font-bold">💻 Desenvolvimento & Sustentabilidade</strong>
+                                <p>Iniciativa idealizada e desenvolvida por <strong>Murilo Silva - CreativeAM</strong> (Graduado em Gestão em Tecnologia da Informação). A plataforma é <strong>100% gratuita e de livre acesso</strong> — nenhuma oração, leitura bíblica ou catecismo é restrito.</p>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Apoios voluntários são destinados integralmente para custeio de servidores de alta performance, banco de dados, domínio e aprimoramento contínuo dos acervos sagrados.</p>
                             </div>
                         </div>
 
-                        <div class="pt-2 flex justify-between items-center text-xs">
-                            <button onclick="PrivacyModal.open()" class="text-blue-600 dark:text-blue-400 font-bold hover:underline cursor-pointer">
-                                Ver Política de Privacidade →
-                            </button>
-                            <button onclick="closeModal()" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs cursor-pointer">
+                        <!-- Rodapé com Ações -->
+                        <div class="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2.5 text-xs">
+                            <div class="flex items-center gap-3">
+                                <button onclick="PrivacyModal.open()" class="text-blue-600 dark:text-blue-400 font-bold hover:underline cursor-pointer">
+                                    Privacidade & Dados →
+                                </button>
+                                <button onclick="closeModal(); openApoioModal();" class="text-amber-700 dark:text-amber-400 font-bold hover:underline cursor-pointer flex items-center gap-1">
+                                    <span>☕</span> <span>Apoiar Projeto</span>
+                                </button>
+                            </div>
+                            <button onclick="closeModal()" class="px-5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold text-xs transition cursor-pointer">
                                 Fechar
                             </button>
                         </div>
@@ -15906,6 +15939,7 @@ https://catecismo.creativeam.com.br
             }
         };
         window.TransparenciaModal = TransparenciaModal;
+        window.openFontesModal = function() { TransparenciaModal.open(); };
 
         const PrivacyModal = {
             open() {
