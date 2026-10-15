@@ -13083,19 +13083,24 @@ https://catecismo.creativeam.com.br
             },
 
             dismissHomeBroadcast(id) {
-                this.markBroadcastAsRead(id);
+                try {
+                    const allIds = (this.cachedBroadcasts || []).map(b => b.id);
+                    localStorage.setItem('catecismo_read_broadcasts', JSON.stringify(allIds));
+                    let dismissed = [];
+                    try { dismissed = JSON.parse(localStorage.getItem('catecismo_dismissed_home_broadcasts') || '[]'); } catch(e) {}
+                    if (id && !dismissed.includes(id)) dismissed.push(id);
+                    allIds.forEach(x => { if (!dismissed.includes(x)) dismissed.push(x); });
+                    localStorage.setItem('catecismo_dismissed_home_broadcasts', JSON.stringify(dismissed));
+                } catch(e) {}
+
+                this.calculateUnreadCount();
+                this.updateBadges();
+
                 const alertEl = document.getElementById('home-broadcast-alert');
-                if (alertEl) {
-                    alertEl.style.transition = 'all 0.3s ease';
-                    alertEl.style.opacity = '0';
-                    alertEl.style.transform = 'translateY(-10px)';
-                    setTimeout(() => {
-                        alertEl.remove();
-                        const bannerCont = document.getElementById('home-broadcast-alert-container');
-                        if (bannerCont) bannerCont.innerHTML = '';
-                        this.syncAlertSlot();
-                    }, 300);
-                }
+                if (alertEl) alertEl.remove();
+                const bannerCont = document.getElementById('home-broadcast-alert-container');
+                if (bannerCont) bannerCont.innerHTML = '';
+                this.syncAlertSlot();
             },
 
             refreshBanner() {
@@ -13125,7 +13130,22 @@ https://catecismo.creativeam.com.br
                 const unread = this.getUnreadBroadcasts();
                 if (!unread || unread.length === 0) return '';
 
-                const b = unread[0];
+                let dismissed = [];
+                try { dismissed = JSON.parse(localStorage.getItem('catecismo_dismissed_home_broadcasts') || '[]'); } catch(e) {}
+                const valid = unread.filter(b => !dismissed.includes(b.id));
+                if (valid.length === 0) return '';
+
+                // Apenas exibe no banner principal da Home comunicados publicados nos últimos 5 dias
+                // Comunicados antigos permanecem apenas no Mural da Caixa Postal para não poluir a tela inicial
+                const now = Date.now();
+                const maxAgeMs = 5 * 24 * 60 * 60 * 1000;
+                const recent = valid.filter(b => {
+                    const dt = new Date(b.date || b.createdAt || 0).getTime();
+                    return !isNaN(dt) && (now - dt) < maxAgeMs;
+                });
+                if (recent.length === 0) return '';
+
+                const b = recent[0];
                 return `
                     <div id="home-broadcast-alert" class="p-4 rounded-3xl bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 text-white shadow-lg border border-amber-300/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in fade-in duration-300 relative group">
                         <button type="button" onclick="ContactManager.dismissHomeBroadcast('${b.id}')" class="absolute top-3 right-3 sm:hidden text-amber-200 hover:text-white p-1 rounded-full text-xs font-bold cursor-pointer" title="Dispensar aviso">✕</button>
