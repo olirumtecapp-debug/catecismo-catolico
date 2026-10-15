@@ -1,0 +1,1930 @@
+{
+  "categories": [
+    "Doutrina",
+    "Sacramentos",
+    "Bíblia",
+    "Liturgia & Santos"
+  ],
+  "questions": [
+    {
+      "id": "q_doutrina_01",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual é o mistério central e fontal de toda a fé e vida cristã?",
+      "options": [
+        "A Santíssima Trindade (Pai, Filho e Espírito Santo)",
+        "A criação do mundo material",
+        "A travessia do Mar Vermelho",
+        "A sucessão apostólica papal"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O mistério da Santíssima Trindade é o mistério central da fé e da vida cristã. É o mistério de Deus em Si mesmo.",
+      "ccc": "CCC § 232-237",
+      "bibleRef": "Mateus 28, 19"
+    },
+    {
+      "id": "q_doutrina_02",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Quantas naturezas e quantas pessoas existem em Jesus Cristo?",
+      "options": [
+        "Duas naturezas (divina e humana) e uma só Pessoa Divina",
+        "Duas naturezas e duas pessoas distintas",
+        "Uma só natureza divina e uma pessoa humana",
+        "Uma natureza mista e três pessoas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Jesus Cristo é verdadeiro Deus e verdadeiro homem, tendo duas naturezas perfeitamente unidas na única Pessoa divina do Verbo.",
+      "ccc": "CCC § 464-469",
+      "bibleRef": "João 1, 14"
+    },
+    {
+      "id": "q_doutrina_03",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que professa o dogma da Imaculada Conceição de Maria, proclamado pelo Papa Pio IX?",
+      "options": [
+        "Que Maria foi preservada imune de toda mancha do pecado original desde o primeiro instante de sua concepção",
+        "Que Jesus foi concebido virginalmente no seio de Maria pelo Espírito Santo",
+        "Que Maria foi elevada ao céu em corpo e alma",
+        "Que Maria foi concebida sem necessidade de um pai humano"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pela graça e privilégio de Deus todo-poderoso, em vista dos méritos de Cristo, Maria foi imune do pecado original desde a concepção.",
+      "ccc": "CCC § 490-493",
+      "bibleRef": "Lucas 1, 28"
+    },
+    {
+      "id": "q_doutrina_04",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "Quais são as quatro notas ou atributos essenciais da Igreja de Cristo declarados no Credo?",
+      "options": [
+        "Una, Santa, Católica e Apostólica",
+        "Hierárquica, Missionária, Tradicional e Global",
+        "Bíblica, Monástica, Ecumênica e Local",
+        "Espiritual, Visível, Litúrgica e Eterna"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Credo Niceno-Constantinopolitano proclama que a Igreja é Una, Santa, Católica (universal) e Apostólica em sua origem e doutrina.",
+      "ccc": "CCC § 811-870",
+      "bibleRef": "Efésios 4, 4-6"
+    },
+    {
+      "id": "q_doutrina_05",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "O que a Igreja ensina sobre o Purgatório?",
+      "options": [
+        "É a purificação final dos eleitos antes de contemplarem a Deus face a face no Céu",
+        "É um lugar de segunda chance para quem morreu em pecado mortal",
+        "É um estado de sono espiritual onde as almas aguardam o Juízo Final",
+        "É um mito medieval sem fundamentação bíblica ou patrística"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os que morrem na graça e na amizade de Deus, mas imperfeitamente purificados, passam por uma purificação após a morte para alcançar a santidade.",
+      "ccc": "CCC § 1030-1032",
+      "bibleRef": "1 Coríntios 3, 15"
+    },
+    {
+      "id": "q_doutrina_06",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que é o Pecado Original transmitido à humanidade?",
+      "options": [
+        "A privação da santidade e justiça originais com a qual o ser humano foi criado",
+        "Uma corrupção total e irremediável da natureza humana",
+        "Uma simples má influência do ambiente social",
+        "Um pecado individual cometido conscientemente por cada bebê"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O pecado original é transmitido por propagação e consiste na privação da justiça original, ferindo mas não destruindo totalmente a natureza humana.",
+      "ccc": "CCC § 402-409",
+      "bibleRef": "Romanos 5, 12"
+    },
+    {
+      "id": "q_doutrina_07",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "Em que consiste a heresia do Arianismo condenada no Concílio de Niceia (325 d.C.)?",
+      "options": [
+        "Na negação da divindade eterna de Jesus Cristo, afirmando que o Filho seria uma criatura",
+        "Na afirmação de que Jesus tinha apenas a natureza divina (monofisismo)",
+        "Na rejeição do Antigo Testamento e do Deus Criador",
+        "Na alegação de que o Espírito Santo procedia apenas do Pai"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ário ensinava que o Filho não era coeterno com o Pai, mas a primeira criatura. Niceia definiu que Cristo é consubstancial (homoousios) ao Pai.",
+      "ccc": "CCC § 465",
+      "bibleRef": "João 10, 30"
+    },
+    {
+      "id": "q_doutrina_08",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que afirma o dogma da Assunção da Santíssima Virgem Maria?",
+      "options": [
+        "Que Maria, ao término de sua vida terrena, foi elevada em corpo e alma à glória celeste",
+        "Que Maria ressuscitou a si mesma pelo seu próprio poder",
+        "Que Maria ascendeu ao Céu pelos seus próprios méritos, como Jesus",
+        "Que apenas a alma de Maria foi para o Paraíso enquanto o corpo permaneceu na terra"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Proclamado pelo Papa Pio XII em 1950 (Munificentissimus Deus), o dogma afirma a assunção corpórea de Maria à glória celeste.",
+      "ccc": "CCC § 966",
+      "bibleRef": "Apocalipse 12, 1"
+    },
+    {
+      "id": "q_doutrina_09",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual é o fim último e vocação eterna para o qual o homem foi criado por Deus?",
+      "options": [
+        "A bem-aventurança eterna: conhecer, amar e servir a Deus nesta vida e contemplá-Lo eternamente no Céu",
+        "O progresso econômico e social na história terrena",
+        "A reencarnação sucessiva para evolução cármica",
+        "A fusão cósmica no nada impessoal"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Deus, infinitamente perfeito e bem-aventurado em si mesmo, num desígnio de pura bondade, criou livremente o homem para fazê-lo participar de sua vida bem-aventurada.",
+      "ccc": "CCC § 1; 1718-1724",
+      "bibleRef": "1 João 3, 2"
+    },
+    {
+      "id": "q_doutrina_10",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que é a Sagrada Tradição segundo a teologia católica?",
+      "options": [
+        "A transmissão viva da Palavra de Deus confiada aos Apóstolos por Cristo e transmitida sob a assistência do Espírito Santo",
+        "O conjunto de lendas e costumes culturais humanos que mudam com a moda",
+        "Apenas os escritos deixados pelos imperadores romanos cristãos",
+        "Uma fonte secundária e inferior que contraria a Sagrada Escritura"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Sagrada Tradição e a Sagrada Escritura estão intimamente unidas e compenetram-se mutuamente; manam da mesma fonte divina e correm para o mesmo fim.",
+      "ccc": "CCC § 75-83",
+      "bibleRef": "2 Tessalonicenses 2, 15"
+    },
+    {
+      "id": "q_doutrina_11",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Quem são os Anjos na doutrina católica?",
+      "options": [
+        "Criaturas puramente espirituais, com inteligência e vontade, imortais e pessoais",
+        "Almas de seres humanos bondosos que faleceram e ganharam asas",
+        "Energias impessoais do universo",
+        "Figuras mitológicas sem existência real"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os anjos são servidores e mensageiros de Deus. Enquanto criaturas puramente espirituais, têm inteligência e vontade; são criaturas pessoais e imortais.",
+      "ccc": "CCC § 328-336",
+      "bibleRef": "Salmos 102 (103), 20"
+    },
+    {
+      "id": "q_doutrina_12",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que significa a expressão 'Comunhão dos Santos' no Credo?",
+      "options": [
+        "A união espiritual entre os fiéis na terra (Igreja militante), no Purgatório (padecente) e no Céu (triunfante)",
+        "Apenas a reunião física dos fiéis aos domingos na igreja paroquial",
+        "A lista dos santos canonizados pelo Vaticano",
+        "O direito de comer a hóstia consagrada em qualquer paróquia"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Comunhão dos Santos tem dois significados interligados: comunhão nas coisas santas (sancta) e comunhão entre as pessoas santas (sancti) nos três estados da Igreja.",
+      "ccc": "CCC § 946-962",
+      "bibleRef": "Hebreus 12, 1"
+    },
+    {
+      "id": "q_doutrina_13",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "Em que consiste a infalibilidade papal definida no Concílio Vaticano I (1870)?",
+      "options": [
+        "Na assistência do Espírito Santo quando o Papa define 'ex cathedra' uma doutrina sobre fé ou moral a ser crida por toda a Igreja",
+        "Na incapacidade do Papa de pecar ou de errar em decisões administrativas e pessoais",
+        "No poder de criar novos mandamentos que não estavam na Revelação",
+        "Na impossibilidade do Papa de adoecer fisicamente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A infalibilidade pontifícia se restringe a ensinamentos solenes 'ex cathedra' sobre matéria de fé e costumes, em virtude do múnus de pastor e doutor de todos os cristãos.",
+      "ccc": "CCC § 891",
+      "bibleRef": "Lucas 22, 32"
+    },
+    {
+      "id": "q_doutrina_14",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que a fé católica ensina sobre a Ressurreição da Carne no último dia?",
+      "options": [
+        "Que os corpos de todos os seres humanos ressuscitarão e se reunirão às suas almas para o Juízo Final",
+        "Que apenas a alma continua viva enquanto o corpo é esquecido para sempre",
+        "Que as almas reencarnarão em novos corpos materiais na terra",
+        "Que apenas os mártires ressuscitarão fisicamente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Assim como Cristo ressuscitou verdadeiramente e vive para sempre, Ele ressuscitará todos os homens no último dia com seus próprios corpos transfigurados.",
+      "ccc": "CCC § 988-1004",
+      "bibleRef": "João 5, 28-29"
+    },
+    {
+      "id": "q_doutrina_15",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "O que significa dizer que Deus criou o universo 'ex nihilo'?",
+      "options": [
+        "Que Deus criou tudo a partir do nada, sem utilizar nenhuma matéria preexistente",
+        "Que o universo existiu desde sempre junto com Deus",
+        "Que Deus formou o mundo organizando uma matéria caótica preexistente",
+        "Que o mundo é uma emanação involuntária da substância de Deus"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Cremos que Deus não precisou de nenhuma coisa preexistente nem de nenhuma ajuda para criar; Ele criou livremente o mundo a partir do nada (ex nihilo).",
+      "ccc": "CCC § 296-298",
+      "bibleRef": "2 Macabeus 7, 28"
+    },
+    {
+      "id": "q_doutrina_16",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "Qual é a distinção teológica entre o culto de adoração (latria) e o culto de veneração (dulia)?",
+      "options": [
+        "Latria é a adoração devida exclusivamente a Deus uno e trino; Dulia é a veneração de honra dirigida aos santos",
+        "Latria é o culto aos santos apóstolos e Dulia é o culto aos anjos",
+        "Latria é a oração em latim e Dulia é a oração no idioma local",
+        "Não existe distinção, são termos que significam exatamente a mesma coisa"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Igreja ensina com clareza a distinção entre a adoração suprema a Deus (latria), a veneração especial à Virgem Maria (hiperdulia) e a veneração aos santos (dulia).",
+      "ccc": "CCC § 2132; 971",
+      "bibleRef": "Mateus 4, 10"
+    },
+    {
+      "id": "q_doutrina_17",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "O que é o Inferno segundo a Revelação e o Magistério católico?",
+      "options": [
+        "O estado de autoexclusão definitiva da comunhão com Deus e com os bem-aventurados, consequência do pecado mortal sem arrependimento",
+        "Um lugar de sofrimento temporário onde todos os condenados são salvos depois de séculos",
+        "Uma metáfora que não existe na realidade",
+        "A aniquilação completa da alma que deixa de existir"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Morrer em pecado mortal sem ter-se arrependido e sem acolher o amor misericordioso de Deus significa autoexcluir-se para sempre da Sua comunhão.",
+      "ccc": "CCC § 1033-1037",
+      "bibleRef": "Mateus 25, 41"
+    },
+    {
+      "id": "q_doutrina_18",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "Qual é a relação entre Fé e Razão na doutrina católica ensinada na encíclica Fides et Ratio?",
+      "options": [
+        "São como duas asas pelas quais o espírito humano se eleva para a contemplação da verdade, sem contradição mútua",
+        "A fé cega anula completamente o uso da inteligência e do raciocínio",
+        "A razão científica é inimiga da fé e deve ser combatida",
+        "A fé é apenas um sentimento subjetivo e a razão possui valor apenas em laboratório"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Embora a fé supere a razão, nunca pode haver verdadeira contradição entre ambas, pois o mesmo Deus que revela os mistérios dá a luz da razão.",
+      "ccc": "CCC § 159",
+      "bibleRef": "Romanos 1, 19-20"
+    },
+    {
+      "id": "q_doutrina_19",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "O que significa a cláusula 'Filioque' professada no Credo pela Igreja Católica?",
+      "options": [
+        "Que o Espírito Santo procede eternamente do Pai e do Filho como de um só princípio",
+        "Que o Filho foi gerado pelo Espírito Santo antes de todos os séculos",
+        "Que o Filho é inferior ao Pai na divindade",
+        "Que a Igreja foi fundada apenas pelo Filho sem atuação do Espírito"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Credo latino confessa que o Espírito Santo procede do Pai e do Filho (Filioque), afirmando a comunhão e unidade consubstancial das Pessoas divinas.",
+      "ccc": "CCC § 245-248",
+      "bibleRef": "João 15, 26"
+    },
+    {
+      "id": "q_doutrina_20",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que é o Magistério da Igreja Católica?",
+      "options": [
+        "A autoridade de ensinar autenticamente a Palavra de Deus em nome de Jesus Cristo, exercida pelo Papa e pelos Bispos em comunhão com ele",
+        "Um grupo de professores de universidades católicas que vota as regras da Igreja",
+        "O tribunal que decide as leis civis dos países católicos",
+        "Um conselho de teólogos que pode alterar os Dez Mandamentos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O encargo de interpretar autenticamente a Palavra de Deus foi confiado unicamente ao Magistério vivo da Igreja, que o exerce em nome de Jesus Cristo.",
+      "ccc": "CCC § 85-87",
+      "bibleRef": "Lucas 10, 16"
+    },
+    {
+      "id": "q_doutrina_21",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Quem é a Terceira Pessoa da Santíssima Trindade?",
+      "options": [
+        "O Espírito Santo, Senhor que dá a vida, que procede do Pai e do Filho",
+        "São Miguel Arcanjo",
+        "A Virgem Maria",
+        "São Pedro apóstolo"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Espírito Santo é a Terceira Pessoa da Santíssima Trindade, verdadeiro Deus, consubstancial ao Pai e ao Filho, com os quais recebe a mesma adoração.",
+      "ccc": "CCC § 683-701",
+      "bibleRef": "João 14, 26"
+    },
+    {
+      "id": "q_doutrina_22",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que professa o dogma da Maternidade Divina de Maria (Theotókos), definido no Concílio de Éfeso (431 d.C.)?",
+      "options": [
+        "Que Maria é verdadeiramente Mãe de Deus, pois gerou na carne a Pessoa divina do Verbo Encarnado",
+        "Que Maria é mãe apenas do corpo humano de Jesus e não de Sua divindade",
+        "Que Maria existia antes de Deus criar o mundo",
+        "Que Maria é a quarta pessoa da divindade"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Maria é verdadeiramente 'Mãe de Deus' porque é a mãe da Pessoa divina de Jesus Cristo, Deus feito homem, e não de uma simples pessoa humana separada.",
+      "ccc": "CCC § 495",
+      "bibleRef": "Lucas 1, 43"
+    },
+    {
+      "id": "q_doutrina_23",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "O que é a 'Graça Santificante' infundida na alma do cristão?",
+      "options": [
+        "Um dom sobrenatural e gratuito de Deus que nos faz participantes da Sua natureza divina e nos torna filhos adotivos",
+        "Um sentimento psicológico de euforia e paz interior",
+        "O perdão civil dos pecados concedido pelo Estado",
+        "A capacidade humana natural de fazer boas ações filantrópicas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A graça santificante é um dom habitual, uma disposição estável e sobrenatural para aperfeiçoar a alma e torná-la capaz de viver com Deus e agir por Seu amor.",
+      "ccc": "CCC § 1996-2005",
+      "bibleRef": "2 Pedro 1, 4"
+    },
+    {
+      "id": "q_doutrina_24",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual é o único mediador entre Deus e os homens, pelo qual a humanidade é redimida?",
+      "options": [
+        "Jesus Cristo, o Filho unigênito de Deus",
+        "Moisés, o legislador",
+        "O profeta Elias",
+        "O patriarca Abraão"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Porquanto há um só Deus e um só Mediador entre Deus e os homens, Jesus Cristo, homem, que se entregou a Si mesmo para resgate de todos.",
+      "ccc": "CCC § 480; 771",
+      "bibleRef": "1 Timóteo 2, 5"
+    },
+    {
+      "id": "q_sacra_01",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "O que é um Sacramento segundo o Catecismo da Igreja Católica?",
+      "options": [
+        "Um sinal visível e eficaz da graça invisível, instituído por Cristo e confiado à Igreja",
+        "Um rito simbólico puramente humano criado pela assembleia paroquial",
+        "Uma celebração civil de passagem de idade",
+        "Um contrato jurídico entre o fiel e a diocese"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os sacramentos são sinais eficazes da graça, instituídos por Cristo e confiados à Igreja, pelos quais nos é dispensada a vida divina.",
+      "ccc": "CCC § 1131",
+      "bibleRef": "2 Coríntios 5, 17-18"
+    },
+    {
+      "id": "q_sacra_02",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Quais são os três Sacramentos da Iniciação Cristã?",
+      "options": [
+        "Batismo, Confirmação (Crisma) e Eucaristia",
+        "Batismo, Penitência e Matrimônio",
+        "Eucaristia, Unção dos Enfermos e Ordem",
+        "Batismo, Penitência e Crisma"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os sacramentos da iniciação cristã — Batismo, Confirmação e Eucaristia — põem os alicerces de toda a vida cristã.",
+      "ccc": "CCC § 1212",
+      "bibleRef": "Atos 2, 38-42"
+    },
+    {
+      "id": "q_sacra_03",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "O que opera a 'Transubstanciação' na consagração eucarística durante a Santa Missa?",
+      "options": [
+        "A mudança de toda a substância do pão no Corpo de Cristo e de toda a substância do vinho no Seu Sangue, permanecendo apenas as aparências (espécies)",
+        "Uma bênção simbólica onde o pão passa a representar a união dos fiéis",
+        "A presença de Cristo junto com a substância natural do pão (consubstanciação)",
+        "Uma transformação figurada que dura apenas enquanto a pessoa tem fé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pela consagração realiza-se a transubstanciação do pão e do vinho no Corpo e Sangue de Cristo. Sob as espécies consagradas, Cristo vivo está presente em Sua totalidade.",
+      "ccc": "CCC § 1373-1377",
+      "bibleRef": "Lucas 22, 19-20"
+    },
+    {
+      "id": "q_sacra_04",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Quais sacramentos imprimem um 'caráter indelével' na alma e por isso só podem ser recebidos uma única vez na vida?",
+      "options": [
+        "Batismo, Confirmação (Crisma) e Ordem",
+        "Batismo, Eucaristia e Penitência",
+        "Matrimônio, Eucaristia e Unção dos Enfermos",
+        "Penitência, Batismo e Crisma"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Batismo, a Confirmação e a Ordem conferem, além da graça, um caráter sacramental ou 'selo' indelével pelo qual o cristão participa do sacerdócio de Cristo.",
+      "ccc": "CCC § 1121",
+      "bibleRef": "2 Coríntios 1, 21-22"
+    },
+    {
+      "id": "q_sacra_05",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Quais são os cinco atos necessários para fazer uma boa e frutuosa Confissão sacramental?",
+      "options": [
+        "Exame de consciência, arrependimento sincero, propósito de emenda, confissão dos pecados ao sacerdote e cumprimento da penitência",
+        "Pedir desculpas aos amigos, doar esmolas, acender velas, jejuar um dia e ler a Bíblia",
+        "Confessar apenas em silêncio diretamente a Deus, sem necessidade do padre",
+        "Escrever os pecados em um papel e queimá-lo no altar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A matéria do sacramento da reconciliação exige a contrição da alma, a confissão vocal de todos os pecados mortais e a satisfação (penitência).",
+      "ccc": "CCC § 1450-1460",
+      "bibleRef": "1 João 1, 9"
+    },
+    {
+      "id": "q_sacra_06",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Quem são os ministros ordinários do Sacramento do Matrimônio na Igreja Católica ocidental?",
+      "options": [
+        "Os próprios noivos (homem e mulher batizados), que conferem o sacramento um ao outro através do consentimento mútuo",
+        "O sacerdote ou diácono que profere a bênção",
+        "Os padrinhos e testemunhas que assinam o livro de registro",
+        "O bispo diocesano exclusivamente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "No rito latino, os cônjuges, como ministros da graça de Cristo, conferem mutuamente o sacramento do Matrimônio ao expressarem o consentimento perante a Igreja.",
+      "ccc": "CCC § 1623",
+      "bibleRef": "Marcos 10, 6-9"
+    },
+    {
+      "id": "q_sacra_07",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Qual é o principal efeito espiritual do Sacramento do Batismo?",
+      "options": [
+        "O perdão do pecado original e de todos os pecados pessoais, o nascimento para a vida nova em Cristo e a filiação divina",
+        "A garantia de sucesso material e prosperidade nesta terra",
+        "A cura milagrosa imediata de todas as enfermidades físicas",
+        "A permissão para celebrar casamentos civis"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Batismo não apenas purifica de todos os pecados, mas faz do neófito uma nova criatura, um filho adotivo de Deus, participante da natureza divina e membro da Igreja.",
+      "ccc": "CCC § 1262-1274",
+      "bibleRef": "João 3, 5"
+    },
+    {
+      "id": "q_sacra_08",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Qual é a cor litúrgica utilizada pela Igreja no Tempo Quaresmal e no Tempo do Advento, expressando penitência e expectativa?",
+      "options": [
+        "Roxo",
+        "Verde",
+        "Branco",
+        "Vermelho"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Roxo é a cor litúrgica que simboliza a penitência, a conversão, a austeridade e a preparação vigilante própria do Advento e da Quaresma.",
+      "ccc": "CCC § 1163-1171",
+      "bibleRef": "Joel 2, 12-13"
+    },
+    {
+      "id": "q_sacra_09",
+      "category": "Sacramentos",
+      "difficulty": "Difícil",
+      "question": "Em que momento preciso da Santa Missa os dons de pão e vinho tornam-se o Corpo e Sangue de Cristo?",
+      "options": [
+        "Na Epiclese e no Relato da Instituição (Consagração), quando o sacerdote profere as palavras de Cristo agindo 'in persona Christi'",
+        "Na procissão das oferendas (Ofertório)",
+        "No momento da oração do Pai-Nosso",
+        "Na bênção final da Santa Missa"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A eficácia das palavras e da ação de Cristo e a força do Espírito Santo tornam sacramentalmente presentes sob as espécies do pão e do vinho o Seu Corpo e Sangue.",
+      "ccc": "CCC § 1352-1354",
+      "bibleRef": "1 Coríntios 11, 23-26"
+    },
+    {
+      "id": "q_sacra_10",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "A quem pode ser administrado o Sacramento da Unção dos Enfermos?",
+      "options": [
+        "A qualquer fiel batizado que começa a encontrar-se em perigo de morte por motivo de doença grave ou velhice",
+        "Apenas aos fiéis que já faleceram e encontram-se no caixão",
+        "Apenas a crianças que ainda não cometeram pecados pessoais",
+        "A qualquer pessoa que tenha uma dor de cabeça passageira"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Unção dos Enfermos não é um sacramento exclusivo dos que estão prestes a expirar, mas de qualquer fiel gravemente enfermo ou debilitado pela idade.",
+      "ccc": "CCC § 1514-1515",
+      "bibleRef": "Tiago 5, 14-15"
+    },
+    {
+      "id": "q_sacra_11",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Quais são os três graus do Sacramento da Ordem na Igreja Católica?",
+      "options": [
+        "Episcopado (Bispos), Presbiterado (Padres) e Diaconato (Diáconos)",
+        "Papa, Cardeais e Arcebispos",
+        "Pároco, Vigário e Acólito",
+        "Monge, Frade e Ermitão"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A doutrina católica professa que há dois graus de participação ministerial no sacerdócio de Cristo (episcopado e presbiterado) e um grau de serviço (diaconato).",
+      "ccc": "CCC § 1554-1571",
+      "bibleRef": "1 Timóteo 3, 1-13"
+    },
+    {
+      "id": "q_sacra_12",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Qual é o centro e o ápice de todo o Ano Litúrgico na Igreja Católica?",
+      "options": [
+        "O Tríduo Pascal da Paixão, Morte e Ressurreição do Senhor",
+        "A festa de Pentecostes",
+        "O dia de Finados",
+        "O primeiro domingo do Advento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Tríduo Pascal da Paixão e Ressurreição de Cristo é o ponto culminante de todo o ano litúrgico, resplandecendo como o ápice da história da Salvação.",
+      "ccc": "CCC § 1168-1171",
+      "bibleRef": "1 Coríntios 15, 3-4"
+    },
+    {
+      "id": "q_sacra_13",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Quais são as duas partes principais que formam um só ato de culto na Santa Missa?",
+      "options": [
+        "A Liturgia da Palavra e a Liturgia Eucarística",
+        "O Rito da Paz e a Coleta dos dízimos",
+        "O Canto de Entrada e o Envio final",
+        "A Homilia do sacerdote e os avisos paroquiais"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Liturgia da Palavra e a Liturgia Eucarística estão tão estreitamente unidas entre si que formam um único e mesmo ato de culto sagrado.",
+      "ccc": "CCC § 1346-1347",
+      "bibleRef": "Lucas 24, 27-30"
+    },
+    {
+      "id": "q_sacra_14",
+      "category": "Sacramentos",
+      "difficulty": "Difícil",
+      "question": "O que ensina a doutrina católica sobre a eficácia dos sacramentos 'ex opere operato'?",
+      "options": [
+        "Que o sacramento opera pela força da própria obra redentora de Cristo realizada, e não pelo mérito ou santidade do ministro",
+        "Que a graça depende exclusivamente de quão pecador ou santo é o sacerdote",
+        "Que os sacramentos funcionam apenas se a congregação for perfeita",
+        "Que os sacramentos são puras cerimônias teatrais sem eficácia espiritual"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os sacramentos produzem fruto 'ex opere operato' (pelo próprio fato de a ação ser realizada): quem age é o próprio Cristo, preservando a certeza da graça para os fiéis.",
+      "ccc": "CCC § 1128",
+      "bibleRef": "Romanos 6, 3"
+    },
+    {
+      "id": "q_sacra_15",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Em caso de perigo iminente de morte, quem pode administrar validamente o Batismo?",
+      "options": [
+        "Qualquer pessoa com o uso da razão, mesmo não batizada, desde que tenha a intenção de fazer o que a Igreja faz e use água com a fórmula trinitária",
+        "Exclusivamente o Papa ou o bispo diocesano",
+        "Apenas médicos e enfermeiros credenciados",
+        "Ninguém; o batismo é cancelado se o padre não puder comparecer"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Em caso de necessidade extrema, qualquer pessoa pode batizar derramando água na cabeça e dizendo: 'Eu te batizo em nome do Pai, e do Filho, e do Espírito Santo'.",
+      "ccc": "CCC § 1256",
+      "bibleRef": "Mateus 28, 19"
+    },
+    {
+      "id": "q_sacra_16",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Qual é o tempo mínimo de jejum prescrito pela Igreja antes de receber a Sagrada Comunhão (jejum eucarístico)?",
+      "options": [
+        "Pelo menos uma hora de abstenção de qualquer comida ou bebida (exceto água e medicamentos)",
+        "Doze horas seguidas de jejum absoluto",
+        "Três dias inteiros de pão e água",
+        "Não existe nenhum jejum requerido pela disciplina canônica"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Para se preparar convenientemente para receber este sacramento, os fiéis observarão o jejum prescrito em sua Igreja (ao menos 1 hora antes da Comunhão).",
+      "ccc": "CCC § 1387; CDC Cân. 919",
+      "bibleRef": "1 Coríntios 11, 27-29"
+    },
+    {
+      "id": "q_sacra_17",
+      "category": "Sacramentos",
+      "difficulty": "Difícil",
+      "question": "O que é o 'Viático' na tradição sacramental da Igreja?",
+      "options": [
+        "A Sagrada Comunhão eucarística recebida por aqueles que estão prestes a deixar esta vida terrena, como sustento para a passagem à eternidade",
+        "A certidão em papel entregue após o Batismo",
+        "A viagem que os bispos fazem a Roma a cada cinco anos (visita ad limina)",
+        "A bênção concedida a um novo templo paroquial"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Eucaristia como Viático é semente de vida eterna e força de ressurreição dada aos fiéis em sua partida deste mundo ao encontro do Pai.",
+      "ccc": "CCC § 1524-1525",
+      "bibleRef": "João 6, 54"
+    },
+    {
+      "id": "q_sacra_18",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Quem é o ministro originário do Sacramento da Confirmação (Crisma)?",
+      "options": [
+        "O Bispo diocesano, sucessor dos Apóstolos",
+        "O padrinho de batismo",
+        "O diácono permanente",
+        "O coordenador da catequese paroquial"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O bispo é o ministro originário da Confirmação, evidenciando o laço que une os confirmados mais estreitamente à Igreja e ao mandato apostólico.",
+      "ccc": "CCC § 1312-1313",
+      "bibleRef": "Atos 8, 14-17"
+    },
+    {
+      "id": "q_sacra_19",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "Qual óleo sagrado é utilizado na consagração dos sacerdotes e no sacramento do Crisma?",
+      "options": [
+        "O Santo Crisma (óleo de oliva perfumado com bálsamo, consagrado na Quinta-feira Santa)",
+        "O óleo dos catecúmenos sem perfume",
+        "O óleo cru de girassol comum",
+        "Qualquer azeite de cozinha abençoado em casa"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Santo Crisma consagra e confere o dom do Espírito Santo, simbolizando o bom odor de Cristo que o fiel deve difundir no mundo.",
+      "ccc": "CCC § 1297",
+      "bibleRef": "2 Coríntios 2, 15"
+    },
+    {
+      "id": "q_sacra_20",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "Quantos são os sacramentos da Nova Lei instituídos por Nosso Senhor Jesus Cristo?",
+      "options": [
+        "Sete",
+        "Dez",
+        "Três",
+        "Doze"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os sacramentos da Igreja são sete: Batismo, Confirmação, Eucaristia, Penitência, Unção dos Enfermos, Ordem e Matrimônio.",
+      "ccc": "CCC § 1113; 1210",
+      "bibleRef": "Mateus 16, 19"
+    },
+    {
+      "id": "q_sacra_21",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "O que é o 'Segredo de Confissão' (Sigilo Sacramental)?",
+      "options": [
+        "A obrigação absoluta e inviolável do sacerdote de jamais revelar a ninguém, por motivo algum, os pecados ouvidos na confissão",
+        "A recomendação de não contar fofocas da paróquia na rua",
+        "Um contrato que pode ser quebrado se a polícia ou o juiz solicitar",
+        "O direito de o padre confessar seus próprios pecados durante a missa"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O sigilo sacramental é inviolável. O confessor não pode trair o penitente por palavras ou por qualquer outro meio, sob pena de excomunhão automática.",
+      "ccc": "CCC § 1467",
+      "bibleRef": "Provérbios 11, 13"
+    },
+    {
+      "id": "q_sacra_22",
+      "category": "Sacramentos",
+      "difficulty": "Difícil",
+      "question": "Por que a Igreja Católica só confere a Ordenação sacerdotal a homens (viris)?",
+      "options": [
+        "Porque a Igreja reconhece-se vinculada à escolha exemplar do próprio Jesus Cristo, que escolheu homens para formar o colégio dos doze Apóstolos",
+        "Por causa de leis temporais e políticas da Idade Média",
+        "Porque as mulheres são consideradas menos espirituais pela Bíblia",
+        "Por mero costume cultural que o Papa pode revogar a qualquer momento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Papa São João Paulo II na Ordinatio Sacerdotalis (1994) confirmou em definitivo que a Igreja não tem autoridade para alterar a escolha de Cristo.",
+      "ccc": "CCC § 1577",
+      "bibleRef": "Marcos 3, 13-14"
+    },
+    {
+      "id": "q_sacra_23",
+      "category": "Sacramentos",
+      "difficulty": "Fácil",
+      "question": "O que é a Eucaristia em relação a todo o culto e vida da Igreja?",
+      "options": [
+        "A fonte e o ápice de toda a vida cristã e da evangelização",
+        "Apenas uma comemoração simbólica de fim de ano",
+        "Um café fraterno entre amigos da comunidade",
+        "Uma celebração secundária comparada à pregação"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Eucaristia é o coração e o ápice da vida da Igreja, pois nela Cristo associa sua Igreja e todos os seus membros ao seu sacrifício de louvor e ação de graças.",
+      "ccc": "CCC § 1324",
+      "bibleRef": "1 Coríntios 10, 16-17"
+    },
+    {
+      "id": "q_sacra_24",
+      "category": "Sacramentos",
+      "difficulty": "Médio",
+      "question": "O que é a 'Liturgia das Horas' (Ofício Divino)?",
+      "options": [
+        "A oração pública e comunitária da Igreja que consagra a Deus as diferentes horas do dia através de salmos, leituras e hinos",
+        "Uma aula de catequese que dura exatamente sessenta minutos",
+        "O tempo em que as portas da igreja permanecem abertas ao público",
+        "O relógio mecânico colocado na torre das catedrais medievais"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Liturgia das Horas estende às diferentes horas do dia os louvores e ações de graças, as memórias dos mistérios da salvação e as súplicas da Santa Missa.",
+      "ccc": "CCC § 1174-1178",
+      "bibleRef": "Salmos 118 (119), 164"
+    },
+    {
+      "id": "q_moral_01",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Quais são as três Virtudes Teologais infundidas por Deus na alma do fiel?",
+      "options": [
+        "Fé, Esperança e Caridade",
+        "Prudência, Justiça e Fortaleza",
+        "Paciência, Humildade e Castidade",
+        "Sabedoria, Entendimento e Ciência"
+      ],
+      "correctAnswer": 0,
+      "explanation": "As virtudes teologais fundamentam, animam e caracterizam o agir moral do cristão. São infundidas por Deus na alma dos fiéis para torná-los capazes de viver como Seus filhos.",
+      "ccc": "CCC § 1812-1829",
+      "bibleRef": "1 Coríntios 13, 13"
+    },
+    {
+      "id": "q_moral_02",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "Quais são as quatro Virtudes Cardeais que sustentam a integridade moral humana?",
+      "options": [
+        "Prudência, Justiça, Fortaleza e Temperança",
+        "Fé, Esperança, Amor e Oração",
+        "Pobreza, Castidade, Obediência e Silêncio",
+        "Vigília, Jejum, Esmola e Penitência"
+      ],
+      "correctAnswer": 0,
+      "explanation": "As virtudes cardeais agrupam em torno de si todas as outras virtudes humanas e ordenam as paixões e a vontade humana segundo a reta razão.",
+      "ccc": "CCC § 1805-1809",
+      "bibleRef": "Sabedoria 8, 7"
+    },
+    {
+      "id": "q_moral_03",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "Quais são as três condições simultâneas para que um pecado seja classificado como Pecado Mortal?",
+      "options": [
+        "Matéria grave, plena consciência do mal e deliberado consentimento da vontade",
+        "Ser cometido em público, ferir os sentimentos alheios e gerar escândalo",
+        "Ser cometido mais de três vezes, envolver dinheiro e quebrar leis civis",
+        "Qualquer pensamento impuro ou distração na hora da oração"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Para que um pecado seja mortal, requerem-se em conjunto três condições: matéria grave (definida pelos Dez Mandamentos), plena advertência e pleno consentimento.",
+      "ccc": "CCC § 1857-1861",
+      "bibleRef": "1 João 5, 16-17"
+    },
+    {
+      "id": "q_moral_04",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual é o Primeiro Mandamento da Lei de Deus dado a Moisés?",
+      "options": [
+        "Amar a Deus sobre todas as coisas e não ter outros deuses diante d'Ele",
+        "Não tomar o nome de Deus em vão",
+        "Guardar os domingos e festas de guarda",
+        "Honrar pai e mãe"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O primeiro mandamento nos chama a crer em Deus, a esperar n'Ele e a amá-Lo acima de todas as criaturas, rejeitando a idolatria e a superstição.",
+      "ccc": "CCC § 2084-2141",
+      "bibleRef": "Êxodo 20, 2-5"
+    },
+    {
+      "id": "q_moral_05",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que proíbe o Quinto Mandamento da Lei de Deus ('Não matarás')?",
+      "options": [
+        "O homicídio voluntário, o aborto provocado, a eutanásia, o suicídio, a violência injusta e o escândalo",
+        "Apenas matar pessoas em tempo de guerra",
+        "O abate higiênico de animais para alimentação humana",
+        "A prática de cirurgias médicas e transplantes de órgãos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A vida humana é sagrada porque desde a sua origem ela envolve a ação criadora de Deus e permanece para sempre numa relação especial com o Criador.",
+      "ccc": "CCC § 2258-2330",
+      "bibleRef": "Gênesis 9, 6"
+    },
+    {
+      "id": "q_moral_06",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual virtude ordena a sexualidade humana na pessoa segundo a verdade do amor?",
+      "options": [
+        "A Castidade",
+        "A Ambição",
+        "A Altivez",
+        "A Indiferença"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A castidade significa a integração bem-sucedida da sexualidade na pessoa e, com isso, a unidade interior do homem em seu ser corporal e espiritual.",
+      "ccc": "CCC § 2337-2359",
+      "bibleRef": "1 Tessalonicenses 4, 3-5"
+    },
+    {
+      "id": "q_moral_07",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que é a 'Consciência Moral' no ser humano?",
+      "options": [
+        "O santuário secreto do homem, onde ele está a sós com Deus, cuja voz ressoa na sua intimidade ordenando praticar o bem e evitar o mal",
+        "A opinião da maioria da sociedade ou o que a mídia dita",
+        "Um sentimento de medo de ser descoberto pela polícia",
+        "Uma invenção social desprovida de fundamento objetivo"
+      ],
+      "correctAnswer": 0,
+      "explanation": "No fundo de sua consciência, o homem descobre uma lei que ele não se deu a si mesmo, mas à qual deve obedecer: fazer o bem e evitar o mal.",
+      "ccc": "CCC § 1776-1802",
+      "bibleRef": "Romanos 2, 14-16"
+    },
+    {
+      "id": "q_moral_08",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Em que consistem os dois mandamentos do Amor proclamados por Jesus como resumo de toda a Lei e os Profetas?",
+      "options": [
+        "Amar a Deus de todo o coração, alma e mente, e amar ao próximo como a si mesmo",
+        "Garantir a riqueza pessoal e viver em silêncio",
+        "Seguir as leis da natureza e respeitar as regras da física",
+        "Julgar os pecadores e vigiar a conduta dos outros"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Jesus resume os Dez Mandamentos nos dois preceitos do amor: amar a Deus sem reservas e ao próximo como a si mesmo por amor de Deus.",
+      "ccc": "CCC § 2055; 2196",
+      "bibleRef": "Mateus 22, 37-40"
+    },
+    {
+      "id": "q_moral_09",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que prescreve o Sétimo Mandamento ('Não furtarás') além de proibir o roubo?",
+      "options": [
+        "Exige a prática da justiça social, a justa remuneração do trabalho, a honestidade em contratos e a restituição do bem tirado injustamente",
+        "Apenas não pegar objetos em lojas sem pagar",
+        "O dever de nunca emprestar dinheiro a ninguém",
+        "A abolição completa da propriedade privada"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O sétimo mandamento prescreve a prática da justiça e da caridade na gestão dos bens terrenos e dos frutos do trabalho humano, exigindo a reparação de danos.",
+      "ccc": "CCC § 2401-2463",
+      "bibleRef": "Lucas 19, 8"
+    },
+    {
+      "id": "q_moral_10",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "Quais são os Sete Pecados Capitais, chamados capitais por serem raiz e fonte de outros pecados?",
+      "options": [
+        "Soberba, Avareza, Luxúria, Ira, Gula, Inveja e Preguiça (Acídia)",
+        "Homicídio, Roubo, Calúnia, Falso juramento, Idolatria, Blasfêmia e Traição",
+        "Dúvida, Tristeza, Ansiedade, Fraqueza, Timidez, Pobreza e Ignorância",
+        "Falar alto, correr na igreja, esquecer a oração, dormir tarde, reclamar, mentir e teimar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Chamados capitais porque geram outros pecados e outros vícios. A tradição cristã sintetizou-os a partir dos ensinamentos dos Padres do Deserto e São Tomás de Aquino.",
+      "ccc": "CCC § 1866",
+      "bibleRef": "Gálatas 5, 19-21"
+    },
+    {
+      "id": "q_moral_11",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "O que ordena o Oitavo Mandamento ('Não levantarás falso testemunho')?",
+      "options": [
+        "Viver e testemunhar a verdade, proibindo a mentira, a calúnia, a difamação e o falso juramento",
+        "Falar tudo o que pensa sem medir as consequências",
+        "Apenas não mentir perante um juiz no tribunal",
+        "Esconder a fé para não sofrer críticas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O oitavo mandamento proíbe falsear a verdade nas relações com os outros. Os homens não poderiam viver juntos se não tivessem confiança recíproca na verdade.",
+      "ccc": "CCC § 2464-2513",
+      "bibleRef": "Efésios 4, 25"
+    },
+    {
+      "id": "q_moral_12",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que são as Bem-aventuranças proclamadas por Jesus no Sermão da Montanha?",
+      "options": [
+        "O retrato do coração de Cristo e a carta magna da moral evangélica, revelando o fim último das ações humanas",
+        "Uma lista de conselhos opcionais apenas para monges e freiras",
+        "Leis civis para governar o reino terreno de Israel",
+        "Uma substituição que anula os Dez Mandamentos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "As bem-aventuranças desenham o rosto de Jesus Cristo e descrevem a sua caridade; exprimem a vocação dos fiéis associados à glória da sua Paixão e Ressurreição.",
+      "ccc": "CCC § 1716-1729",
+      "bibleRef": "Mateus 5, 3-12"
+    },
+    {
+      "id": "q_moral_13",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "Segundo a Doutrina Social da Igreja, o que é o princípio da 'Subsidiariedade'?",
+      "options": [
+        "A regra de que o Estado e entidades maiores não devem absorver as iniciativas e competências das famílias e comunidades menores, mas auxiliá-las",
+        "O pagamento obrigatório de subsídios a todos os cidadãos",
+        "A submissão irrestrita das famílias aos planos educacionais do governo",
+        "A nacionalização de todos os meios de produção pelo Estado"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nem o Estado nem nenhuma sociedade mais vasta devem substituir a iniciativa e a responsabilidade das pessoas e dos corpos intermediários menores.",
+      "ccc": "CCC § 1883-1885",
+      "bibleRef": "Êxodo 18, 21-22"
+    },
+    {
+      "id": "q_moral_14",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "O que prescreve o Quarto Mandamento da Lei de Deus ('Honrar pai e mãe')?",
+      "options": [
+        "O dever de respeito, amor, gratidão e assistência material e espiritual aos pais em suas necessidades e velhice",
+        "A obrigação de concordar com os pais mesmo que peçam para cometer um pecado",
+        "Uma reverência válida apenas até os 18 anos de idade",
+        "O direito de os pais decidirem o cônjuge dos filhos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O quarto mandamento encabeça a segunda tábua da Lei. Exige o respeito filial e a responsabilidade mútua na família, célula básica da sociedade.",
+      "ccc": "CCC § 2197-2257",
+      "bibleRef": "Eclesiástico 3, 1-16"
+    },
+    {
+      "id": "q_moral_15",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que a moral católica ensina sobre o 'Princípio do Duplo Efeito'?",
+      "options": [
+        "Uma ação moralmente boa ou neutra pode ser tolerada se visa um efeito bom imediato, mesmo que acarrete indiretamente um efeito mau inevitável e não desejado",
+        "Que os fins justificam os meios em qualquer circunstância",
+        "Que é lícito fazer um mal para que dele resulte um bem maior",
+        "Que toda ação humana sempre gera o mesmo peso de culpa"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nunca é lícito praticar um mal moral para obter um bem (os fins não justificam os meios), mas tolera-se um efeito colateral mau previsto, não intencionado e desproporcional ao bem visado.",
+      "ccc": "CCC § 1750-1761",
+      "bibleRef": "Romanos 3, 8"
+    },
+    {
+      "id": "q_moral_16",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual é a virtude oposta ao pecado da Soberba (orgulho)?",
+      "options": [
+        "A Humildade",
+        "A Valentia",
+        "A Esperteza",
+        "A Eloquência"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A humildade é a base de todas as virtudes cristãs, reconhecendo que tudo o que temos de bom vem de Deus e nada somos sem Ele.",
+      "ccc": "CCC § 2559",
+      "bibleRef": "Tiago 4, 6"
+    },
+    {
+      "id": "q_moral_17",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que é a 'Justiça distributiva' segundo a Doutrina Social da Igreja?",
+      "options": [
+        "O dever das autoridades e da comunidade de distribuir proporcionalmente os bens comuns e os encargos segundo as necessidades e méritos de cada cidadão",
+        "A divisão mecânica e forçada de todas as riquezas em partes rigorosamente iguais",
+        "A cobrança de juros abusivos sobre empréstimos",
+        "A isenção fiscal para os mais ricos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A justiça distributiva regula o que a comunidade deve aos cidadãos na proporção de suas contribuições e necessidades, visando o Bem Comum.",
+      "ccc": "CCC § 2411; 1905-1912",
+      "bibleRef": "Atos 4, 34-35"
+    },
+    {
+      "id": "q_moral_18",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "O que a Igreja ensina sobre o direito fundamental à liberdade religiosa?",
+      "options": [
+        "Ninguém deve ser forçado a agir contra a sua própria consciência em matéria religiosa, nem impedido de praticar sua fé dentro dos justos limites da ordem pública",
+        "O Estado tem o direito de impor a religião aos cidadãos pela força policial",
+        "Todas as religiões são historicamente idênticas e sem diferença de verdade",
+        "O cristão não pode anunciar a verdade do Evangelho a outras pessoas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A declaração Dignitatis Humanae do Vaticano II e o Catecismo ensinam que a verdade deve ser proposta no respeito à liberdade e dignidade da pessoa humana.",
+      "ccc": "CCC § 2104-2109",
+      "bibleRef": "Atos 5, 29"
+    },
+    {
+      "id": "q_moral_19",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "Qual é a finalidade essencial do matrimônio e do ato conjugal segundo a doutrina católica?",
+      "options": [
+        "Os dois fins inseparáveis: o fim unitivo (união de amor fiel entre os esposos) e o fim procriativo (abertura à geração da vida)",
+        "Apenas o interesse econômico e patrimonial das famílias",
+        "Exclusivamente o prazer biológico sem compromisso de fidelidade",
+        "A conveniência social passageira e temporária"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pela sua própria natureza, a instituição do matrimônio e o amor conjugal estão ordenados à procriação e à educação dos filhos, assim como ao aperfeiçoamento mútuo dos esposos.",
+      "ccc": "CCC § 2366-2372",
+      "bibleRef": "Gênesis 2, 24"
+    },
+    {
+      "id": "q_moral_20",
+      "category": "Doutrina",
+      "difficulty": "Difícil",
+      "question": "Em que consiste o 'Pecado contra o Espírito Santo' declarado por Jesus como imperdoável?",
+      "options": [
+        "Na recusa deliberada e final de acolher a misericórdia de Deus e o arrependimento dos pecados (impenitência final)",
+        "Em qualquer pecado cometido por um padre ou bispo",
+        "Em esquecer de pagar o dízimo da paróquia",
+        "Em ter uma dúvida teológica sobre a Bíblia"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Não há limites para a misericórdia de Deus; mas quem se recusa deliberadamente a acolher a misericórdia de Deus pelo arrependimento rejeita o perdão e a própria salvação.",
+      "ccc": "CCC § 1864",
+      "bibleRef": "Marcos 3, 28-29"
+    },
+    {
+      "id": "q_moral_21",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Quais são as três obras penitenciais recomendadas pelo Evangelho e pela Tradição da Igreja?",
+      "options": [
+        "Oração, Jejum e Esmola (Caridade)",
+        "Trabalho, Estudo e Lazer",
+        "Dormir cedo, caminhar e beber água",
+        "Cantar, dançar e viajar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Escritura e os Padres insistem sobretudo em três formas de penitência: o jejum, a oração e a esmola, que exprimem a conversão em relação a si mesmo, a Deus e aos outros.",
+      "ccc": "CCC § 1434",
+      "bibleRef": "Mateus 6, 1-18"
+    },
+    {
+      "id": "q_moral_22",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que é a virtude da 'Esperança'?",
+      "options": [
+        "A virtude teologal pela qual desejamos como nossa felicidade o Reino dos Céus e a Vida Eterna, depositando nossa confiança nas promessas de Cristo",
+        "Um simples otimismo ingênuo de que tudo dará certo no trabalho terreno",
+        "A certeza de que ninguém será condenado, não importa o que faça",
+        "O medo obsessivo da morte e do castigo divino"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A esperança responde à aspiração de felicidade que Deus colocou no coração do homem; assume as esperanças que inspiram as atividades dos homens e purifica-as.",
+      "ccc": "CCC § 1817-1821",
+      "bibleRef": "Hebreus 10, 23"
+    },
+    {
+      "id": "q_moral_23",
+      "category": "Doutrina",
+      "difficulty": "Fácil",
+      "question": "Qual é a 'Regra de Ouro' moral ensinada por Jesus Cristo no Evangelho?",
+      "options": [
+        "'Tudo o que quereis que os homens vos façam, fazei-o vós também a eles'",
+        "'Olho por olho, dente por dente'",
+        "'Leva vantagem em tudo quem for mais forte'",
+        "'Fazei o bem somente a quem vos elogia'"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A lei evangélica cumpre os mandamentos da Lei através do preceito do amor fraterno, sintetizado por Jesus na Regra de Ouro.",
+      "ccc": "CCC § 1789; 1970",
+      "bibleRef": "Mateus 7, 12"
+    },
+    {
+      "id": "q_moral_24",
+      "category": "Doutrina",
+      "difficulty": "Médio",
+      "question": "O que a Igreja ensina sobre o valor da vida humana desde o primeiro instante da concepção até a morte natural?",
+      "options": [
+        "A vida humana deve ser respeitada e protegida de maneira absoluta em todas as suas fases, pois é sagrada e criada à imagem de Deus",
+        "A vida tem valor apenas quando a pessoa é produtiva e tem saúde plena",
+        "O embrião humano só passa a ter alma e direitos a partir do terceiro mês de gestação",
+        "O Estado tem autoridade para decidir quais vidas merecem continuar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A vida humana deve ser respeitada e protegida de modo absoluto a partir do momento da concepção. Desde o primeiro momento de sua existência, o ser humano deve ver reconhecidos os seus direitos de pessoa.",
+      "ccc": "CCC § 2270-2279",
+      "bibleRef": "Jeremias 1, 5"
+    },
+    {
+      "id": "q_biblia_01",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Quantos livros compõem o Cânon oficial da Bíblia Sagrada na tradição católica?",
+      "options": [
+        "73 livros (46 no Antigo Testamento e 27 no Novo Testamento)",
+        "66 livros",
+        "70 livros",
+        "80 livros"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O cânon católico, fixado na Tradição apostólica e confirmado nos Concílios de Hipona, Cartago e Trento, compreende 73 livros sagrados inspirados por Deus.",
+      "ccc": "CCC § 120",
+      "bibleRef": "2 Timóteo 3, 16"
+    },
+    {
+      "id": "q_biblia_02",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Quais são os quatro Evangelhos canônicos do Novo Testamento?",
+      "options": [
+        "Mateus, Marcos, Lucas e João",
+        "Pedro, Paulo, Tiago e João",
+        "Tomé, Filipe, Judas e Barnabé",
+        "Gênesis, Êxodo, Levítico e Números"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Os quatro Evangelhos de Mateus, Marcos, Lucas e João são o coração de todas as Escrituras, por serem o principal testemunho da vida e doutrina do Verbo Encarnado.",
+      "ccc": "CCC § 125-127",
+      "bibleRef": "Marcos 1, 1"
+    },
+    {
+      "id": "q_biblia_03",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "O que são os livros 'Deuterocanônicos' presentes na Bíblia Católica?",
+      "options": [
+        "Sete livros do Antigo Testamento (Tobias, Judite, 1 e 2 Macabeus, Sabedoria, Eclesiástico e Baruc) preservados no cânon da Septuaginta grega",
+        "Livros apócrifos sem autoridade doutrinária",
+        "Livros escritos pelos reformadores protestantes",
+        "Os quatro Evangelhos sinóticos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Igreja Católica reconhece como inspirados os 7 livros deuterocanônicos do Antigo Testamento que constavam da versão grega da Septuaginta adotada pelos Apóstolos.",
+      "ccc": "CCC § 120",
+      "bibleRef": "Lucas 24, 27"
+    },
+    {
+      "id": "q_biblia_04",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Qual é o primeiro livro da Bíblia Sagrada, narrando a Criação, a Queda e a Aliança com os Patriarcas?",
+      "options": [
+        "Gênesis",
+        "Êxodo",
+        "Salmos",
+        "Apocalipse"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Gênesis é o livro das origens: a criação do universo, a queda dos primeiros pais, a promessa do Redentor e a aliança com Abraão, Isaac e Jacó.",
+      "ccc": "CCC § 289",
+      "bibleRef": "Gênesis 1, 1"
+    },
+    {
+      "id": "q_biblia_05",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Qual é o significado da 'Inspiração Divina' das Sagradas Escrituras?",
+      "options": [
+        "Deus é o autor principal da Bíblia, agindo nos autores humanos (hagiógrafos) de modo que escreveram fielmente tudo e só o que Deus quis",
+        "Os autores humanos escreveram sozinhos e Deus apenas aprovou no final",
+        "Deus ditou mecanicamente cada palavra como a uma máquina de datilografia",
+        "A Bíblia contém apenas boas reflexões humanas sem auxílio sobrenatural"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Para a composição dos livros sagrados, Deus escolheu e serviu-se de homens na posse das suas faculdades e capacidades, para que Ele mesmo agisse neles e por eles.",
+      "ccc": "CCC § 105-108",
+      "bibleRef": "2 Pedro 1, 21"
+    },
+    {
+      "id": "q_biblia_06",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Quem liderou o povo de Israel na saída do Egito (Êxodo) e recebeu as Tábuas da Lei no Monte Sinai?",
+      "options": [
+        "Moisés",
+        "Davi",
+        "Salomão",
+        "Josué"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Moisés foi escolhido por Deus para libertar Israel da escravidão no Egito, mediar a Aliança no Sinai e transmitir a Torá (a Lei) ao povo eleito.",
+      "ccc": "CCC § 62; 2056",
+      "bibleRef": "Êxodo 3, 10; 20, 1-17"
+    },
+    {
+      "id": "q_biblia_07",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Qual profeta do Antigo Testamento profetizou com clareza a concepção virginal do Messias ('A Virgem conceberá e dará à luz um filho e o chamará Emanuel')?",
+      "options": [
+        "Isaías",
+        "Jeremias",
+        "Ezequiel",
+        "Daniel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O profeta Isaías no capítulo 7 profetiza o sinal messiânico da Virgem que dá à luz o Emanuel ('Deus conosco'), cumprido em Maria Santíssima.",
+      "ccc": "CCC § 497",
+      "bibleRef": "Isaías 7, 14"
+    },
+    {
+      "id": "q_biblia_08",
+      "category": "Bíblia",
+      "difficulty": "Difícil",
+      "question": "O que é a 'Vulgata Latina' na história bíblica?",
+      "options": [
+        "A célebre tradução oficial da Bíblia para o latim realizada por São Jerônimo a partir dos textos originais hebraicos e gregos no século IV",
+        "A primeira Bíblia impressa por Martinho Lutero",
+        "Um evangelho apócrifo proibido pelos primeiros concílios",
+        "A tradução da Bíblia para o grego antigo feita por 70 sábios em Alexandria"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Vulgata foi traduzida por São Jerônimo a pedido do Papa São Dâmaso I e tornou-se o texto bíblico oficial milenar da Igreja no Ocidente.",
+      "ccc": "CCC § 120",
+      "bibleRef": "Neemias 8, 8"
+    },
+    {
+      "id": "q_biblia_09",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Qual livro do Novo Testamento narra o nascimento e a expansão da Igreja primitiva e a descida do Espírito Santo em Pentecostes?",
+      "options": [
+        "Atos dos Apóstolos",
+        "Carta aos Romanos",
+        "Primeira Carta de São Pedro",
+        "Livro do Apocalipse"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Escrito por São Lucas como continuação do seu Evangelho, os Atos dos Apóstolos retratam a vida dos primeiros cristãos sob a ação do Espírito Santo.",
+      "ccc": "CCC § 731-732",
+      "bibleRef": "Atos 2, 1-4"
+    },
+    {
+      "id": "q_biblia_10",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Quem é o autor do maior número de cartas (epístolas) inspiradas no Novo Testamento?",
+      "options": [
+        "São Paulo apóstolo",
+        "São João evangelista",
+        "São Tiago Menor",
+        "São Judas Tadeu"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O 'Apóstolo dos Gentios', São Paulo, escreveu 14 cartas apostólicas (incluindo a Carta aos Hebreus), pilares da teologia cristã primitiva.",
+      "ccc": "CCC § 120",
+      "bibleRef": "Romanos 1, 1"
+    },
+    {
+      "id": "q_biblia_11",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Qual rei de Israel compôs a maior parte do Livro dos Salmos, sendo ancestral messiânico de Jesus?",
+      "options": [
+        "O Rei Davi",
+        "O Rei Saul",
+        "O Rei Herodes",
+        "O Rei Nabucodonosor"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Davi, pastor, guerreiro, rei e profeta, foi o principal autor do Saltério, oração lírica inspirada que prefigura as dores e a glória do Messias.",
+      "ccc": "CCC § 2578-2580",
+      "bibleRef": "Salmos 22 (23), 1"
+    },
+    {
+      "id": "q_biblia_12",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "O que é a 'Tipologia Bíblica' na exegese patrística e católica?",
+      "options": [
+        "O método de leitura que discerne nas obras de Deus da Antiga Aliança prefigurações daquilo que Deus realizou na plenitude dos tempos em Cristo",
+        "O estudo dos diferentes tipos de letras utilizados pelos monges copistas",
+        "A classificação zoológica dos animais da arca de Noé",
+        "A substituição do texto hebraico pelo texto grego"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Igreja discerne nas figuras do Antigo Testamento (como a Arca de Noé, o Cordeiro Pascal e o Maná) 'tipos' prefigurativos de Cristo e dos sacramentos.",
+      "ccc": "CCC § 128-130",
+      "bibleRef": "1 Coríntios 10, 1-6"
+    },
+    {
+      "id": "q_biblia_13",
+      "category": "Bíblia",
+      "difficulty": "Difícil",
+      "question": "Quais são os quatro sentidos da Sagrada Escritura segundo a Tradição viva da Igreja?",
+      "options": [
+        "Sentido Literal, Sentido Alegórico (fé), Sentido Moral (agir) e Sentido Anagógico (esperança/glória eterna)",
+        "Sentido Histórico, Sentido Filosófico, Sentido Poético e Sentido Político",
+        "Sentido Gramatical, Sentido Crítico, Sentido Retórico e Sentido Narrativo",
+        "Sentido Primitivo, Sentido Medieval, Sentido Renascentista e Sentido Moderno"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Segundo uma antiga estrofe medieval: 'A letra ensina os fatos; a alegoria, o que deves crer; a moral, o que deves fazer; a anagogia, para onde deves caminhar'.",
+      "ccc": "CCC § 115-119",
+      "bibleRef": "Gálatas 4, 22-26"
+    },
+    {
+      "id": "q_biblia_14",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Qual é o último livro da Bíblia Sagrada, escrito pelo apóstolo São João na ilha de Patmos?",
+      "options": [
+        "O Apocalipse (Livro da Revelação)",
+        "A Terceira Carta de São João",
+        "A Carta de São Judas",
+        "O Livro de Daniel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Apocalipse encerra o cânon bíblico com a grande visão da vitória definitiva do Cordeiro sobre o mal e as bodas celestes da Nova Jerusalém.",
+      "ccc": "CCC § 1137-1138",
+      "bibleRef": "Apocalipse 1, 1; 22, 20"
+    },
+    {
+      "id": "q_biblia_15",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Por que os Evangelhos de Mateus, Marcos e Lucas são chamados de 'Evangelhos Sinóticos'?",
+      "options": [
+        "Porque possuem uma estrutura, cronologia e narrativa tão semelhantes que podem ser lidos em colunas paralelas com um 'mesmo olhar' (sinopse)",
+        "Porque foram escritos no mesmo ano e na mesma cidade",
+        "Porque foram ditados pelo mesmo apóstolo",
+        "Porque foram traduzidos da língua siríaca antiga"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A palavra 'sinótico' deriva do grego 'syn-opsis' (ver conjuntamente), devido ao paralelismo estrutural entre Mateus, Marcos e Lucas em contraste com São João.",
+      "ccc": "CCC § 126",
+      "bibleRef": "Lucas 1, 1-4"
+    },
+    {
+      "id": "q_biblia_16",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Quem foi o jovem rei que pediu a Deus não riquezas ou vitórias militares, mas um coração sábio para discernir o bem e o mal?",
+      "options": [
+        "Salomão",
+        "Roboão",
+        "Jeroboão",
+        "Acab"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O rei Salomão agradou ao Senhor ao pedir unicamente sabedoria e discernimento para governar retamente o povo de Deus.",
+      "ccc": "CCC § 216",
+      "bibleRef": "1 Reis 3, 5-14"
+    },
+    {
+      "id": "q_biblia_17",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Qual profeta foi arrebatado aos céus em um turbilhão de fogo num carro com cavalos de fogo?",
+      "options": [
+        "Elias",
+        "Eliseu",
+        "Moisés",
+        "Samuel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O profeta Elias, campeão do monoteísmo no Monte Carmelo, foi levado ao céu em um carro de fogo, prefigurando a vinda de São João Batista e de Cristo.",
+      "ccc": "CCC § 2582-2584",
+      "bibleRef": "2 Reis 2, 11"
+    },
+    {
+      "id": "q_biblia_18",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Em qual cidade Jesus Cristo nasceu, cumprindo a profecia de Miqueias?",
+      "options": [
+        "Belém de Judá",
+        "Nazaré da Galileia",
+        "Jerusalém",
+        "Cafarnaum"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'E tu, Belém de Éfrata, pequena entre as cidades de Judá, de ti sairá para mim aquele que há de ser o governador de Israel' (Miqueias 5, 1).",
+      "ccc": "CCC § 486",
+      "bibleRef": "Mateus 2, 1-6"
+    },
+    {
+      "id": "q_biblia_19",
+      "category": "Bíblia",
+      "difficulty": "Difícil",
+      "question": "O que é o 'Protoevangelho' presente no livro do Gênesis (Gn 3, 15)?",
+      "options": [
+        "O primeiro anúncio profético do Messias Redentor e da vitória da Mulher e sua descendência sobre a Serpente",
+        "O primeiro rascunho em pergaminho do Evangelho de São Mateus",
+        "Um texto apócrifo que conta a infância de Maria",
+        "A oração sacerdotal de Jesus na Última Ceia"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Gênesis 3, 15 é chamado pela Tradição de Protoevangelho: 'Porei inimizade entre ti e a mulher, entre a tua descendência e a dela; esta te esmagará a cabeça'.",
+      "ccc": "CCC § 410-411",
+      "bibleRef": "Gênesis 3, 15"
+    },
+    {
+      "id": "q_biblia_20",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Qual apóstolo era cobrador de impostos (publicano) antes de ser chamado pessoalmente por Jesus para segui-Lo?",
+      "options": [
+        "Mateus (Levi)",
+        "Pedro (Simão)",
+        "André",
+        "Tiago Maior"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Jesus viu Mateus sentado na coletoria de impostos e disse-lhe: 'Segue-me'. Ele levantou-se e o seguiu, tornando-se apóstolo e evangelista.",
+      "ccc": "CCC § 588",
+      "bibleRef": "Mateus 9, 9"
+    },
+    {
+      "id": "q_biblia_21",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Quem acolheu a Virgem Maria em sua casa na Encarnação e entoou o cântico profético do 'Magnificat'?",
+      "options": [
+        "Santa Isabel, mãe de São João Batista",
+        "Santa Maria Madalena",
+        "Santa Marta de Betânia",
+        "Santa Ana, mãe de Maria"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Na Visitação, Santa Isabel proclama Maria como 'a mãe do meu Senhor' e a Virgem responde com o grandioso cântico do Magnificat.",
+      "ccc": "CCC § 2619",
+      "bibleRef": "Lucas 1, 39-55"
+    },
+    {
+      "id": "q_biblia_22",
+      "category": "Bíblia",
+      "difficulty": "Difícil",
+      "question": "Qual personagem bíblico misterioso, rei de Salém e sacerdote do Deus Altíssimo, ofereceu pão e vinho a Abraão, prefigurando o sacerdócio de Cristo?",
+      "options": [
+        "Melquisedeque",
+        "Jethro",
+        "Aarão",
+        "Zadok"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Igreja vê na oblação de Melquisedeque (pão e vinho) a prefiguração profética do sacerdócio eterno de Cristo e da Eucaristia.",
+      "ccc": "CCC § 1333; 1544",
+      "bibleRef": "Gênesis 14, 18; Hebreus 7, 1-3"
+    },
+    {
+      "id": "q_biblia_23",
+      "category": "Bíblia",
+      "difficulty": "Fácil",
+      "question": "Onde Jesus realizou o Seu primeiro milagre público a pedido de Sua Mãe, transformando água em vinho?",
+      "options": [
+        "Nas Bodas de Caná da Galileia",
+        "No Monte das Oliveiras",
+        "À beira do poço de Jacó em Samaria",
+        "No templo de Jerusalém"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Em Caná da Galileia, a intercessão atenta de Maria antecipou a manifestação da glória de Jesus, e os seus discípulos creram n'Ele.",
+      "ccc": "CCC § 2618",
+      "bibleRef": "João 2, 1-11"
+    },
+    {
+      "id": "q_biblia_24",
+      "category": "Bíblia",
+      "difficulty": "Médio",
+      "question": "Qual livro sapiencial do Antigo Testamento retrata os sofrimentos de um homem justo que permanece fiel a Deus em meio às provações?",
+      "options": [
+        "O Livro de Jó",
+        "O Cântico dos Cânticos",
+        "O Livro de Ester",
+        "O Livro de Rute"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Livro de Jó aborda o drama do sofrimento do inocente, a soberania misteriosa de Deus e a fé inabalável que confia na redenção divina.",
+      "ccc": "CCC § 385; 1505",
+      "bibleRef": "Jó 19, 25"
+    },
+    {
+      "id": "q_oracao_01",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual oração foi ensinada diretamente por Nosso Senhor Jesus Cristo aos Seus apóstolos?",
+      "options": [
+        "O Pai-Nosso (A Oração do Senhor)",
+        "A Ave-Maria",
+        "O Credo dos Apóstolos",
+        "O Terço da Misericórdia"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Pai-Nosso é a oração por excelência da Igreja, chamada por Tertuliano de 'o resumo de todo o Evangelho', ensinada diretamente por Cristo.",
+      "ccc": "CCC § 2759-2776",
+      "bibleRef": "Mateus 6, 9-13"
+    },
+    {
+      "id": "q_oracao_02",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Quais são as quatro etapas clássicas da 'Lectio Divina' (leitura orante da Palavra de Deus)?",
+      "options": [
+        "Lectio (Leitura), Meditatio (Meditação), Oratio (Oração) e Contemplatio (Contemplação)",
+        "Estudo, Debate, Prova e Conclusão",
+        "Escuta, Crítica, Correção e Publicação",
+        "Canto, Dança, Palmas e Aplausos"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A tradição monástica consolidou a Lectio Divina como método espiritual para acolher a Palavra de Deus, meditá-la, dialogar com Deus e repousar em Sua presença.",
+      "ccc": "CCC § 1177; 2708",
+      "bibleRef": "Lucas 2, 19"
+    },
+    {
+      "id": "q_oracao_03",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Quantos mistérios (dezenas) formam os quatro ciclos completos do Santo Rosário (Gozosos, Luminosos, Dolorosos e Gloriosos)?",
+      "options": [
+        "20 dezenas (200 Ave-Marias no total)",
+        "10 dezenas",
+        "15 dezenas",
+        "5 dezenas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Com a inclusão dos Mistérios Luminosos por São João Paulo II no ano 2002, o Santo Rosário contempla 20 mistérios fundamentais da vida de Cristo.",
+      "ccc": "CCC § 971; 2678",
+      "bibleRef": "Lucas 1, 28-38"
+    },
+    {
+      "id": "q_oracao_04",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Quem foi proclamado pelo Papa Pio IX como 'Padroeiro Universal da Igreja Católica'?",
+      "options": [
+        "São José, esposo da Virgem Maria e pai adotivo de Jesus",
+        "São Pedro apóstolo",
+        "São Miguel Arcanjo",
+        "São João Batista"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São José, o justo e fiel custódio da Sagrada Família, cuida e intercede como padroeiro de todo o Corpo Místico de Cristo na terra.",
+      "ccc": "CCC § 437; 1014",
+      "bibleRef": "Mateus 1, 18-24"
+    },
+    {
+      "id": "q_oracao_05",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Qual santo doutor da Igreja escreveu as célebres obras 'Confissões' e 'A Cidade de Deus'?",
+      "options": [
+        "Santo Agostinho de Hipona",
+        "São Tomás de Aquino",
+        "São Boaventura",
+        "São Gregório Magno"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Santo Agostinho, convertido pelas orações de Santa Mônica e pela graça divina, tornou-se um dos maiores teólogos e luzeiros da fé de toda a cristandade.",
+      "ccc": "CCC § 43",
+      "bibleRef": "Romanos 13, 13-14"
+    },
+    {
+      "id": "q_oracao_06",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual jovem diácono romano foi martirizado sobre uma grelha em brasa no ano 258 d.C., testemunhando a fé com heroísmo e alegria?",
+      "options": [
+        "São Lourenço",
+        "São Tarcísio",
+        "São Sebastião",
+        "São Vicente de Paulo"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São Lourenço declarou aos magistrados romanos que 'os verdadeiros tesouros da Igreja são os pobres' e sofreu o martírio com gloriosa fortaleza.",
+      "ccc": "CCC § 2444",
+      "bibleRef": "2 Coríntios 9, 7"
+    },
+    {
+      "id": "q_oracao_07",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "O que é a 'Oração de Adoração' segundo a tradição eclesial?",
+      "options": [
+        "A atitude fundamental do homem que se reconhece criatura diante de seu Criador infinito, exaltando a grandeza de Deus",
+        "Uma oração onde pedimos favores financeiros a Deus",
+        "Um momento de silêncio para esvaziar a mente de qualquer pensamento",
+        "Uma oração de cobrança a Deus por problemas do dia a dia"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Adorar a Deus é reconhecer, em respeito e submissão absoluta, o 'nada da criatura', que não existe a não ser por Deus, louvando o Senhor que nos salvou.",
+      "ccc": "CCC § 2096-2097; 2628",
+      "bibleRef": "Salmos 94 (95), 6"
+    },
+    {
+      "id": "q_oracao_08",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual santa fundadora carmelita e Doutora da Igreja ensinou o caminho da 'Pequena Via' da infância espiritual?",
+      "options": [
+        "Santa Teresinha do Menino Jesus (de Lisieux)",
+        "Santa Teresa de Jesus (de Ávila)",
+        "Santa Catarina de Sena",
+        "Santa Hildegarda de Bingen"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Santa Teresinha ensinou que a santidade está ao alcance de todos através da confiança filial, da entrega total e do amor heroico nos pequenos gestos diários.",
+      "ccc": "CCC § 2011",
+      "bibleRef": "Mateus 18, 3"
+    },
+    {
+      "id": "q_oracao_09",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Quem é o primeiro mártir cristão (protomártir) narrado no livro dos Atos dos Apóstolos, que morreu apedrejado perdoando seus algozes?",
+      "options": [
+        "Santo Estêvão",
+        "São Tiago Maior",
+        "São Pedro",
+        "São Paulo"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Santo Estêvão, um dos primeiros sete diáconos, cheio do Espírito Santo, contemplou a glória de Deus e morreu orando: 'Senhor, não lhes imputes este pecado'.",
+      "ccc": "CCC § 2473",
+      "bibleRef": "Atos 7, 54-60"
+    },
+    {
+      "id": "q_oracao_10",
+      "category": "Liturgia & Santos",
+      "difficulty": "Difícil",
+      "question": "Qual santo filósofo e teólogo dominicano escreveu a 'Suma Teológica', sendo chamado de Doutor Angélico?",
+      "options": [
+        "São Tomás de Aquino",
+        "São Duns Scotus",
+        "Santo Alberto Magno",
+        "Santo Anselmo de Cantuária"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São Tomás de Aquino foi um dos maiores expoentes da Escolástica, unindo fé e razão e formulando as célebres cinco vias da demonstração da existência de Deus.",
+      "ccc": "CCC § 31; 43",
+      "bibleRef": "Colossenses 2, 2-3"
+    },
+    {
+      "id": "q_oracao_11",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual arcanjo é invocado como comandante dos exércitos celestes e defensor da Igreja contra os ardis de Satanás?",
+      "options": [
+        "São Miguel Arcanjo",
+        "São Gabriel Arcanjo",
+        "São Rafael Arcanjo",
+        "São Uriel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São Miguel ('Quem como Deus?') é o arcanjo fiel que venceu o dragão no céu e guarda os fiéis nas provações e batalhas espirituais.",
+      "ccc": "CCC § 335",
+      "bibleRef": "Apocalipse 12, 7-9"
+    },
+    {
+      "id": "q_oracao_12",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Qual é o primeiro santo canonizado da história da Igreja no próprio dia de sua morte pelo próprio Jesus Cristo?",
+      "options": [
+        "São Dimas (O Bom Ladrão)",
+        "São João Evangelista",
+        "São Pedro apóstolo",
+        "São José de Arimateia"
+      ],
+      "correctAnswer": 0,
+      "explanation": "No alto da Cruz, ao reconhecer o Reinado de Cristo, São Dimas ouviu da boca do próprio Senhor: 'Em verdade te digo: hoje estarás comigo no Paraíso'.",
+      "ccc": "CCC § 2616",
+      "bibleRef": "Lucas 23, 39-43"
+    },
+    {
+      "id": "q_oracao_13",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual santa italiana teve as chagas de Cristo (estigmas) e interveio decisivamente para o retorno do Papa de Avinhão para Roma?",
+      "options": [
+        "Santa Catarina de Sena",
+        "Santa Clara de Assis",
+        "Santa Rita de Cássia",
+        "Santa Maria Madalena de Pazzi"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Santa Catarina de Sena, virgem dominicana e Doutora da Igreja, exerceu um apostolado ardente de reconciliação e amor leal à Sé de Pedro.",
+      "ccc": "CCC § 25; 971",
+      "bibleRef": "1 Coríntios 1, 27-29"
+    },
+    {
+      "id": "q_oracao_14",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "O que a tradição católica chama de 'Oração Vocal'?",
+      "options": [
+        "A oração que associa o corpo e a voz interior da alma, elevando a Deus fórmulas inspiradas ou espontâneas",
+        "Gritar em público para chamar a atenção dos vizinhos",
+        "Uma oração que só tem validade se for transmitida pelo rádio",
+        "A oração que não exige atenção nem fé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A oração vocal é elemento indispensável da vida cristã. Ensinando aos seus discípulos o Pai-Nosso, Jesus propôs a mais perfeita oração vocal.",
+      "ccc": "CCC § 2700-2704",
+      "bibleRef": "Mateus 6, 7-9"
+    },
+    {
+      "id": "q_oracao_15",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual santo é conhecido como o 'Pai do Monaquismo Ocidental' e autor da santa Regra sob o lema 'Ora et Labora' (Reza e Trabalha)?",
+      "options": [
+        "São Bento de Núrsia",
+        "São Francisco de Assis",
+        "São Domingos de Gusmão",
+        "Santo Inácio de Loyola"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São Bento fundou o mosteiro de Monte Cassino e instituiu a Regra que estruturou a oração comunitária litúrgica e a civilização cristã na Europa.",
+      "ccc": "CCC § 1175",
+      "bibleRef": "Salmos 118 (119), 62"
+    },
+    {
+      "id": "q_oracao_16",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Qual é o significado da oração mariana do 'Angelus', tradicionalmente rezada ao meio-dia, às 6h e às 18h?",
+      "options": [
+        "Comemorar com profunda gratidão o mistério da Encarnação do Filho de Deus no seio puríssimo da Virgem Maria",
+        "Pedir proteção antes de dormir",
+        "Agradecer pelo almoço com a família",
+        "Um hino de louvor aos santos mártires"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O Angelus Domini ('O Anjo do Senhor anunciou a Maria') celebra diariamente o 'Sim' da Virgem e a vinda do Salvador ao mundo.",
+      "ccc": "CCC § 2673-2679",
+      "bibleRef": "Lucas 1, 26-38"
+    },
+    {
+      "id": "q_oracao_17",
+      "category": "Liturgia & Santos",
+      "difficulty": "Difícil",
+      "question": "Qual santo jesuíta espanhol fundou a Companhia de Jesus e escreveu os insignes 'Exercícios Espirituais'?",
+      "options": [
+        "Santo Inácio de Loyola",
+        "São Francisco Xavier",
+        "São Luís Gonzaga",
+        "São Pedro Canísio"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Santo Inácio de Loyola, após sua conversão na convalescença de uma batalha militar, dedicou sua vida 'Para a Maior Glória de Deus' (AMDG).",
+      "ccc": "CCC § 287",
+      "bibleRef": "1 Coríntios 10, 31"
+    },
+    {
+      "id": "q_oracao_18",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual santa francesa camponesa liderou as tropas na libertação da França no século XV, obedecendo às vozes celestes com profunda pureza e coragem?",
+      "options": [
+        "Santa Joana d'Arc",
+        "Santa Joana de Chantal",
+        "Santa Bernadete Soubirous",
+        "Santa Margarida de Cortona"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Santa Joana d'Arc viveu com fidelidade absoluta à Igreja e a Nosso Senhor, morrendo na fogueira em Rouen pronunciando com fervor o Santo Nome de Jesus.",
+      "ccc": "CCC § 435; 2005",
+      "bibleRef": "Judite 13, 18-20"
+    },
+    {
+      "id": "q_oracao_19",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Qual santo presbítero capuchinho italiano do século XX recebeu os estigmas da Paixão e passava até 16 horas diárias no confessionário?",
+      "options": [
+        "São Pio de Pietrelcina (Padre Pio)",
+        "São Leopoldo Mandic",
+        "São Charbel Makhlouf",
+        "São João Bosco"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São Pio de Pietrelcina ofereceu toda a sua vida como vítima de amor pela conversão dos pecadores e fundou a Casa Alívio do Sofrimento.",
+      "ccc": "CCC § 1456",
+      "bibleRef": "Gálatas 6, 17"
+    },
+    {
+      "id": "q_oracao_20",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "Qual santo do século XIII amou com ternura a pobreza e compôs o comovente 'Cântico das Criaturas', restaurando a Igreja em fidelidade ao Crucifixo de São Damião?",
+      "options": [
+        "São Francisco de Assis",
+        "Santo Antônio de Pádua",
+        "São Bernardino de Sena",
+        "São Boaventura"
+      ],
+      "correctAnswer": 0,
+      "explanation": "O 'Poverello' de Assis renunciou a toda vaidade mundana para seguir Cristo pobre e crucificado, fundando a Ordem dos Frades Menores.",
+      "ccc": "CCC § 2416",
+      "bibleRef": "Mateus 19, 21"
+    },
+    {
+      "id": "q_oracao_21",
+      "category": "Liturgia & Santos",
+      "difficulty": "Médio",
+      "question": "Qual papa do século XX convocou o Concílio Vaticano II em 1962 com o objetivo de promover o 'aggiornamento' pastoral da Igreja?",
+      "options": [
+        "São João XXIII",
+        "São Paulo VI",
+        "Venerável Pio XII",
+        "São Pio X"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São João XXIII, o 'Papa Bom', abriu o Concílio Ecumênico Vaticano II com a célebre alocução Gaudet Mater Ecclesia, chamando a Igreja a renovar seu zelo evangelizador.",
+      "ccc": "CCC § 11",
+      "bibleRef": "João 17, 21"
+    },
+    {
+      "id": "q_oracao_22",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "A quem Nossa Senhora apareceu em 1858 em Lourdes (França), declarando em dialeto local: 'Eu sou a Imaculada Conceição'?",
+      "options": [
+        "Santa Bernadete Soubirous",
+        "Santa Lúcia dos Santos",
+        "Santa Catarina Labouré",
+        "Santa Melanie Calvat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nossa Senhora de Lourdes apareceu na gruta de Massabielle à humilde menina Bernadete, confirmando com milagres o dogma proclamado quatro anos antes por Pio IX.",
+      "ccc": "CCC § 491",
+      "bibleRef": "Lucas 1, 48"
+    },
+    {
+      "id": "q_oracao_23",
+      "category": "Liturgia & Santos",
+      "difficulty": "Difícil",
+      "question": "Qual mártir franciscano ofereceu voluntariamente sua própria vida para morrer no lugar de um pai de família no campo de concentração de Auschwitz em 1941?",
+      "options": [
+        "São Maximiliano Maria Kolbe",
+        "São Tito Brandsma",
+        "Beato Miguel Pro",
+        "São Pedro Fourier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "São Maximiliano Kolbe, fundador da Milícia da Imaculada, testemunhou o ápice do amor cristão: 'Ninguém tem maior amor do que aquele que dá a vida por seus amigos'.",
+      "ccc": "CCC § 1828",
+      "bibleRef": "João 15, 13"
+    },
+    {
+      "id": "q_oracao_24",
+      "category": "Liturgia & Santos",
+      "difficulty": "Fácil",
+      "question": "O que significa a palavra hebraica 'Amém' proferida ao final das orações e do Credo?",
+      "options": [
+        "'Assim seja', 'Eu creio firmemente', 'É verdade'",
+        "'Até amanhã'",
+        "'Por favor'",
+        "'Terminei de falar'"
+      ],
+      "correctAnswer": 0,
+      "explanation": "No hebraico, Amém liga-se à raiz da fidelidade e solidez. Dizer Amém é professar com firmeza: 'Creio no que foi dito; assim seja; verdadeiramente confio!'.",
+      "ccc": "CCC § 1061-1065",
+      "bibleRef": "2 Coríntios 1, 20"
+    }
+  ]
+}

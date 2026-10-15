@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thesaurus Novenarum — Portal Oficial de Novenas Católicas | CATECISMO</title>
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=2">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
     <script src="assets/vendor/tailwind.js" onerror="var s=document.createElement('script');s.src='https://cdn.tailwindcss.com';document.head.appendChild(s);"></script>
     <script src="assets/data/santos_images_index.js?v=20260927"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,32 +19,37 @@
             theme: {
                 extend: {
                     colors: {
-                        mariana: '#1B365D',
-                        'mariana-dark': '#0F223E',
-                        dourado: '#D4AF37',
-                        'dourado-light': '#F3E5AB',
-                        vinho: '#6A1B29',
-                        'vinho-dark': '#48111B',
-                        marfim: '#F9F8F6',
-                        'marfim-card': '#FFFFFF',
-                        cinza: '#64748B'
+                        mariana: '#234638',
+                        'mariana-dark': '#1a3329',
+                        dourado: '#C59A4B',
+                        'dourado-light': '#F4EEE0',
+                        vinho: '#234638',
+                        'vinho-dark': '#1a3329',
+                        marfim: '#F7F5EF',
+                        'marfim-card': '#FFFEFA',
+                        cinza: '#777A70',
+                        cgreen: '#234638',
+                        csage: '#E5EADF',
+                        cgold: '#C59A4B',
+                        cline: '#E8E5DC',
+                        cink: '#222B25'
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
+                        sans: ['"DM Sans"', '"Plus Jakarta Sans"', 'sans-serif']
                     }
                 }
             }
         }
     </script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F9F8F6; color: #1e293b; }
-        h1, h2, h3, h4, .font-serif { font-family: 'Cormorant Garamond', serif; }
-        .gold-border { border-color: #D4AF37; }
-        .gold-gradient { background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%); }
-        .mariana-gradient { background: linear-gradient(135deg, #1B365D 0%, #0F223E 100%); }
-        .vinho-gradient { background: linear-gradient(135deg, #6A1B29 0%, #48111B 100%); }
-        .card-shadow { box-shadow: 0 4px 20px -2px rgba(27, 54, 93, 0.08); }
+        body { font-family: 'DM Sans', 'Plus Jakarta Sans', sans-serif; background-color: #F7F5EF; color: #222B25; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        .gold-border { border-color: #C59A4B; }
+        .gold-gradient { background: linear-gradient(135deg, #F4EEE0 0%, #C59A4B 100%); }
+        .mariana-gradient { background: linear-gradient(135deg, #234638 0%, #1a3329 100%); }
+        .vinho-gradient { background: linear-gradient(135deg, #234638 0%, #1a3329 100%); }
+        .card-shadow { box-shadow: 0 5px 18px rgba(47, 55, 42, 0.04); }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
@@ -97,16 +104,16 @@
             font-size: inherit !important;
         }
 
-        html.dark body { background-color: #0F172A; color: #E2E8F0; }
-        html.dark .bg-white { background-color: #131D31 !important; border-color: #1E293B !important; }
-        html.dark .border-slate-200 { border-color: #1E293B !important; }
-        html.dark .border-slate-100 { border-color: #1E293B !important; }
-        html.dark .bg-slate-50 { background-color: #18243C !important; }
-        html.dark .bg-marfim { background-color: #0F172A !important; }
-        html.dark .text-slate-800 { color: #F1F5F9 !important; }
-        html.dark .text-slate-700 { color: #E2E8F0 !important; }
-        html.dark .text-slate-600 { color: #94A3B8 !important; }
-        html.dark .text-mariana { color: #93C5FD !important; }
+        html.dark body { background-color: #0c1410; color: #ede9df; }
+        html.dark .bg-white { background-color: #16231c !important; border-color: #24372c !important; color: #ede9df !important; }
+        html.dark .border-slate-200 { border-color: #24372c !important; }
+        html.dark .border-slate-100 { border-color: #24372c !important; }
+        html.dark .bg-slate-50 { background-color: #1a2b22 !important; }
+        html.dark .bg-marfim { background-color: #0c1410 !important; }
+        html.dark .text-slate-800 { color: #f5f2ea !important; }
+        html.dark .text-slate-700 { color: #d0cdc3 !important; }
+        html.dark .text-slate-600 { color: #92a698 !important; }
+        html.dark .text-mariana { color: #7eb098 !important; }
 
         /* Oculta cabeçalho interno redundante se incorporado no modal do portal principal */
         html.is-embedded #site-header {
@@ -201,8 +208,9 @@
         </section>
 
         <!-- Hero Header -->
-        <section class="mariana-gradient text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-xl border border-dourado/30">
-            <div class="absolute right-0 top-0 translate-x-8 -translate-y-8 text-[180px] opacity-10 font-serif select-none pointer-events-none">🌹</div>
+        <section data-app-cover="banner_novenas_canonicas" class="mariana-gradient text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-xl border border-dourado/30">
+            <img class="app-cover-img hidden absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity pointer-events-none" alt="Novenas Católicas">
+            <div class="app-cover-placeholder absolute right-0 top-0 translate-x-8 -translate-y-8 text-[180px] opacity-10 font-serif select-none pointer-events-none">🌹</div>
             <div class="relative z-10 max-w-2xl space-y-3">
                 <div class="flex items-center gap-2">
                     <span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-[11px] font-bold tracking-wider uppercase border border-dourado/40">
@@ -542,11 +550,32 @@
                         startedTime = base - ((daysCount - 1) * 86400000);
                     }
 
+                    const y = todayDate.getFullYear();
+                    const m = String(todayDate.getMonth() + 1).padStart(2, '0');
+                    const d = String(todayDate.getDate()).padStart(2, '0');
+                    const todayStr = `${y}-${m}-${d}`;
+
                     const nextPendingDay = [1,2,3,4,5,6,7,8,9].find(d => !prog.includes(d)) || 1;
-                    // PRIORIDADE CANÔNICA: Se a novena está em andamento na Igreja, o dia de hoje é status.currentDay!
-                    const calendarDay = (status.status === 'em_andamento' && status.currentDay) ? status.currentDay : nextPendingDay;
-                    const isTodayPrayed = prog.includes(calendarDay);
-                    const targetDay = isTodayPrayed ? calendarDay : calendarDay;
+                    
+                    let calendarDay = nextPendingDay;
+                    let targetDay = nextPendingDay;
+                    let isTodayPrayed = false;
+
+                    if (status.status === 'em_andamento' && status.currentDay) {
+                        calendarDay = status.currentDay;
+                        isTodayPrayed = prog.includes(calendarDay);
+                        targetDay = calendarDay;
+                    } else {
+                        if (meta && meta.date === todayStr) {
+                            isTodayPrayed = true;
+                            targetDay = (meta.lastDay && prog.includes(meta.lastDay)) ? meta.lastDay : (prog[prog.length - 1] || nextPendingDay);
+                            calendarDay = targetDay;
+                        } else {
+                            isTodayPrayed = false;
+                            targetDay = nextPendingDay;
+                            calendarDay = nextPendingDay;
+                        }
+                    }
 
                     inProgressList.push({
                         novena: nov,
@@ -571,6 +600,7 @@
                 const primary = inProgressList[0];
                 const fullNovena = primary.novena;
                 const actImg = getNovenaImage(fullNovena);
+                const nextPendingDay = primary.nextPendingDay;
                 const nextPending = primary.nextPendingDay;
                 const targetDay = primary.targetDay;
                 const calendarDay = primary.calendarDay;
@@ -598,20 +628,20 @@
                                             Progresso: ${completedCount}/9 dias (${pct}%)
                                         </span>
                                         <span class="text-[11px] font-bold ${isTodayPrayed ? 'text-emerald-700 dark:text-emerald-300' : 'text-rose-800 dark:text-rose-300'}">
-                                            📅 Dia ${calendarDay} Hoje na Igreja
+                                            ${isTodayPrayed ? `✓ Dia ${targetDay} Rezado Hoje` : `📅 Dia ${targetDay} Hoje`}
                                         </span>
                                     </div>
                                     <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-white mt-1">
                                         ${fullNovena.titulo}
                                     </h3>
                                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl">
-                                        ${!isTodayPrayed ? `Oração de hoje: <strong>Dia ${calendarDay} de 9</strong>. <em>${fullNovena.dias[calendarDay - 1]?.tema || ''}</em>.` : `✓ <strong>Dia ${calendarDay} de hoje rezado com devoção!</strong> Amanhã continuaremos com o Dia ${Math.min(9, calendarDay + 1)}.`}
+                                        ${!isTodayPrayed ? `Oração de hoje: <strong>Dia ${targetDay} de 9</strong>. <em>${fullNovena.dias[targetDay - 1]?.tema || ''}</em>.` : `✓ <strong>Dia ${targetDay} rezado com devoção hoje!</strong>${nextPendingDay && nextPendingDay <= 9 ? ` Amanhã continuaremos com o Dia ${nextPendingDay}.` : ''}`}
                                     </p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-3 shrink-0">
                                 <button onclick="openNovenaModal('${fullNovena.id}', ${targetDay})" class="w-full sm:w-auto px-6 py-3 rounded-xl ${isTodayPrayed ? 'bg-slate-700 hover:bg-slate-600' : 'bg-rose-600 hover:bg-rose-700'} text-white font-bold text-sm shadow-md transition transform hover:scale-[1.02] cursor-pointer flex items-center justify-center gap-2">
-                                    <span>${!isTodayPrayed ? `Rezar Dia ${calendarDay} Hoje` : `✓ Rever Dia ${calendarDay}`}</span>
+                                    <span>${!isTodayPrayed ? `Rezar Dia ${targetDay} Hoje` : `✓ Rever Dia ${targetDay}`}</span>
                                     <span>➔</span>
                                 </button>
                             </div>
@@ -1399,6 +1429,48 @@
                 loadCloudNovenasDirect(false);
             }
         });
+
+        // Gerenciador de Capas e Molduras Visuais (AppCoversManager)
+        const AppCoversManager = {
+            covers: {},
+            async init() {
+                try {
+                    const res = await fetch('./data/app_covers.json');
+                    if (res.ok) {
+                        const list = await res.json();
+                        list.forEach(c => { this.covers[c.id] = c; });
+                        this.applyCoversToDOM();
+                    }
+                } catch (e) {
+                    console.warn('[AppCovers] Falha ao carregar app_covers.json', e);
+                }
+            },
+            applyCoversToDOM() {
+                document.querySelectorAll('[data-app-cover]').forEach(el => {
+                    const id = el.getAttribute('data-app-cover');
+                    const cov = this.covers[id];
+                    if (!cov) return;
+                    const imgEl = el.querySelector('.app-cover-img');
+                    const placeholderEl = el.querySelector('.app-cover-placeholder');
+                    if (cov.imageUrl && cov.imageUrl.trim() !== '') {
+                        if (imgEl) {
+                            imgEl.onerror = () => {
+                                imgEl.classList.add('hidden');
+                                if (placeholderEl) placeholderEl.classList.remove('hidden');
+                            };
+                            imgEl.src = cov.imageUrl;
+                            imgEl.classList.remove('hidden');
+                        }
+                        if (placeholderEl) placeholderEl.classList.add('hidden');
+                    } else {
+                        if (imgEl) imgEl.classList.add('hidden');
+                        if (placeholderEl) placeholderEl.classList.remove('hidden');
+                    }
+                });
+            }
+        };
+        window.AppCoversManager = AppCoversManager;
+        AppCoversManager.init();
 
         // Iniciar aplicação
         updateNovenaCloudIndicator();

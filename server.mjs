@@ -501,6 +501,127 @@ const server = http.createServer(async (req, res) => {
     }
 
     // ==========================================
+    // API: LISTAR MOLDURAS E CAPAS DO APP (HALLOW & CAPELA)
+    // ==========================================
+    if (pathname === '/api/admin/app-covers' && req.method === 'GET') {
+        try {
+            const coversPath = path.join(DATA_DIR, 'app_covers.json');
+            if (!fs.existsSync(coversPath)) {
+                res.writeHead(404, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: 'Arquivo app_covers.json não encontrado.' }));
+                return;
+            }
+            const covers = JSON.parse(fs.readFileSync(coversPath, 'utf8'));
+            const temasDir = path.join(__dirname, 'assets', 'img', 'temas');
+            if (!fs.existsSync(temasDir)) {
+                fs.mkdirSync(temasDir, { recursive: true });
+            }
+            // Verifica no disco se o arquivo existe
+            const enrichedCovers = covers.map(c => {
+                const targetPath = path.join(temasDir, c.targetFile);
+                const exists = fs.existsSync(targetPath);
+                return {
+                    ...c,
+                    hasImage: exists || (Boolean(c.imageUrl) && c.imageUrl.trim() !== ''),
+                    imageUrl: exists ? `./assets/img/temas/${c.targetFile}` : (c.imageUrl || '')
+                };
+            });
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: true, covers: enrichedCovers }));
+        } catch (err) {
+            res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ success: false, error: err.message }));
+        }
+        return;
+    }
+
+    // ==========================================
+    // API: UPLOAD E SALVAR CAPA DO APP
+    // ==========================================
+    if (pathname === '/api/admin/upload-cover-image' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', async () => {
+            try {
+                const { coverId, base64Data, filename } = JSON.parse(body);
+                if (!coverId || !base64Data) {
+                    res.writeHead(400, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'coverId e base64Data são obrigatórios.' }));
+                    return;
+                }
+                const coversPath = path.join(DATA_DIR, 'app_covers.json');
+                const covers = JSON.parse(fs.readFileSync(coversPath, 'utf8'));
+                const coverIndex = covers.findIndex(c => c.id === coverId);
+                if (coverIndex === -1) {
+                    res.writeHead(404, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Moldura/Capa não encontrada.' }));
+                    return;
+                }
+
+                const targetFilename = filename || covers[coverIndex].targetFile || `${coverId}.png`;
+                const temasDir = path.join(__dirname, 'assets', 'img', 'temas');
+                if (!fs.existsSync(temasDir)) {
+                    fs.mkdirSync(temasDir, { recursive: true });
+                }
+                const savePath = path.join(temasDir, targetFilename);
+                const buffer = Buffer.from(base64Data.split(',')[1] || base64Data, 'base64');
+                fs.writeFileSync(savePath, buffer);
+
+                covers[coverIndex].imageUrl = `./assets/img/temas/${targetFilename}`;
+                covers[coverIndex].targetFile = targetFilename;
+                fs.writeFileSync(coversPath, JSON.stringify(covers, null, 2), 'utf8');
+
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ 
+                    success: true, 
+                    cover: covers[coverIndex],
+                    message: `Capa salva com sucesso em assets/img/temas/${targetFilename}!` 
+                }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
+    // API: REMOVER CAPA DO APP (RESTAURAR VETOR PADRÃO)
+    // ==========================================
+    if (pathname === '/api/admin/remove-cover-image' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => body += chunk);
+        req.on('end', async () => {
+            try {
+                const { coverId } = JSON.parse(body);
+                const coversPath = path.join(DATA_DIR, 'app_covers.json');
+                const covers = JSON.parse(fs.readFileSync(coversPath, 'utf8'));
+                const cover = covers.find(c => c.id === coverId);
+                if (!cover) {
+                    res.writeHead(404, { 'Content-Type': 'application/json' });
+                    res.end(JSON.stringify({ success: false, error: 'Capa não encontrada.' }));
+                    return;
+                }
+
+                const filePath = path.join(__dirname, 'assets', 'img', 'temas', cover.targetFile);
+                if (fs.existsSync(filePath)) {
+                    try { fs.unlinkSync(filePath); } catch(e) {}
+                }
+
+                cover.imageUrl = "";
+                fs.writeFileSync(coversPath, JSON.stringify(covers, null, 2), 'utf8');
+
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: true, message: 'Capa removida. Restaurado placeholder vetorial padrão.' }));
+            } catch (err) {
+                res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify({ success: false, error: err.message }));
+            }
+        });
+        return;
+    }
+
+    // ==========================================
     // API: SINCRONIZAR E REGENERAR ÍNDICES DOS SANTOS (1 CLIQUE)
     // ==========================================
     if (pathname === '/api/admin/sync-and-regenerate' && req.method === 'POST') {

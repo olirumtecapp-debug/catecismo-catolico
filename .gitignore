@@ -7,4 +7,9 @@ backups
 .DS_Store
 Thumbs.db
 scratch/
+backup_pre_redesign/
+luxo*.html
+ErrosSite/
+NovoDesign/
+scripts/__pycache__/
 

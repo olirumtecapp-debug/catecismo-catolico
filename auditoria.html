@@ -48,9 +48,22 @@
                     🕊️
                 </div>
                 <h1 class="text-xs md:text-sm font-extrabold text-white flex items-center gap-1.5 whitespace-nowrap">
-                    Auditoria de Santos
+                    Auditoria
                     <span class="text-[9px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded-full font-mono">2026</span>
                 </h1>
+
+                <!-- Seletor de Visão Principal (Santos vs Capas & Prompts IA vs Folder Divulgação) -->
+                <div class="inline-flex items-center bg-slate-950 p-0.5 rounded-lg border border-slate-800 ml-1">
+                    <button id="viewTab-santos" onclick="switchMainView('santos')" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition flex items-center gap-1 shadow-sm cursor-pointer" title="Ver catálogo e imagens dos Santos de 2026">
+                        <span>👑</span> <span>Santos</span>
+                    </button>
+                    <button id="viewTab-capas" onclick="switchMainView('capas')" class="px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer" title="Molduras e Capas Visuais do App com Prompts IA (Capela & Hallow)">
+                        <span>🎨</span> <span>Capas &amp; Prompts IA</span>
+                    </button>
+                    <button id="viewTab-folder" onclick="switchMainView('folder')" class="px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer" title="Folder de Divulgação com QR Code Oficial">
+                        <span>📄</span> <span>Folder &amp; QR Code</span>
+                    </button>
+                </div>
 
                 <!-- Badges & Stats Compactos em 1 linha -->
                 <div class="flex items-center gap-1 text-[11px] font-mono">
@@ -100,7 +113,7 @@
         </div>
 
         <!-- Linha 2: Barra de Filtros, Período, Busca e Densidade -->
-        <div class="bg-slate-900/90 px-3 py-1">
+        <div id="santos-filter-bar" class="bg-slate-900/90 px-3 py-1">
             <div class="w-full flex flex-wrap items-center justify-between gap-1.5">
                 <!-- Esquerda: Datas & Status -->
                 <div class="flex items-center gap-1.5 flex-wrap">
@@ -172,16 +185,164 @@
     <!-- Main Container -->
     <main class="max-w-[1700px] mx-auto px-3 py-2 flex-1 w-full space-y-2">
 
-        <!-- Grid de Santos (Dinâmico) -->
-        <div id="grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
-            <div class="col-span-full py-16 text-center text-slate-500">
-                <div class="inline-block animate-spin text-3xl mb-2">⏳</div>
-                <p class="text-sm">Carregando dados dos santos...</p>
+        <!-- VISÃO 1: SANTOS & BEATOS -->
+        <div id="santos-view" class="space-y-2">
+            <!-- Grid de Santos (Dinâmico) -->
+            <div id="grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+                <div class="col-span-full py-16 text-center text-slate-500">
+                    <div class="inline-block animate-spin text-3xl mb-2">⏳</div>
+                    <p class="text-sm">Carregando dados dos santos...</p>
+                </div>
+            </div>
+
+            <!-- Paginação -->
+            <div id="pag" class="flex items-center justify-center gap-2 py-4 border-t border-slate-800/80 text-xs font-mono"></div>
+        </div>
+
+        <!-- VISÃO 2: MOLDURAS & CAPAS DO APP (ESTILO HALLOW & CAPELA) -->
+        <div id="capas-view" class="hidden space-y-4 py-2">
+            <!-- Top banner & info -->
+            <div class="bg-gradient-to-r from-slate-900 via-[#182b22] to-slate-900 border border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-2xl">🎨</span>
+                        <h2 class="text-base sm:text-lg font-extrabold text-white">Molduras &amp; Capas Visuais do App</h2>
+                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">Estilo Hallow &amp; Capela</span>
+                    </div>
+                    <p class="text-xs text-slate-300 max-w-2xl leading-relaxed">
+                        Locais e molduras estratégicas de imagens criadas para valorizar a navegação. 
+                        Gere as ilustrações nas IAs com os prompts calibrados, e use <strong>Upload</strong> ou <strong>Colar (Ctrl+V)</strong> para salvar direto no app.
+                    </p>
+                </div>
+
+                <!-- Badges & Stats de Capas -->
+                <div class="flex items-center gap-2 flex-wrap">
+                    <div class="bg-slate-950/80 border border-slate-800 px-3 py-1.5 rounded-xl text-center">
+                        <span class="text-[10px] text-slate-400 block uppercase font-mono">Total Molduras</span>
+                        <strong id="stat-covers-total" class="text-sm font-bold text-white">12</strong>
+                    </div>
+                    <div class="bg-emerald-950/40 border border-emerald-800/60 px-3 py-1.5 rounded-xl text-center text-emerald-300">
+                        <span class="text-[10px] text-emerald-400 block uppercase font-mono">Com Imagem</span>
+                        <strong id="stat-covers-ok" class="text-sm font-bold">0</strong>
+                    </div>
+                    <div class="bg-amber-950/40 border border-amber-800/60 px-3 py-1.5 rounded-xl text-center text-amber-300">
+                        <span class="text-[10px] text-amber-400 block uppercase font-mono">Vetor Padrão</span>
+                        <strong id="stat-covers-pending" class="text-sm font-bold">12</strong>
+                    </div>
+                    <button onclick="loadAppCovers()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-2 rounded-xl border border-slate-700 flex items-center gap-1.5 transition cursor-pointer">
+                        <span>🔄</span> Recarregar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categorias / Filtros de Capas -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs custom-scrollbar">
+                <button onclick="filterCoversCategory('all')" id="btn-covcat-all" class="px-3 py-1.5 rounded-xl font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap shadow-sm">
+                    Todas as Molduras (21)
+                </button>
+                <button onclick="filterCoversCategory('destaques')" id="btn-covcat-destaques" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    🌟 Destaques &amp; Heros
+                </button>
+                <button onclick="filterCoversCategory('rotina_diaria')" id="btn-covcat-rotina_diaria" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    🌅 Rotina Diária &amp; Novenas
+                </button>
+                <button onclick="filterCoversCategory('aprender')" id="btn-covcat-aprender" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    📖 Aprender &amp; Pilares
+                </button>
+                <button onclick="filterCoversCategory('rezar')" id="btn-covcat-rezar" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    📿 Rezar &amp; Devoção
+                </button>
+                <button onclick="filterCoversCategory('santos')" id="btn-covcat-santos" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    👑 Santos &amp; Memórias
+                </button>
+                <button onclick="filterCoversCategory('sacramentos')" id="btn-covcat-sacramentos" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    🍷 Sacramentos
+                </button>
+                <button onclick="filterCoversCategory('causas')" id="btn-covcat-causas" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    💼 Causas &amp; Intenções
+                </button>
+                <button onclick="filterCoversCategory('desafios')" id="btn-covcat-desafios" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    ✨ Desafios &amp; Trivia
+                </button>
+            </div>
+
+            <!-- Grid de Molduras -->
+            <div id="coversGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- Preenchido via renderAppCovers() -->
             </div>
         </div>
 
-        <!-- Paginação -->
-        <div id="pag" class="flex items-center justify-center gap-2 py-4 border-t border-slate-800/80 text-xs font-mono"></div>
+        <!-- VISÃO 3: FOLDER DE DIVULGAÇÃO & QR CODE OFICIAL -->
+        <div id="folder-view" class="hidden space-y-4 py-2">
+            <div class="bg-gradient-to-r from-slate-900 via-[#182b22] to-slate-900 border border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-2xl">📄</span>
+                        <h2 class="text-base sm:text-lg font-extrabold text-white">Folder de Divulgação com QR Code Oficial</h2>
+                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">Pronto para Impressão &amp; Redes Sociais</span>
+                    </div>
+                    <p class="text-xs text-slate-300 max-w-2xl leading-relaxed">
+                        Folder com design nobre e QR Code integrado com endereço seguro <strong>https://catecismo.creativeam.com.br</strong> para leitura instantânea por câmeras de iPhone (iOS) e Android.
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-2 flex-wrap">
+                    <a href="/folder_catecismo_com_qrcode.jpg" download="folder_catecismo_com_qrcode.jpg" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 text-xs font-bold px-3 py-2 rounded-xl border border-amber-400/60 shadow flex items-center gap-1.5 transition cursor-pointer">
+                        <span>📥</span> <span>Baixar JPG (WhatsApp/Redes)</span>
+                    </a>
+                    <a href="/assets/img/folder_catecismo_com_qrcode.png" download="folder_catecismo_com_qrcode.png" class="bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold px-3 py-2 rounded-xl border border-emerald-600 shadow flex items-center gap-1.5 transition cursor-pointer">
+                        <span>🖨️</span> <span>Baixar PNG (Alta Resolução Gráfica)</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Preview Card Grande -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col lg:flex-row items-center gap-8 justify-center">
+                <!-- Imagem do Folder -->
+                <div class="relative max-w-sm w-full rounded-2xl overflow-hidden border-2 border-emerald-700/60 shadow-2xl bg-slate-950 group">
+                    <img src="/folder_catecismo_com_qrcode.jpg?t=1" alt="Folder Catecismo com QR Code" class="w-full h-auto object-contain">
+                    <div class="absolute bottom-2 right-2 bg-slate-950/80 backdrop-blur-xs text-[10px] text-amber-300 px-2 py-1 rounded-md border border-amber-500/30 font-mono">
+                        ✓ QR Code Testado &amp; Validado
+                    </div>
+                </div>
+
+                <!-- Detalhes & Instruções -->
+                <div class="space-y-4 max-w-md text-left">
+                    <div class="space-y-2">
+                        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">Informações Técnicas</span>
+                        <h3 class="text-lg font-bold text-white">Especificações do Material</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            O material já possui o QR Code vetorizado e posicionado com margem de segurança dentro das marcas de enquadramento da câmera.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-3.5 space-y-2 text-xs">
+                        <div class="flex items-center justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400 font-mono">Destino do Link:</span>
+                            <strong class="text-emerald-400 font-mono">https://catecismo.creativeam.com.br</strong>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400 font-mono">Compatibilidade:</span>
+                            <span class="text-slate-200">iPhone (iOS Safari) &amp; Android</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400 font-mono">Dimensões:</span>
+                            <span class="text-slate-200">571 × 1024 px (Proporção 9:16)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-slate-400 font-mono">Arquivos salvos em:</span>
+                            <span class="text-amber-300 text-[11px] font-mono truncate max-w-[200px]" title="D:\Catecismo\folder_catecismo_com_qrcode.jpg">D:\Catecismo\</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col gap-2">
+                        <a href="/folder_catecismo_com_qrcode.jpg" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center justify-center gap-2">
+                            <span>🔍</span> <span>Abrir Imagem em Tela Cheia</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Modal do Prompt de Imagem -->
@@ -333,6 +494,131 @@
 
             <div class="flex justify-end gap-2 pt-1">
                 <button onclick="closePromptModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-5 py-2 rounded-xl transition">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Prompt para Capas e Molduras (Estilo Hallow & Capela) -->
+    <div id="coverPromptModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <div class="flex items-start justify-between border-b border-slate-800 pb-3 gap-2">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">🎨</span>
+                        <h3 class="font-bold text-white text-base" id="coverModalTitle">Prompt da Moldura</h3>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-1.5 text-[10px] font-mono">
+                        <span id="coverModalRatioBadge" class="bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-md font-semibold">📐 16:9</span>
+                        <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-md font-semibold">Vetor Hallow &amp; Capela</span>
+                        <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 px-2 py-0.5 rounded-md font-semibold">🚫 Sem Textos / Letras</span>
+                    </div>
+                </div>
+                <button onclick="closeCoverPromptModal()" class="text-slate-400 hover:text-white text-lg px-2">✕</button>
+            </div>
+
+            <!-- Abas de IA da Moldura -->
+            <div class="flex items-center gap-1.5 border-b border-slate-800 pb-2 overflow-x-auto custom-scrollbar">
+                <button type="button" onclick="switchCoverPromptTab('bing')" id="coverTabBtn-bing" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-sky-600/30 text-sky-300 border border-sky-500/50 shadow-sm">
+                    <span>⚡</span> Bing (DALL-E 3)
+                </button>
+                <button type="button" onclick="switchCoverPromptTab('gemini')" id="coverTabBtn-gemini" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent">
+                    <span>♊</span> Gemini / ChatGPT
+                </button>
+                <button type="button" onclick="switchCoverPromptTab('midjourney')" id="coverTabBtn-midjourney" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent">
+                    <span>🎨</span> Midjourney / Flux
+                </button>
+                <button type="button" onclick="switchCoverPromptTab('dalle')" id="coverTabBtn-dalle" class="prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent">
+                    <span>🤖</span> DALL-E 3 Direto
+                </button>
+            </div>
+
+            <!-- Conteúdos das Abas -->
+            <div id="coverTabContent-bing" class="space-y-2">
+                <div class="bg-blue-950/30 border border-sky-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-sky-300 flex items-center gap-1.5">
+                            <span>⚡</span> Bing Image Creator (DALL-E 3 Grátis)
+                        </label>
+                        <a href="https://www.bing.com/images/create" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                            Abrir Bing ↗
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <textarea id="coverPromptBing" rows="4" readonly class="w-full bg-slate-900 border border-blue-900/50 rounded-xl p-3 text-xs text-sky-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('coverPromptBing', this)" class="absolute right-2.5 bottom-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar Prompt
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="coverTabContent-gemini" class="space-y-2 hidden">
+                <div class="bg-emerald-950/30 border border-emerald-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-emerald-300 flex items-center gap-1.5">
+                            <span>♊</span> Gemini / ChatGPT Plus (Em Português Detalhado)
+                        </label>
+                        <a href="https://gemini.google.com" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                            Abrir Gemini ↗
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <textarea id="coverPromptGemini" rows="4" readonly class="w-full bg-slate-900 border border-emerald-900/50 rounded-xl p-3 text-xs text-emerald-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('coverPromptGemini', this)" class="absolute right-2.5 bottom-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar Prompt
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="coverTabContent-midjourney" class="space-y-2 hidden">
+                <div class="bg-amber-950/30 border border-amber-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-amber-300 flex items-center gap-1.5">
+                            <span>🎨</span> Midjourney / Flux / Ideogram
+                        </label>
+                        <a href="https://www.midjourney.com" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-slate-950 text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                            Abrir Midjourney ↗
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <textarea id="coverPromptMidjourney" rows="4" readonly class="w-full bg-slate-900 border border-amber-900/50 rounded-xl p-3 text-xs text-amber-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('coverPromptMidjourney', this)" class="absolute right-2.5 bottom-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar Prompt
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="coverTabContent-dalle" class="space-y-2 hidden">
+                <div class="bg-purple-950/30 border border-purple-800/50 rounded-xl p-3.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-xs font-bold text-purple-300 flex items-center gap-1.5">
+                            <span>🤖</span> DALL-E 3 / ChatGPT (Em Inglês)
+                        </label>
+                        <a href="https://chatgpt.com" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white text-[11px] font-bold py-1 px-2.5 rounded-lg transition flex items-center gap-1 shadow-sm">
+                            Abrir ChatGPT ↗
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <textarea id="coverPromptDalle" rows="4" readonly class="w-full bg-slate-900 border border-purple-900/50 rounded-xl p-3 text-xs text-purple-100 font-mono focus:outline-none select-all custom-scrollbar leading-relaxed"></textarea>
+                        <button onclick="copyToClipboard('coverPromptDalle', this)" class="absolute right-2.5 bottom-2.5 bg-purple-600 hover:bg-purple-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1 shadow-md">
+                            📋 Copiar Prompt
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dica de Criação -->
+            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3 text-xs text-slate-400 flex items-start gap-2">
+                <span class="text-base text-amber-400 shrink-0">💡</span>
+                <p>Após gerar a imagem na sua ferramenta de IA predileta, basta salvá-la no computador e usar o botão <strong>📁 Upload</strong> ou copiá-la e usar <strong>📋 Colar</strong> no card da moldura. O sistema salva automaticamente na pasta <code>assets/img/temas/</code>.</p>
+            </div>
+
+            <div class="flex justify-end gap-2 pt-1">
+                <button onclick="closeCoverPromptModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold px-5 py-2 rounded-xl transition">
                     Fechar
                 </button>
             </div>
@@ -1772,6 +2058,312 @@ DIRETRIZES DE EXECUÇÃO:
             reader.readAsDataURL(file);
         }
 
+        // ==========================================
+        // GESTÃO DE MOLDURAS & CAPAS DO APP (HALLOW & CAPELA)
+        // ==========================================
+        let appCovers = [];
+        let currentCoverCatFilter = 'all';
+        let activeCoverModalId = null;
+
+        function switchMainView(view) {
+            const tabSantos = document.getElementById('viewTab-santos');
+            const tabCapas = document.getElementById('viewTab-capas');
+            const tabFolder = document.getElementById('viewTab-folder');
+            const santosFilterBar = document.getElementById('santos-filter-bar');
+            const santosView = document.getElementById('santos-view');
+            const capasView = document.getElementById('capas-view');
+            const folderView = document.getElementById('folder-view');
+
+            if (view === 'santos') {
+                tabSantos.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition flex items-center gap-1 shadow-sm cursor-pointer';
+                if (tabCapas) tabCapas.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer';
+                if (tabFolder) tabFolder.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer';
+                if (santosFilterBar) santosFilterBar.classList.remove('hidden');
+                if (santosView) santosView.classList.remove('hidden');
+                if (capasView) capasView.classList.add('hidden');
+                if (folderView) folderView.classList.add('hidden');
+            } else if (view === 'capas') {
+                if (tabCapas) tabCapas.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-500 text-slate-950 transition flex items-center gap-1 shadow-sm cursor-pointer';
+                tabSantos.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer';
+                if (tabFolder) tabFolder.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer';
+                if (santosFilterBar) santosFilterBar.classList.add('hidden');
+                if (santosView) santosView.classList.add('hidden');
+                if (capasView) capasView.classList.remove('hidden');
+                if (folderView) folderView.classList.add('hidden');
+                loadAppCovers();
+            } else if (view === 'folder') {
+                if (tabFolder) tabFolder.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-slate-950 transition flex items-center gap-1 shadow-sm cursor-pointer';
+                tabSantos.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer';
+                if (tabCapas) tabCapas.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition flex items-center gap-1 cursor-pointer';
+                if (santosFilterBar) santosFilterBar.classList.add('hidden');
+                if (santosView) santosView.classList.add('hidden');
+                if (capasView) capasView.classList.add('hidden');
+                if (folderView) folderView.classList.remove('hidden');
+            }
+        }
+
+        async function loadAppCovers() {
+            const grid = document.getElementById('coversGrid');
+            grid.innerHTML = '<div class="col-span-full py-12 text-center text-slate-500"><div class="inline-block animate-spin text-2xl mb-2">⏳</div><p class="text-xs">Carregando molduras e capas do app...</p></div>';
+            
+            try {
+                const res = await fetch('/api/admin/app-covers');
+                if (!res.ok) throw new Error('Falha ao obter capas');
+                const data = await res.json();
+                appCovers = data.covers || [];
+                renderAppCovers();
+            } catch (err) {
+                try {
+                    const fallbackRes = await fetch('./data/app_covers.json');
+                    appCovers = await fallbackRes.json();
+                    renderAppCovers();
+                } catch(e) {
+                    grid.innerHTML = `<div class="col-span-full py-8 text-center text-rose-400 text-xs">Erro ao carregar molduras: ${err.message}</div>`;
+                }
+            }
+        }
+
+        function filterCoversCategory(cat) {
+            currentCoverCatFilter = cat;
+            const categories = ['all', 'destaques', 'rotina_diaria', 'aprender', 'rezar', 'santos', 'sacramentos', 'causas', 'desafios'];
+            categories.forEach(c => {
+                const btn = document.getElementById(`btn-covcat-${c}`);
+                if (!btn) return;
+                if (c === cat) {
+                    btn.className = 'px-3 py-1.5 rounded-xl font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap shadow-sm';
+                } else {
+                    btn.className = 'px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap';
+                }
+            });
+            renderAppCovers();
+        }
+
+        function renderAppCovers() {
+            const grid = document.getElementById('coversGrid');
+            grid.innerHTML = '';
+
+            let filtered = appCovers;
+            if (currentCoverCatFilter !== 'all') {
+                filtered = appCovers.filter(c => c.category === currentCoverCatFilter);
+            }
+
+            // Atualiza estatísticas
+            const total = appCovers.length;
+            const okCount = appCovers.filter(c => c.hasImage).length;
+            const pendingCount = total - okCount;
+            document.getElementById('stat-covers-total').innerText = total;
+            document.getElementById('stat-covers-ok').innerText = okCount;
+            document.getElementById('stat-covers-pending').innerText = pendingCount;
+            const btnAll = document.getElementById('btn-covcat-all');
+            if (btnAll) btnAll.innerText = `Todas as Molduras (${total})`;
+
+            if (!filtered.length) {
+                grid.innerHTML = '<div class="col-span-full py-12 text-center text-slate-500 text-xs">Nenhuma moldura nesta categoria.</div>';
+                return;
+            }
+
+            filtered.forEach((cov) => {
+                const card = document.createElement('div');
+                card.className = 'bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between hover:border-slate-700 transition';
+
+                const ratioClass = cov.aspectRatio === '16:9' ? 'aspect-video' : (cov.aspectRatio === '1:1' ? 'aspect-square' : 'aspect-[4/3]');
+                const hasImg = Boolean(cov.hasImage && cov.imageUrl);
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Header do Card -->
+                        <div class="p-3 border-b border-slate-800/80 flex items-start justify-between gap-2">
+                            <div class="space-y-0.5 min-w-0">
+                                <div class="flex items-center gap-1.5 flex-wrap">
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-bold uppercase">${cov.category}</span>
+                                    <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">${cov.aspectRatio}</span>
+                                    ${hasImg ? 
+                                        '<span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold">✅ Imagem Ativa</span>' : 
+                                        '<span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">⚠️ Vetor Padrão</span>'
+                                    }
+                                </div>
+                                <h3 class="text-xs font-bold text-white truncate pt-1" title="${cov.title}">${cov.title}</h3>
+                                <p class="text-[10px] text-slate-400 line-clamp-1" title="${cov.location}">${cov.location}</p>
+                            </div>
+                            <span class="text-lg shrink-0">${cov.defaultIcon || '🖼️'}</span>
+                        </div>
+
+                        <!-- Área de Prévia da Imagem / Placeholder -->
+                        <div class="relative w-full ${ratioClass} bg-slate-950 flex items-center justify-center overflow-hidden group">
+                            ${hasImg ? `
+                                <img src="${cov.imageUrl}?t=${Date.now()}" alt="${cov.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <div class="card-overlay absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-white">
+                                    <button onclick="triggerCoverFileInput('${cov.id}')" class="bg-slate-900/90 text-white text-[10px] px-2.5 py-1.5 rounded-lg border border-slate-700 hover:border-amber-400 transition font-medium">Trocar Imagem</button>
+                                </div>
+                            ` : `
+                                <div class="w-full h-full bg-gradient-to-br ${cov.placeholderBg || 'from-slate-900 to-slate-950'} flex flex-col items-center justify-center p-4 text-center">
+                                    <span class="text-3xl mb-1 opacity-80">${cov.defaultIcon || '🎨'}</span>
+                                    <span class="text-[11px] font-bold text-slate-300">Moldura Aguardando Imagem</span>
+                                    <span class="text-[9px] text-slate-400 mt-0.5">Vetor e gradiente padrão ativos no app</span>
+                                </div>
+                            `}
+                            <div class="absolute bottom-1 right-1.5 text-[9px] font-mono text-slate-400 bg-slate-950/80 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                                ${cov.targetFile}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rodapé com Ações -->
+                    <div class="p-3 border-t border-slate-800/80 space-y-2 bg-slate-900/50">
+                        <button onclick="openCoverPromptModal('${cov.id}')" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold py-1.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">
+                            <span>✨</span> <span>Prompt IA (${cov.aspectRatio})</span>
+                        </button>
+
+                        <div class="flex items-center gap-1.5">
+                            <input type="file" id="coverFile-${cov.id}" accept="image/*" class="hidden" onchange="handleCoverFileSelect(event, '${cov.id}')">
+                            <button onclick="triggerCoverFileInput('${cov.id}')" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-[10px] font-semibold py-1.5 px-2 rounded-lg border border-slate-700 transition flex items-center justify-center gap-1 cursor-pointer">
+                                <span>📁</span> <span>Upload</span>
+                            </button>
+                            <button onclick="pasteCoverFromClipboard('${cov.id}')" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-[10px] font-semibold py-1.5 px-2 rounded-lg border border-slate-700 transition flex items-center justify-center gap-1 cursor-pointer" title="Colar do Clipboard (Ctrl+V)">
+                                <span>📋</span> <span>Colar</span>
+                            </button>
+                            ${hasImg ? `
+                                <button onclick="removeCoverImage('${cov.id}')" class="bg-rose-950/40 hover:bg-rose-900/60 border border-rose-800/60 text-rose-300 text-[10px] font-semibold py-1.5 px-2 rounded-lg transition" title="Remover e voltar para o vetor padrão">
+                                    🗑️
+                                </button>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        function triggerCoverFileInput(coverId) {
+            const input = document.getElementById(`coverFile-${coverId}`);
+            if (input) input.click();
+        }
+
+        function handleCoverFileSelect(event, coverId) {
+            const file = event.target.files[0];
+            if (file) processCoverUpload(file, coverId);
+        }
+
+        async function pasteCoverFromClipboard(coverId) {
+            try {
+                const clipboardItems = await navigator.clipboard.read();
+                for (const item of clipboardItems) {
+                    const imageType = item.types.find(type => type.startsWith('image/'));
+                    if (imageType) {
+                        const blob = await item.getType(imageType);
+                        const file = new File([blob], `${coverId}.png`, { type: imageType });
+                        processCoverUpload(file, coverId);
+                        return;
+                    }
+                }
+                showToast('Nenhuma imagem no clipboard. Copie a imagem antes (Ctrl+C).', 'error');
+            } catch (err) {
+                showToast('Erro ao ler clipboard: ' + err.message + '. Use o botão Upload.', 'error');
+            }
+        }
+
+        async function processCoverUpload(file, coverId) {
+            const cov = appCovers.find(c => c.id === coverId);
+            if (!cov) return;
+
+            showToast(`Salvando capa para "${cov.title}"...`, 'info');
+
+            const filename = cov.targetFile || `${coverId}.png`;
+            const reader = new FileReader();
+            reader.onload = async (e) => {
+                try {
+                    const res = await fetch('/api/admin/upload-cover-image', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            coverId,
+                            base64Data: e.target.result,
+                            filename
+                        })
+                    });
+                    if (!res.ok) throw new Error('Falha no servidor ao salvar imagem');
+                    const data = await res.json();
+                    if (data.success) {
+                        showToast(`✅ Capa salva com sucesso em assets/img/temas/${filename}!`, 'success');
+                        await loadAppCovers();
+                    } else {
+                        showToast('Erro ao salvar: ' + (data.error || 'Desconhecido'), 'error');
+                    }
+                } catch(err) {
+                    showToast('Erro na requisição: ' + err.message, 'error');
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function removeCoverImage(coverId) {
+            if (!confirm('Deseja remover esta imagem personalizada e voltar ao vetor/gradiente padrão do app?')) return;
+            try {
+                const res = await fetch('/api/admin/remove-cover-image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ coverId })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    showToast('✅ Imagem removida. Vetor padrão reativado!', 'success');
+                    await loadAppCovers();
+                } else {
+                    showToast('Erro ao remover: ' + data.error, 'error');
+                }
+            } catch (err) {
+                showToast('Erro: ' + err.message, 'error');
+            }
+        }
+
+        function openCoverPromptModal(coverId) {
+            const cov = appCovers.find(c => c.id === coverId);
+            if (!cov) return;
+            activeCoverModalId = coverId;
+
+            document.getElementById('coverModalTitle').innerText = cov.title;
+            document.getElementById('coverModalRatioBadge').innerText = `📐 Proporção ${cov.aspectRatio}`;
+
+            document.getElementById('coverPromptBing').value = cov.promptBing || '';
+            document.getElementById('coverPromptGemini').value = cov.promptGemini || '';
+            document.getElementById('coverPromptMidjourney').value = cov.promptMidjourney || '';
+            document.getElementById('coverPromptDalle').value = cov.promptDalle || '';
+
+            switchCoverPromptTab('bing');
+            document.getElementById('coverPromptModal').classList.remove('hidden');
+        }
+
+        function closeCoverPromptModal() {
+            document.getElementById('coverPromptModal').classList.add('hidden');
+            activeCoverModalId = null;
+        }
+
+        function switchCoverPromptTab(tabName) {
+            const tabs = ['bing', 'gemini', 'midjourney', 'dalle'];
+            const activeClasses = {
+                bing: ['bg-sky-600/30', 'text-sky-300', 'border-sky-500/50', 'shadow-sm', 'font-bold'],
+                gemini: ['bg-emerald-600/30', 'text-emerald-300', 'border-emerald-500/50', 'shadow-sm', 'font-bold'],
+                midjourney: ['bg-amber-600/30', 'text-amber-300', 'border-amber-500/50', 'shadow-sm', 'font-bold'],
+                dalle: ['bg-purple-600/30', 'text-purple-300', 'border-purple-500/50', 'shadow-sm', 'font-bold']
+            };
+            const inactiveClasses = ['text-slate-400', 'hover:text-slate-200', 'hover:bg-slate-800/60', 'border-transparent', 'font-semibold'];
+
+            tabs.forEach(t => {
+                const btn = document.getElementById(`coverTabBtn-${t}`);
+                const content = document.getElementById(`coverTabContent-${t}`);
+                if (!btn || !content) return;
+
+                if (t === tabName) {
+                    content.classList.remove('hidden');
+                    btn.className = `prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs transition border ${activeClasses[t].join(' ')}`;
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = `prompt-tab-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs transition border ${inactiveClasses.join(' ')}`;
+                }
+            });
+        }
+
         function showToast(msg, type = 'success') {
             const toast = document.getElementById('toast');
             toast.innerText = msg;
@@ -1785,7 +2377,10 @@ DIRETRIZES DE EXECUÇÃO:
 
         // Fechar modal ao teclar ESC
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closePromptModal();
+            if (e.key === 'Escape') {
+                closePromptModal();
+                closeCoverPromptModal();
+            }
         });
 
         // Inicializar
