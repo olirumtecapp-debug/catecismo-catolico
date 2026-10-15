@@ -105,13 +105,83 @@
         .mariana-gradient { background: linear-gradient(135deg, #234638 0%, #1A362B 100%); }
         .vinho-gradient { background: linear-gradient(135deg, #234638 0%, #1A362B 100%); }
         .card-shadow { box-shadow: 0 4px 20px -2px rgba(47, 55, 42, 0.06); }
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #F9F8F6; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
-        .no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .modal-backdrop { background: rgba(15, 34, 62, 0.6); backdrop-filter: blur(4px); }
+        /* Scrollbars Elegantes, Ultra-Discretas e Transparentes para Toda a Aplicação */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+        }
+        *::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        *::-webkit-scrollbar-track {
+            background: transparent !important;
+        }
+        *::-webkit-scrollbar-thumb {
+            background-color: rgba(148, 163, 184, 0.3) !important;
+            border-radius: 9999px !important;
+        }
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(148, 163, 184, 0.6) !important;
+        }
+        *::-webkit-scrollbar-corner {
+            background: transparent !important;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; height: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent !important; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.35) !important; border-radius: 9999px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.65) !important; }
+        .custom-scrollbar { scrollbar-width: thin; scrollbar-color: rgba(148, 163, 184, 0.35) transparent; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+        .no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
+
+        /* Todos os Cards Arredondados e Modais: Eliminação Total da Barrinha Cinza / Protrusão */
+        .rounded-3xl,
+        .rounded-2xl,
+        .rounded-\[22px\],
+        .rounded-\[20px\],
+        #modal-container > div,
+        #saint-modal > div {
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
+        }
+        .rounded-3xl::-webkit-scrollbar,
+        .rounded-2xl::-webkit-scrollbar,
+        .rounded-\[22px\]::-webkit-scrollbar,
+        .rounded-\[20px\]::-webkit-scrollbar,
+        #modal-container > div::-webkit-scrollbar,
+        #saint-modal > div::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        /* Posicionamento 100% Centralizado e Rolagem Perfeita para Todos os Modais */
+        #modal-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
+        }
+        #modal-container.hidden { display: none !important; }
+        #modal-container:not(.hidden) {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        #modal-container::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+        #modal-container > div {
+            margin: auto !important;
+        }
+        .modal-backdrop { background: rgba(15, 34, 62, 0.65); backdrop-filter: blur(6px); }
 
         /* Ilustração do Sol Nascente, Capela e Colinas (Hero Art) */
         .hero-art {
@@ -385,14 +455,15 @@
         html.dark .card-shadow {
             box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.55) !important;
         }
+        html.dark ::-webkit-scrollbar-track,
         html.dark .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0c1410 !important;
+            background: transparent !important;
         }
         html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #24372c !important;
+            background: rgba(53, 80, 65, 0.45) !important;
         }
         html.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #355041 !important;
+            background: rgba(53, 80, 65, 0.8) !important;
         }
 
         /* Mapeamento de utilitários Tailwind dark:bg-slate-* para o Santuário */
@@ -11229,7 +11300,7 @@ https://catecismo.creativeam.com.br
             const email = AppState.cloudSyncEmail || '';
 
             modal.innerHTML = `
-                <div class="bg-white dark:bg-slate-800 w-full max-w-lg rounded-3xl p-6 sm:p-8 space-y-6 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
+                <div class="bg-white dark:bg-slate-800 w-full max-w-lg rounded-3xl p-6 sm:p-7 space-y-5 max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left my-auto">
                     <button onclick="closeModal()" title="Fechar" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl font-bold text-lg transition cursor-pointer">✕</button>
 
                     <!-- Cabeçalho do Modal -->
@@ -11315,6 +11386,7 @@ https://catecismo.creativeam.com.br
                 </div>
             `;
             modal.classList.remove('hidden');
+            modal.classList.add('flex');
         }
         window.openMeuEspacoModal = openMeuEspacoModal;
 
