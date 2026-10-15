@@ -17,17 +17,20 @@
     <meta name="twitter:description" content="Liturgia Diária, Santo do Dia, Novenas Católicas, Bíblia Sagrada e Catecismo em um só lugar.">
     <meta name="twitter:image" content="/icon-512.png">
     <!-- PWA & Ícones de Atalho para Smartphone e Desktop -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#1e293b">
+    <link rel="manifest" href="/manifest.json?v=3">
+    <meta name="theme-color" content="#F7F5EF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#16231c" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#234638">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Catecismo">
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=2">
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=2">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=3">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=3">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
     <title>CATECISMO — Conhecer, compreender e viver a fé</title>
     <script src="assets/vendor/tailwind.js" onerror="var s=document.createElement('script');s.src='https://cdn.tailwindcss.com';document.head.appendChild(s);"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -691,7 +694,17 @@
             transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Supressão de espaçamento quando alertas estão vazios */
+        /* Supressão rigorosa de espaçamento quando alertas estão vazios */
+        #home-alerts-slot.hidden,
+        #home-alerts-slot:empty,
+        #home-alerts-slot:not(:has(> div:not(:empty))) {
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 0 !important;
+            max-height: 0 !important;
+            overflow: hidden !important;
+        }
         #home-broadcast-alert-container:empty,
         #home-apoio-alert-container:empty {
             display: none !important;
@@ -750,6 +763,24 @@
     </style>
 </head>
 <body class="h-full flex flex-col custom-scrollbar overflow-hidden">
+
+    <!-- Splash Screen Editorial Sereno (Abertura Rápida com Logo Oficial e Cores Canônicas) -->
+    <div id="app-splash-screen" class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#F7F5EF] dark:bg-[#16231c] transition-opacity duration-300 pointer-events-none select-none">
+        <div class="flex flex-col items-center gap-3.5 px-6 max-w-sm text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+                <img src="assets/img/logo-simbolo.png" alt="Catecismo Católico" class="w-full h-full object-contain filter drop-shadow-xs">
+            </div>
+            <div>
+                <strong class="block font-serif text-2xl sm:text-3xl font-bold text-cgreen dark:text-csage tracking-wider leading-none">CATECISMO</strong>
+                <span class="block text-[10px] sm:text-xs font-bold text-cgold tracking-[0.25em] uppercase mt-1.5">PLATAFORMA CATÓLICA</span>
+            </div>
+            <div class="mt-4 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cgreen/70 dark:bg-csage/70 animate-pulse"></span>
+                <span class="w-2 h-2 rounded-full bg-cgreen/70 dark:bg-csage/70 animate-pulse" style="animation-delay: 150ms"></span>
+                <span class="w-2 h-2 rounded-full bg-cgreen/70 dark:bg-csage/70 animate-pulse" style="animation-delay: 300ms"></span>
+            </div>
+        </div>
+    </div>
 
     <!-- Toast Notification Container -->
     <div id="toast-container" class="fixed top-5 right-5 z-[99999] flex flex-col gap-3 pointer-events-none"></div>
@@ -5067,6 +5098,7 @@
                 });
 
                 const mainView = document.getElementById('main-view');
+                if (mainView) mainView.scrollTop = 0;
                 const titleEl = document.getElementById('page-title');
                 const subtitleEl = document.getElementById('page-subtitle');
 
@@ -6667,13 +6699,16 @@ https://catecismo.creativeam.com.br`;
                 const isNewUser = compL === 0;
                 const userStreak = AppState.streak || 1;
 
+                const broadcastBannerHtml = (ContactManager && ContactManager.renderHomeBroadcastBanner ? ContactManager.renderHomeBroadcastBanner() : '').trim();
+                const hasInitialAlert = !!broadcastBannerHtml;
+
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto flex flex-col gap-4 sm:gap-5">
+                    <div class="max-w-[1190px] w-full mx-auto flex flex-col gap-3.5 sm:gap-4">
                         <!-- Containers de Alerta & Notificações (Caixa Postal & Apoio) -->
-                        <div id="home-broadcast-alert-container">
-                            ${ContactManager.renderHomeBroadcastBanner ? ContactManager.renderHomeBroadcastBanner() : ''}
+                        <div id="home-alerts-slot" class="${hasInitialAlert ? 'flex' : 'hidden'} flex-col gap-3">
+                            <div id="home-broadcast-alert-container">${broadcastBannerHtml}</div>
+                            <div id="home-apoio-alert-container"></div>
                         </div>
-                        <div id="home-apoio-alert-container"></div>
 
                         <!-- Orientação / Breadcrumb -->
                         <div class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8e8e83] dark:text-slate-400">
@@ -13031,6 +13066,22 @@ https://catecismo.creativeam.com.br
                 }
             },
 
+            syncAlertSlot() {
+                const slot = document.getElementById('home-alerts-slot');
+                if (!slot) return;
+                const bannerCont = document.getElementById('home-broadcast-alert-container');
+                const apoioCont = document.getElementById('home-apoio-alert-container');
+                const hasBroadcast = bannerCont && !!bannerCont.innerHTML.trim();
+                const hasApoio = apoioCont && !!apoioCont.innerHTML.trim();
+                if (hasBroadcast || hasApoio) {
+                    slot.classList.remove('hidden');
+                    slot.classList.add('flex');
+                } else {
+                    slot.classList.add('hidden');
+                    slot.classList.remove('flex');
+                }
+            },
+
             dismissHomeBroadcast(id) {
                 this.markBroadcastAsRead(id);
                 const alertEl = document.getElementById('home-broadcast-alert');
@@ -13038,14 +13089,20 @@ https://catecismo.creativeam.com.br
                     alertEl.style.transition = 'all 0.3s ease';
                     alertEl.style.opacity = '0';
                     alertEl.style.transform = 'translateY(-10px)';
-                    setTimeout(() => alertEl.remove(), 300);
+                    setTimeout(() => {
+                        alertEl.remove();
+                        const bannerCont = document.getElementById('home-broadcast-alert-container');
+                        if (bannerCont) bannerCont.innerHTML = '';
+                        this.syncAlertSlot();
+                    }, 300);
                 }
             },
 
             refreshBanner() {
                 const bannerCont = document.getElementById('home-broadcast-alert-container');
                 if (bannerCont) {
-                    bannerCont.innerHTML = this.renderHomeBroadcastBanner();
+                    bannerCont.innerHTML = (this.renderHomeBroadcastBanner() || '').trim();
+                    this.syncAlertSlot();
                 }
             },
 
@@ -15591,6 +15648,8 @@ https://catecismo.creativeam.com.br
                     localStorage.setItem('theme', theme);
                 } catch(e) {}
                 this.updateButtons();
+                const metaThemes = document.querySelectorAll('meta[name="theme-color"]');
+                metaThemes.forEach(m => m.setAttribute('content', isDark ? '#16231c' : '#F7F5EF'));
 
                 // Sincroniza imediatamente com o iframe de Novenas
                 try {
@@ -15995,6 +16054,7 @@ https://catecismo.creativeam.com.br
                 if (el) el.remove();
                 const alertEl = document.getElementById('home-apoio-alert-container');
                 if (alertEl) alertEl.innerHTML = '';
+                if (window.ContactManager && ContactManager.syncAlertSlot) ContactManager.syncAlertSlot();
             },
 
             markSupported(days = 90) {
@@ -16006,6 +16066,7 @@ https://catecismo.creativeam.com.br
                 if (el) el.remove();
                 const alertEl = document.getElementById('home-apoio-alert-container');
                 if (alertEl) alertEl.innerHTML = '';
+                if (window.ContactManager && ContactManager.syncAlertSlot) ContactManager.syncAlertSlot();
             },
 
             canShowPrompt() {
@@ -16045,6 +16106,7 @@ https://catecismo.creativeam.com.br
                         </div>
                     </div>
                 `;
+                if (window.ContactManager && ContactManager.syncAlertSlot) ContactManager.syncAlertSlot();
             }
         };
         window.ApoioManager = ApoioManager;
@@ -16327,6 +16389,17 @@ https://catecismo.creativeam.com.br
             }
             router.navigate('home');
             ContactManager.init();
+
+            // Suave transição de saída da tela de abertura editorial
+            const splash = document.getElementById('app-splash-screen');
+            if (splash) {
+                setTimeout(() => {
+                    splash.style.opacity = '0';
+                    setTimeout(() => {
+                        if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+                    }, 350);
+                }, 200);
+            }
 
             // Sincronização automática em segundo plano quando a janela/aba volta a ficar ativa
             document.addEventListener('visibilitychange', () => {

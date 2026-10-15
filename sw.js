@@ -1,6 +1,6 @@
 // Service Worker Canônico do Portal Catecismo Católico
 // Estratégia: Network-First garantido com fallback resiliente para offline
-const CACHE_NAME = 'catecismo-v2-' + Date.now();
+const CACHE_NAME = 'catecismo-v3-' + Date.now();
 
 self.addEventListener('install', e => {
     self.skipWaiting();
