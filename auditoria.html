@@ -240,6 +240,9 @@
                 <button onclick="filterCoversCategory('all')" id="btn-covcat-all" class="px-3 py-1.5 rounded-xl font-bold bg-amber-500 text-slate-950 transition whitespace-nowrap shadow-sm">
                     Todas as Molduras (21)
                 </button>
+                <button onclick="filterCoversCategory('liturgia')" id="btn-covcat-liturgia" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    ☀️ Liturgia Diária
+                </button>
                 <button onclick="filterCoversCategory('destaques')" id="btn-covcat-destaques" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
                     🌟 Destaques &amp; Heros
                 </button>
@@ -2125,7 +2128,7 @@ DIRETRIZES DE EXECUÇÃO:
 
         function filterCoversCategory(cat) {
             currentCoverCatFilter = cat;
-            const categories = ['all', 'destaques', 'rotina_diaria', 'aprender', 'rezar', 'santos', 'sacramentos', 'causas', 'desafios'];
+            const categories = ['all', 'liturgia', 'destaques', 'rotina_diaria', 'aprender', 'rezar', 'santos', 'sacramentos', 'causas', 'desafios'];
             categories.forEach(c => {
                 const btn = document.getElementById(`btn-covcat-${c}`);
                 if (!btn) return;
