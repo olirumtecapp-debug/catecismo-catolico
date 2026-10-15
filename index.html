@@ -5866,7 +5866,7 @@
                 const isCompletedToday = progress.includes(currentDay);
 
                 container.innerHTML = `
-                    <div class="p-4 sm:p-5 rounded-3xl bg-linear-to-r from-indigo-900 via-purple-900 to-amber-950 text-white shadow-lg border border-amber-300/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in fade-in duration-300 relative">
+                    <div class="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-indigo-900 via-purple-900 to-amber-950 text-white shadow-lg border border-amber-300/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in fade-in duration-300 relative">
                         ${isSimulated ? `
                             <div class="absolute -top-2.5 left-6 px-2.5 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-rose-600 text-white shadow-xs">
                                 🛠️ Modo de Teste ADM Simulado: ${this.simulatedDate}
@@ -5933,7 +5933,7 @@
                         </div>
 
                         <!-- A Coroa do Advento (Velas Acessas Dinâmicas) -->
-                        <div class="bg-linear-to-r from-purple-950 via-slate-900 to-amber-950 p-4 sm:p-5 rounded-2xl border border-amber-400/40 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="bg-gradient-to-r from-purple-950 via-slate-900 to-amber-950 p-4 sm:p-5 rounded-2xl border border-amber-400/40 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div class="space-y-1 text-center sm:text-left">
                                 <span class="text-[10px] font-bold text-amber-300 uppercase tracking-widest block">A Coroa do Advento</span>
                                 <h4 class="font-serif font-bold text-base text-amber-100">Semana ${currentWeek} de 4 • ${currentWeek >= 3 ? 'Alegria de Gaudete' : 'Vigilância e Conversão'}</h4>
@@ -7633,7 +7633,7 @@ https://catecismo.creativeam.com.br`;
                                 <button onclick="window.switchLiturgiaTab('${lit.secondReading ? 'segunda' : 'salmo'}', true)" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer self-start">
                                     <span>←</span> <span>${lit.secondReading ? '2ª Leitura' : 'Salmo'}</span>
                                 </button>
-                                <button onclick="router.navigate('oracao')" class="px-4 py-2.5 rounded-xl bg-linear-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:to-amber-900 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                                <button onclick="router.navigate('oracao')" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:to-amber-900 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-md cursor-pointer">
                                     <span>🙏</span> <span>Fazer Leitura Orante (Lectio Divina) deste Evangelho</span> <span>→</span>
                                 </button>
                             </div>
@@ -8059,12 +8059,12 @@ https://catecismo.creativeam.com.br`;
                             <div class="flex flex-wrap gap-2 pt-2 border-t border-cline dark:border-slate-700">
                                 <button onclick="router.navigate('catecismo')" class="px-4 py-2 rounded-full text-xs font-semibold transition cursor-pointer ${!filterCat ? 'bg-cgreen text-white shadow-xs' : 'bg-[#f3f2ed] hover:bg-[#e8e5dc] text-slate-700 dark:bg-slate-700 dark:text-slate-200'}">Todos (${CatecismContentProvider.modules.length})</button>
                                 ${CatecismContentProvider.categories.map(c => {
-                                    const pillarIcons = { 'credo': '✝️', 'sacramentos': '🍷', 'mandamentos': '📜', 'oracao': '🙏' };
+                                    const pillarIcons = { 'creio': '🛡️', 'celebro': '🍷', 'vivo': '🌿', 'rezo': '🕊️' };
                                     const icon = pillarIcons[c.id] || '📖';
                                     return `
                                         <button onclick="router.navigate('catecismo', '${c.id}')" class="px-4 py-2 rounded-full text-xs font-semibold transition cursor-pointer flex items-center gap-1.5 ${filterCat === c.id ? 'bg-cgreen text-white shadow-xs' : 'bg-[#f3f2ed] hover:bg-[#e8e5dc] text-slate-700 dark:bg-slate-700 dark:text-slate-200'}">
                                             <span>${icon}</span>
-                                            <span>${c.title.split('—')[0]}</span>
+                                            <span>${c.title.split('—')[0].trim()}</span>
                                         </button>
                                     `;
                                 }).join('')}
@@ -8074,20 +8074,33 @@ https://catecismo.creativeam.com.br`;
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                             ${filteredModules.map(mod => {
                                 const isDone = AppState.completedLessons.includes(mod.id);
-                                const pillarIcons = { 'credo': '✝️', 'sacramentos': '🍷', 'mandamentos': '📜', 'oracao': '🙏' };
+                                const pillarIcons = { 'creio': '🛡️', 'celebro': '🍷', 'vivo': '🌿', 'rezo': '🕊️' };
+                                const pillarNames = { 'creio': 'Pilar I: Creio', 'celebro': 'Pilar II: Celebro', 'vivo': 'Pilar III: Vivo', 'rezo': 'Pilar IV: Rezo' };
+                                const pillarBgMap = {
+                                    'creio': './assets/img/temas/card-pilar-creio.png',
+                                    'celebro': './assets/img/temas/card-pilar-celebro.png',
+                                    'vivo': './assets/img/temas/card-pilar-vivo.png',
+                                    'rezo': './assets/img/temas/card-pilar-rezo.png'
+                                };
+                                const pilarBg = pillarBgMap[mod.categoryId] || './assets/img/temas/mini-quatro-pilares.png';
                                 const icon = pillarIcons[mod.categoryId] || '📖';
+
                                 return `
-                                    <div class="bg-[#fffefa] dark:bg-slate-800 rounded-[20px] p-6 border border-cline dark:border-slate-700 shadow-[0_5px_18px_rgba(47,55,42,0.035)] hover:border-cgreen/40 transition flex flex-col justify-between space-y-4 relative group">
-                                        ${isDone ? '<div class="absolute -top-3 -right-3 w-8 h-8 bg-emerald-500 rounded-full text-white flex items-center justify-center font-bold shadow-md">✓</div>' : ''}
-                                        <div class="space-y-2.5">
-                                            <div class="flex items-center justify-between gap-2">
+                                    <div class="relative overflow-hidden bg-[#fffefa] dark:bg-slate-800 rounded-[22px] p-6 sm:p-7 border border-cline dark:border-slate-700 shadow-[0_5px_18px_rgba(47,55,42,0.035)] hover:border-cgreen/50 dark:hover:border-csage/50 transition-all flex flex-col justify-between space-y-4 group">
+                                        <img src="${pilarBg}" alt="${mod.title}" class="app-cover-img absolute top-0 right-0 w-64 h-64 object-cover opacity-20 dark:opacity-15 pointer-events-none rounded-bl-full group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'" />
+                                        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent dark:from-slate-800/95 dark:via-slate-800/85 dark:to-transparent pointer-events-none"></div>
+                                        ${isDone ? '<div class="absolute top-4 right-4 z-20 w-7 h-7 bg-emerald-600 rounded-full text-white flex items-center justify-center font-bold text-xs shadow-md">✓</div>' : ''}
+                                        <div class="relative z-10 space-y-2.5">
+                                            <div class="flex items-center gap-2">
                                                 <span class="px-2.5 py-0.5 bg-csage dark:bg-slate-700 text-cgreen dark:text-csage border border-cline dark:border-slate-600 rounded-full text-[10px] font-bold tracking-wider">${mod.ccc}</span>
-                                                <span class="text-xs">${icon}</span>
+                                                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-1">${icon} ${pillarNames[mod.categoryId] || ''}</span>
                                             </div>
                                             <h3 class="font-serif font-semibold text-cgreen dark:text-white leading-tight lesson-reading-title group-hover:text-cgreen-light transition" style="font-size: calc(1.25rem * var(--reading-scale, 1)) !important;">${mod.title}</h3>
                                             <p class="text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2 lesson-reading-subtext text-xs sm:text-sm">${mod.description}</p>
                                         </div>
-                                        <button onclick="openLessonModal('${mod.id}')" class="w-full py-2.5 ${isDone ? 'bg-[#ecefe7] hover:bg-csage text-cgreen font-semibold' : 'bg-cgreen hover:bg-cgreen-light text-white font-semibold'} rounded-full text-xs sm:text-sm transition cursor-pointer">${isDone ? '✓ Revisar Módulo' : 'Estudar Módulo →'}</button>
+                                        <div class="relative z-10 pt-2 border-t border-cline/60 dark:border-slate-700/60">
+                                            <button onclick="openLessonModal('${mod.id}')" class="w-full py-2.5 ${isDone ? 'bg-[#ecefe7] hover:bg-csage text-cgreen font-semibold' : 'bg-cgreen hover:bg-cgreen-light text-white font-semibold'} rounded-full text-xs sm:text-sm transition cursor-pointer shadow-xs">${isDone ? '✓ Revisar Módulo' : 'Estudar Módulo →'}</button>
+                                        </div>
                                     </div>
                                 `;
                             }).join('')}
@@ -8344,7 +8357,7 @@ https://catecismo.creativeam.com.br`;
                                 <div class="mt-5 space-y-4">
                                     ${biography ? `<div><h4 class="font-serif text-lg font-bold text-mariana dark:text-amber-200">Vida e testemunho</h4><p class="text-sm text-slate-700 dark:text-slate-200 leading-7 whitespace-pre-line mt-2">${esc(biography)}</p></div>` : ''}
                                     ${reflection ? `<div class="bg-amber-50/70 dark:bg-slate-900/60 rounded-2xl p-5 border border-amber-200/60 dark:border-slate-700/80"><h4 class="font-serif text-base font-bold text-amber-900 dark:text-amber-300">Reflexão Espiritual</h4><p class="text-sm text-amber-900 dark:text-amber-100 italic leading-7 mt-2">${esc(reflection)}</p></div>` : ''}
-                                    ${prayer ? `<div class="bg-linear-to-br from-amber-50 to-orange-50/50 dark:from-slate-900 dark:to-amber-950/40 rounded-2xl p-5 sm:p-6 border border-amber-300/80 dark:border-amber-700/60 shadow-xs"><div class="flex items-center gap-2 mb-2"><span class="text-base">🙏</span><h4 class="font-serif text-base font-bold text-amber-950 dark:text-amber-200">Oração ao Santo</h4></div><p class="text-sm text-slate-800 dark:text-slate-200 italic leading-relaxed whitespace-pre-line">${esc(prayer)}</p></div>` : ''}
+                                    ${prayer ? `<div class="bg-gradient-to-br from-amber-50 to-orange-50/50 dark:from-slate-900 dark:to-amber-950/40 rounded-2xl p-5 sm:p-6 border border-amber-300/80 dark:border-amber-700/60 shadow-xs"><div class="flex items-center gap-2 mb-2"><span class="text-base">🙏</span><h4 class="font-serif text-base font-bold text-amber-950 dark:text-amber-200">Oração ao Santo</h4></div><p class="text-sm text-slate-800 dark:text-slate-200 italic leading-relaxed whitespace-pre-line">${esc(prayer)}</p></div>` : ''}
                                 </div>
                             </article>`;
                     }).join('');
@@ -11203,7 +11216,107 @@ https://catecismo.creativeam.com.br
                 if (mobileBtn) mobileBtn.style.display = 'none';
             }
         }
-        document.addEventListener('DOMContentLoaded', hideInstallButtonsIfInstalled);
+        function openMeuEspacoModal() {
+            const modal = document.getElementById('modal-container');
+            if (!modal) return;
+
+            const streak = AppState.streak || 1;
+            const xp = AppState.xp || 0;
+            const liturgiasCount = Object.keys(AppState.liturgicalRead || {}).length;
+            const rosariosCount = (AppState.completedRosaries || []).length;
+            const lessonsCount = (AppState.completedLessons || []).length;
+            const achCount = (AppState.unlockedAchievements || []).length;
+            const email = AppState.cloudSyncEmail || '';
+
+            modal.innerHTML = `
+                <div class="bg-white dark:bg-slate-800 w-full max-w-lg rounded-3xl p-6 sm:p-8 space-y-6 max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-200 dark:border-slate-700 relative text-left">
+                    <button onclick="closeModal()" title="Fechar" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl font-bold text-lg transition cursor-pointer">✕</button>
+
+                    <!-- Cabeçalho do Modal -->
+                    <div class="flex items-center gap-3.5 pb-4 border-b border-slate-100 dark:border-slate-700">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl shrink-0 shadow-xs">
+                            ✦
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-cgreen dark:text-white">Sua Jornada Espiritual</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Progresso de oração, estudo e virtudes com a Igreja</p>
+                        </div>
+                    </div>
+
+                    <!-- Card de Destaque da Ofensiva / Streak -->
+                    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-900 via-teal-900 to-[#12281e] text-white p-5 sm:p-6 shadow-md border border-emerald-500/30">
+                        <div class="relative z-10 flex items-center justify-between gap-4">
+                            <div>
+                                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-300 block mb-1">Constância na Oração</span>
+                                <h4 class="font-serif text-2xl sm:text-3xl font-bold text-white flex items-center gap-2">
+                                    <span>🔥</span> <span>${streak} ${streak === 1 ? 'dia de oração' : 'dias consecutivos'}</span>
+                                </h4>
+                                <p class="text-xs text-emerald-100/90 mt-1 leading-relaxed">
+                                    ${streak > 3 ? 'Bendito seja Deus por sua perseverança diária na fé!' : 'Reze e estude hoje para continuar sua caminhada com Cristo.'}
+                                </p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="text-[10px] uppercase font-bold tracking-wider text-amber-300 block">Experiência</span>
+                                <span class="font-mono font-bold text-xl text-amber-300">⚡ ${xp} XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Métricas da Vida Cristã -->
+                    <div class="grid grid-cols-2 gap-3 text-left">
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">📖 Liturgia Diária</span>
+                            <strong class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100 block mt-0.5">${liturgiasCount} lidas</strong>
+                            <span class="text-[10px] text-slate-500">dias com a Palavra</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">📿 Santo Terço</span>
+                            <strong class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100 block mt-0.5">${rosariosCount} rezados</strong>
+                            <span class="text-[10px] text-slate-500">mistérios meditados</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">📜 Catecismo</span>
+                            <strong class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100 block mt-0.5">${lessonsCount} de 20</strong>
+                            <span class="text-[10px] text-slate-500">módulos concluídos</span>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">🏆 Medalhas</span>
+                            <strong class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100 block mt-0.5">${achCount} conquistas</strong>
+                            <span class="text-[10px] text-slate-500">marcos de perseverança</span>
+                        </div>
+                    </div>
+
+                    <!-- Status de Sincronização em Nuvem -->
+                    <div class="p-3.5 rounded-2xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200/60 dark:border-blue-800/40 flex items-center justify-between gap-3 text-xs">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <span class="text-base text-blue-600 dark:text-blue-400">☁️</span>
+                            <div class="min-w-0">
+                                <strong class="block text-blue-950 dark:text-blue-100 truncate">${email ? email : 'Backup em nuvem não conectado'}</strong>
+                                <span class="text-[11px] text-blue-700/80 dark:text-blue-300/80">${email ? 'Seu progresso está salvo e protegido na nuvem' : 'Conecte seu e-mail para não perder seus dados'}</span>
+                            </div>
+                        </div>
+                        <button onclick="closeModal(); CloudSyncManager.openCloudStatusModal();" class="shrink-0 px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] transition cursor-pointer">
+                            ${email ? 'Gerenciar' : 'Conectar'}
+                        </button>
+                    </div>
+
+                    <!-- Atalhos de Navegação -->
+                    <div class="pt-2 border-t border-slate-100 dark:border-slate-700/60 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        <button onclick="closeModal(); router.navigate('conquistas');" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 font-bold text-xs transition cursor-pointer text-center">
+                            🏆 Conquistas
+                        </button>
+                        <button onclick="closeModal(); router.navigate('diario');" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 font-bold text-xs transition cursor-pointer text-center">
+                            📖 Diário
+                        </button>
+                        <button onclick="closeModal(); router.navigate('liturgia');" class="p-2.5 rounded-xl col-span-2 sm:col-span-1 bg-cgreen hover:bg-cgreen-light text-white font-bold text-xs transition cursor-pointer text-center">
+                            ☀️ Liturgia de Hoje
+                        </button>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+        window.openMeuEspacoModal = openMeuEspacoModal;
 
         function openInstallModal() {
             if (isAppAlreadyInstalled()) {
