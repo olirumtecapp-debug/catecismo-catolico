@@ -847,143 +847,149 @@
                 </div>
             </header>
 
-            <!-- Mobile Drawer Navigation -->
-            <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden lg:hidden">
-                <div class="w-72 h-full bg-white flex flex-col shadow-2xl">
-                    <div class="p-6 border-b border-slate-100 flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl mariana-gradient flex items-center justify-center text-dourado font-serif font-bold text-lg shadow-md border border-dourado/40">✝</div>
-                            <h1 class="font-serif text-xl font-bold text-mariana">CATECISMO</h1>
+            <!-- Mobile Drawer Navigation (Design Editorial Santuário) -->
+            <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden lg:hidden">
+                <div class="w-72 sm:w-80 h-full bg-[#fffefa] dark:bg-[#131d31] text-slate-800 dark:text-slate-100 flex flex-col shadow-2xl border-r border-cline dark:border-slate-800">
+                    <!-- Topo do Drawer com Logo Oficial da Plataforma -->
+                    <div class="p-4 sm:p-5 border-b border-cline dark:border-slate-800 bg-[#fffefa] dark:bg-[#131d31] flex items-center justify-between">
+                        <div class="flex items-center gap-2.5 cursor-pointer" onclick="router.navigate('home'); toggleMobileMenu();">
+                            <div class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shrink-0">
+                                <img src="assets/img/logo-simbolo.png" alt="Catecismo" class="w-full h-full object-contain">
+                            </div>
+                            <div class="min-w-0">
+                                <strong class="block font-serif text-base font-bold text-cgreen dark:text-csage tracking-wide leading-none">CATECISMO</strong>
+                                <small class="block text-[8px] font-bold text-cgold tracking-widest uppercase">PLATAFORMA CATÓLICA</small>
+                            </div>
                         </div>
-                        <button onclick="toggleMobileMenu()" class="text-slate-400 text-xl font-bold">✕</button>
+                        <button onclick="toggleMobileMenu()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-lg font-bold transition cursor-pointer">✕</button>
                     </div>
+
                     <!-- Barra de Acessibilidade & Modo Noturno no Menu Mobile -->
-                    <div class="px-4 py-3 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between gap-2">
+                    <div class="px-4 py-2.5 bg-[#fbf9f4] dark:bg-slate-900/60 border-b border-cline dark:border-slate-800 flex items-center justify-between gap-2">
                         <!-- Fonte -->
-                        <div class="flex items-center gap-1 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl p-1 shadow-2xs">
+                        <div class="flex items-center gap-1 bg-white dark:bg-slate-800 border border-cline dark:border-slate-700 rounded-xl p-1 shadow-2xs">
                             <span class="text-[10px] font-bold text-slate-400 pl-1 uppercase">Fonte:</span>
-                            <button onclick="FontScaleManager.decrease()" class="w-7 h-7 flex items-center justify-center font-bold text-xs bg-slate-100 dark:bg-slate-600 rounded-lg text-slate-700 dark:text-slate-200 cursor-pointer">A-</button>
+                            <button onclick="FontScaleManager.decrease()" class="w-7 h-7 flex items-center justify-center font-bold text-xs bg-slate-50 dark:bg-slate-700 rounded-lg text-slate-700 dark:text-slate-200 cursor-pointer">A-</button>
                             <span class="font-scale-indicator px-1 text-[11px] font-bold font-mono text-slate-600 dark:text-slate-300">100%</span>
-                            <button onclick="FontScaleManager.increase()" class="w-7 h-7 flex items-center justify-center font-bold text-xs bg-slate-100 dark:bg-slate-600 rounded-lg text-slate-700 dark:text-slate-200 cursor-pointer">A+</button>
+                            <button onclick="FontScaleManager.increase()" class="w-7 h-7 flex items-center justify-center font-bold text-xs bg-slate-50 dark:bg-slate-700 rounded-lg text-slate-700 dark:text-slate-200 cursor-pointer">A+</button>
                         </div>
                         <!-- Modo Escuro -->
-                        <button onclick="ThemeManager.toggle()" class="flex-1 py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl text-xs font-bold text-slate-700 dark:text-amber-300 flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer">
+                        <button onclick="ThemeManager.toggle()" class="flex-1 py-2 px-3 bg-white dark:bg-slate-800 border border-cline dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-amber-300 flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer">
                             <span class="theme-toggle-icon">🌙</span>
                             <span class="theme-toggle-label">Modo Noturno</span>
                         </button>
                     </div>
 
-
-                                        <nav class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+                    <nav class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
                         <!-- SEÇÃO 1: VIDA DIÁRIA & LITURGIA -->
                         <div class="space-y-1">
-                            <div class="px-3 pt-1 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+                            <div class="px-3 pt-1 pb-1 text-[10px] font-bold uppercase tracking-wider text-cgold dark:text-amber-400 font-serif flex items-center justify-between">
                                 <span>Vida Diária &amp; Liturgia</span>
-                                <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold">Hoje</span>
+                                <span class="text-[9px] bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 px-1.5 py-0.5 rounded font-bold border border-amber-200 dark:border-amber-800">Hoje</span>
                             </div>
-                            <button onclick="router.navigate('home'); toggleMobileMenu();" data-menu-key="home" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('home'); toggleMobileMenu();" data-menu-key="home" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>☀️</span> <span>Meu Momento</span>
                             </button>
-                            <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="liturgia" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="liturgia" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>✝️</span> <span>Liturgia Diária</span>
                             </button>
-                            <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>☩</span> <span>Santo do Dia</span>
                             </button>
-                            <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span class="text-base shrink-0">🌹</span>
                                     <span class="truncate">Novenas Católicas</span>
                                 </div>
                                 <span id="mobile-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
                             </button>
-                            <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>🙏</span> <span>Oração &amp; Lectio</span>
                             </button>
-                            <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span class="text-base shrink-0">📖</span>
                                     <span class="truncate">Diário Espiritual</span>
                                 </div>
                                 <span id="mobile-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
                             </button>
-                            <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>⛪</span> <span>A Santa Missa</span>
                             </button>
-                            <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>📜</span> <span>Preceitos &amp; Calendário</span>
                             </button>
-                            <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl font-semibold text-amber-900 bg-amber-50/80 hover:bg-amber-100 border border-amber-200/90 transition text-sm">
+                            <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl font-semibold text-amber-900 dark:text-amber-200 bg-amber-50/80 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 border border-amber-200/90 dark:border-amber-800/60 transition text-sm">
                                 <div class="flex items-center gap-3">
                                     <span>📖</span> <span>Escola da Fé</span>
                                 </div>
-                                <span class="text-xs text-amber-700 font-bold flex items-center gap-1">Acessar ↗</span>
+                                <span class="text-xs text-amber-700 dark:text-amber-300 font-bold flex items-center gap-1">Acessar ↗</span>
                             </a>
                         </div>
 
                         <!-- SEÇÃO 2: DOUTRINA & SAGRADA ESCRITURA -->
-                        <div class="space-y-1 pt-1 border-t border-slate-100">
-                            <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between gap-1.5">
+                        <div class="space-y-1 pt-1 border-t border-cline dark:border-slate-800">
+                            <div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-cgold dark:text-amber-400 font-serif flex items-center justify-between gap-1.5">
                                 <span>Doutrina &amp; Sagrada Escritura</span>
-                                <span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-bold shrink-0">Offline</span>
+                                <span class="text-[9px] bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-1.5 py-0.5 rounded font-bold shrink-0 border border-blue-200 dark:border-blue-800">Offline</span>
                             </div>
-                            <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span>📖</span> <span>Bíblia Sagrada</span>
                                 </div>
-                                <span class="text-[9px] uppercase tracking-wider font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100 shrink-0">73 Livros</span>
+                                <span class="text-[9px] uppercase tracking-wider font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-100 dark:border-blue-800 shrink-0">73 Livros</span>
                             </button>
-                            <button onclick="router.navigate('catecismo'); toggleMobileMenu();" data-menu-key="catecismo" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('catecismo'); toggleMobileMenu();" data-menu-key="catecismo" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span>📄</span> <span class="whitespace-nowrap">Catecismo &amp; Doutrina</span>
                                 </div>
-                                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded shrink-0">4 Pilares</span>
+                                <span class="text-[9px] uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded shrink-0">4 Pilares</span>
                             </button>
-                            <button onclick="router.navigate('catecismo-completo'); toggleMobileMenu();" data-menu-key="catecismo-completo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('catecismo-completo'); toggleMobileMenu();" data-menu-key="catecismo-completo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>📚</span> <span>Biblioteca do Catecismo</span>
                             </button>
-                            <button onclick="router.navigate('livros'); toggleMobileMenu();" data-menu-key="livros" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('livros'); toggleMobileMenu();" data-menu-key="livros" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span>📖</span> <span>Livraria Católica</span>
                                 </div>
-                                <span class="text-[9px] px-1.5 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold border border-amber-300 shrink-0">Livros</span>
+                                <span class="text-[9px] px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-700 shrink-0">Livros</span>
                             </button>
                         </div>
 
                         <!-- SEÇÃO 3: FORMAÇÃO & PRÁTICA -->
-                        <div class="space-y-1 pt-1 border-t border-slate-100">
-                            <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                        <div class="space-y-1 pt-1 border-t border-cline dark:border-slate-800">
+                            <div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-cgold dark:text-amber-400 font-serif">
                                 <span>Formação &amp; Prática</span>
                             </div>
-                            <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                                <span>🎯</span> <span>Planos de Estudo</span>
+                            <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span>🎯</span> <span>Planos de Estudo (5 Dias)</span>
                             </button>
-                            <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                                <span>🧠</span> <span>Quizzes de Fixação</span>
+                            <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span>🧠</span> <span>Quizzes de Conhecimento</span>
                             </button>
                         </div>
 
                         <!-- SEÇÃO 4: MEU ESPAÇO & APOIO -->
-                        <div class="space-y-1 pt-1 border-t border-slate-100">
-                            <div class="px-3 pt-2 pb-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                        <div class="space-y-1 pt-1 border-t border-cline dark:border-slate-800">
+                            <div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-cgold dark:text-amber-400 font-serif">
                                 <span>Meu Espaço &amp; Apoio</span>
                             </div>
-                            <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>⭐</span> <span>Meus Favoritos</span>
                             </button>
-                            <button onclick="router.navigate('conquistas'); toggleMobileMenu();" data-menu-key="conquistas" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('conquistas'); toggleMobileMenu();" data-menu-key="conquistas" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>🏆</span> <span>Conquistas</span>
                             </button>
-                            <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>📊</span> <span>Meu Progresso</span>
                             </button>
-                            <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
+                            <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span>🔎</span> <span>Pesquisar</span>
                             </button>
-                            <button onclick="openFontesModal(); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-mariana transition text-sm">
-                                <span>ℹ️</span> <span>Fontes e Transparência</span>
+                            <button onclick="openFontesModal(); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span>📜</span> <span>Fontes e Transparência</span>
                             </button>
-                            <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-900 transition text-sm">
+                            <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/40 hover:text-indigo-900 dark:hover:text-indigo-200 transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span class="text-base shrink-0">📬</span>
                                     <span>Caixa Postal &amp; Contato</span>
@@ -992,18 +998,19 @@
                             </button>
                         </div>
                     </nav>
+
                     <!-- Mobile Drawer Footer Actions -->
-                    <div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 space-y-2">
-                        <button onclick="openInstallModal(); toggleMobileMenu();" id="mobile-install-btn" class="w-full py-2.5 px-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs shadow-sm flex items-center justify-center gap-2 cursor-pointer">
+                    <div class="p-3.5 border-t border-cline dark:border-slate-800 bg-[#fbf9f4] dark:bg-slate-900/80 space-y-2">
+                        <button onclick="openInstallModal(); toggleMobileMenu();" id="mobile-install-btn" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs shadow-xs flex items-center justify-center gap-2 cursor-pointer transition">
                             <span class="text-sm">📲</span> <span>Instalar Aplicativo (App)</span>
                         </button>
-                        <button onclick="shareCatecismo('mobile_drawer'); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-xs flex items-center justify-center gap-2 cursor-pointer">
+                        <button onclick="shareCatecismo('mobile_drawer'); toggleMobileMenu();" class="w-full py-2 px-3 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-800/60 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-2xs flex items-center justify-center gap-2 cursor-pointer hover:bg-blue-100 transition">
                             <span class="text-sm">📤</span> <span>Compartilhar Catecismo</span>
                         </button>
-                        <button onclick="openApoioModal(); toggleMobileMenu();" class="w-full py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-slate-700 text-amber-700 dark:text-amber-300 font-bold text-xs shadow-xs flex items-center justify-center gap-2">
+                        <button onclick="openApoioModal(); toggleMobileMenu();" class="w-full py-2 px-3 rounded-xl bg-amber-50/80 dark:bg-slate-800/80 hover:bg-amber-100 dark:hover:bg-slate-700/80 border border-amber-200/60 dark:border-slate-700 text-amber-800 dark:text-amber-300 font-bold text-xs shadow-2xs flex items-center justify-center gap-2 cursor-pointer transition">
                             <span>☕</span> <span>Apoiar o Projeto (PIX)</span>
                         </button>
-                        <button onclick="openDeveloperModal(); toggleMobileMenu();" class="w-full py-1.5 text-center text-slate-500 dark:text-slate-400 text-xs font-medium">
+                        <button onclick="openDeveloperModal(); toggleMobileMenu();" class="w-full py-1 text-center text-slate-500 dark:text-slate-400 hover:text-cgreen dark:hover:text-csage text-xs font-medium cursor-pointer transition">
                             👨‍💻 Sobre o Desenvolvedor
                         </button>
                     </div>
@@ -5108,6 +5115,7 @@
                             titleEl.innerText = "Biblioteca do Catecismo";
                             subtitleEl.innerText = "Índice completo e acesso ao texto oficial da Santa Sé";
                             mainView.innerHTML = Views.renderCatecismoCompleto(params);
+                            if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
                         case 'biblia':
                             titleEl.innerText = "Bíblia Sagrada";
@@ -5153,16 +5161,19 @@
                             titleEl.innerText = "Quizzes de Conhecimento";
                             subtitleEl.innerText = "Teste e reforce o seu aprendizado";
                             mainView.innerHTML = Views.renderQuiz();
+                            if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
                         case 'planos':
                             titleEl.innerText = "Planos de Estudo";
                             subtitleEl.innerText = "Roteiros guiados para sua jornada espiritual";
                             mainView.innerHTML = Views.renderPlanos();
+                            if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
                         case 'reflexoes':
                             titleEl.innerText = "Diário Espiritual & Reflexões";
                             subtitleEl.innerText = "Suas meditações e orações registradas na Lectio Divina";
                             mainView.innerHTML = Views.renderReflexoes();
+                            if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
                         case 'favoritos':
                             titleEl.innerText = "Meus Favoritos";
@@ -8016,66 +8027,104 @@ https://catecismo.creativeam.com.br`;
             renderCatecismoCompleto(query = '') {
                 const q = (query || '').trim().toLowerCase();
                 const modules = CatecismContentProvider.modules.filter(m => !q || [m.title, m.description, m.explanation, m.ccc].some(v => String(v || '').toLowerCase().includes(q)));
+                const partCovers = [
+                    { coverId: 'plano_creio', img: './assets/img/temas/card-pilar-creio.png' },
+                    { coverId: 'plano_celebro', img: './assets/img/temas/card-pilar-celebro.png' },
+                    { coverId: 'plano_vivo', img: './assets/img/temas/card-pilar-vivo.png' },
+                    { coverId: 'plano_rezo', img: './assets/img/temas/card-pilar-rezo.png' }
+                ];
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-8">
-                        <div class="mariana-gradient text-white rounded-3xl p-8 shadow-xl border border-dourado/30">
-                            <div class="flex flex-col md:flex-row md:items-end justify-between gap-5">
-                                <div>
-                                    <span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold tracking-wider uppercase border border-dourado/40">📚 Biblioteca oficial</span>
-                                    <h2 class="font-serif text-3xl md:text-4xl font-bold mt-3">Catecismo da Igreja Católica</h2>
-                                    <p class="text-slate-200 text-sm mt-2 max-w-2xl leading-relaxed">Consulte a estrutura completa do Catecismo e abra o texto integral diretamente no arquivo oficial da Santa Sé em português.</p>
+                    <div class="max-w-[1190px] w-full mx-auto space-y-7">
+                        <!-- Hero Banner Editorial: Biblioteca do Catecismo -->
+                        <div data-app-cover="banner_catecismo_completo" class="relative overflow-hidden bg-cgreen text-white rounded-[24px] p-6 sm:p-8 shadow-[0_14px_40px_rgba(35,70,56,0.12)] border border-cgreen-light/20 flex flex-col justify-between group">
+                            <img src="./assets/img/temas/banner-catecismo-completo.png" alt="Biblioteca do Catecismo" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity dark:mix-blend-overlay group-hover:scale-105 transition-transform duration-700 pointer-events-none" onerror="this.style.display='none'" />
+                            <div class="app-cover-placeholder absolute inset-0 bg-gradient-to-r from-[#14261e] via-[#234638]/85 to-[#0e1c15] pointer-events-none"></div>
+                            <div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-5">
+                                <div class="space-y-3 max-w-2xl">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-[#e4cb92] rounded-full text-[11px] font-bold tracking-[0.16em] uppercase border border-white/15">
+                                        <span>📚</span> <span>ARQUIVO OFICIAL DA SANTA SÉ</span>
+                                    </span>
+                                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold leading-tight text-white">
+                                        Biblioteca do Catecismo
+                                    </h2>
+                                    <p class="text-xs sm:text-sm text-[#dce5d9] leading-relaxed">
+                                        Consulte a estrutura canônica completa do Catecismo da Igreja Católica e abra o texto integral de cada parágrafo diretamente no arquivo oficial do Vaticano em português.
+                                    </p>
                                 </div>
-                                <a href="${CatechismOfficialProvider.indexUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 gold-gradient text-mariana-dark font-bold rounded-xl text-sm shadow-lg hover:scale-[1.02] transition">🔗 Abrir Catecismo completo</a>
+                                <a href="${CatechismOfficialProvider.indexUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl text-xs sm:text-sm shadow-md hover:scale-[1.02] transition cursor-pointer shrink-0">
+                                    <span>🔗</span> <span>Abrir Catecismo completo no Vaticano</span>
+                                </a>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-5">
+                        <!-- As Quatro Partes -->
+                        <div class="bg-[#fffefa] dark:bg-[#131d31] rounded-[24px] p-6 sm:p-8 border border-cline dark:border-slate-800 shadow-xs space-y-5">
                             <div class="flex items-center justify-between gap-3">
                                 <div>
-                                    <h3 class="font-serif text-2xl font-bold text-mariana">As quatro partes</h3>
-                                    <p class="text-xs text-slate-500 mt-1">A organização oficial do Catecismo em português.</p>
+                                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-cgold dark:text-amber-400">Estrutura Canônica</span>
+                                    <h3 class="font-serif text-2xl font-bold text-cgreen dark:text-csage">As quatro partes fundamentais</h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">A organização oficial promulgada por São João Paulo II.</p>
                                 </div>
-                                <a href="${CatechismOfficialProvider.indexUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-mariana hover:underline">Índice geral ↗</a>
+                                <a href="${CatechismOfficialProvider.indexUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-cgreen dark:text-csage hover:text-cgold transition underline">Índice geral no Vaticano ↗</a>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                ${CatechismOfficialProvider.parts.map(part => `
-                                    <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:border-amber-200 transition">
-                                        <div class="flex gap-4">
-                                            <div class="w-12 h-12 rounded-2xl bg-white border border-amber-200 flex items-center justify-center text-2xl flex-none">${part.icon}</div>
-                                            <div class="min-w-0 flex-1">
-                                                <h4 class="font-serif text-lg font-bold text-mariana leading-tight">${part.title}</h4>
-                                                <p class="text-[11px] font-bold text-dourado mt-1">${part.range}</p>
-                                                <p class="text-xs text-slate-600 mt-2 leading-relaxed">${part.desc}</p>
-                                                <a href="${CatechismOfficialProvider.baseUrl + part.url}" target="_blank" rel="noopener noreferrer" class="inline-flex mt-3 px-3 py-2 bg-white border border-slate-200 rounded-xl text-[11px] font-bold text-mariana hover:border-amber-300">Ler parte oficial ↗</a>
+                                ${CatechismOfficialProvider.parts.map((part, idx) => {
+                                    const pc = partCovers[idx] || partCovers[0];
+                                    return `
+                                        <div data-app-cover="${pc.coverId}" class="group relative overflow-hidden bg-[#fffefa] dark:bg-[#131d31] p-5 sm:p-6 rounded-2xl border border-cline dark:border-slate-800 shadow-xs hover:shadow-md hover:border-cgold/50 transition-all flex flex-col justify-between">
+                                            <img src="${pc.img}" alt="${part.title}" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none" onerror="this.style.display='none'" />
+                                            <div class="absolute inset-0 bg-gradient-to-t from-[#fffefa]/95 via-[#fffefa]/80 to-[#fffefa]/40 dark:from-[#131d31]/95 dark:via-[#131d31]/80 dark:to-[#131d31]/40 pointer-events-none"></div>
+                                            <div class="relative z-10 flex gap-4">
+                                                <div class="w-12 h-12 rounded-2xl bg-[#fbf9f4] dark:bg-slate-800 border border-cline dark:border-slate-700 flex items-center justify-center text-2xl flex-none shadow-2xs">${part.icon}</div>
+                                                <div class="min-w-0 flex-1">
+                                                    <h4 class="font-serif text-lg font-bold text-cgreen dark:text-csage leading-tight">${part.title}</h4>
+                                                    <p class="text-[11px] font-bold text-cgold dark:text-amber-400 mt-1 uppercase tracking-wider">${part.range}</p>
+                                                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">${part.desc}</p>
+                                                    <a href="${CatechismOfficialProvider.baseUrl + part.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 bg-[#fbf9f4] dark:bg-slate-800 border border-cline dark:border-slate-700 rounded-xl text-xs font-bold text-cgreen dark:text-csage hover:text-cgold transition">
+                                                        <span>Ler parte oficial</span> <span>↗</span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                `).join('')}
+                                    `;
+                                }).join('')}
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-5">
+                        <!-- Conexões com as Aulas -->
+                        <div class="bg-[#fffefa] dark:bg-[#131d31] rounded-[24px] p-6 sm:p-8 border border-cline dark:border-slate-800 shadow-xs space-y-5">
                             <div>
-                                <h3 class="font-serif text-2xl font-bold text-mariana">Nossas aulas conectadas ao CCC</h3>
-                                <p class="text-xs text-slate-500 mt-1">As 20 aulas do aplicativo continuam com explicação e reflexão próprias, agora com acesso direto ao texto oficial correspondente.</p>
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-cgold dark:text-amber-400">Guia de Estudos</span>
+                                <h3 class="font-serif text-2xl font-bold text-cgreen dark:text-csage">Nossas aulas conectadas ao CCC</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">As 20 aulas do aplicativo contam com explicação pastoral e acesso direto aos parágrafos oficiais.</p>
                             </div>
                             <div class="relative">
-                                <input value="${String(query || '').replace(/"/g, '&quot;')}" oninput="router.navigate('catecismo-completo', this.value)" placeholder="Buscar por Eucaristia, Batismo, Trindade, § 1324..." class="w-full px-4 py-3 pl-10 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-mariana">
-                                <span class="absolute left-3 top-3 text-slate-400">🔎</span>
+                                <input value="${String(query || '').replace(/"/g, '&quot;')}" oninput="router.navigate('catecismo-completo', this.value)" placeholder="Buscar por Eucaristia, Batismo, Trindade, § 1324..." class="w-full px-4 py-3 pl-10 bg-[#fbf9f4] dark:bg-slate-800 border border-cline dark:border-slate-700 rounded-xl text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:border-cgreen dark:focus:border-csage">
+                                <span class="absolute left-3 top-3.5 text-slate-400 text-sm">🔎</span>
                             </div>
                             <div class="space-y-3">
                                 ${modules.length ? modules.map(m => {
                                     const n = parseInt(String(m.ccc || '').replace(/\D/g, ''), 10);
-                                    return `<div class="p-4 border border-slate-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                                        <div class="min-w-0"><span class="text-[10px] text-amber-700 font-bold block">${m.ccc}</span><span class="text-sm font-bold text-mariana">${m.title}</span><p class="text-xs text-slate-500 mt-1 line-clamp-2">${m.description}</p></div>
-                                        <div class="flex gap-2 flex-none"><button onclick="openLessonModal('${m.id}')" class="px-3 py-2 bg-slate-100 rounded-xl text-[11px] font-bold text-slate-700">Nossa aula</button><a href="${CatechismOfficialProvider.getUrlForReference(n)}" target="_blank" rel="noopener noreferrer" class="px-3 py-2 mariana-gradient text-white rounded-xl text-[11px] font-bold">CCC oficial ↗</a></div>
-                                    </div>`;
+                                    return `
+                                        <div class="p-4 bg-[#fbf9f4] dark:bg-slate-800/80 border border-cline dark:border-slate-700/80 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-cgold/40 transition">
+                                            <div class="min-w-0">
+                                                <span class="text-[10px] text-cgold dark:text-amber-400 font-bold block uppercase tracking-wider">${m.ccc}</span>
+                                                <span class="text-sm font-bold text-cgreen dark:text-csage font-serif">${m.title}</span>
+                                                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">${m.description}</p>
+                                            </div>
+                                            <div class="flex gap-2 flex-none">
+                                                <button onclick="openLessonModal('${m.id}')" class="px-3.5 py-2 bg-white dark:bg-slate-700 border border-cline dark:border-slate-600 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-cgreen cursor-pointer transition shadow-2xs">Nossa aula</button>
+                                                <a href="${CatechismOfficialProvider.getUrlForReference(n)}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-cgreen hover:bg-cgreen-light text-white rounded-xl text-xs font-bold transition shadow-2xs">CCC oficial ↗</a>
+                                            </div>
+                                        </div>
+                                    `;
                                 }).join('') : '<p class="text-xs text-slate-400 text-center py-8">Nenhuma aula encontrada para essa busca.</p>'}
                             </div>
                         </div>
 
-                        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
-                            <p class="text-xs text-amber-900 leading-relaxed"><strong>Fonte oficial:</strong> texto do Catecismo disponível no arquivo oficial da Santa Sé. Esta biblioteca do aplicativo funciona como índice, referência e acesso ao conteúdo oficial, em vez de reproduzir integralmente o texto dentro do HTML.</p>
+                        <!-- Rodapé de Fontes -->
+                        <div class="bg-[#fbf9f4] dark:bg-slate-900/60 border border-cline dark:border-slate-800 rounded-2xl p-5">
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed"><strong>Fonte canônica oficial:</strong> texto do Catecismo da Igreja Católica sob copyright da Libreria Editrice Vaticana. Esta biblioteca do aplicativo funciona como índice, referência e acesso ao conteúdo oficial da Santa Sé.</p>
                         </div>
                     </div>
                 `;
@@ -8106,6 +8155,54 @@ https://catecismo.creativeam.com.br`;
                                 <p class="text-xs sm:text-sm text-[#dce5d9] leading-relaxed">
                                     Estudo sistemático estruturado nos quatro pilares tradicionais da fé: a Profissão da Fé (Credo), os Sacramentos da Salvação, a Vida em Cristo (Mandamentos) e a Oração Cristã.
                                 </p>
+                            </div>
+                        </div>
+
+                        <!-- Destaques & Ferramentas de Estudo (Integração PC & Smartphone) -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Planos de Estudo -->
+                            <div data-app-cover="banner_planos_estudo" class="group relative overflow-hidden bg-[#fffefa] dark:bg-[#131d31] rounded-2xl p-5 border border-cline dark:border-slate-800 shadow-xs hover:shadow-md hover:border-cgold/50 transition-all flex flex-col justify-between min-h-[140px] cursor-pointer" onclick="router.navigate('planos')">
+                                <img src="./assets/img/temas/banner-planos-estudo.png" alt="Planos de Estudo" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none" onerror="this.style.display='none'" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#fffefa]/95 via-[#fffefa]/80 to-[#fffefa]/40 dark:from-[#131d31]/95 dark:via-[#131d31]/80 dark:to-[#131d31]/40 pointer-events-none"></div>
+                                <div class="relative z-10 flex items-center justify-between">
+                                    <span class="text-2xl p-2 bg-[#fbf9f4] dark:bg-slate-800 rounded-xl border border-cline dark:border-slate-700 shadow-2xs">📅</span>
+                                    <span class="text-[9px] font-bold text-cgold dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 dark:bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-500/20">ROTEIRO 5 DIAS</span>
+                                </div>
+                                <div class="relative z-10 mt-3">
+                                    <h3 class="font-serif font-bold text-base text-cgreen dark:text-csage group-hover:text-cgold transition">Planos de Estudo</h3>
+                                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">Percursos diários guiados pelos 4 pilares com progresso salvo.</p>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-cgold dark:text-amber-400 mt-2">Iniciar percurso →</span>
+                                </div>
+                            </div>
+
+                            <!-- Quizzes de Conhecimento -->
+                            <div data-app-cover="banner_quiz_conhecimento" class="group relative overflow-hidden bg-[#fffefa] dark:bg-[#131d31] rounded-2xl p-5 border border-cline dark:border-slate-800 shadow-xs hover:shadow-md hover:border-cgold/50 transition-all flex flex-col justify-between min-h-[140px] cursor-pointer" onclick="router.navigate('quiz')">
+                                <img src="./assets/img/temas/banner-quiz-conhecimento.png" alt="Quizzes de Conhecimento" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none" onerror="this.style.display='none'" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#fffefa]/95 via-[#fffefa]/80 to-[#fffefa]/40 dark:from-[#131d31]/95 dark:via-[#131d31]/80 dark:to-[#131d31]/40 pointer-events-none"></div>
+                                <div class="relative z-10 flex items-center justify-between">
+                                    <span class="text-2xl p-2 bg-[#fbf9f4] dark:bg-slate-800 rounded-xl border border-cline dark:border-slate-700 shadow-2xs">🧠</span>
+                                    <span class="text-[9px] font-bold text-cgold dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 dark:bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-500/20">+10 XP POR ACERTO</span>
+                                </div>
+                                <div class="relative z-10 mt-3">
+                                    <h3 class="font-serif font-bold text-base text-cgreen dark:text-csage group-hover:text-cgold transition">Quizzes de Conhecimento</h3>
+                                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">Desafios rápidos e maratonas temáticas com gabarito comentado.</p>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-cgold dark:text-amber-400 mt-2">Testar conhecimentos →</span>
+                                </div>
+                            </div>
+
+                            <!-- Biblioteca do Catecismo -->
+                            <div data-app-cover="banner_catecismo_completo" class="group relative overflow-hidden bg-[#fffefa] dark:bg-[#131d31] rounded-2xl p-5 border border-cline dark:border-slate-800 shadow-xs hover:shadow-md hover:border-cgold/50 transition-all flex flex-col justify-between min-h-[140px] cursor-pointer" onclick="router.navigate('catecismo-completo')">
+                                <img src="./assets/img/temas/banner-catecismo-completo.png" alt="Biblioteca do Catecismo" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none" onerror="this.style.display='none'" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#fffefa]/95 via-[#fffefa]/80 to-[#fffefa]/40 dark:from-[#131d31]/95 dark:via-[#131d31]/80 dark:to-[#131d31]/40 pointer-events-none"></div>
+                                <div class="relative z-10 flex items-center justify-between">
+                                    <span class="text-2xl p-2 bg-[#fbf9f4] dark:bg-slate-800 rounded-xl border border-cline dark:border-slate-700 shadow-2xs">📚</span>
+                                    <span class="text-[9px] font-bold text-cgold dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 dark:bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-500/20">SANTA SÉ</span>
+                                </div>
+                                <div class="relative z-10 mt-3">
+                                    <h3 class="font-serif font-bold text-base text-cgreen dark:text-csage group-hover:text-cgold transition">Biblioteca do Catecismo</h3>
+                                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">Índice completo dos 2.865 parágrafos oficiais no Vaticano.</p>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-cgold dark:text-amber-400 mt-2">Acessar biblioteca →</span>
+                                </div>
                             </div>
                         </div>
 
@@ -8277,8 +8374,8 @@ https://catecismo.creativeam.com.br`;
                                     <p class="text-[#dce5d9] text-xs sm:text-sm">Carregando celebração e santos associados à data de ${date.split('-').reverse().join('/')}...</p>
                                 </div>
                             </div>
-                            <div id="santo-detail" class="space-y-8 min-w-0">
-                                <div class="p-8 text-center text-xs text-slate-400 animate-pulse">Carregando biografia e reflexões do Santo...</div>
+                            <div id="santo-detail" class="grid grid-cols-1 md:grid-cols-3 gap-6 min-w-0">
+                                <div class="col-span-full p-8 text-center text-xs text-slate-400 animate-pulse">Carregando biografia e reflexões do Santo...</div>
                             </div>
                         </div>
 
@@ -8398,35 +8495,35 @@ https://catecismo.creativeam.com.br`;
                         const image = saint.imageUrl || raw.imageUrl || raw.a12?.imageUrl || (raw.a12?.images && raw.a12.images[0]) || '';
                         const initials = (saint.name || 'S').replace(/^(São|Santo|Santa|SS\.|Beato|Beata)\s+/i, '').slice(0, 2).toUpperCase();
                         return `
-                            <article class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow min-w-0 overflow-hidden">
+                            <article class="bg-[#fffefa] dark:bg-[#131d31] rounded-3xl p-6 md:p-8 border border-cline dark:border-slate-800 shadow-xs min-w-0 overflow-hidden">
                                 <div class="flex flex-col md:flex-row gap-6 items-start">
                                     ${image ? `
-                                        <div class="relative shrink-0 w-full md:w-44 h-48 md:h-52 rounded-2xl overflow-hidden border-2 border-amber-200/70 shadow-md group">
-                                            <img src="${esc(image)}" alt="${esc(saint.name)}" onerror="handleSaintImageError(this, '${esc(saint.name)}')" class="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105" loading="lazy">
+                                        <div class="relative shrink-0 w-full md:w-44 h-48 md:h-52 rounded-2xl overflow-hidden border border-amber-300/60 dark:border-slate-700 shadow-md group">
+                                            <img src="${esc(image)}" alt="${esc(saint.name)}" onerror="handleSaintImageError(this, '${esc(saint.name)}')" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" loading="lazy">
                                             <div class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur-sm text-[9px] text-amber-200 font-bold rounded">Arte Sacra</div>
                                         </div>` : `
-                                        <div class="relative shrink-0 w-full md:w-44 h-48 md:h-52 rounded-2xl bg-gradient-to-b from-mariana to-mariana-dark border-2 border-dourado/50 shadow-md flex flex-col items-center justify-center p-4 text-center overflow-hidden">
-                                            <div class="absolute inset-1.5 border border-dourado/30 rounded-xl pointer-events-none"></div>
-                                            <div class="relative w-14 h-14 rounded-full bg-dourado/20 border border-dourado/50 flex items-center justify-center mb-2">
-                                                <svg class="w-8 h-8 text-dourado" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                        <div class="relative shrink-0 w-full md:w-44 h-48 md:h-52 rounded-2xl bg-cgreen dark:bg-[#0f1826] border border-cgold/50 shadow-md flex flex-col items-center justify-center p-4 text-center overflow-hidden">
+                                            <div class="absolute inset-1.5 border border-cgold/30 rounded-xl pointer-events-none"></div>
+                                            <div class="relative w-14 h-14 rounded-full bg-cgold/20 border border-cgold/50 flex items-center justify-center mb-2">
+                                                <svg class="w-8 h-8 text-cgold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                                     <circle cx="12" cy="7" r="4.5"/>
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a6 6 0 016 2M6 4a6 6 0 016-2M5 21v-2a7 7 0 0114 0v2"/>
                                                 </svg>
                                             </div>
-                                            <span class="font-serif font-bold text-dourado-light text-base tracking-wider">${initials}</span>
+                                            <span class="font-serif font-bold text-amber-200 text-base tracking-wider">${initials}</span>
                                             <span class="text-[9px] text-amber-200/80 uppercase tracking-widest font-bold mt-1">Memória Sacra</span>
                                         </div>`}
                                     <div class="min-w-0 flex-1">
-                                        <span class="text-[10px] font-bold text-dourado uppercase tracking-wider">${index + 1}º registro</span>
-                                        <h3 class="font-serif text-2xl font-bold text-mariana mt-1 break-words">${esc(saint.name)}</h3>
+                                        <span class="text-[10px] font-bold text-cgold dark:text-amber-400 uppercase tracking-wider">${index + 1}º registro</span>
+                                        <h3 class="font-serif text-2xl font-bold text-cgreen dark:text-csage mt-1 break-words">${esc(saint.name)}</h3>
                                         ${saint.vocation ? `<p class="text-xs text-amber-800 dark:text-amber-300 font-semibold mt-1">✨ ${esc(saint.vocation)}</p>` : ''}
                                         ${saint.patronage ? `<p class="text-xs text-slate-600 dark:text-slate-300 mt-1">🛡️ <strong>Padroeiro de:</strong> ${esc(saint.patronage)}</p>` : ''}
                                         <p class="text-[11px] text-slate-400 mt-2">Fonte canônica: ${esc(saint.sources || saint.source || 'Tradição e Magistério da Igreja')}</p>
-                                        ${profileUrl ? `<a href="${esc(profileUrl)}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-xs font-bold text-mariana underline">Abrir perfil da fonte →</a>` : ''}
+                                        ${profileUrl ? `<a href="${esc(profileUrl)}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-xs font-bold text-cgreen dark:text-csage hover:text-cgold underline">Abrir perfil da fonte →</a>` : ''}
                                     </div>
                                 </div>
                                 <div class="mt-5 space-y-4">
-                                    ${biography ? `<div><h4 class="font-serif text-lg font-bold text-mariana dark:text-amber-200">Vida e testemunho</h4><p class="text-sm text-slate-700 dark:text-slate-200 leading-7 whitespace-pre-line mt-2">${esc(biography)}</p></div>` : ''}
+                                    ${biography ? `<div><h4 class="font-serif text-lg font-bold text-cgreen dark:text-csage">Vida e testemunho</h4><p class="text-sm text-slate-700 dark:text-slate-200 leading-7 whitespace-pre-line mt-2">${esc(biography)}</p></div>` : ''}
                                     ${reflection ? `<div class="bg-amber-50/70 dark:bg-slate-900/60 rounded-2xl p-5 border border-amber-200/60 dark:border-slate-700/80"><h4 class="font-serif text-base font-bold text-amber-900 dark:text-amber-300">Reflexão Espiritual</h4><p class="text-sm text-amber-900 dark:text-amber-100 italic leading-7 mt-2">${esc(reflection)}</p></div>` : ''}
                                     ${prayer ? `<div class="bg-gradient-to-br from-amber-50 to-orange-50/50 dark:from-slate-900 dark:to-amber-950/40 rounded-2xl p-5 sm:p-6 border border-amber-300/80 dark:border-amber-700/60 shadow-xs"><div class="flex items-center gap-2 mb-2"><span class="text-base">🙏</span><h4 class="font-serif text-base font-bold text-amber-950 dark:text-amber-200">Oração ao Santo</h4></div><p class="text-sm text-slate-800 dark:text-slate-200 italic leading-relaxed whitespace-pre-line">${esc(prayer)}</p></div>` : ''}
                                 </div>
@@ -8437,19 +8534,50 @@ https://catecismo.creativeam.com.br`;
                     const gospelRef = lit?.gospel?.reference || '';
                     detail.innerHTML = `
                         <div class="md:col-span-2 space-y-6 min-w-0">
-                            ${cards || `<div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow"><h3 class="font-serif text-xl font-bold text-mariana">Não há registros locais de santos para esta data.</h3><p class="text-sm text-slate-600 mt-2 leading-7">Consulte a Liturgia da data para a celebração principal.</p></div>`}
+                            ${cards || `<div class="bg-[#fffefa] dark:bg-[#131d31] rounded-3xl p-8 border border-cline dark:border-slate-800 shadow-xs"><h3 class="font-serif text-xl font-bold text-cgreen dark:text-csage">Não há registros locais de santos para esta data.</h3><p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-7">Consulte a Liturgia da data para a celebração principal.</p></div>`}
                         </div>
                         <div class="space-y-6 min-w-0">
-                            <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow min-w-0 overflow-hidden">
-                                <h3 class="font-serif text-lg font-bold text-mariana">Liturgia da data</h3>
-                                <p class="text-xs text-slate-700 leading-6 mt-2">${esc(lit?.celebration || 'Liturgia do dia')}</p>
-                                <button onclick="router.navigate('liturgia','${targetDate}')" class="w-full mt-4 px-4 py-3 bg-slate-50 border border-slate-200 text-mariana rounded-xl text-xs font-bold hover:bg-slate-100 transition">⛪ Ver liturgia completa</button>
+                            <!-- Liturgia da data -->
+                            <div class="bg-[#fffefa] dark:bg-[#131d31] rounded-3xl p-6 border border-cline dark:border-slate-800 shadow-xs min-w-0 overflow-hidden relative group">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-lg">⛪</span>
+                                    <h3 class="font-serif text-lg font-bold text-cgreen dark:text-csage">Liturgia da data</h3>
+                                </div>
+                                <p class="text-xs text-slate-700 dark:text-slate-300 leading-6">${esc(lit?.celebration || 'Liturgia do dia')}</p>
+                                <button onclick="router.navigate('liturgia','${targetDate}')" class="w-full mt-4 px-4 py-2.5 bg-[#fbf9f4] dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-slate-700 border border-cline dark:border-slate-700 text-cgreen dark:text-csage hover:text-cgold rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer shadow-2xs">
+                                    <span>⛪</span> <span>Ver liturgia completa</span>
+                                </button>
                             </div>
-                            ${gospelRef ? `<div class="bg-blue-50 border border-blue-200 rounded-3xl p-6 card-shadow"><h3 class="font-serif text-lg font-bold text-blue-950">Palavra da data</h3><p class="text-xs text-blue-800 font-bold mt-2">Evangelho: ${esc(gospelRef)}</p><button onclick="openScriptureReferenceFromText('${encodeURIComponent(gospelRef)}')" class="w-full mt-4 px-4 py-3 bg-white border border-blue-200 text-blue-900 rounded-xl text-xs font-bold hover:bg-blue-100 transition">📖 Abrir na Bíblia</button></div>` : ''}
-                            ${firstRef ? `<div class="bg-blue-50/60 border border-blue-100 rounded-3xl p-6"><span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider">Primeira leitura</span><p class="text-sm text-blue-950 font-bold mt-2">${esc(firstRef)}</p></div>` : ''}
-                            <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow">
-                                <h3 class="font-serif text-lg font-bold text-mariana">Fontes</h3>
-                                <p class="text-xs text-slate-600 leading-6 mt-2">Santos: Acervo Hagiográfico Oficial da Igreja e Tradição Católica. A celebração litúrgica é carregada separadamente do banco canônico de Liturgia.</p>
+
+                            <!-- Palavra da data -->
+                            ${gospelRef ? `
+                            <div class="bg-gradient-to-br from-amber-500/10 via-[#fffefa] to-amber-500/5 dark:from-[#131d31] dark:to-amber-950/20 border border-amber-300/60 dark:border-amber-800/60 rounded-3xl p-6 shadow-xs relative">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-lg">📖</span>
+                                    <h3 class="font-serif text-lg font-bold text-amber-950 dark:text-amber-300">Palavra da data</h3>
+                                </div>
+                                <p class="text-xs text-slate-700 dark:text-slate-300 font-semibold mb-1">Evangelho: <span class="font-bold text-cgreen dark:text-csage">${esc(gospelRef)}</span></p>
+                                <button onclick="openScriptureReferenceFromText('${encodeURIComponent(gospelRef)}')" class="w-full mt-3 px-4 py-2.5 bg-white dark:bg-slate-800 border border-amber-300/80 dark:border-amber-700/80 text-amber-900 dark:text-amber-200 rounded-xl text-xs font-bold hover:bg-amber-50 dark:hover:bg-slate-700 transition flex items-center justify-center gap-2 cursor-pointer shadow-2xs">
+                                    <span>📖</span> <span>Abrir na Bíblia</span>
+                                </button>
+                            </div>` : ''}
+
+                            <!-- Primeira leitura -->
+                            ${firstRef ? `
+                            <div class="bg-[#fffefa] dark:bg-[#131d31] border border-cline dark:border-slate-800 rounded-3xl p-6 shadow-xs">
+                                <span class="text-[10px] font-bold text-cgold dark:text-amber-400 uppercase tracking-wider block mb-1">Primeira leitura</span>
+                                <p class="text-sm text-slate-800 dark:text-slate-200 font-bold font-serif">${esc(firstRef)}</p>
+                            </div>` : ''}
+
+                            <!-- Fontes e Tradição -->
+                            <div class="bg-[#fbf9f4] dark:bg-slate-900/60 border border-cline dark:border-slate-800 rounded-3xl p-6 shadow-2xs space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-base">📜</span>
+                                    <h3 class="font-serif text-base font-bold text-cgreen dark:text-csage">Fontes &amp; Tradição</h3>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Santos: Acervo Hagiográfico Oficial da Igreja e Tradição Católica. A celebração litúrgica é carregada separadamente do banco canônico de Liturgia Diária.
+                                </p>
                             </div>
                         </div>`;
                 } catch (error) {
@@ -8458,8 +8586,8 @@ https://catecismo.creativeam.com.br`;
                     if (!root || root.dataset.date !== targetDate) return;
                     const hero = document.getElementById('santo-hero');
                     const detail = document.getElementById('santo-detail');
-                    if (hero) hero.innerHTML = `<div class="relative z-10 space-y-2 min-w-0"><span class="px-3 py-1 bg-dourado/20 text-dourado-light rounded-full text-xs font-semibold uppercase">${targetDate.split('-').reverse().join('/')}</span><h2 class="font-serif text-3xl font-bold break-words">Santos do dia</h2><p class="text-slate-200 text-sm break-words">Não foi possível carregar os registros desta data.</p></div>`;
-                    if (detail) detail.innerHTML = `<div class="md:col-span-2 bg-white rounded-3xl p-8 border border-slate-200 card-shadow min-w-0 overflow-hidden"><h3 class="font-serif text-xl font-bold text-mariana">Dados temporariamente indisponíveis</h3><p class="text-sm text-slate-600 mt-2 leading-7 break-words">Nenhum conteúdo de outra data será usado como substituição.</p></div>`;
+                    if (hero) hero.innerHTML = `<div class="relative z-10 space-y-2 min-w-0"><span class="px-3 py-1 bg-white/10 text-amber-300 rounded-full text-xs font-semibold uppercase">${targetDate.split('-').reverse().join('/')}</span><h2 class="font-serif text-3xl font-bold break-words text-white">Santos do dia</h2><p class="text-slate-200 text-sm break-words">Não foi possível carregar os registros desta data.</p></div>`;
+                    if (detail) detail.innerHTML = `<div class="col-span-full bg-[#fffefa] dark:bg-[#131d31] rounded-3xl p-8 border border-cline dark:border-slate-800 shadow-xs min-w-0 overflow-hidden"><h3 class="font-serif text-xl font-bold text-cgreen dark:text-csage">Dados temporariamente indisponíveis</h3><p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-7 break-words">Nenhum conteúdo de outra data será usado como substituição.</p></div>`;
                 }
             },
 
@@ -8847,45 +8975,74 @@ https://catecismo.creativeam.com.br`;
             renderQuiz() {
                 const categories = QuizContentProvider.categories || ["Doutrina", "Sacramentos", "Bíblia", "Liturgia & Santos"];
                 const soundLabel = QuizAudio.enabled ? '🔊 Som Ativado' : '🔇 Silenciado';
+                const categoryCovers = {
+                    'Doutrina': { id: 'quiz_area_doutrina', img: './assets/img/temas/quiz-area-doutrina.png' },
+                    'Sacramentos': { id: 'quiz_area_sacramentos', img: './assets/img/temas/quiz-area-sacramentos.png' },
+                    'Bíblia': { id: 'quiz_area_biblia', img: './assets/img/temas/quiz-area-biblia.png' },
+                    'Liturgia & Santos': { id: 'quiz_area_liturgia', img: './assets/img/temas/quiz-area-liturgia.png' }
+                };
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200 card-shadow space-y-6">
-                            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
-                                <div>
-                                    <h2 class="font-serif text-3xl font-bold text-mariana">Quizzes de Conhecimento</h2>
-                                    <p class="text-xs text-slate-500 mt-1">Reforce o estudo da fé com perguntas comentadas e efeitos sonoros</p>
+                    <div class="max-w-[1190px] w-full mx-auto space-y-7">
+                        <!-- Hero Banner Editorial: Quizzes de Conhecimento -->
+                        <div data-app-cover="banner_quiz_conhecimento" class="relative overflow-hidden bg-cgreen text-white rounded-[24px] p-6 sm:p-8 shadow-[0_14px_40px_rgba(35,70,56,0.12)] border border-cgreen-light/20 flex flex-col justify-between group">
+                            <img src="./assets/img/temas/banner-quiz-conhecimento.png" alt="Quizzes de Conhecimento" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity dark:mix-blend-overlay group-hover:scale-105 transition-transform duration-700 pointer-events-none" onerror="this.style.display='none'" />
+                            <div class="app-cover-placeholder absolute inset-0 bg-gradient-to-r from-[#14261e] via-[#234638]/85 to-[#0e1c15] pointer-events-none"></div>
+                            <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div class="space-y-3 max-w-2xl">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-[#e4cb92] rounded-full text-[11px] font-bold tracking-[0.16em] uppercase border border-white/15">
+                                        <span>🧠</span> <span>APRENDIZADO &amp; DESAFIO</span>
+                                    </span>
+                                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold leading-tight text-white">
+                                        Quizzes de Conhecimento
+                                    </h2>
+                                    <p class="text-xs sm:text-sm text-[#dce5d9] leading-relaxed">
+                                        Teste e consolide seu conhecimento com questões comentadas, citações canônicas do Catecismo e iluminação bíblica. Cada acerto confere <strong>+10 XP</strong> no seu perfil!
+                                    </p>
                                 </div>
-                                <button id="quiz-sound-toggle-btn" onclick="QuizAudio.toggle()" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition flex items-center gap-1.5 shadow-sm">
+                                <button id="quiz-sound-toggle-btn" onclick="QuizAudio.toggle()" class="self-start md:self-center px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs font-bold text-white transition flex items-center gap-2 shadow-xs cursor-pointer shrink-0">
                                     ${soundLabel}
                                 </button>
                             </div>
+                        </div>
 
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Escolha uma modalidade ou categoria temática. Cada acerto confere <strong>+10 XP</strong> com gabarito comentado, citações canônicas do Catecismo e iluminação bíblica!
-                            </p>
-
+                        <!-- Card de Modalidades e Categorias -->
+                        <div class="bg-[#fffefa] dark:bg-[#131d31] rounded-[24px] p-6 sm:p-8 border border-cline dark:border-slate-800 shadow-xs space-y-6">
                             <!-- Modalidades Rápidas -->
-                            <div class="flex flex-wrap gap-3">
-                                <button onclick="startQuiz(null, 5)" class="flex-1 min-w-[140px] px-5 py-3.5 mariana-gradient text-white rounded-2xl text-xs font-bold transition transform hover:scale-105 shadow-md flex items-center justify-center gap-2">
-                                    <span>⚡</span> Desafio Rápido (5 perguntas)
-                                </button>
-                                <button onclick="startQuiz(null, 10)" class="flex-1 min-w-[140px] px-5 py-3.5 gold-gradient text-mariana-dark rounded-2xl text-xs font-bold transition transform hover:scale-105 shadow-md flex items-center justify-center gap-2">
-                                    <span>🎯</span> Maratona (10 perguntas)
-                                </button>
+                            <div class="space-y-3">
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-cgold dark:text-amber-400">Modalidades Rápidas</span>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                    <button onclick="startQuiz(null, 5)" class="p-4 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs transition shadow-xs flex items-center justify-center gap-2.5 cursor-pointer">
+                                        <span class="text-base">⚡</span> <span>Desafio Rápido (5 perguntas aleatórias)</span>
+                                    </button>
+                                    <button onclick="startQuiz(null, 10)" class="p-4 rounded-2xl bg-[#f3f2ed] dark:bg-slate-800 hover:bg-[#e8e5dc] dark:hover:bg-slate-700 text-cgreen dark:text-csage font-bold text-xs border border-cline dark:border-slate-700 transition shadow-2xs flex items-center justify-center gap-2.5 cursor-pointer">
+                                        <span class="text-base">🎯</span> <span>Grande Maratona (10 perguntas aleatórias)</span>
+                                    </button>
+                                </div>
                             </div>
 
                             <!-- Categorias Temáticas -->
-                            <div class="space-y-2 pt-2">
-                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Por Área Temática</span>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                            <div class="space-y-3 pt-3 border-t border-cline dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-cgold dark:text-amber-400">Por Área Temática</span>
+                                    <span class="text-[11px] text-slate-500 dark:text-slate-400">Escolha um dos eixos de estudo</span>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                     ${categories.map(c => {
                                         const count = QuizContentProvider.questions.filter(q => q.category === c).length;
-                                        const icons = { 'Doutrina': '🛡️', 'Sacramentos': '✨', 'Bíblia': '📖', 'Liturgia & Santos': '⛪' };
+                                        const icons = { 'Doutrina': '🛡️', 'Sacramentos': '🍷', 'Bíblia': '📖', 'Liturgia & Santos': '⛪' };
+                                        const coverInfo = categoryCovers[c] || { id: 'quiz_area_doutrina', img: './assets/img/temas/quiz-area-doutrina.png' };
                                         return `
-                                            <button onclick="startQuiz('${c}', 5)" class="p-4 bg-slate-50 hover:bg-amber-50/70 border border-slate-200 hover:border-amber-300 rounded-2xl text-left transition space-y-1.5 group shadow-sm">
-                                                <span class="text-2xl">${icons[c] || '✝️'}</span>
-                                                <h4 class="font-serif font-bold text-mariana group-hover:text-amber-900 text-sm">${c}</h4>
-                                                <span class="text-[10px] text-slate-400 font-semibold">${count} questões disponíveis</span>
+                                            <button onclick="startQuiz('${c}', 5)" data-app-cover="${coverInfo.id}" class="group relative overflow-hidden p-5 bg-[#fffefa] dark:bg-[#131d31] hover:bg-amber-50/40 dark:hover:bg-slate-800 border border-cline dark:border-slate-800 hover:border-cgold/60 dark:hover:border-amber-400/60 rounded-2xl text-left transition-all space-y-2 shadow-xs hover:shadow-md cursor-pointer flex flex-col justify-between min-h-[145px]">
+                                                <img src="${coverInfo.img}" alt="${c}" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none" onerror="this.style.display='none'" />
+                                                <div class="absolute inset-0 bg-gradient-to-t from-[#fffefa]/95 via-[#fffefa]/80 to-[#fffefa]/40 dark:from-[#131d31]/95 dark:via-[#131d31]/80 dark:to-[#131d31]/40 pointer-events-none"></div>
+                                                <div class="relative z-10 flex items-start justify-between w-full">
+                                                    <span class="text-2xl p-2 bg-[#fbf9f4] dark:bg-slate-800 rounded-xl border border-cline dark:border-slate-700 shadow-2xs">${icons[c] || '✝️'}</span>
+                                                    <span class="text-[9px] font-bold text-cgold dark:text-amber-400 uppercase tracking-widest bg-amber-500/10 dark:bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-500/20">5 QUESTÕES</span>
+                                                </div>
+                                                <div class="relative z-10">
+                                                    <h4 class="font-serif font-bold text-cgreen dark:text-csage group-hover:text-cgold transition text-base leading-tight">${c}</h4>
+                                                    <span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium block mt-1">${count} questões disponíveis</span>
+                                                </div>
                                             </button>
                                         `;
                                     }).join('')}
@@ -8901,43 +9058,72 @@ https://catecismo.creativeam.com.br`;
             
             renderPlanos() {
                 const plans = [
-                    { id: 'plan_creio', title: 'Fundamentos da Fé', desc: 'Percurso de 5 dias pelo pilar CREIO: o desejo de Deus, a Revelação, a fé, a Escritura e a Trindade.', days: ['creio_1','creio_2','creio_3','creio_4','creio_5'], icon: '🛡️', color: 'mariana' },
-                    { id: 'plan_celebro', title: 'Viver os Sacramentos', desc: 'Percurso de 5 dias pelo pilar CELEBRO: a liturgia, o mistério pascal, os sete sacramentos, o Batismo e a Eucaristia.', days: ['celebro_1','celebro_2','celebro_3','celebro_4','celebro_5'], icon: '✨', color: 'vinho' },
-                    { id: 'plan_vivo', title: 'A Vida Moral Cristã', desc: 'Percurso de 5 dias pelo pilar VIVO: dignidade humana, liberdade, consciência, virtudes e conversão.', days: ['vivo_1','vivo_2','vivo_3','vivo_4','vivo_5'], icon: '🌿', color: 'mariana' },
-                    { id: 'plan_rezo', title: 'Aprender a Rezar', desc: 'Percurso de 5 dias pelo pilar REZO: o que é a oração, suas fontes e formas, as dificuldades e o Pai-Nosso.', days: ['rezo_1','rezo_2','rezo_3','rezo_4','rezo_5'], icon: '🕊️', color: 'vinho' }
+                    { id: 'plan_creio', title: 'Fundamentos da Fé', desc: 'Percurso de 5 dias pelo pilar CREIO: o desejo de Deus, a Revelação, a fé, a Escritura e a Trindade.', days: ['creio_1','creio_2','creio_3','creio_4','creio_5'], icon: '🛡️', coverId: 'plano_creio', coverDefault: './assets/img/temas/card-pilar-creio.png' },
+                    { id: 'plan_celebro', title: 'Viver os Sacramentos', desc: 'Percurso de 5 dias pelo pilar CELEBRO: a liturgia, o mistério pascal, os sete sacramentos, o Batismo e a Eucaristia.', days: ['celebro_1','celebro_2','celebro_3','celebro_4','celebro_5'], icon: '🍷', coverId: 'plano_celebro', coverDefault: './assets/img/temas/card-pilar-celebro.png' },
+                    { id: 'plan_vivo', title: 'A Vida Moral Cristã', desc: 'Percurso de 5 dias pelo pilar VIVO: dignidade humana, liberdade, consciência, virtudes e conversão.', days: ['vivo_1','vivo_2','vivo_3','vivo_4','vivo_5'], icon: '🌿', coverId: 'plano_vivo', coverDefault: './assets/img/temas/card-pilar-vivo.png' },
+                    { id: 'plan_rezo', title: 'Aprender a Rezar', desc: 'Percurso de 5 dias pelo pilar REZO: o que é a oração, suas fontes e formas, as dificuldades e o Pai-Nosso.', days: ['rezo_1','rezo_2','rezo_3','rezo_4','rezo_5'], icon: '🕊️', coverId: 'plano_rezo', coverDefault: './assets/img/temas/card-pilar-rezo.png' }
                 ];
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-8">
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 card-shadow space-y-3">
-                            <h2 class="font-serif text-3xl font-bold text-mariana">Planos de Estudo</h2>
-                            <p class="text-sm text-slate-600 leading-relaxed max-w-2xl">Roteiros guiados de 5 dias pelos quatro pilares do Catecismo. Ative um plano e avance uma aula por dia — o progresso fica salvo no seu perfil.</p>
+                    <div class="max-w-[1190px] w-full mx-auto space-y-7">
+                        <!-- Hero Banner Editorial: Planos de Estudo -->
+                        <div data-app-cover="banner_planos_estudo" class="relative overflow-hidden bg-cgreen text-white rounded-[24px] p-6 sm:p-8 shadow-[0_14px_40px_rgba(35,70,56,0.12)] border border-cgreen-light/20 flex flex-col justify-between group">
+                            <img src="./assets/img/temas/banner-planos-estudo.png" alt="Planos de Estudo" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity dark:mix-blend-overlay group-hover:scale-105 transition-transform duration-700 pointer-events-none" onerror="this.style.display='none'" />
+                            <div class="app-cover-placeholder absolute inset-0 bg-gradient-to-r from-[#14261e] via-[#234638]/85 to-[#0e1c15] pointer-events-none"></div>
+                            <div class="relative z-10 space-y-3 max-w-2xl">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-[#e4cb92] rounded-full text-[11px] font-bold tracking-[0.16em] uppercase border border-white/15">
+                                    <span>📅</span> <span>JORNADA ESPIRITUAL GUIADA</span>
+                                </span>
+                                <h2 class="font-serif text-3xl sm:text-4xl font-semibold leading-tight text-white">
+                                    Planos de Estudo
+                                </h2>
+                                <p class="text-xs sm:text-sm text-[#dce5d9] leading-relaxed">
+                                    Roteiros estruturados de 5 dias pelos quatro pilares do Catecismo da Igreja Católica. Ative um percurso diário e avance aula por aula — todo o seu progresso é salvo e sincronizado no seu perfil.
+                                </p>
+                            </div>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- Grid dos 4 Pilares -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                             ${plans.map(plan => {
                                 const isActive = AppState.activeStudyPlan === plan.id;
                                 const done = (AppState.planProgress[plan.id] || []).length;
                                 const pct = Math.round((done / plan.days.length) * 100);
                                 const nextLesson = plan.days.find(d => !(AppState.planProgress[plan.id] || []).includes(d));
                                 return `
-                                    <div class="bg-white rounded-3xl p-6 border ${isActive ? 'border-dourado ring-2 ring-dourado/30' : 'border-slate-200'} card-shadow space-y-4">
-                                        <div class="flex items-start justify-between">
-                                            <div class="flex items-center gap-3">
-                                                <span class="text-3xl">${plan.icon}</span>
-                                                <div>
-                                                    <h3 class="font-serif text-xl font-bold text-mariana">${plan.title}</h3>
-                                                    <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">5 dias • ${done}/${plan.days.length} concluídos</span>
+                                    <div data-app-cover="${plan.coverId}" class="group relative overflow-hidden bg-[#fffefa] dark:bg-[#131d31] rounded-[24px] p-6 border ${isActive ? 'border-cgold dark:border-amber-400 ring-2 ring-cgold/30' : 'border-cline dark:border-slate-800'} shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                                        <img src="${plan.coverDefault}" alt="${plan.title}" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-20 group-hover:scale-105 transition-transform duration-500 pointer-events-none" onerror="this.style.display='none'" />
+                                        <div class="absolute inset-0 bg-gradient-to-t from-[#fffefa]/95 via-[#fffefa]/80 to-[#fffefa]/45 dark:from-[#131d31]/95 dark:via-[#131d31]/80 dark:to-[#131d31]/45 pointer-events-none"></div>
+                                        <div class="relative z-10 space-y-4 flex flex-col h-full justify-between">
+                                            <div class="space-y-3">
+                                                <div class="flex items-start justify-between gap-3">
+                                                    <div class="flex items-center gap-3">
+                                                        <span class="text-2xl shrink-0 w-11 h-11 flex items-center justify-center bg-[#fbf9f4] dark:bg-slate-800/80 rounded-2xl border border-cline dark:border-slate-700 shadow-2xs">${plan.icon}</span>
+                                                        <div>
+                                                            <h3 class="font-serif text-xl font-bold text-cgreen dark:text-csage">${plan.title}</h3>
+                                                            <span class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">5 dias • ${done}/${plan.days.length} concluídos</span>
+                                                        </div>
+                                                    </div>
+                                                    ${isActive ? '<span class="px-2.5 py-1 bg-amber-500/15 dark:bg-amber-400/15 text-amber-900 dark:text-amber-300 rounded-full text-[10px] font-bold border border-amber-500/30 uppercase tracking-widest shrink-0">ATIVO</span>' : ''}
+                                                </div>
+                                                <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">${plan.desc}</p>
+                                            </div>
+                                            
+                                            <div class="space-y-3 pt-2">
+                                                <div class="space-y-1">
+                                                    <div class="flex justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400">
+                                                        <span>Progresso do percurso</span>
+                                                        <span>${pct}%</span>
+                                                    </div>
+                                                    <div class="w-full bg-[#edebe4] dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                                        <div class="h-full rounded-full transition-all bg-gradient-to-r from-amber-500 to-amber-600" style="width: ${pct}%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex gap-2 pt-1">
+                                                    ${isActive && nextLesson ? `<button onclick="openLessonModal('${nextLesson}')" class="flex-1 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl text-xs transition shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"><span>▶</span> <span>Continuar: próxima aula</span></button>` : ''}
+                                                    ${isActive && !nextLesson ? '<span class="flex-1 py-2.5 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 rounded-xl text-xs font-bold text-center">✓ Plano concluído com louvor!</span>' : ''}
+                                                    ${!isActive ? `<button onclick="activatePlan('${plan.id}')" class="flex-1 py-2.5 bg-[#f3f2ed] dark:bg-slate-800 hover:bg-amber-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 hover:text-amber-900 dark:hover:text-amber-200 border border-cline dark:border-slate-700 rounded-xl text-xs font-bold transition cursor-pointer">Ativar este plano</button>` : ''}
                                                 </div>
                                             </div>
-                                            ${isActive ? '<span class="px-2.5 py-1 bg-dourado/20 text-amber-800 rounded-lg text-[10px] font-bold border border-dourado/40">ATIVO</span>' : ''}
-                                        </div>
-                                        <p class="text-xs text-slate-600 leading-relaxed">${plan.desc}</p>
-                                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                                            <div class="gold-gradient h-full rounded-full transition-all" style="width: ${pct}%"></div>
-                                        </div>
-                                        <div class="flex gap-2">
-                                            ${isActive && nextLesson ? `<button onclick="openLessonModal('${nextLesson}')" class="flex-1 py-3 mariana-gradient text-white rounded-xl text-xs font-bold transition hover:scale-105">▶ Continuar: próxima aula</button>` : ''}
-                                            ${isActive && !nextLesson ? '<span class="flex-1 py-3 bg-emerald-100 text-emerald-800 rounded-xl text-xs font-bold text-center">✓ Plano concluído!</span>' : ''}
-                                            ${!isActive ? `<button onclick="activatePlan('${plan.id}')" class="flex-1 py-3 bg-slate-100 hover:bg-amber-100 text-slate-700 hover:text-amber-900 rounded-xl text-xs font-bold transition">Ativar este plano</button>` : ''}
                                         </div>
                                     </div>
                                 `;
@@ -9165,28 +9351,36 @@ https://catecismo.creativeam.com.br`;
             renderReflexoes() {
                 const list = ReflectionsManager.getReflections();
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-6">
-                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-6 text-left">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-100 dark:border-slate-700">
-                                <div class="flex items-center gap-3.5">
-                                    <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-2xl shadow-2xs shrink-0">
-                                        📖
-                                    </div>
-                                    <div>
-                                        <h2 class="font-serif text-2xl font-bold text-mariana dark:text-slate-100">Meu Diário Espiritual &amp; Reflexões</h2>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400">Suas meditações e orações pessoais registradas na Lectio Divina diária</p>
-                                    </div>
+                    <div class="max-w-[1190px] w-full mx-auto space-y-7">
+                        <!-- Hero Banner Editorial: Diário Espiritual -->
+                        <div data-app-cover="banner_diario_espiritual" class="relative overflow-hidden bg-cgreen text-white rounded-[24px] p-6 sm:p-8 shadow-[0_14px_40px_rgba(35,70,56,0.12)] border border-cgreen-light/20 flex flex-col justify-between group">
+                            <img src="./assets/img/temas/banner-diario-espiritual.png" alt="Meu Diário Espiritual" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity dark:mix-blend-overlay group-hover:scale-105 transition-transform duration-700 pointer-events-none" onerror="this.style.display='none'" />
+                            <div class="app-cover-placeholder absolute inset-0 bg-gradient-to-r from-[#14261e] via-[#234638]/85 to-[#0e1c15] pointer-events-none"></div>
+                            <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                <div class="space-y-3 max-w-2xl">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-[#e4cb92] rounded-full text-[11px] font-bold tracking-[0.16em] uppercase border border-white/15">
+                                        <span>📜</span> <span>MEMÓRIA DA GRAÇA &amp; ORAÇÃO</span>
+                                    </span>
+                                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold leading-tight text-white">
+                                        Meu Diário Espiritual
+                                    </h2>
+                                    <p class="text-xs sm:text-sm text-[#dce5d9] leading-relaxed">
+                                        Suas meditações, escutas da Palavra e orações pessoais salvas na Lectio Divina diária. Guarde no coração o que o Senhor falou na intimidade da oração.
+                                    </p>
                                 </div>
-                                <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 shrink-0">
-                                    <span class="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/60 text-xs font-bold text-amber-900 dark:text-amber-200 font-mono whitespace-nowrap shrink-0 inline-flex items-center">
+                                <div class="flex items-center gap-2.5 shrink-0 self-start md:self-center">
+                                    <span class="px-3 py-2 rounded-xl bg-white/10 border border-white/15 text-xs font-bold text-amber-200 font-mono whitespace-nowrap">
                                         ${list.length} ${list.length === 1 ? 'reflexão' : 'reflexões'}
                                     </span>
-                                    <button onclick="router.navigate('oracao')" class="px-3.5 py-1.5 bg-mariana hover:bg-mariana-dark text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer whitespace-nowrap shrink-0">
+                                    <button onclick="router.navigate('oracao')" class="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl text-xs transition shadow-xs flex items-center gap-2 cursor-pointer whitespace-nowrap">
                                         <span>✍️</span> <span>Escrever na Lectio de Hoje</span>
                                     </button>
                                 </div>
                             </div>
+                        </div>
 
+                        <!-- Container das Reflexões Salvas -->
+                        <div class="bg-[#fffefa] dark:bg-[#131d31] rounded-[24px] p-6 sm:p-8 border border-cline dark:border-slate-800 shadow-xs space-y-6 text-left">
                             <div id="reflections-view-container">
                                 ${ReflectionsManager.getReflectionsHtml()}
                             </div>
@@ -9305,9 +9499,9 @@ https://catecismo.creativeam.com.br`;
 
                 return `
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between px-1 text-xs text-slate-500 dark:text-slate-400 pb-1">
-                            <span class="font-bold uppercase tracking-wider text-[10px]">Total gravado: <span class="text-mariana dark:text-amber-400 font-mono text-xs">${list.length}</span></span>
-                            <span class="text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-medium">
+                        <div class="flex items-center justify-between px-1 text-xs text-slate-500 dark:text-slate-400 pb-1 border-b border-cline dark:border-slate-800">
+                            <span class="font-bold uppercase tracking-wider text-[10px] text-cgold dark:text-amber-400">Total gravado: <span class="text-cgreen dark:text-csage font-mono text-xs">${list.length}</span></span>
+                            <span class="text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 font-medium">
                                 <span>☁️</span> <span>Sincronizado na Nuvem</span>
                             </span>
                         </div>
@@ -9324,30 +9518,30 @@ https://catecismo.creativeam.com.br`;
                             const textForClipboard = encodeURIComponent(r.text);
 
                             return `
-                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/80 border ${isToday ? 'border-amber-400 dark:border-amber-600 bg-amber-50/20' : 'border-slate-200 dark:border-slate-700'} shadow-2xs space-y-2.5 hover:border-amber-300 transition">
+                                <div class="p-5 rounded-2xl bg-[#fffefa] dark:bg-[#131d31] border ${isToday ? 'border-cgold dark:border-amber-400 ring-2 ring-cgold/20' : 'border-cline dark:border-slate-800'} shadow-xs space-y-3 hover:border-cgold/50 transition">
                                     <div class="flex items-center justify-between gap-2">
                                         <div class="flex items-center gap-2">
-                                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold capitalize bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                            <span class="px-3 py-1 rounded-full text-[11px] font-bold capitalize bg-[#fbf9f4] dark:bg-slate-800 text-cgreen dark:text-csage border border-cline dark:border-slate-700">
                                                 📅 ${formattedDate}
                                             </span>
-                                            ${isToday ? `<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-500 text-white uppercase">Hoje</span>` : ''}
+                                            ${isToday ? `<span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider">Hoje</span>` : ''}
                                         </div>
                                         <span class="font-mono text-[10px] text-slate-400">${r.date}</span>
                                     </div>
 
-                                    <div class="p-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-100 dark:border-slate-700/60 font-serif text-sm text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-line">
+                                    <div class="p-4 bg-[#fcfbf7] dark:bg-slate-900/80 rounded-xl border border-amber-200/50 dark:border-slate-800 font-serif text-sm text-slate-800 dark:text-slate-100 leading-relaxed italic whitespace-pre-line">
                                         "${safeTextEscaped}"
                                     </div>
 
-                                    <div class="flex items-center justify-between pt-1.5 border-t border-slate-100 dark:border-slate-800 text-xs">
-                                        <button type="button" onclick="closeModal(); router.navigate('oracao', '${r.date}');" class="text-mariana dark:text-blue-400 hover:underline font-bold text-[11px] flex items-center gap-1 cursor-pointer">
+                                    <div class="flex items-center justify-between pt-2 border-t border-cline dark:border-slate-800/80 text-xs">
+                                        <button type="button" onclick="closeModal(); router.navigate('oracao', '${r.date}');" class="text-cgreen dark:text-csage hover:text-cgold dark:hover:text-amber-400 font-bold text-[11px] flex items-center gap-1.5 cursor-pointer transition">
                                             <span>📖</span> <span>Ver Evangelho / Lectio deste dia →</span>
                                         </button>
                                         <div class="flex items-center gap-2">
-                                            <button type="button" onclick="navigator.clipboard.writeText(decodeURIComponent('${textForClipboard}')); showToast('Reflexão copiada com sucesso!', 'success');" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-[10px] font-bold px-1.5 py-1 transition cursor-pointer" title="Copiar reflexão">
+                                            <button type="button" onclick="navigator.clipboard.writeText(decodeURIComponent('${textForClipboard}')); showToast('Reflexão copiada com sucesso!', 'success');" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-[10px] font-bold px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer" title="Copiar reflexão">
                                                 <span>📋 Copiar</span>
                                             </button>
-                                            <button type="button" onclick="ReflectionsManager.deleteReflection('${r.date}')" class="text-slate-400 hover:text-rose-600 text-[10px] font-bold px-1.5 py-1 transition cursor-pointer" title="Excluir do Diário">
+                                            <button type="button" onclick="ReflectionsManager.deleteReflection('${r.date}')" class="text-slate-400 hover:text-rose-600 text-[10px] font-bold px-2 py-1 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/40 transition cursor-pointer" title="Excluir do Diário">
                                                 <span>🗑️ Excluir</span>
                                             </button>
                                         </div>
