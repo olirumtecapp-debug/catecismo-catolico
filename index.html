@@ -800,9 +800,9 @@
             <header class="h-16 sm:h-[72px] bg-[#fffefa]/95 dark:bg-[#131d31]/95 border-b border-cline dark:border-slate-800 flex items-center justify-between px-3 md:px-6 z-20 shrink-0 gap-3 sticky top-0 backdrop-blur-sm">
                 <div class="flex items-center gap-3 shrink-0">
                     <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl text-cgreen dark:text-csage p-1 hover:bg-cline/40 dark:hover:bg-slate-800 rounded-lg transition" title="Abrir Menu">☰</button>
-                    <div class="flex items-center gap-2.5 cursor-pointer" onclick="router.navigate('home')">
+                    <div class="flex items-center gap-2.5 cursor-pointer site-logo-trigger select-none" onclick="handleLogoAdminTap(event)" data-admin-trigger="true" title="Catecismo (Início / Toque 5x para Admin)">
                         <div class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shrink-0">
-                            <img src="assets/img/logo-simbolo.png" alt="Catecismo" class="w-full h-full object-contain">
+                            <img src="assets/img/logo-simbolo.png" alt="Catecismo" class="w-full h-full object-contain pointer-events-none">
                         </div>
                         <div class="min-w-0">
                             <strong class="block font-serif text-base sm:text-lg font-bold text-cgreen dark:text-csage tracking-wide leading-none">CATECISMO</strong>
@@ -883,9 +883,9 @@
                 <div class="w-72 sm:w-80 h-full bg-[#fffefa] dark:bg-[#131d31] text-slate-800 dark:text-slate-100 flex flex-col shadow-2xl border-r border-cline dark:border-slate-800">
                     <!-- Topo do Drawer com Logo Oficial da Plataforma -->
                     <div class="p-4 sm:p-5 border-b border-cline dark:border-slate-800 bg-[#fffefa] dark:bg-[#131d31] flex items-center justify-between">
-                        <div class="flex items-center gap-2.5 cursor-pointer" onclick="router.navigate('home'); toggleMobileMenu();">
+                        <div class="flex items-center gap-2.5 cursor-pointer site-logo-trigger select-none" onclick="handleLogoAdminTap(event); toggleMobileMenu();" data-admin-trigger="true" title="Catecismo (Início / Toque 5x para Admin)">
                             <div class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center shrink-0">
-                                <img src="assets/img/logo-simbolo.png" alt="Catecismo" class="w-full h-full object-contain">
+                                <img src="assets/img/logo-simbolo.png" alt="Catecismo" class="w-full h-full object-contain pointer-events-none">
                             </div>
                             <div class="min-w-0">
                                 <strong class="block font-serif text-base font-bold text-cgreen dark:text-csage tracking-wide leading-none">CATECISMO</strong>
@@ -15583,34 +15583,45 @@ https://catecismo.creativeam.com.br
             }
         });
 
-        // 2. Mobile Touch: 5 toques rápidos ou toque longo (3 segundos) na Cruz ou Logo
+        // 2. Mobile Touch & Click: 5 toques rápidos ou toque longo (2.5 segundos) no Logo
         let adminTapCount = 0;
         let adminTapTimer = null;
         let adminPressTimer = null;
 
-        function attachAdminTouchTriggers() {
-            const triggers = document.querySelectorAll('[data-admin-trigger="true"], .mariana-gradient');
-            triggers.forEach(el => {
-                // Toque quíntuplo
-                el.addEventListener('click', () => {
-                    adminTapCount++;
-                    if (adminTapCount === 1) {
-                        adminTapTimer = setTimeout(() => {
-                            adminTapCount = 0;
-                        }, 2500);
-                    } else if (adminTapCount >= 5) {
-                        clearTimeout(adminTapTimer);
-                        adminTapCount = 0;
-                        promptAdminAccess();
-                    }
-                });
+        function handleLogoAdminTap(e) {
+            adminTapCount++;
+            if (adminTapTimer) clearTimeout(adminTapTimer);
+            adminTapTimer = setTimeout(() => {
+                adminTapCount = 0;
+            }, 3000);
 
-                // Toque longo (3 segundos no touch)
+            if (adminTapCount >= 5) {
+                clearTimeout(adminTapTimer);
+                adminTapCount = 0;
+                if (e) {
+                    if (e.stopPropagation) e.stopPropagation();
+                    if (e.preventDefault) e.preventDefault();
+                }
+                if (navigator.vibrate) navigator.vibrate(100);
+                promptAdminAccess();
+                return false;
+            } else if (adminTapCount === 1) {
+                // No primeiro clique comum, executa a navegação padrão para home
+                router.navigate('home');
+            }
+        }
+        window.handleLogoAdminTap = handleLogoAdminTap;
+
+        function attachAdminTouchTriggers() {
+            const triggers = document.querySelectorAll('[data-admin-trigger="true"], .site-logo-trigger, header img[alt="Catecismo"], #mobile-drawer img[alt="Catecismo"]');
+            triggers.forEach(el => {
+                // Toque longo (2.5 segundos no touch)
                 el.addEventListener('touchstart', (e) => {
+                    if (adminPressTimer) clearTimeout(adminPressTimer);
                     adminPressTimer = setTimeout(() => {
                         if (navigator.vibrate) navigator.vibrate(100);
                         promptAdminAccess();
-                    }, 3000);
+                    }, 2500);
                 }, { passive: true });
 
                 el.addEventListener('touchend', () => {
@@ -15621,6 +15632,7 @@ https://catecismo.creativeam.com.br
                 });
             });
         }
+        window.attachAdminTouchTriggers = attachAdminTouchTriggers;
         window.addEventListener('DOMContentLoaded', attachAdminTouchTriggers);
 
 
@@ -16389,6 +16401,9 @@ https://catecismo.creativeam.com.br
             }
             router.navigate('home');
             ContactManager.init();
+            if (window.attachAdminTouchTriggers) {
+                attachAdminTouchTriggers();
+            }
 
             // Suave transição de saída da tela de abertura editorial
             const splash = document.getElementById('app-splash-screen');
