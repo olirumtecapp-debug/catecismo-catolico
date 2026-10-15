@@ -883,5 +883,17 @@
     "promptGemini": "Ilustração vetorial sacra da Biblioteca Oficial do Catecismo da Igreja Católica. Estante nobre de teologia com brasão das chaves de São Pedro em relevo dourado sobre couro verde mariano. Estilo nobre editorial dos apps católicos, sem texto.",
     "promptMidjourney": "Official Catechism of the Catholic Church library banner, papal keys emblem on green leather book with golden accents, flat modern vector art, deep emerald green and papal gold, no text --ar 16:9",
     "promptBing": "Catholic Catechism grand library vector illustration, green and gold leather book with papal keys, no text."
+  },
+  {
+    "id": "banner_conquistas",
+    "title": "Banner de Destaque — Conquistas da Fé & Coroa da Perseverança",
+    "category": "destaques",
+    "aspectRatio": "16:9",
+    "location": "Página Conquistas — Topo Editorial & Jornada da Santidade",
+    "targetFile": "banner-conquistas.png",
+    "imageUrl": "./assets/img/temas/banner-conquistas.png",
+    "defaultIcon": "🏆",
+    "placeholderBg": "from-amber-950/80 via-slate-900 to-[#1e3b2e]",
+    "promptGemini": "Ilustração vetorial sacra moderna das Conquistas da Fé. Coroa celestial de louros dourada com esmeraldas, ramos de oliveira e Bíblia Sagrada aberta iluminada por raios divinos. Paleta verde floresta, âmbar e ouro papal, estilo Capela e Hallow, sem texto."
   }
 ]

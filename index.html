@@ -4491,7 +4491,8 @@
         };
         window.AppState = AppState;
 
-        function saveState() {
+        let _cloudSyncDebounceTimer = null;
+        function saveState(skipCloudSync = false) {
             try {
                 // Auto-coleta progresso de novenas espalhado no localStorage antes de salvar
                 if (window.CloudSyncManager && typeof CloudSyncManager.collectNovenasData === 'function') {
@@ -4503,6 +4504,14 @@
             }
             updateHeaderBadges();
             checkAchievements();
+
+            // Sincronização automática na nuvem sempre que qualquer progresso mudar
+            if (!skipCloudSync && AppState && AppState.cloudSyncEmail && window.CloudSyncManager && typeof CloudSyncManager.syncToCloud === 'function' && !CloudSyncManager.isSyncing) {
+                if (_cloudSyncDebounceTimer) clearTimeout(_cloudSyncDebounceTimer);
+                _cloudSyncDebounceTimer = setTimeout(() => {
+                    CloudSyncManager.syncToCloud(false);
+                }, 2000);
+            }
         }
         window.saveState = saveState;
 
@@ -5201,6 +5210,7 @@
                             mainView.innerHTML = Views.renderPlanos();
                             if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
+                        case 'diario':
                         case 'reflexoes':
                             titleEl.innerText = "Diário Espiritual & Reflexões";
                             subtitleEl.innerText = "Suas meditações e orações registradas na Lectio Divina";
@@ -5211,11 +5221,13 @@
                             titleEl.innerText = "Meus Favoritos";
                             subtitleEl.innerText = "Conteúdos salvos para consulta rápida";
                             mainView.innerHTML = Views.renderFavoritos();
+                            if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
                         case 'conquistas':
                             titleEl.innerText = "Conquistas";
                             subtitleEl.innerText = "Seu progresso coroado pela perseverança";
-                            mainView.innerHTML = Views.renderConquistas();
+                            mainView.innerHTML = Views.renderConquistas(params);
+                            if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
                             break;
                         case 'progresso':
                             if (window.openMeuEspacoModal) {
@@ -9182,44 +9194,60 @@ https://catecismo.creativeam.com.br`;
                     : all.filter(a => a.category === currentCat);
 
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-6">
-                        <!-- Painel de Resumo & Coroa de Glória -->
-                        <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 card-shadow space-y-5">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-800">
-                                            Jornada da Santidade
-                                        </span>
-                                        <span class="text-xs font-semibold text-slate-400">• ${unlockedCount}/${all.length} Desbloqueadas</span>
-                                    </div>
-                                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-mariana dark:text-slate-100 mt-2">
+                    <div class="max-w-[1190px] w-full mx-auto space-y-7">
+                        <!-- Navegação de Apoio / Breadcrumb -->
+                        <div class="flex items-center justify-between pb-1">
+                            <button onclick="router.navigate('home')" class="px-4 py-2 rounded-xl bg-[#fffefa] dark:bg-[#131d31] hover:bg-slate-100 dark:hover:bg-slate-800 border border-cline dark:border-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-2xs">
+                                <span>←</span> <span>Voltar ao Início</span>
+                            </button>
+                            <button onclick="openMeuEspacoModal()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 dark:bg-amber-400/10 border border-amber-500/30 text-amber-900 dark:text-amber-300 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                                <span>❤️</span> <span>Meu Espaço &amp; Progresso</span>
+                            </button>
+                        </div>
+
+                        <!-- Hero Banner Editorial: Conquistas da Fé -->
+                        <div data-app-cover="banner_conquistas" class="relative overflow-hidden bg-cgreen text-white rounded-[24px] p-6 sm:p-8 shadow-[0_14px_40px_rgba(35,70,56,0.12)] border border-cgreen-light/20 flex flex-col justify-between group">
+                            <img src="./assets/img/temas/banner-conquistas.png" alt="Conquistas da Fé" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-luminosity dark:mix-blend-overlay group-hover:scale-105 transition-transform duration-700 pointer-events-none" onerror="this.style.display='none'" />
+                            <div class="app-cover-placeholder absolute inset-0 bg-gradient-to-r from-[#14261e] via-[#234638]/85 to-[#0e1c15] pointer-events-none"></div>
+                            <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                <div class="space-y-3 max-w-2xl">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-[#e4cb92] rounded-full text-[11px] font-bold tracking-[0.16em] uppercase border border-white/15">
+                                        <span>🏆</span> <span>JORNADA DA SANTIDADE &amp; PERSEVERANÇA</span>
+                                    </span>
+                                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold leading-tight text-white">
                                         Conquistas da Fé
                                     </h2>
-                                    <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl leading-relaxed">
-                                        Cada oração, meditação doutrinária e perseverança diária frutificam em virtudes e graças na sua vida cristã.
+                                    <p class="text-xs sm:text-sm text-[#dce5d9] leading-relaxed">
+                                        Cada oração fiel, meditação da Palavra e perseverança nos estudos frutificam em virtudes e graças na sua vida cristã. "Combati o bom combate, terminei a corrida, guardei a fé" (2Tm 4, 7).
                                     </p>
                                 </div>
-                                <div class="bg-amber-50 dark:bg-slate-700/60 p-4 rounded-2xl border border-amber-200/80 dark:border-slate-600 text-center flex-none min-w-[150px]">
-                                    <span class="text-3xl block animate-pulse">🏆</span>
-                                    <span class="font-bold text-xl text-amber-900 dark:text-amber-300 block mt-1">${pct}%</span>
-                                    <span class="text-[10px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Completude Geral</span>
+                                <div class="bg-white/10 dark:bg-black/35 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/20 text-center flex-none min-w-[170px] shadow-lg">
+                                    <span class="text-3xl block">👑</span>
+                                    <span class="font-serif font-bold text-2xl text-[#f3e5b8] block mt-1">${pct}%</span>
+                                    <span class="text-[10px] font-bold text-white/80 uppercase tracking-widest block">Completude Geral</span>
+                                    <span class="text-[11px] text-white/70 block mt-1 font-mono">${unlockedCount} de ${all.length} Insígnias</span>
                                 </div>
                             </div>
+                        </div>
 
+                        <!-- Painel de Progresso Geral e Filtros por Categoria -->
+                        <div class="bg-[#fffefa] dark:bg-[#131d31] rounded-[24px] p-6 sm:p-7 border border-cline dark:border-slate-800 shadow-xs space-y-5">
                             <!-- Barra de Progresso Geral -->
-                            <div class="space-y-1.5 pt-2 border-t border-slate-100 dark:border-slate-700">
-                                <div class="flex justify-between text-[11px] font-bold text-slate-600 dark:text-slate-300">
-                                    <span>Progresso Total da Jornada</span>
-                                    <span>${unlockedCount} de ${all.length} conquistas</span>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center text-xs font-bold text-slate-700 dark:text-slate-300">
+                                    <span class="flex items-center gap-2">
+                                        <span class="text-cgold">✦</span>
+                                        <span>Coroa da Perseverança</span>
+                                    </span>
+                                    <span class="font-mono text-cgreen dark:text-csage font-bold">${unlockedCount} de ${all.length} conquistas desbloqueadas</span>
                                 </div>
-                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-3 rounded-full overflow-hidden shadow-inner">
-                                    <div class="gold-gradient h-full rounded-full transition-all duration-700" style="width: ${pct}%"></div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-cline dark:border-slate-700">
+                                    <div class="gold-gradient h-full rounded-full transition-all duration-700 shadow-xs" style="width: ${pct}%"></div>
                                 </div>
                             </div>
 
                             <!-- Filtros por Categoria -->
-                            <div class="flex flex-wrap gap-2 pt-2">
+                            <div class="flex flex-wrap gap-2 pt-2 border-t border-cline/60 dark:border-slate-800">
                                 ${AchievementsManager.categories.map(c => {
                                     const isAct = currentCat === c.id;
                                     const countInCat = c.id === 'todas' ? all.length : all.filter(a => a.category === c.id).length;
@@ -9228,11 +9256,11 @@ https://catecismo.creativeam.com.br`;
                                         : all.filter(a => a.category === c.id && unlocked.includes(a.id)).length;
                                     return `
                                         <button onclick="router.navigate('conquistas', '${c.id}')" class="px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${isAct 
-                                            ? 'mariana-gradient text-white shadow-md scale-105' 
-                                            : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600'}">
+                                            ? 'bg-cgreen text-white shadow-sm ring-1 ring-cgreen-light/40' 
+                                            : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200'}">
                                             <span>${c.icon}</span>
                                             <span>${c.label}</span>
-                                            <span class="text-[10px] opacity-75 ml-0.5">(${unlockedInCat}/${countInCat})</span>
+                                            <span class="text-[10px] opacity-75 ml-0.5 font-mono">(${unlockedInCat}/${countInCat})</span>
                                         </button>
                                     `;
                                 }).join('')}
@@ -9240,36 +9268,36 @@ https://catecismo.creativeam.com.br`;
                         </div>
 
                         <!-- Grid de Conquistas -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                             ${filtered.map(a => {
                                 const has = unlocked.includes(a.id);
                                 const res = a.check(AppState, metrics);
                                 const progressPct = Math.round((res.current / res.max) * 100);
 
                                 return `
-                                    <div class="p-5 rounded-3xl border transition card-shadow relative flex flex-col justify-between space-y-3.5 ${has 
-                                        ? 'bg-gradient-to-br from-amber-50/90 to-amber-100/40 dark:from-amber-950/30 dark:to-slate-900 border-2 border-amber-300 dark:border-amber-700/80 shadow-md' 
-                                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 opacity-85 hover:opacity-100'}">
+                                    <div class="rounded-[22px] p-5 sm:p-6 border transition-all relative flex flex-col justify-between space-y-4 ${has 
+                                        ? 'bg-gradient-to-br from-[#fffdf7] via-[#fff9e8] to-[#fbf2d8] dark:from-[#16231c] dark:via-[#192720] dark:to-[#131d16] border-amber-300/80 dark:border-amber-600/50 shadow-[0_6px_20px_rgba(217,119,6,0.08)]' 
+                                        : 'bg-[#fffefa] dark:bg-[#131d31] border-cline dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-2xs opacity-90 hover:opacity-100'}">
                                         
                                         <div class="flex items-start gap-4">
                                             <!-- Ícone da Conquista -->
-                                            <div class="w-14 h-14 flex-none rounded-2xl flex items-center justify-center text-2xl transition shadow-xs ${has 
-                                                ? 'gold-gradient text-white shadow-amber-400/30' 
-                                                : 'bg-slate-100 dark:bg-slate-700 text-slate-400 grayscale'}">
+                                            <div class="w-14 h-14 flex-none rounded-2xl flex items-center justify-center text-2xl transition ${has 
+                                                ? 'gold-gradient text-white shadow-md shadow-amber-500/20 ring-2 ring-amber-300/50' 
+                                                : 'bg-slate-100 dark:bg-slate-800 text-slate-400 grayscale border border-cline dark:border-slate-700'}">
                                                 ${a.icon}
                                             </div>
 
                                             <div class="min-w-0 flex-1">
                                                 <div class="flex items-center justify-between gap-2">
-                                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                                                    <span class="text-[10px] font-bold uppercase tracking-wider ${has ? 'text-amber-800 dark:text-amber-300' : 'text-slate-400 dark:text-slate-500'}">
                                                         ${a.categoryLabel}
                                                     </span>
-                                                    <span class="text-[11px] font-bold px-2 py-0.5 rounded-md ${has ? 'bg-amber-200/80 dark:bg-amber-900 text-amber-900 dark:text-amber-200' : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400'}">
+                                                    <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full ${has ? 'bg-amber-200/80 dark:bg-amber-900/60 text-amber-950 dark:text-amber-200 border border-amber-300/70 dark:border-amber-700/60' : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'}">
                                                         +${a.xp} XP
                                                     </span>
                                                 </div>
 
-                                                <h3 class="font-serif text-lg font-bold mt-1 leading-snug ${has ? 'text-amber-950 dark:text-slate-100' : 'text-slate-700 dark:text-slate-300'}">
+                                                <h3 class="font-serif text-lg font-bold mt-1.5 leading-snug ${has ? 'text-amber-950 dark:text-amber-100' : 'text-slate-800 dark:text-slate-200'}">
                                                     ${a.title}
                                                 </h3>
 
@@ -9279,24 +9307,26 @@ https://catecismo.creativeam.com.br`;
                                             </div>
                                         </div>
 
-                                        <!-- Rodapé do Card com Barra de Progresso -->
-                                        <div class="pt-3 border-t ${has ? 'border-amber-200/60 dark:border-slate-700/80' : 'border-slate-100 dark:border-slate-700/60'}">
+                                        <!-- Rodapé do Card com Progresso e Status -->
+                                        <div class="pt-3 border-t ${has ? 'border-amber-200/60 dark:border-amber-900/40' : 'border-cline/70 dark:border-slate-800'}">
                                             <div class="flex items-center justify-between text-[11px] font-bold">
                                                 ${has ? `
-                                                    <span class="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300 bg-emerald-100/90 dark:bg-emerald-950 px-2.5 py-1 rounded-lg border border-emerald-300 dark:border-emerald-800">
+                                                    <span class="inline-flex items-center gap-1.5 text-emerald-800 dark:text-emerald-300 bg-emerald-100/90 dark:bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-300/80 dark:border-emerald-800">
                                                         <span>✓</span> <span>Conquistada (+${a.xp} XP)</span>
                                                     </span>
-                                                    <span class="text-xs text-amber-700 dark:text-amber-400">Glória a Deus! 🌟</span>
+                                                    <span class="text-xs text-amber-700 dark:text-amber-300 flex items-center gap-1 font-serif">
+                                                        <span>Glória a Deus!</span> <span>🌟</span>
+                                                    </span>
                                                 ` : `
-                                                    <span class="inline-flex items-center gap-1 text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-700/80 px-2.5 py-1 rounded-lg">
+                                                    <span class="inline-flex items-center gap-1 text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-lg border border-cline dark:border-slate-700">
                                                         <span>🔒</span> <span>${res.progressLabel}</span>
                                                     </span>
-                                                    <span class="text-slate-400 text-[10px] font-mono">${progressPct}%</span>
+                                                    <span class="text-slate-400 text-[11px] font-mono">${progressPct}%</span>
                                                 `}
                                             </div>
 
                                             ${!has ? `
-                                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden mt-2">
+                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden mt-2.5 border border-cline/50 dark:border-slate-700">
                                                     <div class="gold-gradient h-full rounded-full transition-all duration-500" style="width: ${progressPct}%"></div>
                                                 </div>
                                             ` : ''}
@@ -12406,6 +12436,7 @@ https://catecismo.creativeam.com.br
            ======================================================== */
         const CloudSyncManager = {
             baseUrl: '',
+            isSyncing: false,
 
             getApiUrl(endpoint) {
                 const loc = window.location;
@@ -12465,7 +12496,8 @@ https://catecismo.creativeam.com.br
             },
 
             async smartSync(showToastFeedback = false) {
-                if (!AppState.cloudSyncEmail) return;
+                if (!AppState.cloudSyncEmail || this.isSyncing) return;
+                this.isSyncing = true;
 
                 const email = String(AppState.cloudSyncEmail).trim().toLowerCase();
                 const pin = window.__pinNuvem || '';
@@ -12539,7 +12571,7 @@ https://catecismo.creativeam.com.br
                                 novenasChangedLocally = true;
                             }
 
-                            // 2. SEMPRE MESCLAR LITURGIA DIÁRIA, REFLEXÕES E CONQUISTAS (Aditivo e Nunca perde nada)
+                            // 2. SEMPRE MESCLAR LITURGIA DIÁRIA, REFLEXÕES, CONQUISTAS, QUIZZES, FAVORITOS E PLANOS
                             if (data.appState) {
                                 if (data.appState.liturgicalRead) {
                                     AppState.liturgicalRead = Object.assign({}, data.appState.liturgicalRead, AppState.liturgicalRead || {});
@@ -12551,12 +12583,34 @@ https://catecismo.creativeam.com.br
                                     const setL = new Set([...(AppState.completedLessons || []), ...data.appState.completedLessons]);
                                     AppState.completedLessons = Array.from(setL);
                                 }
+                                if (Array.isArray(data.appState.completedQuizzes)) {
+                                    const setQ = new Set([...(AppState.completedQuizzes || []), ...data.appState.completedQuizzes]);
+                                    AppState.completedQuizzes = Array.from(setQ);
+                                }
                                 if (Array.isArray(data.appState.unlockedAchievements)) {
                                     const setA = new Set([...(AppState.unlockedAchievements || []), ...data.appState.unlockedAchievements]);
                                     AppState.unlockedAchievements = Array.from(setA);
                                 }
+                                if (Array.isArray(data.appState.favorites)) {
+                                    const setF = new Set([...(AppState.favorites || []), ...data.appState.favorites]);
+                                    AppState.favorites = Array.from(setF);
+                                }
                                 if (data.appState.dailyChallenges) {
                                     AppState.dailyChallenges = Object.assign({}, data.appState.dailyChallenges, AppState.dailyChallenges || {});
+                                }
+                                if (data.appState.planProgress && typeof data.appState.planProgress === 'object') {
+                                    AppState.planProgress = AppState.planProgress || {};
+                                    Object.keys(data.appState.planProgress).forEach(pid => {
+                                        const localDays = AppState.planProgress[pid] || [];
+                                        const cloudDays = data.appState.planProgress[pid] || [];
+                                        AppState.planProgress[pid] = Array.from(new Set([...localDays, ...cloudDays]));
+                                    });
+                                }
+                                if (data.appState.activeStudyPlan && !AppState.activeStudyPlan) {
+                                    AppState.activeStudyPlan = data.appState.activeStudyPlan;
+                                }
+                                if (data.appState.lastPrayerDate && (!AppState.lastPrayerDate || data.appState.lastPrayerDate > AppState.lastPrayerDate)) {
+                                    AppState.lastPrayerDate = data.appState.lastPrayerDate;
                                 }
                             }
 
@@ -12564,16 +12618,27 @@ https://catecismo.creativeam.com.br
                             AppState.xp = Math.max(localXp, cloudXp);
                             AppState.streak = Math.max(localStreak, cloudStreak);
                             AppState.lastCloudSync = new Date().toISOString();
-                            saveState();
+                            saveState(true);
                             this.updateIndicator();
                             if (typeof updateHeaderBadges === 'function') updateHeaderBadges();
 
-                            // Re-renderiza a tela de liturgia em tempo real se o fiel estiver nela
+                            // Re-renderiza a tela em tempo real se o fiel estiver navegando nela
                             if (router && router.currentRoute === 'liturgia') {
                                 const currentParam = router.currentParams || getLocalDateString();
                                 const container = document.querySelector('[data-liturgia-view]');
                                 if (container) {
                                     Views.loadLiturgiaAsync(currentParam, document.getElementById('main-content'));
+                                }
+                            } else if (router && router.currentRoute === 'conquistas') {
+                                const mainView = document.getElementById('main-content');
+                                if (mainView && typeof Views !== 'undefined' && Views.renderConquistas) {
+                                    mainView.innerHTML = Views.renderConquistas(router.currentParams || 'todas');
+                                    if (window.AppCoversManager) AppCoversManager.applyCoversToDOM();
+                                }
+                            } else if (router && (router.currentRoute === 'diario' || router.currentRoute === 'reflexoes')) {
+                                const container = document.getElementById('reflections-view-container');
+                                if (container && typeof ReflectionsManager !== 'undefined') {
+                                    container.innerHTML = ReflectionsManager.getReflectionsHtml();
                                 }
                             }
 
@@ -12594,6 +12659,8 @@ https://catecismo.creativeam.com.br
                     if (showToastFeedback) {
                         showToast('Progresso mantido localmente.', 'info');
                     }
+                } finally {
+                    this.isSyncing = false;
                 }
             },
 
@@ -16436,7 +16503,7 @@ https://catecismo.creativeam.com.br
                 }, 200);
             }
 
-            // Sincronização automática em segundo plano quando a janela/aba volta a ficar ativa
+            // Sincronização automática em segundo plano quando a janela/aba volta a ficar ativa ou em foco
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden && typeof CloudSyncManager !== 'undefined' && AppState && AppState.cloudSyncEmail) {
                     CloudSyncManager.smartSync(false);
@@ -16447,6 +16514,13 @@ https://catecismo.creativeam.com.br
                     CloudSyncManager.smartSync(false);
                 }
             });
+
+            // Sincronização periódica inteligente em segundo plano a cada 45 segundos se houver conta conectada
+            setInterval(() => {
+                if (!document.hidden && typeof CloudSyncManager !== 'undefined' && AppState && AppState.cloudSyncEmail) {
+                    CloudSyncManager.smartSync(false);
+                }
+            }, 45000);
         };
     </script>
 
