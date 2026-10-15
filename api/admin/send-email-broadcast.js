@@ -138,6 +138,49 @@ export function buildCatholicEmailHtml({
 // Modelos prontos de e-mail que o administrador pode escolher
 export const EMAIL_PRESETS = [
     {
+        id: 'novo_layout',
+        name: 'Novo Design & Layout do Catecismo',
+        subject: '✨ O Catecismo Católico está de cara nova! Conheça nosso novo design e experiência espiritual',
+        title: 'Um Novo Olhar, a Mesma Fé: Conheça o Novo Design do Catecismo',
+        subtitle: 'Visual nobre e editorial, navegação mais fluida e fundos temáticos em alta definição para sua oração diária',
+        greeting: 'Paz e bem, querido(a) irmão(ã)!',
+        paragraphs: [
+            'É com imensa alegria e reverência que apresentamos o novo design editorial do Catecismo Católico.',
+            'Pensando em proporcionar momentos de oração, recolhimento e estudo ainda mais solenes e agradáveis, reformulamos toda a interface visual com ilustrações clássicas da arte sacra, cards imersivos e acesso ágil a todas as devoções da nossa Tradição.',
+            'Fique tranquilo(a): todo o seu progresso, medalhas conquistadas, ofensivas (streak) e notas do diário espiritual continuam 100% seguros e preservados na sua conta. Venha conferir as novidades:'
+        ],
+        highlights: [
+            {
+                icon: '🎨',
+                title: 'Novo Design Editorial & Arte Sacra',
+                description: 'Nova identidade visual com fundos temáticos solenes, tipografia nobre inspirada nas edições clássicas da Igreja e máxima legibilidade para leitura no celular e computador.'
+            },
+            {
+                icon: '📖',
+                title: 'Bíblia Sagrada & Lectio Divina',
+                description: 'Nova divisão visual com banners exclusivos para Antigo e Novo Testamento, além do ambiente sereno para a Leitura Orante e diário de meditações.'
+            },
+            {
+                icon: '☀️',
+                title: 'Liturgia Diária & Pílula de Sabedoria',
+                description: 'Leituras do dia e salmo com textos canônicos atualizados, acompanhados de reflexão diária da Santa Igreja e ensinamentos dos grandes mestres espirituais.'
+            },
+            {
+                icon: '📿',
+                title: 'Devocionário Completo & 20 Novenas',
+                description: 'Santo Terço guiado, Via-Sacra, orações da manhã e da noite, além das grandes novenas canônicas com acompanhamento de dias.'
+            },
+            {
+                icon: '🛡️',
+                title: 'Seu Perfil e Progresso 100% Preservados',
+                description: 'Suas estatísticas, conquistas de estudo e histórico de orações continuam salvos de forma segura e sincronizados.'
+            }
+        ],
+        ctaText: 'Conhecer o Novo Design & Rezar Agora',
+        ctaUrl: SITE_URL,
+        closing: '"A beleza salvará o mundo." — Que a paz e o amor de Nosso Senhor Jesus Cristo e a materna proteção de Nossa Senhora estejam sempre com você e sua família.'
+    },
+    {
         id: 'novidades_recentes',
         name: 'Grandes Novidades & Convite para Rezar',
         subject: '🕊️ Grandes novidades no Catecismo Católico: Nova Liturgia Diária, Quiz, Santos e muito mais!',
