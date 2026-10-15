@@ -1011,7 +1011,7 @@
             </div>
 
             <!-- Scrollable Dynamic Viewport -->
-            <main id="main-view" class="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-3 pb-20 lg:pb-12 custom-scrollbar">
+            <main id="main-view" class="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-3 pb-20 sm:pb-6 custom-scrollbar">
                 <!-- Dynamic Content Injected Here -->
             </main>
 
@@ -6657,7 +6657,7 @@ https://catecismo.creativeam.com.br`;
                 const userStreak = AppState.streak || 1;
 
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto flex flex-col gap-4 sm:gap-5 pb-12">
+                    <div class="max-w-[1190px] w-full mx-auto flex flex-col gap-4 sm:gap-5">
                         <!-- Containers de Alerta & Notificações (Caixa Postal & Apoio) -->
                         <div id="home-broadcast-alert-container">
                             ${ContactManager.renderHomeBroadcastBanner ? ContactManager.renderHomeBroadcastBanner() : ''}
@@ -7252,7 +7252,7 @@ https://catecismo.creativeam.com.br`;
                         </div>
 
                         <!-- SEÇÃO 10: RODAPÉ DE APOIO, TRANSPARÊNCIA E COMUNIDADE -->
-                        <footer class="pt-6 border-t border-cline dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+                        <footer class="pt-5 pb-1 border-t border-cline dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
                             <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
                                 <button onclick="openApoioModal()" class="text-cgreen dark:text-csage font-bold hover:underline cursor-pointer flex items-center gap-1">
                                     <span>☕</span> <span>Apoiar o Projeto (PIX)</span>
@@ -8085,7 +8085,7 @@ https://catecismo.creativeam.com.br`;
                 const filteredModules = filterCat ? CatecismContentProvider.modules.filter(m => m.categoryId === filterCat) : CatecismContentProvider.modules;
 
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-6 pb-12">
+                    <div class="max-w-[1190px] w-full mx-auto space-y-6">
                         <!-- Orientação / Breadcrumb -->
                         <div class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8e8e83] dark:text-slate-400">
                             Hoje &nbsp; / &nbsp; Aprender &amp; Catecismo
@@ -8186,7 +8186,7 @@ https://catecismo.creativeam.com.br`;
                 const pct = totalL > 0 ? Math.round((compL / totalL) * 100) : 0;
 
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-6 pb-12">
+                    <div class="max-w-[1190px] w-full mx-auto space-y-6">
                         <!-- Orientação / Breadcrumb -->
                         <div class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8e8e83] dark:text-slate-400">
                             Hoje &nbsp; / &nbsp; Meu Espaço &amp; Progresso
@@ -8467,7 +8467,7 @@ https://catecismo.creativeam.com.br`;
                 const today = getLocalDateString();
                 const prayedToday = AppState.lastPrayerDate === today;
                 return `
-                    <div class="max-w-[1190px] w-full mx-auto space-y-7 pb-10">
+                    <div class="max-w-[1190px] w-full mx-auto space-y-7">
                         <!-- Orientação / Breadcrumb -->
                         <div class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8e8e83] dark:text-slate-400">
                             Hoje &nbsp; / &nbsp; Rezar
