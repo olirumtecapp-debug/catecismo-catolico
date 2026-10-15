@@ -206,22 +206,35 @@ function backupSaintDayFile(filePath) {
 
 function getGitBin() {
     const candidates = [
-        'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop\\app-3.6.4\\resources\\app\\git\\cmd\\git.exe',
-        'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop\\app-3.6.3\\resources\\app\\git\\cmd\\git.exe',
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\github-copilot-git-2.53.0-4\\cmd\\git.exe',
         'C:\\Program Files\\Git\\cmd\\git.exe',
         'C:\\Program Files (x86)\\Git\\cmd\\git.exe',
-        'C:\\Users\\Murilo Pai\\AppData\\Local\\Programs\\Git\\cmd\\git.exe'
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\Programs\\Git\\cmd\\git.exe',
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop\\app-3.6.4\\resources\\app\\git\\cmd\\git.exe',
+        'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop\\app-3.6.3\\resources\\app\\git\\cmd\\git.exe'
     ];
     for (const cand of candidates) {
         if (fs.existsSync(cand)) return cand;
     }
-    const ghBase = 'C:\\Users\\Murilo Pai\\AppData\\Local\\GitHubDesktop';
-    if (fs.existsSync(ghBase)) {
+    const appDataLocal = path.join(process.env.USERPROFILE || 'C:\\Users\\Murilo Pai', 'AppData', 'Local');
+    if (fs.existsSync(appDataLocal)) {
         try {
-            const sub = fs.readdirSync(ghBase).filter(d => d.startsWith('app-')).sort().reverse();
-            for (const s of sub) {
-                const p = path.join(ghBase, s, 'resources', 'app', 'git', 'cmd', 'git.exe');
+            const sub = fs.readdirSync(appDataLocal);
+            // Search github-copilot-git-*
+            for (const s of sub.filter(d => d.startsWith('github-copilot-git-')).sort().reverse()) {
+                const p = path.join(appDataLocal, s, 'cmd', 'git.exe');
                 if (fs.existsSync(p)) return p;
+                const pBin = path.join(appDataLocal, s, 'bin', 'git.exe');
+                if (fs.existsSync(pBin)) return pBin;
+            }
+            // Search GitHubDesktop
+            const ghBase = path.join(appDataLocal, 'GitHubDesktop');
+            if (fs.existsSync(ghBase)) {
+                const ghSub = fs.readdirSync(ghBase).filter(d => d.startsWith('app-')).sort().reverse();
+                for (const s of ghSub) {
+                    const p = path.join(ghBase, s, 'resources', 'app', 'git', 'cmd', 'git.exe');
+                    if (fs.existsSync(p)) return p;
+                }
             }
         } catch(e) {}
     }
