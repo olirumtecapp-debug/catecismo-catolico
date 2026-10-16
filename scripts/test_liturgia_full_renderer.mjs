@@ -184,10 +184,10 @@ function cleanReadingBody(rawText, kind, reference) {
     } else {
       intro = getReadingIntro(reference);
     }
+    // Strip ending formulas from text so they don't duplicate
+    text = text.replace(/(?:(?:\r?\n|^)\s*|\.\s+)(?:[℣℟—–-]\s*)?Palavra do Senhor\.?(?:\s*(?:[℣℟—–-]\s*)?Gra[cç]as\s+a\s+Deus\.?)?\s*$/i, match => match.startsWith('.') ? '.' : '').trim();
   }
   
-  // Strip ending formulas from text so they don't duplicate
-  text = text.replace(/(?:[℣℟—\-]\s*)?Palavra d[oa] (?:Senhor|Salvação)[\s\S]*$/i, '').trim();
   text = text.replace(/[℣℟]\.?\s*$/g, '').trim();
   
   return { intro, text, acclamation, refrain };

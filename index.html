@@ -1485,6 +1485,9 @@
                 if (nqIdx >= 0 && nqIdx < 180) {
                     text = text.slice(nqIdx).trim();
                 }
+
+                // Strip liturgical dialogue only at the VERY END of the Gospel (never mid-sentence)
+                text = text.replace(/(?:(?:\r?\n|^)\s*|\.\s+)(?:[℣℟—–-]\s*)?Palavra da Salva[cç][aã]o\.?(?:\s*(?:[℣℟—–-]\s*)?Gl[oó]ria\s+a\s+v[oó]s,\s*Senhor\.?)?\s*$/i, match => match.startsWith('.') ? '.' : '').trim();
             } else if (kind === 'salmo') {
                 // Strip duplicate psalm reference at the start of text (e.g. "Sl 137(138)... ℟. Perante...")
                 text = text.replace(/^(?:[—–-]\s*)?(?:Respons[óo]rio\s+)?(?:Sl|Salmo)\s+[^\n℟R]+(?:\([^)]*\))?\s*/i, '').trim();
@@ -1503,6 +1506,7 @@
                     }
                 }
                 text = text.replace(/^(?:[—–-]\s*)?[℟R]\.?\s*/i, '').trim();
+                // PSALM: Never strip 'Palavra do Senhor' - Psalms do not have liturgical conclusion dialogues and phrases like 'palavra do Senhor' are holy scripture verses!
             } else {
                 text = text.replace(/^(?:\d+\s+leituras\s+[àa]\s+escolha[^\n]*\n*)/i, '').trim();
                 text = text.replace(/^(?:[—–-]\s*)?(?:Primeira|Segunda)\s+Leitura\s*(?:\([^)]*\))?\s*/i, '').trim();
@@ -1519,9 +1523,11 @@
                     const safeIntro = intro.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                     text = text.replace(new RegExp('^(?:[—–-]\\s*)?' + safeIntro + '\\s*', 'i'), '').trim();
                 }
+
+                // Strip liturgical dialogue only at the VERY END of the reading (never mid-sentence)
+                text = text.replace(/(?:(?:\r?\n|^)\s*|\.\s+)(?:[℣℟—–-]\s*)?Palavra do Senhor\.?(?:\s*(?:[℣℟—–-]\s*)?Gra[cç]as\s+a\s+Deus\.?)?\s*$/i, match => match.startsWith('.') ? '.' : '').trim();
             }
 
-            text = text.replace(/(?:[℣℟—\-]\s*)?Palavra d[oa] (?:Senhor|Salvação)[\s\S]*$/i, '').trim();
             text = text.replace(/[℣℟]\.?\s*$/g, '').trim();
 
             return { intro, text, acclamation, refrain };
