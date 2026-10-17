@@ -267,6 +267,9 @@
                 <button onclick="filterCoversCategory('causas')" id="btn-covcat-causas" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
                     💼 Causas &amp; Intenções
                 </button>
+                <button onclick="filterCoversCategory('padroeiros')" id="btn-covcat-padroeiros" class="px-3 py-1.5 rounded-xl font-semibold text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 transition whitespace-nowrap">
+                    🙏 Santos Padroeiros (21)
+                </button>
             </div>
 
             <!-- Grid de Molduras -->
@@ -2128,7 +2131,7 @@ DIRETRIZES DE EXECUÇÃO:
 
         function filterCoversCategory(cat) {
             currentCoverCatFilter = cat;
-            const categories = ['all', 'liturgia', 'destaques', 'rotina_diaria', 'aprender', 'rezar', 'santos', 'sacramentos', 'causas', 'desafios'];
+            const categories = ['all', 'liturgia', 'destaques', 'rotina_diaria', 'aprender', 'rezar', 'santos', 'sacramentos', 'causas', 'desafios', 'padroeiros'];
             categories.forEach(c => {
                 const btn = document.getElementById(`btn-covcat-${c}`);
                 if (!btn) return;
