@@ -277,7 +277,7 @@
             z-index: 2;
         }
 
-        /* Barra de Navegação Inferior para Smartphone (Bottom Nav) */
+        /* Barra de Navegação Inferior para Smartphone (Bottom Nav - Bolder & High Contrast) */
         .bottom-nav {
             display: none;
         }
@@ -288,43 +288,74 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                height: 64px;
+                height: 66px;
                 background: rgba(255, 254, 250, 0.98);
-                border-top: 1px solid var(--line);
+                border-top: 1.5px solid var(--line, #E2D9C8);
                 justify-content: space-around;
                 align-items: center;
                 z-index: 40;
                 padding-bottom: env(safe-area-inset-bottom, 0px);
-                backdrop-filter: blur(8px);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 -4px 20px rgba(35, 70, 56, 0.08);
             }
             html.dark .bottom-nav {
                 background: rgba(19, 29, 49, 0.98);
                 border-top-color: #334155;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
             }
             .bottom-nav a {
                 text-decoration: none;
-                color: #70766D;
-                font-size: 11px;
+                color: #374151;
+                font-size: 12px;
+                font-weight: 700;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 4px 10px;
-                transition: color 0.2s;
+                justify-content: center;
+                padding: 6px 14px;
+                border-radius: 12px;
+                transition: all 0.2s ease-in-out;
+                letter-spacing: 0.01em;
             }
             html.dark .bottom-nav a {
                 color: #94A3B8;
             }
-            .bottom-nav a.active, .bottom-nav a:hover {
-                color: var(--green);
-                font-weight: 700;
+            .bottom-nav a.active {
+                color: var(--green, #234638);
+                font-weight: 800;
+                background: rgba(35, 70, 56, 0.09);
             }
-            html.dark .bottom-nav a.active, html.dark .bottom-nav a:hover {
-                color: #E5EADF;
+            html.dark .bottom-nav a.active {
+                color: #FFFFFF;
+                background: rgba(229, 234, 223, 0.14);
+            }
+            .bottom-nav-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                margin-bottom: 2px;
+                transition: transform 0.2s ease;
+            }
+            .bottom-nav-icon svg {
+                stroke-width: 2.3px;
+            }
+            .bottom-nav a.active .bottom-nav-icon svg {
+                stroke-width: 2.6px;
+            }
+            .bottom-nav a.active .bottom-nav-icon {
+                transform: scale(1.1);
+            }
+            .bottom-nav a span {
+                line-height: 1.15;
+                font-weight: inherit;
             }
             .bottom-nav b {
                 display: block;
-                font-size: 19px;
+                font-size: 20px;
+                font-weight: 900;
                 line-height: 1.1;
                 margin-bottom: 2px;
             }
@@ -918,41 +949,66 @@
                                 <span>Vida Diária &amp; Liturgia</span>
                                 <span class="text-[9px] bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 px-1.5 py-0.5 rounded font-bold border border-amber-200 dark:border-amber-800">Hoje</span>
                             </div>
-                            <button onclick="router.navigate('home'); toggleMobileMenu();" data-menu-key="home" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>☀️</span> <span>Meu Momento</span>
+                            <button onclick="router.navigate('home'); toggleMobileMenu();" data-menu-key="home" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.5m0 13V21m9-9h-2.5M5.5 12H3m14.95-6.95l-1.8 1.8M7.85 16.15l-1.8 1.8m11.9 0l-1.8-1.8M7.85 7.85L6.05 6.05M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+                                </span>
+                                <span>Meu Momento</span>
                             </button>
-                            <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="liturgia" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>✝️</span> <span>Liturgia Diária</span>
+                            <button onclick="router.navigate('liturgia'); toggleMobileMenu();" data-menu-key="liturgia" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/><path stroke-linecap="round" d="M12 9v5m-1.5-3.5h3"/></svg>
+                                </span>
+                                <span>Liturgia Diária</span>
                             </button>
-                            <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>☩</span> <span>Santo do Dia</span>
+                            <button onclick="router.navigate('santo'); toggleMobileMenu();" data-menu-key="santo" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 2a5 5 0 015 2.5M7 4.5A5 5 0 0112 2M5 21v-2a7 7 0 0114 0v2"/></svg>
+                                </span>
+                                <span>Santo do Dia</span>
                             </button>
-                            <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                            <button onclick="NovenasModal.open(); toggleMobileMenu();" data-menu-key="novenas" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-base shrink-0">🌹</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-rose-500/10 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="11" r="5.5"/><circle cx="12" cy="5" r="1.2" fill="currentColor"/><circle cx="17.5" cy="11" r="1.2" fill="currentColor"/><circle cx="6.5" cy="11" r="1.2" fill="currentColor"/><circle cx="12" cy="17" r="1.2" fill="currentColor"/><path stroke-linecap="round" d="M12 17v4.5m-1.5-2.5h3"/></svg>
+                                    </span>
                                     <span class="truncate">Novenas Católicas</span>
                                 </div>
                                 <span id="mobile-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
                             </button>
-                            <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>🙏</span> <span>Oração &amp; Lectio</span>
+                            <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2c-.5 2.5-2 4-2 6a2 2 0 004 0c0-2-1.5-3.5-2-6zM7 11h10v9a2 2 0 01-2 2H9a2 2 0 01-2-2v-9z"/><path stroke-linecap="round" d="M12 14v4m-1.5-2.5h3"/></svg>
+                                </span>
+                                <span>Oração &amp; Lectio</span>
                             </button>
-                            <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                            <button onclick="router.navigate('reflexoes'); toggleMobileMenu();" data-menu-key="reflexoes" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-base shrink-0">📖</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-amber-500/10 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                                    </span>
                                     <span class="truncate">Diário Espiritual</span>
                                 </div>
                                 <span id="mobile-reflections-badge" class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800">0</span>
                             </button>
-                            <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>⛪</span> <span>A Santa Missa</span>
+                            <button onclick="router.navigate('missa'); toggleMobileMenu();" data-menu-key="missa" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/><path stroke-linecap="round" d="M12 1v2m-1-1h2"/></svg>
+                                </span>
+                                <span>A Santa Missa</span>
                             </button>
-                            <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>📜</span> <span>Preceitos &amp; Calendário</span>
+                            <button onclick="PreceitosModal.open(); toggleMobileMenu();" data-menu-key="preceitos" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path stroke-linecap="round" d="M12 13v4m-1.5-2.5h3"/></svg>
+                                </span>
+                                <span>Preceitos &amp; Calendário</span>
                             </button>
-                            <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl font-semibold text-amber-900 dark:text-amber-200 bg-amber-50/80 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 border border-amber-200/90 dark:border-amber-800/60 transition text-sm">
+                            <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu();" class="nav-item group w-full flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl font-semibold text-amber-900 dark:text-amber-200 bg-amber-50/80 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 border border-amber-200/90 dark:border-amber-800/60 transition text-sm">
                                 <div class="flex items-center gap-3">
-                                    <span>📖</span> <span>Escola da Fé</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-amber-500/15 text-amber-800 dark:text-amber-300">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                                    </span>
+                                    <span>Escola da Fé</span>
                                 </div>
                                 <span class="text-xs text-amber-700 dark:text-amber-300 font-bold flex items-center gap-1">Acessar ↗</span>
                             </a>
@@ -964,24 +1020,36 @@
                                 <span>Doutrina &amp; Sagrada Escritura</span>
                                 <span class="text-[9px] bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-1.5 py-0.5 rounded font-bold shrink-0 border border-blue-200 dark:border-blue-800">Offline</span>
                             </div>
-                            <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                            <button onclick="router.navigate('biblia'); toggleMobileMenu();" data-menu-key="biblia" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
-                                    <span>📖</span> <span>Bíblia Sagrada</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-blue-500/10 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    </span>
+                                    <span>Bíblia Sagrada</span>
                                 </div>
                                 <span class="text-[9px] uppercase tracking-wider font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-100 dark:border-blue-800 shrink-0">73 Livros</span>
                             </button>
-                            <button onclick="router.navigate('catecismo'); toggleMobileMenu();" data-menu-key="catecismo" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                            <button onclick="router.navigate('catecismo'); toggleMobileMenu();" data-menu-key="catecismo" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
-                                    <span>📄</span> <span class="whitespace-nowrap">Catecismo &amp; Doutrina</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/><path stroke-linecap="round" d="M10 8h2m-1-1v2"/></svg>
+                                    </span>
+                                    <span class="whitespace-nowrap">Catecismo &amp; Doutrina</span>
                                 </div>
                                 <span class="text-[9px] uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded shrink-0">4 Pilares</span>
                             </button>
-                            <button onclick="router.navigate('catecismo-completo'); toggleMobileMenu();" data-menu-key="catecismo-completo" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>📚</span> <span>Biblioteca do Catecismo</span>
+                            <button onclick="router.navigate('catecismo-completo'); toggleMobileMenu();" data-menu-key="catecismo-completo" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15zM8 7h8m-8 4h8"/></svg>
+                                </span>
+                                <span>Biblioteca do Catecismo</span>
                             </button>
-                            <button onclick="router.navigate('livros'); toggleMobileMenu();" data-menu-key="livros" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                            <button onclick="router.navigate('livros'); toggleMobileMenu();" data-menu-key="livros" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
-                                    <span>📖</span> <span>Livraria Católica</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-amber-500/10 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                                    </span>
+                                    <span>Livraria Católica</span>
                                 </div>
                                 <span class="text-[9px] px-1.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-700 shrink-0">Livros</span>
                             </button>
@@ -992,11 +1060,17 @@
                             <div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-cgold dark:text-amber-400 font-serif">
                                 <span>Formação &amp; Prática</span>
                             </div>
-                            <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>🎯</span> <span>Planos de Estudo (5 Dias)</span>
+                            <button onclick="router.navigate('planos'); toggleMobileMenu();" data-menu-key="planos" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                                </span>
+                                <span>Planos de Estudo (5 Dias)</span>
                             </button>
-                            <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>🧠</span> <span>Quizzes de Conhecimento</span>
+                            <button onclick="router.navigate('quiz'); toggleMobileMenu();" data-menu-key="quiz" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                </span>
+                                <span>Quizzes de Conhecimento</span>
                             </button>
                         </div>
 
@@ -1005,24 +1079,41 @@
                             <div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-cgold dark:text-amber-400 font-serif">
                                 <span>Meu Espaço &amp; Apoio</span>
                             </div>
-                            <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>⭐</span> <span>Meus Favoritos</span>
+                            <button onclick="router.navigate('favoritos'); toggleMobileMenu();" data-menu-key="favoritos" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                                </span>
+                                <span>Meus Favoritos</span>
                             </button>
-                            <button onclick="router.navigate('conquistas'); toggleMobileMenu();" data-menu-key="conquistas" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>🏆</span> <span>Conquistas</span>
+                            <button onclick="router.navigate('conquistas'); toggleMobileMenu();" data-menu-key="conquistas" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                                </span>
+                                <span>Conquistas</span>
                             </button>
-                            <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>📊</span> <span>Meu Progresso</span>
+                            <button onclick="router.navigate('progresso'); toggleMobileMenu();" data-menu-key="progresso" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                                </span>
+                                <span>Meu Progresso</span>
                             </button>
-                            <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>🔎</span> <span>Pesquisar</span>
+                            <button onclick="router.navigate('pesquisa'); toggleMobileMenu();" data-menu-key="pesquisa" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                </span>
+                                <span>Pesquisar</span>
                             </button>
-                            <button onclick="openFontesModal(); toggleMobileMenu();" data-menu-key="fontes" class="nav-item w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
-                                <span>📜</span> <span>Fontes e Transparência</span>
+                            <button onclick="openFontesModal(); toggleMobileMenu();" data-menu-key="fontes" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
+                                <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </span>
+                                <span>Fontes e Transparência</span>
                             </button>
-                            <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/40 hover:text-indigo-900 dark:hover:text-indigo-200 transition text-sm">
+                            <button onclick="ContactManager.openMailboxModal(); toggleMobileMenu();" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/40 hover:text-indigo-900 dark:hover:text-indigo-200 transition text-sm">
                                 <div class="flex items-center gap-3 min-w-0">
-                                    <span class="text-base shrink-0">📬</span>
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-indigo-500/10 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    </span>
                                     <span>Caixa Postal &amp; Contato</span>
                                 </div>
                                 <span class="mailbox-badge hidden bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full shadow-xs">0</span>
@@ -1033,16 +1124,20 @@
                     <!-- Mobile Drawer Footer Actions -->
                     <div class="p-3.5 border-t border-cline dark:border-slate-800 bg-[#fbf9f4] dark:bg-slate-900/80 space-y-2">
                         <button onclick="openInstallModal(); toggleMobileMenu();" id="mobile-install-btn" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs shadow-xs flex items-center justify-center gap-2 cursor-pointer transition">
-                            <span class="text-sm">📲</span> <span>Instalar Aplicativo (App)</span>
+                            <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            <span>Instalar Aplicativo (App)</span>
                         </button>
                         <button onclick="shareCatecismo('mobile_drawer'); toggleMobileMenu();" class="w-full py-2 px-3 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200/80 dark:border-blue-800/60 text-blue-900 dark:text-blue-200 font-bold text-xs shadow-2xs flex items-center justify-center gap-2 cursor-pointer hover:bg-blue-100 transition">
-                            <span class="text-sm">📤</span> <span>Compartilhar Catecismo</span>
+                            <svg class="w-4 h-4 shrink-0 text-blue-700 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                            <span>Compartilhar Catecismo</span>
                         </button>
                         <button onclick="openApoioModal(); toggleMobileMenu();" class="w-full py-2 px-3 rounded-xl bg-amber-50/80 dark:bg-slate-800/80 hover:bg-amber-100 dark:hover:bg-slate-700/80 border border-amber-200/60 dark:border-slate-700 text-amber-800 dark:text-amber-300 font-bold text-xs shadow-2xs flex items-center justify-center gap-2 cursor-pointer transition">
-                            <span>☕</span> <span>Apoiar o Projeto (PIX)</span>
+                            <svg class="w-4 h-4 shrink-0 text-amber-700 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                            <span>Apoiar o Projeto (PIX)</span>
                         </button>
-                        <button onclick="openDeveloperModal(); toggleMobileMenu();" class="w-full py-1 text-center text-slate-500 dark:text-slate-400 hover:text-cgreen dark:hover:text-csage text-xs font-medium cursor-pointer transition">
-                            👨‍💻 Sobre o Desenvolvedor
+                        <button onclick="openDeveloperModal(); toggleMobileMenu();" class="w-full py-1 text-center text-slate-500 dark:text-slate-400 hover:text-cgreen dark:hover:text-csage text-xs font-medium cursor-pointer transition flex items-center justify-center gap-1.5">
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            <span>Sobre o Desenvolvedor</span>
                         </button>
                     </div>
                 </div>
@@ -1056,20 +1151,28 @@
             <!-- Bottom Navigation Bar para Smartphone (Mobile-First) -->
             <nav class="bottom-nav" aria-label="Navegação rápida">
                 <a href="#" onclick="router.navigate('home'); return false;" class="bottom-nav-item active" data-bottom-nav="home">
-                    <b>⌂</b>
-                    <span>Hoje</span>
+                    <span class="bottom-nav-icon">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </span>
+                    <span class="bottom-nav-label">Hoje</span>
                 </a>
                 <a href="#" onclick="router.navigate('oracao'); return false;" class="bottom-nav-item" data-bottom-nav="oracao">
-                    <b>☼</b>
-                    <span>Rezar</span>
+                    <span class="bottom-nav-icon">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.5m0 13V21m9-9h-2.5M5.5 12H3m14.95-6.95l-1.8 1.8M7.85 16.15l-1.8 1.8m11.9 0l-1.8-1.8M7.85 7.85L6.05 6.05M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+                    </span>
+                    <span class="bottom-nav-label">Rezar</span>
                 </a>
                 <a href="#" onclick="router.navigate('catecismo'); return false;" class="bottom-nav-item" data-bottom-nav="catecismo">
-                    <b>▤</b>
-                    <span>Aprender</span>
+                    <span class="bottom-nav-icon">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </span>
+                    <span class="bottom-nav-label">Aprender</span>
                 </a>
                 <a href="#" onclick="router.navigate('santo'); return false;" class="bottom-nav-item" data-bottom-nav="santo">
-                    <b>✝</b>
-                    <span>Santos</span>
+                    <span class="bottom-nav-icon">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m-5-13h10"/></svg>
+                    </span>
+                    <span class="bottom-nav-label">Santos</span>
                 </a>
             </nav>
         </div>
@@ -5092,7 +5195,11 @@
                 // Sincroniza abas superiores e inferiores
                 document.querySelectorAll('.top-nav-btn').forEach(btn => {
                     const navKey = btn.getAttribute('data-nav');
-                    const isActive = (navKey === route) || (navKey === 'home' && route === 'home') || (navKey === 'oracao' && (route === 'oracao' || route === 'liturgia' || route === 'santo' || route === 'missa')) || (navKey === 'catecismo' && (route === 'catecismo' || route === 'biblia')) || (navKey === 'progresso' && (route === 'progresso' || route === 'reflexoes' || route === 'favoritos'));
+                    const isActive = (navKey === route) || 
+                        (navKey === 'home' && route === 'home') || 
+                        (navKey === 'oracao' && (route === 'oracao' || route === 'liturgia' || route === 'missa')) || 
+                        (navKey === 'catecismo' && (route === 'catecismo' || route === 'biblia' || route === 'catecismo-completo')) || 
+                        (navKey === 'santo' && route === 'santo');
                     if (isActive) {
                         btn.classList.add('text-cgreen', 'dark:text-csage', 'font-bold');
                         btn.classList.remove('text-slate-500', 'font-medium');
@@ -5104,7 +5211,11 @@
 
                 document.querySelectorAll('.bottom-nav-item').forEach(btn => {
                     const navKey = btn.getAttribute('data-bottom-nav');
-                    const isActive = (navKey === route) || (navKey === 'home' && route === 'home') || (navKey === 'oracao' && (route === 'oracao' || route === 'liturgia' || route === 'santo' || route === 'missa')) || (navKey === 'catecismo' && (route === 'catecismo' || route === 'biblia')) || (navKey === 'progresso' && (route === 'progresso' || route === 'reflexoes' || route === 'favoritos'));
+                    const isActive = (navKey === route) || 
+                        (navKey === 'home' && route === 'home') || 
+                        (navKey === 'oracao' && (route === 'oracao' || route === 'liturgia' || route === 'missa')) || 
+                        (navKey === 'catecismo' && (route === 'catecismo' || route === 'biblia' || route === 'catecismo-completo')) || 
+                        (navKey === 'santo' && route === 'santo');
                     if (isActive) {
                         btn.classList.add('active');
                     } else {
@@ -10762,24 +10873,24 @@ https://catecismo.creativeam.com.br
         const MenuConfigManager = {
             storageKey: 'catecismo_menu_config_v1',
             defaultConfig: {
-                home: { label: 'Meu Momento (Home)', enabled: true, icon: '☀️', section: 'Vida Diária' },
-                liturgia: { label: 'Liturgia Diária', enabled: true, icon: '📅', section: 'Vida Diária' },
-                santo: { label: 'Santo do Dia', enabled: true, icon: '🕊️', section: 'Vida Diária' },
-                oracao: { label: 'Oração & Santo Terço', enabled: true, icon: '📿', section: 'Vida Diária' },
-                reflexoes: { label: 'Diário Espiritual (Minhas Reflexões)', enabled: true, icon: '📖', section: 'Vida Diária' },
+                home: { label: 'Meu Momento (Home)', enabled: true, icon: '⌂', section: 'Vida Diária' },
+                liturgia: { label: 'Liturgia Diária', enabled: true, icon: '✝', section: 'Vida Diária' },
+                santo: { label: 'Santo do Dia', enabled: true, icon: '☩', section: 'Vida Diária' },
+                oracao: { label: 'Oração & Santo Terço', enabled: true, icon: '🙏', section: 'Vida Diária' },
+                reflexoes: { label: 'Diário Espiritual (Minhas Reflexões)', enabled: true, icon: '✍️', section: 'Vida Diária' },
                 biblia: { label: 'Bíblia Sagrada', enabled: true, icon: '📖', section: 'Palavra & Magistério' },
-                catecismo: { label: 'Catecismo da Igreja', enabled: true, icon: '🏛️', section: 'Palavra & Magistério' },
+                catecismo: { label: 'Catecismo da Igreja', enabled: true, icon: '📜', section: 'Palavra & Magistério' },
                 'catecismo-completo': { label: 'Biblioteca do Catecismo', enabled: true, icon: '📚', section: 'Palavra & Magistério' },
                 livros: { label: 'Livraria Católica (Venda de Livros)', enabled: false, icon: '📖', section: 'Livraria & Recursos' }, // DESABILITADO POR PADRÃO!
-                evangelho_card: { label: 'Card do Evangelho', enabled: false, icon: '📸', section: 'Mídia & Redes' }, // DESABILITADO NO MENU PÚBLICO INICIALMENTE!
+                evangelho_card: { label: 'Card do Evangelho', enabled: false, icon: '🖼️', section: 'Mídia & Redes' }, // DESABILITADO NO MENU PÚBLICO INICIALMENTE!
                 missa: { label: 'A Santa Missa', enabled: true, icon: '⛪', section: 'Liturgia' },
-                quiz: { label: 'Quizzes da Fé', enabled: true, icon: '🧠', section: 'Formação' },
-                planos: { label: 'Planos de Estudo', enabled: true, icon: '🎯', section: 'Formação' },
-                favoritos: { label: 'Meus Favoritos', enabled: true, icon: '⭐', section: 'Pessoal' },
-                conquistas: { label: 'Conquistas', enabled: true, icon: '🏆', section: 'Pessoal' },
-                progresso: { label: 'Meu Progresso', enabled: true, icon: '📊', section: 'Pessoal' },
-                pesquisa: { label: 'Pesquisa Global', enabled: true, icon: '🔎', section: 'Ferramentas' },
-                fontes: { label: 'Fontes e Transparência', enabled: true, icon: 'ℹ️', section: 'Informações' }
+                quiz: { label: 'Quizzes da Fé', enabled: true, icon: '💡', section: 'Formação' },
+                planos: { label: 'Planos de Estudo', enabled: true, icon: '🧭', section: 'Formação' },
+                favoritos: { label: 'Meus Favoritos', enabled: true, icon: '🔖', section: 'Pessoal' },
+                conquistas: { label: 'Conquistas', enabled: true, icon: '🎖️', section: 'Pessoal' },
+                progresso: { label: 'Meu Progresso', enabled: true, icon: '📈', section: 'Pessoal' },
+                pesquisa: { label: 'Pesquisa Global', enabled: true, icon: '🔍', section: 'Ferramentas' },
+                fontes: { label: 'Fontes e Transparência', enabled: true, icon: '🛡️', section: 'Informações' }
             },
 
             init() {
