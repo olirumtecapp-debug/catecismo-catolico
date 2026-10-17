@@ -5178,9 +5178,9 @@
             categories: [
                 { id: 'todas', label: 'Todas (24)', icon: '🏆' },
                 { id: 'doutrina', label: 'Doutrina', icon: '📜' },
-                { id: 'oracao', label: 'Oração & Terço', icon: '📿' },
+                { id: 'oracao', label: 'Oração & Terço', icon: '🙏' },
                 { id: 'escritura', label: 'Bíblia & Liturgia', icon: '📖' },
-                { id: 'quizzes', label: 'Quizzes', icon: '🧠' },
+                { id: 'quizzes', label: 'Quizzes', icon: '💡' },
                 { id: 'constancia', label: 'Constância & Nível', icon: '🔥' }
             ],
 
@@ -5267,7 +5267,7 @@
                     categoryLabel: 'Oração & Devoção',
                     title: 'Coração Mariano',
                     desc: 'Reze um Santo Terço interativo completo',
-                    icon: '📿',
+                    icon: '🙏',
                     xp: 30,
                     check: (s, m) => {
                         const rosaryCount = (s.completedRosaries ? s.completedRosaries.length : 0) || (m && m.rosary ? m.rosary.totalPrayed : 0);
@@ -5967,58 +5967,59 @@
 
                 if (isDone) {
                     return `
-                        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
-                            <div class="flex items-center gap-2.5">
-                                <span class="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center text-sm font-bold">✓</span>
-                                <div>
-                                    <h3 class="font-serif text-base font-bold text-mariana dark:text-slate-100">Desafio Rápido de Hoje</h3>
-                                    <span class="text-[10px] text-slate-500 dark:text-slate-400 font-medium">${challenge.ccc} • ${challenge.moduleTitle}</span>
+                        <!-- Header Canônico Verde Litúrgico & Ouro Sacro -->
+                        <div class="rounded-xl overflow-hidden mb-2.5 bg-gradient-to-r from-[#234638] via-[#2a4d3f] to-[#1c3329] border border-cgold/30 p-2.5 flex items-center justify-between shadow-2xs">
+                            <div class="flex items-center gap-2 min-w-0">
+                                <span class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-300 block truncate">DESAFIO DO DIA • ${challenge.ccc}</span>
+                                    <h4 class="font-serif text-xs font-bold text-white truncate">Sabedoria Católica Concluída</h4>
                                 </div>
                             </div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">Concluído (+15 XP)</span>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 shrink-0 font-mono">+15 XP</span>
                         </div>
-                        <div class="bg-emerald-50/80 dark:bg-emerald-950/40 backdrop-blur-[2px] p-4 rounded-2xl border border-emerald-200/60 dark:border-emerald-900/40 text-xs text-emerald-950 dark:text-emerald-200 space-y-1.5">
-                            <p class="font-bold">Parabéns pela dedicação ao estudo da fé!</p>
-                            <p class="text-[11px] opacity-90 leading-relaxed">${challenge.explanation}</p>
+                        <div class="bg-emerald-50/80 dark:bg-emerald-950/40 p-3 rounded-xl border border-emerald-200/60 dark:border-emerald-900/40 text-xs text-emerald-950 dark:text-emerald-200 space-y-1">
+                            <p class="font-bold flex items-center gap-1.5 text-xs text-emerald-800 dark:text-emerald-300">
+                                <svg class="w-3.5 h-3.5 text-cgold fill-cgold" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/></svg>
+                                <span>Parabéns pela dedicação ao estudo da fé!</span>
+                            </p>
+                            <p class="text-[11px] opacity-90 leading-relaxed font-serif">${challenge.explanation}</p>
                         </div>
-                        <div class="flex justify-between items-center pt-1 text-xs">
+                        <div class="flex justify-between items-center pt-2 text-xs">
                             <span class="text-slate-500 dark:text-slate-400 text-[11px]">Volte amanhã para um novo desafio.</span>
-                            <button onclick="router.navigate('quiz')" class="font-bold text-mariana dark:text-blue-400 hover:underline text-[11px]">Fazer mais quizzes →</button>
+                            <button onclick="router.navigate('quiz')" class="font-bold text-cgreen dark:text-csage hover:underline text-[11px]">Fazer mais quizzes →</button>
                         </div>
                     `;
                 }
 
                 return `
-                    <div data-app-cover="desafio_trivia" class="w-full h-20 sm:h-24 rounded-xl overflow-hidden mb-3 relative bg-gradient-to-r from-purple-950/40 via-indigo-950/30 to-slate-900 border border-purple-500/20 flex items-center justify-center">
-                        <img src="./assets/img/temas/desafio-trivia.png" class="app-cover-img w-full h-full object-cover opacity-60" alt="Desafio da Fé" onerror="this.style.display='none'">
-                        <div class="absolute inset-0 bg-gradient-to-r from-purple-950/80 via-indigo-950/60 to-transparent pointer-events-none"></div>
-                        <div class="relative z-10 w-full h-full flex items-center justify-between px-4">
-                            <div>
-                                <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-purple-300 block">✦ Desafio do Dia</span>
-                                <span class="text-xs font-serif font-bold text-white">Quiz &amp; Sabedoria Católica</span>
-                            </div>
-                            <span class="text-3xl filter drop-shadow">✨</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
-                        <div class="flex items-center gap-2.5">
-                            <span class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 flex items-center justify-center text-sm font-bold">🧠</span>
-                            <div>
-                                <h3 class="font-serif text-base font-bold text-mariana dark:text-slate-100">Desafio Rápido do Dia</h3>
-                                <span class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">${challenge.ccc} • ${challenge.moduleTitle}</span>
+                    <!-- Header Canônico Verde Litúrgico & Ouro Sacro (Adeus caixa roxa) -->
+                    <div class="rounded-xl overflow-hidden mb-2.5 bg-gradient-to-r from-[#234638] via-[#2a4d3f] to-[#1c3329] border border-cgold/30 p-2.5 flex items-center justify-between shadow-2xs">
+                        <div class="flex items-center gap-2 min-w-0">
+                            <span class="w-7 h-7 rounded-lg bg-amber-400/20 border border-amber-400/40 text-cgold flex items-center justify-center shrink-0">
+                                <svg class="w-3.5 h-3.5 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </span>
+                            <div class="min-w-0">
+                                <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-300 block truncate">DESAFIO DO DIA • ${challenge.ccc}</span>
+                                <h4 class="font-serif text-xs font-bold text-white truncate">Quiz de Sabedoria Católica</h4>
                             </div>
                         </div>
-                        <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-200 border border-amber-200 dark:border-amber-800">+15 XP</span>
+                        <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-400/20 text-amber-200 border border-amber-400/30 shrink-0 font-mono">+15 XP</span>
                     </div>
-                    <div class="space-y-3">
-                        <p class="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200 leading-snug">
+
+                    <div class="space-y-2">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-100 leading-snug line-clamp-2">
                             ${challenge.question}
                         </p>
-                        <div class="space-y-2" id="daily-challenge-options">
+                        <div class="space-y-1.5" id="daily-challenge-options">
                             ${challenge.options.map((opt, idx) => `
-                                <button onclick="DailyChallengeManager.answer(${idx})" class="w-full text-left p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 backdrop-blur-[2px] hover:border-indigo-400 dark:hover:border-indigo-600 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/30 text-xs text-slate-700 dark:text-slate-200 font-medium transition cursor-pointer flex items-center gap-2.5">
-                                    <span class="w-5 h-5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-500 dark:text-slate-400 shrink-0">${String.fromCharCode(65 + idx)}</span>
-                                    <span>${opt}</span>
+                                <button onclick="DailyChallengeManager.answer(${idx})" class="w-full text-left py-2 px-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/60 hover:border-cgreen dark:hover:border-csage hover:bg-emerald-50/30 dark:hover:bg-slate-800 text-xs text-slate-700 dark:text-slate-200 font-medium transition cursor-pointer flex items-center gap-2 shadow-2xs">
+                                    <span class="w-5 h-5 rounded-md bg-[#f4eee0] dark:bg-slate-800 border border-cline dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-cgreen dark:text-csage shrink-0">${String.fromCharCode(65 + idx)}</span>
+                                    <span class="truncate">${opt}</span>
                                 </button>
                             `).join('')}
                         </div>
@@ -6039,13 +6040,13 @@
                 const btns = optContainer.querySelectorAll('button');
                 btns.forEach((btn, idx) => {
                     btn.disabled = true;
-                    btn.classList.remove('hover:border-indigo-400', 'cursor-pointer');
+                    btn.classList.remove('hover:border-cgreen', 'cursor-pointer');
                     if (idx === challenge.correct) {
-                        btn.className = 'w-full text-left p-3 rounded-xl border border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 text-xs text-emerald-950 dark:text-emerald-100 font-bold transition flex items-center gap-2.5';
+                        btn.className = 'w-full text-left py-2 px-3 rounded-xl border border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 text-xs text-emerald-950 dark:text-emerald-100 font-bold transition flex items-center gap-2';
                     } else if (idx === chosenIdx) {
-                        btn.className = 'w-full text-left p-3 rounded-xl border border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-xs text-rose-950 dark:text-rose-100 font-medium transition flex items-center gap-2.5';
+                        btn.className = 'w-full text-left py-2 px-3 rounded-xl border border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-xs text-rose-950 dark:text-rose-100 font-medium transition flex items-center gap-2';
                     } else {
-                        btn.classList.add('opacity-50');
+                        btn.classList.add('opacity-40');
                     }
                 });
 
@@ -6060,24 +6061,26 @@
                         CloudSyncManager.checkPromptOnAction('Concluir Desafio Diário');
                     }
 
-                    fbEl.className = 'p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs text-emerald-900 dark:text-emerald-200 space-y-1 mt-2';
+                    fbEl.className = 'p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-xs text-emerald-950 dark:text-emerald-200 space-y-0.5 mt-1.5';
                     fbEl.innerHTML = `
-                        <p class="font-bold flex items-center gap-1.5"><span>🎉</span> Resposta correta! +15 XP</p>
-                        <p class="text-[11px] opacity-90">${challenge.explanation}</p>
+                        <p class="font-bold flex items-center gap-1.5 text-xs text-emerald-800 dark:text-emerald-300">
+                            <svg class="w-3.5 h-3.5 text-cgold fill-cgold" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/></svg>
+                            <span>Resposta correta! +15 XP</span>
+                        </p>
+                        <p class="text-[10px] opacity-90 line-clamp-2 leading-relaxed font-serif">${challenge.explanation}</p>
                     `;
                     fbEl.classList.remove('hidden');
                 } else {
                     if (window.QuizAudio && QuizAudio.playIncorrect) QuizAudio.playIncorrect();
-                    fbEl.className = 'p-3 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 space-y-1 mt-2';
+                    fbEl.className = 'p-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 space-y-0.5 mt-1.5';
                     fbEl.innerHTML = `
-                        <p class="font-bold">Quase lá!</p>
-                        <p class="text-[11px] opacity-90">A resposta certa é: <strong>${challenge.options[challenge.correct]}</strong>. ${challenge.explanation}</p>
+                        <p class="font-bold text-xs">A resposta certa é: <strong>${challenge.options[challenge.correct]}</strong></p>
+                        <p class="text-[10px] opacity-90 line-clamp-2 leading-relaxed font-serif">${challenge.explanation}</p>
                     `;
                     fbEl.classList.remove('hidden');
                 }
             }
         };
-        window.DailyChallengeManager = DailyChallengeManager;
 
         const SpiritualLightManager = {
             gems: [
@@ -7320,6 +7323,30 @@ function getIntentionIconSvg(slug) {
         }
         window.getIntentionIconSvg = getIntentionIconSvg;
 
+        function getRosaryIconSvg(extraClass = 'w-4 h-4') {
+            return '<svg class="' + extraClass + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7.5" r="5" stroke-dasharray="1.5 2.5" stroke-linecap="round"/><circle cx="12" cy="13" r="1.2" fill="currentColor"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14.2v3.3m-2 1.5h4m-2-1.5v4.5"/></svg>';
+        }
+        window.getRosaryIconSvg = getRosaryIconSvg;
+
+        function getRosaryMysteryIconSvg(key, extraClass = 'w-4 h-4') {
+            switch (key) {
+                case 'gozosos':
+                    return '<svg class="' + extraClass + '" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/></svg>';
+                case 'dolorosos':
+                    return '<svg class="' + extraClass + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m-6-13h12"/></svg>';
+                case 'gloriosos':
+                    return '<svg class="' + extraClass + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l3.5 9h11L21 8l-5 4-4-7-4 7-5-4z"/><circle cx="3" cy="7" r="1" fill="currentColor"/><circle cx="21" cy="7" r="1" fill="currentColor"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg>';
+                case 'luminosos':
+                    return '<svg class="' + extraClass + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
+                case 'guia':
+                    return '<svg class="' + extraClass + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>';
+                default:
+                    return getRosaryIconSvg(extraClass);
+            }
+        }
+        window.getRosaryMysteryIconSvg = getRosaryMysteryIconSvg;
+
+
         const Views = {
             renderHome() {
                 const todayStr = getLocalDateString();
@@ -7820,17 +7847,17 @@ function getIntentionIconSvg(slug) {
                                     <img src="./assets/img/temas/bg-quatro-pilares.png" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-35 dark:opacity-25 pointer-events-none transition-opacity duration-700" alt="Quatro Pilares" onerror="this.style.display='none'">
                                     <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/35 dark:from-slate-800/90 dark:via-slate-800/70 dark:to-slate-800/35 pointer-events-none"></div>
                                     <div class="app-cover-placeholder absolute right-0 top-0 w-32 h-32 bg-radial from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
-                                    <div class="relative z-10">
+                                    <div class="relative z-10 space-y-2">
                                         <div class="flex items-center justify-between">
                                             <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-cgreen-light dark:text-csage">
                                                 CATECISMO &amp; DOUTRINA
                                             </span>
                                             <span class="text-[10px] font-mono text-amber-700 dark:text-amber-400 font-bold bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-800">§ 1-2865</span>
                                         </div>
-                                        <h3 class="font-serif font-semibold text-xl text-cgreen dark:text-white mt-1.5 mb-2">
+                                        <h3 class="font-serif font-semibold text-lg sm:text-xl text-cgreen dark:text-white leading-tight">
                                             Os quatro pilares da fé
                                         </h3>
-                                        <div class="grid grid-cols-2 gap-1.5 my-2.5">
+                                        <div class="grid grid-cols-2 gap-1.5 pt-1">
                                             <div class="bg-[#f7f6f0] dark:bg-slate-700/60 p-2 rounded-xl border border-cline/70 dark:border-slate-600/70 flex items-center gap-2">
                                                 <span class="shrink-0 text-cgreen dark:text-csage">${getPillarIconSvg("creio", "w-3.5 h-3.5")}</span>
                                                 <div class="min-w-0 leading-tight">
@@ -7860,6 +7887,9 @@ function getIntentionIconSvg(slug) {
                                                 </div>
                                             </div>
                                         </div>
+                                        <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed font-serif pt-1 italic">
+                                            "A Igreja crê no que professa, celebra o que crê e vive o que celebra em contínua vida de oração."
+                                        </p>
                                     </div>
                                     <div class="relative z-10 pt-2 border-t border-cline/60 dark:border-slate-700">
                                         <button onclick="router.navigate('catecismo')" class="text-xs font-bold text-cgreen dark:text-csage flex items-center gap-1 hover:translate-x-0.5 transition cursor-pointer text-left">
@@ -7873,23 +7903,33 @@ function getIntentionIconSvg(slug) {
                                     <img src="./assets/img/temas/bg-escola-fe-card.png" class="app-cover-img absolute inset-0 w-full h-full object-cover opacity-35 dark:opacity-25 pointer-events-none transition-opacity duration-700" alt="Escola da Fé" onerror="this.style.display='none'">
                                     <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/35 dark:from-slate-800/90 dark:via-slate-800/70 dark:to-slate-800/35 pointer-events-none"></div>
                                     <div class="app-cover-placeholder absolute right-0 bottom-0 w-28 h-28 bg-radial from-emerald-500/10 via-transparent to-transparent pointer-events-none"></div>
-                                    <div class="relative z-10">
+                                    <div class="relative z-10 space-y-2">
                                         <div class="text-[10px] font-bold uppercase tracking-[0.16em] text-cgreen-light dark:text-csage">
                                             ESCOLA DA FÉ
                                         </div>
-                                        <h3 class="font-serif font-semibold text-xl text-cgreen dark:text-white mt-1.5 mb-2">
+                                        <h3 class="font-serif font-semibold text-lg sm:text-xl text-cgreen dark:text-white leading-tight">
                                             Continue sua formação
                                         </h3>
-                                        <p class="text-xs text-cmuted dark:text-slate-400 leading-relaxed mb-4">
-                                            Estudo aprofundado da moral, sacramentos, santos e Sagradas Escrituras em harmonia com a Igreja.
+                                        <p class="text-xs text-cmuted dark:text-slate-400 leading-snug">
+                                            Estudo ordenado da moral cristã, sacramentos e sagradas escrituras.
                                         </p>
+                                        <div class="bg-[#f7f6f0]/80 dark:bg-slate-700/50 p-2.5 rounded-xl border border-cline/60 dark:border-slate-600/60 space-y-1">
+                                            <span class="text-[9px] font-bold uppercase tracking-wider text-cgreen dark:text-csage block">5 Mandamentos da Igreja:</span>
+                                            <ul class="text-[10px] text-slate-700 dark:text-slate-300 space-y-0.5 leading-tight">
+                                                <li class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-cgold shrink-0"></span><span>1. Missa aos domingos e festas</span></li>
+                                                <li class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-cgold shrink-0"></span><span>2. Confessar-se ao menos uma vez ao ano</span></li>
+                                                <li class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-cgold shrink-0"></span><span>3. Comungar ao menos pela Páscoa</span></li>
+                                                <li class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-cgold shrink-0"></span><span>4. Jejuar e abster-se quando mandado</span></li>
+                                                <li class="flex items-center gap-1.5"><span class="w-1 h-1 rounded-full bg-cgold shrink-0"></span><span>5. Ajudar a Igreja em suas necessidades</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="relative z-10 flex items-center gap-3 pt-2">
+                                    <div class="relative z-10 flex items-center justify-between pt-2 border-t border-cline/60 dark:border-slate-700">
                                         <a href="https://escoladafe.creativeam.com.br/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-cgreen dark:text-csage hover:underline">
                                             Acessar planos →
                                         </a>
-                                        <button onclick="PreceitosModal.open()" class="text-xs text-slate-500 hover:text-cgreen dark:hover:text-csage transition cursor-pointer">
-                                            Preceitos
+                                        <button onclick="PreceitosModal.open()" class="text-xs font-bold text-cgold dark:text-amber-400 hover:underline transition cursor-pointer">
+                                            Ver Preceitos
                                         </button>
                                     </div>
                                 </article>
@@ -9351,7 +9391,7 @@ function getIntentionIconSvg(slug) {
                                     <h4 class="font-serif text-2xl sm:text-3xl font-bold text-white drop-shadow">Contemplar a Cristo com Maria</h4>
                                     <p class="text-xs sm:text-sm text-slate-200 drop-shadow-sm">Meditações orantes dos Mistérios Sagrados</p>
                                 </div>
-                                <span class="relative z-10 text-4xl filter drop-shadow hidden sm:block">📿</span>
+                                <span class="relative z-10 hidden sm:flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 dark:bg-white/5 border border-white/20 text-dourado-light shadow-md">${getRosaryIconSvg("w-8 h-8 text-dourado-light")}</span>
                             </div>
                             <div class="p-6 sm:p-7 space-y-4">
                                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -9371,7 +9411,7 @@ function getIntentionIconSvg(slug) {
                                 </div>
                                 <div class="flex flex-wrap gap-2 shrink-0">
                                     <button onclick="openRosaryModal('today')" class="bg-cgreen hover:bg-cgreen-light text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full transition shadow-xs flex items-center gap-2 cursor-pointer">
-                                        <span>📿</span> <span>Rezar Terço de Hoje</span>
+                                        ${getRosaryIconSvg("w-4 h-4 text-mariana-dark shrink-0")} <span>Rezar Terço de Hoje</span>
                                     </button>
                                     <button onclick="openRosaryModal('guia')" class="border border-cline bg-white dark:bg-slate-700 text-cgreen dark:text-csage font-semibold text-xs px-4 py-2.5 rounded-full hover:bg-[#f7f5ef] transition cursor-pointer">
                                         Como Rezar
@@ -9575,7 +9615,7 @@ function getIntentionIconSvg(slug) {
                             <div class="app-cover-placeholder absolute -bottom-10 -right-10 w-64 h-64 rounded-full bg-radial from-amber-400/5 via-transparent to-transparent pointer-events-none"></div>
                             <div class="relative z-10 space-y-5">
                                 <div class="flex items-center gap-3 border-b border-cline dark:border-slate-700 pb-4">
-                                    <div class="w-10 h-10 rounded-xl bg-csage dark:bg-slate-700 text-cgreen dark:text-csage flex items-center justify-center text-lg">📿</div>
+                                    <div class="w-10 h-10 rounded-xl bg-csage dark:bg-slate-700 text-cgreen dark:text-csage flex items-center justify-center text-lg">${getRosaryIconSvg('w-5 h-5 text-cgreen dark:text-csage')}</div>
                                     <div>
                                         <h3 class="font-serif text-2xl font-semibold text-cgreen dark:text-white">Lectio Divina — Evangelho de Hoje</h3>
                                         <p class="text-xs text-cmuted dark:text-slate-400">Os passos tradicionais da leitura orante da Palavra</p>
@@ -9751,7 +9791,7 @@ function getIntentionIconSvg(slug) {
                             <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
                                 <div class="space-y-3 max-w-2xl">
                                     <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-[#e4cb92] rounded-full text-[11px] font-bold tracking-[0.16em] uppercase border border-white/15">
-                                        <span>🧠</span> <span>APRENDIZADO &amp; DESAFIO</span>
+                                        <svg class="w-3.5 h-3.5 text-[#e4cb92]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg> <span>APRENDIZADO &amp; DESAFIO</span>
                                     </span>
                                     <h2 class="font-serif text-3xl sm:text-4xl font-semibold leading-tight text-white">
                                         Quizzes de Conhecimento
@@ -12005,7 +12045,7 @@ https://catecismo.creativeam.com.br
                         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-3">
                             <div class="flex items-center justify-between">
                                 <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                                    <span>🧠</span> <span>Quiz Rápido de Fixação</span>
+                                    <svg class="w-3.5 h-3.5 text-cgold dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg> <span>Quiz Rápido de Fixação</span>
                                 </h4>
                                 <span class="text-[10px] text-slate-400">Teste sua retenção</span>
                             </div>
@@ -12365,7 +12405,7 @@ https://catecismo.creativeam.com.br
                             <span class="text-[10px] text-slate-500">dias com a Palavra</span>
                         </div>
                         <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">📿 Santo Terço</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">${getRosaryIconSvg('w-3 h-3 text-cgold')} <span>Santo Terço</span></span>
                             <strong class="font-serif text-lg font-bold text-slate-800 dark:text-slate-100 block mt-0.5">${rosariosCount} rezados</strong>
                             <span class="text-[10px] text-slate-500">mistérios meditados</span>
                         </div>
@@ -12662,8 +12702,8 @@ https://catecismo.creativeam.com.br
 
                     <!-- Header Mariano do Terço -->
                     <div class="flex items-center gap-4 pb-4 border-b border-slate-100 dark:border-slate-700">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-400 to-amber-600 text-white flex items-center justify-center text-2xl shrink-0 shadow-md">
-                            📿
+                        <div class="w-12 h-12 rounded-2xl bg-cgreen text-dourado-light flex items-center justify-center shrink-0 shadow-md border border-cgold/40">
+                            ${getRosaryIconSvg("w-6 h-6 text-cgold")}
                         </div>
                         <div>
                             <div class="flex items-center gap-2">
@@ -12676,20 +12716,25 @@ https://catecismo.creativeam.com.br
 
                     <!-- Seletor de Mistérios (Abas) -->
                     <div class="flex flex-wrap gap-1.5 p-1.5 bg-slate-100 dark:bg-slate-900 rounded-2xl text-xs font-bold" id="rosary-mystery-tabs">
-                        <button onclick="selectRosaryMystery('gozosos')" id="tab-gozosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer">
-                            🌟 Gozosos <span class="text-[9px] block font-normal opacity-80">Seg / Sáb</span>
+                        <button onclick="selectRosaryMystery('gozosos')" id="tab-gozosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer flex flex-col items-center justify-center gap-1">
+                            <span class="flex items-center gap-1.5">${getRosaryMysteryIconSvg('gozosos', 'w-3.5 h-3.5 text-cgold')} Gozosos</span>
+                            <span class="text-[9px] block font-normal opacity-80">Seg / Sáb</span>
                         </button>
-                        <button onclick="selectRosaryMystery('dolorosos')" id="tab-dolorosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer">
-                            ✝️ Dolorosos <span class="text-[9px] block font-normal opacity-80">Ter / Sex</span>
+                        <button onclick="selectRosaryMystery('dolorosos')" id="tab-dolorosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer flex flex-col items-center justify-center gap-1">
+                            <span class="flex items-center gap-1.5">${getRosaryMysteryIconSvg('dolorosos', 'w-3.5 h-3.5 text-cgold')} Dolorosos</span>
+                            <span class="text-[9px] block font-normal opacity-80">Ter / Sex</span>
                         </button>
-                        <button onclick="selectRosaryMystery('gloriosos')" id="tab-gloriosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer">
-                            👑 Gloriosos <span class="text-[9px] block font-normal opacity-80">Qua / Dom</span>
+                        <button onclick="selectRosaryMystery('gloriosos')" id="tab-gloriosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer flex flex-col items-center justify-center gap-1">
+                            <span class="flex items-center gap-1.5">${getRosaryMysteryIconSvg('gloriosos', 'w-3.5 h-3.5 text-cgold')} Gloriosos</span>
+                            <span class="text-[9px] block font-normal opacity-80">Qua / Dom</span>
                         </button>
-                        <button onclick="selectRosaryMystery('luminosos')" id="tab-luminosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer">
-                            💡 Luminosos <span class="text-[9px] block font-normal opacity-80">Quinta</span>
+                        <button onclick="selectRosaryMystery('luminosos')" id="tab-luminosos" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer flex flex-col items-center justify-center gap-1">
+                            <span class="flex items-center gap-1.5">${getRosaryMysteryIconSvg('luminosos', 'w-3.5 h-3.5 text-cgold')} Luminosos</span>
+                            <span class="text-[9px] block font-normal opacity-80">Quinta</span>
                         </button>
-                        <button onclick="selectRosaryMystery('guia')" id="tab-guia" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer">
-                            📖 Como Rezar <span class="text-[9px] block font-normal opacity-80">Passo a Passo</span>
+                        <button onclick="selectRosaryMystery('guia')" id="tab-guia" class="flex-1 min-w-[100px] py-2 px-3 rounded-xl transition text-center cursor-pointer flex flex-col items-center justify-center gap-1">
+                            <span class="flex items-center gap-1.5">${getRosaryMysteryIconSvg('guia', 'w-3.5 h-3.5 text-cgold')} Como Rezar</span>
+                            <span class="text-[9px] block font-normal opacity-80">Passo a Passo</span>
                         </button>
                     </div>
 
@@ -12737,7 +12782,7 @@ https://catecismo.creativeam.com.br
                     <div class="space-y-4">
                         <div class="bg-amber-50/70 dark:bg-amber-950/40 p-4 rounded-2xl border border-amber-200 dark:border-amber-800 text-xs text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
                             <h4 class="font-bold text-amber-900 dark:text-amber-200 text-sm flex items-center gap-2">
-                                <span>📿</span> Guia Didático: A Estrutura do Santo Terço
+                                ${getRosaryIconSvg('w-4 h-4 text-amber-800 dark:text-amber-300 shrink-0')} <span>Guia Didático: A Estrutura do Santo Terço</span>
                             </h4>
                             <p>O Terço é a quarta parte do Santo Rosário (composto por 200 Ave-Marias divididas em 4 Terços de 50 Ave-Marias cada). Rezá-lo é uma profunda meditação dos Evangelhos em companhia de Nossa Senhora.</p>
                         </div>
@@ -12793,14 +12838,14 @@ https://catecismo.creativeam.com.br
                         </div>
                         <p class="text-xs text-slate-500 dark:text-slate-400">${data.subtitle} • Rezados às <strong>${data.days}</strong></p>
                     </div>
-                    <span class="text-2xl">${data.icon}</span>
+                    <span class="shrink-0">${getRosaryMysteryIconSvg(key, 'w-7 h-7 text-cgold')}</span>
                 </div>
 
                 <!-- Contador Interativo de Contas da Dezena -->
                 <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 space-y-3">
                     <div class="flex items-center justify-between text-xs">
                         <span class="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-1.5">
-                            <span>📿</span> <span>Contador de Ave-Marias da Dezena:</span>
+                            ${getRosaryIconSvg('w-4 h-4 text-amber-700 dark:text-amber-400 shrink-0')} <span>Contador de Ave-Marias da Dezena:</span>
                         </span>
                         <span id="rosary-bead-counter-text" class="font-mono font-bold text-amber-800 dark:text-amber-300">0 / 10</span>
                     </div>
@@ -12816,7 +12861,7 @@ https://catecismo.creativeam.com.br
 
                     <div class="flex justify-center gap-2 pt-1">
                         <button onclick="advanceRosaryBead()" class="px-4 py-1.5 rounded-xl bg-mariana hover:bg-mariana-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
-                            <span>➕</span> <span>Rezar próxima Ave-Maria</span>
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg> <span>Rezar próxima Ave-Maria</span>
                         </button>
                         <button onclick="resetRosaryBeads()" class="px-3 py-1.5 rounded-xl bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-700 dark:text-slate-200 text-xs font-bold transition">
                             Reiniciar Dezena
@@ -15685,7 +15730,7 @@ https://catecismo.creativeam.com.br
                         <!-- Card Santo Terço & Diário -->
                         <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3">
                             <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                                <span>📿</span> <span>Devoção & Diário</span>
+                                ${getRosaryIconSvg('w-3.5 h-3.5 text-cgreen dark:text-csage shrink-0')} <span>Devoção & Diário</span>
                             </h5>
                             <div class="space-y-2 text-xs">
                                 <div class="flex items-center justify-between">
