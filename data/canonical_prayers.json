@@ -1,0 +1,520 @@
+[
+  {
+    "id": "p_1",
+    "title": "Pai-Nosso",
+    "latinTitle": "Pater Noster",
+    "category": "Fundamentais",
+    "text": "Pai nosso, que estais nos céus,\nsantificado seja o vosso nome;\nvenha a nós o vosso reino,\nseja feita a vossa vontade,\nassim na terra como no céu.\nO pão nosso de cada dia nos dai hoje;\nperdoai-nos as nossas ofensas,\nassim como nós perdoamos a quem nos tem ofendido;\ne não nos deixeis cair em tentação,\nmas livrai-nos do mal.\nAmém."
+  },
+  {
+    "id": "p_2",
+    "title": "Ave-Maria",
+    "latinTitle": "Ave Maria",
+    "category": "Fundamentais",
+    "text": "Ave Maria, cheia de graça,\no Senhor é convosco,\nbendita sois vós entre as mulheres,\ne bendito é o fruto do vosso ventre, Jesus.\nSanta Maria, Mãe de Deus,\nrogai por nós, pecadores,\nagora e na hora da nossa morte.\nAmém."
+  },
+  {
+    "id": "p_4",
+    "title": "Glória ao Pai",
+    "latinTitle": "Gloria Patri",
+    "category": "Fundamentais",
+    "text": "Glória ao Pai, e ao Filho, e ao Espírito Santo.\nComo era no princípio, agora e sempre.\nAmém."
+  },
+  {
+    "id": "p_5",
+    "title": "Credo (Símbolo dos Apóstolos)",
+    "latinTitle": "Symbolum Apostolorum",
+    "category": "Fundamentais",
+    "text": "Creio em Deus Pai todo-poderoso,\ncriador do céu e da terra;\ne em Jesus Cristo, seu único Filho, nosso Senhor;\nque foi concebido pelo poder do Espírito Santo;\nnasceu da Virgem Maria,\npadeceu sob Pôncio Pilatos,\nfoi crucificado, morto e sepultado;\ndesceu à mansão dos mortos;\nressuscitou ao terceiro dia;\nsubiu aos céus,\nestá sentado à direita de Deus Pai todo-poderoso,\nde onde há de vir a julgar os vivos e os mortos.\nCreio no Espírito Santo,\nna santa Igreja católica,\nna comunhão dos santos,\nna remissão dos pecados,\nna ressurreição da carne,\nna vida eterna.\nAmém."
+  },
+  {
+    "id": "p_credo_niceno",
+    "title": "Credo Niceno-Constantinopolitano",
+    "latinTitle": "Symbolum Nicaenum Constantinopolitanum",
+    "category": "Fundamentais",
+    "text": "Creio em um só Deus, Pai todo-poderoso,\nCriador do céu e da terra,\nde todas as coisas visíveis e invisíveis.\nCreio em um só Senhor, Jesus Cristo, Filho Unigênito de Deus,\nnascido do Pai antes de todos os séculos:\nDeus de Deus, Luz da Luz, Deus verdadeiro de Deus verdadeiro,\ngerado, não criado, consubstancial ao Pai.\nPor Ele todas as coisas foram feitas.\nE por nós, homens, e para nossa salvação, desceu dos céus:\ne encarnou pelo Espírito Santo, no seio da Virgem Maria, e se fez homem.\nTambém por nós foi crucificado sob Pôncio Pilatos;\npadeceu e foi sepultado.\nRessuscitou ao terceiro dia, conforme as Escrituras,\ne subiu aos céus, onde está sentado à direita do Pai.\nE de novo há de vir, em sua glória, para julgar os vivos e os mortos;\ne o seu reino não terá fim.\nCreio no Espírito Santo, Senhor que dá a vida,\ne procede do Pai e do Filho;\ne com o Pai e o Filho é adorado e glorificado:\nEle que falou pelos profetas.\nCreio na Igreja, una, santa, católica e apostólica.\nProfesso um só batismo para a remissão dos pecados.\nE espero a ressurreição dos mortos\ne a vida do mundo que há de vir.\nAmém."
+  },
+  {
+    "id": "p_santo_anjo",
+    "title": "Santo Anjo do Senhor",
+    "latinTitle": "Angele Dei",
+    "category": "Fundamentais",
+    "text": "Santo Anjo do Senhor,\nmeu zeloso guardião,\nse a ti me confiou a piedade divina,\nsempre me rege, me guarde,\nme governe e me ilumine.\nAmém."
+  },
+  {
+    "id": "p_sinal_cruz",
+    "title": "Sinal da Cruz & Oferecimento do Dia",
+    "latinTitle": "Signum Crucis & Oblatio Diei",
+    "category": "Fundamentais",
+    "text": "Pelo sinal da Santa Cruz, livrai-nos, Deus, nosso Senhor, dos nossos inimigos.\nEm nome do Pai e do Filho e do Espírito Santo. Amém.\n\nOfereço-Vos, ó meu Deus, em união com o Santíssimo Coração de Jesus e por meio do Imaculado Coração de Maria, todas as orações, obras, sofrimentos e alegrias deste dia, por todas as intenções pelas quais o Vosso Divino Filho se oferece continuamente no Altar.\nAmém."
+  },
+  {
+    "id": "p_6",
+    "title": "Salve Rainha",
+    "latinTitle": "Salve Regina",
+    "category": "Maria",
+    "text": "Salve, Rainha, Mãe de misericórdia,\nvida, doçura e esperança nossa, salve!\nA vós bradamos, os degredados filhos de Eva;\na vós suspiramos, gemendo e chorando neste vale de lágrimas.\nEia, pois, advogada nossa,\nesses vossos olhos misericordiosos a nós volvei;\ne depois deste desterro mostrai-nos Jesus,\nbendito fruto do vosso ventre.\nÓ clemente, ó piedosa, ó doce sempre Virgem Maria.\nRogai por nós, santa Mãe de Deus,\npara que sejamos dignos das promessas de Cristo.\nAmém."
+  },
+  {
+    "id": "p_magnificat",
+    "title": "Magnificat (Cântico de Maria)",
+    "latinTitle": "Canticum B. Mariae Virginis (Lc 1, 46-55)",
+    "category": "Maria",
+    "text": "A minha alma engrandece o Senhor\ne o meu espírito se alegra em Deus, meu Salvador,\nporque olhou para a humildade de sua serva.\nDoravante todas as gerações me chamarão bem-aventurada,\nporque o Todo-Poderoso fez em mim grandes coisas.\nSanto é o seu nome!\nA sua misericórdia se estende de geração em geração\nsobre os que o temem.\nManifestou o poder do seu braço:\ndispersou os soberbos de coração.\nDerrubou os poderosos de seus tronos\ne exaltou os humildes.\nEncheu de bens os famintos\ne despediu os ricos de mãos vazias.\nAcolheu a Israel, seu servidor,\nfiel à sua misericórdia,\ncomo havia prometido a nossos pais,\nem favor de Abraão e de sua descendência para sempre.\nGlória ao Pai, ao Filho e ao Espírito Santo.\nComo era no princípio, agora e sempre.\nAmém."
+  },
+  {
+    "id": "p_angelus",
+    "title": "Angelus Domini (O Anjo do Senhor)",
+    "latinTitle": "Angelus Domini",
+    "category": "Maria",
+    "text": "V. O Anjo do Senhor anunciou a Maria.\nR. E Ela concebeu do Espírito Santo.\nAve Maria...\n\nV. Eis aqui a serva do Senhor.\nR. Faça-se em mim segundo a vossa palavra.\nAve Maria...\n\nV. E o Verbo se fez carne.\nR. E habitou entre nós.\nAve Maria...\n\nV. Rogai por nós, Santa Mãe de Deus.\nR. Para que sejamos dignos das promessas de Cristo.\n\nOremos: Infundi, Senhor, a vossa graça em nossas almas, para que nós, que pela anunciação do Anjo conhecemos a encarnação de Jesus Cristo, vosso Filho, pela sua paixão e cruz sejamos conduzidos à glória da ressurreição. Por Cristo, nosso Senhor.\nAmém."
+  },
+  {
+    "id": "p_regina_caeli",
+    "title": "Regina Caeli (Rainha do Céu)",
+    "latinTitle": "Regina Caeli (Tempo Pascal)",
+    "category": "Maria",
+    "text": "Rainha do Céu, alegrai-Vos, aleluia!\nPorque Aquele que merecestes trazer em vosso seio, aleluia!\nRessuscitou como disse, aleluia!\nRogai por nós a Deus, aleluia!\n\nV. Alegrai-vos e exultai, ó Virgem Maria, aleluia!\nR. Porque o Senhor ressuscitou verdadeiramente, aleluia!\n\nOremos: Ó Deus, que Vos dignastes alegrar o mundo com a ressurreição do Vosso Filho, Nosso Senhor Jesus Cristo, concedei-nos, Vos suplicamos, a graça de alcançarmos pela proteção da Virgem Maria, Sua Mãe, as alegrias da vida eterna. Pelo mesmo Cristo, Nosso Senhor.\nAmém."
+  },
+  {
+    "id": "p_lembrai_vos",
+    "title": "Lembrai-vos (Memorare)",
+    "latinTitle": "Memorare (São Bernardo de Claraval)",
+    "category": "Maria",
+    "text": "Lembrai-vos, ó puríssima Virgem Maria,\nque nunca se ouviu dizer\nque algum daqueles que tenham recorrido à vossa proteção,\nimplorado a vossa assistência\ne reclamado o vosso socorro,\nfosse por vós desamparado.\nAnimado eu, pois, com igual confiança,\na vós, ó Virgem das virgens, como a Mãe recorro;\na vós me apresento, e, gemendo sob o peso dos meus pecados,\nme prostro a vossos pés.\nNão desprezeis as minhas súplicas,\nó Mãe do Verbo encarnado,\nmas dignai-vos de as ouvir propícia e de me alcançar o que vos peço.\nAmém."
+  },
+  {
+    "id": "p_sub_tuum",
+    "title": "Sob a Vossa Proteção",
+    "latinTitle": "Sub Tuum Praesidium (Séc. III)",
+    "category": "Maria",
+    "text": "Sob a vossa proteção nos refugiamos, Santa Mãe de Deus.\nNão desprezeis as nossas súplicas em nossas necessidades,\nmas livrai-nos sempre de todos os perigos,\nó Virgem gloriosa e bendita.\nSenhora nossa, Medianeira nossa, Advogada nossa!\nCom vosso Filho reconciliai-nos,\nao vosso Filho recomendai-nos,\nao vosso Filho apresentai-nos.\nAmém."
+  },
+  {
+    "id": "p_consagracao_nossa_senhora",
+    "title": "Consagração a Nossa Senhora",
+    "latinTitle": "Actus Consecrationis B.M.V.",
+    "category": "Maria",
+    "text": "Ó minha Senhora, ó minha Mãe,\neu me ofereço todo a vós,\ne em prova da minha devoção para convosco,\nvos consagro neste dia e para sempre,\nmeus olhos, meus ouvidos, minha boca, meu coração\ne inteiramente todo o meu ser.\nE porque assim sou vosso, ó incomparável Mãe,\nguardai-me e defendei-me como coisa e propriedade vossa.\nAmém."
+  },
+  {
+    "id": "p_consagracao_montfort",
+    "title": "Consagração da Escravidão de Amor",
+    "latinTitle": "São Luís Maria Grignion de Montfort",
+    "category": "Maria",
+    "text": "Eu, pecador infiel, renovo e ratifico hoje, em vossas mãos, ó Maria Imaculada, as promessas do meu Batismo:\nRenuncio para sempre a Satanás, às suas pompas e às suas obras, e dou-me inteiramente a Jesus Cristo, Sabedoria Encarnada, para levar a minha cruz atrás d'Ele, todos os dias de minha vida.\n\nE para Lhe ser mais fiel do que tenho sido até aqui, escolho-vos hoje, ó Maria, na presença de toda a corte celeste, por minha Mãe e Senhora.\nEntrego-vos e consagro-vos, como vosso escravo de amor, meu corpo e minha alma, meus bens interiores e exteriores, e até o próprio valor de minhas boas obras, passadas, presentes e futuras, deixando-vos inteiro e pleno direito de dispor de mim e de tudo o que me pertence, sem exceção, segundo o vosso beneplácito, para a maior glória de Deus, no tempo e na eternidade.\nAmém."
+  },
+  {
+    "id": "p_desatadora_nos",
+    "title": "Oração a Nossa Senhora Desatadora dos Nós",
+    "latinTitle": "Sancta Maria Desatadora dos Nós",
+    "category": "Maria",
+    "text": "Virgem Maria, Mãe do belo amor, Mãe que nunca recusa socorrer um filho necessitado,\nMãe cujas mãos não cessam de servir aos vossos amados filhos, pois são movidas pelo amor divino e pela imensa misericórdia que existe em vosso Coração:\nVolvei o vosso olhar compassivo sobre mim e vede o nó das dificuldades que sufocam a minha vida.\n\nVós bem conheceis o meu desespero e a minha dor. Vós sabeis o quanto esses nós me paralisam.\nMaria, Mãe que Deus encarregou de desatar os nós da vida dos seus filhos, confio hoje a fita da minha existência em vossas mãos maternas.\nNinguém, nem mesmo o maligno, pode tirá-la do vosso precioso amparo.\nEm vossas mãos não há nó que não possa ser desfeito.\nMãe poderosa, por vossa graça e vosso poder intercessor junto a vosso Filho Jesus, meu Salvador, recebei hoje em vossas mãos este nó... (mencione a intenção).\nDesatai-o, ó Mãe amável, para a glória de Deus e para sempre!\nVós sois a minha esperança, a minha consolação e a minha força.\nNossa Senhora Desatadora dos Nós, rogai por nós.\nAmém."
+  },
+  {
+    "id": "p_aparecida",
+    "title": "Oração a Nossa Senhora Aparecida",
+    "latinTitle": "Padroeira do Brasil",
+    "category": "Maria",
+    "text": "Ó incomparável Senhora da Conceição Aparecida,\nMãe de Deus e nossa Mãe,\nRainha dos Anjos, Advogada dos pecadores,\nrefúgio e consolação dos aflitos e atribulados:\nProstrado aos vossos pés, com a mais viva confiança,\ndirijo-vos a minha humilde oração.\n\nAlcançai-me de vosso amado Filho o perdão de todos os meus pecados,\na graça de uma verdadeira conversão,\na paz para a minha família e para a Santa Igreja,\ne o alívio nas aflições corporais e espirituais que me afligem.\nAbençoai a nossa Pátria, sede o amparo dos pobres e necessitados,\ne guiai os nossos passos no caminho da fidelidade ao Evangelho.\nProtegei-me em todos os perigos da alma e do corpo,\ne assisti-me na hora da minha morte.\nNossa Senhora Aparecida, Padroeira do Brasil, rogai por nós!\nAmém."
+  },
+  {
+    "id": "p_terco_misericordia",
+    "title": "Terço da Divina Misericórdia",
+    "latinTitle": "Coronilla Divinae Misericordiae (Sta. Faustina)",
+    "category": "Misericórdia",
+    "text": "Inicia-se com o Sinal da Cruz, um Pai-Nosso, uma Ave-Maria e o Credo.\n\nNas contas grandes do Pai-Nosso, reza-se:\n\"Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.\"\n\nNas dez contas pequenas da Ave-Maria, reza-se:\n\"Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.\"\n\nAo final das 5 dezenas, repete-se três vezes:\n\"Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.\"\n\nJaculatórias finais:\n\"Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!\"\n\"Jesus, eu confio em Vós!\"\nAmém."
+  },
+  {
+    "id": "p_tres_horas",
+    "title": "Oração das Três Horas (Hora da Misericórdia)",
+    "latinTitle": "Hora Misericordiae (15h00)",
+    "category": "Misericórdia",
+    "text": "Ó Jesus, Vós expirastes, mas a fonte da vida brotou para as almas e o mar de misericórdia se abriu para o mundo inteiro.\nÓ Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo todo e derramai-Vos sobre nós!\n\nÓ Sangue e Água, que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!\n\nDeus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.\nJesus, manso e humilde de coração, fazei o nosso coração semelhante ao Vosso.\nAmém."
+  },
+  {
+    "id": "p_abandono_dolindo",
+    "title": "Ato de Abandono à Divina Providência",
+    "latinTitle": "Pe. Dolindo Ruotolo",
+    "category": "Misericórdia",
+    "text": "Por que vos confundis e vos agitais? Deixai-me o cuidado das vossas coisas e tudo se acalmará.\nEm verdade vos digo que cada ato de verdadeiro, cego e completo abandono em Mim produz o efeito que desejais e resolve as situações mais espinhosas.\nAbandonar-se não significa afligir-se, perturbar-se e desesperar-se, dirigindo-me depois uma oração agitada.\nAbandonar-se significa fechar serenamente os olhos da alma, afastar os pensamentos da tribulação e confiar em Mim, dizendo com o coração:\n\n\"Ó Jesus, eu me abandono em Ti, cuida Tu de tudo!\"\n(Repetir com fé: Ó Jesus, eu me abandono em Ti, cuida Tu de tudo!)\n\nNos momentos de aflição, descanse no Meu Coração e deixe que a Minha graça reine soberana sobre a sua vida.\nAmém."
+  },
+  {
+    "id": "p_miserere",
+    "title": "Salmo 50 (Miserere)",
+    "latinTitle": "Miserere mei, Deus (Salmo Penitencial)",
+    "category": "Misericórdia",
+    "text": "Tende piedade de mim, ó Deus, segundo a vossa grande misericórdia;\nsegundo a vossa imensa bondade, apagai a minha iniquidade.\nLavai-me completamente da minha culpa e purificai-me do meu pecado.\nReconheço a minha maldade e o meu pecado está sempre diante de mim.\nFoi contra Vós, só contra Vós que eu pequei e cometi o mal diante dos vossos olhos.\n\nCriai em mim, ó Deus, um coração puro e renovai no meu íntimo um espírito reto.\nNão me afasteis da vossa presença e não retireis de mim o vosso Santo Espírito.\nDai-me de novo a alegria da vossa salvação e sustentai-me com um espírito generoso.\nSenhor, abri os meus lábios e a minha boca proclamará o vosso louvor.\nPois não Vos comprazeis em sacrifícios: se eu Vos oferecesse um holocausto, não o aceitaríeis.\nO sacrifício aceito por Deus é um espírito contrito; um coração contrito e humilhado, ó Deus, não haveis de desprezar.\nGlória ao Pai, ao Filho e ao Espírito Santo.\nComo era no princípio, agora e sempre.\nAmém."
+  },
+  {
+    "id": "p_invocacao_sangue_agua",
+    "title": "Invocação a Jesus Misericordioso",
+    "latinTitle": "Confiteor Divinae Misericordiae",
+    "category": "Misericórdia",
+    "text": "Senhor Jesus, acolhei-me em vossa misericórdia insondável.\nMesmo que os meus pecados fossem negros como a noite, a vossa misericórdia é mais forte que a minha miséria.\nApenas vos peço uma coisa: não permitais que eu duvide da vossa bondade.\n\nÓ Coração amabilíssimo de Jesus, fornalha ardente de amor e de caridade, abri para mim a vossa chaga bendita, refúgio seguro dos pecadores.\nJesus, eu confio em Vós!\nJesus, eu confio em Vós!\nJesus, eu confio em Vós!\nAmém."
+  },
+  {
+    "id": "p_oracao_perdao_ofensas",
+    "title": "Oração pelo Perdão e Reconciliação",
+    "latinTitle": "Oratio pro Pace et Venia",
+    "category": "Misericórdia",
+    "text": "Senhor Jesus Cristo, que na Cruz perdoastes aos vossos algozes, dizendo: \"Pai, perdoa-lhes, pois não sabem o que fazem\":\nDai-me a graça de perdoar de coração a todos os que me ofenderam, caluniaram ou feriram.\nRetirai de minha alma todo resquício de ressentimento, amargura ou desejo de vingança.\n\nConcedei-lhes a vossa bênção e a luz da salvação, e a mim a doce liberdade que brota do Vosso Sagrado Coração manso e humilde.\nFazei que eu ame como Vós amastes e acolha a misericórdia que cura todas as feridas.\nAmém."
+  },
+  {
+    "id": "p_8",
+    "title": "Anima Christi (Alma de Cristo)",
+    "latinTitle": "Anima Christi (Tradicional)",
+    "category": "Eucaristia",
+    "text": "Alma de Cristo, santificai-me.\nCorpo de Cristo, salvai-me.\nSangue de Cristo, inebriai-me.\nÁgua do lado de Cristo, lavai-me.\nPaixão de Cristo, confortai-me.\nÓ bom Jesus, ouvi-me.\nDentro de vossas chagas, escondei-me.\nNão permitais que me separe de vós.\nDo inimigo maligno, defendei-me.\nNa hora da minha morte, chamai-me.\nE mandai-me ir para vós,\npara que com os vossos santos vos louve\npor todos os séculos dos séculos.\nAmém."
+  },
+  {
+    "id": "p_tantum_ergo",
+    "title": "Tão Sublime Sacramento (Tantum Ergo)",
+    "latinTitle": "Tantum Ergo Sacramentum (Sto. Tomás de Aquino)",
+    "category": "Eucaristia",
+    "text": "Tão sublime Sacramento adoremos neste altar,\npois o Antigo Testamento deu ao Novo seu lugar.\nVenha a fé por suplemento os sentidos completar.\n\nAo eterno Pai cantemos e a Jesus, o Salvador,\nao Espírito exaltemos, na Trindade eterno amor;\nao Deus Uno e Trino demos a alegria do louvor.\nAmém.\n\nV. Do céu lhes destes o pão.\nR. Que contém em si todo o deleite.\n\nOremos: Deus, que neste admirável sacramento nos deixastes o memorial da vossa paixão, concedei-nos tal veneração pelos sagrados mistérios do vosso Corpo e Sangue, que experimentemos sempre em nós o fruto da vossa redenção. Vós que viveis e reinais pelos séculos dos séculos.\nAmém."
+  },
+  {
+    "id": "p_adoro_te_devote",
+    "title": "Adoro Te Devote (Eu Te Adoro Devotamente)",
+    "latinTitle": "Adoro Te Devote (Santo Tomás de Aquino)",
+    "category": "Eucaristia",
+    "text": "Eu Te adoro com afeto, Deus oculto,\nque sob estas figuras Te escondes verdadeiramente.\nA Ti meu coração se submete por inteiro,\npois contemplando-Te, todo ele desfalece.\n\nA vista, o tato e o gosto iludem-se a Teu respeito,\nmas somente o ouvido é digno de fé:\ncreio em tudo quanto disse o Filho de Deus,\nnada há mais verdadeiro que esta palavra da Verdade.\n\nNa cruz estava oculta apenas a Divindade,\nmas aqui se esconde também a Humanidade.\nEu, contudo, crendo e confessando ambas,\npeço o que pediu o ladrão arrependido.\n\nNão vejo as chagas como Tomé,\ncontudo confesso-Te como meu Deus.\nFaze-me crer em Ti cada vez mais,\nesperar em Ti e amar-Te.\n\nÓ memorial da morte do Senhor,\nPão vivo que dás a vida aos homens,\nconcede à minha alma que de Ti viva\ne que sempre sinta a Tua doçura.\nJesus, a quem agora contemplo sob véus,\nsuplico-Te que se cumpra o que tanto desejo:\nque, contemplando-Te face a face,\neu seja eternamente feliz na visão da Tua glória.\nAmém."
+  },
+  {
+    "id": "p_o_sacrum_convivium",
+    "title": "Ó Sagrado Banquete (O Sacrum Convivium)",
+    "latinTitle": "Antiphona de Sanctissimo Sacramento",
+    "category": "Eucaristia",
+    "text": "Ó Sagrado Banquete, em que se recebe Cristo,\nrenova-se a memória da Sua Paixão,\na alma se enche de graça\ne nos é dado o penhor da glória futura!\n\nV. Vós lhes destes, Senhor, o pão do Céu.\nR. Que contém em si toda a doçura.\n\nOremos: Senhor Jesus Cristo, que neste admirável sacramento nos deixastes a memória viva da vossa Paixão, fazei que celebremos de tal modo os santos mistérios do vosso Corpo e Sangue, que sintamos continuamente em nós o penhor da redenção. Vós que sois Deus com o Pai na unidade do Espírito Santo.\nAmém."
+  },
+  {
+    "id": "p_oracao_afonso_santissimo",
+    "title": "Visita ao Santíssimo Sacramento",
+    "latinTitle": "Santo Afonso Maria de Ligório",
+    "category": "Eucaristia",
+    "text": "Meu Senhor Jesus Cristo, que por amor dos homens estais noite e dia neste Sacramento, cheio de piedade e de amor, esperando, chamando e acolhendo todos os que Vos vêm visitar:\nEu creio que estais presente no Sacramento do Altar.\nAdoro-Vos do abismo do meu nada e dou-Vos graças por todos os benefícios que me tendes feito, especialmente por Vos terdes dado a Vós mesmo a mim neste Sacramento, por me terdes concedido como advogada vossa Mãe Maria Santíssima e por me terdes chamado a visitar-Vos nesta Igreja.\n\nSaúdo hoje o vosso amantíssimo Coração com a tríplice intenção: primeiro, em ação de graças por este grande dom; segundo, para reparar todas as ofensas que tendes recebido neste Sacramento dos hereges e maus cristãos; terceiro, com a intenção de adorar-Vos, por esta visita, em todos os lugares da terra onde estais menos reverenciado e mais abandonado.\nMeu Jesus, amo-Vos de todo o meu coração.\nArrependo-me de ter tantas vezes ofendido a vossa infinita bondade.\nProponho com a vossa graça nunca mais Vos ofender para o futuro.\nAmém."
+  },
+  {
+    "id": "p_comunhao_espiritual",
+    "title": "Ato de Comunhão Espiritual",
+    "latinTitle": "Actus Communionis Spiritualis",
+    "category": "Eucaristia",
+    "text": "Meu Jesus, eu creio que estais presente no Santíssimo Sacramento.\nAmo-Vos sobre todas as coisas e desejo receber-Vos em minha alma.\nVisto que agora não posso receber-Vos sacramentalmente,\nvinde pelo menos espiritualmente ao meu coração.\n\nComo já presente, eu Vos abraço e me uno inteiramente a Vós;\nnão permitais que eu jamais me separe de Vós.\nJesus, Sumo Bem e doce Amor meu,\ninflamai meu coração para que arda sempre de amor por Vós!\nAmém."
+  },
+  {
+    "id": "p_pos_comunhao_aquino",
+    "title": "Ação de Graças pós-Comunhão",
+    "latinTitle": "Santo Tomás de Aquino",
+    "category": "Eucaristia",
+    "text": "Graças Vos dou, Senhor santo, Pai todo-poderoso, Deus eterno, que, sem merecimento meu, mas por pura misericórdia da vossa bondade, Vos dignastes saciar a mim, pecador e vosso indigno servo, com o Corpo e o Sangue precioso do vosso Filho, Nosso Senhor Jesus Cristo.\n\nSuplico-Vos que esta santa comunhão não seja para mim motivo de condenação, mas penhor salutar de perdão.\nSeja ela a armadura da minha fé e o escudo da minha boa vontade.\nFaça-me exterminar os vícios, extirpar as paixões desordenadas, aumentar a caridade e a paciência, a humildade e a obediência, e todas as outras virtudes.\nSeja a minha firme defesa contra as ciladas de todos os inimigos, visíveis e invisíveis.\nConduza-me a Vós, único e verdadeiro Deus, e faça-me alcançar a felicidade perfeita.\nDignai-Vos levar a mim, pecador, àquele inefável banquete onde Vós, com o vosso Filho e o Espírito Santo, sois para os vossos santos luz verdadeira, saciedade plena, alegria eterna, júbilo consumado e felicidade perfeita.\nPor Cristo, nosso Senhor.\nAmém."
+  },
+  {
+    "id": "p_pos_comunhao_boaventura",
+    "title": "Transpassai meu Coração",
+    "latinTitle": "São Boaventura (Doutor Seráfico)",
+    "category": "Eucaristia",
+    "text": "Transpassai, dulcíssimo Jesus, o mais íntimo da minha alma com a ferida suave e salutar do vosso amor, com a verdadeira, serena e apostólica caridade, para que ela desfaleça e se derreta sempre em Vos amar e desejar.\nTenha ela sede de Vós, Fonte da vida, Fonte da sabedoria e da ciência, Fonte da luz eterna, torrente de delícias, riqueza da casa de Deus.\n\nA Vós sempre aspire, a Vós procure, a Vós encontre, para Vós caminhe, a Vós alcance, em Vós medite, de Vós fale e tudo realize para honra e glória do vosso nome, com humildade e discrição, com amor e deleite, com facilidade e perseverança final.\nSede Vós só sempre a minha esperança, a minha confiança, a minha riqueza, o meu deleite, a minha alegria, o meu descanso e a minha paz!\nAmém."
+  },
+  {
+    "id": "p_3",
+    "title": "Ato de Contrição Tradicional",
+    "latinTitle": "Actus Contritionis",
+    "category": "Confissão",
+    "text": "Meu Deus, me arrependo de todo o coração de vos ter ofendido,\nporque sois tão bom e amável.\nPrometo, com a vossa graça, esforçar-me para ser bom,\nconfessar-me, cumprir a penitência e evitar as ocasiões de pecado.\nMeu Deus, misericórdia, perdoai os meus pecados.\nAmém."
+  },
+  {
+    "id": "p_contrition_perfeita",
+    "title": "Ato de Contrição Perfeita",
+    "latinTitle": "São João Maria Vianney (Cura d’Ars)",
+    "category": "Confissão",
+    "text": "Senhor meu Jesus Cristo, Deus e Homem verdadeiro, Criador e Redentor meu:\nPor serdes Vós quem sois, sumamente bom e digno de ser amado sobre todas as coisas,\ne porque Vos amo de todo o meu coração, pesa-me, Senhor, de Vos ter ofendido.\nPesa-me também porque posso perder o Céu e merecer o inferno.\n\nMas proponho firmemente, ajudado com os auxílios da vossa divina graça,\nnunca mais pecar, confessar-me inteiramente e cumprir a penitência que me for imposta.\nConfio que pela vossa infinita bondade e misericórdia me perdoareis pelos merecimentos da vossa sagrada Paixão e Morte.\nAmém."
+  },
+  {
+    "id": "p_confiteor",
+    "title": "Confiteor (Confesso a Deus Todo-Poderoso)",
+    "latinTitle": "Confiteor Deo Omnipotenti",
+    "category": "Confissão",
+    "text": "Confesso a Deus todo-poderoso e a vós, irmãos e irmãs,\nque pequei muitas vezes por pensamentos e palavras,\natos e omissões,\npor minha culpa, minha tão grande culpa.\nE peço à Virgem Maria, aos Anjos e Santos,\ne a vós, irmãos e irmãs,\nque rogueis por mim a Deus, nosso Senhor.\n\nDeus todo-poderoso tenha compaixão de nós,\nperdoe os nossos pecados e nos conduza à vida eterna.\nAmém."
+  },
+  {
+    "id": "p_antes_confissao",
+    "title": "Oração para antes da Confissão",
+    "latinTitle": "Oratio ante Confessionem",
+    "category": "Confissão",
+    "text": "Senhor Deus, Luz de toda a verdade e Pai de infinita ternura:\nEnviai o vosso Espírito Santo sobre mim para que ilumine as trevas da minha inteligência e amoleça a dureza do meu coração.\nFazei-me conhecer com clareza todos os meus pecados de pensamentos, palavras, atos e omissões cometidos contra a vossa santa lei e contra o meu próximo.\n\nDai-me uma dor sincera por ter ofendido a Vós, meu Pai tão bom e amoroso.\nConcedei-me a coragem de confessar com humildade, verdade e transparência as minhas faltas diante do vosso sacerdote, e dai-me a firme resolução de nunca mais pecar.\nMaria, Refúgio dos Pecadores, rogai por mim nesta confissão.\nSanto Anjo da Guarda, assisti-me.\nAmém."
+  },
+  {
+    "id": "p_depois_confissao",
+    "title": "Ação de Graças pós-Confissão",
+    "latinTitle": "Oratio post Confessionem",
+    "category": "Confissão",
+    "text": "Bendito sejais, ó Senhor Deus de misericórdia, que pelo Sangue precioso de Jesus e pelas palavras da absolvição sacramental, lavastes a minha alma de toda a mancha do pecado!\nRestaurastes em mim a vossa graça e a paz que o mundo não pode dar.\n\nRenovo diante de Vós a minha determinação: renuncio ao mal, às ocasiões de queda e às falsas promessas do pecado.\nAjudai-me, Senhor, a perseverar até o fim. Dai-me forças para cumprir prontamente a penitência recebida e reparar o mal que pratiquei.\nJesus, Maria e José, abençoai o meu novo caminho na graça divina.\nAmém."
+  },
+  {
+    "id": "p_de_profundis",
+    "title": "De Profundis (Salmo 129)",
+    "latinTitle": "De Profundis clamavi ad Te, Domine",
+    "category": "Confissão",
+    "text": "Das profundezas clamo a Vós, Senhor; Senhor, ouvi a minha voz!\nEstejam vossos ouvidos atentos ao clamor da minha prece.\nSe considerardes as nossas culpas, Senhor, quem poderá subsistir?\nMas em Vós se encontra o perdão, para que sejais temido com respeito.\n\nConfio no Senhor, a minha alma confia na sua palavra.\nA minha alma espera pelo Senhor mais do que os vigias pela aurora.\nMais do que as sentinelas pela manhã, espere Israel pelo Senhor,\nporque no Senhor está a misericórdia e junto d'Ele copiosa redenção.\nE Ele há de redimir a Israel de todas as suas iniquidades.\nGlória ao Pai, ao Filho e ao Espírito Santo.\nComo era no princípio, agora e sempre.\nAmém."
+  },
+  {
+    "id": "p_7",
+    "title": "Vinde, Espírito Santo (Invocação Tradicional)",
+    "latinTitle": "Veni Sancte Spiritus",
+    "category": "Espírito Santo",
+    "text": "Vinde, Espírito Santo,\nenchei os corações dos vossos fiéis\ne acendei neles o fogo do vosso amor.\nEnviai o vosso Espírito e tudo será criado,\ne renovareis a face da terra.\n\nOremos: Ó Deus, que instruístes os corações dos vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos sempre da sua consolação. Por Cristo, Senhor nosso.\nAmém."
+  },
+  {
+    "id": "p_veni_creator",
+    "title": "Vinde, Espírito Criador (Veni Creator Spiritus)",
+    "latinTitle": "Hymnus Veni Creator Spiritus (Rabanus Maurus)",
+    "category": "Espírito Santo",
+    "text": "Vinde, Espírito Criador, as nossas almas visitai,\ne enchei os nossos corações com vossos dons celestiais.\n\nVós sois chamado o Paráclito, do Deus excelso dom sem par,\nfonte viva, fogo e caridade, e unção divina e salutar.\n\nSois doador dos sete dons, da destra de Deus o dedo,\ndo Pai prometido solene que a nossa boca faz falar.\n\nIluminai os sentidos e o coração com o vosso amor,\ne a nossa carne tão frágil firmai com vosso eterno vigor.\n\nO inimigo para longe expulsai e dai-nos vossa paz sem fim;\nsendo Vós o nosso guia, evitemos todo o mal assim.\n\nFazei-nos conhecer o Pai e também o Filho Salvador,\ne em Vós, Espírito de ambos, crer com perene e vivo ardor.\n\nA Deus Pai seja a glória e ao Filho que ressuscitou,\ne ao Espírito Paráclito por séculos sem fim.\nAmém."
+  },
+  {
+    "id": "p_sequencia_pentecostes",
+    "title": "Sequência de Pentecostes",
+    "latinTitle": "Sequentia Pentecostes (Séc. XIII)",
+    "category": "Espírito Santo",
+    "text": "Espírito de Deus, enviai dos céus um raio de luz!\nVinde, Pai dos pobres, dai aos corações vossos dons celestes.\nConsolador perfeito, doce hóspede da alma, suave refrigério.\nNo trabalho sois repouso, no calor sois calma, no pranto consolo.\n\nÓ Luz venturosa, enchei o mais íntimo dos vossos fiéis.\nSem a vossa graça, nada há no homem, nada de inocente.\nLavai o que é impuro, regai o que é seco, sarai o enfermo.\nDobrai o que é duro, abrasai o frio, reconduzi o transviado.\n\nConcedei aos vossos fiéis, que em Vós confiam, os sete dons sagrados.\nDai-lhes o mérito da virtude, o dom da salvação final e a alegria eterna.\nAmém. Aleluia."
+  },
+  {
+    "id": "p_sete_dons",
+    "title": "Oração pelos Sete Dons do Espírito Santo",
+    "latinTitle": "São Boaventura",
+    "category": "Espírito Santo",
+    "text": "Espírito Santo, Divino Consolador, concedei-me os vossos preciosos dons:\nO Dom da Sabedoria, para que eu saboreie as coisas de Deus e ordene toda a minha vida segundo a Sua santa vontade;\nO Dom do Entendimento, para que eu compreenda a verdade da Revelação e aprofunde as grandezas do vosso amor;\nO Dom do Conselho, para que eu escolha sempre o caminho mais seguro e evite os laços do pecado;\nO Dom da Fortaleza, para que eu supere com paciência as tribulações e enfrente corajosamente as adversidades pela fé;\nO Dom da Ciência, para que eu veja a mão de Deus na criação e reconheça a vacuidade das coisas passageiras;\nO Dom da Piedade, para que eu ame a Deus como terno Pai e trate a todos os homens com caridade fraternal;\nO Dom do Temor de Deus, para que eu guarde profundo respeito diante da Majestade divina e tema sobre tudo desagradar ao Seu infinito amor.\nAmém."
+  },
+  {
+    "id": "p_consagracao_espirito_santo",
+    "title": "Consagração ao Divino Espírito Santo",
+    "latinTitle": "Actus Consecrationis Spiritui Sancto",
+    "category": "Espírito Santo",
+    "text": "Recebei, ó Espírito Santo, a consagração absoluta e perfeita de todo o meu ser, que Vos faço neste dia, para que Vos digneis ser, doravante, em cada um dos meus momentos e em cada uma das minhas ações, o meu Diretor, a minha Luz, a minha Guia, a minha Força e todo o Amor do meu coração.\nEu me abandono sem reserva às vossas divinas inspirações e quero ser-Vos sempre dócil.\nÓ Espírito Santo, transformai-me com Maria e em Maria, no modelo perfeitíssimo de Cristo Jesus, para a glória do Pai e a salvação do mundo.\nAmém."
+  },
+  {
+    "id": "p_respirar_espirito",
+    "title": "Respiração da Alma no Espírito Santo",
+    "latinTitle": "Santo Agostinho de Hipona",
+    "category": "Espírito Santo",
+    "text": "Respirai em mim, ó Espírito Santo, para que todos os meus pensamentos sejam santos.\nAtuai em mim, ó Espírito Santo, para que o meu trabalho também seja santo.\nAtraí o meu coração, ó Espírito Santo, para que eu ame apenas o que é santo.\nFortalecei-me, ó Espírito Santo, para que eu defenda tudo o que é santo.\nGuardai-me, pois, ó Espírito Santo, para que eu nunca perca o que é santo.\nAmém."
+  },
+  {
+    "id": "p_sao_miguel",
+    "title": "Oração a São Miguel Arcanjo",
+    "latinTitle": "Sancte Michael Archangele (Papa Leão XIII)",
+    "category": "Santos",
+    "text": "São Miguel Arcanjo, defendei-nos no combate,\nsede o nosso refúgio contra as maldades e ciladas do demônio.\nOrdene-lhe Deus, instantemente o pedimos,\ne vós, príncipe da milícia celeste,\npelo divino poder, precipitai no inferno a Satanás\ne aos outros espíritos malignos\nque andam pelo mundo para perder as almas.\nAmém."
+  },
+  {
+    "id": "p_sao_jose",
+    "title": "Oração a São José (Terror dos Demônios)",
+    "latinTitle": "Ad Te, Beate Ioseph (Papa Leão XIII)",
+    "category": "Santos",
+    "text": "A vós, São José, recorremos em nossa tribulação e, depois de ter implorado o auxílio de vossa Santíssima Esposa, cheios de confiança solicitamos também o vosso patrocínio.\n\nPor aquele laço sagrado de caridade que vos uniu à Imaculada Virgem Mãe de Deus, e pelo amor paternal que tivestes ao Menino Jesus, ardentemente vos suplicamos que lanceis um olhar benigno sobre a herança que Jesus Cristo conquistou com o seu Sangue, e nos socorrais em nossas necessidades com o vosso auxílio e poder.\n\nProtegei, ó guarda providente da Sagrada Família, a raça eleita de Jesus Cristo. Afastai para longe de nós, ó pai amantíssimo, todo contágio de erros e corrupções.\nDo alto do céu sede-nos propício, ó nosso fortíssimo libertador, na luta contra o poder das trevas.\nE assim como outrora salvastes da morte a vida ameaçada do Menino Jesus, defendei agora a Santa Igreja de Deus das ciladas do inimigo e de toda a adversidade.\nAmparai a cada um de nós com o vosso perpétuo patrocínio.\nAmém."
+  },
+  {
+    "id": "p_sao_bento",
+    "title": "Oração da Cruz de São Bento",
+    "latinTitle": "Crux Sacra Sit Mihi Lux",
+    "category": "Santos",
+    "text": "A Cruz Sagrada seja a minha Luz,\nnão seja o dragão o meu guia.\nRetira-te, Satanás!\nNunca me aconselhes coisas vãs.\nÉ mau o que tu me ofereces,\nbebe tu mesmo o teu veneno!\n\n(Em latim canônico):\nCrux Sacra Sit Mihi Lux!\nNon Draco Sit Mihi Dux!\nVade Retro Satana!\nNumquam Suade Mihi Vana!\nSunt Mala Quae Libas,\nIpse Venena Bibas!\nAmém."
+  },
+  {
+    "id": "p_sao_francisco",
+    "title": "Oração pela Paz (São Francisco de Assis)",
+    "latinTitle": "Oratio Pacis Sancti Francisci",
+    "category": "Santos",
+    "text": "Senhor, fazei-me instrumento de vossa paz.\nOnde houver ódio, que eu leve o amor;\nonde houver ofensa, que eu leve o perdão;\nonde houver discórdia, que eu leve a união;\nonde houver dúvida, que eu leve a fé;\nonde houver erro, que eu leve a verdade;\nonde houver desespero, que eu leve a esperança;\nonde houver tristeza, que eu leve a alegria;\nonde houver trevas, que eu leve a luz.\n\nÓ Mestre, fazei que eu procure mais\nconsolar que ser consolado;\ncompreender que ser compreendido;\namar que ser amado.\nPois é dando que se recebe,\né perdoando que se é perdoado,\ne é morrendo que se vive para a vida eterna.\nAmém."
+  },
+  {
+    "id": "p_santo_inacio",
+    "title": "Suscipe (Tomai, Senhor, e Recebei)",
+    "latinTitle": "Suscipe Domine (Santo Inácio de Loyola)",
+    "category": "Santos",
+    "text": "Tomai, Senhor, e recebei\ntoda a minha liberdade,\na minha memória, o meu entendimento\ne toda a minha vontade.\nTudo o que tenho e possuo,\nVós mo destes;\na Vós, Senhor, o restituo.\nTudo é vosso: disponde de tudo\nsegundo a vossa inteira vontade.\nDai-me apenas o vosso amor e a vossa graça,\npois esta me basta.\nAmém."
+  },
+  {
+    "id": "p_santa_teresa",
+    "title": "Nada te Turbe (Santa Teresa de Jesus)",
+    "latinTitle": "Santa Teresa d’Ávila (Doutora da Igreja)",
+    "category": "Santos",
+    "text": "Nada te turbe,\nnada te espante,\ntudo passa:\nDeus não muda.\n\nA paciência tudo alcança.\nQuem a Deus tem, nada lhe falta:\nSó Deus basta!\nAmém."
+  },
+  {
+    "id": "p_padre_pio",
+    "title": "Fica Comigo, Senhor",
+    "latinTitle": "São Padre Pio de Pietrelcina",
+    "category": "Santos",
+    "text": "Fica comigo, Senhor, porque é necessário ter-Te presente para não Te esquecer. Tu sabes com que facilidade Te abandono.\nFica comigo, Senhor, porque sou fraco e preciso da Tua força para não cair tantas vezes.\nFica comigo, Senhor, porque Tu és a minha vida, e sem Ti esmoreço no fervor.\nFica comigo, Senhor, porque Tu és a minha luz, e sem Ti estou nas trevas.\nFica comigo, Senhor, para me dares a conhecer a Tua vontade.\nFica comigo, Senhor, para que ouça a Tua voz e a siga.\nFica comigo, Senhor, porque desejo amar-Te muito e estar sempre em Tua companhia.\n\nFica comigo, Jesus, porque, por mais pobre que seja a minha alma, deseja ser para Ti um lugar de consolação e um ninho de amor.\nFica comigo, Jesus, porque se faz tarde e o dia declina... a vida passa, a morte, o juízo e a eternidade se aproximam!\nPreciso redobrar as minhas forças para não parar no caminho, e para isso preciso de Ti.\nFica comigo, Jesus, na vida e na morte.\nAmém."
+  },
+  {
+    "id": "p_sao_judas",
+    "title": "Oração a São Judas Tadeu",
+    "latinTitle": "Padroeiro das Causas Aflitas e Desesperadas",
+    "category": "Santos",
+    "text": "São Judas Tadeu, glorioso Apóstolo, fiel servo e amigo de Jesus:\nO nome do traidor tem sido a causa de que sejais esquecido por muitos, mas a Igreja vos honra e invoca universalmente como o patrono dos casos desesperados, das causas sem remédio.\n\nRogai por mim, que sou tão miserável. Fazei uso, eu vos rogo, desse privilégio particular que vos foi concedido, de trazer alívio visível e pronto onde o socorro é quase impossível.\nVinde em meu auxílio nesta grande necessidade, para que eu possa receber o consolo e o socorro do Céu em todas as minhas tribulações, aflições e sofrimentos, particularmente... (apresente a intenção), e possa louvar a Deus convosco e com todos os eleitos por toda a eternidade.\nEu vos prometo, bendito São Judas, lembrar-me sempre deste grande favor, honrar-vos sempre como meu especial e poderoso padroeiro e com gratidão fomentar a vossa devoção.\nSão Judas Tadeu, rogai por nós e por todos os que vos invocam.\nAmém."
+  },
+  {
+    "id": "p_santo_antonio",
+    "title": "Si Quaeris Miracula (Responsório de Santo Antônio)",
+    "latinTitle": "Doutor Evangélico",
+    "category": "Santos",
+    "text": "Se milagres desejais,\nrecorrei a Santo Antônio;\nvereis fugir o demônio\ne as tentações infernais.\n\nRecupera-se o perdido,\nrompe-se a dura prisão\ne no auge do furacão\ncede o mar embravecido.\n\nPela sua intercessão\nfoge a peste, o erro, a morte,\no fraco torna-se forte\ne torna-se são o ferido.\n\nGlória ao Pai, ao Filho e ao Espírito Santo.\nRogai por nós, bem-aventurado Antônio,\npara que sejamos dignos das promessas de Cristo.\nAmém."
+  },
+  {
+    "id": "p_charles_foucauld",
+    "title": "Oração de Abandono",
+    "latinTitle": "São Charles de Foucauld",
+    "category": "Santos",
+    "text": "Meu Pai,\neu me entrego em vossas mãos;\nfazei de mim o que for do vosso agrado.\nO que de mim fizerdes, eu vos agradeço.\nEstou pronto para tudo, aceito tudo,\ncontanto que a vossa vontade se faça em mim\ne em todas as vossas criaturas.\nNão desejo outra coisa, meu Deus.\n\nEm vossas mãos entrego a minha alma;\ndou-vo-la com todo o amor de que sou capaz,\nporque vos amo, ó meu Deus,\ne para mim é uma necessidade de amor dar-me,\nentregar-me em vossas mãos, sem medida,\ncom infinita confiança,\nporque sois o meu Pai.\nAmém."
+  },
+  {
+    "id": "p_ladainha_lauretana",
+    "title": "Ladainha Lauretana (Nossa Senhora)",
+    "latinTitle": "Litaniae Lauretanae",
+    "category": "Ladainhas",
+    "text": "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nJesus Cristo, ouvi-nos.\nJesus Cristo, atendei-nos.\n\nDeus Pai dos céus, tende piedade de nós.\nDeus Filho Redentor do mundo, tende piedade de nós.\nDeus Espírito Santo, tende piedade de nós.\nSantíssima Trindade, que sois um só Deus, tende piedade de nós.\n\nSanta Maria, rogai por nós.\nSanta Mãe de Deus, rogai por nós.\nSanta Virgem das virgens, rogai por nós.\nMãe de Cristo, rogai por nós.\nMãe da Igreja, rogai por nós.\nMãe da misericórdia, rogai por nós.\nMãe da divina graça, rogai por nós.\nMãe da esperança, rogai por nós.\nMãe puríssima, rogai por nós.\nMãe castíssima, rogai por nós.\nMãe sempre virgem, rogai por nós.\nMãe imaculada, rogai por nós.\nMãe amável, rogai por nós.\nMãe admirável, rogai por nós.\nMãe do bom conselho, rogai por nós.\nMãe do Criador, rogai por nós.\nMãe do Salvador, rogai por nós.\n\nVirgem prudentíssima, rogai por nós.\nVirgem venerável, rogai por nós.\nVirgem louvável, rogai por nós.\nVirgem poderosa, rogai por nós.\nVirgem benigna, rogai por nós.\nVirgem fiel, rogai por nós.\n\nEspelho de justiça, rogai por nós.\nSede de sabedoria, rogai por nós.\nCausa de nossa alegria, rogai por nós.\nVaso espiritual, rogai por nós.\nVaso honorífico, rogai por nós.\nVaso insigne de devoção, rogai por nós.\nRosa mística, rogai por nós.\nTorre de Davi, rogai por nós.\nTorre de marfim, rogai por nós.\nCasa de ouro, rogai por nós.\nArca da aliança, rogai por nós.\nPorta do céu, rogai por nós.\nEstrela da manhã, rogai por nós.\nSaúde dos enfermos, rogai por nós.\nRefúgio dos pecadores, rogai por nós.\nConsolo dos migrantes, rogai por nós.\nConsoladora dos aflitos, rogai por nós.\nAuxílio dos cristãos, rogai por nós.\n\nRainha dos Anjos, rogai por nós.\nRainha dos Patriarcas, rogai por nós.\nRainha dos Profetas, rogai por nós.\nRainha dos Apóstolos, rogai por nós.\nRainha dos Mártires, rogai por nós.\nRainha dos Confessores, rogai por nós.\nRainha das Virgens, rogai por nós.\nRainha de todos os Santos, rogai por nós.\nRainha concebida sem pecado original, rogai por nós.\nRainha assunta ao céu, rogai por nós.\nRainha do Santo Rosário, rogai por nós.\nRainha da família, rogai por nós.\nRainha da paz, rogai por nós.\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\nRogai por nós, Santa Mãe de Deus, para que sejamos dignos das promessas de Cristo.\nAmém."
+  },
+  {
+    "id": "p_ladainha_sagrado_coracao",
+    "title": "Ladainha do Sagrado Coração de Jesus",
+    "latinTitle": "Litaniae Sanctissimi Cordis Iesu",
+    "category": "Ladainhas",
+    "text": "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nJesus Cristo, ouvi-nos.\nJesus Cristo, atendei-nos.\n\nCoração de Jesus, Filho do Pai Eterno, tende piedade de nós.\nCoração de Jesus, formado pelo Espírito Santo no seio da Virgem Mãe, tende piedade de nós.\nCoração de Jesus, unido substancialmente ao Verbo de Deus, tende piedade de nós.\nCoração de Jesus, de majestade infinita, tende piedade de nós.\nCoração de Jesus, templo santo de Deus, tende piedade de nós.\nCoração de Jesus, tabernáculo do Altíssimo, tende piedade de nós.\nCoração de Jesus, casa de Deus e porta do Céu, tende piedade de nós.\nCoração de Jesus, fornalha ardente de caridade, tende piedade de nós.\nCoração de Jesus, santuário de justiça e de amor, tende piedade de nós.\nCoração de Jesus, cheio de bondade e de amor, tende piedade de nós.\nCoração de Jesus, abismo de todas as virtudes, tende piedade de nós.\nCoração de Jesus, digníssimo de todo o louvor, tende piedade de nós.\nCoração de Jesus, Rei e centro de todos os corações, tende piedade de nós.\nCoração de Jesus, no qual estão todos os tesouros da sabedoria e da ciência, tende piedade de nós.\nCoração de Jesus, no qual habita toda a plenitude da divindade, tende piedade de nós.\nCoração de Jesus, no qual o Pai pôs as suas complacências, tende piedade de nós.\nCoração de Jesus, de cuja plenitude todos nós recebemos, tende piedade de nós.\nCoração de Jesus, paciente e de muita misericórdia, tende piedade de nós.\nCoração de Jesus, rico para todos os que Vos invocam, tende piedade de nós.\nCoração de Jesus, fonte de vida e de santidade, tende piedade de nós.\nCoração de Jesus, propiciação pelos nossos pecados, tende piedade de nós.\nCoração de Jesus, saturado de opróbrios, tende piedade de nós.\nCoração de Jesus, esmagado de dor por causa dos nossos crimes, tende piedade de nós.\nCoração de Jesus, feito obediente até à morte, tende piedade de nós.\nCoração de Jesus, trespassado pela lança, tende piedade de nós.\nCoração de Jesus, fonte de toda a consolação, tende piedade de nós.\nCoração de Jesus, nossa vida e ressurreição, tende piedade de nós.\nCoração de Jesus, nossa paz e reconciliação, tende piedade de nós.\nCoração de Jesus, vítima dos pecadores, tende piedade de nós.\nCoração de Jesus, salvação dos que em Vós esperam, tende piedade de nós.\nCoração de Jesus, esperança dos que morrem em Vós, tende piedade de nós.\nCoração de Jesus, delícia de todos os santos, tende piedade de nós.\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\nJesus, manso e humilde de coração, fazei o nosso coração semelhante ao Vosso.\nAmém."
+  },
+  {
+    "id": "p_ladainha_sao_jose",
+    "title": "Ladainha de São José",
+    "latinTitle": "Litaniae Sancti Ioseph",
+    "category": "Ladainhas",
+    "text": "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nJesus Cristo, ouvi-nos.\nJesus Cristo, atendei-nos.\n\nSão José, rogai por nós.\nIlustre filho de Davi, rogai por nós.\nLuz dos Patriarcas, rogai por nós.\nEsposo da Mãe de Deus, rogai por nós.\nCasto guarda da Virgem, rogai por nós.\nSustentador do Filho de Deus, rogai por nós.\nZeloso defensor de Cristo, rogai por nós.\nChefe da Sagrada Família, rogai por nós.\nJosé justíssimo, rogai por nós.\nJosé castíssimo, rogai por nós.\nJosé prudentíssimo, rogai por nós.\nJosé fortíssimo, rogai por nós.\nJosé obedientíssimo, rogai por nós.\nJosé fidelíssimo, rogai por nós.\nEspelho de paciência, rogai por nós.\nAmante da pobreza, rogai por nós.\nModelo dos trabalhadores, rogai por nós.\nHonra da vida doméstica, rogai por nós.\nGuarda das virgens, rogai por nós.\nSustento das famílias, rogai por nós.\nConsolo dos aflitos, rogai por nós.\nEsperança dos doentes, rogai por nós.\nPadroeiro dos moribundos, rogai por nós.\nTerror dos demônios, rogai por nós.\nProtetor da Santa Igreja, rogai por nós.\n\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Senhor.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós.\nEle o constituiu senhor de sua casa e fê-lo príncipe de todos os seus bens.\nAmém."
+  },
+  {
+    "id": "p_ladainha_nome_jesus",
+    "title": "Ladainha do Santíssimo Nome de Jesus",
+    "latinTitle": "Litaniae Sanctissimi Nominis Iesu",
+    "category": "Ladainhas",
+    "text": "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nJesus, ouvi-nos.\nJesus, atendei-nos.\n\nJesus, Filho de Deus vivo, tende piedade de nós.\nJesus, esplendor do Pai, tende piedade de nós.\nJesus, pureza da luz eterna, tende piedade de nós.\nJesus, Rei da glória, tende piedade de nós.\nJesus, sol de justiça, tende piedade de nós.\nJesus, Filho da Virgem Maria, tende piedade de nós.\nJesus amável, tende piedade de nós.\nJesus admirável, tende piedade de nós.\nJesus, Deus forte, tende piedade de nós.\nJesus, Pai do século futuro, tende piedade de nós.\nJesus, Anjo do grande conselho, tende piedade de nós.\nJesus poderosíssimo, tende piedade de nós.\nJesus pacientíssimo, tende piedade de nós.\nJesus obedientíssimo, tende piedade de nós.\nJesus, manso e humilde de coração, tende piedade de nós.\nJesus, amante da castidade, tende piedade de nós.\nJesus, nosso amor, tende piedade de nós.\nJesus, Deus da paz, tende piedade de nós.\nJesus, autor da vida, tende piedade de nós.\nJesus, exemplo das virtudes, tende piedade de nós.\nJesus, zelador das almas, tende piedade de nós.\nJesus, nosso Deus, tende piedade de nós.\nJesus, nosso refúgio, tende piedade de nós.\nJesus, Pai dos pobres, tende piedade de nós.\nJesus, tesouro dos fiéis, tende piedade de nós.\nJesus, bom Pastor, tende piedade de nós.\nJesus, luz verdadeira, tende piedade de nós.\nJesus, sabedoria eterna, tende piedade de nós.\nJesus, bondade infinita, tende piedade de nós.\nJesus, nosso caminho e nossa vida, tende piedade de nós.\nJesus, alegria dos Anjos, tende piedade de nós.\nJesus, Rei dos Patriarcas, tende piedade de nós.\nJesus, Mestre dos Apóstolos, tende piedade de nós.\nJesus, Doutor dos Evangelistas, tende piedade de nós.\nJesus, fortaleza dos Mártires, tende piedade de nós.\nJesus, luz dos Confessores, tende piedade de nós.\nJesus, pureza das Virgens, tende piedade de nós.\nJesus, coroa de todos os Santos, tende piedade de nós.\n\nSede-nos propício, perdoai-nos, Jesus.\nSede-nos propício, ouvi-nos, Jesus.\nPelo mistério da vossa santa Encarnação, livrai-nos, Jesus.\nPela vossa Natividade, livrai-nos, Jesus.\nPela vossa paixão e cruz, livrai-nos, Jesus.\nPela vossa morte e sepultura, livrai-nos, Jesus.\nPela vossa gloriosa Ressurreição e Ascensão, livrai-nos, Jesus.\nPela vossa instituição da santíssima Eucaristia, livrai-nos, Jesus.\nPelas vossas alegrias e pela vossa glória, livrai-nos, Jesus.\nCordeiro de Deus, que tirais os pecados do mundo, perdoai-nos, Jesus.\nCordeiro de Deus, que tirais os pecados do mundo, ouvi-nos, Jesus.\nCordeiro de Deus, que tirais os pecados do mundo, tende piedade de nós, Jesus.\nBendito seja o Nome do Senhor, agora e por todos os séculos!\nAmém."
+  },
+  {
+    "id": "p_ladainha_preciosissimo_sangue",
+    "title": "Ladainha do Preciosíssimo Sangue de Jesus",
+    "latinTitle": "Litaniae Pretiosissimi Sanguinis D.N.I.C.",
+    "category": "Ladainhas",
+    "text": "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\nJesus Cristo, ouvi-nos.\nJesus Cristo, atendei-nos.\n\nSangue de Cristo, Unigênito do Pai Eterno, salvai-nos.\nSangue de Cristo, Verbo de Deus encarnado, salvai-nos.\nSangue de Cristo, da Nova e Eterna Aliança, salvai-nos.\nSangue de Cristo, a escorrer na agonia do Horto, salvai-nos.\nSangue de Cristo, a verter na flagelação, salvai-nos.\nSangue de Cristo, a gotejar na coroação de espinhos, salvai-nos.\nSangue de Cristo, derramado na Cruz, salvai-nos.\nSangue de Cristo, preço da nossa salvação, salvai-nos.\nSangue de Cristo, sem o qual não há remissão, salvai-nos.\nSangue de Cristo, bebida e purificação das almas na Eucaristia, salvai-nos.\nSangue de Cristo, torrente de misericórdia, salvai-nos.\nSangue de Cristo, vencedor dos demônios, salvai-nos.\nSangue de Cristo, fortaleza dos mártires, salvai-nos.\nSangue de Cristo, alento dos confessores, salvai-nos.\nSangue de Cristo, fonte de virgindade, salvai-nos.\nSangue de Cristo, sustento dos que perigam, salvai-nos.\nSangue de Cristo, alívio dos que sofrem, salvai-nos.\nSangue de Cristo, consolo nas lágrimas, salvai-nos.\nSangue de Cristo, esperança dos penitentes, salvai-nos.\nSangue de Cristo, conforto dos moribundos, salvai-nos.\nSangue de Cristo, penhor da vida eterna, salvai-nos.\n\nRemistes-nos, Senhor, com o vosso Sangue, e fizestes de nós um reino para o nosso Deus.\nAmém."
+  },
+  {
+    "id": "p_ladainha_todos_santos",
+    "title": "Ladainha de Todos os Santos (Canônica Breve)",
+    "latinTitle": "Litaniae Sanctorum",
+    "category": "Ladainhas",
+    "text": "Senhor, tende piedade de nós.\nCristo, tende piedade de nós.\nSenhor, tende piedade de nós.\n\nSanta Maria, Mãe de Deus, rogai por nós.\nSão Miguel, São Gabriel e São Rafael, rogai por nós.\nTodos os Santos Anjos de Deus, rogai por nós.\nSão João Batista, rogai por nós.\nSão José, rogai por nós.\nSão Pedro e São Paulo, rogai por nós.\nSanto André e São João, rogai por nós.\nSanta Maria Madalena, rogai por nós.\nSanto Estêvão e São Lourenço, rogai por nós.\nSanto Inácio de Antioquia, rogai por nós.\nSanta Perpétua e Santa Felicidade, rogai por nós.\nSanta Inês e Santa Cecília, rogai por nós.\nSão Gregório e Santo Agostinho, rogai por nós.\nSanto Atanásio e São Basílio, rogai por nós.\nSão Martinho e São Bento, rogai por nós.\nSão Francisco e São Domingos, rogai por nós.\nSanto Inácio de Loyola e São Francisco Xavier, rogai por nós.\nSão João Maria Vianney, rogai por nós.\nSanta Catarina de Sena e Santa Teresa de Jesus, rogai por nós.\nTodos os Santos e Santas de Deus, rogai por nós.\n\nSede-nos propício, livrai-nos, Senhor.\nDe todo o mal e de todo o pecado, livrai-nos, Senhor.\nDa morte eterna, livrai-nos, Senhor.\nPela vossa Encarnação, pela vossa Morte e Ressurreição, livrai-nos, Senhor.\nPelo envio do Espírito Santo, livrai-nos, Senhor.\nApesar de nossos pecados, ouvi-nos, Senhor.\nPara que governeis e conserveis a vossa santa Igreja, ouvi-nos, Senhor.\nPara que conserveis no vosso santo serviço o Papa e todos os membros do clero, ouvi-nos, Senhor.\nCristo, ouvi-nos. Cristo, atendei-nos.\nAmém."
+  },
+  {
+    "id": "p_oracao_manha",
+    "title": "Oração da Manhã (Oferecimento)",
+    "latinTitle": "Oratio Matutina",
+    "category": "Dia a dia",
+    "text": "Senhor Deus, Pai de infinita bondade:\nDou-Vos graças por me terdes criado, conservado e guardado nesta noite que passou, trazendo-me à luz de um novo dia.\nOfereço-Vos todos os meus pensamentos, palavras, obras, trabalhos e sofrimentos deste dia, em união com o Sacrifício de Cristo no Calvário e nos altares do mundo inteiro.\n\nLivrai-me hoje de todo pecado, de todo perigo da alma e do corpo, e dai-me a graça de amar e servir a todos os que cruzarem o meu caminho.\nSenhor, seja feita em tudo a vossa santa vontade.\nSanto Anjo do Senhor, sede a minha guarda.\nAmém."
+  },
+  {
+    "id": "p_oracao_noite",
+    "title": "Oração da Noite (Completas)",
+    "latinTitle": "Oratio Vespertina (Completas)",
+    "category": "Dia a dia",
+    "text": "Em vossas mãos, Senhor, entrego o meu espírito.\nVós me redimistes, Senhor, Deus da verdade!\n\nSenhor, antes de fechar os olhos no sono reparador, coloco-me em vossa santa presença.\nExamino o meu dia: peço perdão por todas as faltas, palavras duras, omissões e fraquezas que cometi.\nAgradeço por cada bênção, cada sustento e cada consolo recebido.\nGuardai-me, Senhor, como a pupila dos vossos olhos; protegei-me à sombra das vossas asas.\nDignai-Vos conservar-me nesta noite sem pecado.\nRepousem em paz os enfermos, os atribulados e as almas do purgatório.\nVisite, Senhor, esta habitação e afaste dela todas as ciladas do inimigo.\nA vossa santa bênção permaneça sempre conosco.\nEm nome do Pai, do Filho e do Espírito Santo.\nAmém."
+  },
+  {
+    "id": "p_nunc_dimittis",
+    "title": "Cântico de Simeão (Nunc Dimittis)",
+    "latinTitle": "Canticum Simeonis (Lc 2, 29-32)",
+    "category": "Dia a dia",
+    "text": "Agora, Senhor, podeis deixar partir em paz o vosso servo,\nsegundo a vossa palavra;\nporque os meus olhos viram a vossa salvação,\nque preparastes diante de todos os povos:\nluz para iluminar as nações\ne glória de vosso povo, Israel.\n\nGlória ao Pai, ao Filho e ao Espírito Santo.\nComo era no princípio, agora e sempre.\nAmém."
+  },
+  {
+    "id": "p_bencao_mesa_antes",
+    "title": "Bênção da Mesa antes da Refeição",
+    "latinTitle": "Benedictio Mensae",
+    "category": "Dia a dia",
+    "text": "Abençoai-nos, Senhor, a nós e a este alimento que por vossa generosidade vamos tomar.\nDai pão a quem tem fome e fome de justiça a quem tem pão.\nPor Cristo, nosso Senhor.\nAmém."
+  },
+  {
+    "id": "p_bencao_mesa_depois",
+    "title": "Ação de Graças após a Refeição",
+    "latinTitle": "Gratiarum Actio post Mensam",
+    "category": "Dia a dia",
+    "text": "Nós Vos damos graças, Deus Onipotente, por todos os vossos benefícios,\nVós que viveis e reinais pelos séculos dos séculos.\nE as almas dos fiéis defuntos, pela misericórdia de Deus, descansem em paz.\nAmém."
+  },
+  {
+    "id": "p_familia_lar",
+    "title": "Oração pela Família e pelo Lar",
+    "latinTitle": "Benedictio Familiae et Domus",
+    "category": "Dia a dia",
+    "text": "Senhor Deus, Criador de todas as coisas, que instituístes a família humana como santuário de vida e de amor:\nAbençoai o nosso lar. Fazei dele uma réplica da Sagrada Família de Nazaré.\nReinem em nossa casa a paz, a pureza, a fidelidade, o respeito mútuo e a caridade que tudo perdoa e supera.\n\nAfastai de nossa família toda divisão, inveja, orgulho e discórdia.\nProtegei os nossos pais, filhos e familiares; dai pão com honra às nossas mesas e guiai os nossos corações no caminho dos vossos Mandamentos.\nSagrada Família de Nazaré — Jesus, Maria e José — santificai as nossas famílias!\nAmém."
+  },
+  {
+    "id": "p_trabalho_estudo",
+    "title": "Oração pelo Trabalho e Estudos",
+    "latinTitle": "Oratio pro Labore et Studiis",
+    "category": "Dia a dia",
+    "text": "Senhor Jesus, que quisestes trabalhar com vossas próprias mãos na oficina de Nazaré, santificando o suor e o trabalho humano:\nConsagro a Vós o meu estudo, a minha profissão e as tarefas que hoje tenho de realizar.\nDai-me inteligência para aprender, diligência para executar com zelo e paciência para vencer as dificuldades.\n\nNão permitais que a soberba ou a preguiça me dominem, mas que todo o meu esforço seja feito com retidão de intenção, para servir ao meu próximo e dar glória ao Vosso Santo Nome.\nSão José Operário, rogai por nós.\nAmém."
+  },
+  {
+    "id": "p_requiem_aeternam",
+    "title": "Oração pelos Fiéis Defuntos (Requiem)",
+    "latinTitle": "Requiem Aeternam",
+    "category": "Dia a dia",
+    "text": "Dai-lhes, Senhor, o repouso eterno,\ne brilhe para eles a vossa luz perpétua!\nDescansem em paz.\nAmém.\n\nOremos: Deus, Criador e Redentor de todos os fiéis, concedei às almas de todos os fiéis defuntos a remissão de todos os seus pecados, para que obtenham, pelas nossas piedosas súplicas, a indulgência que sempre desejaram. Vós que viveis e reinais pelos séculos dos séculos.\nAmém."
+  },
+  {
+    "id": "p_ato_desagravo_sagrado_coracao",
+    "title": "Ato de Desagravo ao Sagrado Coração",
+    "latinTitle": "Actus Reparationis (Papa Pio XI)",
+    "category": "Grandes Devoções",
+    "text": "Dulcíssimo Jesus, cuja infinita caridade para com os homens é tão ingratamente correspondida pelo esquecimento, negligência e desprezo:\nEis-nos aqui prostrados diante do vosso altar, com o desejo de desagravar, com especiais homenagens, a tão criminosa tibieza e as ofensas com que os homens ultrajam em toda a parte o vosso amantíssimo Coração.\n\nLembrados, porém, de que nós mesmos tantas vezes nos manchamos com semelhante indignidade, imploramos antes de tudo a vossa misericórdia para com as nossas almas.\nQueremos reparar, com voluntária penitência, não só os nossos pecados, mas também os daqueles que, errando longe do caminho da salvação, recusam seguir-Vos como Pastor e Guia.\n\nRecebei, ó benigníssimo Jesus, pela intercessão da Bem-Aventurada Virgem Maria Reparadora, a homenagem espontânea do nosso desagravo; e guardai-nos fiéis até à morte no vosso santo serviço, para que alcancemos todos aquela pátria celeste onde, com o Pai e o Espírito Santo, viveis e reinais por todos os séculos dos séculos.\nAmém."
+  },
+  {
+    "id": "p_consagracao_imaculado_coracao",
+    "title": "Consagração ao Imaculado Coração de Maria",
+    "latinTitle": "Fátima",
+    "category": "Grandes Devoções",
+    "text": "Ó Virgem Maria, Mãe de Deus e nossa Mãe amantíssima:\nAo vosso Imaculado Coração nós nos consagramos em filial amor e total dedicação.\nPor esta consagração, nós nos propomos a viver como verdadeiros filhos de Deus, obedientes aos ensinamentos de Jesus e da Santa Igreja.\n\nQueremos oferecer reparação pelos ultrajes, indiferenças e ofensas que ferem o Vosso Coração Materno e o Sagrado Coração de Jesus.\nPrometemos rezar diariamente o Santo Rosário, acolher com fervor os Sacramentos da Confissão e da Eucaristia nos Primeiros Sábados, e oferecer sacrifícios pela conversão dos pecadores.\nGuiai a nossa vida no meio das provações deste mundo e conduzi-nos com segurança ao porto da salvação eterna.\nCoração Imaculado de Maria, sede a nossa salvação!\nAmém."
+  },
+  {
+    "id": "p_oracao_santa_cruz",
+    "title": "Oração à Santa Cruz de Cristo",
+    "latinTitle": "Adoratio Sanctae Crucis",
+    "category": "Grandes Devoções",
+    "text": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,\nporque pela vossa Santa Cruz remistes o mundo!\n\nDeus Todo-Poderoso, que sofrestes a morte sobre o madeiro sagrado da Cruz por todos os nossos pecados:\nSede comigo, Santa Cruz de Jesus Cristo, derramai sobre mim toda a vossa bênção.\nSanta Cruz de Jesus Cristo, afastai de mim todo o mal e todo temor.\nSanta Cruz de Jesus Cristo, fazei que eu siga o caminho da salvação e da graça.\nJesus de Nazaré crucificado, tende piedade de mim.\nEm nome do Pai, do Filho e do Espírito Santo.\nAmém."
+  },
+  {
+    "id": "p_sete_dores_maria",
+    "title": "As Sete Dores de Nossa Senhora",
+    "latinTitle": "Septem Dolores B.M.V.",
+    "category": "Grandes Devoções",
+    "text": "Virgem Dolorosíssima, Mãe de Jesus e nossa Mãe:\nRecordamos com profunda compaixão as Sete Dores que traspassaram a vossa alma pura:\n1ª Dor: A profecia do santo velho Simeão no Templo;\n2ª Dor: A fuga precipitada para o Egito diante da perseguição de Herodes;\n3ª Dor: A perda do Menino Jesus durante três dias em Jerusalém;\n4ª Dor: O doloroso encontro com vosso Filho carregando a pesada Cruz rumo ao Calvário;\n5ª Dor: A crucifixão, agonia e morte de Jesus na Cruz;\n6ª Dor: A descida da Cruz e o Corpo sem vida de Jesus depositado em vossos braços maternos;\n7ª Dor: O sepultamento de Jesus e a vossa imensa solidão.\n\nPor todas essas vossas dores indizíveis, alcançai-nos uma verdadeira contrição dos nossos pecados, a pureza de coração e a graça de vos consolar em todas as nossas cruzes diárias.\nNossa Senhora das Dores, rogai por nós!\nAmém."
+  },
+  {
+    "id": "p_jesus_crucificado",
+    "title": "Oração diante de Jesus Crucificado",
+    "latinTitle": "En ego, o bone et dulcissime Iesu",
+    "category": "Grandes Devoções",
+    "text": "Eis-me aqui, ó bom e dulcíssimo Jesus!\nDe joelhos me prostro em vossa presença e vos suplico, com o mais vivo fervor, que imprimais em meu coração sentimentos de fé, esperança e caridade, verdadeiro arrependimento dos meus pecados e propósito firme de nunca mais vos ofender.\nEnquanto isso, considero em mim mesmo e contemplo em espírito com grande afeto e dor as vossas cinco chagas, tendo diante dos olhos o que já de vós disse o profeta Davi:\n\"Trespassaram minhas mãos e meus pés; contaram todos os meus ossos.\"\nAmém."
+  },
+  {
+    "id": "p_coroinha_sao_miguel",
+    "title": "Coroinha Angélica de São Miguel Arcanjo",
+    "latinTitle": "Corona Angelica Sancti Michaelis",
+    "category": "Grandes Devoções",
+    "text": "Deus, vinde em meu auxílio; Senhor, apressai-vos em me socorrer.\nGlória ao Pai, ao Filho e ao Espírito Santo...\n\nPela intercessão de São Miguel e do Coro Celeste dos Serafins, o Senhor nos faça dignos do fogo da perfeita caridade.\nPela intercessão de São Miguel e do Coro Celeste dos Querubins, o Senhor nos conceda a graça de abandonar o caminho do pecado.\nPela intercessão de São Miguel e do Coro Celeste dos Tronos, o Senhor derrame em nossos corações o espírito da verdadeira humildade.\nPela intercessão de São Miguel e do Coro Celeste das Dominações, o Senhor nos dê a graça de dominar os sentidos e vencer as paixões.\nPela intercessão de São Miguel e do Coro Celeste das Potestades, o Senhor proteja as nossas almas contra as ciladas do demônio.\nPela intercessão de São Miguel e do Coro Celeste das Virtudes, o Senhor nos livre do mal e não nos deixe cair em tentação.\nPela intercessão de São Miguel e do Coro Celeste dos Principados, o Senhor encha as nossas almas do espírito da verdadeira obediência.\nPela intercessão de São Miguel e do Coro Celeste dos Arcanjos, o Senhor nos conceda a perseverança na fé e nas boas obras.\nPela intercessão de São Miguel e do Coro Celeste dos Anjos, o Senhor nos conceda sermos guardados por eles nesta vida e conduzidos à glória eterna.\nAmém."
+  },
+  {
+    "id": "p_oracao_jubileu",
+    "title": "Oração dos Peregrinos da Esperança",
+    "latinTitle": "Oratio Peregrini Spei",
+    "category": "Grandes Devoções",
+    "text": "Pai que estás nos céus,\na fé que nos deste no teu Filho Jesus Cristo, nosso irmão,\ne a chama da caridade derramada nos nossos corações pelo Espírito Santo\ndespertem em nós a bem-aventurada esperança na vinda do teu Reino.\n\nA tua graça nos transforme em cultivadores diligentes das sementes evangélicas\nque fermentem a humanidade e o cosmos,\nna espera confiante dos novos céus e da nova terra.\nA luz da esperança cristã alcance cada homem e mulher,\ncomo mensagem do teu amor dirigido a todos,\ne a Igreja testemunhe com alegria a beleza do Evangelho.\nPor Cristo, nosso Senhor.\nAmém."
+  }
+]
