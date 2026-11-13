@@ -869,6 +869,7 @@
                     <button onclick="router.navigate('oracao')" class="top-nav-btn text-xs lg:text-sm font-medium text-slate-500 hover:text-cgreen dark:hover:text-csage transition cursor-pointer" data-nav="oracao">Rezar</button>
                     <button onclick="router.navigate('catecismo')" class="top-nav-btn text-xs lg:text-sm font-medium text-slate-500 hover:text-cgreen dark:hover:text-csage transition cursor-pointer" data-nav="catecismo">Aprender</button>
                     <button onclick="router.navigate('santo')" class="top-nav-btn text-xs lg:text-sm font-medium text-slate-500 hover:text-cgreen dark:hover:text-csage transition cursor-pointer" data-nav="santo">Santos</button>
+                    <button onclick="openChapelMode('p_oracao_manha')" class="top-nav-btn text-xs lg:text-sm font-semibold text-amber-600 dark:text-amber-400 hover:text-amber-700 transition cursor-pointer flex items-center gap-1" data-nav="capela" title="Modo Capela (Silêncio e Oração Contemplativa)"><span>🕯️</span> <span>Capela</span></button>
                 </nav>
 
                 <!-- Context title for non-home routes (accessible & keeps existing JS functional) -->
@@ -1000,6 +1001,15 @@
                                     <span class="truncate">Novenas Católicas</span>
                                 </div>
                                 <span id="mobile-novenas-badge" class="menu-novenas-badge shrink-0 text-[9px] font-bold text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200 dark:border-rose-800">9 Dias</span>
+                            </button>
+                            <button onclick="openChapelMode('p_oracao_manha'); toggleMobileMenu();" data-menu-key="capela" class="nav-item group w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl font-medium text-amber-900 dark:text-amber-200 bg-amber-500/10 dark:bg-amber-950/40 hover:bg-amber-500/20 transition text-sm border border-amber-500/30 mb-1">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-amber-500/20 text-amber-700 dark:text-amber-300">
+                                        🕯️
+                                    </span>
+                                    <span class="truncate font-semibold">Modo Capela Virtual</span>
+                                </div>
+                                <span class="shrink-0 text-[9px] font-bold text-amber-800 dark:text-amber-300 bg-amber-200/60 dark:bg-amber-900/60 px-1.5 py-0.5 rounded">Silêncio</span>
                             </button>
                             <button onclick="router.navigate('oracao'); toggleMobileMenu();" data-menu-key="oracao" class="nav-item group w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-cline/40 dark:hover:bg-slate-800/80 hover:text-cgreen dark:hover:text-csage transition text-sm">
                                 <span class="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-cgreen/8 dark:bg-slate-800 text-cgreen dark:text-csage group-hover:bg-cgreen group-hover:text-white dark:group-hover:bg-csage dark:group-hover:text-slate-900 transition-colors">
@@ -8401,7 +8411,28 @@
                     canvas.height = 1350;
                     const ctx = canvas.getContext('2d');
 
-                    // 1. Fundo Nobre / Marfim Papal com gradiente sutil
+                    // Lista de possíveis fundos sacros personalizados gerados na Auditoria
+                    const bgPool = [
+                        './assets/img/temas/santinho-bg-jesus.png',
+                        './assets/img/temas/santinho-bg-maria.png',
+                        './assets/img/temas/santinho-bg-anjos.png',
+                        './assets/img/temas/santinho-bg-espirito-santo.png',
+                        './assets/img/temas/santinho-bg-eucaristia.png'
+                    ];
+                    const selectedBgUrl = bgPool[Math.floor(Math.random() * bgPool.length)];
+
+                    // Tenta carregar imagem de fundo sacra de forma assíncrona
+                    const bgImg = await new Promise((resolve) => {
+                        const img = new Image();
+                        img.crossOrigin = 'anonymous';
+                        img.onload = () => resolve(img);
+                        img.onerror = () => resolve(null);
+                        img.src = selectedBgUrl;
+                        // Timeout de segurança para não travar
+                        setTimeout(() => resolve(null), 1200);
+                    });
+
+                    // 1. Fundo Base: Marfim Papal com gradiente suave
                     const bgGrad = ctx.createLinearGradient(0, 0, 1080, 1350);
                     bgGrad.addColorStop(0, '#FDFBF7');
                     bgGrad.addColorStop(0.5, '#F6EFE3');
@@ -8409,7 +8440,23 @@
                     ctx.fillStyle = bgGrad;
                     ctx.fillRect(0, 0, 1080, 1350);
 
-                    // 2. Moldura Dourada Clássica com Cantos Finos
+                    // 2. Se imagem personalizada carregar, desenha com velatura translúcida suave
+                    if (bgImg) {
+                        ctx.save();
+                        ctx.globalAlpha = 0.28; // Transparência calculada para preservar 100% da legibilidade
+                        ctx.drawImage(bgImg, 0, 0, 1080, 1350);
+                        ctx.restore();
+
+                        // Velatura central de luz para contraste perfeito
+                        const radialGlow = ctx.createRadialGradient(540, 675, 100, 540, 675, 520);
+                        radialGlow.addColorStop(0, 'rgba(255, 253, 248, 0.85)');
+                        radialGlow.addColorStop(0.7, 'rgba(253, 251, 247, 0.65)');
+                        radialGlow.addColorStop(1, 'rgba(244, 236, 225, 0.45)');
+                        ctx.fillStyle = radialGlow;
+                        ctx.fillRect(40, 40, 1000, 1270);
+                    }
+
+                    // 3. Moldura Dourada Dupla com Cantos Decorativos
                     ctx.strokeStyle = '#D4AF37';
                     ctx.lineWidth = 4;
                     ctx.strokeRect(40, 40, 1000, 1270);
@@ -8428,13 +8475,13 @@
                         ctx.fill();
                     });
 
-                    // 3. Emblema da Cruz no topo
+                    // 4. Emblema da Cruz no topo
                     ctx.textAlign = 'center';
                     ctx.fillStyle = '#C59A4B';
                     ctx.font = '36px Georgia, serif';
                     ctx.fillText('✠', 540, 125);
 
-                    // 4. Cabeçalho Litúrgico
+                    // 5. Cabeçalho Litúrgico
                     ctx.font = 'bold 20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
                     ctx.fillStyle = '#234638';
                     ctx.fillText('UMA LUZ PARA O SEU DIA', 540, 175);
@@ -8471,19 +8518,22 @@
                         return currentY + lineHeight;
                     }
 
-                    // 5. Versículo Bíblico
-                    ctx.fillStyle = '#1E293B';
+                    // 6. Versículo Bíblico (com sombra nobre para nitidez máxima)
+                    ctx.shadowColor = 'rgba(255, 255, 255, 0.9)';
+                    ctx.shadowBlur = 4;
+                    ctx.fillStyle = '#1A2E26';
                     ctx.font = 'italic 34px Georgia, serif';
                     let curY = wrapText(ctx, (gem.versiculo || ''), 540, 330, 840, 50);
+                    ctx.shadowBlur = 0;
 
-                    // 6. Caixa Doutrina da Igreja
+                    // 7. Caixa Doutrina da Igreja
                     if (gem.catecismo) {
                         curY = Math.max(curY + 30, 530);
                         const boxW = 860;
                         const boxX = 110;
                         const boxY = curY;
                         
-                        ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+                        ctx.fillStyle = 'rgba(255, 255, 255, 0.90)';
                         ctx.beginPath();
                         if (typeof ctx.roundRect === 'function') {
                             ctx.roundRect(boxX, boxY, boxW, 280, 20);
@@ -8507,7 +8557,7 @@
                         curY = boxY + 310;
                     }
 
-                    // 7. Oração / Prece
+                    // 8. Oração / Prece
                     if (gem.prece) {
                         curY = Math.max(curY + 40, 890);
                         ctx.font = 'bold 22px Georgia, serif';
@@ -8519,7 +8569,7 @@
                         curY = wrapText(ctx, '"' + gem.prece + '"', 540, curY + 50, 820, 42);
                     }
 
-                    // 8. Rodapé Nobre
+                    // 9. Rodapé Nobre
                     ctx.textAlign = 'center';
                     ctx.font = '16px -apple-system, sans-serif';
                     ctx.fillStyle = '#78716C';
@@ -9763,6 +9813,33 @@ function getIntentionIconSvg(slug) {
 
                         <!-- SEÇÃO: ROTINA DIÁRIA DE ORAÇÃO (Manhã e Noite - Molduras Hallow & Capela) -->
                         <div class="space-y-3">
+                            <!-- Horas Canônicas & Tradição do Angelus (Widget Dinâmico) -->
+                            ${CanonicalHoursManager ? CanonicalHoursManager.renderBanner() : ''}
+
+                            <!-- Card de Destaque da Capela Virtual na Home -->
+                            <div onclick="openChapelMode('p_oracao_manha')" class="relative overflow-hidden bg-gradient-to-r from-[#0c141d] via-[#121c27] to-[#090e14] text-white rounded-[22px] p-5 sm:p-6 border border-amber-500/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer hover:border-amber-400/50 transition group">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="relative w-10 h-12 shrink-0 flex flex-col items-center justify-center">
+                                        <div class="absolute -top-1 w-12 h-12 rounded-full bg-amber-400/20 blur-md group-hover:scale-125 transition"></div>
+                                        <div class="chapel-candle-flame"></div>
+                                        <div class="w-0.5 h-2 bg-slate-600"></div>
+                                        <div class="w-4 h-5 bg-gradient-to-b from-[#e8dcc4] to-[#c7b99c] rounded-t-xs border border-amber-900/40"></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 uppercase tracking-widest border border-amber-500/30">Oração Contemplativa</span>
+                                            <span class="text-xs text-amber-400/90 font-serif italic">Silêncio & Paz</span>
+                                        </div>
+                                        <h3 class="font-serif text-lg sm:text-xl font-bold text-amber-100 group-hover:text-amber-300 transition">Modo Capela Virtual</h3>
+                                        <p class="text-xs text-slate-300 mt-0.5 line-clamp-1">Reze sob a suave luz de vela, sem distrações e com leitura por voz.</p>
+                                    </div>
+                                </div>
+                                <span class="px-4 py-2 bg-amber-500/15 group-hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold transition flex items-center gap-1.5 self-start sm:self-auto shrink-0">
+                                    <span>🕯️ Entrar na Capela</span>
+                                    <span>→</span>
+                                </span>
+                            </div>
+
                             <div class="flex items-center justify-between">
                                 <div class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8c8b7e] dark:text-slate-400 flex items-center gap-1.5">
                                     <span>✦</span> <span>Rotina diária de oração</span>
@@ -11712,7 +11789,91 @@ function getIntentionIconSvg(slug) {
                         </div>
 
                         <!-- Card Destaque: O Santo Terço e Santo Rosário (Moldura Capela / Hallow) -->
-                        <div id="secao-santo-terco" class="bg-[#f4eee0] dark:bg-slate-800 rounded-[22px] overflow-hidden border border-[#e8ddc9] dark:border-slate-700 shadow-2xs">
+                        <div 
+                        <!-- Horas Canônicas & Liturgia do Tempo -->
+                        ${CanonicalHoursManager ? CanonicalHoursManager.renderBanner() : ''}
+
+                        <!-- Destaque: Modo Capela Virtual (Silêncio & Contemplação) -->
+                        <div onclick="openChapelMode('p_oracao_manha')" class="relative overflow-hidden bg-gradient-to-r from-[#0c141d] via-[#121c27] to-[#090e14] text-white rounded-[22px] p-5 sm:p-6 border border-amber-500/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer hover:border-amber-400/50 transition group mb-1">
+                            <div class="flex items-center gap-3.5">
+                                <div class="relative w-10 h-12 shrink-0 flex flex-col items-center justify-center">
+                                    <div class="absolute -top-1 w-12 h-12 rounded-full bg-amber-400/20 blur-md group-hover:scale-125 transition"></div>
+                                    <div class="chapel-candle-flame"></div>
+                                    <div class="w-0.5 h-2 bg-slate-600"></div>
+                                    <div class="w-4 h-5 bg-gradient-to-b from-[#e8dcc4] to-[#c7b99c] rounded-t-xs border border-amber-900/40"></div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 uppercase tracking-widest border border-amber-500/30">Espaço Sacro</span>
+                                        <span class="text-xs text-amber-400/90 font-serif italic">Silêncio Interior</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg sm:text-xl font-bold text-amber-100 group-hover:text-amber-300 transition">Modo Capela Virtual</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Ambiente acolhedor com chama de vela e leitura com voz devocional.</p>
+                                </div>
+                            </div>
+                            <span class="px-4 py-2 bg-amber-500/15 group-hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold transition flex items-center gap-1.5 self-start sm:self-auto shrink-0">
+                                <span>🕯️ Entrar na Capela</span>
+                                <span>→</span>
+                            </span>
+                        </div>
+
+                        
+                        <!-- Horas Canônicas & Liturgia do Tempo -->
+                        ${CanonicalHoursManager ? CanonicalHoursManager.renderBanner() : ''}
+
+                        <!-- Destaque: Modo Capela Virtual (Silêncio & Contemplação) -->
+                        <div onclick="openChapelMode('p_oracao_manha')" class="relative overflow-hidden bg-gradient-to-r from-[#0c141d] via-[#121c27] to-[#090e14] text-white rounded-[22px] p-5 sm:p-6 border border-amber-500/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer hover:border-amber-400/50 transition group mb-1">
+                            <div class="flex items-center gap-3.5">
+                                <div class="relative w-10 h-12 shrink-0 flex flex-col items-center justify-center">
+                                    <div class="absolute -top-1 w-12 h-12 rounded-full bg-amber-400/20 blur-md group-hover:scale-125 transition"></div>
+                                    <div class="chapel-candle-flame"></div>
+                                    <div class="w-0.5 h-2 bg-slate-600"></div>
+                                    <div class="w-4 h-5 bg-gradient-to-b from-[#e8dcc4] to-[#c7b99c] rounded-t-xs border border-amber-900/40"></div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 uppercase tracking-widest border border-amber-500/30">Espaço Sacro</span>
+                                        <span class="text-xs text-amber-400/90 font-serif italic">Silêncio Interior</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg sm:text-xl font-bold text-amber-100 group-hover:text-amber-300 transition">Modo Capela Virtual</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Ambiente acolhedor com chama de vela e leitura com voz devocional.</p>
+                                </div>
+                            </div>
+                            <span class="px-4 py-2 bg-amber-500/15 group-hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold transition flex items-center gap-1.5 self-start sm:self-auto shrink-0">
+                                <span>🕯️ Entrar na Capela</span>
+                                <span>→</span>
+                            </span>
+                        </div>
+
+                        
+                        <!-- Horas Canônicas & Liturgia do Tempo -->
+                        ${CanonicalHoursManager ? CanonicalHoursManager.renderBanner() : ''}
+
+                        <!-- Destaque: Modo Capela Virtual (Silêncio & Contemplação) -->
+                        <div onclick="openChapelMode('p_oracao_manha')" class="relative overflow-hidden bg-gradient-to-r from-[#0c141d] via-[#121c27] to-[#090e14] text-white rounded-[22px] p-5 sm:p-6 border border-amber-500/30 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer hover:border-amber-400/50 transition group mb-1">
+                            <div class="flex items-center gap-3.5">
+                                <div class="relative w-10 h-12 shrink-0 flex flex-col items-center justify-center">
+                                    <div class="absolute -top-1 w-12 h-12 rounded-full bg-amber-400/20 blur-md group-hover:scale-125 transition"></div>
+                                    <div class="chapel-candle-flame"></div>
+                                    <div class="w-0.5 h-2 bg-slate-600"></div>
+                                    <div class="w-4 h-5 bg-gradient-to-b from-[#e8dcc4] to-[#c7b99c] rounded-t-xs border border-amber-900/40"></div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 uppercase tracking-widest border border-amber-500/30">Espaço Sacro</span>
+                                        <span class="text-xs text-amber-400/90 font-serif italic">Silêncio Interior</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg sm:text-xl font-bold text-amber-100 group-hover:text-amber-300 transition">Modo Capela Virtual</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Ambiente acolhedor com chama de vela e leitura com voz devocional.</p>
+                                </div>
+                            </div>
+                            <span class="px-4 py-2 bg-amber-500/15 group-hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold transition flex items-center gap-1.5 self-start sm:self-auto shrink-0">
+                                <span>🕯️ Entrar na Capela</span>
+                                <span>→</span>
+                            </span>
+                        </div>
+
+                        id="secao-santo-terco" class="bg-[#f4eee0] dark:bg-slate-800 rounded-[22px] overflow-hidden border border-[#e8ddc9] dark:border-slate-700 shadow-2xs">
                             <div data-app-cover="banner_devocao_mariana" class="w-full h-48 sm:h-60 md:h-72 relative bg-gradient-to-r from-teal-950 via-[#173027] to-slate-900 overflow-hidden flex items-end sm:items-center justify-between p-6 sm:px-10 pb-6 sm:pb-8">
                                 <img src="./assets/img/temas/banner-devocao-mariana.png" class="app-cover-img absolute inset-0 w-full h-full object-cover object-top opacity-85 pointer-events-none" alt="O Santo Rosário" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 bg-gradient-to-r from-[#0a1a14]/90 via-[#0a1a14]/50 to-transparent z-5 pointer-events-none"></div>
@@ -13404,10 +13565,78 @@ https://catecismo.creativeam.com.br
             });
         }
 
-        /* ========================================================
-           CONTROLLER DE ORAÇÃO: MODAL CANÔNICO, MODO CAPELA & VOZ
+                                /* ========================================================
+           CONTROLLER DE ORAÇÃO: MODAL CANÔNICO, MODO CAPELA & VOZ (MOTOR ESCOLA DA FÉ)
            ======================================================== */
-        let activePrayerUtterance = null;
+        let isPrayerAudioPlaying = false;
+        let cachedSpeechVoices = [];
+
+        function loadSpeechVoices() {
+            if ('speechSynthesis' in window) {
+                cachedSpeechVoices = window.speechSynthesis.getVoices() || [];
+            }
+        }
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = loadSpeechVoices;
+            loadSpeechVoices();
+        }
+
+        // Seleção de voz idêntica à Escola da Fé (prioriza naturais, Google e Microsoft neurais)
+        function getBestPtVoice() {
+            if (!('speechSynthesis' in window)) return null;
+            let voices = window.speechSynthesis.getVoices();
+            if (!voices || voices.length === 0) voices = cachedSpeechVoices;
+            if (!voices || voices.length === 0) return null;
+            
+            const ptVoices = voices.filter(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('pt'));
+            if (ptVoices.length === 0) return null;
+
+            const premiumMatch = ptVoices.find(v => {
+                const n = (v.name || '').toLowerCase();
+                return n.includes('natural') || n.includes('neural') || n.includes('google') || 
+                       n.includes('luciana') || n.includes('francisca') || n.includes('antonio') ||
+                       n.includes('yara') || n.includes('thalita') || n.includes('heloisa');
+            });
+
+            return premiumMatch || ptVoices.find(v => (v.lang || '').toLowerCase().includes('br')) || ptVoices[0];
+        }
+
+        // Higienização sacra para pronúncia digna e humana sem soletração de caracteres
+        function sanitizeSacredSpeech(text) {
+            if (!text) return '';
+            let s = String(text);
+            s = s.replace(/<[^>]*>/g, ' ');
+            s = s.replace(/§§\s*(\d+)-(\d+)/g, 'parágrafos $1 a $2');
+            s = s.replace(/§§\s*(\d+)/g, 'parágrafos $1');
+            s = s.replace(/§\s*(\d+)/g, 'parágrafo $1');
+            s = s.replace(/\bCCC\b/g, 'Catecismo da Igreja Católica,');
+            s = s.replace(/\bCIC\b/g, 'Catecismo da Igreja Católica,');
+            s = s.replace(/\bSto\.\b/g, 'Santo');
+            s = s.replace(/\bSta\.\b/g, 'Santa');
+            s = s.replace(/\bS\.\b/g, 'São');
+            s = s.replace(/\bd\.C\.\b/g, 'depois de Cristo');
+            s = s.replace(/\ba\.C\.\b/g, 'antes de Cristo');
+            s = s.replace(/\bcf\.\b/gi, 'conforme');
+            s = s.replace(/\bcap\.\b/gi, 'capítulo');
+            s = s.replace(/\bv\.\b/gi, 'versículo');
+            s = s.replace(/\bvv\.\b/gi, 'versículos');
+            ['*', '#', '_', '[', ']', '(', ')', '{', '}', '<', '>', '/', '\\', '|', '~', '^', String.fromCharCode(96), '@', '+', '='].forEach(ch => {
+                s = s.split(ch).join(' ');
+            });
+            s = s.replace(/•|—|–/g, ', ');
+            s = s.replace(/\s+/g, ' ').trim();
+            return s;
+        }
+
+        function stopPrayerAudio() {
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.cancel();
+                } catch(e) {}
+            }
+            isPrayerAudioPlaying = false;
+            updateAudioButtons(false);
+        }
 
         function togglePrayerAudio(prayerId) {
             if (!('speechSynthesis' in window)) {
@@ -13415,10 +13644,8 @@ https://catecismo.creativeam.com.br
                 return;
             }
 
-            if (window.speechSynthesis.speaking) {
-                window.speechSynthesis.cancel();
-                activePrayerUtterance = null;
-                updateAudioButtons(false);
+            if (isPrayerAudioPlaying) {
+                stopPrayerAudio();
                 showToast("Leitura pausada.", "info");
                 return;
             }
@@ -13429,44 +13656,51 @@ https://catecismo.creativeam.com.br
             const p = PrayerContentProvider.prayers.find(x => x.id === targetId || x.id === prayerId);
             if (!p) return;
 
-            const cleanText = (p.text || '').replace(/[()[]]/g, '').trim();
-            const textToSpeak = `${p.title}. ${cleanText}`;
-            const utterance = new SpeechSynthesisUtterance(textToSpeak);
-            utterance.lang = 'pt-BR';
-            utterance.rate = 0.88; // Cadência calma e devocional
-            utterance.pitch = 0.98;
+            // Interrompe imediatamente qualquer áudio em andamento
+            window.speechSynthesis.cancel();
 
-            const voices = window.speechSynthesis.getVoices();
-            const ptVoice = voices.find(v => v.lang === 'pt-BR' && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Luciana') || v.name.includes('Francisca'))) 
-                         || voices.find(v => v.lang.startsWith('pt'));
-            if (ptVoice) utterance.voice = ptVoice;
+            const cleanTitle = sanitizeSacredSpeech(p.title);
+            const cleanBody = sanitizeSacredSpeech(p.text);
+            const textToSpeak = `${cleanTitle}. ${cleanBody}`;
 
-            utterance.onstart = () => {
+            const utter = new SpeechSynthesisUtterance(textToSpeak);
+            utter.lang = 'pt-BR';
+            utter.rate = 0.90; // Cadência serena e natural da Escola da Fé
+            utter.pitch = 1.0;
+
+            const voice = getBestPtVoice();
+            if (voice) utter.voice = voice;
+
+            utter.onstart = () => {
+                isPrayerAudioPlaying = true;
                 updateAudioButtons(true);
             };
 
-            utterance.onend = () => {
-                activePrayerUtterance = null;
+            utter.onend = () => {
+                isPrayerAudioPlaying = false;
                 updateAudioButtons(false);
             };
 
-            utterance.onerror = () => {
-                activePrayerUtterance = null;
+            utter.onerror = (e) => {
+                console.warn("Erro no sintetizador de voz:", e);
+                isPrayerAudioPlaying = false;
                 updateAudioButtons(false);
             };
 
-            activePrayerUtterance = utterance;
-            window.speechSynthesis.speak(utterance);
+            isPrayerAudioPlaying = true;
+            updateAudioButtons(true);
+            window.speechSynthesis.speak(utter);
         }
 
         function updateAudioButtons(isPlaying) {
             document.querySelectorAll('.btn-prayer-audio').forEach(btn => {
                 if (isPlaying) {
-                    btn.classList.add('bg-amber-500', 'text-white', 'animate-pulse');
-                    btn.innerHTML = `<span>⏹</span> <span class="hidden sm:inline">Pausar Voz</span>`;
+                    btn.classList.add('bg-amber-600', 'text-white', 'border-amber-700', 'animate-pulse');
+                    btn.classList.remove('bg-amber-500/10', 'bg-slate-100', 'dark:bg-slate-800');
+                    btn.innerHTML = `<span>⏹</span> <span class="font-bold">Pausar Leitura</span>`;
                 } else {
-                    btn.classList.remove('bg-amber-500', 'text-white', 'animate-pulse');
-                    btn.innerHTML = `<span>🔊</span> <span class="hidden sm:inline">Ouvir</span>`;
+                    btn.classList.remove('bg-amber-600', 'text-white', 'border-amber-700', 'animate-pulse');
+                    btn.innerHTML = `<span>🔊</span> <span>Ouvir Oração</span>`;
                 }
             });
         }
@@ -14629,12 +14863,31 @@ https://catecismo.creativeam.com.br
         window.completeLesson = completeLesson;
 
         function closeModal() {
+            if (typeof stopPrayerAudio === 'function') {
+                stopPrayerAudio();
+            }
             stopApoioStatusPolling();
             const modal = document.getElementById('modal-container');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
         }
         window.closeModal = closeModal;
+
+        // Fechamento de modal via ESC e backdrop garantindo interrupção de áudio
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const mc = document.getElementById('modal-container');
+            if (mc) {
+                mc.addEventListener('click', function(e) {
+                    if (e.target === this) closeModal();
+                });
+            }
+        });
+
 
         // --- SISTEMA DE COMPARTILHAMENTO VIRAL DISCRETO (CATECISMO) ---
         function shareCatecismo(source) {
